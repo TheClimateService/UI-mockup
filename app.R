@@ -8,7 +8,7 @@ ui <- dashboardPage(
   dashboardSidebar(
     sidebarMenu(
       menuItem("Dashboard", tabName = "dashboard", icon = icon("dashboard")),
-      menuItem("Widgets", tabName = "widgets", icon = icon("th"))
+      menuItem("Setup", tabName = "setup", icon = icon("th"))
     )
   ),
   
@@ -29,8 +29,13 @@ ui <- dashboardPage(
       ),
       
       # Second tab content
-      tabItem(tabName = "widgets",
-              h2("Widgets tab content")
+      tabItem(tabName = "setup",
+              fluidRow(
+                box(
+                  title = "Setup",
+                  includeHTML("map.html")
+                )
+              )
       )
     )
   )
