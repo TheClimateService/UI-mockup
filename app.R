@@ -2,7 +2,7 @@
 library(shinydashboard)
 
 ui <- dashboardPage(skin = "red",
-  dashboardHeader(title = "Basic dashboard"),
+  dashboardHeader(title = "The Climate Service"),
 
   ## Sidebar content
   dashboardSidebar(
@@ -23,11 +23,20 @@ ui <- dashboardPage(skin = "red",
       # First tab content
       tabItem(tabName = "dashboard",
               fluidRow(
-                box(plotOutput("plot1", height = 250)),
+                valueBox(1, "Portfolios", icon = icon("briefcase"), color = "teal"),
+                valueBox(3, "Projects", icon = icon("bullseye"), color = "aqua"),
+                valueBox(2, "Plans", icon = icon("line-chart"), color = "blue"),
+                
+                box(plotOutput("Score", height = 250)),
                 
                 box(
                   title = "Controls",
-                  sliderInput("slider", "Number of observations:", 1, 100, 50)
+                  sliderInput("slider", "Number of observations:", 1, 100, 50),
+                  
+                box(
+                  title = "TCS Climate Score"
+                  
+                )  
                 )
               )
       ),
@@ -82,7 +91,7 @@ ui <- dashboardPage(skin = "red",
     )
   )
 )
-server <- function(input, output) {
+server <- function(input, output, session) {
   set.seed(122)
   histdata <- rnorm(500)
   
@@ -92,4 +101,4 @@ server <- function(input, output) {
   })
 }
 
-shinyApp(ui, server)
+shinyApp(ui, server, enableBookmarking = "url")
