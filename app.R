@@ -1,14 +1,18 @@
 ## app.R ##
 library(shinydashboard)
 
-ui <- dashboardPage(
+ui <- dashboardPage(skin = "red",
   dashboardHeader(title = "Basic dashboard"),
 
   ## Sidebar content
   dashboardSidebar(
     sidebarMenu(
       menuItem("Dashboard", tabName = "dashboard", icon = icon("dashboard")),
-      menuItem("Setup", tabName = "setup", icon = icon("th"))
+      menuItem("Settings", tabName = "settings", icon = icon("cog")),
+      menuItem("Corporate", tabName = "corporate", icon = icon("building-o")),
+      menuItem("Portfolios", tabName = "portfolios", icon = icon("briefcase")),
+      menuItem("Projects", tabName = "projects", icon = icon("bullseye")),
+      menuItem("Plans", tabName = "plans", icon = icon("line-chart"))
     )
   ),
   
@@ -29,14 +33,52 @@ ui <- dashboardPage(
       ),
       
       # Second tab content
-      tabItem(tabName = "setup",
+      tabItem(tabName = "settings",
               fluidRow(
                 box(
                   title = "Setup",
                   includeHTML("map.html")
                 )
               )
+      ),
+      
+      # Third tab content
+      tabItem(tabName = "corporate",
+              fluidRow(
+                box(
+                  title = "Corporate"
+                )
+              )
+      ),
+      
+      # Fourth tab content
+      tabItem(tabName = "portfolios",
+              fluidRow(
+                box(
+                  title = "Portfolios"
+                )
+              )
+      ),
+ 
+      # Fifth tab content
+      tabItem(tabName = "projects",
+              fluidRow(
+                box(
+                  title = "Projects"
+                )
+              )
+      ),
+      
+      # Sixth tab content
+      tabItem(tabName = "plans",
+              fluidRow(
+                box(
+                  title = "Plans"
+                )
+              )
       )
+           
+      
     )
   )
 )
