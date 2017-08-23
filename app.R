@@ -1,6 +1,5 @@
 ## app.R ##
 library(shinydashboard)
-library(leaflet)
 
 ui <- dashboardPage(skin = "red",
   dashboardHeader(title = "The Climate Service",
@@ -52,8 +51,8 @@ ui <- dashboardPage(skin = "red",
                   valueBox(437, "TCS Climate Score", icon = icon("thermometer-3"), color = "red")
               ),
               fluidRow(
-                  valueBox(1, "Portfolios", icon = icon("briefcase"), color = "teal"),
-                  valueBox(3, "Projects", icon = icon("bullseye"), color = "aqua"),
+                  valueBox(14, "Locations", icon = icon("map-marker"), color = "teal"),
+                  valueBox(3, "Users", icon = icon("user"), color = "aqua"),
                   valueBox(2, "Plans", icon = icon("line-chart"), color = "blue")
               )
       ),
@@ -61,19 +60,23 @@ ui <- dashboardPage(skin = "red",
       # Second tab content
       tabItem(tabName = "settings",
               fluidRow(
-                box(
-                  title = "Basics",
-                  textInput("companyName","Company Name",value="Micron")
-                ),
-                box(
-                  title = "Locations",
-                  textInput("location1","Corporate Headquarters",value = "8000 S Federal Way, Boise, ID 83716"),
-                  # leafletOutput("mymap")
-                  img(src="grab-micron-map.png", width=400),
-                  hr(),
-                  actionButton("addLocation","Add a location")
-                )
-              )
+                tabBox(
+                  tabPanel(title = "Basics",
+                    textInput("companyName","Company Name",value="Micron")
+                  ),
+                  tabPanel(title = "Locations",
+                    textInput("location1","Corporate Headquarters",value = "8000 S Federal Way, Boise, ID 83716"),
+                    htmlOutput("frame"),
+                    hr(),
+                    actionButton("addLocation","Add a location")
+                  ),
+                  tabPanel(title = "Users",
+                    valueBox(1, "Maria", icon = icon("user"), color = "teal"),
+                    valueBox(1, "Chen", icon = icon("user"), color = "teal"),
+                    valueBox(1, "Vijay", icon = icon("user"), color = "teal")
+                  )
+                )#tabBox
+              )#fluidRow
       ),
       
       # Third tab content
@@ -121,9 +124,14 @@ ui <- dashboardPage(skin = "red",
       ),
        #Plans tabSubItems
       tabItem("TCFD",                 
-              box(
-                  title = "Compliance Reporting - Task Force on Climate-Related Financial Disclosures (TCFD)"
-              )
+              fluidRow(
+                tabBox(title = "TCFD Reporting",
+                       tabPanel(
+                         title = "Governance"
+                         ),
+                       tabPanel(title="Strategy"),
+                       tabPanel(title="Metrics and Targets")
+              ))
       ),
       tabItem("CAP", 
               box(
@@ -160,10 +168,19 @@ server <- function(input, output, session) {
     #   addMarkers(data = points())
   })
   
+  output$frame <- renderUI({
+    input$Member
+    my_test <- tags$iframe(src="map.html", height=600, width=535)
+    print(my_test)
+    my_test
+  })
+  
   output$plot1 <- renderPlot({
     data <- histdata[seq_len(input$slider)]
     hist(data)
   })
 }
+
+
 
 shinyApp(ui, server, enableBookmarking = "url")
