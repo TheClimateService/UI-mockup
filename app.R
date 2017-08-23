@@ -62,7 +62,11 @@ ui <- dashboardPage(skin = "red",
               fluidRow(
                 tabBox(
                   tabPanel(title = "Basics",
-                    textInput("companyName","Company Name",value="Micron")
+                    textInput("companyName","Company Name",value="Micron"),
+                    selectInput("cbGroupBizType","Industry Sector",
+                      c("Beverage","Agriculture","Packaged Foods/Meats","Paper & forest","Manufacturing","Metals & mining", "Chemicals", "Real Estate Management/Development","Transportation","Oil & gas","Electric Utilities"), 
+                      selected = c("Manufacturing")
+                    )
                   ),
                   tabPanel(title = "Locations",
                     textInput("location1","Corporate Headquarters",value = "8000 S Federal Way, Boise, ID 83716"),
@@ -82,6 +86,18 @@ ui <- dashboardPage(skin = "red",
       # Third tab content
       tabItem(tabName = "corporate",
               fluidRow(
+                tabBox(
+                  tabPanel(title = "Governance",
+                    textAreaInput("TCFD-Gov-a","Board Oversight", width = 500, value="Describe the board's oversight of climate-related risks and opportunities."),
+                    textAreaInput("TCFD-Gov-b","Management's Role", width = 500, value="Describe management's role in assessing and managing climate-related risks and opportunities.")
+                  ),
+                  tabPanel(title = "Strategy",
+                    textAreaInput("TCFD-Strat-a","Climate Risks and Opportunities", width = 500, value = "Describe the climate-related risks and opportunities the organization has identified over the short, medium, and long term."),
+                    checkboxGroupInput("chkbxRisks","Risks & Opportunities", width = 500, c("Policy & Legal Risk","Technology Risk","Market Risk","Reputation Risk","Acute Physical Risk","Chronic Physical Risk","Resource Efficiency","Energy Source","Products/Services","Markets","Resilience"),selected = c("Energy Source","Acute Physical Risk","Chronic Physical Risk")),
+                    textAreaInput("TCFD-Strat-b","Impact of Risks", width = 500, value = "Describe the impact of climate-related risks and opportunities on the organization's businesses, strategy, and financial planning.")
+                  ),
+                  tabPanel(title = "Risk Management")
+                ),
                 box(
                   title = "Corporate",
                   "Overall Score",
