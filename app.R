@@ -1,5 +1,6 @@
 ## app.R ##
 library(shinydashboard)
+library(leaflet)
 
 ui <- dashboardPage(skin = "red",
   dashboardHeader(title = "The Climate Service",
@@ -30,10 +31,10 @@ ui <- dashboardPage(skin = "red",
     sidebarMenu(id = "sidebar",
       menuItem("Dashboard", tabName = "dashboard", icon = icon("dashboard")),
       menuItem("Settings", tabName = "settings", icon = icon("cog")),
-      menuItem("Corporate", tabName = "corporate", icon = icon("building-o")),
-      menuItem("Portfolios", tabName = "portfolios", icon = icon("briefcase")),
-      menuItem("Projects", tabName = "projects", icon = icon("bullseye")),
-      menuItem("Plans", tabName = "plans", icon = icon("line-chart"),
+      menuItem("Corporate Risk Analyzer", tabName = "corporate", icon = icon("building-o")),
+      menuItem("Portfolio Analyzer", tabName = "portfolios", icon = icon("briefcase")),
+      menuItem("Project Analyzer", tabName = "projects", icon = icon("bullseye")),
+      menuItem("Compliance Reporter", tabName = "plans", icon = icon("line-chart"),
         menuSubItem("Compliance - TCFD", tabName = "TCFD"),
         menuSubItem("Climate Action Plan", tabName = "CAP"),
         menuSubItem("Project Plans", tabName = "ProjectPlans")
