@@ -78,16 +78,24 @@ ui <- dashboardPage(skin = "red",
                   tabPanel(title = "Users",
                     valueBox(1, "Maria", icon = icon("user"), color = "teal"),
                     valueBox(1, "Chen", icon = icon("user"), color = "teal"),
-                    valueBox(1, "Vijay", icon = icon("user"), color = "teal")
+                    valueBox(1, "Vijay", icon = icon("user"), color = "teal"),
+                    actionButton("addUser","Add a user")
                   )
                 )#tabBox
               )#fluidRow
-      ),
+            ),  
       
       # Third tab content
       tabItem(tabName = "corporate",
               fluidRow(
-                tabBox(
+                tabBox(width = "500",
+                  tabPanel(title="Summary",
+                    infoBox(title="EPS Value at Risk",value="0.187%",color="aqua",icon = icon("percent")),
+                    infoBox(title="Revenue at Risk",value="$2,618,782",color="aqua",icon = icon("usd")),
+                    infoBox(title="Expenses at Risk",value="$34,729,133",color="aqua",icon = icon("usd")),
+                    infoBox(title="Assets at Risk",value="$215,362,765",color="aqua",icon = icon("usd")),
+                    infoBox(title="Liabilities at Risk",value="$1,824,773",color="aqua",icon = icon("usd"))
+                  ),#tabPanel
                   tabPanel(title = "Governance",
                     textAreaInput("TCFD-Gov-a","Board Oversight", width = 500, value="Describe the board's oversight of climate-related risks and opportunities."),
                     textAreaInput("TCFD-Gov-b","Management's Role", width = 500, value="Describe management's role in assessing and managing climate-related risks and opportunities.")
@@ -97,16 +105,18 @@ ui <- dashboardPage(skin = "red",
                     checkboxGroupInput("chkbxRisks","Risks & Opportunities", width = 500, c("Policy & Legal Risk","Technology Risk","Market Risk","Reputation Risk","Acute Physical Risk","Chronic Physical Risk","Resource Efficiency","Energy Source","Products/Services","Markets","Resilience"),selected = c("Energy Source","Acute Physical Risk","Chronic Physical Risk")),
                     textAreaInput("TCFD-Strat-b","Impact of Risks", width = 500, value = "Describe the impact of climate-related risks and opportunities on the organization's businesses, strategy, and financial planning.")
                   ),
-                  tabPanel(title = "Risk Management")
-                ),
-                box(
-                  title = "Corporate",
-                  "Overall Score",
-                  "EPS Value at Risk",
-                  "Breakdown of risks with quantified impacts to Revenue, Expenses, Assets, Liabilities"
-                )
-              )
-      ),
+                  tabPanel(title = "Risk Management",
+                     textAreaInput("TCFD-Gov-a","Processes for Identifying Risks", width = 500, value="Describe the processes for identifying & assessing climate-related risks and opportunities."),
+                     textAreaInput("TCFD-Gov-b","Processes for Managing", width = 500, value="Describe the processes managing climate-related risks."),
+                     textAreaInput("TCFD-Gov-a","Process Integration", width = 500, value="Describe how processes for identifying, assessing, and managing climate-related risks are intgrated into the organization's overall management.")
+                  ),
+                  tabPanel(title = "Metrics and Targets"),
+                  tabPanel(title="Financial Impacts",
+                           dataTableOutput("corpFinImpacts")
+                  )#tabPanel
+                )#tabBox
+              )#fluidRow
+      ),#tabItem corporate
       
       # Fourth tab content
       tabItem(tabName = "portfolios",
@@ -126,7 +136,7 @@ ui <- dashboardPage(skin = "red",
       tabItem(tabName = "projects",
               fluidRow(
                 box(
-                  title = "Projects"
+                  title = "Projects","This should have tabs for the investment lifecycle that Chiara shared."
                 )
               )
       ),
@@ -184,6 +194,11 @@ server <- function(input, output, session) {
     #   ) %>%
     #   addMarkers(data = points())
   })
+  
+  output$corpFinImpacts = renderDataTable({
+    iris
+  }, options = list(lengthMenu = c(5, 30, 50), pageLength = 5))
+  
   
   output$frame <- renderUI({
     input$Member
