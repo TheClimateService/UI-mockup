@@ -34,13 +34,13 @@ ui <- dashboardPage(skin = "red",
       menuItem("Corporate Risk Analyzer", tabName = "corporate", icon = icon("building-o")),
       menuItem("Portfolio Analyzer", tabName = "portfolios", icon = icon("briefcase")),
       menuItem("Project Analyzer", tabName = "projects", icon = icon("bullseye")),
-      menuItem("Compliance Reporter", tabName = "plans", icon = icon("line-chart"),
-        menuSubItem("Compliance - TCFD", tabName = "TCFD"),
+      menuItem("Compliance Reporter", tabName = "compliance", icon = icon("line-chart")),
+      menuItem("Action Planner", tabName = "plans", icon = icon("map"),
         menuSubItem("Climate Action Plan", tabName = "CAP"),
         menuSubItem("Project Plans", tabName = "ProjectPlans")
-      )
-    )
-  ),
+      )#menuItem
+    )#sidebarMenu
+  ),#dashboardSidebar
   
   
   ## Body content
@@ -142,6 +142,15 @@ ui <- dashboardPage(skin = "red",
       ),
       
       # Sixth tab content
+      tabItem(tabName = "compliance",
+              fluidRow(
+                box(
+                  title = "Compliance"
+                )
+              )
+      ),
+      
+      # Seventh tab content
       tabItem(tabName = "plans",
               fluidRow(
                 box(
@@ -149,29 +158,20 @@ ui <- dashboardPage(skin = "red",
                 )
               )
       ),
+      
        #Plans tabSubItems
-      tabItem("TCFD",                 
-              fluidRow(
-                tabBox(title = "TCFD Reporting",
-                       tabPanel(
-                         title = "Governance"
-                         ),
-                       tabPanel(title="Strategy"),
-                       tabPanel(title="Metrics and Targets")
-              ))
-      ),
       tabItem("CAP", 
               box(
                 title = "Climate Action Plan"
               )
-              ),
+      ),
       tabItem("ProjectPlans", 
               box(
                 title = "Project Plans"
               )
-              )
-    )
-  )
+      )
+    )#tabItems
+  )#DashboardBody
 )
 
 server <- function(input, output, session) {
