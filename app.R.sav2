@@ -769,7 +769,9 @@ server <- function(input, output, sessionn) {
     cashflowinputs <- c(input$cashflow1,input$cashflow2,input$cashflow3,input$cashflow4,input$cashflow5,input$cashflow6,input$cashflow7)
     cashflow <- initializer
     for(i in 1:length(cashflow)) {cashflow[i] = cashflowinputs[i] }
+    #capitalcost <- 20
     capitalcost <- input$capitalcost
+    #discount <- 0.03
     discount <- input$discount
     discountbydecade <- initializer
     discountbydecade[1] = 1 / ((1+discount)^10)
@@ -967,11 +969,11 @@ server <- function(input, output, sessionn) {
 # Added in Build7
   # Adaptation-plan benefits.
   output$adaptationbenefit1 <- renderText({
-	benefit_plan1 = "WORKING ON THIS"
+	benefit_plan1 = 1
         paste("Plan 1 Benefit:   ", benefit_plan1)
   })
   output$adaptationbenefit2 <- renderText({
-	benefit_plan2 = "WORKING ON THIS"
+	benefit_plan2 = 1
         paste("Plan 2 Benefit:   ", benefit_plan2)
   })
 

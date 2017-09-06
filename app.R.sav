@@ -57,11 +57,8 @@ ui <- dashboardPage(
       	  menuSubItem("SECTOR IMPACT FUNCTIONS", tabName = "impactfunctions", icon = icon("cloud-download", lib = "glyphicon")),
       	  menuSubItem("PROBABLISTIC IMPACT ESTIMATE", tabName = "impactestimate", icon = icon("cog", lib = "glyphicon")),
       	  menuSubItem("FINANCIAL EFFECTS", tabName = "financialeffects", icon = icon("usd", lib = "glyphicon")),
-
-	# Added in Build7
-      	  menuSubItem("INTERNATIONAL PROJECT PLANNING", tabName = "internationalplanning", icon = icon("tree-conifer", lib = "glyphicon")),
-      	  menuSubItem("ADAPTATION BENEFIT/COST PLANNING", tabName = "adaptationplanning", icon = icon("tree-deciduous", lib = "glyphicon")),
-
+# Added in Build7
+      	  menuSubItem("PROJECT PLANNING", tabName = "projectplanning", icon = icon("tree-deciduous", lib = "glyphicon")),
       	  menuSubItem("OVERALL CLIMATE SCORE", tabName = "climatescore", icon = icon("certificate", lib = "glyphicon"))
 	  )
     	)
@@ -323,33 +320,23 @@ ui <- dashboardPage(
       tabItem(tabName = "financialeffects",
         h2("Calculate effects of net impact on beta and NPV"),
         fluidRow(
-          box(title="Beta Multiplier By Period: 1/(1-D), where D is probabilistic impact", background = "blue", solidHeader = TRUE, plotOutput("financialplot1", height = 300)),
+          box(title="Beta Multiplier By Period: 1/(1-D), where D is damage (probabilistic impact)", background = "blue", solidHeader = TRUE, plotOutput("financialplot1", height = 300)),
           box(title="NPV Impact on Project", background = "green", solidHeader = TRUE, plotOutput("financialplot2", height = 300)),
-          # Modified in Build7 
-          #box(
-          #  title = "Multiplier Controls (sigmoid impact function)",
-          #  sliderInput("sigmoidlimit3", "Sigmoid limit:", -100, 100, -75, step=10, animate=TRUE),
-          #  sliderInput("sigmoidsteepness3", "Sigmoid steepness:", 0.1, 10, 2, step=0.5, animate=TRUE),
-          #  sliderInput("sigmoidmidpoint3", "Sigmoid midpoint:", 270, 320, 295, step=1, animate=TRUE)
-          #),
           box(
-            title = "Capital Cost and Discount Rate",
-	    width=4,
-            sliderInput("capitalcost", "Total Capital Investment:", 0, 50, 20, step=5, animate=TRUE),
-            sliderInput("discount", "Discount Rate:", 0.01, 0.05, 0.03, step=0.005)
+            title = "Multiplier Controls (sigmoid impact function)",
+            sliderInput("sigmoidlimit3", "Sigmoid limit:", -100, 100, -75, step=10, animate=TRUE),
+            sliderInput("sigmoidsteepness3", "Sigmoid steepness:", 0.1, 10, 2, step=0.5, animate=TRUE),
+            sliderInput("sigmoidmidpoint3", "Sigmoid midpoint:", 270, 320, 295, step=1, animate=TRUE)
           ),
           box(
-            title = "Cash Flows for Periods 1-4",
-	    width=4,
+            title = "Project Financials",
+            sliderInput("capitalcost", "Total Capital Investment:", 0, 50, 20, step=5, animate=TRUE),
+            sliderInput("discount", "Discount Rate:", 0.01, 0.05, 0.03, step=0.005),
 	     #numericInput("cashflow", "Cash Flow:", 10, min = 1, max = 100),
             sliderInput("cashflow1", "Period 1 Cash Flow:", -10, 100, 1),
             sliderInput("cashflow2", "Period 2 Cash Flow:", -10, 100, 5),
             sliderInput("cashflow3", "Period 3 Cash Flow:", -10, 100, 10),
-            sliderInput("cashflow4", "Period 4 Cash Flow:", -10, 100, 20)
-          ),
-          box(
-            title = "Cash Flows for Periods 5-7",
-	    width=4,
+            sliderInput("cashflow4", "Period 4 Cash Flow:", -10, 100, 20),
             sliderInput("cashflow5", "Period 5 Cash Flow:", -10, 100, 30),
             sliderInput("cashflow6", "Period 6 Cash Flow:", -10, 100, 30),
             sliderInput("cashflow7", "Period 7 Cash Flow:", -10, 100, 30)
@@ -358,30 +345,11 @@ ui <- dashboardPage(
       ),
 
 # Added in Build7
-      tabItem(tabName = "internationalplanning",
-        h2("Climate risk assessment and adaptation planning throughout the transaction cycle"),
+      tabItem(tabName = "projectplanning",
+        h2("Calculate project adaptation benefit/cost ratio"),
         fluidRow(
-          box(
-            title = "Economic Sector",
-  	    selectInput("econsector", "Choose economic sector:", list("Power","Agriculture","Water") ),
-	    width=3,
-    	    textOutput("econsector")
-          ),
-          box(
-            title = "ESG Assessment",
-  	    selectInput("esgassessment", "Choose ESG assessment:", list("Low","Moderate","High") ),
-	    width=3,
-    	    textOutput("esgassessment")
-          )
-        )
-      ),
-
-# Added in Build7
-      tabItem(tabName = "adaptationplanning",
-        h2("Calculate adaptation benefit/cost ratio"),
-        fluidRow(
-	  box(title="Impact Function (controlled from Sector Impact tab)", background = "blue", solidHeader = TRUE, plotOutput("adaptationplot1", height = 300)),
-	  box(title="Asset Value Through Time", background = "red", solidHeader = TRUE, plotOutput("adaptationplot2", height = 300))
+	  box(title="Impact Function (controlled from Sector Impact tab)", background = "blue", solidHeader = TRUE, plotOutput("projectplot1", height = 300)),
+	  box(title="Asset Value Through Time", background = "red", solidHeader = TRUE, plotOutput("projectplot2", height = 300))
         ),
         fluidRow(
           box(
@@ -399,20 +367,20 @@ ui <- dashboardPage(
 	    width=3
           ),
           box(
-            title = "Adaptation Plan 1",
+            title = "Adaptation Plan 1)",
             sliderInput("assetsensitivity1_plan1", "Plan 1 Impact Sensitivity of Asset 1:", 0, 5, 0.5, step=0.25, animate=TRUE),
             sliderInput("assetsensitivity2_plan1", "Plan 1 Impact Sensitivity of Asset 2:", 0, 5, 0.5, step=0.25, animate=TRUE),
             sliderInput("assetsensitivity3_plan1", "Plan 1 Impact Sensitivity of Asset 3:", 0, 5, 0.5, step=0.25, animate=TRUE),
-    		textOutput("adaptationbenefit1"),
+    		textOutput("projectbenefit1"),
             sliderInput("cost_plan1", "Plan 1 Cost:", 0, 20, 5, step=1, animate=TRUE),
 	    width=3
           ),
           box(
-            title = "Adaptation plan 2",
+            title = "Adaptation plan 2)",
             sliderInput("assetsensitivity1_plan2", "Plan 2 Impact Sensitivity of Asset 1:", 0, 5, 0.25, step=0.25, animate=TRUE),
             sliderInput("assetsensitivity2_plan2", "Plan 2 Impact Sensitivity of Asset 2:", 0, 5, 0.25, step=0.25, animate=TRUE),
             sliderInput("assetsensitivity3_plan2", "Plan 2 Impact Sensitivity of Asset 3:", 0, 5, 0.25, step=0.25, animate=TRUE),
-    		textOutput("adaptationbenefit2"),
+    		textOutput("projectbenefit2"),
             sliderInput("cost_plan2", "Plan 2 Cost:", 0, 20, 5, step=1, animate=TRUE),
 	    width=3
           )
@@ -422,17 +390,14 @@ ui <- dashboardPage(
       tabItem(tabName = "climatescore",
         h2("Derive climate score from impacts, financial effects, and adaptation actions"),
         fluidRow(
-          box(title="Impact Function (controlled from impact-function tab)", background = "blue", solidHeader = TRUE, plotOutput("scoreplot2", height = 300)),
+          box(title="Sigmoid Impact Function", background = "blue", solidHeader = TRUE, plotOutput("scoreplot2", height = 300)),
           box(title="Climate Score By Period", background = "green", solidHeader = TRUE, plotOutput("scoreplot1", height = 300)),
-
-      # Modified in Build7
-          #box(
-          #  title = "Impact Function Controls (sigmoid impact function)",
-          #  sliderInput("sigmoidlimit4", "Sigmoid limit:", -100, 100, -75, step=10, animate=TRUE),
-          #  sliderInput("sigmoidsteepness4", "Sigmoid steepness:", 0.1, 10, 2, step=0.5, animate=TRUE),
-          #  sliderInput("sigmoidmidpoint4", "Sigmoid midpoint:", 270, 320, 295, step=1, animate=TRUE)
-          #),
-
+          box(
+            title = "Impact Function Controls (sigmoid impact function)",
+            sliderInput("sigmoidlimit4", "Sigmoid limit:", -100, 100, -75, step=10, animate=TRUE),
+            sliderInput("sigmoidsteepness4", "Sigmoid steepness:", 0.1, 10, 2, step=0.5, animate=TRUE),
+            sliderInput("sigmoidmidpoint4", "Sigmoid midpoint:", 270, 320, 295, step=1, animate=TRUE)
+          ),
           box(
             title = "Adaptation Credits",
   	    selectInput("adaptationplan", "Choose an adaptation plan:", list("None","Minimal","Moderate","Maximal") ),
@@ -688,7 +653,6 @@ server <- function(input, output, sessionn) {
     plot(x,wt1*sigmoid(x,input$sigmoidlimit,input$sigmoidsteepness,input$sigmoidmidpoint) + wt2*quadratic(x,input$quadraticlimit,input$quadraticshape,input$quadraticmidpoint), type="l", lwd=3, lty=1, col="red", xlim=c(270,320), ylim=c(-100,100), xlab="Daily Maximum Surface Temperature (degK)", ylab="Relative Impact")
   })
 
-# Modified in Build7
   output$financialplot1 <- renderPlot({
     periods <- c("1976-05", "2016-25", "2026-35", "2036-45", "2046-55", "2056-65", "2066-75", "2076-85", "2086-95")
     shapes <- c(81,82,83,84,85,86,87,88,89)
@@ -704,20 +668,14 @@ server <- function(input, output, sessionn) {
     impacts = matrix(0,length(thresholds),length(shapes))
     # Impacts are the product of the probability that the climate variable will lie in a certain interval and the damage corresponding to the midpoint of the climate variable in that interval.
 # XXX make thresholds 1-degree wide and incorporate real damage function
+    damage <- 1
     damage = matrix(1,length(thresholds),length(shapes))
     sigmoid = function(x,L,a,x0) {L / (1 + exp(-a*(x-x0)) ) }
 	# L is upper/lower limit; a is steepness; x0 is x value at sigmoid midpoint
-    quadratic = function(x,L,a,x0) {a*(x-x0)^2 + L }
-      # wt1 is sigmoid weight; wt2 is quadratic weight. 
-        wt1 = input$impactfunctionweight
-        wt2 = 1 - wt1
+    # Note that the sigmoid inputs used below are those labelled with "2" and found on the panel for this plot.
     # Remove the "3" if the plot on this panel should be controlled from the impact-function panel, and remove the controls referring to inputs labelled "3".
-    # Modified in Build7
     for(j in 1:length(thresholds)-1) { for(i in 1:length(shapes)) {
-	#damage[j,i] <- 0.5*(sigmoid(thresholds[j+1],input$sigmoidlimit3,input$sigmoidsteepness3,input$sigmoidmidpoint3) + sigmoid(thresholds[j],input$sigmoidlimit3,input$sigmoidsteepness3,input$sigmoidmidpoint3) )
-        damagej1 = wt1*sigmoid(thresholds[j],input$sigmoidlimit,input$sigmoidsteepness,input$sigmoidmidpoint) + wt2*quadratic(thresholds[j],input$quadraticlimit,input$quadraticshape,input$quadraticmidpoint)
-        damagej2 = wt1*sigmoid(thresholds[j+1],input$sigmoidlimit,input$sigmoidsteepness,input$sigmoidmidpoint) + wt2*quadratic(thresholds[j+1],input$quadraticlimit,input$quadraticshape,input$quadraticmidpoint)
-        damage[j,i] <- 0.5*(damagej2 + damagej1)
+	damage[j,i] <- 0.5*(sigmoid(thresholds[j+1],input$sigmoidlimit3,input$sigmoidsteepness3,input$sigmoidmidpoint3) + sigmoid(thresholds[j],input$sigmoidlimit3,input$sigmoidsteepness3,input$sigmoidmidpoint3) )
        } }
     for(j in 1:length(thresholds)-1) { for(i in 1:length(shapes)) {
 	impacts[j,i] <- damage[j,i]*( pweibull(thresholds[j+1],shapes[i],scales[i]) - pweibull(thresholds[j],shapes[i],scales[i])  ) } }
@@ -751,10 +709,8 @@ server <- function(input, output, sessionn) {
 	# L is upper/lower limit; a is steepness; x0 is x value at sigmoid midpoint
     # Note that the sigmoid inputs used below are those labelled with "2" and found on the panel for this plot.
     # Remove the "3" if the plot on this panel should be controlled from the impact-function panel, and remove the controls referring to inputs labelled "3".
-    # Modified in Build7
     for(j in 1:length(thresholds)-1) { for(i in 1:length(shapes)) {
-	#damage[j,i] <- 0.5*(sigmoid(thresholds[j+1],input$sigmoidlimit3,input$sigmoidsteepness3,input$sigmoidmidpoint3) + sigmoid(thresholds[j],input$sigmoidlimit3,input$sigmoidsteepness3,input$sigmoidmidpoint3) )
-	damage[j,i] <- 0.5*(sigmoid(thresholds[j+1],input$sigmoidlimit,input$sigmoidsteepness,input$sigmoidmidpoint) + sigmoid(thresholds[j],input$sigmoidlimit,input$sigmoidsteepness,input$sigmoidmidpoint) )
+	damage[j,i] <- 0.5*(sigmoid(thresholds[j+1],input$sigmoidlimit3,input$sigmoidsteepness3,input$sigmoidmidpoint3) + sigmoid(thresholds[j],input$sigmoidlimit3,input$sigmoidsteepness3,input$sigmoidmidpoint3) )
        } }
     for(j in 1:length(thresholds)-1) { for(i in 1:length(shapes)) {
 	impacts[j,i] <- damage[j,i]*( pweibull(thresholds[j+1],shapes[i],scales[i]) - pweibull(thresholds[j],shapes[i],scales[i])  ) } }
@@ -769,7 +725,9 @@ server <- function(input, output, sessionn) {
     cashflowinputs <- c(input$cashflow1,input$cashflow2,input$cashflow3,input$cashflow4,input$cashflow5,input$cashflow6,input$cashflow7)
     cashflow <- initializer
     for(i in 1:length(cashflow)) {cashflow[i] = cashflowinputs[i] }
+    #capitalcost <- 20
     capitalcost <- input$capitalcost
+    #discount <- 0.03
     discount <- input$discount
     discountbydecade <- initializer
     discountbydecade[1] = 1 / ((1+discount)^10)
@@ -787,7 +745,6 @@ server <- function(input, output, sessionn) {
     barplot(c(npv,npv_modified), col=c("green","red"), names.arg=c("Without Climate Impacts", "With Climate Impacts"),xlab="Unmodified and Modified NPV", ylab="NPV", ylim=c(-20,50) )
   })
 
-  # Modified in Build7
   output$scoreplot1 <- renderPlot({
     periods <- c("1976-05", "2016-25", "2026-35", "2036-45", "2046-55", "2056-65", "2066-75", "2076-85", "2086-95")
     shapes <- c(81,82,83,84,85,86,87,88,89)
@@ -795,28 +752,24 @@ server <- function(input, output, sessionn) {
     thresholds <- c(285,290,295,300,305,310)
     colors <- brewer.pal(length(thresholds), "Spectral")
     ltypes <- c(1:length(thresholds))
+    # labels <- c("285K","290K","295K","300K","305K","310K")
     labels <- c("Without Adaptation","With Adaptation")
     x <- seq(275,315,0.1)
+    # pweibull is the CDF for dweibull.
     # Rows in the impacts and damage matrices correspond to the climate-variable values, while columns correspond to the periods covered.  
     # thresholds has length corresponding to the variable values, while shapes and scales have lengths corresponding to periods.
     impacts = matrix(0,length(thresholds),length(shapes))
     # Impacts are the product of the probability that the climate variable will lie in a certain interval and the damage corresponding to the midpoint of the climate variable in that interval.
 # XXX make thresholds 1-degree wide and incorporate real damage function
+    damage <- 1
     damage = matrix(1,length(thresholds),length(shapes))
     sigmoid = function(x,L,a,x0) {L / (1 + exp(-a*(x-x0)) ) }
-    quadratic = function(x,L,a,x0) {a*(x-x0)^2 + L }
-    wt1 = input$impactfunctionweight
-    wt2 = 1 - wt1
-    #plot(x,wt1*sigmoid(x,input$sigmoidlimit,input$sigmoidsteepness,input$sigmoidmidpoint) + wt2*quadratic(x,input$quadraticlimit,input$quadraticshape,input$quadraticmidpoint), type="l", lwd=3, lty=1, col="red", xlim=c(270,320), ylim=c(-100,100), xlab="Daily Maximum Surface Temperature (degK)", ylab="Relative Impact")
-
+	# L is upper/lower limit; a is steepness; x0 is x value at sigmoid midpoint
+    # Note that the sigmoid inputs used below are those labelled with "2" and found on the panel for this plot.
+    # Remove the "4" if the plot on this panel should be controlled from the impact-function panel, and remove the controls referring to inputs labelled "4".
     for(j in 1:length(thresholds)-1) { for(i in 1:length(shapes)) {
-    # Modified in Build7 
-#	damage[j,i] <- 0.5*(sigmoid(thresholds[j+1],input$sigmoidlimit4,input$sigmoidsteepness4,input$sigmoidmidpoint4) + sigmoid(thresholds[j],input$sigmoidlimit4,input$sigmoidsteepness4,input$sigmoidmidpoint4) )
-        damagej1 = wt1*sigmoid(thresholds[j],input$sigmoidlimit,input$sigmoidsteepness,input$sigmoidmidpoint) + wt2*quadratic(thresholds[j],input$quadraticlimit,input$quadraticshape,input$quadraticmidpoint)
-        damagej2 = wt1*sigmoid(thresholds[j+1],input$sigmoidlimit,input$sigmoidsteepness,input$sigmoidmidpoint) + wt2*quadratic(thresholds[j+1],input$quadraticlimit,input$quadraticshape,input$quadraticmidpoint)
-        damage[j,i] <- 0.5*(damagej2 + damagej1)
+	damage[j,i] <- 0.5*(sigmoid(thresholds[j+1],input$sigmoidlimit4,input$sigmoidsteepness4,input$sigmoidmidpoint4) + sigmoid(thresholds[j],input$sigmoidlimit4,input$sigmoidsteepness4,input$sigmoidmidpoint4) )
        } }
-
     for(j in 1:length(thresholds)-1) { for(i in 1:length(shapes)) {
 	impacts[j,i] <- damage[j,i]*( pweibull(thresholds[j+1],shapes[i],scales[i]) - pweibull(thresholds[j],shapes[i],scales[i])  ) } }
     impactbyperiod <- c(0,0,0,0,0,0,0,0,0)
@@ -847,21 +800,16 @@ server <- function(input, output, sessionn) {
       paste("CREDITS TO CLIMATE SCORE BY PERIOD:   ", adaptation_adjustment)
     })
 
-  # Modified in Build7
-  # Impact function from impact-function tab.
   output$scoreplot2 <- renderPlot({
     x <- seq(270,320,0.01)
     sigmoid = function(x,L,a,x0) {L / (1 + exp(-a*(x-x0)) ) }
-    quadratic = function(x,L,a,x0) {a*(x-x0)^2 + L }
-    wt1 = input$impactfunctionweight
-    wt2 = 1 - wt1
-    # plot(x,sigmoid(x,input$sigmoidlimit4,input$sigmoidsteepness4,input$sigmoidmidpoint4), type="l", lwd=3, lty=1, col="red", xlim=c(270,320), ylim=c(-100,100), xlab="Daily Maximum Surface Temperature (degK)", ylab="Relative Impact")
-    plot(x,wt1*sigmoid(x,input$sigmoidlimit,input$sigmoidsteepness,input$sigmoidmidpoint) + wt2*quadratic(x,input$quadraticlimit,input$quadraticshape,input$quadraticmidpoint), type="l", lwd=3, lty=1, col="red", xlim=c(270,320), ylim=c(-100,100), xlab="Daily Maximum Surface Temperature (degK)", ylab="Relative Impact")
+	# L is upper/lower limit; a is steepness; x0 is x value at sigmoid midpoint
+    plot(x,sigmoid(x,input$sigmoidlimit4,input$sigmoidsteepness4,input$sigmoidmidpoint4), type="l", lwd=3, lty=1, col="red", xlim=c(270,320), ylim=c(-100,100), xlab="Daily Maximum Surface Temperature (degK)", ylab="Relative Impact")
   })
 
   # Added in Build7
   # Impact function from impact-function tab.
-  output$adaptationplot1 <- renderPlot({
+  output$projectplot1 <- renderPlot({
     x <- seq(270,320,0.01)
     sigmoid = function(x,L,a,x0) {L / (1 + exp(-a*(x-x0)) ) }
     quadratic = function(x,L,a,x0) {a*(x-x0)^2 + L }
@@ -872,7 +820,7 @@ server <- function(input, output, sessionn) {
 
   # Added in Build7
   # Asset-value damage
-  output$adaptationplot2 <- renderPlot({
+  output$projectplot2 <- renderPlot({
     periods <- c("1976-05", "2016-25", "2026-35", "2036-45", "2046-55", "2056-65", "2066-75", "2076-85", "2086-95")
     shapes <- c(81,82,83,84,85,86,87,88,89)
     scales <- c(292,293,294,295,296,297,298,299,300)
@@ -956,22 +904,20 @@ server <- function(input, output, sessionn) {
     impactbyperiod_relative2baseperiod_plan1 = impactbyperiod_plan1 - impactbyperiod_plan1[1]
     impactbyperiod_relative2baseperiod_plan2 = impactbyperiod_plan2 - impactbyperiod_plan2[1]
 
-    labels <- c("No Adaptation","Adaptation Plan 1","Adaptation Plan 2")
     plot(impactbyperiod_relative2baseperiod, type="l", lwd=3, lty=1, col=colors[1], xlab="Periods", ylab="Impact on Asset Value ($M)", xaxt="n")
 	axis(1, at=c(1:length(periods)), labels=periods)
     lines(impactbyperiod_relative2baseperiod_plan1, type="l", lwd=3, lty=1, col=colors[3])
     lines(impactbyperiod_relative2baseperiod_plan2, type="l", lwd=3, lty=1, col=colors[5])
-    legend("topright", inset=.01, title="Scenarios", labels, lwd=3, lty=c(1,1,1), col=c(colors[1],colors[3],colors[5]))
   })
 
 # Added in Build7
   # Adaptation-plan benefits.
-  output$adaptationbenefit1 <- renderText({
-	benefit_plan1 = "WORKING ON THIS"
+  output$projectbenefit1 <- renderText({
+	benefit_plan1 = 1
         paste("Plan 1 Benefit:   ", benefit_plan1)
   })
-  output$adaptationbenefit2 <- renderText({
-	benefit_plan2 = "WORKING ON THIS"
+  output$projectbenefit2 <- renderText({
+	benefit_plan2 = 1
         paste("Plan 2 Benefit:   ", benefit_plan2)
   })
 
