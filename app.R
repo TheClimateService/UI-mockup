@@ -89,11 +89,11 @@ ui <- dashboardPage(
                 tabBox(
                   tabPanel(title = "Basics",
                     textInput("companyName","Company Name",value="Micron"),
-                    selectInput("cbGroupBizType","Industry Sector",
+                    selectInput("siGroupBizType","Industry Sector",
                       c("Beverage","Agriculture","Packaged Foods/Meats","Paper & forest","Manufacturing","Metals & mining", "Chemicals", "Real Estate Management/Development","Transportation","Oil & gas","Electric Utilities"),
                       selected = c("Manufacturing")
                     ),
-                    selectInput("cbClimateScenario","Climate Scenario",
+                    selectInput("siClimateScenario","Climate Scenario",
                                 c("Most Likely","Best Case - RCP 2.6","Business As Usual - RCP 8.5","Paris Accord"),
                                 selected = c("Most Likely")
                     )
@@ -101,6 +101,11 @@ ui <- dashboardPage(
                   tabPanel(title = "Locations",
                     textInput("location1","Corporate Headquarters",value = "8000 S Federal Way, Boise, ID 83716"),
                     htmlOutput("frame"),
+                    hr(),
+                    checkboxGroupInput("cbBusinessFunctions","Business functions performed at this location",
+                                c("Clean Room Manufacturing","Shipping","Inventory Management","R&D","HR","Legal","Marketing/Sales","Corporate Governance"),
+                                selected = c("Clean Room Manufacturing","R&D")
+                    ),
                     hr(),
                     actionButton("addLocation","Add a location")
                   ),
@@ -124,6 +129,10 @@ ui <- dashboardPage(
                                selected = c("Boise")
                     ),
                     sliderInput("siTimeframe", "Timeframe", 1, 30, 5, step=1, animate=TRUE),
+                    htmlOutput('txtImpact1'),
+                    htmlOutput('txtImpact2'),
+                    htmlOutput('txtImpact3'),
+                    hr(),
                     infoBox(title="EPS Value at Risk",value="0.187%",color="aqua",icon = icon("percent")),
                     infoBox(title="Revenue at Risk",value="$2,618,782",color="aqua",icon = icon("usd")),
                     infoBox(title="Expenses at Risk",value="$34,729,133",color="aqua",icon = icon("usd")),
@@ -449,10 +458,43 @@ ui <- dashboardPage(
   )
 )
 
-server <- function(input, output, sessionn) {
+server <- function(input, output, session) {
 
-# James -----------------------------------------------------------
-  observeEvent(input$toProjects, {
+# James start -----------------------------------------------------------
+
+  # traffic light text for corp risk analyzer
+  
+  txtImpactColor1 <- reactive({
+    input$siTimeframe
+    name <- switch(input$siTimeframe,'green','green','green','green','yellow','yellow','yellow','yellow','red','red','red','red','red','red','red','red','red','red','red','red','red','red','red','red','red','red','red','red','red','red')
+    return( name=name )
+  })
+  
+  txtImpactColor2 <- reactive({
+    input$siTimeframe
+    name <- switch(input$siTimeframe,'green','green','green','green','green','green','yellow','yellow','yellow','yellow','yellow','red','red','red','red','red','red','red','red','red','red','red','red','red','red','red','red','red','red','red')
+    return( name=name )
+  })
+  
+  txtImpactColor3 <- reactive({
+    input$siTimeframe
+    name <- switch(input$siTimeframe,'green','green','yellow','yellow','yellow','yellow','red','red','red','red','red','red','red','red','red','red','red','red','red','red','red','red','red','red','red','red','red','red','red','red')
+    return( name=name )
+  })
+  
+  output$txtImpact1 <- renderUI({
+        div( HTML(sprintf("<text style='background-color:%s'>HVAC systems %s likely to be overloaded</text>", txtImpactColor1(), input$siTimeframe) ) )
+  })
+  
+  output$txtImpact2 <- renderUI({
+        div( HTML(sprintf("<text style='background-color:%s'>Drainage systems %s likely to be overloaded</text>", txtImpactColor2(), input$siTimeframe) ) )
+  })
+  
+  output$txtImpact3 <- renderUI({
+        div( HTML(sprintf("<text style='background-color:%s'>Energy costs for cooling %s likely to increase significantly</text>", txtImpactColor3(), input$siTimeframe) ) )
+  })
+  
+    observeEvent(input$toProjects, {
     updateTabItems(session, "sidebar", "projects")
   })
 
@@ -487,7 +529,7 @@ server <- function(input, output, sessionn) {
     data <- histdata[seq_len(input$slider)]
     hist(data)
   })
-# James -----------------------------------------------------------
+# James end -----------------------------------------------------------
 
 
 # Terry -----------------------------------------------------------
