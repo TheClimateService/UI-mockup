@@ -92,6 +92,10 @@ ui <- dashboardPage(
                     selectInput("cbGroupBizType","Industry Sector",
                       c("Beverage","Agriculture","Packaged Foods/Meats","Paper & forest","Manufacturing","Metals & mining", "Chemicals", "Real Estate Management/Development","Transportation","Oil & gas","Electric Utilities"),
                       selected = c("Manufacturing")
+                    ),
+                    selectInput("cbClimateScenario","Climate Scenario",
+                                c("Most Likely","Best Case - RCP 2.6","Business As Usual - RCP 8.5","Paris Accord"),
+                                selected = c("Most Likely")
                     )
                   ),
                   tabPanel(title = "Locations",
@@ -101,9 +105,9 @@ ui <- dashboardPage(
                     actionButton("addLocation","Add a location")
                   ),
                   tabPanel(title = "Users",
-                    valueBox(1, "Maria", icon = icon("user"), color = "teal"),
-                    valueBox(1, "Chen", icon = icon("user"), color = "teal"),
-                    valueBox(1, "Vijay", icon = icon("user"), color = "teal"),
+                    valueBox(1, "Julia Grant", icon = icon("user"), color = "teal"),
+                    valueBox(1, "Joe Robinson", icon = icon("user"), color = "teal"),
+                    valueBox(1, "Norm Armour", icon = icon("user"), color = "teal"),
                     actionButton("addUser","Add a user")
                   )
                 )#tabBox
@@ -114,31 +118,18 @@ ui <- dashboardPage(
       tabItem(tabName = "corporate",
               fluidRow(
                 tabBox(width = "500",
-                  tabPanel(title="Summary",
+                  tabPanel(title="Screening level",
+                    selectInput("cbLocation","Location",
+                               c("Boise","Singapore","Malaysia","Scotland"),
+                               selected = c("Boise")
+                    ),
+                    sliderInput("siTimeframe", "Timeframe", 1, 30, 5, step=1, animate=TRUE),
                     infoBox(title="EPS Value at Risk",value="0.187%",color="aqua",icon = icon("percent")),
                     infoBox(title="Revenue at Risk",value="$2,618,782",color="aqua",icon = icon("usd")),
                     infoBox(title="Expenses at Risk",value="$34,729,133",color="aqua",icon = icon("usd")),
                     infoBox(title="Assets at Risk",value="$215,362,765",color="aqua",icon = icon("usd")),
                     infoBox(title="Liabilities at Risk",value="$1,824,773",color="aqua",icon = icon("usd"))
-                  ),#tabPanel
-                  tabPanel(title = "Governance",
-                    textAreaInput("TCFD-Gov-a","Board Oversight", width = 500, value="Describe the board's oversight of climate-related risks and opportunities."),
-                    textAreaInput("TCFD-Gov-b","Management's Role", width = 500, value="Describe management's role in assessing and managing climate-related risks and opportunities.")
-                  ),
-                  tabPanel(title = "Strategy",
-                    textAreaInput("TCFD-Strat-a","Climate Risks and Opportunities", width = 500, value = "Describe the climate-related risks and opportunities the organization has identified over the short, medium, and long term."),
-                    checkboxGroupInput("chkbxRisks","Risks & Opportunities", width = 500, c("Policy & Legal Risk","Technology Risk","Market Risk","Reputation Risk","Acute Physical Risk","Chronic Physical Risk","Resource Efficiency","Energy Source","Products/Services","Markets","Resilience"),selected = c("Energy Source","Acute Physical Risk","Chronic Physical Risk")),
-                    textAreaInput("TCFD-Strat-b","Impact of Risks", width = 500, value = "Describe the impact of climate-related risks and opportunities on the organization's businesses, strategy, and financial planning.")
-                  ),
-                  tabPanel(title = "Risk Management",
-                     textAreaInput("TCFD-Gov-a","Processes for Identifying Risks", width = 500, value="Describe the processes for identifying & assessing climate-related risks and opportunities."),
-                     textAreaInput("TCFD-Gov-b","Processes for Managing", width = 500, value="Describe the processes managing climate-related risks."),
-                     textAreaInput("TCFD-Gov-a","Process Integration", width = 500, value="Describe how processes for identifying, assessing, and managing climate-related risks are intgrated into the organization's overall management.")
-                  ),
-                  tabPanel(title = "Metrics and Targets"),
-                  tabPanel(title="Financial Impacts",
-                           dataTableOutput("corpFinImpacts")
-                  )#tabPanel
+                  )
                 )#tabBox
               )#fluidRow
       ),#tabItem corporate
@@ -178,11 +169,24 @@ ui <- dashboardPage(
       tabItem("TCFD",
               fluidRow(
                 tabBox(title = "TCFD Reporting",
-                       tabPanel(
-                         title = "Governance"
-                         ),
-                       tabPanel(title="Strategy"),
-                       tabPanel(title="Metrics and Targets")
+                       tabPanel(title = "Governance",
+                                textAreaInput("TCFD-Gov-a","Board Oversight", width = 500, value="Describe the board's oversight of climate-related risks and opportunities."),
+                                textAreaInput("TCFD-Gov-b","Management's Role", width = 500, value="Describe management's role in assessing and managing climate-related risks and opportunities.")
+                       ),
+                       tabPanel(title = "Strategy",
+                                textAreaInput("TCFD-Strat-a","Climate Risks and Opportunities", width = 500, value = "Describe the climate-related risks and opportunities the organization has identified over the short, medium, and long term."),
+                                checkboxGroupInput("chkbxRisks","Risks & Opportunities", width = 500, c("Policy & Legal Risk","Technology Risk","Market Risk","Reputation Risk","Acute Physical Risk","Chronic Physical Risk","Resource Efficiency","Energy Source","Products/Services","Markets","Resilience"),selected = c("Energy Source","Acute Physical Risk","Chronic Physical Risk")),
+                                textAreaInput("TCFD-Strat-b","Impact of Risks", width = 500, value = "Describe the impact of climate-related risks and opportunities on the organization's businesses, strategy, and financial planning.")
+                       ),
+                       tabPanel(title = "Risk Management",
+                                textAreaInput("TCFD-Gov-a","Processes for Identifying Risks", width = 500, value="Describe the processes for identifying & assessing climate-related risks and opportunities."),
+                                textAreaInput("TCFD-Gov-b","Processes for Managing", width = 500, value="Describe the processes managing climate-related risks."),
+                                textAreaInput("TCFD-Gov-a","Process Integration", width = 500, value="Describe how processes for identifying, assessing, and managing climate-related risks are intgrated into the organization's overall management.")
+                       ),
+                       tabPanel(title = "Metrics and Targets"),
+                       tabPanel(title="Financial Impacts",
+                                dataTableOutput("corpFinImpacts")
+                       )#tabPanel
               ))
       ),
       tabItem("CAP",
@@ -474,7 +478,7 @@ server <- function(input, output, sessionn) {
 
   output$frame <- renderUI({
     input$Member
-    my_test <- tags$iframe(src="map.html", height=600, width=535)
+    my_test <- tags$iframe(src="map.html", height=300, width=300)
     print(my_test)
     my_test
   })
