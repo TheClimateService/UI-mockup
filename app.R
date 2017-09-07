@@ -133,11 +133,12 @@ ui <- dashboardPage(
                     htmlOutput('txtImpact2'),
                     htmlOutput('txtImpact3'),
                     hr(),
-                    infoBox(title="EPS Value at Risk",value="0.187%",color="aqua",icon = icon("percent")),
-                    infoBox(title="Revenue at Risk",value="$2,618,782",color="aqua",icon = icon("usd")),
-                    infoBox(title="Expenses at Risk",value="$34,729,133",color="aqua",icon = icon("usd")),
-                    infoBox(title="Assets at Risk",value="$215,362,765",color="aqua",icon = icon("usd")),
-                    infoBox(title="Liabilities at Risk",value="$1,824,773",color="aqua",icon = icon("usd"))
+                    infoBoxOutput('infobox1')
+                    # infoBox(title="EPS Value at Risk",value="0.187%",color="aqua",icon = icon("percent")),
+                    # infoBox(title="Revenue at Risk",value="$2,618,782",color="aqua",icon = icon("usd")),
+                    # infoBox(title="Expenses at Risk",value="$34,729,133",color="aqua",icon = icon("usd")),
+                    # infoBox(title="Assets at Risk",value="$215,362,765",color="aqua",icon = icon("usd")),
+                    # infoBox(title="Liabilities at Risk",value="$1,824,773",color="aqua",icon = icon("usd"))
                   )
                 )#tabBox
               )#fluidRow
@@ -480,6 +481,20 @@ server <- function(input, output, session) {
     input$siTimeframe
     name <- switch(input$siTimeframe,'green','green','yellow','yellow','yellow','yellow','red','red','red','red','red','red','red','red','red','red','red','red','red','red','red','red','red','red','red','red','red','red','red','red')
     return( name=name )
+  })
+  
+  EPSVAR <- reactive({
+    input$siTimeframe
+    epsvarvalue <- switch(input$siTimeframe,'0.04','0.08','0.12','0.16','0.2','0.25','0.30','0.36','0.42','0.5','0.58','0.65','0.76','1.0','1.2','1.4','1.6','1.8','2.0','2.2','2.4','2.5','2.6','2.7','2.8','2.9','3.0','3.1','3.2','3.3')
+    return( epsvarvalue=epsvarvalue )
+  })
+  
+  output$infobox1 <- renderInfoBox({
+    x <- input$siTimeframe
+    color <- 'yellow'
+    if(x < 4) color <- 'green'
+    if(x > 10) color <- 'red'
+    infoBox(value = EPSVAR(), title = 'EPS Value at Risk', color = color, icon = icon("percent"))
   })
   
   output$txtImpact1 <- renderUI({
