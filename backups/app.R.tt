@@ -99,21 +99,16 @@ ui <- dashboardPage(
                       selected = c("Manufacturing")
                     )
                   ),
-		tabPanel(title = "Locations",
+                  tabPanel(title = "Locations",
                     textInput("location1","Corporate Headquarters",value = "8000 S Federal Way, Boise, ID 83716"),
                     htmlOutput("frame"),
-                    hr(),
-                    checkboxGroupInput("cbBusinessFunctions","Business functions performed at this location",
-                                c("Clean Room Manufacturing","Shipping","Inventory Management","R&D","HR","Legal","Marketing/Sales","Corporate Governance"),
-                                selected = c("Clean Room Manufacturing","R&D")
-                    ),
                     hr(),
                     actionButton("addLocation","Add a location")
                   ),
                   tabPanel(title = "Users",
-                    valueBox(1, "Julia Grant", icon = icon("user"), color = "teal"),
-                    valueBox(1, "Joe Robinson", icon = icon("user"), color = "teal"),
-                    valueBox(1, "Norm Armour", icon = icon("user"), color = "teal"),
+                    valueBox(1, "Maria", icon = icon("user"), color = "teal"),
+                    valueBox(1, "Chen", icon = icon("user"), color = "teal"),
+                    valueBox(1, "Vijay", icon = icon("user"), color = "teal"),
                     actionButton("addUser","Add a user")
                   )
                 )#tabBox
@@ -124,23 +119,31 @@ ui <- dashboardPage(
       tabItem(tabName = "corporate",
               fluidRow(
                 tabBox(width = "500",
-		tabPanel(title="Screening level",
-                    selectInput("cbLocation","Location",
-                               c("Boise","Singapore","Malaysia","Scotland"),
-                               selected = c("Boise")
-                    ),
-                    sliderInput("siTimeframe", "Timeframe", 1, 30, 5, step=1, animate=TRUE),
-                    htmlOutput('txtImpact1'),
-                    htmlOutput('txtImpact2'),
-                    htmlOutput('txtImpact3'),
-                    hr(),
-                    infoBoxOutput('infobox1')
-                    # infoBox(title="EPS Value at Risk",value="0.187%",color="aqua",icon = icon("percent")),
-                    # infoBox(title="Revenue at Risk",value="$2,618,782",color="aqua",icon = icon("usd")),
-                    # infoBox(title="Expenses at Risk",value="$34,729,133",color="aqua",icon = icon("usd")),
-                    # infoBox(title="Assets at Risk",value="$215,362,765",color="aqua",icon = icon("usd")),
-                    # infoBox(title="Liabilities at Risk",value="$1,824,773",color="aqua",icon = icon("usd"))
-                  )
+                  tabPanel(title="Summary",
+                    infoBox(title="EPS Value at Risk",value="0.187%",color="aqua",icon = icon("percent")),
+                    infoBox(title="Revenue at Risk",value="$2,618,782",color="aqua",icon = icon("usd")),
+                    infoBox(title="Expenses at Risk",value="$34,729,133",color="aqua",icon = icon("usd")),
+                    infoBox(title="Assets at Risk",value="$215,362,765",color="aqua",icon = icon("usd")),
+                    infoBox(title="Liabilities at Risk",value="$1,824,773",color="aqua",icon = icon("usd"))
+                  ),#tabPanel
+                  tabPanel(title = "Governance",
+                    textAreaInput("TCFD-Gov-a","Board Oversight", width = 500, value="Describe the board's oversight of climate-related risks and opportunities."),
+                    textAreaInput("TCFD-Gov-b","Management's Role", width = 500, value="Describe management's role in assessing and managing climate-related risks and opportunities.")
+                  ),
+                  tabPanel(title = "Strategy",
+                    textAreaInput("TCFD-Strat-a","Climate Risks and Opportunities", width = 500, value = "Describe the climate-related risks and opportunities the organization has identified over the short, medium, and long term."),
+                    checkboxGroupInput("chkbxRisks","Risks & Opportunities", width = 500, c("Policy & Legal Risk","Technology Risk","Market Risk","Reputation Risk","Acute Physical Risk","Chronic Physical Risk","Resource Efficiency","Energy Source","Products/Services","Markets","Resilience"),selected = c("Energy Source","Acute Physical Risk","Chronic Physical Risk")),
+                    textAreaInput("TCFD-Strat-b","Impact of Risks", width = 500, value = "Describe the impact of climate-related risks and opportunities on the organization's businesses, strategy, and financial planning.")
+                  ),
+                  tabPanel(title = "Risk Management",
+                     textAreaInput("TCFD-Gov-a","Processes for Identifying Risks", width = 500, value="Describe the processes for identifying & assessing climate-related risks and opportunities."),
+                     textAreaInput("TCFD-Gov-b","Processes for Managing", width = 500, value="Describe the processes managing climate-related risks."),
+                     textAreaInput("TCFD-Gov-a","Process Integration", width = 500, value="Describe how processes for identifying, assessing, and managing climate-related risks are intgrated into the organization's overall management.")
+                  ),
+                  tabPanel(title = "Metrics and Targets"),
+                  tabPanel(title="Financial Impacts",
+                           dataTableOutput("corpFinImpacts")
+                  )#tabPanel
                 )#tabBox
               )#fluidRow
       ),#tabItem corporate
@@ -179,28 +182,14 @@ ui <- dashboardPage(
        #Plans tabSubItems
       tabItem("TCFD",
               fluidRow(
-     		tabBox(title = "TCFD Reporting",
-                       tabPanel(title = "Governance",
-                                textAreaInput("TCFD-Gov-a","Board Oversight", width = 500, value="Describe the board's oversight of climate-related risks and opportunities."),
-                                textAreaInput("TCFD-Gov-b","Management's Role", width = 500, value="Describe management's role in assessing and managing climate-related risks and opportunities.")
-                       ),
-                       tabPanel(title = "Strategy",
-                                textAreaInput("TCFD-Strat-a","Climate Risks and Opportunities", width = 500, value = "Describe the climate-related risks and opportunities the organization has identified over the short, medium, and long term."),
-                                checkboxGroupInput("chkbxRisks","Risks & Opportunities", width = 500, c("Policy & Legal Risk","Technology Risk","Market Risk","Reputation Risk","Acute Physical Risk","Chronic Physical Risk","Resource Efficiency","Energy Source","Products/Services","Markets","Resilience"),selected = c("Energy Source","Acute Physical Risk","Chronic Physical Risk")),
-                                textAreaInput("TCFD-Strat-b","Impact of Risks", width = 500, value = "Describe the impact of climate-related risks and opportunities on the organization's businesses, strategy, and financial planning.")
-                       ),
-                       tabPanel(title = "Risk Management",
-                                textAreaInput("TCFD-Gov-a","Processes for Identifying Risks", width = 500, value="Describe the processes for identifying & assessing climate-related risks and opportunities."),
-                                textAreaInput("TCFD-Gov-b","Processes for Managing", width = 500, value="Describe the processes managing climate-related risks."),
-                                textAreaInput("TCFD-Gov-a","Process Integration", width = 500, value="Describe how processes for identifying, assessing, and managing climate-related risks are intgrated into the organization's overall management.")
-                       ),
-                       tabPanel(title = "Metrics and Targets"),
-                       tabPanel(title="Financial Impacts",
-                                dataTableOutput("corpFinImpacts")
-                       )#tabPanel
+                tabBox(title = "TCFD Reporting",
+                       tabPanel(
+                         title = "Governance"
+                         ),
+                       tabPanel(title="Strategy"),
+                       tabPanel(title="Metrics and Targets")
               ))
       ),
- 
       tabItem("CAP",
               box(
                 title = "Climate Action Plan"
