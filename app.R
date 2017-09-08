@@ -18,20 +18,20 @@ ui <- dashboardPage(
 	title = "The Climate Service",
 	dropdownMenu(type = "messages",
                      messageItem(
-                       from = "Sarah P. - Operations Manager",
+                       from = "Norm Armour - Operations Mgr",
                        message = "Finished loading data you requested.",
                        icon = icon("exclamation"),
                        time = "15 minutes ago"
                      ),
                      messageItem(
-                       from = "Robin H. - ESG Manager",
+                       from = "Julia Grant - ESG Mgr",
                        message = "Did you include CSR effects?",
                        icon = icon("question"),
                        time = "yesterday"
                      ),
                      messageItem(
-                       from = "Craig T. - Marketing",
-                       message = "New products brainstorm",
+                       from = "Joe Robinson - Risk Mgr",
+                       message = "Drought effects on cooling water",
                        icon = icon("calendar"),
                        time = "yesterday"
                      )
@@ -463,7 +463,7 @@ server <- function(input, output, session) {
 
 # James start -----------------------------------------------------------
 
-  # traffic light text for corp risk analyzer
+  # traffic light text for corp risk analyzer. Obviously all the hardcoded values should come from transfer functions
   
   txtImpactColor1 <- reactive({
     input$siTimeframe
