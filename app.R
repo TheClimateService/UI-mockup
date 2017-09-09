@@ -745,7 +745,6 @@ server <- function(input, output, sessionn) {
 
     # NPV calculation
     # Assume project starts in period 3 and that each period is a decade.
-    initializer <- c(0,0,0,0,0,0,0)
     cashflowinputs <- c(input$cashflow1,input$cashflow2,input$cashflow3,input$cashflow4,input$cashflow5,input$cashflow6,input$cashflow7)
     cashflow <- initializer
     for(i in 1:length(cashflow)) {cashflow[i] = cashflowinputs[i] }
