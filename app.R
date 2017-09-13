@@ -23,27 +23,27 @@ ui <- dashboardPage(
 	title = "The Climate Service",
 	dropdownMenu(type = "messages",
                      messageItem(
-                       from = "Norm Armour - Operations Mgr",
+                       from = "Sarah P. - Operations Manager",
                        message = "Finished loading data you requested.",
                        icon = icon("exclamation"),
                        time = "15 minutes ago"
                      ),
                      messageItem(
-                       from = "Julia Grant - ESG Mgr",
+                       from = "Robin H. - ESG Manager",
                        message = "Did you include CSR effects?",
                        icon = icon("question"),
                        time = "yesterday"
                      ),
                      messageItem(
-                       from = "Joe Robinson - Risk Mgr",
-                       message = "Drought effects on cooling water",
+                       from = "Craig T. - Marketing",
+                       message = "New products brainstorm",
                        icon = icon("calendar"),
                        time = "yesterday"
                      )
         )
   ),
 
-# Sidebar content
+  ## Sidebar content
   dashboardSidebar(
 	width=300,
 	sidebarMenu(id = "sidebar",
@@ -63,7 +63,7 @@ ui <- dashboardPage(
       	  menuSubItem("PROBABLISTIC IMPACT ESTIMATE", tabName = "impactestimate", icon = icon("cog", lib = "glyphicon")),
       	  menuSubItem("FINANCIAL EFFECTS", tabName = "financialeffects", icon = icon("usd", lib = "glyphicon")),
 
-      	  menuSubItem("INTERNATIONAL PROJECT PLANNING", tabName = "internationalplanning", icon = icon("tree-conifer", lib = "glyphicon")),
+      	  menuSubItem("SUSTAINABLE INFRASTRUCTURE", tabName = "sustainable_infrastructure", icon = icon("tree-conifer", lib = "glyphicon")),
       	  menuSubItem("ADAPTATION BENEFIT/COST PLANNING", tabName = "adaptationplanning", icon = icon("tree-deciduous", lib = "glyphicon")),
 
       	  menuSubItem("OVERALL CLIMATE SCORE", tabName = "climatescore", icon = icon("certificate", lib = "glyphicon"))
@@ -237,8 +237,9 @@ ui <- dashboardPage(
       ),
 
       tabItem(tabName = "impactfunctions",
-        h2("Sector-specific impact functions translate changes into impacts on infrastructure, workforce, revenue..."),
-       
+        h2("Sector-specific impact functions quantify impacts on infrastructure, workforce, revenue..."),
+        tabBox(width=12, 
+        tabPanel(title = "GENERAL",
 	fluidRow(
           box(title="Impact Functions - Combined", background = "red", solidHeader = TRUE, plotOutput("impactplot3", height = 200)),
           box(
@@ -262,26 +263,44 @@ ui <- dashboardPage(
             sliderInput("quadraticshape", "Quadratic shape:", -20, 20, -4, step=2, animate=TRUE),
             sliderInput("quadraticmidpoint", "Quadratic midpoint:", 270, 320, 295, step=1, animate=TRUE)
           )
-        ),
+        )
+	), #tabPanel
 
+	tabPanel(title = "SPECIFIC",
 	fluidRow(
-	  h2("=== IMPACT FUNCTION LIBRARY ==="),
-	  column(3,
-          #box(title="CROP YIELD - TEMPERATURE", background = "yellow", solidHeader = TRUE, imageOutput("impactplot4", height = 300)),
-          #box(title="CROP YIELD - PRECIPITATION", background = "yellow", solidHeader = TRUE, imageOutput("impactplot5", height = 300)),
-          #box(title="CROP YIELD - MULTIPLE VARIABLES", background = "yellow", solidHeader = TRUE, imageOutput("impactplot6", height = 300)),
-          #box(title="VARIOUS SECTORS", background = "yellow", solidHeader = TRUE, imageOutput("impactplot7", height = 300)),
-          #box(title="VARIOUS SECTORS", background = "yellow", solidHeader = TRUE, imageOutput("impactplot8", height = 300))
-	  h4("Power Consump., GDP, Income, Productivity, etc."),
-          imageOutput("impactplot8", height = 300)
+	  column(4,
+	  h4("Electricity Load Vs. Daily Average Temperature"),
+          imageOutput("impactplot_elecload", height = 500, width=450)
 	  ),
 
-	  column(3, offset=1,
-	  h4("Mortality, Damage, etc."),
-          imageOutput("impactplot7", height = 300)
+	  column(4, offset=1,
+	  h4("Agricultural Income in Brazil Vs. Rainfall"),
+          imageOutput("impactplot_agriculture_brazil", height = 500, width=450)
 	  )
-	),
 
+	)
+	), #tabPanel
+
+        tabPanel(title = "FUNCTION LIBRARY 1",
+	fluidRow(
+	  #h2("=== IMPACT FUNCTION LIBRARY ==="),
+	  column(12,
+	  h4("Power Consump., GDP, Income, Productivity, etc."),
+          imageOutput("impactplot8", height = 500)
+	  )
+	)
+	), #tabPanel
+
+        tabPanel(title = "FUNCTION LIBRARY 2",
+	fluidRow(
+	  column(12, offset=0,
+	  h4("Mortality, Damage, etc."),
+          imageOutput("impactplot7", height = 500)
+	  )
+	)
+	), #tabPanel
+
+        tabPanel(title = "FUNCTION LIBRARY 3",
 	fluidRow(
 	  column(3, 
 	  h4("Crops - Temperature"),
@@ -297,21 +316,24 @@ ui <- dashboardPage(
 	  h4("Crops - Derived Variables"),
           imageOutput("impactplot6", height = 300)
 	  )
-	),
-        
+	)
+	), #tabPanel
+
+        tabPanel(title = "FUNCTION LIBRARY 4",
 	fluidRow(
 	  column(3, 
 	  h4("Power Generation - Air/Water Temperature"),
-          imageOutput("impactplot9", height = 300)
+          imageOutput("impactplot9", height = 500)
 	  ),
 
-	  column(3, offset=1,
+	  column(3, offset=3,
 	  h4("Water Requirements for Power - Water Temperature"),
-          imageOutput("impactplot10", height = 300)
+          imageOutput("impactplot10", height = 500)
 	  )
 
 	)
-        
+      ) #tabPanel  
+      ) #tabBox
       ),
 
       tabItem(tabName = "impactestimate",
@@ -371,8 +393,9 @@ ui <- dashboardPage(
         )
       ),
 
-      tabItem(tabName = "internationalplanning",
-        h2("Climate risk assessment and adaptation planning throughout the transaction cycle"),
+      tabItem(tabName = "sustainable_infrastructure",
+        #h2("Climate risk assessment and adaptation planning throughout the transaction cycle"),
+        h2("Align financial flows with country pathways to low-carbon and climate-resilient development"),
         fluidRow(
           box(
             title = "Economic Sector",
@@ -464,7 +487,7 @@ server <- function(input, output, sessionn) {
 
 # James start -----------------------------------------------------------
 
-  # traffic light text for corp risk analyzer. Obviously all the hardcoded values should come from transfer functions
+  # traffic light text for corp risk analyzer
   
   txtImpactColor1 <- reactive({
     input$siTimeframe
@@ -647,6 +670,14 @@ server <- function(input, output, sessionn) {
     plot(x,wt1*sigmoid(x,input$sigmoidlimit,input$sigmoidsteepness,input$sigmoidmidpoint) + wt2*quadratic(x,input$quadraticlimit,input$quadraticshape,input$quadraticmidpoint), type="l", lwd=3, lty=1, col="red", xlim=c(270,320), ylim=c(-100,100), xlab="Daily Maximum Surface Temperature (degK)", ylab="Relative Impact")
   })
 
+  output$impactplot_elecload <- renderPlot({
+    source("./functions/fit_elec_load_v1.r", local=TRUE)
+  })
+
+  output$impactplot_agriculture_brazil <- renderPlot({
+    source("./functions/fit_agriculture_brazil_v1.r", local=TRUE)
+  })
+
   output$impactplot4 <- renderImage({
     #filename <- normalizePath(file.path('./images/lobell_crop_yields_2017_fig1.png'))
     list(src = "./images/lobell_crop_yields_2017_fig1.png",width=300,height=300,alt = paste("lobell_crop_yields_2017_fig1_temperature"))
@@ -661,19 +692,19 @@ server <- function(input, output, sessionn) {
   }, deleteFile = FALSE)
 
   output$impactplot7 <- renderImage({
-    list(src = "./images/carleton_hsiang_climate_dose_response_2016_fig3a.png",width=450,height=300,alt = paste("carleton_hsiang_climate_dose_response_2016_fig3a_multiplesectors"))
+    list(src = "./images/carleton_hsiang_climate_dose_response_2016_fig3a.png",width=1000,height=500,alt = paste("carleton_hsiang_climate_dose_response_2016_fig3a_multiplesectors"))
   }, deleteFile = FALSE)
 
   output$impactplot8 <- renderImage({
-    list(src = "./images/carleton_hsiang_climate_dose_response_2016_fig3b.png",width=450,height=300,alt = paste("carleton_hsiang_climate_dose_response_2016_fig3b_multiplesectors"))
+    list(src = "./images/carleton_hsiang_climate_dose_response_2016_fig3b.png",width=1000,height=500,alt = paste("carleton_hsiang_climate_dose_response_2016_fig3b_multiplesectors"))
   }, deleteFile = FALSE)
 
   output$impactplot9 <- renderImage({
-    list(src = "./images/thompson_cooling_water_Teffects_v1b_power_airtemp.png",width=450,height=300,alt = paste("thompson_power_generation_air_and_water_temperature"))
+    list(src = "./images/thompson_cooling_water_Teffects_v1b_power_airtemp.png",width=600,height=450,alt = paste("thompson_power_generation_air_and_water_temperature"))
   }, deleteFile = FALSE)
 
   output$impactplot10 <- renderImage({
-    list(src = "./images/thompson_cooling_water_Teffects_v1b_water.png",width=450,height=300,alt = paste("thompson_water_needed_water_temperature"))
+    list(src = "./images/thompson_cooling_water_Teffects_v1b_water.png",width=500,height=300,alt = paste("thompson_water_needed_water_temperature"))
   }, deleteFile = FALSE)
 
   # Probability of Exceeding Thresholds
@@ -745,7 +776,6 @@ server <- function(input, output, sessionn) {
 
     # NPV calculation
     # Assume project starts in period 3 and that each period is a decade.
-    initializer <- c(0,0,0,0,0,0,0)
     cashflowinputs <- c(input$cashflow1,input$cashflow2,input$cashflow3,input$cashflow4,input$cashflow5,input$cashflow6,input$cashflow7)
     cashflow <- initializer
     for(i in 1:length(cashflow)) {cashflow[i] = cashflowinputs[i] }
