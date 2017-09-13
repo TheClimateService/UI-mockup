@@ -43,7 +43,7 @@ ui <- dashboardPage(
         )
   ),
 
-  ## Sidebar content
+# Sidebar content
   dashboardSidebar(
 	width=300,
 	sidebarMenu(id = "sidebar",
