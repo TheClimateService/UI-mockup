@@ -63,7 +63,6 @@ ui <- dashboardPage(
       	  menuSubItem("PROBABLISTIC IMPACT ESTIMATE", tabName = "impactestimate", icon = icon("cog", lib = "glyphicon")),
       	  menuSubItem("FINANCIAL EFFECTS", tabName = "financialeffects", icon = icon("usd", lib = "glyphicon")),
 
-	# Added in Build7
       	  menuSubItem("INTERNATIONAL PROJECT PLANNING", tabName = "internationalplanning", icon = icon("tree-conifer", lib = "glyphicon")),
       	  menuSubItem("ADAPTATION BENEFIT/COST PLANNING", tabName = "adaptationplanning", icon = icon("tree-deciduous", lib = "glyphicon")),
 
@@ -341,7 +340,6 @@ ui <- dashboardPage(
         fluidRow(
           box(title="Beta Multiplier By Period: 1/(1-D), where D is probabilistic impact", background = "blue", solidHeader = TRUE, plotOutput("financialplot1", height = 300)),
           box(title="NPV Impact on Project", background = "green", solidHeader = TRUE, plotOutput("financialplot2", height = 300)),
-          # Modified in Build7 
           #box(
           #  title = "Multiplier Controls (sigmoid impact function)",
           #  sliderInput("sigmoidlimit3", "Sigmoid limit:", -100, 100, -75, step=10, animate=TRUE),
@@ -373,7 +371,6 @@ ui <- dashboardPage(
         )
       ),
 
-# Added in Build7
       tabItem(tabName = "internationalplanning",
         h2("Climate risk assessment and adaptation planning throughout the transaction cycle"),
         fluidRow(
@@ -444,7 +441,6 @@ ui <- dashboardPage(
           box(title="Impact Function (controlled from impact-function tab)", background = "blue", solidHeader = TRUE, plotOutput("scoreplot2", height = 300)),
           box(title="Climate Score By Period", background = "green", solidHeader = TRUE, plotOutput("scoreplot1", height = 300)),
 
-      # Modified in Build7
           #box(
           #  title = "Impact Function Controls (sigmoid impact function)",
           #  sliderInput("sigmoidlimit4", "Sigmoid limit:", -100, 100, -75, step=10, animate=TRUE),
@@ -681,7 +677,7 @@ server <- function(input, output, sessionn) {
   }, deleteFile = FALSE)
 
   # Probability of Exceeding Thresholds
-  # Modified in Build7 - Just note that the shapes and scales values are for a pre-determined Weibull distribution for South Sudan.
+  # Note that the shapes and scales values are for a pre-determined Weibull distribution for South Sudan.
   output$impactestimateplot1 <- renderPlot({
     #shapes <- c(81.8730, 93.0240, 88.9460, 84.7620, 95.8550, 90.0690, 86.1060, 90.3700, 91.5810)
     #scales <- c(292.0320, 293.0880, 293.0820, 293.3870, 293.7670, 293.9150, 294.5310, 295.7390, 295.7960)
