@@ -268,14 +268,19 @@ ui <- dashboardPage(
 
 	tabPanel(title = "SPECIFIC",
 	fluidRow(
-	  column(4,
+	  column(3,
 	  h4("Electricity Load Vs. Daily Average Temperature"),
-          imageOutput("impactplot_elecload", height = 500, width=450)
+          imageOutput("impactplot_elecload", height = 500, width=300)
 	  ),
 
-	  column(4, offset=1,
+	  column(3, offset=1,
 	  h4("Agricultural Income in Brazil Vs. Rainfall"),
-          imageOutput("impactplot_agriculture_brazil", height = 500, width=450)
+          imageOutput("impactplot_agriculture_brazil", height = 500, width=300)
+	  ),
+
+	  column(3, offset=1,
+	  h4("Maize Yield in U.S. Vs. Temperature"),
+          imageOutput("impactplot_maize_us", height = 500, width=300)
 	  )
 
 	)
@@ -339,6 +344,10 @@ ui <- dashboardPage(
       tabItem(tabName = "impactestimate",
         h2("Combine climate probabilities and impact functions to estimate probability-weighted net impact"),
         fluidRow(
+                    selectInput("impact_selected","IMPACT FUNCTION SOURCE",
+                               c("General","Electricity Load","Agricultural Income (Brazil)", "Maize Yield (US)"),
+                               selected = c("General")
+                    ),
           box(title="Impact Function (controlled from impact-function tab)", background = "blue", solidHeader = TRUE, plotOutput("impactestimateplot3", height = 300)),
           box(title="Probabilistic Impact Estimate", background = "red", solidHeader = TRUE, plotOutput("impactestimateplot2", height = 300))
 #          box(
@@ -678,6 +687,14 @@ server <- function(input, output, sessionn) {
     source("./functions/fit_agriculture_brazil_v1.r", local=TRUE)
   })
 
+  output$impactplot_maize_us <- renderPlot({
+    source("./functions/fit_maize_yield_us_v1.r", local=TRUE)
+  })
+
+  output$comingsoon <- renderImage({
+    list(src = "./images/coming_soon.png",width=300,height=300,alt = paste("lobell_crop_yields_2017_fig3_precip"))
+  }, deleteFile = FALSE)
+
   output$impactplot4 <- renderImage({
     #filename <- normalizePath(file.path('./images/lobell_crop_yields_2017_fig1.png'))
     list(src = "./images/lobell_crop_yields_2017_fig1.png",width=300,height=300,alt = paste("lobell_crop_yields_2017_fig1_temperature"))
@@ -730,6 +747,8 @@ server <- function(input, output, sessionn) {
 
   # Probabilistic Impact Estimate
   output$impactestimateplot2 <- renderPlot({
+
+  if (input$impact_selected == "General") {
     x <- seq(270,320,0.1)
 
 # The following fails because the threshold inputs to damagej1/2 are functions of j.
@@ -744,14 +763,48 @@ server <- function(input, output, sessionn) {
 
     plot(impactbyperiod_relative2baseperiod, type="l", lwd=3, lty=1, col=colors[1], xlab="Periods", ylab="Probabilistic Impact", xaxt="n")
 	axis(1, at=c(1:length(periods)), labels=periods)
+    } #endif
+
+  if (input$impact_selected == "Electricity Load") {
+    source("./functions/fit_elec_load_v1.r", local=TRUE)
+    source("./functions/damage_impacts_4function_v1.r", local=TRUE)
+    plot(impactbyperiod_relative2baseperiod, type="l", lwd=3, lty=1, col=colors[1], xlab="Periods", ylab="Probabilistic Impact", xaxt="n")
+	axis(1, at=c(1:length(periods)), labels=periods)
+    } #endif
+
+  if (input$impact_selected == "Agricultural Income (Brazil)") {
+    return()
+    } #endif
+
+  if (input$impact_selected == "Maize Yield (US)") {
+    return()
+    } #endif
+
   })
 
   # Impact Function for impact estimate (controlled from impact-function tab)
   output$impactestimateplot3 <- renderPlot({
+  
+  if (input$impact_selected == "General") {
     x = range_tempK
     wt1 = input$impactfunctionweight
     wt2 = 1 - wt1
     plot(x,wt1*sigmoid(x,input$sigmoidlimit,input$sigmoidsteepness,input$sigmoidmidpoint) + wt2*quadratic(x,input$quadraticlimit,input$quadraticshape,input$quadraticmidpoint), type="l", lwd=3, lty=1, col="red", xlim=c(270,320), ylim=c(-100,100), xlab="Daily Maximum Surface Temperature (degK)", ylab="Relative Impact")
+    } #endif
+
+  if (input$impact_selected == "Electricity Load") {
+    #return()
+    source("./functions/fit_elec_load_v1.r", local=TRUE)
+    } #endif
+
+  if (input$impact_selected == "Agricultural Income (Brazil)") {
+    source("./functions/fit_agriculture_brazil_v1.r", local=TRUE)
+    } #endif
+
+  if (input$impact_selected == "Maize Yield (US)") {
+    source("./functions/fit_maize_yield_us_v1.r", local=TRUE)
+    } #endif
+
   })
 
   # Beta Multiplier By Period
