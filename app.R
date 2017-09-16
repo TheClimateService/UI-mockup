@@ -98,7 +98,7 @@ ui <- dashboardPage(
                       selected = c("Manufacturing")
                     )
                   ),
-		tabPanel(title = "Locations",
+		tabPanel(title = "Location 1",
                     textInput("location1","Corporate Headquarters",value = "8000 S Federal Way, Boise, ID 83716"),
                     htmlOutput("frame"),
                     hr(),
@@ -113,6 +113,23 @@ ui <- dashboardPage(
                     valueBox(1, "Julia Grant", icon = icon("user"), color = "teal"),
                     valueBox(1, "Joe Robinson", icon = icon("user"), color = "teal"),
                     valueBox(1, "Norm Armour", icon = icon("user"), color = "teal"),
+                    actionButton("addUser","Add a user")
+                  ),
+		tabPanel(title = "Location 2",
+                    textInput("location2","Singapore Facilities",value = "4 facilities in Singapore"),
+                    htmlOutput("frame_singapore"),
+                    hr(),
+                    checkboxGroupInput("cbBusinessFunctions","Business functions performed at this location",
+                                c("Clean Room Manufacturing","Shipping","Inventory Management","R&D","HR","Legal","Marketing/Sales","Corporate Governance"),
+                                selected = c("Clean Room Manufacturing","R&D")
+                    ),
+                    hr(),
+                    actionButton("addLocation","Add a location")
+                  ),
+                  tabPanel(title = "Users",
+                    valueBox(1, "TBD", icon = icon("user"), color = "teal"),
+                    valueBox(1, "TBD", icon = icon("user"), color = "teal"),
+                    valueBox(1, "TBD", icon = icon("user"), color = "teal"),
                     actionButton("addUser","Add a user")
                   )
                 )#tabBox
@@ -568,9 +585,16 @@ server <- function(input, output, sessionn) {
 
   output$frame <- renderUI({
     input$Member
+    # iframe finds its target source in the www directory.
     my_test <- tags$iframe(src="map.html", height=300, width=300)
     print(my_test)
     my_test
+  })
+
+  output$frame_singapore <- renderUI({
+    # iframe finds its target source in the www directory.
+    thismap <- tags$iframe(src="map_singapore.html", height=300, width=300)
+    thismap
   })
 
   output$plot1 <- renderPlot({
@@ -761,8 +785,14 @@ server <- function(input, output, sessionn) {
     write.table(impactbyperiod, file="./output/impactbyperiod.csv", row.names = FALSE, col.names = FALSE, sep=" ")
     write.table(impactbyperiod_relative2baseperiod, file="./output/impactbyperiod_relative2baseperiod.csv", row.names = FALSE, col.names = FALSE, sep=" ")
 
-    plot(impactbyperiod_relative2baseperiod, type="l", lwd=3, lty=1, col=colors[1], xlab="Periods", ylab="Probabilistic Impact", xaxt="n")
+    plot(impactbyperiod_relative2baseperiod, type="l", lwd=3, lty=1, col=colors[1], xlab="Periods", ylab="Probabilistic Impact(%)", xaxt="n")
 	axis(1, at=c(1:length(periods)), labels=periods)
+        current_risk = round(impactbyperiod_relative2baseperiod[2], digits=2)
+	if(current_risk>=0) {thiscol="blue"} else {thiscol="red"}
+        lines(c(2,2),c(0,current_risk), col=thiscol, lwd=2 )
+        lines(c(1,length(periods)), c(0,0), col="green" )
+        text(3.2,0,"CURRENT IMPACT (%) = ", font=4, col=thiscol)
+        text(4.6,0,current_risk, font=4, col=thiscol)
     } #endif
 
   if (input$impact_selected == "Electricity Load") {
@@ -789,7 +819,7 @@ server <- function(input, output, sessionn) {
     x = range_tempK
     wt1 = input$impactfunctionweight
     wt2 = 1 - wt1
-    plot(x,wt1*sigmoid(x,input$sigmoidlimit,input$sigmoidsteepness,input$sigmoidmidpoint) + wt2*quadratic(x,input$quadraticlimit,input$quadraticshape,input$quadraticmidpoint), type="l", lwd=3, lty=1, col="red", xlim=c(270,320), ylim=c(-100,100), xlab="Daily Maximum Surface Temperature (degK)", ylab="Relative Impact")
+    plot(x,wt1*sigmoid(x,input$sigmoidlimit,input$sigmoidsteepness,input$sigmoidmidpoint) + wt2*quadratic(x,input$quadraticlimit,input$quadraticshape,input$quadraticmidpoint), type="l", lwd=3, lty=1, col="red", xlim=c(270,320), ylim=c(-100,100), xlab="Daily Maximum Surface Temperature (degK)", ylab="Relative Impact (%)")
     } #endif
 
   if (input$impact_selected == "Electricity Load") {

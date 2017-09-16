@@ -63,8 +63,7 @@ ui <- dashboardPage(
       	  menuSubItem("PROBABLISTIC IMPACT ESTIMATE", tabName = "impactestimate", icon = icon("cog", lib = "glyphicon")),
       	  menuSubItem("FINANCIAL EFFECTS", tabName = "financialeffects", icon = icon("usd", lib = "glyphicon")),
 
-	# Added in Build7
-      	  menuSubItem("INTERNATIONAL PROJECT PLANNING", tabName = "internationalplanning", icon = icon("tree-conifer", lib = "glyphicon")),
+      	  menuSubItem("SUSTAINABLE INFRASTRUCTURE", tabName = "sustainable_infrastructure", icon = icon("tree-conifer", lib = "glyphicon")),
       	  menuSubItem("ADAPTATION BENEFIT/COST PLANNING", tabName = "adaptationplanning", icon = icon("tree-deciduous", lib = "glyphicon")),
 
       	  menuSubItem("OVERALL CLIMATE SCORE", tabName = "climatescore", icon = icon("certificate", lib = "glyphicon"))
@@ -99,16 +98,38 @@ ui <- dashboardPage(
                       selected = c("Manufacturing")
                     )
                   ),
-                  tabPanel(title = "Locations",
+		tabPanel(title = "Location 1",
                     textInput("location1","Corporate Headquarters",value = "8000 S Federal Way, Boise, ID 83716"),
                     htmlOutput("frame"),
+                    hr(),
+                    checkboxGroupInput("cbBusinessFunctions","Business functions performed at this location",
+                                c("Clean Room Manufacturing","Shipping","Inventory Management","R&D","HR","Legal","Marketing/Sales","Corporate Governance"),
+                                selected = c("Clean Room Manufacturing","R&D")
+                    ),
                     hr(),
                     actionButton("addLocation","Add a location")
                   ),
                   tabPanel(title = "Users",
-                    valueBox(1, "Maria", icon = icon("user"), color = "teal"),
-                    valueBox(1, "Chen", icon = icon("user"), color = "teal"),
-                    valueBox(1, "Vijay", icon = icon("user"), color = "teal"),
+                    valueBox(1, "Julia Grant", icon = icon("user"), color = "teal"),
+                    valueBox(1, "Joe Robinson", icon = icon("user"), color = "teal"),
+                    valueBox(1, "Norm Armour", icon = icon("user"), color = "teal"),
+                    actionButton("addUser","Add a user")
+                  ),
+		tabPanel(title = "Location 2",
+                    textInput("location2","Singapore Facilities",value = "4 facilities in Singapore"),
+                    htmlOutput("frame_singapore"),
+                    hr(),
+                    checkboxGroupInput("cbBusinessFunctions","Business functions performed at this location",
+                                c("Clean Room Manufacturing","Shipping","Inventory Management","R&D","HR","Legal","Marketing/Sales","Corporate Governance"),
+                                selected = c("Clean Room Manufacturing","R&D")
+                    ),
+                    hr(),
+                    actionButton("addLocation","Add a location")
+                  ),
+                  tabPanel(title = "Users",
+                    valueBox(1, "TBD", icon = icon("user"), color = "teal"),
+                    valueBox(1, "TBD", icon = icon("user"), color = "teal"),
+                    valueBox(1, "TBD", icon = icon("user"), color = "teal"),
                     actionButton("addUser","Add a user")
                   )
                 )#tabBox
@@ -119,31 +140,23 @@ ui <- dashboardPage(
       tabItem(tabName = "corporate",
               fluidRow(
                 tabBox(width = "500",
-                  tabPanel(title="Summary",
-                    infoBox(title="EPS Value at Risk",value="0.187%",color="aqua",icon = icon("percent")),
-                    infoBox(title="Revenue at Risk",value="$2,618,782",color="aqua",icon = icon("usd")),
-                    infoBox(title="Expenses at Risk",value="$34,729,133",color="aqua",icon = icon("usd")),
-                    infoBox(title="Assets at Risk",value="$215,362,765",color="aqua",icon = icon("usd")),
-                    infoBox(title="Liabilities at Risk",value="$1,824,773",color="aqua",icon = icon("usd"))
-                  ),#tabPanel
-                  tabPanel(title = "Governance",
-                    textAreaInput("TCFD-Gov-a","Board Oversight", width = 500, value="Describe the board's oversight of climate-related risks and opportunities."),
-                    textAreaInput("TCFD-Gov-b","Management's Role", width = 500, value="Describe management's role in assessing and managing climate-related risks and opportunities.")
-                  ),
-                  tabPanel(title = "Strategy",
-                    textAreaInput("TCFD-Strat-a","Climate Risks and Opportunities", width = 500, value = "Describe the climate-related risks and opportunities the organization has identified over the short, medium, and long term."),
-                    checkboxGroupInput("chkbxRisks","Risks & Opportunities", width = 500, c("Policy & Legal Risk","Technology Risk","Market Risk","Reputation Risk","Acute Physical Risk","Chronic Physical Risk","Resource Efficiency","Energy Source","Products/Services","Markets","Resilience"),selected = c("Energy Source","Acute Physical Risk","Chronic Physical Risk")),
-                    textAreaInput("TCFD-Strat-b","Impact of Risks", width = 500, value = "Describe the impact of climate-related risks and opportunities on the organization's businesses, strategy, and financial planning.")
-                  ),
-                  tabPanel(title = "Risk Management",
-                     textAreaInput("TCFD-Gov-a","Processes for Identifying Risks", width = 500, value="Describe the processes for identifying & assessing climate-related risks and opportunities."),
-                     textAreaInput("TCFD-Gov-b","Processes for Managing", width = 500, value="Describe the processes managing climate-related risks."),
-                     textAreaInput("TCFD-Gov-a","Process Integration", width = 500, value="Describe how processes for identifying, assessing, and managing climate-related risks are intgrated into the organization's overall management.")
-                  ),
-                  tabPanel(title = "Metrics and Targets"),
-                  tabPanel(title="Financial Impacts",
-                           dataTableOutput("corpFinImpacts")
-                  )#tabPanel
+		tabPanel(title="Screening level",
+                    selectInput("cbLocation","Location",
+                               c("Boise","Singapore","Malaysia","Scotland"),
+                               selected = c("Boise")
+                    ),
+                    sliderInput("siTimeframe", "Timeframe", 1, 30, 5, step=1, animate=TRUE),
+                    htmlOutput('txtImpact1'),
+                    htmlOutput('txtImpact2'),
+                    htmlOutput('txtImpact3'),
+                    hr(),
+                    infoBoxOutput('infobox1')
+                    # infoBox(title="EPS Value at Risk",value="0.187%",color="aqua",icon = icon("percent")),
+                    # infoBox(title="Revenue at Risk",value="$2,618,782",color="aqua",icon = icon("usd")),
+                    # infoBox(title="Expenses at Risk",value="$34,729,133",color="aqua",icon = icon("usd")),
+                    # infoBox(title="Assets at Risk",value="$215,362,765",color="aqua",icon = icon("usd")),
+                    # infoBox(title="Liabilities at Risk",value="$1,824,773",color="aqua",icon = icon("usd"))
+                  )
                 )#tabBox
               )#fluidRow
       ),#tabItem corporate
@@ -182,14 +195,28 @@ ui <- dashboardPage(
        #Plans tabSubItems
       tabItem("TCFD",
               fluidRow(
-                tabBox(title = "TCFD Reporting",
-                       tabPanel(
-                         title = "Governance"
-                         ),
-                       tabPanel(title="Strategy"),
-                       tabPanel(title="Metrics and Targets")
+     		tabBox(title = "TCFD Reporting",
+                       tabPanel(title = "Governance",
+                                textAreaInput("TCFD-Gov-a","Board Oversight", width = 500, value="Describe the board's oversight of climate-related risks and opportunities."),
+                                textAreaInput("TCFD-Gov-b","Management's Role", width = 500, value="Describe management's role in assessing and managing climate-related risks and opportunities.")
+                       ),
+                       tabPanel(title = "Strategy",
+                                textAreaInput("TCFD-Strat-a","Climate Risks and Opportunities", width = 500, value = "Describe the climate-related risks and opportunities the organization has identified over the short, medium, and long term."),
+                                checkboxGroupInput("chkbxRisks","Risks & Opportunities", width = 500, c("Policy & Legal Risk","Technology Risk","Market Risk","Reputation Risk","Acute Physical Risk","Chronic Physical Risk","Resource Efficiency","Energy Source","Products/Services","Markets","Resilience"),selected = c("Energy Source","Acute Physical Risk","Chronic Physical Risk")),
+                                textAreaInput("TCFD-Strat-b","Impact of Risks", width = 500, value = "Describe the impact of climate-related risks and opportunities on the organization's businesses, strategy, and financial planning.")
+                       ),
+                       tabPanel(title = "Risk Management",
+                                textAreaInput("TCFD-Gov-a","Processes for Identifying Risks", width = 500, value="Describe the processes for identifying & assessing climate-related risks and opportunities."),
+                                textAreaInput("TCFD-Gov-b","Processes for Managing", width = 500, value="Describe the processes managing climate-related risks."),
+                                textAreaInput("TCFD-Gov-a","Process Integration", width = 500, value="Describe how processes for identifying, assessing, and managing climate-related risks are intgrated into the organization's overall management.")
+                       ),
+                       tabPanel(title = "Metrics and Targets"),
+                       tabPanel(title="Financial Impacts",
+                                dataTableOutput("corpFinImpacts")
+                       )#tabPanel
               ))
       ),
+ 
       tabItem("CAP",
               box(
                 title = "Climate Action Plan"
@@ -227,8 +254,9 @@ ui <- dashboardPage(
       ),
 
       tabItem(tabName = "impactfunctions",
-        h2("Sector-specific impact functions translate changes into impacts on infrastructure, workforce, revenue..."),
-       
+        h2("Sector-specific impact functions quantify impacts on infrastructure, workforce, revenue..."),
+        tabBox(width=12, 
+        tabPanel(title = "GENERAL",
 	fluidRow(
           box(title="Impact Functions - Combined", background = "red", solidHeader = TRUE, plotOutput("impactplot3", height = 200)),
           box(
@@ -252,26 +280,49 @@ ui <- dashboardPage(
             sliderInput("quadraticshape", "Quadratic shape:", -20, 20, -4, step=2, animate=TRUE),
             sliderInput("quadraticmidpoint", "Quadratic midpoint:", 270, 320, 295, step=1, animate=TRUE)
           )
-        ),
+        )
+	), #tabPanel
 
+	tabPanel(title = "SPECIFIC",
 	fluidRow(
-	  h2("=== IMPACT FUNCTION LIBRARY ==="),
 	  column(3,
-          #box(title="CROP YIELD - TEMPERATURE", background = "yellow", solidHeader = TRUE, imageOutput("impactplot4", height = 300)),
-          #box(title="CROP YIELD - PRECIPITATION", background = "yellow", solidHeader = TRUE, imageOutput("impactplot5", height = 300)),
-          #box(title="CROP YIELD - MULTIPLE VARIABLES", background = "yellow", solidHeader = TRUE, imageOutput("impactplot6", height = 300)),
-          #box(title="VARIOUS SECTORS", background = "yellow", solidHeader = TRUE, imageOutput("impactplot7", height = 300)),
-          #box(title="VARIOUS SECTORS", background = "yellow", solidHeader = TRUE, imageOutput("impactplot8", height = 300))
-	  h4("Power Consump., GDP, Income, Productivity, etc."),
-          imageOutput("impactplot8", height = 300)
+	  h4("Electricity Load Vs. Daily Average Temperature"),
+          imageOutput("impactplot_elecload", height = 500, width=300)
 	  ),
 
 	  column(3, offset=1,
-	  h4("Mortality, Damage, etc."),
-          imageOutput("impactplot7", height = 300)
-	  )
-	),
+	  h4("Agricultural Income in Brazil Vs. Rainfall"),
+          imageOutput("impactplot_agriculture_brazil", height = 500, width=300)
+	  ),
 
+	  column(3, offset=1,
+	  h4("Maize Yield in U.S. Vs. Temperature"),
+          imageOutput("impactplot_maize_us", height = 500, width=300)
+	  )
+
+	)
+	), #tabPanel
+
+        tabPanel(title = "FUNCTION LIBRARY 1",
+	fluidRow(
+	  #h2("=== IMPACT FUNCTION LIBRARY ==="),
+	  column(12,
+	  h4("Power Consump., GDP, Income, Productivity, etc."),
+          imageOutput("impactplot8", height = 500)
+	  )
+	)
+	), #tabPanel
+
+        tabPanel(title = "FUNCTION LIBRARY 2",
+	fluidRow(
+	  column(12, offset=0,
+	  h4("Mortality, Damage, etc."),
+          imageOutput("impactplot7", height = 500)
+	  )
+	)
+	), #tabPanel
+
+        tabPanel(title = "FUNCTION LIBRARY 3",
 	fluidRow(
 	  column(3, 
 	  h4("Crops - Temperature"),
@@ -287,26 +338,33 @@ ui <- dashboardPage(
 	  h4("Crops - Derived Variables"),
           imageOutput("impactplot6", height = 300)
 	  )
-	),
-        
+	)
+	), #tabPanel
+
+        tabPanel(title = "FUNCTION LIBRARY 4",
 	fluidRow(
 	  column(3, 
 	  h4("Power Generation - Air/Water Temperature"),
-          imageOutput("impactplot9", height = 300)
+          imageOutput("impactplot9", height = 500)
 	  ),
 
-	  column(3, offset=1,
+	  column(3, offset=3,
 	  h4("Water Requirements for Power - Water Temperature"),
-          imageOutput("impactplot10", height = 300)
+          imageOutput("impactplot10", height = 500)
 	  )
 
 	)
-        
+      ) #tabPanel  
+      ) #tabBox
       ),
 
       tabItem(tabName = "impactestimate",
         h2("Combine climate probabilities and impact functions to estimate probability-weighted net impact"),
         fluidRow(
+                    selectInput("impact_selected","IMPACT FUNCTION SOURCE",
+                               c("General","Electricity Load","Agricultural Income (Brazil)", "Maize Yield (US)"),
+                               selected = c("General")
+                    ),
           box(title="Impact Function (controlled from impact-function tab)", background = "blue", solidHeader = TRUE, plotOutput("impactestimateplot3", height = 300)),
           box(title="Probabilistic Impact Estimate", background = "red", solidHeader = TRUE, plotOutput("impactestimateplot2", height = 300))
 #          box(
@@ -330,7 +388,6 @@ ui <- dashboardPage(
         fluidRow(
           box(title="Beta Multiplier By Period: 1/(1-D), where D is probabilistic impact", background = "blue", solidHeader = TRUE, plotOutput("financialplot1", height = 300)),
           box(title="NPV Impact on Project", background = "green", solidHeader = TRUE, plotOutput("financialplot2", height = 300)),
-          # Modified in Build7 
           #box(
           #  title = "Multiplier Controls (sigmoid impact function)",
           #  sliderInput("sigmoidlimit3", "Sigmoid limit:", -100, 100, -75, step=10, animate=TRUE),
@@ -362,9 +419,9 @@ ui <- dashboardPage(
         )
       ),
 
-# Added in Build7
-      tabItem(tabName = "internationalplanning",
-        h2("Climate risk assessment and adaptation planning throughout the transaction cycle"),
+      tabItem(tabName = "sustainable_infrastructure",
+        #h2("Climate risk assessment and adaptation planning throughout the transaction cycle"),
+        h2("Align financial flows with country pathways to low-carbon and climate-resilient development"),
         fluidRow(
           box(
             title = "Economic Sector",
@@ -381,12 +438,11 @@ ui <- dashboardPage(
         )
       ),
 
-# Added in Build7
       tabItem(tabName = "adaptationplanning",
         h2("Calculate adaptation benefit/cost ratio"),
         fluidRow(
-	  box(title="Impact Function (controlled from Sector Impact tab)", background = "blue", solidHeader = TRUE, plotOutput("adaptationplot1", height = 300)),
-	  box(title="Asset Value Through Time", background = "red", solidHeader = TRUE, plotOutput("adaptationplot2", height = 300))
+	  box(title="Impact Function (controlled from Sector Impact tab)", background = "blue", solidHeader = TRUE, plotOutput("adaptationplot1", height=300)),
+	  box(title="Asset Value Through Time", background = "red", solidHeader = TRUE, plotOutput("adaptationplot2", height=300))
         ),
         fluidRow(
           box(
@@ -404,21 +460,25 @@ ui <- dashboardPage(
 	    width=3
           ),
           box(
-            title = "Adaptation Plan 1",
+            #title = "Adaptation Plan 1",
+    	    title = textOutput("adaptationbenefit1"),
             sliderInput("assetsensitivity1_plan1", "Plan 1 Impact Sensitivity of Asset 1:", 0, 5, 0.5, step=0.25, animate=TRUE),
             sliderInput("assetsensitivity2_plan1", "Plan 1 Impact Sensitivity of Asset 2:", 0, 5, 0.5, step=0.25, animate=TRUE),
             sliderInput("assetsensitivity3_plan1", "Plan 1 Impact Sensitivity of Asset 3:", 0, 5, 0.5, step=0.25, animate=TRUE),
-    		textOutput("adaptationbenefit1"),
-            sliderInput("cost_plan1", "Plan 1 Cost:", 0, 20, 5, step=1, animate=TRUE),
+            sliderInput("discount2", "Discount Rate:", 0.01, 0.05, 0.03, step=0.005),
+            sliderInput("cost2implement_plan1", "Plan 1 Implementation Cost ($M):", 0, 20, 5, step=1, animate=TRUE),
+            sliderInput("cost2maintain_relative2base_plan1", "Plan 1 Discounted Maintenance & Repair Costs Relative to No-adaptation Case ($M):", -20, 20, 2, step=1, animate=TRUE),
 	    width=3
           ),
           box(
-            title = "Adaptation plan 2",
+            #title = "Adaptation plan 2",
+    	    title = textOutput("adaptationbenefit2"),
             sliderInput("assetsensitivity1_plan2", "Plan 2 Impact Sensitivity of Asset 1:", 0, 5, 0.25, step=0.25, animate=TRUE),
             sliderInput("assetsensitivity2_plan2", "Plan 2 Impact Sensitivity of Asset 2:", 0, 5, 0.25, step=0.25, animate=TRUE),
             sliderInput("assetsensitivity3_plan2", "Plan 2 Impact Sensitivity of Asset 3:", 0, 5, 0.25, step=0.25, animate=TRUE),
-    		textOutput("adaptationbenefit2"),
-            sliderInput("cost_plan2", "Plan 2 Cost:", 0, 20, 5, step=1, animate=TRUE),
+            sliderInput("discount3", "Discount Rate:", 0.01, 0.05, 0.03, step=0.005),
+            sliderInput("cost2implement_plan2", "Plan 2 Implementation Cost ($M):", 0, 20, 5, step=1, animate=TRUE),
+            sliderInput("cost2maintain_relative2base_plan2", "Plan 2 Discounted Maintenance & Repair Costs Relative to No-adaptation Case ($M):", -20, 20, 5, step=1, animate=TRUE),
 	    width=3
           )
         )
@@ -430,7 +490,6 @@ ui <- dashboardPage(
           box(title="Impact Function (controlled from impact-function tab)", background = "blue", solidHeader = TRUE, plotOutput("scoreplot2", height = 300)),
           box(title="Climate Score By Period", background = "green", solidHeader = TRUE, plotOutput("scoreplot1", height = 300)),
 
-      # Modified in Build7
           #box(
           #  title = "Impact Function Controls (sigmoid impact function)",
           #  sliderInput("sigmoidlimit4", "Sigmoid limit:", -100, 100, -75, step=10, animate=TRUE),
@@ -452,8 +511,55 @@ ui <- dashboardPage(
 
 server <- function(input, output, sessionn) {
 
-# James -----------------------------------------------------------
-  observeEvent(input$toProjects, {
+# James start -----------------------------------------------------------
+
+  # traffic light text for corp risk analyzer
+  
+  txtImpactColor1 <- reactive({
+    input$siTimeframe
+    name <- switch(input$siTimeframe,'green','green','green','green','yellow','yellow','yellow','yellow','red','red','red','red','red','red','red','red','red','red','red','red','red','red','red','red','red','red','red','red','red','red')
+    return( name=name )
+  })
+  
+  txtImpactColor2 <- reactive({
+    input$siTimeframe
+    name <- switch(input$siTimeframe,'green','green','green','green','green','green','yellow','yellow','yellow','yellow','yellow','red','red','red','red','red','red','red','red','red','red','red','red','red','red','red','red','red','red','red')
+    return( name=name )
+  })
+  
+  txtImpactColor3 <- reactive({
+    input$siTimeframe
+    name <- switch(input$siTimeframe,'green','green','yellow','yellow','yellow','yellow','red','red','red','red','red','red','red','red','red','red','red','red','red','red','red','red','red','red','red','red','red','red','red','red')
+    return( name=name )
+  })
+  
+  EPSVAR <- reactive({
+    input$siTimeframe
+    epsvarvalue <- switch(input$siTimeframe,'0.04','0.08','0.12','0.16','0.2','0.25','0.30','0.36','0.42','0.5','0.58','0.65','0.76','1.0','1.2','1.4','1.6','1.8','2.0','2.2','2.4','2.5','2.6','2.7','2.8','2.9','3.0','3.1','3.2','3.3')
+    return( epsvarvalue=epsvarvalue )
+  })
+  
+  output$infobox1 <- renderInfoBox({
+    x <- input$siTimeframe
+    color <- 'yellow'
+    if(x < 4) color <- 'green'
+    if(x > 10) color <- 'red'
+    infoBox(value = EPSVAR(), title = 'EPS Value at Risk', color = color, icon = icon("percent"))
+  })
+  
+  output$txtImpact1 <- renderUI({
+        div( HTML(sprintf("<text style='background-color:%s'>HVAC systems %s likely to be overloaded</text>", txtImpactColor1(), input$siTimeframe) ) )
+  })
+  
+  output$txtImpact2 <- renderUI({
+        div( HTML(sprintf("<text style='background-color:%s'>Drainage systems %s likely to be overloaded</text>", txtImpactColor2(), input$siTimeframe) ) )
+  })
+  
+  output$txtImpact3 <- renderUI({
+        div( HTML(sprintf("<text style='background-color:%s'>Energy costs for cooling %s likely to increase significantly</text>", txtImpactColor3(), input$siTimeframe) ) )
+  })
+  
+    observeEvent(input$toProjects, {
     updateTabItems(session, "sidebar", "projects")
   })
 
@@ -479,16 +585,23 @@ server <- function(input, output, sessionn) {
 
   output$frame <- renderUI({
     input$Member
-    my_test <- tags$iframe(src="map.html", height=600, width=535)
+    # iframe finds its target source in the www directory.
+    my_test <- tags$iframe(src="map.html", height=300, width=300)
     print(my_test)
     my_test
+  })
+
+  output$frame_singapore <- renderUI({
+    # iframe finds its target source in the www directory.
+    thismap <- tags$iframe(src="map_singapore.html", height=300, width=300)
+    thismap
   })
 
   output$plot1 <- renderPlot({
     data <- histdata[seq_len(input$slider)]
     hist(data)
   })
-# James -----------------------------------------------------------
+# James end -----------------------------------------------------------
 
 
 # Terry -----------------------------------------------------------
@@ -505,6 +618,7 @@ server <- function(input, output, sessionn) {
     shapes <- c(81,82,83,84,85,86,87,88,89)
     scales <- c(292,293,294,295,296,297,298,299,300)
     thresholds <- c(285,290,295,300,305,310)
+    initializer <- c(0,0,0,0,0,0,0)
     colors <- brewer.pal(length(thresholds), "Spectral")
     ltypes <- c(1:length(thresholds))
     labels <- c("285K","290K","295K","300K","305K","310K")
@@ -589,6 +703,22 @@ server <- function(input, output, sessionn) {
     plot(x,wt1*sigmoid(x,input$sigmoidlimit,input$sigmoidsteepness,input$sigmoidmidpoint) + wt2*quadratic(x,input$quadraticlimit,input$quadraticshape,input$quadraticmidpoint), type="l", lwd=3, lty=1, col="red", xlim=c(270,320), ylim=c(-100,100), xlab="Daily Maximum Surface Temperature (degK)", ylab="Relative Impact")
   })
 
+  output$impactplot_elecload <- renderPlot({
+    source("./functions/fit_elec_load_v1.r", local=TRUE)
+  })
+
+  output$impactplot_agriculture_brazil <- renderPlot({
+    source("./functions/fit_agriculture_brazil_v1.r", local=TRUE)
+  })
+
+  output$impactplot_maize_us <- renderPlot({
+    source("./functions/fit_maize_yield_us_v1.r", local=TRUE)
+  })
+
+  output$comingsoon <- renderImage({
+    list(src = "./images/coming_soon.png",width=300,height=300,alt = paste("lobell_crop_yields_2017_fig3_precip"))
+  }, deleteFile = FALSE)
+
   output$impactplot4 <- renderImage({
     #filename <- normalizePath(file.path('./images/lobell_crop_yields_2017_fig1.png'))
     list(src = "./images/lobell_crop_yields_2017_fig1.png",width=300,height=300,alt = paste("lobell_crop_yields_2017_fig1_temperature"))
@@ -603,23 +733,23 @@ server <- function(input, output, sessionn) {
   }, deleteFile = FALSE)
 
   output$impactplot7 <- renderImage({
-    list(src = "./images/carleton_hsiang_climate_dose_response_2016_fig3a.png",width=450,height=300,alt = paste("carleton_hsiang_climate_dose_response_2016_fig3a_multiplesectors"))
+    list(src = "./images/carleton_hsiang_climate_dose_response_2016_fig3a.png",width=1000,height=500,alt = paste("carleton_hsiang_climate_dose_response_2016_fig3a_multiplesectors"))
   }, deleteFile = FALSE)
 
   output$impactplot8 <- renderImage({
-    list(src = "./images/carleton_hsiang_climate_dose_response_2016_fig3b.png",width=450,height=300,alt = paste("carleton_hsiang_climate_dose_response_2016_fig3b_multiplesectors"))
+    list(src = "./images/carleton_hsiang_climate_dose_response_2016_fig3b.png",width=1000,height=500,alt = paste("carleton_hsiang_climate_dose_response_2016_fig3b_multiplesectors"))
   }, deleteFile = FALSE)
 
   output$impactplot9 <- renderImage({
-    list(src = "./images/thompson_cooling_water_Teffects_v1b_power_airtemp.png",width=450,height=300,alt = paste("thompson_power_generation_air_and_water_temperature"))
+    list(src = "./images/thompson_cooling_water_Teffects_v1b_power_airtemp.png",width=600,height=450,alt = paste("thompson_power_generation_air_and_water_temperature"))
   }, deleteFile = FALSE)
 
   output$impactplot10 <- renderImage({
-    list(src = "./images/thompson_cooling_water_Teffects_v1b_water.png",width=450,height=300,alt = paste("thompson_water_needed_water_temperature"))
+    list(src = "./images/thompson_cooling_water_Teffects_v1b_water.png",width=500,height=300,alt = paste("thompson_water_needed_water_temperature"))
   }, deleteFile = FALSE)
 
   # Probability of Exceeding Thresholds
-  # Modified in Build7 - Just note that the shapes and scales values are for a pre-determined Weibull distribution for South Sudan.
+  # Note that the shapes and scales values are for a pre-determined Weibull distribution for South Sudan.
   output$impactestimateplot1 <- renderPlot({
     #shapes <- c(81.8730, 93.0240, 88.9460, 84.7620, 95.8550, 90.0690, 86.1060, 90.3700, 91.5810)
     #scales <- c(292.0320, 293.0880, 293.0820, 293.3870, 293.7670, 293.9150, 294.5310, 295.7390, 295.7960)
@@ -641,6 +771,8 @@ server <- function(input, output, sessionn) {
 
   # Probabilistic Impact Estimate
   output$impactestimateplot2 <- renderPlot({
+
+  if (input$impact_selected == "General") {
     x <- seq(270,320,0.1)
 
 # The following fails because the threshold inputs to damagej1/2 are functions of j.
@@ -655,14 +787,48 @@ server <- function(input, output, sessionn) {
 
     plot(impactbyperiod_relative2baseperiod, type="l", lwd=3, lty=1, col=colors[1], xlab="Periods", ylab="Probabilistic Impact", xaxt="n")
 	axis(1, at=c(1:length(periods)), labels=periods)
+    } #endif
+
+  if (input$impact_selected == "Electricity Load") {
+    source("./functions/fit_elec_load_v1.r", local=TRUE)
+    source("./functions/damage_impacts_4function_v1.r", local=TRUE)
+    plot(impactbyperiod_relative2baseperiod, type="l", lwd=3, lty=1, col=colors[1], xlab="Periods", ylab="Probabilistic Impact", xaxt="n")
+	axis(1, at=c(1:length(periods)), labels=periods)
+    } #endif
+
+  if (input$impact_selected == "Agricultural Income (Brazil)") {
+    return()
+    } #endif
+
+  if (input$impact_selected == "Maize Yield (US)") {
+    return()
+    } #endif
+
   })
 
   # Impact Function for impact estimate (controlled from impact-function tab)
   output$impactestimateplot3 <- renderPlot({
+  
+  if (input$impact_selected == "General") {
     x = range_tempK
     wt1 = input$impactfunctionweight
     wt2 = 1 - wt1
     plot(x,wt1*sigmoid(x,input$sigmoidlimit,input$sigmoidsteepness,input$sigmoidmidpoint) + wt2*quadratic(x,input$quadraticlimit,input$quadraticshape,input$quadraticmidpoint), type="l", lwd=3, lty=1, col="red", xlim=c(270,320), ylim=c(-100,100), xlab="Daily Maximum Surface Temperature (degK)", ylab="Relative Impact")
+    } #endif
+
+  if (input$impact_selected == "Electricity Load") {
+    #return()
+    source("./functions/fit_elec_load_v1.r", local=TRUE)
+    } #endif
+
+  if (input$impact_selected == "Agricultural Income (Brazil)") {
+    source("./functions/fit_agriculture_brazil_v1.r", local=TRUE)
+    } #endif
+
+  if (input$impact_selected == "Maize Yield (US)") {
+    source("./functions/fit_maize_yield_us_v1.r", local=TRUE)
+    } #endif
+
   })
 
   # Beta Multiplier By Period
@@ -687,7 +853,6 @@ server <- function(input, output, sessionn) {
 
     # NPV calculation
     # Assume project starts in period 3 and that each period is a decade.
-    initializer <- c(0,0,0,0,0,0,0)
     cashflowinputs <- c(input$cashflow1,input$cashflow2,input$cashflow3,input$cashflow4,input$cashflow5,input$cashflow6,input$cashflow7)
     cashflow <- initializer
     for(i in 1:length(cashflow)) {cashflow[i] = cashflowinputs[i] }
@@ -709,7 +874,7 @@ server <- function(input, output, sessionn) {
     barplot(c(npv,npv_modified), col=c("green","red"), names.arg=c("Without Climate Impacts", "With Climate Impacts"),xlab="Unmodified and Modified NPV", ylab="NPV", ylim=c(-20,50) )
   })
 
-  # Modified in Build7
+  # Climate score by period
   output$scoreplot1 <- renderPlot({
     labels <- c("Without Adaptation","With Adaptation")
     x <- seq(275,315,0.1)
@@ -761,75 +926,14 @@ server <- function(input, output, sessionn) {
   # Asset-value damage
   output$adaptationplot2 <- renderPlot({
     x <- seq(270,320,0.1)
-
-
-    wt1=input$impactfunctionweight
-        wt2 = 1 - wt1
-
-	nadaptplans = 2
+    nadaptplans = 2
    
-impacts = matrix(0,length(thresholds),length(shapes))
-    impacts_plan1 = impacts
-    impacts_plan2 = impacts
-    damage = matrix(1,length(thresholds),length(shapes))
-    damage_plan1 = damage
-    damage_plan2 = damage
- 
   # Asset risk below is sum of values by asset, weighted by sensitivity to given impact function.  Sensitivity varies with adaptation plan.
   #   Impact functions give percent impact, so we allow different assets to have different sensitivities to a given impact function.
   #   This is a simplified way to get different impacts by scaling by asset type; ideally, they would have different impact functions. 
   #   This is also a simplified (linear) way to connect asset value with loss of capacity or condition in the impact function.
-  #    assetrisk = (input$assetvalue1*input$assetsensitivity1) + (input$assetvalue2*input$assetsensitivity2) + (input$assetvalue3*input$assetsensitivity3)
-    assetrisk1 = (input$assetvalue1*input$assetsensitivity1)
-    assetrisk2 = (input$assetvalue2*input$assetsensitivity2)
-    assetrisk3 = (input$assetvalue3*input$assetsensitivity3)
-    assetrisk1_plan1 = (input$assetvalue1*input$assetsensitivity1_plan1)
-    assetrisk2_plan1 = (input$assetvalue2*input$assetsensitivity2_plan1)
-    assetrisk3_plan1 = (input$assetvalue3*input$assetsensitivity3_plan1)
-    assetrisk1_plan2 = (input$assetvalue1*input$assetsensitivity1_plan2)
-    assetrisk2_plan2 = (input$assetvalue2*input$assetsensitivity2_plan2)
-    assetrisk3_plan2 = (input$assetvalue3*input$assetsensitivity3_plan2)
 
-    for(j in 1:length(thresholds)-1) { for(i in 1:length(shapes)) { 
-        damagej1 = wt1*sigmoid(thresholds[j],input$sigmoidlimit,input$sigmoidsteepness,input$sigmoidmidpoint) + wt2*quadratic(thresholds[j],input$quadraticlimit,input$quadraticshape,input$quadraticmidpoint)
-        damagej2 = wt1*sigmoid(thresholds[j+1],input$sigmoidlimit,input$sigmoidsteepness,input$sigmoidmidpoint) + wt2*quadratic(thresholds[j+1],input$quadraticlimit,input$quadraticshape,input$quadraticmidpoint)
-
-	damageji1 <- max( -input$assetvalue1, 0.01 * assetrisk1 * 0.5*(damagej2 + damagej1) )
-	damageji2 <- max( -input$assetvalue2, 0.01 * assetrisk2 * 0.5*(damagej2 + damagej1) )
-	damageji3 <- max( -input$assetvalue3, 0.01 * assetrisk3 * 0.5*(damagej2 + damagej1) )
-        damage[j,i] <- damageji1 + damageji2 + damageji3
-
-	damageji1_plan1 <- max( -input$assetvalue1, 0.01 * assetrisk1_plan1 * 0.5*(damagej2 + damagej1) )
-	damageji2_plan1 <- max( -input$assetvalue2, 0.01 * assetrisk2_plan1 * 0.5*(damagej2 + damagej1) )
-	damageji3_plan1 <- max( -input$assetvalue3, 0.01 * assetrisk3_plan1 * 0.5*(damagej2 + damagej1) )
-        damage_plan1[j,i] <- damageji1_plan1 + damageji2_plan1 + damageji3_plan1
-
-	damageji1_plan2 <- max( -input$assetvalue1, 0.01 * assetrisk1_plan2 * 0.5*(damagej2 + damagej1) )
-	damageji2_plan2 <- max( -input$assetvalue2, 0.01 * assetrisk2_plan2 * 0.5*(damagej2 + damagej1) )
-	damageji3_plan2 <- max( -input$assetvalue3, 0.01 * assetrisk3_plan2 * 0.5*(damagej2 + damagej1) )
-        damage_plan2[j,i] <- damageji1_plan2 + damageji2_plan2 + damageji3_plan2
-
-       } }
-
-    for(j in 1:length(thresholds)-1) { for(i in 1:length(shapes)) {
-	impacts[j,i] <- damage[j,i]*( pweibull(thresholds[j+1],shapes[i],scales[i]) - pweibull(thresholds[j],shapes[i],scales[i]) ) 
-	impacts_plan1[j,i] <- damage_plan1[j,i]*( pweibull(thresholds[j+1],shapes[i],scales[i]) - pweibull(thresholds[j],shapes[i],scales[i]) ) 
-	impacts_plan2[j,i] <- damage_plan2[j,i]*( pweibull(thresholds[j+1],shapes[i],scales[i]) - pweibull(thresholds[j],shapes[i],scales[i]) ) 
-       } } 
-    
-    impactbyperiod <- c(0,0,0,0,0,0,0,0,0)
-    impactbyperiod_plan1 = impactbyperiod
-    impactbyperiod_plan2 = impactbyperiod
-
-    for(i in 1:length(impactbyperiod)) {
-        impactbyperiod[i]=sum(impacts[,i])  
-        impactbyperiod_plan1[i]=sum(impacts_plan1[,i])  
-        impactbyperiod_plan2[i]=sum(impacts_plan2[,i])  
-       }
-
-    impactbyperiod_relative2baseperiod = impactbyperiod - impactbyperiod[1]
-    impactbyperiod_relative2baseperiod_plan1 = impactbyperiod_plan1 - impactbyperiod_plan1[1]
-    impactbyperiod_relative2baseperiod_plan2 = impactbyperiod_plan2 - impactbyperiod_plan2[1]
+    source("./functions/damage_impacts_adaptation.r", local=TRUE)
 
     labels <- c("No Adaptation","Adaptation Plan 1","Adaptation Plan 2")
     plot(impactbyperiod_relative2baseperiod, type="l", lwd=3, lty=1, col=colors[1], xlab="Periods", ylab="Impact on Asset Value ($M)", xaxt="n")
@@ -839,15 +943,44 @@ impacts = matrix(0,length(thresholds),length(shapes))
     legend("topright", inset=.01, title="Scenarios", labels, lwd=3, lty=c(1,1,1), col=c(colors[1],colors[3],colors[5]))
   })
 
-# Added in Build7
   # Adaptation-plan benefits.
+  # Benefit for plan i = Sum(over periods j) [ (impact_no_adapt(period j) - impact_plan_i(period j)) / (1+discount_rate)^j ]
   output$adaptationbenefit1 <- renderText({
-	benefit_plan1 = "WORKING ON THIS"
-        paste("Plan 1 Benefit:   ", benefit_plan1)
+    x <- seq(275,315,0.1)
+    source("./functions/damage_impacts_adaptation.r", local=TRUE)
+
+    discount <- input$discount2
+    discountbydecade <- initializer
+    discountbydecade[1] = 1 / ((1+discount)^10)
+    for(i in 2:length(discountbydecade)) {discountbydecade[i] = discountbydecade[1]^i}
+
+    benefitbydecade_plan1 <- initializer
+    for(i in 1:length(benefitbydecade_plan1)) {benefitbydecade_plan1[i] = impactbyperiod_relative2noadaptation_plan1[i] / ((1+discountbydecade[i])^i) }
+    benefit_plan1 = sum(benefitbydecade_plan1)
+
+    totalcost = (input$cost2implement_plan1 + input$cost2maintain_relative2base_plan1)
+    benefit2cost = benefit_plan1 / totalcost
+
+    paste("Adaptation Plan 1 - Benefit, Cost, and B/C Ratio:  ", round(benefit_plan1, digits=2), "$M ,", round(totalcost, digits=2), "$M ,",round(benefit2cost, digits=2) )
   })
+
   output$adaptationbenefit2 <- renderText({
-	benefit_plan2 = "WORKING ON THIS"
-        paste("Plan 2 Benefit:   ", benefit_plan2)
+    x <- seq(275,315,0.1)
+    source("./functions/damage_impacts_adaptation.r", local=TRUE)
+
+    discount <- input$discount3
+    discountbydecade <- initializer
+    discountbydecade[1] = 1 / ((1+discount)^10)
+    for(i in 2:length(discountbydecade)) {discountbydecade[i] = discountbydecade[1]^i}
+
+    benefitbydecade_plan2 <- initializer
+    for(i in 1:length(benefitbydecade_plan2)) {benefitbydecade_plan2[i] = impactbyperiod_relative2noadaptation_plan2[i] / ((1+discountbydecade[i])^i) }
+    benefit_plan2 = sum(benefitbydecade_plan2)
+
+    totalcost = (input$cost2implement_plan2 + input$cost2maintain_relative2base_plan2)
+    benefit2cost = benefit_plan2 / totalcost
+
+    paste("Adaptation Plan 2 - Benefit, Cost, and B/C Ratio:  ", round(benefit_plan2, digits=2), "$M ,", round(totalcost, digits=2), "$M ,",round(benefit2cost, digits=2) )
   })
 
 # Terry -----------------------------------------------------------
