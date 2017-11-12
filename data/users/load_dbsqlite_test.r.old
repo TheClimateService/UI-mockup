@@ -1,0 +1,16 @@
+
+con = dbConnect(drv=RSQLite::SQLite(), dbname="/Users/terry/working_mac/os/apps/django/tcs/tcs_t2/db.sqlite3")
+alltables = dbListTables(con)
+dbtitle="django/tcs/tcs_t2/db.sqlite3"
+
+table12=alltables[12]
+p1 = dbGetQuery( con,'select * from polls_question' )
+questions = p1[,2]
+qlist=""
+for(i in 1:length(questions)) qlist = paste(qlist,questions[i])
+
+p2 = dbGetQuery( con,'select * from polls_choice' )
+choices = p1[,2]
+
+
+
