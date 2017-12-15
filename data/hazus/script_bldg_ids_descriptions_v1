@@ -1,0 +1,12 @@
+
+# SCRIPT TO EXTRACT DAMAGE FUNCTION IDS AND DESCRIPTIONS FOR COVER_CLASS="Bldg"
+# TT - December 2017
+
+sed 's/" "/;/g' hazus_flood_depth_damage.csv > junk10
+sed 's/"//' junk10 > junk11
+sed 's/"/;/g' junk11 > junk12
+sed 's/,//g' junk12 > junk13
+sed 's/ /_/g' junk13 > junk14
+awk '{FS=";"; if($(NF-1)=="Bldg") print $3,$5}' junk14 > junk15
+mv junk15 hazus_flood_depth_damage.csv.bldg.list
+

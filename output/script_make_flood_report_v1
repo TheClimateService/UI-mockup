@@ -1,0 +1,15 @@
+
+# SCRIPT TO ASSEMBLE BUIDLING FLOOD OUTPUTS
+# TT - December 2017
+
+echo "---- Annual probabilities" > temp0
+cat temp0 output_flood_annual_prob.csv > temp1
+echo "---- Damage for the midpoint of each flood-depth threshold band (rows); duplicated across periods (columns)" >> temp1 
+cat temp1 damage_buildingflood.csv > temp2 
+echo "---- Expected impact XXX (rows) and periods (columns)" >> temp2 
+cat temp2 impacts_buildingflood.csv > temp3
+echo "---- Selected probabilistic impact across all threshold bands for each period (rows)" >> temp3
+cat temp3 impactbyperiod_buildingflood.csv > temp4
+
+
+
