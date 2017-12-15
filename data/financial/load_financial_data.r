@@ -12,7 +12,7 @@ library(quantmod)
 # 2007-01-05  12.25286  12.31428 12.05714   12.15000   208685400      10.93082
 # x = getSymbols("AAPL", env=NULL)
 
-# Get list of stocks and associate parameters.
+# Get list of stocks and associated parameters.
 # Output format:
 #  Symbol                                                       Security.Name Market.Category Test.Issue Financial.Status Round.Lot.Size ETF NextShares
 # 1   AAAP Advanced Accelerator Applications S.A. - American Depositary Shares               Q          N                N            100   N          N
@@ -31,4 +31,5 @@ stocks_nasdaq_parameters = read.table("./data/financial/stocks_nasdaq.csv.parame
 #parameters_fin3 = stocks_nasdaq_parameters[,5]
 stocks_nasdaq_factors = read.table("./data/financial/stocks_nasdaq.csv.factors", header=TRUE)
 
-
+# Load facility locations.
+facility_locations = read.table("./data/financial/facility_locations.csv", header=TRUE)

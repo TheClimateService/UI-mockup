@@ -19,11 +19,11 @@ f4avgload = function(t) {summary(model)$coefficients[1,1] + summary(model)$coeff
 f4peakload = function(t) {summary(model2)$coefficients[1,1] + summary(model2)$coefficients[2,1]*t + summary(model2)$coefficients[3,1]*t^2 + summary(model2)$coefficients[4,1]*t^3 }
 
 # Plot function and original points.
-curve(f4peakload, 1, 31, col="red", main="ERCOT peak and average loads", xlab="Average Daily Temperature (degC)", ylab="Load (Mw) Relative to 15-18 degC ")
+curve(f4peakload, 1, 31, col="red", main="ERCOT Peak and\n Average loads", xlab="Average Daily Temperature (degC)", ylab="Load (Mw) Relative to 15-18 degC ")
 par(new=TRUE)
 curve(f4avgload, 1, 31, col="blue", add=T)
 par(new=TRUE)
 #points(tempC,peakload, col="red")
 par(new=TRUE)
 #points(tempC,avgload, col="blue")
-legend("topleft", c("Peak load", "average load"), fill=c("red","blue"))
+legend("topleft", c("Peak load", "Average load"), fill=c("red","blue"))

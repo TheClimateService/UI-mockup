@@ -123,11 +123,13 @@ server <- function(input, output, session) {
     source("./functions/fit_distributions.r")
     source("./functions/sigmoid.r")
     source("./functions/quadratic.r")
+    source("./data/sealevel_us/function_annual_probability_withslr.r")
 
   # Data
     source("./data/transfer_functions/load_database_transfer_functions.r")
     source("./data/users/load_database_users.r")
     #source("./data/users/write_dbsqlite_test.r")
+    fl_dept <- extract_hazus_functions()
 
   # Constants
     range_tempK = seq(270,320,0.01)
@@ -140,6 +142,8 @@ server <- function(input, output, session) {
     colors <- brewer.pal(length(thresholds), "Spectral")
     ltypes <- c(1:length(thresholds))
     labels <- c("285K","290K","295K","300K","305K","310K")
+    slrScenarios = c("0.3_-_MED","0.5_-_MED","1.0_-_MED","1.5_-_MED","2.0_-_MED","2.5_-_MED")
+    slrYears = c(2020,2030,2040,2050,2060,2070,2080,2090,2100)
 
 # -----------
 # Portfolio analysis
@@ -263,25 +267,34 @@ server <- function(input, output, session) {
 	paste(p1,p2,p3,sep="\n")
 	})
 
-  output$stock_physical_gauge1 <- renderGauge({
+  output$stock_physical_gauge_temperature <- renderGauge({
 	stock_parameters = filter(stocks_nasdaq_parameters,Security.Name==input$selected_nasdaq)
 	p = stock_parameters[1,9]
+	# Score below is weighted value of percentage electrical load increases from /functions/damage_impacts_4function_elec_load.r .
+	score_input = read.table("./output/score_input_elec_load.csv")
+	if(input$selected_nasdaq=="Micron Technology, Inc. - Common Stock") p = 1000 - round(10*as.numeric(score_input))
 	gauge(p, min = 0, max = 1000, symbol = '', 
             gaugeSectors( success = c(800, 1000), warning = c(400, 790), danger = c(0, 390))
             )
 	})
 
-  output$stock_physical_gauge2 <- renderGauge({
+  output$stock_physical_gauge_slr <- renderGauge({
 	stock_parameters = filter(stocks_nasdaq_parameters,Security.Name==input$selected_nasdaq)
 	p = stock_parameters[1,10]
+	# Score below is weighted value of percentage flood damage from /functions/damage_impacts_4function_hazus_flood_depth_damage.r .
+	score_input = read.table("./output/score_input_flood.csv")
+	if(input$selected_nasdaq=="Micron Technology, Inc. - Common Stock") p = 1000 - round(10*as.numeric(score_input))
 	gauge(p, min = 0, max = 1000, symbol = '', 
             gaugeSectors( success = c(800, 1000), warning = c(400, 790), danger = c(0, 390))
             )
 	})
 
-  output$stock_physical_gauge3 <- renderGauge({
+  output$stock_physical_gauge_drought <- renderGauge({
 	stock_parameters = filter(stocks_nasdaq_parameters,Security.Name==input$selected_nasdaq)
 	p = stock_parameters[1,11]
+	# Score below is weighted value of percentage drought damage computed below when input$impact_selected == "Corn Yield (US, drought)" .
+	score_input = read.table("./output/score_input_drought.csv")
+	if(input$selected_nasdaq=="Micron Technology, Inc. - Common Stock") p = 1000 - round(10*as.numeric(score_input))
 	gauge(p, min = 0, max = 1000, symbol = '', 
             gaugeSectors( success = c(800, 1000), warning = c(400, 790), danger = c(0, 390))
             )
@@ -426,23 +439,50 @@ server <- function(input, output, session) {
   })
 
   output$sealevel_projections_plot1 <- renderPlot({
-	profile1 = filter(proj,Site==input$sealevelProjectionLocation) %>% filter(Scenario=="1.0_-_MED") %>% select(7:17)
+	profile1 = filter(proj,Site==input$sealevelProjectionLocation) %>% filter(Scenario=="0.3_-_MED") %>% select(7:17)
 	z = t(profile1)
 	profile2 = filter(proj,Site==input$sealevelProjectionLocation) %>% filter(Scenario=="0.5_-_MED") %>% select(7:17)
 	z2 = t(profile2)
-	profile3 = filter(proj,Site==input$sealevelProjectionLocation) %>% filter(Scenario=="1.5_-_MED") %>% select(7:17)
+	profile3 = filter(proj,Site==input$sealevelProjectionLocation) %>% filter(Scenario=="1.0_-_MED") %>% select(7:17)
 	z3 = t(profile3)
-	profile4 = filter(proj,Site==input$sealevelProjectionLocation) %>% filter(Scenario=="2.0_-_MED") %>% select(7:17)
+	profile4 = filter(proj,Site==input$sealevelProjectionLocation) %>% filter(Scenario=="1.5_-_MED") %>% select(7:17)
 	z4 = t(profile4)
-	plot(z, type="l",lwd=3,col="blue", xlab="Year", ylab="Relative Local Sea Level Rise (cm)", xaxt="n")
-	lines(z2, lwd=3, col="green")
-	lines(z3, lwd=3, col="orange")
-	lines(z4, lwd=3, col="red")
+	profile5 = filter(proj,Site==input$sealevelProjectionLocation) %>% filter(Scenario=="2.0_-_MED") %>% select(7:17)
+	z5 = t(profile5)
+	profile6 = filter(proj,Site==input$sealevelProjectionLocation) %>% filter(Scenario=="2.5_-_MED") %>% select(7:17)
+	z6 = t(profile6)
+	plot(z, type="l",lwd=3,col="black", xlab="Year", ylab="Relative Local Sea Level Rise (cm)", xaxt="n")
+	lines(z2, lwd=3, col="blue")
+	lines(z3, lwd=3, col="green")
+	lines(z4, lwd=3, col="yellow")
+	lines(z5, lwd=3, col="orange")
+	lines(z6, lwd=3, col="red")
 	axis(1, at=c(1:11), labels=c("2000","2010","2020","2030","2040","2050","2060","2070","2080","2090","2100"))
-     	legend("topleft", inset=.05, title="Scenarios (GMSL 2100)",legend=c("0.5m","1.0m","1.5m","2.0m"), lwd=3, col=c("green","blue","orange","red"))
+     	legend("topleft", inset=.05, title="Scenarios (GMSL 2100)",legend=c("0.3m","0.5m","1.0m","1.5m","2.0m","2.5m"), lwd=3, col=c("black","blue","green","yellow","orange","red"))
   })
 
   output$returnlevel_probability <- renderText({
+	source("./data/sealevel_us/annual_probability_withslr.r", local=TRUE)
+	#slrScenarios = c("0.3_-_MED","0.5_-_MED","1.0_-_MED","1.5_-_MED","2.0_-_MED","2.5_-_MED")
+	#slrYears = c(2020,2030,2040,2050,2060,2070,2080,2090,2100)
+	# slrScenarios and slrYears are defined in and returned as the second and third elements in a list by function_annual_probability_withslr.  The annual_probability_withslr matrix is the first element in the list.
+	slrScenarios = function_annual_probability_withslr(input$extremewaterLocation, input$sealevelProjectionLocation, input$returnLevel)[[2]]
+	slrYears = function_annual_probability_withslr(input$extremewaterLocation, input$sealevelProjectionLocation, input$returnLevel)[[3]]
+	thresholds_flood_m <- c(0,1.5,3,4.5,6,7.5)
+	thresholds_flood_m_midpoints = c(0.75, 2.25, 3.75, 5.25, 6.75)
+	outputfile = "./output/output_flood_annual_prob.csv"
+	annual_probability_withslr_1 = function_annual_probability_withslr(input$extremewaterLocation, input$sealevelProjectionLocation, thresholds_flood_m_midpoints[1])[[1]]
+	annual_probability_withslr_2 = function_annual_probability_withslr(input$extremewaterLocation, input$sealevelProjectionLocation, thresholds_flood_m_midpoints[2])[[1]]
+	annual_probability_withslr_3 = function_annual_probability_withslr(input$extremewaterLocation, input$sealevelProjectionLocation, thresholds_flood_m_midpoints[3])[[1]]
+	annual_probability_withslr_4 = function_annual_probability_withslr(input$extremewaterLocation, input$sealevelProjectionLocation, thresholds_flood_m_midpoints[4])[[1]]
+	annual_probability_withslr_5 = function_annual_probability_withslr(input$extremewaterLocation, input$sealevelProjectionLocation, thresholds_flood_m_midpoints[5])[[1]]
+	# The table is written explicitly here, rather than in function_annual_probability_     withslr.
+	write.table(annual_probability_withslr_1,"./output/output_flood_annual_prob_level1.csv", row.names=slrScenarios, col.names=slrYears)
+	write.table(annual_probability_withslr_2,"./output/output_flood_annual_prob_level2.csv", row.names=slrScenarios, col.names=slrYears)
+	write.table(annual_probability_withslr_3,"./output/output_flood_annual_prob_level3.csv", row.names=slrScenarios, col.names=slrYears)
+	write.table(annual_probability_withslr_4,"./output/output_flood_annual_prob_level4.csv", row.names=slrScenarios, col.names=slrYears)
+	write.table(annual_probability_withslr_5,"./output/output_flood_annual_prob_level5.csv", row.names=slrScenarios, col.names=slrYears)
+
 	if(input$slrScenario=="0.3 meter") selectedScenario="0.3_-_MED"
 	if(input$slrScenario=="0.5 meter") selectedScenario="0.5_-_MED"
 	if(input$slrScenario=="1.0 meter") selectedScenario="1.0_-_MED"
@@ -477,7 +517,60 @@ server <- function(input, output, session) {
 	if(sh != 0) {return_period_withslr = ((sh/sc)*(return_level_withslr-loc) + 1)^(1/sh) }
 	annual_probability = round(100*1/return_period, digits=2)
 	annual_probability_withslr = round(100*1/return_period_withslr, digits=2)
-	paste(input$slrScenario, input$slrYear, slr_scenario_year, "cm", loc,sc,sh,a,return_period,return_period_withslr,annual_probability,"%",annual_probability_withslr,"%")
+	#paste(input$slrScenario, input$slrYear, slr_scenario_year, "cm", loc,sc,sh,a,return_period,return_period_withslr,annual_probability,"%",annual_probability_withslr,"%")
+	#paste("Historical:",annual_probability,"%","Future:",min(annual_probability_withslr,100),"%")
+	paste("Historical: ",annual_probability,"% -- ",input$slrYear,":",min(annual_probability_withslr,100),"%")
+	})
+
+  output$sealevel_ewl_probabilities <- renderPlot({
+	source("./data/sealevel_us/annual_probability_withslr.r", local=TRUE)
+	position="topleft"
+	if(input$returnLevel==1) position="topright"
+    # slrYears are defined in annual_probability_withslr.r.
+    # xaxt="n" in plot below turns off xaxis tickmarks.  These are added explicitly with axis.
+    plot(annual_probability_withslr[1,], type="l", lwd=3, lty=1, col="black", ylim=c(0,100), xlab="Year", ylab="Annual Probability (%)", xaxt="n")
+	lines(annual_probability_withslr[2,], col="blue")
+	lines(annual_probability_withslr[3,], col="green")
+	lines(annual_probability_withslr[4,], col="yellow")
+	lines(annual_probability_withslr[5,], col="orange")
+	lines(annual_probability_withslr[6,], col="red")
+	axis(1, at=c(1:length(slrYears)), labels=slrYears)
+     	legend(position, inset=.05, title="Scenarios (GMSL 2100)",legend=c("0.3m","0.5m","1.0m","1.5m","2.0m","2.5m"), lwd=3, col=c("black","blue","green","yellow","orange","red"))
+	})
+
+output$drought_frequencies_lonlat <- renderPlot({
+	# Processed drought data is read into dataframe d by load_drought_data.r, which is sourced at the beginning of server.R.
+	lon=as.numeric(input$droughtlon)
+	lat=as.numeric(input$droughtlat)
+	source("./data/drought/process_drought_data.r", local=TRUE)
+	#paste(input$droughtlon,input$droughtlat,upperlon,lowerlon,upperlat,lowerlat)
+	#paste(as.numeric(d4[3,]), as.numeric(d4[4,]) )
+	#plot(as.numeric(d4[3,]), as.numeric(d4[4,]) )
+	
+	# Fields in d3 used below are lon, lat, and 9 periods defined in load_drought_data.r.
+	values = select(d3, V3:V11)
+	tvalues = 100*as.numeric( t(values) )
+	plot(tvalues, type="l", lwd=3, lty=1, col="black", ylim=c(0,100), xlab="Period", ylab="Annual Probability (%)", xaxt="n")
+	axis(1, at=c(1:length(droughtPeriods)), labels=droughtPeriods)
+     	legend("topleft", inset=.05, title="Scenarios",legend=c("RCP4.5","RCP8.5"), lwd=3, col=c("black","blue","green","yellow","orange","red"))
+     	if(d4[3,1]=="No_data") legend("center", title="NO DATA AVAILABLE AT SPECIFIED LOCATION", legend=" ", bg="red", text.col="white", text.font=2)
+	})
+
+output$drought_frequencies_facility <- renderPlot({
+	# Processed drought data is read into dataframe d by load_drought_data.r, which is sourced at the beginning of server.R.
+	fac_selected = facility_locations %>% filter(facility==input$drought_facility)
+	lon=as.numeric(fac_selected[1,2])
+	lat=as.numeric(fac_selected[1,3])
+	source("./data/drought/process_drought_data.r", local=TRUE)
+	#paste(input$droughtlon,input$droughtlat,upperlon,lowerlon,upperlat,lowerlat)
+	#paste(as.numeric(d4[3,]), as.numeric(d4[4,]) )
+	#plot(as.numeric(d4[3,]), as.numeric(d4[4,]) )
+	values = select(d3, V3:V11)
+	tvalues = 100*as.numeric( t(values) )
+	plot(tvalues, type="l", lwd=3, lty=1, col="black", ylim=c(0,100), xlab="Period", ylab="Annual Probability (%)", xaxt="n")
+	axis(1, at=c(1:length(droughtPeriods)), labels=droughtPeriods)
+     	legend("topleft", inset=.05, title="Scenarios",legend=c("RCP4.5","RCP8.5"), lwd=3, col=c("black","blue","green","yellow","orange","red"))
+     	if(d4[3,1]=="No_data") legend("center", title="NO DATA AVAILABLE AT THIS LOCATION", legend=" ", bg="red", text.col="white", text.font=2)
 	})
 
 # -----------
@@ -505,7 +598,18 @@ server <- function(input, output, session) {
   })
 
   output$impactplot_building_flood <- renderPlot({
-    source("./data/hazus/extract_hazus_flood_depth_damage.r", local=TRUE)
+    damage_function_name = as.character(input$hazus_damage_function_id)
+	s = unlist( strsplit(damage_function_name, "_") )
+        # Given a list structure x, unlist simplifies it to produce a vector which contains all the atomic components which occur in x.
+	#s2 = paste(s[1])
+    damage_function_id = as.numeric(s[1])
+    #fl_dept <- extract_hazus_functions()  # done at start of server.R in data section
+    source("./data/hazus/function_extract_hazus_flood_depth_damage.r", local=TRUE)
+    get_hazus_damage_function(damage_function_id)
+  })
+
+  output$impactplot_corn_drought_return_period <- renderPlot({
+    source("./functions/fit_corn_yield_us_drought.r", local=TRUE)
   })
 
   output$impactplot_agriculture_brazil <- renderPlot({
@@ -513,7 +617,7 @@ server <- function(input, output, session) {
   })
 
   output$impactplot_maize_us <- renderPlot({
-    source("./functions/fit_maize_yield_us_v1.r", local=TRUE)
+    source("./functions/fit_maize_yield_us_hourly_temp.r", local=TRUE)
   })
 
   output$comingsoon <- renderImage({
@@ -549,6 +653,18 @@ server <- function(input, output, session) {
     list(src = "./images/thompson_cooling_water_Teffects_v1b_water.png",width=500,height=300,alt = paste("thompson_water_needed_water_temperature"))
   }, deleteFile = FALSE)
 
+  output$impactplot_crops_wang <- renderImage({
+    list(src = "./images/wang_crop_productivity_climate_midwestUS_2016_fig13.png",width=500,height=300,alt = paste("wang_crop_productivity_climate_midwestUS_2016_fig13"))
+  }, deleteFile = FALSE)
+
+  output$impactplot_crops_mishra <- renderImage({
+    list(src = "./images/mishra_corn_soy_midwestUS_drought_2010_fig5.png",width=500,height=300,alt = paste("mishra_corn_soy_midwestUS_drought_2010_fig5"))
+  }, deleteFile = FALSE)
+
+  output$impactplot_crops_mhakbela <- renderImage({
+    list(src = "./images/mhakbela_drought_wheat_canada_2010_fig2.png",width=500,height=300,alt = paste("mhakbela_drought_wheat_canada_2010_fig2"))
+  }, deleteFile = FALSE)
+
 # -----------
 # Probability of Exceeding Thresholds
 # -----------
@@ -578,7 +694,7 @@ server <- function(input, output, session) {
 # -----------
   output$impactestimateplot2 <- renderPlot({
 
-  if (input$impact_selected == "General") {
+  if (input$impact_selected == "Custom-built") {
     x <- seq(270,320,0.1)
 
 # The following fails because the threshold inputs to damagej1/2 are functions of j.
@@ -586,10 +702,10 @@ server <- function(input, output, session) {
 
     source("./functions/damage_impacts.r", local=TRUE)
 
-    write.table(damage, file="./output/damage.csv", row.names = FALSE, col.names = FALSE, sep=" ")
-    write.table(impacts, file="./output/impacts.csv", row.names = FALSE, col.names = FALSE, sep=" ")
-    write.table(impactbyperiod, file="./output/impactbyperiod.csv", row.names = FALSE, col.names = FALSE, sep=" ")
-    write.table(c("impactbyperiod impactbyperiod_relative2baseperiod",paste(impactbyperiod,impactbyperiod_relative2baseperiod)), file="./output/impactbyperiod_base_and_relative2baseperiod.csv", row.names = FALSE, col.names = FALSE, sep=" ")
+    write.table(damage, file="./output/damage_custom.csv", row.names = FALSE, col.names = FALSE, sep=" ")
+    write.table(impacts, file="./output/impacts_custom.csv", row.names = FALSE, col.names = FALSE, sep=" ")
+    write.table(impactbyperiod, file="./output/impactbyperiod_custom.csv", row.names = FALSE, col.names = FALSE, sep=" ")
+    write.table(c("impactbyperiod impactbyperiod_relative2baseperiod",paste(impactbyperiod,impactbyperiod_relative2baseperiod)), file="./output/impactbyperiod_base_and_relative2baseperiod_custom.csv", row.names = FALSE, col.names = FALSE, sep=" ")
 
     plot(impactbyperiod_relative2baseperiod, type="l", lwd=3, lty=1, col=colors[1], xlab="Periods", ylab="Probabilistic Impact(%)", xaxt="n")
 	axis(1, at=c(1:length(periods)), labels=periods)
@@ -601,11 +717,86 @@ server <- function(input, output, session) {
         text(5.2,0,current_risk, font=4, col=thiscol)
     } #endif
 
-  if (input$impact_selected == "Electricity Load") {
+  if (input$impact_selected == "Electricity Load (US; temperature)") {
     source("./functions/fit_elec_load_v1.r", local=TRUE)
     source("./functions/damage_impacts_4function_elec_load.r", local=TRUE)
-    plot(impactbyperiod_relative2baseperiod, type="l", lwd=3, lty=1, col=colors[1], xlab="Periods", ylab="Probabilistic Impact", xaxt="n")
+
+    write.table(damage, file="./output/damage_elecload.csv", row.names = FALSE, col.names = FALSE, sep=" ")
+    write.table(impacts, file="./output/impacts_elecload.csv", row.names = FALSE, col.names = FALSE, sep=" ")
+    write.table(impactbyperiod, file="./output/impactbyperiod_elecload.csv", row.names = FALSE, col.names = FALSE, sep=" ")
+    write.table(c("impactbyperiod impactbyperiod_relative2baseperiod",paste(impactbyperiod,impactbyperiod_relative2baseperiod)), file="./output/impactbyperiod_base_and_relative2baseperiod_elecload.csv", row.names = FALSE, col.names = FALSE, sep=" ")
+
+    plot(impactbyperiod_relative2baseperiod, type="l", lwd=3, lty=1, col=colors[1], xlab="Periods", ylab="Change in Peak Load (Mw)", xaxt="n")
 	axis(1, at=c(1:length(periods)), labels=periods)
+    } #endif
+
+  if (input$impact_selected == "Building Damage (flood depth)") {
+    #fl_dept <- extract_hazus_functions()  # done at start of server.R in data section
+    #source("./data/hazus/extract_hazus_flood_depth_damage.r", local=TRUE)
+    #source("./data/hazus/function_extract_hazus_flood_depth_damage.r", local=TRUE)
+    source("./data/hazus/function_extract_hazus_flood_depth_damage_return_damage_at_depth.r", local=TRUE)
+
+    #damage_function_id = input$hazus_damage_function_id
+    damage_function_name = as.character(input$hazus_damage_function_id)
+	s = unlist( strsplit(damage_function_name, "_") )
+        # Given a list structure x, unlist simplifies it to produce a vector which contains all the atomic components which occur in x.
+    damage_function_id = as.numeric(s[1])
+    #get_hazus_damage_function(damage_function_id)
+
+    # The following reads the table of annual probabilities created by ./data/sealevel_us/annual_probability_withslr.r. Note that this is a dynamic table created by the selection of location and return level from the SLR section of the localized climate probabilities tab.  The table has rows for each GMSL scenario and colums for years 2020-2100 in 10-year increments.
+    annual_prob_given_return_level = read.table("./output/output_flood_annual_prob.csv", header=TRUE)
+    annual_prob_given_return_level1 = read.table("./output/output_flood_annual_prob_level1.csv", header=TRUE)
+    source("./functions/damage_impacts_4function_hazus_flood_depth_damage.r", local=TRUE)
+
+    write.table(damage, file="./output/damage_buildingflood.csv", row.names = FALSE, col.names = FALSE, sep=" ")
+    write.table(impacts, file="./output/impacts_buildingflood.csv", row.names = FALSE, col.names = FALSE, sep=" ")
+    write.table(impactbyperiod, file="./output/impactbyperiod_buildingflood.csv", row.names = FALSE, col.names = FALSE, sep=" ")
+    write.table(c("impactbyperiod impactbyperiod_relative2baseperiod",paste(impactbyperiod,impactbyperiod_relative2baseperiod)), file="./output/impactbyperiod_base_and_relative2baseperiod_buildingflood.csv", row.names = FALSE, col.names = FALSE, sep=" ")
+
+    plot(impactbyperiod_relative2baseperiod, type="l", lwd=3, lty=1, col=colors[1], xlab="Periods", ylab="Expected Building Damage for Selected RL (%)", xaxt="n")
+	axis(1, at=c(1:length(periods)), labels=periods)
+    } #endif
+
+  if (input$impact_selected == "Corn Yield (US, drought)") {
+	# Processed drought data is read into dataframe d by load_drought_data.r, which is sourced at the beginning of server.R.
+	location_name = "Selected Location"
+	lon=as.numeric(input$droughtlon)
+	lat=as.numeric(input$droughtlat)
+	fac_selected = facility_locations %>% filter(facility==input$drought_facility)
+	if(input$use_facility_for_drought=="TRUE") {
+		lon=as.numeric(fac_selected[1,2])
+		lat=as.numeric(fac_selected[1,3]) 
+		location_name = fac_selected[1,1]}
+	source("./data/drought/process_drought_data.r", local=TRUE)
+	# process_drought_data.r produces the data vector d3.  It also writes this data to /output/output_drought_annual_prob.csv .
+	# Fields in d3 used below are lon, lat, and fractional annual probabilities for 9 periods defined in load_drought_data.r.
+	# For example, droughtPeriods = c("1950-99","2016-25","2026-35","2036-45","2046-55","2056-65","2066-75","2076-85","2086-95")
+	values = select(d3, V3:V11)
+	tvalues = 100*as.numeric( t(values) )
+        source("./functions/fit_corn_yield_us_drought.r", local=TRUE)
+        historical_reduction_10yr_return_period = yield_reduction_pct[4]
+        projected_return_period_same_reduction = (10/tvalues) * 10
+	annual_expected_reduction = (-1.0*historical_reduction_10yr_return_period) * tvalues/100
+
+    	impactbyperiod = annual_expected_reduction
+    	impactbyperiod_relative2baseperiod = impactbyperiod - impactbyperiod[1]
+    	write.table(impactbyperiod, file="./output/impactbyperiod_corn_yield_us_drought.csv", row.names = FALSE, col.names = FALSE, sep=" ")
+    	write.table(c("impactbyperiod impactbyperiod_relative2baseperiod",paste(impactbyperiod,impactbyperiod_relative2baseperiod)), file="./output/impactbyperiod_base_and_relative2baseperiod_corn_yield_us_drought.csv", row.names = FALSE, col.names = FALSE, sep=" ")
+
+	# Calculate weighted vector of impact by period for climate score.
+	weightbyperiod = c(0,80,10,5,1,1,1,1,1)
+	#weightbyperiod = c(0,50,50,0,0,0,0,0,0)
+	#percent_change = 100*(impactbyperiod/impactbyperiod[1] - 1.0)
+	# Impacts on corn yields due to drought are annual percent yield reduction and are negative.
+	percent_change = -1.0*(impactbyperiod - impactbyperiod[1])
+	score_input_drought = sum( weightbyperiod*percent_change)/100
+	#score_input_drought = sum( weightbyperiod*impactbyperiod_relative2baseperiod )/100
+	write.table(score_input_drought, "./output/score_input_drought.csv", row.names=FALSE, col.names=FALSE)
+
+	plot(annual_expected_reduction, type="l", lwd=3, lty=1, col="black", main=paste("Yield Change at",location_name,"(",lon,",",lat,")"), xlab="Periods", ylab="Expected Annual Yield Loss (%)", xaxt="n", ylim=c(-1.0*historical_reduction_10yr_return_period, 0))
+	axis(1, at=c(1:length(droughtPeriods)), labels=droughtPeriods)
+     	legend("topright", inset=.05, title="Scenarios",legend=c("RCP4.5","RCP8.5"), lwd=3, col=c("black","blue","green","yellow","orange","red"))
+     	if(d4[3,1]=="No_data") legend("center", title="NO DATA AVAILABLE AT SPECIFIED LOCATION", legend=" ", bg="red", text.col="white", text.font=2)
     } #endif
 
   if (input$impact_selected == "Agricultural Income (Brazil)") {
@@ -621,20 +812,31 @@ server <- function(input, output, session) {
   # Impact Function for impact estimate (controlled from impact-function tab)
   output$impactestimateplot3 <- renderPlot({
   
-  if (input$impact_selected == "General") {
+  if (input$impact_selected == "Custom-built") {
     x = range_tempK
     wt1 = input$impactfunctionweight
     wt2 = 1 - wt1
     plot(x,wt1*sigmoid(x,input$sigmoidlimit,input$sigmoidsteepness,input$sigmoidmidpoint) + wt2*quadratic(x,input$quadraticlimit,input$quadraticshape,input$quadraticmidpoint), type="l", lwd=3, lty=1, col="red", xlim=c(270,320), ylim=c(-100,100), xlab="Daily Maximum Surface Temperature (degK)", ylab="Relative Impact (%)")
     } #endif
 
-  if (input$impact_selected == "Electricity Load") {
-    #return()
+  if (input$impact_selected == "Electricity Load (US; temperature)") {
     source("./functions/fit_elec_load_v1.r", local=TRUE)
     } #endif
 
-  if (input$impact_selected == "Building Damage (Flood Depth)") {
-    source("./data/hazus/extract_hazus_flood_depth_damage.r", local=TRUE)
+  if (input$impact_selected == "Building Damage (flood depth)") {
+    #fl_dept <- extract_hazus_functions()  # done at start of server.R in data section
+    #source("./data/hazus/extract_hazus_flood_depth_damage.r", local=TRUE)
+    #damage_function_id = input$hazus_damage_function_id
+    damage_function_name = as.character(input$hazus_damage_function_id)
+	s = unlist( strsplit(damage_function_name, "_") )
+        # Given a list structure x, unlist simplifies it to produce a vector which contains all the atomic components which occur in x.
+    damage_function_id = as.numeric(s[1])
+    source("./data/hazus/function_extract_hazus_flood_depth_damage.r", local=TRUE)
+    get_hazus_damage_function(damage_function_id)
+    } #endif
+
+  if (input$impact_selected == "Corn Yield (US, drought)") {
+    source("./functions/fit_corn_yield_us_drought.r", local=TRUE)
     } #endif
 
   if (input$impact_selected == "Agricultural Income (Brazil)") {
@@ -848,6 +1050,17 @@ server <- function(input, output, session) {
     if(input$write_new_table=="Yes") {source("./data/users/write_dbsqlite_test.r", local=TRUE)}
     paste("New table created.")
   })
+
+
+# -----------
+# Links
+# -----------
+    #googleurl <- a("Google Homepage", href="https://www.google.com/")
+    #output$googlelink <- renderUI({ tagList("URL link:", googleurl) })
+    output$googlelink <- renderUI({ tags$a("Google Search", href="https:www.google.com", target="_blank") })
+    output$ndgain_countries <- renderUI({ tags$a("ND-GAIN Country Index", href="https://gain.nd.edu/our-work/country-index/rankings/", target="_blank") })
+    output$actuaries_climate_index <- renderUI({ tags$a("Actuaries Climate Index", href="http://actuariesclimateindex.org/explore/regional-graphs/", target="_blank") })
+    output$worldbank_development_indicators <- renderUI({ tags$a("World Bank Development Indicators", href="http://databank.worldbank.org/data/reports.aspx?source=world-development-indicators", target="_blank") })
 
 # Terry -----------------------------------------------------------
 

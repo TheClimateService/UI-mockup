@@ -97,15 +97,14 @@ server <- function(input, output, session) {
   }, options = list(lengthMenu = c(5, 30, 50), pageLength = 5))
 
 
-  output$frame <- renderUI({
+  output$map_micron_boise <- renderUI({
     input$Member
     # iframe finds its target source in the www directory.
-    my_test <- tags$iframe(src="map.html", height=300, width=300)
-    print(my_test)
-    my_test
+    thismap <- tags$iframe(src="map.html", height=300, width=300)
+    thismap
   })
 
-  output$frame_singapore <- renderUI({
+  output$map_micron_singapore <- renderUI({
     # iframe finds its target source in the www directory.
     thismap <- tags$iframe(src="map_singapore.html", height=300, width=300)
     thismap
@@ -178,33 +177,33 @@ server <- function(input, output, session) {
 
   output$stock_overall_score_gauge <- renderGauge({
 	stock_parameters = filter(stocks_nasdaq_parameters,Security.Name==input$selected_nasdaq)
-	p = sum(stock_parameters[1,3:14])/12
-	gauge(p, min = 0, max = 100, symbol = 'pts', 
-            gaugeSectors( success = c(80, 100), warning = c(40, 79), danger = c(0, 39))
+	p = round( sum(stock_parameters[1,3:14])/12 )
+	gauge(p, min = 0, max = 1000, symbol = '', 
+            gaugeSectors( success = c(800, 1000), warning = c(400, 790), danger = c(0, 390))
             )
 	})
 
   output$stock_financial_gauge1 <- renderGauge({
 	stock_parameters = filter(stocks_nasdaq_parameters,Security.Name==input$selected_nasdaq)
 	p = stock_parameters[1,3]
-	gauge(p, min = 0, max = 100, symbol = 'pts', 
-            gaugeSectors( success = c(80, 100), warning = c(40, 79), danger = c(0, 39))
+	gauge(p, min = 0, max = 1000, symbol = '', 
+            gaugeSectors( success = c(800, 1000), warning = c(400, 790), danger = c(0, 390))
             )
 	})
 
   output$stock_financial_gauge2 <- renderGauge({
 	stock_parameters = filter(stocks_nasdaq_parameters,Security.Name==input$selected_nasdaq)
 	p = stock_parameters[1,4]
-	gauge(p, min = 0, max = 100, symbol = 'pts', 
-            gaugeSectors( success = c(80, 100), warning = c(40, 79), danger = c(0, 39))
+	gauge(p, min = 0, max = 1000, symbol = '', 
+            gaugeSectors( success = c(800, 1000), warning = c(400, 790), danger = c(0, 390))
             )
 	})
 
   output$stock_financial_gauge3 <- renderGauge({
 	stock_parameters = filter(stocks_nasdaq_parameters,Security.Name==input$selected_nasdaq)
 	p = stock_parameters[1,5]
-	gauge(p, min = 0, max = 100, symbol = 'pts', 
-            gaugeSectors( success = c(80, 100), warning = c(40, 79), danger = c(0, 39))
+	gauge(p, min = 0, max = 1000, symbol = '', 
+            gaugeSectors( success = c(800, 1000), warning = c(400, 790), danger = c(0, 390))
             )
 	})
 
@@ -227,24 +226,24 @@ server <- function(input, output, session) {
   output$stock_transition_gauge1 <- renderGauge({
 	stock_parameters = filter(stocks_nasdaq_parameters,Security.Name==input$selected_nasdaq)
 	p = stock_parameters[1,6]
-	gauge(p, min = 0, max = 100, symbol = 'pts', 
-            gaugeSectors( success = c(80, 100), warning = c(40, 79), danger = c(0, 39))
+	gauge(p, min = 0, max = 1000, symbol = '', 
+            gaugeSectors( success = c(800, 1000), warning = c(400, 790), danger = c(0, 390))
             )
 	})
 
   output$stock_transition_gauge2 <- renderGauge({
 	stock_parameters = filter(stocks_nasdaq_parameters,Security.Name==input$selected_nasdaq)
 	p = stock_parameters[1,7]
-	gauge(p, min = 0, max = 100, symbol = 'pts', 
-            gaugeSectors( success = c(80, 100), warning = c(40, 79), danger = c(0, 39))
+	gauge(p, min = 0, max = 1000, symbol = '', 
+            gaugeSectors( success = c(800, 1000), warning = c(400, 790), danger = c(0, 390))
             )
 	})
 
   output$stock_transition_gauge3 <- renderGauge({
 	stock_parameters = filter(stocks_nasdaq_parameters,Security.Name==input$selected_nasdaq)
 	p = stock_parameters[1,8]
-	gauge(p, min = 0, max = 100, symbol = 'pts', 
-            gaugeSectors( success = c(80, 100), warning = c(40, 79), danger = c(0, 39))
+	gauge(p, min = 0, max = 1000, symbol = '', 
+            gaugeSectors( success = c(800, 1000), warning = c(400, 790), danger = c(0, 390))
             )
 	})
 
@@ -267,24 +266,30 @@ server <- function(input, output, session) {
   output$stock_physical_gauge1 <- renderGauge({
 	stock_parameters = filter(stocks_nasdaq_parameters,Security.Name==input$selected_nasdaq)
 	p = stock_parameters[1,9]
-	gauge(p, min = 0, max = 100, symbol = 'pts', 
-            gaugeSectors( success = c(80, 100), warning = c(40, 79), danger = c(0, 39))
+	# Score below is weighted value of percentage electrical load increases from damage_impacts_4function_elec_load.r .
+	score_input = read.table("./output/score_input_elec_load.csv")
+	if(input$selected_nasdaq=="Micron Technology, Inc. - Common Stock") p = 1000 - round(10*as.numeric(score_input))
+	gauge(p, min = 0, max = 1000, symbol = '', 
+            gaugeSectors( success = c(800, 1000), warning = c(400, 790), danger = c(0, 390))
             )
 	})
 
   output$stock_physical_gauge2 <- renderGauge({
 	stock_parameters = filter(stocks_nasdaq_parameters,Security.Name==input$selected_nasdaq)
 	p = stock_parameters[1,10]
-	gauge(p, min = 0, max = 100, symbol = 'pts', 
-            gaugeSectors( success = c(80, 100), warning = c(40, 79), danger = c(0, 39))
+	# Score below is weighted value of percentage flood damage from damage_impacts_4function_hazus_flood_depth_damage.r .
+	score_input = read.table("./output/score_input_flood.csv")
+	if(input$selected_nasdaq=="Micron Technology, Inc. - Common Stock") p = 1000 - round(10*as.numeric(score_input))
+	gauge(p, min = 0, max = 1000, symbol = '', 
+            gaugeSectors( success = c(800, 1000), warning = c(400, 790), danger = c(0, 390))
             )
 	})
 
   output$stock_physical_gauge3 <- renderGauge({
 	stock_parameters = filter(stocks_nasdaq_parameters,Security.Name==input$selected_nasdaq)
 	p = stock_parameters[1,11]
-	gauge(p, min = 0, max = 100, symbol = 'pts', 
-            gaugeSectors( success = c(80, 100), warning = c(40, 79), danger = c(0, 39))
+	gauge(p, min = 0, max = 1000, symbol = '', 
+            gaugeSectors( success = c(800, 1000), warning = c(400, 790), danger = c(0, 390))
             )
 	})
 
@@ -307,24 +312,24 @@ server <- function(input, output, session) {
   output$stock_opportunity_gauge1 <- renderGauge({
 	stock_parameters = filter(stocks_nasdaq_parameters,Security.Name==input$selected_nasdaq)
 	p = stock_parameters[1,12]
-	gauge(p, min = 0, max = 100, symbol = 'pts', 
-            gaugeSectors( success = c(80, 100), warning = c(40, 79), danger = c(0, 39))
+	gauge(p, min = 0, max = 1000, symbol = '', 
+            gaugeSectors( success = c(800, 1000), warning = c(400, 790), danger = c(0, 390))
             )
 	})
 
   output$stock_opportunity_gauge2 <- renderGauge({
 	stock_parameters = filter(stocks_nasdaq_parameters,Security.Name==input$selected_nasdaq)
 	p = stock_parameters[1,13]
-	gauge(p, min = 0, max = 100, symbol = 'pts', 
-            gaugeSectors( success = c(80, 100), warning = c(40, 79), danger = c(0, 39))
+	gauge(p, min = 0, max = 1000, symbol = '', 
+            gaugeSectors( success = c(800, 1000), warning = c(400, 790), danger = c(0, 390))
             )
 	})
 
   output$stock_opportunity_gauge3 <- renderGauge({
 	stock_parameters = filter(stocks_nasdaq_parameters,Security.Name==input$selected_nasdaq)
 	p = stock_parameters[1,14]
-	gauge(p, min = 0, max = 100, symbol = 'pts', 
-            gaugeSectors( success = c(80, 100), warning = c(40, 79), danger = c(0, 39))
+	gauge(p, min = 0, max = 1000, symbol = '', 
+            gaugeSectors( success = c(800, 1000), warning = c(400, 790), danger = c(0, 390))
             )
 	})
 
@@ -334,7 +339,7 @@ server <- function(input, output, session) {
   output$climplot1 <- renderPlot({
      #test.hist = read.table("./data/tasmax_day_BCSD_historical_r1i1p1_inmcm4_1950-2005.interpolated.merged.aggregated", header=TRUE)
      # The original data set contains 159650 daily tasmax values:  10 years, 31 days covering June, 5 models, 103 NEX-GDDP grid centers in Western Equatoria region of South Sudan.  This has been downselected to fewer points to reduce loading speed.
-     test.hist = read.table("./data/nex_gddp_western_equatoria_103pts_5models/tasmax.1970-1979.allmodels.westernequatoria.jun.csv.10pts", header=FALSE)
+     test.hist = read.table("./data/temperature/nex_gddp_western_equatoria_103pts_5models/tasmax.1970-1979.allmodels.westernequatoria.jun.csv.10pts", header=FALSE)
      test.hist[,1] <- NULL
      test.hist[,1] <- NULL
      x = ts(test.hist[1,])
@@ -346,7 +351,7 @@ server <- function(input, output, session) {
   output$climplot2 <- renderPlot({
      #test.hist = read.table("./data/tasmax_day_BCSD_rcp85_r1i1p1_inmcm4_2006-2100.interpolated.merged.aggregated", header=TRUE)
      # The original data set contains 159650 daily tasmax values:  10 years, 31 days covering June, 5 models, 103 NEX-GDDP grid centers in Western Equatoria region of South Sudan.  This has been downselected to fewer points to reduce loading speed.
-     test.hist = read.table("./data/nex_gddp_western_equatoria_103pts_5models/tasmax.2020-2029.allmodels.westernequatoria.jun.csv.10pts", header=FALSE)
+     test.hist = read.table("./data/temperature/nex_gddp_western_equatoria_103pts_5models/tasmax.2020-2029.allmodels.westernequatoria.jun.csv.10pts", header=FALSE)
      test.hist[,1] <- NULL
      test.hist[,1] <- NULL
      x = ts(test.hist[1,])
@@ -358,7 +363,7 @@ server <- function(input, output, session) {
   output$climplot3 <- renderPlot({
      #test.hist = read.table("./data/tasmax_day_BCSD_historical_r1i1p1_CNRM-CM5_1950-2005.interpolated.merged.aggregated", header=TRUE)
      # The original data set contains 159650 daily tasmax values:  10 years, 31 days covering June, 5 models, 103 NEX-GDDP grid centers in Western Equatoria region of South Sudan.  This has been downselected to fewer points to reduce loading speed.
-     test.hist = read.table("./data/nex_gddp_western_equatoria_103pts_5models/tasmax.2050-2059.allmodels.westernequatoria.jun.csv.10pts", header=FALSE)
+     test.hist = read.table("./data/temperature/nex_gddp_western_equatoria_103pts_5models/tasmax.2050-2059.allmodels.westernequatoria.jun.csv.10pts", header=FALSE)
      test.hist[,1] <- NULL
      test.hist[,1] <- NULL
      x = ts(test.hist[1,])
@@ -370,7 +375,7 @@ server <- function(input, output, session) {
   output$climplot4 <- renderPlot({
      #test.hist = read.table("./data/tasmax_day_BCSD_rcp85_r1i1p1_CNRM-CM5_2006-2100.interpolated.merged.aggregated", header=TRUE)
      # The original data set contains 159650 daily tasmax values:  10 years, 31 days covering June, 5 models, 103 NEX-GDDP grid centers in Western Equatoria region of South Sudan.  This has been downselected to fewer points to reduce loading speed.
-     test.hist = read.table("./data/nex_gddp_western_equatoria_103pts_5models/tasmax.2090-2099.allmodels.westernequatoria.jun.csv.10pts", header=FALSE)
+     test.hist = read.table("./data/temperature/nex_gddp_western_equatoria_103pts_5models/tasmax.2090-2099.allmodels.westernequatoria.jun.csv.10pts", header=FALSE)
      test.hist[,1] <- NULL
      test.hist[,1] <- NULL
      x = ts(test.hist[1,])
@@ -444,6 +449,7 @@ server <- function(input, output, session) {
   })
 
   output$returnlevel_probability <- renderText({
+	source("./data/sealevel_us/annual_probability_withslr.r", local=TRUE)
 	if(input$slrScenario=="0.3 meter") selectedScenario="0.3_-_MED"
 	if(input$slrScenario=="0.5 meter") selectedScenario="0.5_-_MED"
 	if(input$slrScenario=="1.0 meter") selectedScenario="1.0_-_MED"
@@ -478,8 +484,41 @@ server <- function(input, output, session) {
 	if(sh != 0) {return_period_withslr = ((sh/sc)*(return_level_withslr-loc) + 1)^(1/sh) }
 	annual_probability = round(100*1/return_period, digits=2)
 	annual_probability_withslr = round(100*1/return_period_withslr, digits=2)
-	paste(input$slrScenario, input$slrYear, slr_scenario_year, "cm", loc,sc,sh,a,return_period,return_period_withslr,annual_probability,"%",annual_probability_withslr,"%")
+	#paste(input$slrScenario, input$slrYear, slr_scenario_year, "cm", loc,sc,sh,a,return_period,return_period_withslr,annual_probability,"%",annual_probability_withslr,"%")
+	paste("Historical:",annual_probability,"%","Future:",min(annual_probability_withslr,100),"%")
 	})
+
+  output$sealevel_ewl_probabilities <- renderPlot({
+	source("./data/sealevel_us/annual_probability_withslr.r", local=TRUE)
+	position="topleft"
+	if(input$returnLevel==1) position="topright"
+    # slrYears are defined in annual_probability_withslr.r.
+    # xaxt="n" in plot below turns off xaxis tickmarks.  These are added explicitly with axis.
+    plot(annual_probability_withslr[1,], type="l", lwd=3, lty=1, col="black", ylim=c(0,100), xlab="Year", ylab="Annual Probability (%)", xaxt="n")
+	lines(annual_probability_withslr[2,], col="blue")
+	lines(annual_probability_withslr[3,], col="green")
+	lines(annual_probability_withslr[4,], col="yellow")
+	lines(annual_probability_withslr[5,], col="orange")
+	lines(annual_probability_withslr[6,], col="red")
+	axis(1, at=c(1:length(slrYears)), labels=slrYears)
+     	legend(position, inset=.05, title="Scenarios (GMSL 2100)",legend=c("0.3m","0.5m","1.0m","1.5m","2.0m","2.5m"), lwd=3, col=c("black","blue","green","yellow","orange","red"))
+	})
+
+output$drought_frequencies <- renderPlot({
+	# Processed drought data is read into dataframe d by load_drought_data.r, which is sourced at the beginning of server.R.
+	lon=as.numeric(input$droughtlon)
+	lat=as.numeric(input$droughtlat)
+	source("./data/drought/process_drought_data.r", local=TRUE)
+	#paste(input$droughtlon,input$droughtlat,upperlon,lowerlon,upperlat,lowerlat)
+	#paste(as.numeric(d4[3,]), as.numeric(d4[4,]) )
+	#plot(as.numeric(d4[3,]), as.numeric(d4[4,]) )
+	values = select(d3, V3:V11)
+	tvalues = 100*as.numeric( t(values) )
+	plot(tvalues, type="l", lwd=3, lty=1, col="black", ylim=c(0,100), xlab="Period", ylab="Annual Probability (%)", main="Annual Probability of Exceeding the Historical (1950-99) 90th-percentile Value of the Palmer Drought Severity Index", xaxt="n")
+	axis(1, at=c(1:length(droughtPeriods)), labels=droughtPeriods)
+     	legend("topleft", inset=.05, title="Scenarios",legend=c("RCP4.5","RCP8.5"), lwd=3, col=c("black","blue","green","yellow","orange","red"))
+	})
+
 
 # -----------
 # Impact functions (damage functions)
@@ -503,6 +542,10 @@ server <- function(input, output, session) {
 
   output$impactplot_elecload <- renderPlot({
     source("./functions/fit_elec_load_v1.r", local=TRUE)
+  })
+
+  output$impactplot_building_flood <- renderPlot({
+    source("./data/hazus/extract_hazus_flood_depth_damage.r", local=TRUE)
   })
 
   output$impactplot_agriculture_brazil <- renderPlot({
@@ -546,8 +589,11 @@ server <- function(input, output, session) {
     list(src = "./images/thompson_cooling_water_Teffects_v1b_water.png",width=500,height=300,alt = paste("thompson_water_needed_water_temperature"))
   }, deleteFile = FALSE)
 
-  # Probability of Exceeding Thresholds
+# -----------
+# Probability of Exceeding Thresholds
+# -----------
   # Note that the shapes and scales values are for a pre-determined Weibull distribution for South Sudan.
+
   output$impactestimateplot1 <- renderPlot({
     #shapes <- c(81.8730, 93.0240, 88.9460, 84.7620, 95.8550, 90.0690, 86.1060, 90.3700, 91.5810)
     #scales <- c(292.0320, 293.0880, 293.0820, 293.3870, 293.7670, 293.9150, 294.5310, 295.7390, 295.7960)
@@ -595,10 +641,31 @@ server <- function(input, output, session) {
         text(5.2,0,current_risk, font=4, col=thiscol)
     } #endif
 
-  if (input$impact_selected == "Electricity Load") {
+  if (input$impact_selected == "Electricity Load (US; temperature)") {
     source("./functions/fit_elec_load_v1.r", local=TRUE)
-    source("./functions/damage_impacts_4function_v1.r", local=TRUE)
-    plot(impactbyperiod_relative2baseperiod, type="l", lwd=3, lty=1, col=colors[1], xlab="Periods", ylab="Probabilistic Impact", xaxt="n")
+    source("./functions/damage_impacts_4function_elec_load.r", local=TRUE)
+
+    write.table(damage, file="./output/damage.csv", row.names = FALSE, col.names = FALSE, sep=" ")
+    write.table(impacts, file="./output/impacts.csv", row.names = FALSE, col.names = FALSE, sep=" ")
+    write.table(impactbyperiod, file="./output/impactbyperiod.csv", row.names = FALSE, col.names = FALSE, sep=" ")
+    write.table(c("impactbyperiod impactbyperiod_relative2baseperiod",paste(impactbyperiod,impactbyperiod_relative2baseperiod)), file="./output/impactbyperiod_base_and_relative2baseperiod.csv", row.names = FALSE, col.names = FALSE, sep=" ")
+
+    plot(impactbyperiod_relative2baseperiod, type="l", lwd=3, lty=1, col=colors[1], xlab="Periods", ylab="Change in Peak Load (Mw)", xaxt="n")
+	axis(1, at=c(1:length(periods)), labels=periods)
+    } #endif
+
+  if (input$impact_selected == "Building Damage (flood depth)") {
+    source("./data/hazus/extract_hazus_flood_depth_damage.r", local=TRUE)
+    # The following reads the table of annual probabilities created by annual_probability_withslr.r. Note that this is a dynamic table created by the selection of location and return level from the SLR section of the localized climate probabilities tab.  The table has rows for each GMSL scenario and colums for years 2020-2100 in 10-year increments.
+    annual_prob_given_return_level = read.table("./output/output_flood_annual_prob.csv", header=TRUE)
+    source("./functions/damage_impacts_4function_hazus_flood_depth_damage.r", local=TRUE)
+
+    write.table(damage, file="./output/damage.csv", row.names = FALSE, col.names = FALSE, sep=" ")
+    write.table(impacts, file="./output/impacts.csv", row.names = FALSE, col.names = FALSE, sep=" ")
+    write.table(impactbyperiod, file="./output/impactbyperiod.csv", row.names = FALSE, col.names = FALSE, sep=" ")
+    write.table(c("impactbyperiod impactbyperiod_relative2baseperiod",paste(impactbyperiod,impactbyperiod_relative2baseperiod)), file="./output/impactbyperiod_base_and_relative2baseperiod.csv", row.names = FALSE, col.names = FALSE, sep=" ")
+
+    plot(impactbyperiod_relative2baseperiod, type="l", lwd=3, lty=1, col=colors[1], xlab="Periods", ylab="Expected Building Damage for Selected RL (%)", xaxt="n")
 	axis(1, at=c(1:length(periods)), labels=periods)
     } #endif
 
@@ -622,9 +689,12 @@ server <- function(input, output, session) {
     plot(x,wt1*sigmoid(x,input$sigmoidlimit,input$sigmoidsteepness,input$sigmoidmidpoint) + wt2*quadratic(x,input$quadraticlimit,input$quadraticshape,input$quadraticmidpoint), type="l", lwd=3, lty=1, col="red", xlim=c(270,320), ylim=c(-100,100), xlab="Daily Maximum Surface Temperature (degK)", ylab="Relative Impact (%)")
     } #endif
 
-  if (input$impact_selected == "Electricity Load") {
-    #return()
+  if (input$impact_selected == "Electricity Load (US; temperature)") {
     source("./functions/fit_elec_load_v1.r", local=TRUE)
+    } #endif
+
+  if (input$impact_selected == "Building Damage (flood depth)") {
+    source("./data/hazus/extract_hazus_flood_depth_damage.r", local=TRUE)
     } #endif
 
   if (input$impact_selected == "Agricultural Income (Brazil)") {

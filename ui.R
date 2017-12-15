@@ -20,10 +20,23 @@ display.brewer.all()
 library(tidyverse)
 library(RSQLite)
 library(quantmod)
+library(hazus)
+library(reshape2)
+library(ggplot2)
 
 # Data
+# US SLR projections and historical extreme water levels.  Variables created are "proj" and "ewl".
 source("./data/sealevel_us/load_sealevel_data_us.r")
+source("./data/sealevel_us/function_annual_probability_withslr.r")
+
+# Drought data.  Variable created is "d".
+source("./data/drought/load_drought_data.r")
+
 source("./data/financial/load_financial_data.r")
+
+# Load hazus flood-depth damage functions and list of hazus building flood damage functions.
+fl_dept <- extract_hazus_functions()
+hazus_building_flood_damage_function_names = read.table("./data/hazus/hazus_flood_depth_damage.csv.bldg.list", header=TRUE)
 
 ui <- dashboardPage(
 	skin="red",
@@ -80,8 +93,15 @@ ui <- dashboardPage(
       	  menuSubItem("ADAPTATION BENEFIT/COST PLANNING", tabName = "adaptationplanning", icon = icon("tree-deciduous", lib = "glyphicon")),
 
       	  menuSubItem("OVERALL CLIMATE SCORE", tabName = "climatescore", icon = icon("certificate", lib = "glyphicon")),
-      	  menuSubItem("DATABASE", tabName = "database", icon = icon("certificate", lib = "glyphicon"))
-	  )
+      	  menuSubItem("DATABASE", tabName = "database", icon = icon("database"))
+	  ), #menuItem
+
+      	#menuItem("Links", tabName = "links", icon = icon("external-link"),
+      	menuItem("Links", tabName = "links", icon = icon("external-link")
+          #menuSubItem("Google", tabName = "Google"),
+          #menuSubItem("Actuarial Climate Index", tabName = "Actuarial Climate Index")
+          ) #menuItem
+
     	)
   ),
 
@@ -221,10 +241,14 @@ ui <- dashboardPage(
         	), #fluidrow
 
         	fluidRow(
-	  	column(8, offset=0,
-          		box(title="Symbol, Name, and Exchange", background = "aqua", solidHeader = TRUE, textOutput("stockselected")),
-	  	column(6,h2("Cx SCORE"),gaugeOutput("stock_overall_score_gauge")),
-		column(5, offset=0, box(background = "maroon", checkboxInput("showmore_overall_score", "DRILL DOWN")) )
+	  	column(12, offset=0,
+          		box(title="Symbol, Name, and Exchange", background = "aqua", solidHeader = TRUE, textOutput("stockselected"))
+        	), #fluidrow
+
+        	fluidRow(
+	  	column(6, offset=2,h2("Cx SCORE"),gaugeOutput("stock_overall_score_gauge")),
+		#column(8, offset=0, box(background = "blue", checkboxInput("showmore_overall_score", "DRILL DOWN")) )
+		column(2, offset=0, checkboxInput("showmore_overall_score", "SHOW MORE") )
 		)
         	), #fluidrow
 	  
@@ -270,9 +294,9 @@ ui <- dashboardPage(
 	  	column(3,h2("Physical Risk")
 			#,textOutput("stock_physical_parameters")
 		),
-	  	column(2,h4("Temperature"),gaugeOutput("stock_physical_gauge1")),
-	  	column(2,h4("Sea Level Rise"),gaugeOutput("stock_physical_gauge2")),
-	  	column(2,h4("Drought"),gaugeOutput("stock_physical_gauge3")),
+	  	column(2,h4("Temperature"),gaugeOutput("stock_physical_gauge_temperature")),
+	  	column(2,h4("Sea Level Rise"),gaugeOutput("stock_physical_gauge_slr")),
+	  	column(2,h4("Drought"),gaugeOutput("stock_physical_gauge_drought")),
 		column(2, offset=0, checkboxInput("showmore_physical", "SHOW MORE"))
         	), #fluidrow
 
@@ -363,7 +387,14 @@ ui <- dashboardPage(
         h2("2.  Portfolio Analyzer"),
         h2("3.  Corporate Risk Monitoring"),
         h2("4.  TCFD Reporting")
-      ),
+      ), #tabItem
+
+      tabItem(tabName = "links", 
+	#uiOutput("googlelink"),
+	h2( uiOutput("ndgain_countries") ),
+	h2( uiOutput("actuaries_climate_index") ),
+	h2( uiOutput("worldbank_development_indicators") )
+      ), #tabItem
 
       tabItem(tabName = "localclimate",
         h2("Localized probability distributions from historical and projected daily data"),
@@ -371,6 +402,7 @@ ui <- dashboardPage(
 	tabBox(width=12,
 
         tabPanel(title = "TEMPERATURE",
+	icon = icon("thermometer-three-quarters"),
         fluidRow(
 	# More information on cascading style sheets at: http://shiny.rstudio.com/articles/css.html.
 	#includeCSS("./www/darkly.css"),
@@ -387,6 +419,7 @@ ui <- dashboardPage(
 	),  #tabPanel
 
         tabPanel(title = "SEA LEVEL",
+	icon = icon("bath"),
 
         fluidRow(
 	  column(6,
@@ -409,7 +442,7 @@ ui <- dashboardPage(
         ), #fluidrow
 
         fluidRow(
-	  column(3,
+	  column(4,
           selectInput("slrScenario","Select Sea Level Rise Scenario (GMSL 2100)",
 	     c("0.3 meter","0.5 meter","1.0 meter","1.5 meters","2.0 meters", "2.5 meters"),
              selected = "0.5 meter"
@@ -425,36 +458,50 @@ ui <- dashboardPage(
 	  
 	  column(3,
           selectInput("returnLevel","Select Return Level of Concern (m)",
+	     c(0.5,1.0,1.5,2.0,2.5,3.0,4.0,4.5,5.0,5.5,6.0,6.5,7.0,7.5,8.0,8.5,9.0,9.5,10.0),
 	     #c("1","2","3","4", "5", "6", "7", "8", "9", "10"),
-	     c(1:10),
+	     #c(1:10),
              selected = "1"
                     )
-		),
-
-	  column(3,
-          box(title="Probability of Exceeding Selected Level", background = "red", solidHeader = TRUE, textOutput("returnlevel_probability"))
 		)
+
+	  #column(3,
+          #box(title="Probability of Exceeding Selected Level", background = "red", solidHeader = TRUE, textOutput("returnlevel_probability"))
+	#	)
+        ), #fluidrow
+
+        fluidRow(
+          box(title="Probability of Exceeding Selected Level - Historical and Selected Period", background = "red", solidHeader = TRUE, textOutput("returnlevel_probability")),
+          box(title="Probability of Exceeding Selected Level - All Periods", background = "red", solidHeader = TRUE, plotOutput("sealevel_ewl_probabilities", height=300))
         ), #fluidrow
 
         fluidRow(
           box(title="Local Sea-level Rise Projections at Selected Location", background = "red", solidHeader = TRUE, plotOutput("sealevel_projections_plot1", height = 300)),
-
-          box(title="Historical Extreme Water Levels at Selected Location", background = "red", solidHeader = TRUE, plotOutput("sealevel_extremes_plot1", height = 300)),
-
-          box(title = "XX",
-            sliderInput("xxbins", "Number of bins:", 10, 100, 50, step=10, animate=TRUE)
-          )
-
+          box(title="Historical Extreme Water Levels at Selected Location", background = "red", solidHeader = TRUE, plotOutput("sealevel_extremes_plot1", height = 300))
         ) #fluidrow
+
 	),  #tabPanel
 
         tabPanel(title = "DROUGHT",
+	icon = icon("sun-o"),
         fluidRow(
-          box(
-            title = "XXX",
-            sliderInput("xxxbins", "Number of bins:", 10, 100, 50, step=10, animate=TRUE)
+	  h3("Annual Probability of Exceeding the Historical (1950-99) 90th-percentile Value of the Palmer Drought Severity Index"),
+
+         column(6,
+          selectInput("drought_facility","Search Company Facilities", width=400,
+                      facility_locations),  # [from source("./data/financial/load_financial_data.r") ]
+	  checkboxInput("use_facility_for_drought", "USE THIS FACILITY FOR DROUGHT IMPACTS")
+          ),
+         column(6,
+	  textInput("droughtlon","Specify Other Longitude (E+/W-)",value="19.9"),
+          textInput("droughtlat","Specify Other Latitude (N+/S-)",value="-16.3")
           )
-        ) #fluidrow
+         ), #fluidrow
+
+        fluidRow(
+	  box(title="Annual Probabilty at Selected Facility", background = "blue", solidHeader = TRUE, plotOutput("drought_frequencies_facility", height=300)),
+	  box(title="Annual Probability at Selected Location", background = "blue", solidHeader = TRUE, plotOutput("drought_frequencies_lonlat", height=300))
+          ) #fluidrow
 	)  #tabPanel
 
 	)  #tabBox
@@ -462,19 +509,21 @@ ui <- dashboardPage(
 
       tabItem(tabName = "impactfunctions",
         h2("Sector-specific impact functions quantify impacts on infrastructure, workforce, revenue..."),
-        tabBox(width=12, 
-        tabPanel(title = "GENERAL",
+        tabBox(width=12,
+ 
+        tabPanel(title = "FUNCTION BUILDER",
+		 icon = icon("wrench"), 
 	fluidRow(
-          box(title="Impact Functions - Combined", background = "red", solidHeader = TRUE, plotOutput("impactplot3", height = 200)),
+          box(title="Impact Function - Tailored", background = "red", solidHeader = TRUE, plotOutput("impactplot3", height = 200)),
           box(
-            title = "Relative Weight of Impact Functions",
+            title = "Weight of Sigmoidal and Quadratic Contributions",
             sliderInput("impactfunctionweight", "Sigmoid weight (quadratic weight is the remainder):", 0, 1, 0.5, step=0.1, animate=TRUE)
           )
 	),
         
 	fluidRow(
-          box(title="Impact Functions - Sigmoidal", background = "blue", solidHeader = TRUE, plotOutput("impactplot1", height = 200)),
-          box(title="Impact Functions - Quadratic", background = "blue", solidHeader = TRUE, plotOutput("impactplot2", height = 200)),
+          box(title="Sigmoidal Contribution", background = "blue", solidHeader = TRUE, plotOutput("impactplot1", height = 200)),
+          box(title="Quadratic Contribution", background = "blue", solidHeader = TRUE, plotOutput("impactplot2", height = 200)),
           box(
             title = "Impact Function Controls - Sigmoidal",
             sliderInput("sigmoidlimit", "Sigmoid limit:", -100, 100, -75, step=10, animate=TRUE),
@@ -490,26 +539,38 @@ ui <- dashboardPage(
         )
 	), #tabPanel
 
-	tabPanel(title = "SPECIFIC",
+	tabPanel(title = "FITTED", 
+		 icon = icon("line-chart"), 
+                 #helpText("Fitted functions linked to climate variables"),
 	fluidRow(
 	  column(3,
 	  h4("Electricity Load Vs. Daily Average Temperature"),
-          imageOutput("impactplot_elecload", height = 500, width=300)
+          imageOutput("impactplot_elecload", height = 500, width=500)
 	  ),
 
-	  column(3,
+	  column(6, offset=3,
 	  h4("Building Damage Vs. Flood Depth"),
+          #selectInput("hazus_damage_function_id","Damage Function Number",c(1:657)),
+          selectInput("hazus_damage_function_id","Select Damage Function", hazus_building_flood_damage_function_names),
           imageOutput("impactplot_building_flood", height = 500, width=500)
+          #verbatimTextOutput("impactplot_building_flood")
 	  )
 	), #fluidrow
 
 	fluidRow(
-	  column(3, offset=1,
-	  h4("Agricultural Income in Brazil Vs. Rainfall"),
-          imageOutput("impactplot_agriculture_brazil", height = 500, width=300)
+	  column(3, offset=0,
+	  h4("Corn Yield Vs. Drought Return Period"),
+          imageOutput("impactplot_corn_drought_return_period", height = 500, width=500)
 	  ),
 
-	  column(3, offset=1,
+	  column(3, offset=3,
+	  h4("Agricultural Income in Brazil Vs. Rainfall"),
+          imageOutput("impactplot_agriculture_brazil", height = 500, width=500)
+	  )
+	), #fluidrow
+
+	fluidRow(
+	  column(3, offset=0,
 	  h4("Maize Yield in U.S. Vs. Temperature"),
           imageOutput("impactplot_maize_us", height = 500, width=300)
 	  )
@@ -518,6 +579,7 @@ ui <- dashboardPage(
 	), #tabPanel
 
         tabPanel(title = "FUNCTION LIBRARY 1",
+		 icon = icon("book"), 
 	fluidRow(
 	  #h2("=== IMPACT FUNCTION LIBRARY ==="),
 	  column(12,
@@ -528,6 +590,7 @@ ui <- dashboardPage(
 	), #tabPanel
 
         tabPanel(title = "FUNCTION LIBRARY 2",
+		 icon = icon("book"), 
 	fluidRow(
 	  column(12, offset=0,
 	  h4("Mortality, Damage, etc."),
@@ -537,6 +600,7 @@ ui <- dashboardPage(
 	), #tabPanel
 
         tabPanel(title = "FUNCTION LIBRARY 3",
+		 icon = icon("book"), 
 	fluidRow(
 	  column(3, 
 	  h4("Crops - Temperature"),
@@ -552,10 +616,30 @@ ui <- dashboardPage(
 	  h4("Crops - Derived Variables"),
           imageOutput("impactplot6", height = 300)
 	  )
-	)
+	), #fluidRow
+
+	fluidRow(
+	  column(5, 
+	  h4("Corn Yield - Drought (US midwest)"),
+          imageOutput("impactplot_crops_wang", height = 300)
+	  ),
+
+	  column(4, offset=1,
+	  h4("Corn and Soy - Drought, Soil Moisture (US midwest)"),
+          imageOutput("impactplot_crops_mishra", height = 300)
+	  )
+	), #fluidRow
+
+	fluidRow(
+	  column(5,
+	  h4("Wheat - Evapotranspiration (Canada)"),
+          imageOutput("impactplot_crops_mhakbela", height = 300)
+	  )
+	) #fluidRow
 	), #tabPanel
 
         tabPanel(title = "FUNCTION LIBRARY 4",
+		 icon = icon("book"), 
 	fluidRow(
 	  column(3, 
 	  h4("Power Generation - Air/Water Temperature"),
@@ -576,23 +660,26 @@ ui <- dashboardPage(
         h2("Combine climate probabilities and impact functions to estimate probability-weighted net impact"),
         fluidRow(
                     selectInput("impact_selected","IMPACT FUNCTION SOURCE",
-                               c("General","Electricity Load","Agricultural Income (Brazil)", "Maize Yield (US)"),
-                               selected = c("General")
+                               c("Custom-built","Electricity Load (US; temperature)","Building Damage (flood depth)", "Corn Yield (US, drought)", "Agricultural Income (Brazil)", "Maize Yield (US)"),
+                               selected = c("Custom-built")
                     ),
           box(title="Impact Function (controlled from impact-function tab)", background = "blue", solidHeader = TRUE, plotOutput("impactestimateplot3", height = 300)),
+
           box(title="Probabilistic Impact Estimate", background = "red", solidHeader = TRUE, plotOutput("impactestimateplot2", height = 300))
+
 #          box(
 #            title = "Impact Estimate Controls",
 #            sliderInput("sigmoidlimit2", "Sigmoid limit:", -100, 100, -75, step=10, animate=TRUE),
 #            sliderInput("sigmoidsteepness2", "Sigmoid steepness:", 0.1, 10, 2, step=0.5, animate=TRUE),
 #            sliderInput("sigmoidmidpoint2", "Sigmoid midpoint:", 270, 320, 295, step=1, animate=TRUE)
 #          )
-	),
+	), #fluidRow
+
         fluidRow(
           box(title="Probability of Exceeding Thresholds (based on localized climate projections", background = "yellow", solidHeader = TRUE, plotOutput("impactestimateplot1", height = 300)),
           box(
             title = "Threshold Controls",
-            sliderInput("threshold", "Threshold:", 270, 320, 295, step=5, animate=TRUE)
+            sliderInput("threshold", "Threshold:", 270, 320, 295, step=2, animate=TRUE)
           )
         )
       ),
