@@ -44,28 +44,7 @@ ui <- dashboardPage(
   #includeScript("www/message-handler.js"),
 
   dashboardHeader(
-        #title = "****** TRADE SECRET ******  THE CLIMATE SERVICE FINANCIAL IMPACTS AND CLIMATE SCORE PLATFORM  ****** TRADE SECRET ******", titleWidth=1600,
-	title = "The Climate Service",
-	dropdownMenu(type = "messages",
-                     messageItem(
-                       from = "Sarah P. - Operations Manager",
-                       message = "Finished loading data you requested.",
-                       icon = icon("exclamation"),
-                       time = "15 minutes ago"
-                     ),
-                     messageItem(
-                       from = "Robin H. - ESG Manager",
-                       message = "Did you include CSR effects?",
-                       icon = icon("question"),
-                       time = "yesterday"
-                     ),
-                     messageItem(
-                       from = "Craig T. - Marketing",
-                       message = "New products brainstorm",
-                       icon = icon("calendar"),
-                       time = "yesterday"
-                     )
-        )
+	title = "The Climate Service"
   ),
 
   ## Sidebar content
@@ -77,11 +56,8 @@ ui <- dashboardPage(
       	menuItem("Settings", tabName = "settings", icon = icon("cog")),
       	menuItem("Corporate Risk Analyzer", tabName = "corporate", icon = icon("building-o")),
       	menuItem("Portfolio Analyzer", tabName = "portfolios", icon = icon("briefcase")),
-      	menuItem("Project Analyzer", tabName = "projects", icon = icon("bullseye")),
       	menuItem("Compliance Reporter", tabName = "plans", icon = icon("line-chart"),
-          menuSubItem("Compliance - TCFD", tabName = "TCFD"),
-          menuSubItem("Climate Action Plan", tabName = "CAP"),
-          menuSubItem("Project Plans", tabName = "ProjectPlans")
+          menuSubItem("Compliance - TCFD", tabName = "TCFD")
       ),
       	menuItem("Technical Details", tabName = "overview", icon = icon("podcast"),
       	  menuSubItem("LOCALIZED CLIMATE PROBABILITIES", tabName = "localclimate", icon = icon("cubes")),
@@ -96,10 +72,7 @@ ui <- dashboardPage(
       	  menuSubItem("DATABASE", tabName = "database", icon = icon("database"))
 	  ), #menuItem
 
-      	#menuItem("Links", tabName = "links", icon = icon("external-link"),
       	menuItem("Links", tabName = "links", icon = icon("external-link")
-          #menuSubItem("Google", tabName = "Google"),
-          #menuSubItem("Actuarial Climate Index", tabName = "Actuarial Climate Index")
           ) #menuItem
 
     	)
@@ -328,15 +301,6 @@ ui <- dashboardPage(
               )
       ), #tabItem
 
-      # Fifth tab content
-      tabItem(tabName = "projects",
-              fluidRow(
-                box(
-                  title = "Projects","This should have tabs for the investment lifecycle that Chiara shared."
-                )
-              )
-      ),
-
       # Sixth tab content
       tabItem(tabName = "plans",
               fluidRow(
@@ -370,25 +334,6 @@ ui <- dashboardPage(
               ))
       ),
  
-      tabItem("CAP",
-              box(
-                title = "Climate Action Plan"
-              )
-              ),
-      tabItem("ProjectPlans",
-              box(
-                title = "Project Plans"
-              )
-              ),
-
-      tabItem(tabName = "overview", 
-        h1("PROTOTYPE PRODUCTS:", col="red"),
-        h2("1.  Project Analyzer"),
-        h2("2.  Portfolio Analyzer"),
-        h2("3.  Corporate Risk Monitoring"),
-        h2("4.  TCFD Reporting")
-      ), #tabItem
-
       tabItem(tabName = "links", 
 	#uiOutput("googlelink"),
 	h2( uiOutput("ndgain_countries") ),
