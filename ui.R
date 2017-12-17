@@ -39,12 +39,12 @@ fl_dept <- extract_hazus_functions()
 hazus_building_flood_damage_function_names = read.table("./data/hazus/hazus_flood_depth_damage.csv.bldg.list", header=TRUE)
 
 ui <- dashboardPage(
-	skin="red",
+	skin="black",
 
   #includeScript("www/message-handler.js"),
 
   dashboardHeader(
-	title = "The Climate Service"
+	title = img(src="logo-TCS-small.png", height = 50, align = "left")
   ),
 
   ## Sidebar content
@@ -86,17 +86,12 @@ ui <- dashboardPage(
                 tabBox(
                   tabPanel(title = "Log In",
                     textInput("username","User Name",value=""),
-                    passwordInput("userpass","Password",value="")
-                    )
-                  )
-              ),
-
-              fluidRow(
-                box(
-	        title =	textOutput("login_response")
-		   )
-              )
-      ),
+                    passwordInput("userpass","Password",value=""),
+                    textOutput("login_response")
+                    ) #tabPanel
+                  ) #tabBox
+              )#fluidRow
+        ), #tabItem
 
       # First tab content
       tabItem(tabName = "dashboard",
