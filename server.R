@@ -15,11 +15,15 @@ server <- function(input, output, session) {
 # -----------
    output$login_response <- renderText({
       m = ""
-      if(input$username=="") {m="Please enter user name and password"}
+      loggedIn=FALSE
+      if(input$username=="" | input$userpass=="") {m="Please enter user name and password"}
 #      if(input$username=="terry") {m="Welcome, terry"} else {m="Please enter user name and password"}
 #      if(input$username=="terry" && input$userpass=="terry") {m="Welcome, terry"}
       if(input$username=="terry") {m="Welcome, terry"}
-      if(input$username=="james") {m="Welcome, james"}
+      if(input$username=="james" & input$userpass=="james") {
+          loggedIn=TRUE
+          m="Welcome, James"
+          }
       paste("",m)
     })
 

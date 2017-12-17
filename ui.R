@@ -69,12 +69,10 @@ ui <- dashboardPage(
       	  menuSubItem("ADAPTATION BENEFIT/COST PLANNING", tabName = "adaptationplanning", icon = icon("tree-deciduous", lib = "glyphicon")),
 
       	  menuSubItem("OVERALL CLIMATE SCORE", tabName = "climatescore", icon = icon("certificate", lib = "glyphicon")),
-      	  menuSubItem("DATABASE", tabName = "database", icon = icon("database"))
-	  ), #menuItem
+      	  menuSubItem("DATABASE", tabName = "database", icon = icon("database")),
+      	  menuSubItem("Links", tabName = "links", icon = icon("external-link"))
 
-      	menuItem("Links", tabName = "links", icon = icon("external-link")
-          ) #menuItem
-
+      	  	  ) #menuItem
     	)
   ),
 
@@ -88,7 +86,7 @@ ui <- dashboardPage(
                 tabBox(
                   tabPanel(title = "Log In",
                     textInput("username","User Name",value=""),
-                    textInput("userpass","Password",value="")
+                    passwordInput("userpass","Password",value="")
                     )
                   )
               ),
