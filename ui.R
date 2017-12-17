@@ -49,32 +49,29 @@ ui <- dashboardPage(
 
   ## Sidebar content
   dashboardSidebar(
-	width=300,
+	width=280,
 	sidebarMenu(id = "sidebar",
-	menuItem("Log In", tabName = "login", icon = icon("lock")),
-	menuItem("Dashboard", tabName = "dashboard", icon = icon("dashboard")),
-      	menuItem("Settings", tabName = "settings", icon = icon("cog")),
-      	menuItem("Corporate Risk Analyzer", tabName = "corporate", icon = icon("building-o")),
-      	menuItem("Portfolio Analyzer", tabName = "portfolios", icon = icon("briefcase")),
-      	menuItem("Compliance Reporter", tabName = "plans", icon = icon("line-chart"),
-          menuSubItem("Compliance - TCFD", tabName = "TCFD")
-      ),
-      	menuItem("Technical Details", tabName = "overview", icon = icon("podcast"),
+    	menuItem("Log In", tabName = "login", icon = icon("lock")),
+#	    menuItem("Dashboard", tabName = "dashboard", icon = icon("dashboard")),
+#     menuItem("Settings", tabName = "settings", icon = icon("cog")),
+      menuItem("Corporate Risk Analyzer", tabName = "corporate", icon = icon("building-o")),
+      menuItem("Portfolio Analyzer", tabName = "portfolios", icon = icon("briefcase")),
+#     menuItem("Compliance Reporter", tabName = "plans", icon = icon("line-chart"),
+#         menuSubItem("Compliance - TCFD", tabName = "TCFD")
+#     ), #menuItem
+      menuItem("Technical Details", tabName = "overview", icon = icon("podcast"),
       	  menuSubItem("LOCALIZED CLIMATE PROBABILITIES", tabName = "localclimate", icon = icon("cubes")),
       	  menuSubItem("SECTOR IMPACT FUNCTIONS", tabName = "impactfunctions", icon = icon("cloud-download", lib = "glyphicon")),
       	  menuSubItem("PROBABLISTIC IMPACT ESTIMATE", tabName = "impactestimate", icon = icon("cog", lib = "glyphicon")),
       	  menuSubItem("FINANCIAL EFFECTS", tabName = "financialeffects", icon = icon("usd", lib = "glyphicon")),
-
       	  menuSubItem("SUSTAINABLE INFRASTRUCTURE", tabName = "sustainable_infrastructure", icon = icon("tree-conifer", lib = "glyphicon")),
       	  menuSubItem("ADAPTATION BENEFIT/COST PLANNING", tabName = "adaptationplanning", icon = icon("tree-deciduous", lib = "glyphicon")),
-
       	  menuSubItem("OVERALL CLIMATE SCORE", tabName = "climatescore", icon = icon("certificate", lib = "glyphicon")),
       	  menuSubItem("DATABASE", tabName = "database", icon = icon("database")),
       	  menuSubItem("Links", tabName = "links", icon = icon("external-link"))
-
-      	  	  ) #menuItem
-    	)
-  ),
+      ) #menuItem
+    	) #sidebarMenu
+  ), #dashBoardSidebar
 
   ## Body content
   dashboardBody(
@@ -94,16 +91,16 @@ ui <- dashboardPage(
         ), #tabItem
 
       # First tab content
-      tabItem(tabName = "dashboard",
-              fluidRow(
-                  infoBox("TCS Climate Score", 437, icon = icon("thermometer-3"), color = "red")
-              ),
-              fluidRow(
-                  infoBox("Locations", 14, icon = icon("map-marker"), color = "teal"),
-                  infoBox("Users", 3, icon = icon("user"), color = "aqua"),
-                  infoBox("Plans", 2, icon = icon("line-chart"), color = "blue")
-              )
-      ),
+      # tabItem(tabName = "dashboard",
+      #         fluidRow(
+      #             infoBox("TCS Climate Score", 437, icon = icon("thermometer-3"), color = "red")
+      #         ),
+      #         fluidRow(
+      #             infoBox("Locations", 14, icon = icon("map-marker"), color = "teal"),
+      #             infoBox("Users", 3, icon = icon("user"), color = "aqua"),
+      #             infoBox("Plans", 2, icon = icon("line-chart"), color = "blue")
+      #         )
+      # ),
 
       # Second tab content
       tabItem(tabName = "settings",
@@ -156,66 +153,95 @@ ui <- dashboardPage(
 
       # Third tab content
       tabItem(tabName = "corporate",
-              fluidRow(
-                tabBox(width = "500",
-		tabPanel(title="Screening level",
-                    selectInput("cbLocation","Location",
-                               c("Boise","Singapore","Malaysia","Scotland"),
-                               selected = c("Boise")
-                    ),
-                    sliderInput("siTimeframe", "Timeframe", 1, 30, 5, step=1, animate=TRUE),
-                    htmlOutput('txtImpact1'),
-                    htmlOutput('txtImpact2'),
-                    htmlOutput('txtImpact3'),
-                    hr(),
-                    infoBoxOutput('infobox1')
-                    # infoBox(title="Equity Per Share Value at Risk",value="0.187%",color="aqua",icon = icon("percent")),
-                    # infoBox(title="Revenue at Risk",value="$2,618,782",color="aqua",icon = icon("usd")),
-                    # infoBox(title="Expenses at Risk",value="$34,729,133",color="aqua",icon = icon("usd")),
-                    # infoBox(title="Assets at Risk",value="$215,362,765",color="aqua",icon = icon("usd")),
-                    # infoBox(title="Liabilities at Risk",value="$1,824,773",color="aqua",icon = icon("usd"))
-                  )
-                )#tabBox
-              )#fluidRow
+        h2("Corporate Risk Analyzer"),
+        fluidRow(
+          tabBox(width=12,
+            tabPanel(title="Settings",
+              selectInput("selected_nasdaq","Search Companies", width="100%",
+                          names,  # [from source("./data/financial/load_financial_data.r") ]
+                          selected = "Apple Inc. - Common Stock"
+              )#selectInput
+            ),#tabPanel
+            tabPanel(title="Financials",
+              dataTableOutput("corpFinImpacts")
+            ),#tabPanel
+            tabPanel(title="TCFD",width="100%",
+               fluidRow(
+                 tabBox(width="100%",
+                        tabPanel(title = "Governance",
+                                 textAreaInput("TCFD-Gov-a","Board Oversight", value="Describe the board's oversight of climate-related risks and opportunities."),
+                                 textAreaInput("TCFD-Gov-b","Management's Role", value="Describe management's role in assessing and managing climate-related risks and opportunities.")
+                        ),
+                        tabPanel(title = "Strategy",
+                                 textAreaInput("TCFD-Strat-a","Climate Risks and Opportunities", value = "Describe the climate-related risks and opportunities the organization has identified over the short, medium, and long term."),
+                                 checkboxGroupInput("chkbxRisks","Risks & Opportunities", c("Policy & Legal Risk","Technology Risk","Market Risk","Reputation Risk","Acute Physical Risk","Chronic Physical Risk","Resource Efficiency","Energy Source","Products/Services","Markets","Resilience"),selected = c("Energy Source","Acute Physical Risk","Chronic Physical Risk")),
+                                 textAreaInput("TCFD-Strat-b","Impact of Risks", value = "Describe the impact of climate-related risks and opportunities on the organization's businesses, strategy, and financial planning.")
+                        ),
+                        tabPanel(title = "Risk Management",
+                                 textAreaInput("TCFD-Gov-a","Processes for Identifying Risks", value="Describe the processes for identifying & assessing climate-related risks and opportunities."),
+                                 textAreaInput("TCFD-Gov-b","Processes for Managing", value="Describe the processes managing climate-related risks."),
+                                 textAreaInput("TCFD-Gov-a","Process Integration", value="Describe how processes for identifying, assessing, and managing climate-related risks are intgrated into the organization's overall management.")
+                        ),
+                        tabPanel(title = "Metrics and Targets"),
+                        tabPanel(title = "Report",
+                                 actionButton("TCFD-Report", "Export Report")
+                        )
+                 )#tabBox
+               )#fluidRow
+            )#tabPanel
+          ) #tabBox
+        ) #fluidrow
+              
+# This is James's old code to animate impacts - probably remove
+#               fluidRow(
+#                 tabBox(width = "500",
+# 		              tabPanel(title="Screening level",
+#                     selectInput("cbLocation","Location",
+#                                c("Boise","Singapore","Malaysia","Scotland"),
+#                                selected = c("Boise")
+#                     ),
+#                     sliderInput("siTimeframe", "Timeframe", 1, 30, 5, step=1, animate=TRUE),
+#                     htmlOutput('txtImpact1'),
+#                     htmlOutput('txtImpact2'),
+#                     htmlOutput('txtImpact3'),
+#                     hr(),
+#                     infoBoxOutput('infobox1')
+#                   )#tabPanel
+#                 )#tabBox
+#               )#fluidRow
       ),#tabItem corporate
 
       # Fourth tab content
       tabItem(tabName = "portfolios",
         h2("Investment Portfolio Analyzer"),
-              fluidRow(
-                tabBox(width=500,
+        fluidRow(
+          tabBox(width=500,
+            tabPanel(
+              title = "Set up",
+              actionButton("addStock","Add a Listed Equity")
+            ),
+          tabPanel(title="Analyze",
+          	fluidRow(
+        	  	column(6,
+            		selectInput("selected_nasdaq","Search Companies", width=400,
+        	     		names,  # [from source("./data/financial/load_financial_data.r") ]
+        	     		selected = "Apple Inc. - Common Stock"
+                )#selectInput
+        		  ),#column
+          		column(3, offset=1,
+          			tags$head(tags$script(src = "message-handler.js")),
+          			actionButton("add2portfolio", "ADD TO PORTFOLIO")
+          		) #column
+          	), #fluidrow
 
-                tabPanel(
-                  title = "Set up",
-                  actionButton("addStock","Add a Listed Equity")
-                ),
-
-                tabPanel(title="Analyze",
-                   # "Listing of equities with relative risk",br(),"Ability to drill down",
-
-        	fluidRow(
-	  	column(6,
-          		selectInput("selected_nasdaq","Search Companies", width=400,
-	     		names,  # [from source("./data/financial/load_financial_data.r") ]
-	     		selected = "Apple Inc. - Common Stock"
-                    	)	
-		      ),
-		column(3, offset=1,
-			tags$head(tags$script(src = "message-handler.js")),
-			actionButton("add2portfolio", "ADD TO PORTFOLIO")
-		      )
-        	), #fluidrow
-
-        	fluidRow(
-	  	column(12, offset=0,
-          		box(title="Symbol, Name, and Exchange", background = "aqua", solidHeader = TRUE, textOutput("stockselected"))
-        	), #fluidrow
-
-        	fluidRow(
-	  	column(6, offset=2,h2("Cx SCORE"),gaugeOutput("stock_overall_score_gauge")),
-		#column(8, offset=0, box(background = "blue", checkboxInput("showmore_overall_score", "DRILL DOWN")) )
-		column(2, offset=0, checkboxInput("showmore_overall_score", "SHOW MORE") )
-		)
+          fluidRow(
+  	  	    column(12, offset=0,
+            		box(title="Symbol, Name, and Exchange", background = "aqua", solidHeader = TRUE, textOutput("stockselected"))
+          	), #fluidrow
+            fluidRow(
+    	  	    column(6, offset=2,h2("Cx SCORE"),gaugeOutput("stock_overall_score_gauge")),
+    		      column(2, offset=0, checkboxInput("showmore_overall_score", "SHOW MORE") )
+        		) #fluidRow
         	), #fluidrow
 	  
 	 	conditionalPanel(condition = "input.showmore_overall_score == true",
@@ -294,38 +320,6 @@ ui <- dashboardPage(
               )
       ), #tabItem
 
-      # Sixth tab content
-      tabItem(tabName = "plans",
-              fluidRow(
-                box(
-                  title = "Plans"
-                )
-              )
-      ),
-       #Plans tabSubItems
-      tabItem("TCFD",
-              fluidRow(
-     		tabBox(title = "TCFD Reporting",
-                       tabPanel(title = "Governance",
-                                textAreaInput("TCFD-Gov-a","Board Oversight", width = 500, value="Describe the board's oversight of climate-related risks and opportunities."),
-                                textAreaInput("TCFD-Gov-b","Management's Role", width = 500, value="Describe management's role in assessing and managing climate-related risks and opportunities.")
-                       ),
-                       tabPanel(title = "Strategy",
-                                textAreaInput("TCFD-Strat-a","Climate Risks and Opportunities", width = 500, value = "Describe the climate-related risks and opportunities the organization has identified over the short, medium, and long term."),
-                                checkboxGroupInput("chkbxRisks","Risks & Opportunities", width = 500, c("Policy & Legal Risk","Technology Risk","Market Risk","Reputation Risk","Acute Physical Risk","Chronic Physical Risk","Resource Efficiency","Energy Source","Products/Services","Markets","Resilience"),selected = c("Energy Source","Acute Physical Risk","Chronic Physical Risk")),
-                                textAreaInput("TCFD-Strat-b","Impact of Risks", width = 500, value = "Describe the impact of climate-related risks and opportunities on the organization's businesses, strategy, and financial planning.")
-                       ),
-                       tabPanel(title = "Risk Management",
-                                textAreaInput("TCFD-Gov-a","Processes for Identifying Risks", width = 500, value="Describe the processes for identifying & assessing climate-related risks and opportunities."),
-                                textAreaInput("TCFD-Gov-b","Processes for Managing", width = 500, value="Describe the processes managing climate-related risks."),
-                                textAreaInput("TCFD-Gov-a","Process Integration", width = 500, value="Describe how processes for identifying, assessing, and managing climate-related risks are intgrated into the organization's overall management.")
-                       ),
-                       tabPanel(title = "Metrics and Targets"),
-                       tabPanel(title="Financial Impacts",
-                                dataTableOutput("corpFinImpacts")
-                       )#tabPanel
-              ))
-      ),
  
       tabItem(tabName = "links", 
 	#uiOutput("googlelink"),
