@@ -92,7 +92,8 @@ ui <- dashboardPage(
                   tabPanel(title = "Log In",
                     textInput("username","User Name",value=""),
                     passwordInput("userpass","Password",value=""),
-                    textOutput("login_response")
+                    textOutput("login_response"),
+                    actionButton("btnLogin","Log in!")
                     ) #tabPanel
                   ) #tabBox
               )#fluidRow
@@ -794,7 +795,7 @@ ui <- dashboardPage(
         ) #end fluidRow
       ) #end database tabItem
 
-    )
+    )#tabItems
   )
 ) #end ui
 

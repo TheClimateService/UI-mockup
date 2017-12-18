@@ -13,6 +13,10 @@ server <- function(input, output, session) {
 # -----------
 # Log in
 # -----------
+  
+  observeEvent(input$btnLogin, {updateTabItems(session, 'sidebar', 'portfolios')})
+  
+  
    output$login_response <- renderText({
       m = ""
       loggedIn=FALSE
