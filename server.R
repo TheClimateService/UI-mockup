@@ -14,7 +14,7 @@ server <- function(input, output, session) {
 # Log in
 # -----------
   
-  observeEvent(input$btnLogin, {updateTabItems(session, 'sidebar', 'portfolios')})
+  observeEvent(input$btnLogin, {updateTabItems(session, 'sidebar', 'corporate')})
   
   
    output$login_response <- renderText({
@@ -27,6 +27,7 @@ server <- function(input, output, session) {
       if(input$username=="james" & input$userpass=="james") {
           loggedIn=TRUE
           m="Welcome, James"
+          enable('btnLogin')
           }
       paste("",m)
     })

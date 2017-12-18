@@ -31,6 +31,7 @@ library(car)
 library(distillery)
 library(evd)
 library(extRemes)
+library(shinyjs)
 
 # Data
 # US SLR projections and historical extreme water levels.  Variables created are "proj" and "ewl".
@@ -48,7 +49,6 @@ hazus_building_flood_damage_function_names = read.table("./data/hazus/hazus_floo
 
 ui <- dashboardPage(
 	skin="black",
-
   #includeScript("www/message-handler.js"),
 
   dashboardHeader(
@@ -58,6 +58,7 @@ ui <- dashboardPage(
   ## Sidebar content
   dashboardSidebar(
 	width=280,
+	useShinyjs(),
 	sidebarMenu(id = "sidebar",
     	menuItem("Log In", tabName = "login", icon = icon("lock")),
 #	    menuItem("Dashboard", tabName = "dashboard", icon = icon("dashboard")),
@@ -93,7 +94,7 @@ ui <- dashboardPage(
                     textInput("username","User Name",value=""),
                     passwordInput("userpass","Password",value=""),
                     textOutput("login_response"),
-                    actionButton("btnLogin","Log in!")
+                    disabled(actionButton("btnLogin","Log in"))
                     ) #tabPanel
                   ) #tabBox
               )#fluidRow
