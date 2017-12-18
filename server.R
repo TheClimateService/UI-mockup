@@ -100,7 +100,7 @@ server <- function(input, output, session) {
     #   addMarkers(data = points())
   })
 
-  riskFactors <- c('Carpon Price','Litigation','Hurricanes-direct damage','Flooding-direct damage','Flooding-Supply chain interruption')
+  riskFactors <- c('Carbon Price','Litigation','Hurricanes-direct damage','Flooding-direct damage','Flooding-Supply chain interruption')
   riskVaR <- c(3.4,2.3,1.2,4.5,2.5)
   corpTable.data <- data.frame(riskFactors,riskVaR)
   
