@@ -157,10 +157,16 @@ ui <- dashboardPage(
         fluidRow(
           tabBox(width=12,
             tabPanel(title="Settings",
-              selectInput("selected_nasdaq","Search Companies", width="100%",
-                          names,  # [from source("./data/financial/load_financial_data.r") ]
-                          selected = "Apple Inc. - Common Stock"
-              )#selectInput
+               selectizeInput(
+                 "selected_nasdaq","Search Companies",
+                  choices = names,  options = list(placeholder='Type company name', onInitialize = I('function() { this.setValue(""); }'))
+               )#selectizeInput
+               
+               
+              # selectInput("selected_nasdaq","Search Companies", width="100%",
+              #             names,  # [from source("./data/financial/load_financial_data.r") ]
+              #             selected = "Apple Inc. - Common Stock"
+              # )#selectInput
             ),#tabPanel
             tabPanel(title="Financials",
               dataTableOutput("corpFinImpacts")
