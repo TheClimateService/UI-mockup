@@ -23,6 +23,14 @@ library(quantmod)
 library(hazus)
 library(reshape2)
 library(ggplot2)
+library(Lmoments)
+library(MatrixModels)
+library(RcppEigen)
+library(SparseM)
+library(car)
+library(distillery)
+library(evd)
+library(extRemes)
 
 # Data
 # US SLR projections and historical extreme water levels.  Variables created are "proj" and "ewl".
