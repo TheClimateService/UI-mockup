@@ -47,12 +47,12 @@ source("./data/financial/load_financial_data.r")
 fl_dept <- extract_hazus_functions()
 hazus_building_flood_damage_function_names = read.table("./data/hazus/hazus_flood_depth_damage.csv.bldg.list", header=TRUE)
 
-ui <- dashboardPage(
+ui <- dashboardPage(title="The Climate Service",
 	skin="black",
   #includeScript("www/message-handler.js"),
 
   dashboardHeader(
-	title = img(src="logo-TCS-small.png", height = 50, align = "left")
+	title = img(src="logo-TCS-small.png", alt = "TCS", height = 50, align = "left")
   ),
 
   ## Sidebar content
@@ -123,7 +123,7 @@ ui <- dashboardPage(
                       selected = c("Manufacturing")
                     )
                   ),
-		tabPanel(title = "Location 1",
+                  tabPanel(title = "Location 1",
                     textInput("location1","Corporate Headquarters",value = "8000 S Federal Way, Boise, ID 83716"),
                     htmlOutput("map_micron_boise"),
                     hr(),
@@ -135,12 +135,12 @@ ui <- dashboardPage(
                     actionButton("addLocation","Add a location")
                   ),
                   tabPanel(title = "Users",
-                    valueBox(1, "Julia Grant", icon = icon("user"), color = "teal"),
-                    valueBox(1, "Joe Robinson", icon = icon("user"), color = "teal"),
-                    valueBox(1, "Norm Armour", icon = icon("user"), color = "teal"),
+                    valueBox(1, "TBD", icon = icon("user"), color = "teal"),
+                    valueBox(1, "TBD", icon = icon("user"), color = "teal"),
+                    valueBox(1, "TBD", icon = icon("user"), color = "teal"),
                     actionButton("addUser","Add a user")
                   ),
-		tabPanel(title = "Location 2",
+		              tabPanel(title = "Location 2",
                     textInput("location2","Singapore Facilities",value = "4 facilities in Singapore"),
                     htmlOutput("map_micron_singapore"),
                     hr(),
