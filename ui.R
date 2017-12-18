@@ -102,7 +102,7 @@ ui <- dashboardPage(
       #         )
       # ),
 
-      # Second tab content
+# SETTINGS tab content
       tabItem(tabName = "settings",
               fluidRow(
                 tabBox(
@@ -151,7 +151,7 @@ ui <- dashboardPage(
               )#fluidRow
             ),
 
-      # Third tab content
+# CORPORATE tab content
       tabItem(tabName = "corporate",
         h2("Corporate Risk Analyzer"),
         fluidRow(
@@ -159,16 +159,23 @@ ui <- dashboardPage(
             tabPanel(title="Settings",
                selectizeInput(
                  "selected_nasdaq","Search Companies",
-                  choices = names,  options = list(placeholder='Type company name', onInitialize = I('function() { this.setValue(""); }'))
-               )#selectizeInput
-               
-               
-              # selectInput("selected_nasdaq","Search Companies", width="100%",
-              #             names,  # [from source("./data/financial/load_financial_data.r") ]
-              #             selected = "Apple Inc. - Common Stock"
-              # )#selectInput
+                 choices = names,  # [from source("./data/financial/load_financial_data.r") ]
+                 options = list(placeholder='Type company name', onInitialize = I('function() { this.setValue(""); }'))
+               ),#selectizeInput
+               "Some other config things"
             ),#tabPanel
             tabPanel(title="Financials",
+              fluidRow(
+                column(4,
+                  selectInput('inputLocations',"Locations",c('All locations','Boise','Ireland','Singapore'),selectize = TRUE)
+                ),
+                column(4,
+                  selectInput('inputYear',"Year",c('2018','2019','2020','2021','2022','2023','2024','2025','2026','2027','2028'),selectize = TRUE)
+                ),
+                column(4,
+                  selectInput('inputScenario',"Scenario",c('RCP8.5','RCP2.6'),selectize = TRUE)
+                )
+              ),
               dataTableOutput("corpFinImpacts")
             ),#tabPanel
             tabPanel(title="TCFD",width="100%",
