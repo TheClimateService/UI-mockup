@@ -1,0 +1,29 @@
+
+# SCRIPT TO EXTRACT HISTORICAL AND RCP85 DATA FOR TX90P FOR EACH FACILITY IN LIST
+# TT - December 2017
+
+# Execution:  ./script_process_location_runall <list of locations> <file of historical period values> <file of rcp85 period values>
+# Example:    ./script_process_location_runall facility_locations.csv tx90pETCCDI_yr_CMCC-CM_historical_r1i1p1_1850-2005.nc.timeseries.300.420.1.240.periods.5.30 tx90pETCCDI_yr_CMCC-CM_rcp85_r1i1p1_2006-2100.nc.timeseries.300.420.1.240.periods.9.10
+
+# Get input.
+locfile=$1
+histfile=$2
+rcpfile=$3
+
+# Build calls to processing script.
+awk -v histfile=$histfile -v rcpfile=$rcpfile '{if(NR>1) {  \
+        if($2>=0) lon=$2; else lon=360+$2;  \
+	lat=$3;  \
+	print "./script_process_location_v1",lon,lat,histfile;  \
+	print "mv temp99 temp99.hist";  \
+	print "./script_process_location_v1",lon,lat,rcpfile;  \
+        print "paste temp99.hist temp99 >> temp.outall"}  \
+	}' $locfile > temp1.scr
+chmod a+x temp1.scr
+./temp1.scr
+
+# Assemble output.
+awk '{if(NR>1) print $1,$2,$3}' $locfile > temp2
+paste temp2 temp.outall > $locfile.tx90p
+rm temp*
+
