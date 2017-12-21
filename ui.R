@@ -186,7 +186,7 @@ ui <- dashboardPage(title="The Climate Service",
                   selectInput('inputScenario',"Scenario",c('RCP8.5','RCP2.6'),selectize = TRUE)
                 )
               ),
-              dataTableOutput("corpFinImpacts")
+              DT::dataTableOutput("corpFinImpacts")
             ),#tabPanel
             tabPanel(title="TCFD",width="100%",
                fluidRow(

@@ -101,13 +101,16 @@ server <- function(input, output, session) {
     #   addMarkers(data = points())
   })
 
-  riskFactors <- c('Carbon Price','Litigation','Hurricanes-direct damage','Flooding-direct damage','Flooding-Supply chain interruption')
+  riskCategories <- c('Transition','Transition','Physical','Physical','Physical')
+  riskSubCat <- c('Policy & Legal','Policy & Legal','Acute-Tropical Cyclones','Chronic-SLR','Chronic-SLR')
+  riskFactors <- c('Carbon Price','Litigation','Hurricanes-direct damage','Sea level rise-direct damage','Sea level rise-Supply chain interruption')
   riskVaR <- c(3.4,2.3,1.2,4.5,2.5)
-  corpTable.data <- data.frame(riskFactors,riskVaR)
   
-  output$corpFinImpacts = renderDataTable({
-    corpTable.data
-  }, options = list(lengthMenu = c(5, 30, 50), pageLength = 5))
+  output$corpFinImpacts <- DT::renderDataTable({
+    corpTable = data.frame(riskCategories,riskSubCat,riskFactors,riskVaR)
+    colnames(corpTable) = c('TCFD Categories','Subcategory','Risk Factor','Value at Risk ($Million)')
+    corpTable
+  })
 
 
   output$map_micron_boise <- renderUI({
