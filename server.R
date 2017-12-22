@@ -109,14 +109,22 @@ server <- function(input, output, session) {
                    'Changes in precipitation patterns and extreme variability in weather patterns',
                    'Rising mean temperatures','Rising sea levels')
   riskVaR <- c(3.4,2.3,1.2,4.5,2.5,3.4,2.3,1.2,4.5)
-  
+
+  corpTable = data.frame(riskCategories,riskSubCat,riskFactors,riskVaR)
+    
   output$corpFinImpacts <- DT::renderDataTable({
-    corpTable = data.frame(riskCategories,riskSubCat,riskFactors,riskVaR)
     colnames(corpTable) = c('TCFD Categories','Subcategory','Risk Factor','Value at Risk ($M)')
     # corpTable %>% DT::formatCurrency('Value at Risk ($M)', currency = '$')  not sure why this doesn't work
     corpTable
   })
 
+  output$corpFinImpactsPlot <- renderPlot({
+    barplot(corpTable[,'riskVaR'], 
+            main="Impacts by Risk Factor",
+            ylab="Value at Risk ($M)",
+            xlab="Risk Factor",
+            names.arg = riskFactors) 
+  })
 
   output$map_micron_boise <- renderUI({
     input$Member
