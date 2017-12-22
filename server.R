@@ -101,14 +101,19 @@ server <- function(input, output, session) {
     #   addMarkers(data = points())
   })
 
-  riskCategories <- c('Transition','Transition','Physical','Physical','Physical')
-  riskSubCat <- c('Policy & Legal','Policy & Legal','Acute-Tropical Cyclones','Chronic-SLR','Chronic-SLR')
-  riskFactors <- c('Carbon Price','Litigation','Hurricanes-direct damage','Sea level rise-direct damage','Sea level rise-Supply chain interruption')
-  riskVaR <- c(3.4,2.3,1.2,4.5,2.5)
+  riskCategories <- c('Transition','Transition','Transition','Transition','Transition','Physical','Physical','Physical','Physical')
+  riskSubCat <- c('Policy & Legal','Policy & Legal','Technology','Market','Reputation','Acute','Chronic','Chronic','Chronic')
+  riskFactors <- c('Increased pricing of GHG emissions','Exposure to litigation','Costs to transition to lower emissions technology',
+                   'Increased stakeholder concern or negative stakeholder feedback','Increased cost of raw materials',
+                   'Increased severity of extreme weather events such as cyclones and floods',
+                   'Changes in precipitation patterns and extreme variability in weather patterns',
+                   'Rising mean temperatures','Rising sea levels')
+  riskVaR <- c(3.4,2.3,1.2,4.5,2.5,3.4,2.3,1.2,4.5)
   
   output$corpFinImpacts <- DT::renderDataTable({
     corpTable = data.frame(riskCategories,riskSubCat,riskFactors,riskVaR)
-    colnames(corpTable) = c('TCFD Categories','Subcategory','Risk Factor','Value at Risk ($Million)')
+    colnames(corpTable) = c('TCFD Categories','Subcategory','Risk Factor','Value at Risk ($M)')
+    # corpTable %>% DT::formatCurrency('Value at Risk ($M)', currency = '$')  not sure why this doesn't work
     corpTable
   })
 
