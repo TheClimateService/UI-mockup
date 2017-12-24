@@ -32,6 +32,7 @@ library(distillery)
 library(evd)
 library(extRemes)
 library(shinyjs)
+library(plotly)
 
 # Data
 # US SLR projections and historical extreme water levels.  Variables created are "proj" and "ewl".
@@ -159,7 +160,7 @@ ui <- dashboardPage(title="The Climate Service",
                   )
                 )#tabBox
               )#fluidRow
-            ),
+            ),#tabItem
 
 # CORPORATE tab content
       tabItem(tabName = "corporate",
@@ -171,8 +172,7 @@ ui <- dashboardPage(title="The Climate Service",
                  "selected_nasdaq","Search Companies",
                  choices = names,  # [from source("./data/financial/load_financial_data.r") ]
                  options = list(placeholder='Type company name', onInitialize = I('function() { this.setValue(""); }'))
-               ),#selectizeInput
-               "Some other config things"
+               )#selectizeInput
             ),#tabPanel
             tabPanel(title="Financials",
               fluidRow(
@@ -186,7 +186,7 @@ ui <- dashboardPage(title="The Climate Service",
                   selectInput('inputScenario',"Scenario",c('RCP8.5','RCP2.6'),selectize = TRUE)
                 )
               ),
-              plotOutput("corpFinImpactsPlot"),
+              plotlyOutput("corpFinImpactsPlot"),
               DT::dataTableOutput("corpFinImpacts")
             ),#tabPanel
             tabPanel(title="TCFD",width="100%",

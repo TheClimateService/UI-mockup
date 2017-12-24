@@ -117,13 +117,14 @@ server <- function(input, output, session) {
     # corpTable %>% DT::formatCurrency('Value at Risk ($M)', currency = '$')  not sure why this doesn't work
     corpTable
   })
-
-  output$corpFinImpactsPlot <- renderPlot({
-    barplot(corpTable[,'riskVaR'], 
-            main="Impacts by Risk Factor",
-            ylab="Value at Risk ($M)",
-            xlab="Risk Factor",
-            names.arg = riskFactors) 
+  
+  output$corpFinImpactsPlot <- renderPlotly({
+    plot_ly(corpTable, x = ~riskFactors, y = ~riskVaR, type='bar', name='Risk Factors')
+        # barplot(corpTable[,'riskVaR'],
+        #     main="Impacts by Risk Factor",
+        #     ylab="Value at Risk ($M)",
+        #     xlab="Risk Factor",
+        #     names.arg = riskFactors)
   })
 
   output$map_micron_boise <- renderUI({
