@@ -186,6 +186,7 @@ ui <- dashboardPage(title="The Climate Service",
                   selectInput('inputScenario',"Scenario",c('RCP8.5','RCP2.6'),selectize = TRUE)
                 )
               ),
+              plotlyOutput("stackedCorpFinImpactsPlot"),
               plotlyOutput("corpFinImpactsPlot"),
               DT::dataTableOutput("corpFinImpacts")
             ),#tabPanel

@@ -101,14 +101,15 @@ server <- function(input, output, session) {
     #   addMarkers(data = points())
   })
 
-  riskCategories <- c('Transition','Transition','Transition','Transition','Transition','Physical','Physical','Physical','Physical')
-  riskSubCat <- c('Policy & Legal','Policy & Legal','Technology','Market','Reputation','Acute','Chronic','Chronic','Chronic')
+  riskCategories <- c('Transition','Transition','Transition','Transition','Transition','Physical','Physical','Physical','Physical','Opportunity','Opportunity','Opportunity','Opportunity','Opportunity')
+  riskSubCat <- c('Policy & Legal','Policy & Legal','Technology','Market','Reputation','Acute','Chronic','Chronic','Chronic','Resource Efficiency','Resource Efficiency','Resource Efficiency','Energy Source','Resilience')
   riskFactors <- c('Increased pricing of GHG emissions','Exposure to litigation','Costs to transition to lower emissions technology',
                    'Increased stakeholder concern or negative stakeholder feedback','Increased cost of raw materials',
                    'Increased severity of extreme weather events such as cyclones and floods',
                    'Changes in precipitation patterns and extreme variability in weather patterns',
-                   'Rising mean temperatures','Rising sea levels')
-  riskVaR <- c(3.4,2.3,1.2,4.5,2.5,3.4,2.3,1.2,4.5)
+                   'Rising mean temperatures','Rising sea levels','Energy efficiency','Water efficiency','Materials efficiency',
+                  'Use of lower-emission sources of energy','Renewable energy')
+  riskVaR <- c(3.4,2.3,1.2,4.5,2.5,3.4,2.3,1.2,4.5,2.4,2.1,1.8,2.6,1.2)
 
   corpTable = data.frame(riskCategories,riskSubCat,riskFactors,riskVaR)
     
@@ -117,16 +118,17 @@ server <- function(input, output, session) {
     # corpTable %>% DT::formatCurrency('Value at Risk ($M)', currency = '$')  not sure why this doesn't work
     corpTable
   })
-  
+
+  output$stackedCorpFinImpactsPlot <- renderPlotly({
+    plot_ly(corpTable, x = ~riskCategories, y = ~riskVaR, type='bar', name='Risk Factors') %>% 
+      layout(yaxis = list(title = 'Impact ($M)'), barmode = 'stack')
+  })
+    
   output$corpFinImpactsPlot <- renderPlotly({
     plot_ly(corpTable, x = ~riskFactors, y = ~riskVaR, type='bar', name='Risk Factors')
-        # barplot(corpTable[,'riskVaR'],
-        #     main="Impacts by Risk Factor",
-        #     ylab="Value at Risk ($M)",
-        #     xlab="Risk Factor",
-        #     names.arg = riskFactors)
   })
 
+  
   output$map_micron_boise <- renderUI({
     input$Member
     # iframe finds its target source in the www directory.
