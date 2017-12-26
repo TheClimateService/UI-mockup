@@ -120,7 +120,8 @@ server <- function(input, output, session) {
   })
 
   output$stackedCorpFinImpactsPlot <- renderPlotly({
-    plot_ly(corpTable, x = ~riskCategories, y = ~riskVaR, type='bar', name='Risk Factors') %>% 
+    plot_ly(corpTable, x = ~riskCategories, y = ~riskVaR, type='bar', name='Risk Factors',text=riskFactors,
+            marker = list(color = c('red', 'yellow','green','red','yellow', 'red','yellow','green','red', 'green','yellow','green','red', 'green'))) %>% 
       layout(yaxis = list(title = 'Impact ($M)'), barmode = 'stack')
   })
     
