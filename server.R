@@ -102,9 +102,9 @@ server <- function(input, output, session) {
   })
 
 # Reading corporate Database
-  con = dbConnect(drv=RSQLite::SQLite(), dbname="data/users/db.sqlite3")
-  dbSendQuery(conn = db, "CREATE TABLE ValueAtRisk
-              (LocationID INTEGER,TCFDCategory TEXT,TCFDSubCat TEXT,ScenarioID INTEGER,)")
+  # con = dbConnect(drv=RSQLite::SQLite(), dbname="data/users/db.sqlite3")
+  # dbSendQuery(conn = db, "CREATE TABLE ValueAtRisk
+  #             (LocationID INTEGER,TCFDCategory TEXT,TCFDSubCat TEXT,ScenarioID INTEGER,)")
   
   
   riskCategories <- c('Transition','Transition','Transition','Transition','Transition','Physical','Physical','Physical','Physical','Opportunity','Opportunity','Opportunity','Opportunity','Opportunity')
