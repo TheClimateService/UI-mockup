@@ -1,0 +1,3 @@
+facility lon lat location df_tx90p df_pdsisc df_coastalflood modifications	df_used dperiod1 dperiod2 dperiod3 dperiod4 dperiod5 dperiod6 dperiod7 dperiod8 dperiod9
+Micron_Boise -116.149136 43.529396 Boise_Idaho tx90p-1 pdsisc-1 coastalflood-1 -	pdsisc-1  -30 0 -5 -40 -30 -50 -60 -50 -40
+Micron_Manassas -77.503845 38.750829 Manassas_Virginia tx90p-2 pdsisc-2 coastalflood-2 -	pdsisc-2  5 5 -25 -15 -5 -5 -15 -35 -15

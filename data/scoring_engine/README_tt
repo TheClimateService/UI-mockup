@@ -1,0 +1,40 @@
+
+1.  The following scripts extract timeseries, create period averages, apply damage functions, and score each location:
+
+	script_extract_timeseries_v1
+	script_period_averages_v1
+	script_process_location_v1
+	script_process_location_runall
+	script_score_locations_tx90p_v1
+
+Instructions on how to run each script are included in each script.  The first two scripts are run externally to the TCS app directory since they involve very large files.  The results of averaging historical data for five 30-year periods and future data for nine 10-year periods are stored within the current app directory at ./data/temperature/tmax90pct.
+
+2.  script_process_location_runall and script_score_locations_tx90p_v1 can be run locally to generate scoring data.  They depend only on the periods files stored here.  Execution is as follows:
+
+	./script_process_location_runall <list of locations> <file of historical period values> <file of rcp85 period values>
+	./script_score_locations_tx90p_v1 <damage-function file> <facility location file> <file of location-specific tx90p data>
+
+Example:	./script_process_location_runall facility_locations_v2.csv tx90pETCCDI_yr_CMCC-CM_historical_r1i1p1_1850-2005.nc.timeseries.1.480.1.240.periods.5.30 tx90pETCCDI_yr_CMCC-CM_rcp85_r1i1p1_2006-2100.nc.timeseries.1.480.1.240.periods.9.10 
+		./script_score_locations_tx90p_v1 damage_functions_v1.csv facility_locations_v2.csv facility_locations_v2.csv.tx90p
+
+The output from the scoring process is in the file <facility list>.tx90p.damages.
+
+3.  The process for the drought indicator, pdsisc, is similar:
+
+	./script_extract_pdsisc_v1 <locations file> <worldwide sc_pdsi data file>
+	./script_score_locations_psdisc_v1 <damage-function file> <facility location file> <file of location-specific psdisc data>
+
+Example:	./script_extract_pdsisc_v1_runall facility_locations_v2.csv pdsisc.monthly.maps.1900-2099.r2.5x2.5.EnsAvg14Models.TP2.ipe\=2.nc.output.batch.9futperiods.withIDs
+		./script_score_locations_psdisc_v1 damage_functions_v1.csv facility_locations_v2.csv facility_locations_v2.csv.pdsisc 
+
+4.  For coastal flooding, the steps are:
+
+ Execution:  ./script_get_nearest_segment_v1_runall_facilities <input list of locations> <GTSR .dbf.csv file or .dbf.csv. with slr station data>
+ Example:    ./script_get_nearest_segment_v1_runall_facilities facility_locations.csv.testNA GTSR.dbf.csv.nearest.slr.station   (with slr station data)
+
+    From R, run script_estimate_future_rp_v1.r, producing the files future_annprob_fromR and future_rp_fromR
+
+ Execution:  ./script_score_locations_coastalflood_v1 <damage-function file> <input facilities file> <future annual probabilities for the facilities file from r script_estimate_future_rp_v1.r>
+ Example:  ./script_score_locations_coastalflood_v1 damage_functions_v1.csv facility_locations.csv.testNA future_annprob_fromR
+
+
