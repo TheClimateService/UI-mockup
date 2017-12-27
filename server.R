@@ -101,6 +101,12 @@ server <- function(input, output, session) {
     #   addMarkers(data = points())
   })
 
+# Reading corporate Database
+  con = dbConnect(drv=RSQLite::SQLite(), dbname="data/users/db.sqlite3")
+  dbSendQuery(conn = db, "CREATE TABLE ValueAtRisk
+              (LocationID INTEGER,TCFDCategory TEXT,TCFDSubCat TEXT,ScenarioID INTEGER,)")
+  
+  
   riskCategories <- c('Transition','Transition','Transition','Transition','Transition','Physical','Physical','Physical','Physical','Opportunity','Opportunity','Opportunity','Opportunity','Opportunity')
   riskSubCat <- c('Policy & Legal','Policy & Legal','Technology','Market','Reputation','Acute','Chronic','Chronic','Chronic','Resource Efficiency','Resource Efficiency','Resource Efficiency','Energy Source','Resilience')
   riskFactors <- c('Increased pricing of GHG emissions','Exposure to litigation','Costs to transition to lower emissions technology',
@@ -121,13 +127,15 @@ server <- function(input, output, session) {
 
   output$stackedCorpFinImpactsPlot <- renderPlotly({
     plot_ly(corpTable, x = ~riskCategories, y = ~riskVaR, type='bar', name='Risk Factors',text=riskFactors,
+            #this color list needs to be generated programmatically if we can figure out the function, and if it seems useful
             marker = list(color = c('red', 'yellow','green','red','yellow', 'red','yellow','green','red', 'green','yellow','green','red', 'green'))) %>% 
       layout(yaxis = list(title = 'Impact ($M)'), barmode = 'stack')
   })
-    
-  output$corpFinImpactsPlot <- renderPlotly({
-    plot_ly(corpTable, x = ~riskFactors, y = ~riskVaR, type='bar', name='Risk Factors')
-  })
+
+  # Old plot for testing - interesting, but probably not a keeper.    
+  # output$corpFinImpactsPlot <- renderPlotly({
+  #   plot_ly(corpTable, x = ~riskFactors, y = ~riskVaR, type='bar', name='Risk Factors')
+  # })
 
   
   output$map_micron_boise <- renderUI({
