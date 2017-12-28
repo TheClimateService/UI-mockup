@@ -101,26 +101,28 @@ server <- function(input, output, session) {
     #   addMarkers(data = points())
   })
 
-# Reading corporate Database
+# Reading corporate Database - maybe do this eventually, but CSV works for now
   # con = dbConnect(drv=RSQLite::SQLite(), dbname="data/users/db.sqlite3")
   # dbSendQuery(conn = db, "CREATE TABLE ValueAtRisk
   #             (LocationID INTEGER,TCFDCategory TEXT,TCFDSubCat TEXT,ScenarioID INTEGER,)")
   
-  
-  riskCategories <- c('Transition','Transition','Transition','Transition','Transition','Physical','Physical','Physical','Physical','Opportunity','Opportunity','Opportunity','Opportunity','Opportunity')
-  riskSubCat <- c('Policy & Legal','Policy & Legal','Technology','Market','Reputation','Acute','Chronic','Chronic','Chronic','Resource Efficiency','Resource Efficiency','Resource Efficiency','Energy Source','Resilience')
-  riskFactors <- c('Increased pricing of GHG emissions','Exposure to litigation','Costs to transition to lower emissions technology',
-                   'Increased stakeholder concern or negative stakeholder feedback','Increased cost of raw materials',
-                   'Increased severity of extreme weather events such as cyclones and floods',
-                   'Changes in precipitation patterns and extreme variability in weather patterns',
-                   'Rising mean temperatures','Rising sea levels','Energy efficiency','Water efficiency','Materials efficiency',
-                  'Use of lower-emission sources of energy','Renewable energy')
-  riskVaR <- c(3.4,2.3,1.2,4.5,2.5,3.4,2.3,1.2,4.5,2.4,2.1,1.8,2.6,1.2)
+# This is all old  
+  # riskCategories <- c('Transition','Transition','Transition','Transition','Transition','Physical','Physical','Physical','Physical','Opportunity','Opportunity','Opportunity','Opportunity','Opportunity')
+  # riskSubCat <- c('Policy & Legal','Policy & Legal','Technology','Market','Reputation','Acute','Chronic','Chronic','Chronic','Resource Efficiency','Resource Efficiency','Resource Efficiency','Energy Source','Resilience')
+  # riskFactors <- c('Increased pricing of GHG emissions','Exposure to litigation','Costs to transition to lower emissions technology',
+  #                  'Increased stakeholder concern or negative stakeholder feedback','Increased cost of raw materials',
+  #                  'Increased severity of extreme weather events such as cyclones and floods',
+  #                  'Changes in precipitation patterns and extreme variability in weather patterns',
+  #                  'Rising mean temperatures','Rising sea levels','Energy efficiency','Water efficiency','Materials efficiency',
+  #                 'Use of lower-emission sources of energy','Renewable energy')
+  # riskVaR <- c(3.4,2.3,1.2,4.5,2.5,3.4,2.3,1.2,4.5,2.4,2.1,1.8,2.6,1.2)
 
+  # Read in the output table. *** This CSV should be created by real code, not by James's Excel spreadsheet
   corpTable <- readr::read_csv("data/TCSDB_temp_import.csv")
 
+  #This is the data table
   output$corpFinImpacts <- DT::renderDataTable({
-    # colnames(corpTable) = c('TCFD Categories','Subcategory','Risk Factor','Value at Risk ($M)')
+    # colnames(corpTable) = c('TCFD Categories','Subcategory','Risk Factor','Value at Risk ($M)')  #----Can put this back at some point
       if (input$inputLocations != 'All locations') {
         corpTable <- corpTable[which(corpTable$Location == input$inputLocations & corpTable$RiskYear == input$sliderInputYear),]
       }
@@ -130,34 +132,34 @@ server <- function(input, output, session) {
       corpTable
   })
 
-# UI Input elements for the corporate finance page, based on the database values  
+  # UI Input selector for locations for the corporate finance page, based on the database values  
   output$selectInput_location <- renderUI({
     selectInput('inputLocations',"Locations",c('All locations', unique(as.character(corpTable$Location))),selectize = TRUE)
   })
   
-#This is all old stuff  
-  # corpTable = data.frame(riskCategories,riskSubCat,riskFactors,riskVaR)
+  # Stacked bar chart
+  output$stackedCorpFinImpactsPlot <- renderPlotly({
+    if (input$inputLocations != 'All locations') {
+      corpTable <- corpTable[which(corpTable$Location == input$inputLocations & corpTable$RiskYear == input$sliderInputYear),]
+    }
+    if (input$inputLocations == 'All locations') {
+      corpTable <- corpTable[which(corpTable$RiskYear == input$sliderInputYear),]
+    }
+    plot_ly(corpTable, x = ~TCFDCategoryName, y = ~ValueAtRisk, type='bar', text=corpTable$RiskFactorName) %>%
+      layout(yaxis = list(title = 'Impact ($M)'), barmode = 'stack')
+  })
+
+  # Stacked bar chart
+  output$pieCorpFinImpactsPlot <- renderPlotly({
+    if (input$inputLocations != 'All locations') {
+      corpTable <- corpTable[which(corpTable$Location == input$inputLocations & corpTable$RiskYear == input$sliderInputYear),]
+    }
+    if (input$inputLocations == 'All locations') {
+      corpTable <- corpTable[which(corpTable$RiskYear == input$sliderInputYear),]
+    }
+    plot_ly(corpTable, labels= ~RiskFactorName, values= ~ValueAtRisk, type='pie')
+  })  
   
-  #This was the old data table        
-  # output$corpFinImpacts <- DT::renderDataTable({
-  #   colnames(corpTable) = c('TCFD Categories','Subcategory','Risk Factor','Value at Risk ($M)')
-  #   # corpTable %>% DT::formatCurrency('Value at Risk ($M)', currency = '$')  not sure why this doesn't work
-  #   corpTable
-  # })
-
-  #This was the old stacked bar charts
-  # output$stackedCorpFinImpactsPlot <- renderPlotly({
-  #   plot_ly(corpTable, x = ~riskCategories, y = ~riskVaR, type='bar', name='Risk Factors',text=riskFactors,
-  #           #this color list needs to be generated programmatically if we can figure out the function, and if it seems useful
-  #           marker = list(color = c('red', 'yellow','green','red','yellow', 'red','yellow','green','red', 'green','yellow','green','red', 'green'))) %>% 
-  #     layout(yaxis = list(title = 'Impact ($M)'), barmode = 'stack')
-  # })
-
-  # Old plot for testing - interesting, but probably not a keeper.    
-  # output$corpFinImpactsPlot <- renderPlotly({
-  #   plot_ly(corpTable, x = ~riskFactors, y = ~riskVaR, type='bar', name='Risk Factors')
-  # })
-
   
   output$map_micron_boise <- renderUI({
     input$Member
