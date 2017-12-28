@@ -121,16 +121,21 @@ server <- function(input, output, session) {
 
   output$corpFinImpacts <- DT::renderDataTable({
     # colnames(corpTable) = c('TCFD Categories','Subcategory','Risk Factor','Value at Risk ($M)')
-    if (input$inputLocations != 'All locations') {
-        corpTable <- corpTable[corpTable$Location == input$inputLocations,]
-       }
-    corpTable
+      if (input$inputLocations != 'All locations') {
+        corpTable <- corpTable[which(corpTable$Location == input$inputLocations & corpTable$RiskYear == input$sliderInputYear),]
+      }
+      if (input$inputLocations == 'All locations') {
+        corpTable <- corpTable[which(corpTable$RiskYear == input$sliderInputYear),]
+      }
+      corpTable
   })
 
+# UI Input elements for the corporate finance page, based on the database values  
   output$selectInput_location <- renderUI({
-    selectInput('inputLocations',"Locations",c('All locations', unique(as.character(corpTable$Location))) ,selectize = TRUE)
+    selectInput('inputLocations',"Locations",c('All locations', unique(as.character(corpTable$Location))),selectize = TRUE)
   })
   
+#This is all old stuff  
   # corpTable = data.frame(riskCategories,riskSubCat,riskFactors,riskVaR)
   
   #This was the old data table        

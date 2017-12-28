@@ -178,17 +178,16 @@ ui <- dashboardPage(title="The Climate Service",
               fluidRow(
                 column(4,
                   uiOutput("selectInput_location")
-                  #selectInput('inputLocations',"Locations",c('All locations', Location(corpTable)) ,selectize = TRUE)
                 ),
                 column(4,
-                  selectInput('inputYear',"Year",c('2018','2019','2020','2021','2022','2023','2024','2025','2026','2027','2028'),selectize = TRUE)
+                  sliderInput("sliderInputYear","Year", min = 1975, max = 2050, value = 2018, sep = "", animate = TRUE)
                 ),
                 column(4,
                   selectInput('inputScenario',"Scenario",c('RCP8.5','RCP2.6'),selectize = TRUE)
                 )
               ),
-              plotlyOutput("stackedCorpFinImpactsPlot"),
-              plotlyOutput("corpFinImpactsPlot"),
+              # plotlyOutput("stackedCorpFinImpactsPlot"),
+              # plotlyOutput("corpFinImpactsPlot"),
               DT::dataTableOutput("corpFinImpacts")
             ),#tabPanel
             tabPanel(title="TCFD",width="100%",
