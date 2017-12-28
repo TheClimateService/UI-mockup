@@ -183,11 +183,11 @@ ui <- dashboardPage(title="The Climate Service",
                   sliderInput("sliderInputYear","Year", min = 1975, max = 2050, value = 2018, sep = "", animate = TRUE)
                 ),
                 column(4,
-                  selectInput('inputScenario',"Scenario",c('RCP8.5','RCP2.6'),selectize = TRUE)
+                  uiOutput("selectInput_scenario")
                 )
-              ),
+              ),textOutput("errorMessage"),
               fluidRow(column(6, plotlyOutput("pieCorpFinImpactsPlot")),column(6, plotlyOutput("stackedCorpFinImpactsPlot"))),
-              fluidRow(DT::dataTableOutput("corpFinImpacts"))
+              fluidRow(column(12,DT::dataTableOutput("corpFinImpacts")))
             ),#tabPanel
             tabPanel(title="TCFD",width="100%",
                fluidRow(

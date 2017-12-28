@@ -119,22 +119,14 @@ server <- function(input, output, session) {
 
   # Read in the output table. *** This CSV should be created by real code, not by James's Excel spreadsheet
   corpTable <- readr::read_csv("data/TCSDB_temp_import.csv")
-
-  #This is the data table
-  output$corpFinImpacts <- DT::renderDataTable({
-    # colnames(corpTable) = c('TCFD Categories','Subcategory','Risk Factor','Value at Risk ($M)')  #----Can put this back at some point
-      if (input$inputLocations != 'All locations') {
-        corpTable <- corpTable[which(corpTable$Location == input$inputLocations & corpTable$RiskYear == input$sliderInputYear),]
-      }
-      if (input$inputLocations == 'All locations') {
-        corpTable <- corpTable[which(corpTable$RiskYear == input$sliderInputYear),]
-      }
-      corpTable
-  })
-
-  # UI Input selector for locations for the corporate finance page, based on the database values  
+  
+  # UI Input selectors for the corporate finance page, based on the database values  
   output$selectInput_location <- renderUI({
-    selectInput('inputLocations',"Locations",c('All locations', unique(as.character(corpTable$Location))),selectize = TRUE)
+    selectInput('inputLocations',"Locations",c('All locations', unique(as.character(corpTable$Location))),selected='All locations',selectize = TRUE)
+  })
+  
+  output$selectInput_scenario <- renderUI({
+    selectInput('inputScenarios',"Scenario",c(unique(as.character(corpTable$ScenarioName))),selected='RCP8.5',selectize = TRUE)
   })
   
   # Stacked bar chart
@@ -148,17 +140,33 @@ server <- function(input, output, session) {
     plot_ly(corpTable, x = ~TCFDCategoryName, y = ~ValueAtRisk, type='bar', text=corpTable$RiskFactorName) %>%
       layout(yaxis = list(title = 'Impact ($M)'), barmode = 'stack')
   })
-
-  # Stacked bar chart
+  
+  # Pie chart
   output$pieCorpFinImpactsPlot <- renderPlotly({
     if (input$inputLocations != 'All locations') {
       corpTable <- corpTable[which(corpTable$Location == input$inputLocations & corpTable$RiskYear == input$sliderInputYear),]
     }
     if (input$inputLocations == 'All locations') {
       corpTable <- corpTable[which(corpTable$RiskYear == input$sliderInputYear),]
+      # output$errorMessage <- renderText({
+      #   paste("got to equal All locations:", str(corpTable$))
+      # })
     }
-    plot_ly(corpTable, labels= ~RiskFactorName, values= ~ValueAtRisk, type='pie')
+    plot_ly(corpTable[order(corpTable$ValueAtRisk),], labels= ~RiskFactorName, values= ~ValueAtRisk, textinfo = 'label+percent', text = ~paste('$', ValueAtRisk, ' Million'), type='pie')
   })  
+  
+  #Data table
+  output$corpFinImpacts <- DT::renderDataTable({
+    # colnames(corpTable) = c('TCFD Categories','Subcategory','Risk Factor','Value at Risk ($M)')  #----Can put this back at some point
+      if (input$inputLocations != 'All locations') {
+        corpTable <- corpTable[which(corpTable$Location == input$inputLocations & corpTable$RiskYear == input$sliderInputYear),]
+      }
+      if (input$inputLocations == 'All locations') {
+        corpTable <- corpTable[which(corpTable$RiskYear == input$sliderInputYear),]
+      }
+      corpTable
+  })
+
   
   
   output$map_micron_boise <- renderUI({
