@@ -177,7 +177,8 @@ ui <- dashboardPage(title="The Climate Service",
             tabPanel(title="Financials",
               fluidRow(
                 column(4,
-                  selectInput('inputLocations',"Locations",c('All locations','Boise','Ireland','Singapore'),selectize = TRUE)
+                  uiOutput("selectInput_location")
+                  #selectInput('inputLocations',"Locations",c('All locations', Location(corpTable)) ,selectize = TRUE)
                 ),
                 column(4,
                   selectInput('inputYear',"Year",c('2018','2019','2020','2021','2022','2023','2024','2025','2026','2027','2028'),selectize = TRUE)

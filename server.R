@@ -117,20 +117,36 @@ server <- function(input, output, session) {
                   'Use of lower-emission sources of energy','Renewable energy')
   riskVaR <- c(3.4,2.3,1.2,4.5,2.5,3.4,2.3,1.2,4.5,2.4,2.1,1.8,2.6,1.2)
 
-  corpTable = data.frame(riskCategories,riskSubCat,riskFactors,riskVaR)
-    
+  corpTable <- readr::read_csv("data/TCSDB_temp_import.csv")
+
   output$corpFinImpacts <- DT::renderDataTable({
-    colnames(corpTable) = c('TCFD Categories','Subcategory','Risk Factor','Value at Risk ($M)')
-    # corpTable %>% DT::formatCurrency('Value at Risk ($M)', currency = '$')  not sure why this doesn't work
+    # colnames(corpTable) = c('TCFD Categories','Subcategory','Risk Factor','Value at Risk ($M)')
+    if (input$inputLocations != 'All locations') {
+        corpTable <- corpTable[corpTable$Location == input$inputLocations,]
+       }
     corpTable
   })
 
-  output$stackedCorpFinImpactsPlot <- renderPlotly({
-    plot_ly(corpTable, x = ~riskCategories, y = ~riskVaR, type='bar', name='Risk Factors',text=riskFactors,
-            #this color list needs to be generated programmatically if we can figure out the function, and if it seems useful
-            marker = list(color = c('red', 'yellow','green','red','yellow', 'red','yellow','green','red', 'green','yellow','green','red', 'green'))) %>% 
-      layout(yaxis = list(title = 'Impact ($M)'), barmode = 'stack')
+  output$selectInput_location <- renderUI({
+    selectInput('inputLocations',"Locations",c('All locations', unique(as.character(corpTable$Location))) ,selectize = TRUE)
   })
+  
+  # corpTable = data.frame(riskCategories,riskSubCat,riskFactors,riskVaR)
+  
+  #This was the old data table        
+  # output$corpFinImpacts <- DT::renderDataTable({
+  #   colnames(corpTable) = c('TCFD Categories','Subcategory','Risk Factor','Value at Risk ($M)')
+  #   # corpTable %>% DT::formatCurrency('Value at Risk ($M)', currency = '$')  not sure why this doesn't work
+  #   corpTable
+  # })
+
+  #This was the old stacked bar charts
+  # output$stackedCorpFinImpactsPlot <- renderPlotly({
+  #   plot_ly(corpTable, x = ~riskCategories, y = ~riskVaR, type='bar', name='Risk Factors',text=riskFactors,
+  #           #this color list needs to be generated programmatically if we can figure out the function, and if it seems useful
+  #           marker = list(color = c('red', 'yellow','green','red','yellow', 'red','yellow','green','red', 'green','yellow','green','red', 'green'))) %>% 
+  #     layout(yaxis = list(title = 'Impact ($M)'), barmode = 'stack')
+  # })
 
   # Old plot for testing - interesting, but probably not a keeper.    
   # output$corpFinImpactsPlot <- renderPlotly({
