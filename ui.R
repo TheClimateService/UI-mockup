@@ -63,9 +63,9 @@ ui <- dashboardPage(title="The Climate Service",
 	sidebarMenu(id = "sidebar",
     	menuItem("Log In", tabName = "login", icon = icon("lock")),
       menuItem("Corporate Risk Analyzer", tabName = "corporate", icon = icon("building-o"),
-          menuSubItem("Configure",tabName = "settings"),
-          menuSubItem("Analyze",tabName = "analyze"),
-          menuSubItem("Report",tabName = "report"),
+          menuSubItem("1) Configure Locations",tabName = "settings"),
+          menuSubItem("2) Analyze Risks",tabName = "analyze"),
+          menuSubItem("3) Report TCFD",tabName = "report"),
           menuSubItem("Methodology", tabName = "methodology", icon = icon("cog"))
       ),
       menuItem("Portfolio Analyzer", tabName = "portfolios", icon = icon("briefcase")),
@@ -104,21 +104,9 @@ ui <- dashboardPage(title="The Climate Service",
               )#fluidRow
         ), #tabItem
 
-      # First tab content
-      # tabItem(tabName = "dashboard",
-      #         fluidRow(
-      #             infoBox("TCS Climate Score", 437, icon = icon("thermometer-3"), color = "red")
-      #         ),
-      #         fluidRow(
-      #             infoBox("Locations", 14, icon = icon("map-marker"), color = "teal"),
-      #             infoBox("Users", 3, icon = icon("user"), color = "aqua"),
-      #             infoBox("Plans", 2, icon = icon("line-chart"), color = "blue")
-      #         )
-      # ),
-
 # SETTINGS tab content
       tabItem(tabName = "settings",
-              fluidRow(h2("Configure your tool")),
+              fluidRow(h2("1) Configure your locations")),
               fluidRow(
                 tabBox(
                   tabPanel(title = "Basics",
@@ -172,7 +160,7 @@ ui <- dashboardPage(title="The Climate Service",
 
 # --------------  CORPORATE tab content --------------
       tabItem(tabName = "analyze",
-        h2("Analyze your corporate risk"),
+        h2("2) Analyze your corporate risk"),
         fluidRow(
                 column(4,
                   uiOutput("selectInput_location")
@@ -189,7 +177,7 @@ ui <- dashboardPage(title="The Climate Service",
         ),#tabItem analyze
               
         tabItem(tabName = "report",
-                fluidRow(h2("Report your climate-related financial risk")),
+                fluidRow(h2("3) Report your climate-related financial risk")),
                 fluidRow(
                    tabBox(width="100%",
                           tabPanel(title = "Governance",
