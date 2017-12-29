@@ -62,9 +62,12 @@ ui <- dashboardPage(title="The Climate Service",
 	useShinyjs(),
 	sidebarMenu(id = "sidebar",
     	menuItem("Log In", tabName = "login", icon = icon("lock")),
-#	    menuItem("Dashboard", tabName = "dashboard", icon = icon("dashboard")),
-#     menuItem("Settings", tabName = "settings", icon = icon("cog")),
-      menuItem("Corporate Risk Analyzer", tabName = "corporate", icon = icon("building-o")),
+      menuItem("Corporate Risk Analyzer", tabName = "corporate", icon = icon("building-o"),
+          menuSubItem("Configure",tabName = "settings"),
+          menuSubItem("Analyze",tabName = "analyze"),
+          menuSubItem("Report",tabName = "report"),
+          menuSubItem("Methodology", tabName = "methodology", icon = icon("cog"))
+      ),
       menuItem("Portfolio Analyzer", tabName = "portfolios", icon = icon("briefcase")),
 #     menuItem("Compliance Reporter", tabName = "plans", icon = icon("line-chart"),
 #         menuSubItem("Compliance - TCFD", tabName = "TCFD")
@@ -115,11 +118,16 @@ ui <- dashboardPage(title="The Climate Service",
 
 # SETTINGS tab content
       tabItem(tabName = "settings",
+              fluidRow(h2("Configure your tool")),
               fluidRow(
                 tabBox(
                   tabPanel(title = "Basics",
-                    textInput("companyName","Company Name",value="Micron"),
-                    selectInput("cbGroupBizType","Industry Sector",
+                       selectizeInput(
+                         "selected_nasdaq","Search Companies",
+                         choices = names,  # [from source("./data/financial/load_financial_data.r") ]
+                         options = list(placeholder='Type company name', onInitialize = I('function() { this.setValue(""); }'))
+                       ),#selectizeInput                    
+                       selectInput("cbGroupBizType","Industry Sector",
                       c("Beverage","Agriculture","Packaged Foods/Meats","Paper & forest","Manufacturing","Metals & mining", "Chemicals", "Real Estate Management/Development","Transportation","Oil & gas","Electric Utilities"),
                       selected = c("Manufacturing")
                     )
@@ -162,20 +170,10 @@ ui <- dashboardPage(title="The Climate Service",
               )#fluidRow
             ),#tabItem
 
-# CORPORATE tab content
-      tabItem(tabName = "corporate",
-        h2("Corporate Risk Analyzer"),
+# --------------  CORPORATE tab content --------------
+      tabItem(tabName = "analyze",
+        h2("Analyze your corporate risk"),
         fluidRow(
-          tabBox(width=12,
-            tabPanel(title="Settings",
-               selectizeInput(
-                 "selected_nasdaq","Search Companies",
-                 choices = names,  # [from source("./data/financial/load_financial_data.r") ]
-                 options = list(placeholder='Type company name', onInitialize = I('function() { this.setValue(""); }'))
-               )#selectizeInput
-            ),#tabPanel
-            tabPanel(title="Financials",
-              fluidRow(
                 column(4,
                   uiOutput("selectInput_location")
                 ),
@@ -185,37 +183,37 @@ ui <- dashboardPage(title="The Climate Service",
                 column(4,
                   uiOutput("selectInput_scenario")
                 )
-              ),textOutput("errorMessage"),
+              ),#fluidRow
               fluidRow(column(6, plotlyOutput("pieCorpFinImpactsPlot")),column(6, plotlyOutput("stackedCorpFinImpactsPlot"))),
               fluidRow(column(12,DT::dataTableOutput("corpFinImpacts")))
-            ),#tabPanel
-            tabPanel(title="TCFD",width="100%",
-               fluidRow(
-                 tabBox(width="100%",
-                        tabPanel(title = "Governance",
-                                 textAreaInput("TCFD-Gov-a","Board Oversight", value="Describe the board's oversight of climate-related risks and opportunities."),
-                                 textAreaInput("TCFD-Gov-b","Management's Role", value="Describe management's role in assessing and managing climate-related risks and opportunities.")
-                        ),
-                        tabPanel(title = "Strategy",
-                                 textAreaInput("TCFD-Strat-a","Climate Risks and Opportunities", value = "Describe the climate-related risks and opportunities the organization has identified over the short, medium, and long term."),
-                                 checkboxGroupInput("chkbxRisks","Risks & Opportunities", c("Policy & Legal Risk","Technology Risk","Market Risk","Reputation Risk","Acute Physical Risk","Chronic Physical Risk","Resource Efficiency","Energy Source","Products/Services","Markets","Resilience"),selected = c("Energy Source","Acute Physical Risk","Chronic Physical Risk")),
-                                 textAreaInput("TCFD-Strat-b","Impact of Risks", value = "Describe the impact of climate-related risks and opportunities on the organization's businesses, strategy, and financial planning.")
-                        ),
-                        tabPanel(title = "Risk Management",
-                                 textAreaInput("TCFD-Gov-a","Processes for Identifying Risks", value="Describe the processes for identifying & assessing climate-related risks and opportunities."),
-                                 textAreaInput("TCFD-Gov-b","Processes for Managing", value="Describe the processes managing climate-related risks."),
-                                 textAreaInput("TCFD-Gov-a","Process Integration", value="Describe how processes for identifying, assessing, and managing climate-related risks are intgrated into the organization's overall management.")
-                        ),
-                        tabPanel(title = "Metrics and Targets"),
-                        tabPanel(title = "Report",
-                                 actionButton("TCFD-Report", "Export Report")
-                        )
-                 )#tabBox
-               )#fluidRow
-            )#tabPanel
-          ) #tabBox
-        ) #fluidrow
+        ),#tabItem analyze
               
+        tabItem(tabName = "report",
+                fluidRow(h2("Report your climate-related financial risk")),
+                fluidRow(
+                   tabBox(width="100%",
+                          tabPanel(title = "Governance",
+                                   textAreaInput("TCFD-Gov-a","Board Oversight", value="Describe the board's oversight of climate-related risks and opportunities."),
+                                   textAreaInput("TCFD-Gov-b","Management's Role", value="Describe management's role in assessing and managing climate-related risks and opportunities.")
+                          ),
+                          tabPanel(title = "Strategy",
+                                   textAreaInput("TCFD-Strat-a","Climate Risks and Opportunities", value = "Describe the climate-related risks and opportunities the organization has identified over the short, medium, and long term."),
+                                   checkboxGroupInput("chkbxRisks","Risks & Opportunities", c("Policy & Legal Risk","Technology Risk","Market Risk","Reputation Risk","Acute Physical Risk","Chronic Physical Risk","Resource Efficiency","Energy Source","Products/Services","Markets","Resilience"),selected = c("Energy Source","Acute Physical Risk","Chronic Physical Risk")),
+                                   textAreaInput("TCFD-Strat-b","Impact of Risks", value = "Describe the impact of climate-related risks and opportunities on the organization's businesses, strategy, and financial planning.")
+                          ),
+                          tabPanel(title = "Risk Management",
+                                   textAreaInput("TCFD-Gov-a","Processes for Identifying Risks", value="Describe the processes for identifying & assessing climate-related risks and opportunities."),
+                                   textAreaInput("TCFD-Gov-b","Processes for Managing", value="Describe the processes managing climate-related risks."),
+                                   textAreaInput("TCFD-Gov-a","Process Integration", value="Describe how processes for identifying, assessing, and managing climate-related risks are intgrated into the organization's overall management.")
+                          ),
+                          tabPanel(title = "Metrics and Targets"),
+                          tabPanel(title = "Report",
+                                   actionButton("TCFD-Report", "Export Report")
+                          )
+                   )#tabBox
+                 )#fluidRow
+        ), #tabItem report
+        
 # This is James's old code to animate impacts - probably remove
 #               fluidRow(
 #                 tabBox(width = "500",
@@ -233,9 +231,23 @@ ui <- dashboardPage(title="The Climate Service",
 #                   )#tabPanel
 #                 )#tabBox
 #               )#fluidRow
-      ),#tabItem corporate
 
-      # Fourth tab content
+      # --------- Metodology sub-tab ------
+      tabItem(tabName = "methodology",
+        h2("Understand the details of your climate risk with the Cx Methodology"),
+        fluidRow(
+          column(3,selectInput("selectCausalVariable","Causal Variable (Hazard)",c("Temperature","Coastal Flooding","Drought"))),
+          column(3,selectInput("selectDamageFunction","Damage Function",c("Cooling","Building Damage","Corn Yield")))
+        ),#fluidrow select inputs
+        fluidRow(
+          box(width=3,title="Ensemble Distributions Evolve Through Time", plotOutput("climplot5copy",height = 300)),
+          box(width=3,title="Impact on buildings",plotOutput("impactplot_building_flood_copy", height = 300)),
+          box(width=3,title="Financial function","need a graph of $(y) against impact %(x) "),
+          box(width=3,title="Probabilstic Value at Risk","need a distribution plot here of VaR")
+        )#fluidrow graphs
+      ),#tabItem methodology
+
+      # --------- Portfolios tab ----------
       tabItem(tabName = "portfolios",
         h2("Investment Portfolio Analyzer"),
         fluidRow(

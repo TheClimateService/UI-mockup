@@ -478,6 +478,22 @@ server <- function(input, output, session) {
     legend("topright", inset=.05, title="Periods", labels, lwd=3, lty=ltypes, col=colors)
   })
 
+  #### This is just for an example on the methodology tab - delete when replaced with real code
+  output$climplot5copy <- renderPlot({
+    shapes <- c(81.8730, 93.0240, 88.9460, 84.7620, 95.8550, 90.0690, 86.1060, 90.3700, 91.5810)
+    scales <- c(292.0320, 293.0880, 293.0820, 293.3870, 293.7670, 293.9150, 294.5310, 295.7390, 295.7960)
+    #colors <- brewer.pal(length(shapes), "Spectral")
+    colors <- brewer.pal(length(shapes), "Paired")
+    ltypes <- c(1:length(shapes))
+    labels <- c("1976-2005", "2016-25", "2026-35", "2036-45", "2046-55", "2056-65", "2066-75", "2076-85", "2086-95")
+    x <- seq(275,315,0.1)
+    plot(x,dweibull(x,shapes[1],scales[1]), type="l", lwd=3, lty=1, col=colors[1], xlim=c(275,315), ylim=c(0,0.12), xlab="Daily Maximum Surface Temperature (degK)", ylab="Probability Density")
+    for(i in 2:length(shapes) ) {
+      lines( x, dweibull(x,shapes[i],scales[i]), lwd=2, lty=i, col=colors[i] )
+    }
+    # legend("topright", inset=.05, title="Periods", labels, lwd=3, lty=ltypes, col=colors)
+  })
+  
   output$sealevel_extremes_plot1 <- renderPlot({
     shapes <- c(81.8730, 93.0240, 88.9460, 84.7620, 95.8550, 90.0690, 86.1060, 90.3700, 91.5810)
     scales <- c(292.0320, 293.0880, 293.0820, 293.3870, 293.7670, 293.9150, 294.5310, 295.7390, 295.7960)
@@ -680,6 +696,18 @@ output$drought_frequencies_facility <- renderPlot({
     get_hazus_damage_function(damage_function_id)
   })
 
+  #This is an example for the methodology screen. Delete when replaced with real code.
+  output$impactplot_building_flood_copy <- renderPlot({
+    damage_function_name = as.character(input$hazus_damage_function_id)
+    s = unlist( strsplit(damage_function_name, "_") )
+    # Given a list structure x, unlist simplifies it to produce a vector which contains all the atomic components which occur in x.
+    #s2 = paste(s[1])
+    damage_function_id = as.numeric(s[1])
+    #fl_dept <- extract_hazus_functions()  # done at start of server.R in data section
+    source("./data/hazus/function_extract_hazus_flood_depth_damage.r", local=TRUE)
+    get_hazus_damage_function(damage_function_id)
+  })
+  
   output$impactplot_corn_drought_return_period <- renderPlot({
     source("./functions/fit_corn_yield_us_drought.r", local=TRUE)
   })
