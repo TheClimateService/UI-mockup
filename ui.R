@@ -63,7 +63,7 @@ ui <- dashboardPage(title="The Climate Service",
 	sidebarMenu(id = "sidebar",
     	menuItem("Log In", tabName = "login", icon = icon("lock")),
       menuItem("Corporate Risk Analyzer", tabName = "corporate", icon = icon("building-o"),
-          menuSubItem("1) Configure Locations",tabName = "settings"),
+          menuSubItem("1) Configure Locations",tabName = "config"),
           menuSubItem("2) Analyze Risks",tabName = "analyze"),
           menuSubItem("3) Report TCFD",tabName = "report"),
           menuSubItem("Methodology", tabName = "methodology", icon = icon("cog"))
@@ -105,58 +105,78 @@ ui <- dashboardPage(title="The Climate Service",
         ), #tabItem
 
 # SETTINGS tab content
-      tabItem(tabName = "settings",
-              fluidRow(h2("1) Configure your locations")),
-              fluidRow(
-                tabBox(
-                  tabPanel(title = "Basics",
-                       selectizeInput(
-                         "selected_nasdaq","Search Companies",
-                         choices = names,  # [from source("./data/financial/load_financial_data.r") ]
-                         options = list(placeholder='Type company name', onInitialize = I('function() { this.setValue(""); }'))
-                       ),#selectizeInput                    
-                       selectInput("cbGroupBizType","Industry Sector",
-                      c("Beverage","Agriculture","Packaged Foods/Meats","Paper & forest","Manufacturing","Metals & mining", "Chemicals", "Real Estate Management/Development","Transportation","Oil & gas","Electric Utilities"),
-                      selected = c("Manufacturing")
-                    )
-                  ),
-                  tabPanel(title = "Location 1",
-                    textInput("location1","Corporate Headquarters",value = "8000 S Federal Way, Boise, ID 83716"),
-                    htmlOutput("map_micron_boise"),
-                    hr(),
-                    checkboxGroupInput("cbBusinessFunctions","Business functions performed at this location",
-                                c("Clean Room Manufacturing","Shipping","Inventory Management","R&D","HR","Legal","Marketing/Sales","Corporate Governance"),
-                                selected = c("Clean Room Manufacturing","R&D")
-                    ),
-                    hr(),
-                    actionButton("addLocation","Add a location")
-                  ),
-                  tabPanel(title = "Users",
-                    valueBox(1, "TBD", icon = icon("user"), color = "teal"),
-                    valueBox(1, "TBD", icon = icon("user"), color = "teal"),
-                    valueBox(1, "TBD", icon = icon("user"), color = "teal"),
-                    actionButton("addUser","Add a user")
-                  ),
-		              tabPanel(title = "Location 2",
-                    textInput("location2","Singapore Facilities",value = "4 facilities in Singapore"),
-                    htmlOutput("map_micron_singapore"),
-                    hr(),
-                    checkboxGroupInput("cbBusinessFunctions","Business functions performed at this location",
-                                c("Clean Room Manufacturing","Shipping","Inventory Management","R&D","HR","Legal","Marketing/Sales","Corporate Governance"),
-                                selected = c("Clean Room Manufacturing","R&D")
-                    ),
-                    hr(),
-                    actionButton("addLocation","Add a location")
-                  ),
-                  tabPanel(title = "Users",
-                    valueBox(1, "TBD", icon = icon("user"), color = "teal"),
-                    valueBox(1, "TBD", icon = icon("user"), color = "teal"),
-                    valueBox(1, "TBD", icon = icon("user"), color = "teal"),
-                    actionButton("addUser","Add a user")
-                  )
-                )#tabBox
-              )#fluidRow
-            ),#tabItem
+#       tabItem(tabName = "settings",
+#               h2("1) Configure your locations"),
+#               fluidRow(
+#                 tabBox(
+#                   tabPanel(title = "Basics",
+#                        selectizeInput(
+#                          "selected_nasdaq","Search Companies",
+#                          choices = names,  # [from source("./data/financial/load_financial_data.r") ]
+#                          options = list(placeholder='Type company name', onInitialize = I('function() { this.setValue(""); }'))
+#                        ),#selectizeInput                    
+#                        selectInput("cbGroupBizType","Industry Sector",
+#                       c("Beverage","Agriculture","Packaged Foods/Meats","Paper & forest","Manufacturing","Metals & mining", "Chemicals", "Real Estate Management/Development","Transportation","Oil & gas","Electric Utilities"),
+#                       selected = c("Manufacturing")
+#                     )
+#                   ),
+#                   tabPanel(title = "Location 1",
+#                     textInput("location1","Corporate Headquarters",value = "8000 S Federal Way, Boise, ID 83716"),
+#                     htmlOutput("map_micron_boise"),
+#                     hr(),
+#                     checkboxGroupInput("cbBusinessFunctions","Business functions performed at this location",
+#                                 c("Clean Room Manufacturing","Shipping","Inventory Management","R&D","HR","Legal","Marketing/Sales","Corporate Governance"),
+#                                 selected = c("Clean Room Manufacturing","R&D")
+#                     ),
+#                     hr(),
+#                     actionButton("addLocation","Add a location")
+#                   ),
+#                   tabPanel(title = "Users",
+#                     valueBox(1, "TBD", icon = icon("user"), color = "teal"),
+#                     valueBox(1, "TBD", icon = icon("user"), color = "teal"),
+#                     valueBox(1, "TBD", icon = icon("user"), color = "teal"),
+#                     actionButton("addUser","Add a user")
+#                   ),
+# 		              tabPanel(title = "Location 2",
+#                     textInput("location2","Singapore Facilities",value = "4 facilities in Singapore"),
+#                     htmlOutput("map_micron_singapore"),
+#                     hr(),
+#                     checkboxGroupInput("cbBusinessFunctions","Business functions performed at this location",
+#                                 c("Clean Room Manufacturing","Shipping","Inventory Management","R&D","HR","Legal","Marketing/Sales","Corporate Governance"),
+#                                 selected = c("Clean Room Manufacturing","R&D")
+#                     ),
+#                     hr(),
+#                     actionButton("addLocation","Add a location")
+#                   ),
+#                   tabPanel(title = "Users",
+#                     valueBox(1, "TBD", icon = icon("user"), color = "teal"),
+#                     valueBox(1, "TBD", icon = icon("user"), color = "teal"),
+#                     valueBox(1, "TBD", icon = icon("user"), color = "teal"),
+#                     actionButton("addUser","Add a user")
+#                   )
+#                 )#tabBox
+#               )#fluidRow
+#             ),#tabItem
+
+# CONFIG tab content
+tabItem(tabName = "config",
+        h2("1) Configure your locations"),
+        fluidRow(
+         box(width=4, title = "Select a location to configure", uiOutput("rbLocations")),
+         box(width=8,
+             conditionalPanel("input.rbLocations != character(0)",
+                leafletOutput("facility_location_map"),
+                #htmlOutput("map_micron_singapore"),
+                hr(),
+                checkboxGroupInput("cbBusinessFunctions","Business functions performed at this location",
+                         c("Clean Room Manufacturing","Shipping","Inventory Management","R&D","HR","Legal","Marketing/Sales","Corporate Governance"),
+                         selected = c("Clean Room Manufacturing","R&D")
+                )#checkboxGroup
+              )#contitionalPanel
+         )#box
+        )#fluidRow
+),#tabItem
+
 
 # --------------  CORPORATE tab content --------------
       tabItem(tabName = "analyze",
@@ -172,14 +192,23 @@ ui <- dashboardPage(title="The Climate Service",
                   uiOutput("selectInput_scenario")
                 )
               ),#fluidRow
-              fluidRow(column(6, plotlyOutput("pieCorpFinImpactsPlot")),column(6, plotlyOutput("stackedCorpFinImpactsPlot"))),
-              fluidRow(column(12,DT::dataTableOutput("corpFinImpacts")))
+        tabsetPanel(
+          tabPanel(title = 'By Risk Factor',
+              plotlyOutput("pieCorpFinImpactsPlot")
+          ),
+          tabPanel(title = 'By TCFD Category',
+              plotlyOutput("stackedCorpFinImpactsPlot")
+          ),
+          tabPanel(title = 'All Data',
+              DT::dataTableOutput("corpFinImpacts")
+          )
+        )#tabBox
         ),#tabItem analyze
               
         tabItem(tabName = "report",
-                fluidRow(h2("3) Report your climate-related financial risk")),
+                h2("3) Report your climate-related financial risk"),
                 fluidRow(
-                   tabBox(width="100%",
+                   tabBox(
                           tabPanel(title = "Governance",
                                    textAreaInput("TCFD-Gov-a","Board Oversight", value="Describe the board's oversight of climate-related risks and opportunities."),
                                    textAreaInput("TCFD-Gov-b","Management's Role", value="Describe management's role in assessing and managing climate-related risks and opportunities.")
@@ -797,7 +826,15 @@ ui <- dashboardPage(title="The Climate Service",
         ) #end fluidRow
       ) #end database tabItem
 
-    )#tabItems
-  )
+    ),#tabItems
+  hr(),
+  tags$footer("Copyright 2017-18 The Climate Service, Inc. | 828.713.7392", align = "left", style = "
+                position:absolute;
+                bottom:0;
+                width:100%;
+                height:50px;   /* Height of the footer */
+                padding: 10px;
+                z-index: 1000;")
+  ) #end dashboardBody
 ) #end ui
 

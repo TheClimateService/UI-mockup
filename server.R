@@ -36,6 +36,22 @@ server <- function(input, output, session) {
 
 # James start -----------------------------------------------------------
 
+   # -------- Configure ---------------
+   #UI Inputs
+   output$rbLocations <- renderUI({
+     radioButtons('rbLocations',label = 'Select a location to configure',c(unique(as.character(corpTable$Location))),selected = character(0))
+   })
+   
+   #Maps
+   #Read in James's locations csv (based on Terry's)
+   corpLocations <- readr::read_csv("data/locations.csv")
+   
+   output$facility_location_map <- renderLeaflet({
+     leaflet(data = corpLocations) %>%
+       addTiles() %>%
+       addMarkers(~lon, ~lat, popup = ~as.character(LocationName))
+   })
+   
   # traffic light text for corp risk analyzer
   
   txtImpactColor1 <- reactive({
@@ -88,18 +104,7 @@ server <- function(input, output, session) {
 
   set.seed(122)
   histdata <- rnorm(500)
-
-  points <- eventReactive(input$recalc, {
-    cbind(rnorm(40) * 2 + 13, rnorm(40) + 48)
-  }, ignoreNULL = FALSE)
-
-  output$mymap <- renderLeaflet({
-    leaflet() #%>%
-    #   addProviderTiles(providers$Stamen.TonerLite,
-    #                    options = providerTileOptions(noWrap = TRUE)
-    #   ) %>%
-    #   addMarkers(data = points())
-  })
+  
 
 # Reading corporate Database - maybe do this eventually, but CSV works for now
   # con = dbConnect(drv=RSQLite::SQLite(), dbname="data/users/db.sqlite3")
