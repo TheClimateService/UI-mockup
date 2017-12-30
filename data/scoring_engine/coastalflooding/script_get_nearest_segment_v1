@@ -58,7 +58,7 @@ awk -v inlon=$inlon -v inlat=$inlat '{  \
 
 # NOTE SETTING OF THRESHOLD IN KM BELOW.  ANY LOCATION WITH DISTANCE TO THE NEAREST GTSR SEGMENT GREATER THAN THIS THRESHOLD WILL BE MARKED AS "TooFarFromCoast" AND RETURN LEVELS WILL NOT BE RETRIEVED.
 
-awk '{thresholdkm=100;  \
+awk '{thresholdkm=10;  \
       split($3,array,",");  \
       # (without slr station data) if($1<=thresholdkm) print $1,$2,array[3],array[8],array[6],array[11],array[9],array[10],array[19],array[15],array[13],array[16],array[12],array[18];  \
         # else print $1,$2,array[3],array[8],array[6],"TooFarFromCoast_threshold_"thresholdkm"km - - - - - - - -"  \

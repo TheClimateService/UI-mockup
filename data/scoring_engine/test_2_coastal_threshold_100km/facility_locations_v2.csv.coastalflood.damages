@@ -1,7 +1,7 @@
 facility lon lat location df_tx90p df_pdsisc df_coastalflood notes	df_used dperiod1 dperiod2 dperiod3 dperiod4 dperiod5 dperiod6 dperiod7 dperiod8 dperiod9
 Micron_Boise -116.149136 43.529396 Boise_Idaho tx90p-1 pdsisc-1 coastalflood-1 -	coastalflood-1  NA NA NA NA NA NA NA NA NA
-Micron_Manassas -77.503845 38.750829 Manassas_Virginia tx90p-2 pdsisc-2 coastalflood-2 -	coastalflood-2  NA NA NA NA NA NA NA NA NA
-Micron_Singapore_Hqs 103.864621 1.318390 Singapore tx90p-1 pdsisc-1 coastalflood-1 - 	coastalflood-1  NA NA NA NA NA NA NA NA NA
+Micron_Manassas -77.503845 38.750829 Manassas_Virginia tx90p-2 pdsisc-2 coastalflood-2 -	coastalflood-2  -2.6214 -13.0852 -38.3489 -87.3447 -90 -90 -90 -90 -90
+Micron_Singapore_Hqs 103.864621 1.318390 Singapore tx90p-1 pdsisc-1 coastalflood-1 - 	coastalflood-1  -0.3466 -0.88 -1.9851 -4.3511 -9.7711 -32.4775 -83.7563 -90 -90
 Micron_Singapore_300mm_DRAM 103.767569 1.432186 Singapore tx90p-1 pdsisc-1 coastalflood-1 -	coastalflood-1  -0.3439 -0.8721 -1.9636 -4.2932 -9.6051 -31.7392 -81.6298 -90 -90
 Micron_Singapore_300mm_NAND 103.793645 1.454831 Singapore tx90p-1 pdsisc-1 coastalflood-1 -	coastalflood-1  -0.3439 -0.8721 -1.9636 -4.2932 -9.6051 -31.7392 -81.6298 -90 -90
 Micron_Singapore_200mm_NOR 103.866405 1.374790 Singapore tx90p-1 pdsisc-1 coastalflood-1 -	coastalflood-1  -0.3466 -0.88 -1.9851 -4.3511 -9.7711 -32.4775 -83.7563 -90 -90

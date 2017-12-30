@@ -3,6 +3,7 @@
 # TT - December 2017
 
 # Execution:  ./script_assemble_damages_v1 <facility locations file>
+# Example:    ./script_assemble_damages_v1 facility_locations_v2.csv
 
 # Get input.
 locfile=$1
