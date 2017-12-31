@@ -186,7 +186,8 @@ tabItem(tabName = "config",
                   uiOutput("selectInput_location")
                 ),
                 column(4,
-                  sliderInput("sliderInputYear","Year", min = 1975, max = 2050, value = 2018, sep = "", animate = TRUE)
+                  #sliderInput("sliderInputYear","Year", min = 1975, max = 2050, value = 2018, sep = "", animate = TRUE)
+                  sliderInput("sliderInputYear","Decade", min = 2010, max = 2090, value = 2010, sep = "", animate = TRUE, step=10)
                 ),
                 column(4,
                   uiOutput("selectInput_scenario")
