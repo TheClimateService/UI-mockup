@@ -43,8 +43,12 @@ server <- function(input, output, session) {
    })
    
    #Maps
+
    #Read in James's locations csv (based on Terry's)
-   corpLocations <- readr::read_csv("data/locations.csv")
+   #corpLocations <- readr::read_csv("data/TCSDB/locations.csv")
+   # TCSDB in excel format is read in ui.R via:  source("./data/TCSDB/load_tcsdb.r")
+   # The locations sheet is currently sheet 3.
+   corpLocations = dbsheet3
    
    output$facility_location_map <- renderLeaflet({
      leaflet(data = corpLocations) %>%
@@ -123,7 +127,12 @@ server <- function(input, output, session) {
   # riskVaR <- c(3.4,2.3,1.2,4.5,2.5,3.4,2.3,1.2,4.5,2.4,2.1,1.8,2.6,1.2)
 
   # Read in the output table. *** This CSV should be created by real code, not by James's Excel spreadsheet
-  corpTable <- readr::read_csv("data/TCSDB_temp_import.csv")
+  # corpTable <- readr::read_csv("data/TCSDB/TCSDB_temp_import.csv")
+  # TCSDB in excel format is read in ui.R via:  source("./data/TCSDB/load_tcsdb.r")
+  # The CorpRiskTable sheet is currently sheet 1.
+  # The version of this table with scoring-engine outputs for RCP8.5 and 9 decades is sheet 9.
+  # When using the decadal form, set the sliderInputYear to the decadal version in ui.R.
+   corpTable = dbsheet9
   
   # UI Input selectors for the corporate finance page, based on the database values  
   output$selectInput_location <- renderUI({

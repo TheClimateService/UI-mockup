@@ -33,8 +33,12 @@ library(evd)
 library(extRemes)
 library(shinyjs)
 library(plotly)
+library(readxl)
 
 # Data
+
+source("./data/TCSDB/load_tcsdb.r")
+
 # US SLR projections and historical extreme water levels.  Variables created are "proj" and "ewl".
 source("./data/sealevel_us/load_sealevel_data_us.r")
 source("./data/sealevel_us/function_annual_probability_withslr.r")

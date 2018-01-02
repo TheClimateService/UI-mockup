@@ -1,0 +1,46 @@
+
+# SCRIPT TO CONVERT TCSDB IMPORT FILE.
+# TT - December 2017
+
+# Execution:  ./script_convert_TCSDB_temp_import <multi-line version of TCSDB_temp_import.csv> <damage file converted to fit temp.import>
+# Example:  ./script_convert_TCSDB_temp_import TCSDB_temp_import.csv2 facility_locations_v2.csv.damages.allDFs.converted
+# Note that the second file above is created in the scoring_engine directory by script_convert_damages_2import.
+
+# Get input.
+origfile=$1
+damfile=$2
+
+# Get RCP8.5 and 2018-2026 lines from the origfile.
+grep RCP8 $origfile > temp1
+awk '{if(NR==1) print $0}' $origfile > temp.hdr
+cat temp.hdr temp1 > temp1b
+awk '{FS=","; if($(NF-1) <= 2026) print $0}' temp1b > temp2
+cat temp.hdr temp2 > temp2b
+#awk '{FS=","; print $1","$2","$3","$4","$5","$6","$7","}' temp2b > temp3
+awk '{FS=","; print $0","}' temp2b > temp3
+#mv temp3 TCSDB_temp_import.csv.leftsideonly
+
+# Merge with converted damage data and calculate VaR.
+paste temp3 $damfile > temp4
+awk '{FS=",";  \
+      if($2!="Physical") print $1","$2","$3","$4","$5","$6","$7;  \
+        else {VaR=100*(-$NF)/100; print $1","$2","$3","$4","$5","$6","VaR}  \
+     }' temp4 > temp5
+awk '{if(NR>1) print $0}' temp5 > temp5b
+cat temp.hdr temp5b > temp6
+
+# Change years 2018-2026 to decadtes 2010-2090.
+sed 's/,2026,/,2090,/g' temp6 > temp6a
+sed 's/,2025,/,2080,/g' temp6a > temp6b
+sed 's/,2024,/,2070,/g' temp6b > temp6c
+sed 's/,2023,/,2060,/g' temp6c > temp6d
+sed 's/,2022,/,2050,/g' temp6d > temp6e
+sed 's/,2021,/,2040,/g' temp6e > temp6f
+sed 's/,2020,/,2030,/g' temp6f > temp6g
+sed 's/,2019,/,2020,/g' temp6g > temp6h
+sed 's/,2018,/,2010,/g' temp6h > temp6i
+
+# Save results and clean up.
+mv temp6i $origfile.converted
+#rm temp*
+
