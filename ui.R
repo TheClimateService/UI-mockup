@@ -57,7 +57,7 @@ ui <- dashboardPage(title="The Climate Service",
   #includeScript("www/message-handler.js"),
 
   dashboardHeader(
-	title = img(src="logo-TCS-small.png", alt = "TCS", height = 50, align = "left")
+  	title = img(src="logo-TCS-small.png", alt = "TCS", height = 50, align = "left")
   ),
 
   ## Sidebar content
