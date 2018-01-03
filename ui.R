@@ -161,8 +161,10 @@ ui <- dashboardPage(title="The Climate Service",
 #               )#fluidRow
 #             ),#tabItem
 
-# CONFIG tab content
-tabItem(tabName = "config",
+# --------------------------------------
+# --------------  CONFIG --------------
+# --------------------------------------
+    tabItem(tabName = "config",
         h2("1) Configure your locations"),
         fluidRow(
          box(width=4, title = "Select a location to configure", uiOutput("rbLocations")),
@@ -177,10 +179,11 @@ tabItem(tabName = "config",
               )#contitionalPanel
          )#box
         )#fluidRow
-),#tabItem
+    ),#tabItem
 
-
-# --------------  CORPORATE tab content --------------
+# --------------------------------------
+# --------------  ANALYZE --------------
+# --------------------------------------
       tabItem(tabName = "analyze",
         h2("2) Analyze your corporate risk"),
         fluidRow(
@@ -208,6 +211,10 @@ tabItem(tabName = "config",
         )#tabBox
         ),#tabItem analyze
               
+# --------------------------------------
+# --------------  REPORT --------------
+# --------------------------------------
+
         tabItem(tabName = "report",
                 h2("3) Report your climate-related financial risk"),
                 fluidRow(
@@ -234,40 +241,25 @@ tabItem(tabName = "config",
                  )#fluidRow
         ), #tabItem report
         
-# This is James's old code to animate impacts - probably remove
-#               fluidRow(
-#                 tabBox(width = "500",
-# 		              tabPanel(title="Screening level",
-#                     selectInput("cbLocation","Location",
-#                                c("Boise","Singapore","Malaysia","Scotland"),
-#                                selected = c("Boise")
-#                     ),
-#                     sliderInput("siTimeframe", "Timeframe", 1, 30, 5, step=1, animate=TRUE),
-#                     htmlOutput('txtImpact1'),
-#                     htmlOutput('txtImpact2'),
-#                     htmlOutput('txtImpact3'),
-#                     hr(),
-#                     infoBoxOutput('infobox1')
-#                   )#tabPanel
-#                 )#tabBox
-#               )#fluidRow
-
-      # --------- Metodology sub-tab ------
+# --------------------------------------
+# --------------  METHODOLOGY ----------
+# --------------------------------------
       tabItem(tabName = "methodology",
         h2("Understand the details of your climate risk with the Cx Methodology"),
         fluidRow(
-          column(3,selectInput("selectCausalVariable","Causal Variable (Hazard)",c("Temperature","Coastal Flooding","Drought"))),
-          column(3,selectInput("selectDamageFunction","Damage Function",c("Cooling","Building Damage","Corn Yield")))
+          column(4,selectInput("selectCausalVariable","Causal Variable (Hazard)",c("Temperature","Coastal Flooding","Drought"))),
+          column(4,selectInput("selectDamageFunction","Damage Function",c("Cooling","Building Damage","Corn Yield")))
         ),#fluidrow select inputs
         fluidRow(
-          box(width=3,title="Ensemble Distributions Evolve Through Time", plotOutput("climplot5copy",height = 300)),
-          box(width=3,title="Impact on buildings",plotOutput("impactplot_building_flood_copy", height = 300)),
-          box(width=3,title="Financial function","need a graph of $(y) against impact %(x) "),
-          box(width=3,title="Probabilstic Value at Risk","need a distribution plot here of VaR")
+          box(width=4,title="Hazard (Cause/Likelihood)",plotOutput("climplot5copy",height = 300)),
+          box(width=4,title="Exposure (Mechanism/Severity)",plotOutput("impactplot_building_flood_copy", height = 300)),
+          box(width=4,title="Risk (Effect)","need a distribution plot here of VaR")
         )#fluidrow graphs
       ),#tabItem methodology
 
-      # --------- Portfolios tab ----------
+# --------------------------------------
+# --------------  PORTFOLIOS --------------
+# --------------------------------------
       tabItem(tabName = "portfolios",
         h2("Investment Portfolio Analyzer"),
         fluidRow(

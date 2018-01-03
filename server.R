@@ -46,7 +46,7 @@ server <- function(input, output, session) {
      # radioButtons('rbLocations',label = 'Select a location to configure',c('All locations',unique(as.character(corpTable$Location))))
      radioButtons('rbLocations',label='Select a location to configure', c('All locations',locs))
    })
-   
+
    #Maps
 
    #Read in James's locations csv (based on Terry's)
@@ -62,6 +62,10 @@ server <- function(input, output, session) {
    })
 
    
+# ----------------------------
+#         ANALYZE
+# ----------------------------  
+   
   # Read in the output table. *** This CSV should be created by real code, not by James's Excel spreadsheet
   # corpTable <- readr::read_csv("data/TCSDB/TCSDB_temp_import.csv")
   # TCSDB in excel format is read in ui.R via:  source("./data/TCSDB/load_tcsdb.r")
@@ -72,7 +76,7 @@ server <- function(input, output, session) {
   
   # UI Input selectors for the corporate finance page, based on the database values  
   output$selectInput_location <- renderUI({
-    selectInput('inputLocations',"Locations",c('All locations', unique(as.character(corpTable$Location))),selected='All locations',selectize = TRUE)
+    selectInput('inputLocations',"Locations",c('All locations', unique(subset(corpLocations, ParentCorpID == USER$ParentCorpID, select = LocationName))),selected='All locations',selectize = TRUE)
   })
   
   output$selectInput_scenario <- renderUI({
