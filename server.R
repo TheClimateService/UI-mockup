@@ -15,19 +15,21 @@ server <- function(input, output, session) {
 # -----------
   userDB = dbsheet10
    
-  observeEvent(input$btnLogin, {updateTabItems(session, 'sidebar', 'config')})
+  observeEvent(input$btnLogin, {
+    USER$ParentCorpID <- pull(subset(userDB, Username == input$Username, select = "ParentCorpID"))
+    updateTabItems(session, 'sidebar', 'config')})
   USER <- reactiveValues(LoggedIn = FALSE)
-  
+    
   output$login_response <- renderText({
     if (USER$LoggedIn == FALSE) {
         Id.username <- which(userDB$Username == input$Username)
         Id.password <- which(userDB$Password == input$Password)
         if (length(Id.username) > 0 & length(Id.password) > 0) {
           if (Id.username == Id.password) {
-            USER$LoggedIn <- TRUE
+            USER$ParentCorpID <- pull(subset(userDB, Username == input$Username, select = "ParentCorpID"))
             enable('btnLogin')
-            "Welcome!"
-          }
+            USER$LoggedIn <- TRUE
+            }
         } else  {
           "User name or password doesn't match"
         }
@@ -40,7 +42,7 @@ server <- function(input, output, session) {
 # ----------------------------
    #UI Inputs
    output$rbLocations <- renderUI({
-     locs = pull(unique(subset(corpTable, ParentCorpID == 1, select = Location)))
+     locs = pull(unique(subset(corpTable, ParentCorpID == USER$ParentCorpID, select = Location)))
      # radioButtons('rbLocations',label = 'Select a location to configure',c('All locations',unique(as.character(corpTable$Location))))
      radioButtons('rbLocations',label='Select a location to configure', c('All locations',locs))
    })

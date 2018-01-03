@@ -5,9 +5,8 @@ account: tcs1
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 206525
-bundleId: 1140028
+bundleId: 1160554
 url: https://tcs1.shinyapps.io/uimockup/
-when: 1513562278.17151
+when: 1515000987.08376
 asMultiple: FALSE
 asStatic: FALSE
-ignoredFiles: backups
