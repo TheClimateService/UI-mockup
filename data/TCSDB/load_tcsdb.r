@@ -15,6 +15,7 @@ dbsheet6 = read_excel(db,6)
 dbsheet7 = read_excel(db,7)
 dbsheet8 = read_excel(db,8)
 dbsheet9 = read_excel(db,9)
+dbsheet10 = read_excel(db,10)
 
 # Next create sheet 9 by reading in SE outputs and merging with sheet1.
 # dbs185 = dbs1 %>% filter(ScenarioName=="RCP8.5" & RiskYear<2019)

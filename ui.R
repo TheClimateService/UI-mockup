@@ -93,14 +93,13 @@ ui <- dashboardPage(title="The Climate Service",
   ## Body content
   dashboardBody(
     tabItems(
-    
       # Login tab content
       tabItem(tabName = "login",
               fluidRow(
                 tabBox(
                   tabPanel(title = "Log In",
-                    textInput("username","User Name",value=""),
-                    passwordInput("userpass","Password",value=""),
+                    textInput("Username","User Name",value=""),
+                    passwordInput("Password","Password",value=""),
                     textOutput("login_response"),
                     disabled(actionButton("btnLogin","Log in"))
                     ) #tabPanel
@@ -170,7 +169,6 @@ tabItem(tabName = "config",
          box(width=8,
              conditionalPanel("input.rbLocations != character(0)",
                 leafletOutput("facility_location_map"),
-                #htmlOutput("map_micron_singapore"),
                 hr(),
                 checkboxGroupInput("cbBusinessFunctions","Business functions performed at this location",
                          c("Clean Room Manufacturing","Shipping","Inventory Management","R&D","HR","Legal","Marketing/Sales","Corporate Governance"),

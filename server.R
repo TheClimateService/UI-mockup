@@ -11,35 +11,38 @@
 server <- function(input, output, session) {
 
 # -----------
-# Log in
+# LOG IN
 # -----------
+  userDB = dbsheet10
+   
+  observeEvent(input$btnLogin, {updateTabItems(session, 'sidebar', 'config')})
+  USER <- reactiveValues(LoggedIn = FALSE)
   
-  observeEvent(input$btnLogin, {updateTabItems(session, 'sidebar', 'corporate')})
-  
-  
-   output$login_response <- renderText({
-      m = ""
-      loggedIn=FALSE
-      if(input$username=="" | input$userpass=="") {m="Please enter user name and password"}
-#      if(input$username=="terry") {m="Welcome, terry"} else {m="Please enter user name and password"}
-#      if(input$username=="terry" && input$userpass=="terry") {m="Welcome, terry"}
-      if(input$username=="terry") {m="Welcome, terry"}
-      if(input$username=="james" & input$userpass=="james") {
-          loggedIn=TRUE
-          m="Welcome, James"
-          enable('btnLogin')
+  output$login_response <- renderText({
+    if (USER$LoggedIn == FALSE) {
+        Id.username <- which(userDB$Username == input$Username)
+        Id.password <- which(userDB$Password == input$Password)
+        if (length(Id.username) > 0 & length(Id.password) > 0) {
+          if (Id.username == Id.password) {
+            USER$LoggedIn <- TRUE
+            enable('btnLogin')
+            "Welcome!"
           }
-      paste("",m)
-    })
+        } else  {
+          "User name or password doesn't match"
+        }
+    }
+  })
+  
 
-
-
-# James start -----------------------------------------------------------
-
-   # -------- Configure ---------------
+# ----------------------------
+#         CONFIGURE
+# ----------------------------
    #UI Inputs
    output$rbLocations <- renderUI({
-     radioButtons('rbLocations',label = 'Select a location to configure',c(unique(as.character(corpTable$Location))),selected = character(0))
+     locs = pull(unique(subset(corpTable, ParentCorpID == 1, select = Location)))
+     # radioButtons('rbLocations',label = 'Select a location to configure',c('All locations',unique(as.character(corpTable$Location))))
+     radioButtons('rbLocations',label='Select a location to configure', c('All locations',locs))
    })
    
    #Maps
@@ -55,77 +58,8 @@ server <- function(input, output, session) {
        addTiles() %>%
        addMarkers(~lon, ~lat, popup = ~as.character(LocationName))
    })
+
    
-  # traffic light text for corp risk analyzer
-  
-  txtImpactColor1 <- reactive({
-    input$siTimeframe
-    name <- switch(input$siTimeframe,'green','green','green','green','yellow','yellow','yellow','yellow','red','red','red','red','red','red','red','red','red','red','red','red','red','red','red','red','red','red','red','red','red','red')
-    return( name=name )
-  })
-  
-  txtImpactColor2 <- reactive({
-    input$siTimeframe
-    name <- switch(input$siTimeframe,'green','green','green','green','green','green','yellow','yellow','yellow','yellow','yellow','red','red','red','red','red','red','red','red','red','red','red','red','red','red','red','red','red','red','red')
-    return( name=name )
-  })
-  
-  txtImpactColor3 <- reactive({
-    input$siTimeframe
-    name <- switch(input$siTimeframe,'green','green','yellow','yellow','yellow','yellow','red','red','red','red','red','red','red','red','red','red','red','red','red','red','red','red','red','red','red','red','red','red','red','red')
-    return( name=name )
-  })
-  
-  EPSVAR <- reactive({
-    input$siTimeframe
-    epsvarvalue <- switch(input$siTimeframe,'0.04','0.08','0.12','0.16','0.2','0.25','0.30','0.36','0.42','0.5','0.58','0.65','0.76','1.0','1.2','1.4','1.6','1.8','2.0','2.2','2.4','2.5','2.6','2.7','2.8','2.9','3.0','3.1','3.2','3.3')
-    return( epsvarvalue=epsvarvalue )
-  })
-  
-  output$infobox1 <- renderInfoBox({
-    x <- input$siTimeframe
-    color <- 'yellow'
-    if(x < 4) color <- 'green'
-    if(x > 10) color <- 'red'
-    infoBox(value = EPSVAR(), title = 'EPS Value at Risk', color = color, icon = icon("percent"))
-  })
-  
-  output$txtImpact1 <- renderUI({
-        div( HTML(sprintf("<text style='background-color:%s'>HVAC systems %s likely to be overloaded</text>", txtImpactColor1(), input$siTimeframe) ) )
-  })
-  
-  output$txtImpact2 <- renderUI({
-        div( HTML(sprintf("<text style='background-color:%s'>Drainage systems %s likely to be overloaded</text>", txtImpactColor2(), input$siTimeframe) ) )
-  })
-  
-  output$txtImpact3 <- renderUI({
-        div( HTML(sprintf("<text style='background-color:%s'>Energy costs for cooling %s likely to increase significantly</text>", txtImpactColor3(), input$siTimeframe) ) )
-  })
-  
-    observeEvent(input$toProjects, {
-    updateTabItems(session, "sidebar", "projects")
-  })
-
-  set.seed(122)
-  histdata <- rnorm(500)
-  
-
-# Reading corporate Database - maybe do this eventually, but CSV works for now
-  # con = dbConnect(drv=RSQLite::SQLite(), dbname="data/users/db.sqlite3")
-  # dbSendQuery(conn = db, "CREATE TABLE ValueAtRisk
-  #             (LocationID INTEGER,TCFDCategory TEXT,TCFDSubCat TEXT,ScenarioID INTEGER,)")
-  
-# This is all old  
-  # riskCategories <- c('Transition','Transition','Transition','Transition','Transition','Physical','Physical','Physical','Physical','Opportunity','Opportunity','Opportunity','Opportunity','Opportunity')
-  # riskSubCat <- c('Policy & Legal','Policy & Legal','Technology','Market','Reputation','Acute','Chronic','Chronic','Chronic','Resource Efficiency','Resource Efficiency','Resource Efficiency','Energy Source','Resilience')
-  # riskFactors <- c('Increased pricing of GHG emissions','Exposure to litigation','Costs to transition to lower emissions technology',
-  #                  'Increased stakeholder concern or negative stakeholder feedback','Increased cost of raw materials',
-  #                  'Increased severity of extreme weather events such as cyclones and floods',
-  #                  'Changes in precipitation patterns and extreme variability in weather patterns',
-  #                  'Rising mean temperatures','Rising sea levels','Energy efficiency','Water efficiency','Materials efficiency',
-  #                 'Use of lower-emission sources of energy','Renewable energy')
-  # riskVaR <- c(3.4,2.3,1.2,4.5,2.5,3.4,2.3,1.2,4.5,2.4,2.1,1.8,2.6,1.2)
-
   # Read in the output table. *** This CSV should be created by real code, not by James's Excel spreadsheet
   # corpTable <- readr::read_csv("data/TCSDB/TCSDB_temp_import.csv")
   # TCSDB in excel format is read in ui.R via:  source("./data/TCSDB/load_tcsdb.r")
