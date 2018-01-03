@@ -42,7 +42,7 @@ server <- function(input, output, session) {
 # ----------------------------
    #UI Inputs
    output$rbLocations <- renderUI({
-     locs = pull(unique(subset(corpTable, ParentCorpID == USER$ParentCorpID, select = Location)))
+     locs = pull(unique(subset(corpLocations, ParentCorpID == USER$ParentCorpID, select = LocationName)))
      # radioButtons('rbLocations',label = 'Select a location to configure',c('All locations',unique(as.character(corpTable$Location))))
      radioButtons('rbLocations',label='Select a location to configure', c('All locations',locs))
    })
@@ -56,7 +56,7 @@ server <- function(input, output, session) {
    corpLocations = dbsheet3
    
    output$facility_location_map <- renderLeaflet({
-     leaflet(data = corpLocations) %>%
+     leaflet(data = subset(corpLocations, ParentCorpID == USER$ParentCorpID, select = LocationID:lat)) %>%
        addTiles() %>%
        addMarkers(~lon, ~lat, popup = ~as.character(LocationName))
    })
