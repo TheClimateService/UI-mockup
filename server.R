@@ -137,14 +137,20 @@ server <- function(input, output, session) {
       file.copy("report.Rmd", tempReport, overwrite = TRUE)
       
       # Set up parameters to pass to Rmd document
-      params <- list(ParentCorpName = isolate(USER$ParentCorpName))
+      tempparams <- list(pParentCorpName = USER$ParentCorpName,
+                     pTCFDGova = input$TCFDGova,
+                     pTCFDGovb = input$TCFDGovb
+                     )
 
+      # Subset a table to pass to "knittr::kable in the RMD"
+      corpKable = subset(corpTable,(ParentCorpID == USER$ParentCorpID & RiskYear == 2030), select = Location:ValueAtRisk)
+      corpKableBoise = subset(corpKable,Location == "Boise", select = Location:ValueAtRisk)
       # Knit the document, passing in the `params` list, and eval it in a
       # child of the global environment (this isolates the code in the document
       # from the code in this app).
       rmarkdown::render(tempReport, output_file = file,
-                        params = params,
-                        envir = new.env(parent = globalenv())
+                        params = tempparams
+                        # envir = new.env(parent = globalenv())
       )
     }
   )

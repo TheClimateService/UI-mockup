@@ -219,8 +219,8 @@ ui <- dashboardPage(title="The Climate Service",
                 h2("3) Report your climate-related financial risk"),
                    tabsetPanel(
                       tabPanel(title = "Governance",
-                               textAreaInput("TCFD-Gov-a","Board Oversight", value="Describe the board's oversight of climate-related risks and opportunities."),
-                               textAreaInput("TCFD-Gov-b","Management's Role", value="Describe management's role in assessing and managing climate-related risks and opportunities.")
+                               textAreaInput(width = "100%","TCFDGova","Board Oversight", value="Describe the board's oversight of climate-related risks and opportunities."),
+                               textAreaInput("TCFDGovb","Management's Role", value="Describe management's role in assessing and managing climate-related risks and opportunities.")
                       ),
                       tabPanel(title = "Strategy",
                                textAreaInput("TCFD-Strat-a","Climate Risks and Opportunities", value = "Describe the climate-related risks and opportunities the organization has identified over the short, medium, and long term."),
@@ -234,8 +234,12 @@ ui <- dashboardPage(title="The Climate Service",
                       ),
                       tabPanel(title = "Metrics and Targets"),
                       tabPanel(title = "Report",
-                               "Download a draft report to a Microsoft Word file for your continued editing. The report will have all of the charts and graphs you created during analysis, and all of your TCFD reporting work.",
-                               downloadButton("report", "Generate report")
+                               box(title = "Download report",
+                                  "Download a draft report to a Microsoft Word file for your continued editing. The report will have all of the charts and graphs you created during analysis, and all of your TCFD reporting work.",
+                                  br(),
+                                  hr(),
+                                  downloadButton("report", "Generate report")
+                               )
                       )
                    )#tabSetPanel
         ), #tabItem report
