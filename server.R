@@ -15,11 +15,12 @@ server <- function(input, output, session) {
 # -----------
   userDB = dbsheet10
    
+  USER <- reactiveValues(LoggedIn = FALSE)
+  
   observeEvent(input$btnLogin, {
     USER$ParentCorpID <- pull(subset(userDB, Username == input$Username, select = "ParentCorpID"))
     USER$ParentCorpName <- pull(subset(userDB, Username == input$Username, select = "ParentCorpName"))
     updateTabItems(session, 'sidebar', 'config')})
-  USER <- reactiveValues(LoggedIn = FALSE)
     
   output$login_response <- renderText({
     if (USER$LoggedIn == FALSE) {
@@ -136,8 +137,8 @@ server <- function(input, output, session) {
       file.copy("report.Rmd", tempReport, overwrite = TRUE)
       
       # Set up parameters to pass to Rmd document
-      params <- list(ParentCorpName = pull(subset(userDB, Username == input$Username, select = "ParentCorpName")))
-      
+      params <- list(ParentCorpName = isolate(USER$ParentCorpName))
+
       # Knit the document, passing in the `params` list, and eval it in a
       # child of the global environment (this isolates the code in the document
       # from the code in this app).

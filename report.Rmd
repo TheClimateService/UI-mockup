@@ -2,11 +2,12 @@
 title: "Climate-related Financial Disclosures Report"
 output: word_document
 params:
-  ParentCorpName: NA
+  ParentCorpName: "placeholder"
 ---
 
 ## Summary
 Climate affects `r params$ParentCorpName` in many ways...
+
 
 ```{r echo=FALSE}
 # The `params` object is available in the document.
