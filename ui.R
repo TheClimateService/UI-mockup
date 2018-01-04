@@ -235,7 +235,8 @@ ui <- dashboardPage(title="The Climate Service",
                           ),
                           tabPanel(title = "Metrics and Targets"),
                           tabPanel(title = "Report",
-                                   actionButton("TCFD-Report", "Export Report")
+                                   sliderInput("slider", "Slider", 1, 100, 50),
+                                   downloadButton("report", "Generate report")
                           )
                    )#tabBox
                  )#fluidRow

@@ -17,6 +17,7 @@ server <- function(input, output, session) {
    
   observeEvent(input$btnLogin, {
     USER$ParentCorpID <- pull(subset(userDB, Username == input$Username, select = "ParentCorpID"))
+    USER$ParentCorpName <- pull(subset(userDB, Username == input$Username, select = "ParentCorpName"))
     updateTabItems(session, 'sidebar', 'config')})
   USER <- reactiveValues(LoggedIn = FALSE)
     
@@ -121,26 +122,52 @@ server <- function(input, output, session) {
       corpTable
   })
 
+  # ----------------------------
+  #         REPORT
+  # ----------------------------  
+  
+  output$report <- downloadHandler(
+    filename = "report.docx",
+    content = function(file) {
+      # Copy the report file to a temporary directory before processing it, in
+      # case we don't have write permissions to the current working dir (which
+      # can happen when deployed).
+      tempReport <- file.path(tempdir(), "report.Rmd")
+      file.copy("report.Rmd", tempReport, overwrite = TRUE)
+      
+      # Set up parameters to pass to Rmd document
+      params <- list(ParentCorpName = pull(subset(userDB, Username == input$Username, select = "ParentCorpName")))
+      
+      # Knit the document, passing in the `params` list, and eval it in a
+      # child of the global environment (this isolates the code in the document
+      # from the code in this app).
+      rmarkdown::render(tempReport, output_file = file,
+                        params = params,
+                        envir = new.env(parent = globalenv())
+      )
+    }
+  )
   
   
-  output$map_micron_boise <- renderUI({
-    input$Member
-    # iframe finds its target source in the www directory.
-    thismap <- tags$iframe(src="map.html", height=300, width=300)
-    thismap
-  })
-
-  output$map_micron_singapore <- renderUI({
-    # iframe finds its target source in the www directory.
-    thismap <- tags$iframe(src="map_singapore.html", height=300, width=300)
-    thismap
-  })
-
-  output$plot1 <- renderPlot({
-    data <- histdata[seq_len(input$slider)]
-    hist(data)
-  })
-# James end -----------------------------------------------------------
+  
+#I think this is all old & can be deleted soon.  
+  # output$map_micron_boise <- renderUI({
+  #   input$Member
+  #   # iframe finds its target source in the www directory.
+  #   thismap <- tags$iframe(src="map.html", height=300, width=300)
+  #   thismap
+  # })
+  # 
+  # output$map_micron_singapore <- renderUI({
+  #   # iframe finds its target source in the www directory.
+  #   thismap <- tags$iframe(src="map_singapore.html", height=300, width=300)
+  #   thismap
+  # })
+  # 
+  # output$plot1 <- renderPlot({
+  #   data <- histdata[seq_len(input$slider)]
+  #   hist(data)
+  # })
 
 
 # Terry -----------------------------------------------------------
