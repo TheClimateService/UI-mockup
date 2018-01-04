@@ -8,20 +8,25 @@
 # Get input.
 locfile=$1
 awk '{if(NR==1) print $0}' $locfile > temploc.hdr
-awk '{if($1!="facility") print $0}' $locfile | sort > temploc.data
+#awk '{if($1!="facility") print $0}' $locfile | sort > temploc.data
+awk '{if(NR>1) print $0}' $locfile | sort > temploc.data
 
 # Assemble facility-level damage files in the current directory.
-cat *damages > temp1
+cat $locfile*damages > temp1
 awk '{if(NR==1) print $0}' temp1 > temp1.hdr
-awk '{if($1!="facility") print $0}' temp1 | sort > temp1.data
+#awk '{if($1!="facility") print $0}' temp1 | sort > temp1.data
+awk '{if(substr($1,1,8)!="Location") print $0}' temp1 | sort > temp1.data
 cat temp1.hdr temp1.data > temp2
 
 # Calculate total damage at each facility.
 echo LASTLINE >> temp2
 awk '{if(NR==1) {imin=NF-8; imax=NF};  \
-      if($1==lastfac)  {for(i=imin; i<=imax; i++) score[i]=score[i]+$i}  \
+      #if($1==lastfac)  {for(i=imin; i<=imax; i++) score[i]=score[i]+$i}  \
+      split($1,array,"_");  \
+      if(array[1]==lastfac)  {for(i=imin; i<=imax; i++) score[i]=score[i]+$i}  \
          else {for(i=imin; i<=imax; i++) scoreall=scoreall" "score[i];  \
-               print "z--allDFs--z",scoreall; lastfac=$1; scoreall="";  \
+               #print "z--allDFs--z",scoreall; lastfac=$1; scoreall="";  \
+               print "z--allDFs--z",scoreall; lastfac=array[1]; scoreall="";  \
                if($1!="LASTLINE") for(i=imin; i<=imax; i++) score[i]=$i }  \
      }' temp2 > temp3
 awk '{if(NR>1) print $0}' temp3 > temp4
@@ -32,24 +37,34 @@ awk '{if(NR>1) print $0}' temp5 > temp6
    
 # Integrate total damage at each facility with individual damages.
 cat temp6 temp1.data | sort > temp7
-cat temp1.hdr temp7 > temp8
+# array[1] below is the LocationID and array[2] is the ParentCorpID.
+awk '{split($1,array,"_"); print array[2],array[1],$0}' temp7 | sort -n -k 1 | cut -d " " -f 3- > temp7b
+#cat temp1.hdr temp7 > temp8
 
 # Calculate company/equity damage.
 grep allDF temp7 > temp9
-echo LASTLINE >> temp9
+# array[1] below is the LocationID and array[2] is the ParentCorpID.
+awk '{split($1,array,"_"); print array[2],$0}' temp9 | sort -n -k 1 | cut -d " " -f 2- > temp9b
+echo LASTLINE >> temp9b
 awk '{split($1,array,"_");  \
       if(NR==1) {imin=NF-8; imax=NF; nfac=1};  \
-      if(array[1]==lastfac)  {for(i=imin; i<=imax; i++) score[i]=score[i]+$i; nfac=nfac+1}  \
+      #if(array[1]==lastfac)  {for(i=imin; i<=imax; i++) score[i]=score[i]+$i; nfac=nfac+1}  \
+      if(array[2]==lastfac)  {for(i=imin; i<=imax; i++) score[i]=score[i]+$i; nfac=nfac+1}  \
          else {for(i=imin; i<=imax; i++) scoreall=scoreall" "score[i]/nfac;  \
-               print lastfac"_all_"nfac"_facilities - - - - - - -","z--allthisco--z",scoreall; lastfac=array[1]; scoreall=""; nfac=1;  \
+               #print lastfac"_all_"nfac"_facilities - - - - - - -","z--allthisco--z",scoreall; lastfac=array[1]; scoreall=""; nfac=1;  \
+               print lastfac"_all_"nfac"_facilities - - - - - - -","z--allthisco--z",scoreall; lastfac=array[2]; scoreall=""; nfac=1;  \
                if($1!="LASTLINE") for(i=imin; i<=imax; i++) score[i]=$i }  \
-     }' temp9 > temp10
+     }' temp9b > temp10
 awk '{if(NR>1) print $0}' temp10 > temp11
-echo "company_facilities - - - - - - - df_used dperiod1 dperiod2 dperiod3 dperiod4 dperiod5 dperiod6 dperiod7 dperiod8 dperiod9" > temp11.hdr
+echo "ParentCorpID_allfacilities - - - - - - - df_used dperiod1 dperiod2 dperiod3 dperiod4 dperiod5 dperiod6 dperiod7 dperiod8 dperiod9" > temp11.hdr
 echo "----------------------------------------------------------------------" > temp.brk
-cat temp.brk temp11.hdr temp.brk temp11 temp.brk temp1.hdr temp.brk temp7 > temp13
+cat temp.brk temp11.hdr temp.brk temp11 temp.brk temp1.hdr temp.brk temp7b > temp13
+cat temp1.hdr temp7b > temp14
+sed 's/_/ /' temp14 > temp14a
+sed 's/_/ /' temp14a > temp14b
    
 # Save results and clean up.
 mv temp13 $locfile.damages.allDFs
+mv temp14b $locfile.damages.allDFs.facilities.only.4r
 rm temp*
 

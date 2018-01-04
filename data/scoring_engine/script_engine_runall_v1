@@ -3,6 +3,9 @@
 # TT - December 2017
 
 # Execution:  ./script_engine_runall_v1 <facilities file> <damage-function file>
+# Example:    ./script_engine_runall_v1 TCSDB_structure_v3_locations.csv damage_functions_v1.csv
+
+# N.B. - Script commands below assume that a copy of both the facilities file and the damage-function file are located in each indicator sub-directory.
 
 # Get input.
 facfile=$1
