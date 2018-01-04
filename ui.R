@@ -218,21 +218,26 @@ ui <- dashboardPage(title="The Climate Service",
         tabItem(tabName = "report",
                 h2("3) Report your climate-related financial risk"),
                    tabsetPanel(
-                      tabPanel(title = "Governance",
-                               textAreaInput(width = "100%","TCFDGova","Board Oversight", value="Describe the board's oversight of climate-related risks and opportunities."),
+                      tabPanel(title = "Governance", box(title = "Describe your governance of climate-related risks",
+                               textAreaInput("TCFDGova","Board Oversight", value="Describe the board's oversight of climate-related risks and opportunities."),
                                textAreaInput("TCFDGovb","Management's Role", value="Describe management's role in assessing and managing climate-related risks and opportunities.")
-                      ),
-                      tabPanel(title = "Strategy",
+                      )),
+                      tabPanel(title = "Strategy", box(title = "Describe your strategy for identifying risks and impacts",
                                textAreaInput("TCFD-Strat-a","Climate Risks and Opportunities", value = "Describe the climate-related risks and opportunities the organization has identified over the short, medium, and long term."),
                                checkboxGroupInput("chkbxRisks","Risks & Opportunities", c("Policy & Legal Risk","Technology Risk","Market Risk","Reputation Risk","Acute Physical Risk","Chronic Physical Risk","Resource Efficiency","Energy Source","Products/Services","Markets","Resilience"),selected = c("Energy Source","Acute Physical Risk","Chronic Physical Risk")),
-                               textAreaInput("TCFD-Strat-b","Impact of Risks", value = "Describe the impact of climate-related risks and opportunities on the organization's businesses, strategy, and financial planning.")
-                      ),
-                      tabPanel(title = "Risk Management",
+                               textAreaInput("TCFD-Strat-b","Impact of Risks", value = "Describe the impact of climate-related risks and opportunities on the organization's businesses, strategy, and financial planning."),
+                               textAreaInput("TCFD-Strat-c","Scenarios", value = "Describe the resilience of the organization’s strategy, taking into consideration different climate-related scenarios, including a 2°C or lower scenario.")
+                      )),
+                      tabPanel(title = "Risk Management", box(title = "Describe your climate-related risk management",
                                textAreaInput("TCFD-Gov-a","Processes for Identifying Risks", value="Describe the processes for identifying & assessing climate-related risks and opportunities."),
                                textAreaInput("TCFD-Gov-b","Processes for Managing", value="Describe the processes managing climate-related risks."),
-                               textAreaInput("TCFD-Gov-a","Process Integration", value="Describe how processes for identifying, assessing, and managing climate-related risks are intgrated into the organization's overall management.")
-                      ),
-                      tabPanel(title = "Metrics and Targets"),
+                               textAreaInput("TCFD-Gov-c","Process Integration", value="Describe how processes for identifying, assessing, and managing climate-related risks are intgrated into the organization's overall management.")
+                      )),
+                      tabPanel(title = "Metrics and Targets", box(title = "Describe your metrics and targets",
+                               textAreaInput("TCFD-MT-a","Metrics", value="Disclose the metrics used by the organization to assess climate-related risks and opportunities in line with its strategy and risk management process."),
+                               textAreaInput("TCFD-MT-b","GHG Emissions", value="Disclose Scope 1, Scope 2, and, if appropriate, Scope 3 greenhouse gas (GHG) emissions, and the related risks."),
+                               textAreaInput("TCFD-MT-c","Targets", value="Describe the targets used by the organization to manage climate-related risks and opportunities and performance against targets.")
+                               )),
                       tabPanel(title = "Report",
                                box(title = "Download report",
                                   "Download a draft report to a Microsoft Word file for your continued editing. The report will have all of the charts and graphs you created during analysis, and all of your TCFD reporting work.",
@@ -251,12 +256,13 @@ ui <- dashboardPage(title="The Climate Service",
         h2("Understand the details of your climate risk with the Cx Methodology"),
         fluidRow(
           column(4,selectInput("selectCausalVariable","Causal Variable (Hazard)",c("Temperature","Coastal Flooding","Drought"))),
-          column(4,selectInput("selectDamageFunction","Damage Function",c("Cooling","Building Damage","Corn Yield")))
+          column(4,selectInput("selectDamageFunction","Damage Function",c("Cooling","Building Damage","Corn Yield"))),
+          column(4,selectInput("selectPeriod","Time Period",c("1980","1990","2000","2010","2020","2030","2040","2050","2060","2070","2080","2090","2100")))
         ),#fluidrow select inputs
         fluidRow(
           box(width=4,title="Hazard (Cause/Likelihood)",plotOutput("climplot5copy",height = 300)),
           box(width=4,title="Exposure (Mechanism/Severity)",plotOutput("impactplot_building_flood_copy", height = 300)),
-          box(width=4,title="Risk (Effect)","need a distribution plot here of VaR")
+          box(width=4,title="Risk (Effect)","Loss curve here of VaR")
         )#fluidrow graphs
       ),#tabItem methodology
 
