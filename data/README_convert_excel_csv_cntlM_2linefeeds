@@ -1,8 +1,0 @@
-
-Since the sed 's/^M/\n/g' command does not work, use the following to convert a single line csv export from excel into one line per record:
-
-	cat junk | tr "^M" "\n" > junk2
-
-On the command line, the cntl-M symbol is obtained by entering cntl-V and then cntl-M.
-
-
