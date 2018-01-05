@@ -1,0 +1,28 @@
+---
+title: "FAQ's"
+output: pdf_document
+---
+
+### Q: What is "climate"?
+A: Even such a simple term as "climate" is used in a variety of ways. Perhaps the most useful definition is "climate is the statistics of weather". Whereas weather forecasts rapidly lose skill after 10-14 days, climate statistics can provide insight into the likelihood the occurrence of a particular weather event.
+
+Climate *change* refers to the fact that the statistics of weather have changed and are expected to continue to change. Natural variability such as oscillations in ocean temperatures and even the sunspot cycle produces some fluctuation in the statistics. However,  natural variability is not responsible for the observed and projected phenomenon called "global warming" which is attributable to the buildup of heat-trapping gasses in the atmosphere.
+
+### Q: Why does climate matter to business?
+A: Extreme weather events such as storms and floods can cause large disruptions in business operations and damage assets. These are the very visible and tangible effects we read about in the news, and while they are changing, they are also able to be statstically modeled.
+
+Longer-term trends in weather such as increases heavy rainfall, increases in high temperatures, and increases in droughts can also affect business. Often, business systems and assets are built to function properly within the normal range of weather at the time they were built. As the weather changes, engineering tolerances can be exceeded, assets can degrade more quickly than expected, and worker productivity can be impaired.
+
+### Q: What is "climate risk"?
+A: The term "climate risk" is used in a variety of ways, but perhaps the most useful for corporate risk analysis is as a shorthand for "information about the risks and opportunities presented by climate change". This definition not only encompases the physical risks posed to corporations by such events as flood, drought, storms, and heatwaves, but also the risks posed by the rapid transition to a low-carbon economy that is underway. It also includes the business opportunities presented by the externalities of climate change, such as efficiency in the use of water, energy, and materials, and the benefits of using renewable energy.
+
+### Q: How does climate risk differ from typical sustainability concerns?
+A: Typical sustainability concerns (often called "ESG" for Environmental, Social, and Governance) focus on the company's effect on the climate. Climate risk focuses on the climate's effect on the company.
+
+### Q: What is the TCFD?
+A: The Task Force on Climate-Related Financial Disclosures (TCFD) was established in 2015 by the Financial Stability Board (FSB). It is an industry-led group chaired by Michael R. Bloomberg. The TCFD was tasked to develop a framework for companies to disclose climate-related financial risk in a voluntary and consistent way. The TCFD published its final recommendations in June 2017 after extensive industry review. 
+
+In December 2017, Michael Bloomberg announced that two hundred thirty-seven companies with a combined market capitalization of over $6.3 trillion have publicly committed to support the TCFD. This includes over 150 financial firms, responsible for assets of over $81.7 trillion. 
+
+### Q: What is climate analytics and how can it help me?
+A: Climate anlaytics is a subdiscipline of risk analytics. It uses well-established methodologies for risk assessment and management to create insights on the impacts of climate on organizations. 

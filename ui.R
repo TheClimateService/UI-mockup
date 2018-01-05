@@ -70,12 +70,8 @@ ui <- dashboardPage(title="The Climate Service",
           menuSubItem("1) Configure Locations",tabName = "config"),
           menuSubItem("2) Analyze Risks",tabName = "analyze"),
           menuSubItem("3) Report TCFD",tabName = "report"),
-          menuSubItem("Methodology", tabName = "methodology", icon = icon("cog"))
-      ),
+          menuSubItem("Methodology", tabName = "methodology", icon = icon("cog"))),
       menuItem("Portfolio Analyzer", tabName = "portfolios", icon = icon("briefcase")),
-#     menuItem("Compliance Reporter", tabName = "plans", icon = icon("line-chart"),
-#         menuSubItem("Compliance - TCFD", tabName = "TCFD")
-#     ), #menuItem
       menuItem("Technical Details", tabName = "overview", icon = icon("podcast"),
       	  menuSubItem("LOCALIZED CLIMATE PROBABILITIES", tabName = "localclimate", icon = icon("cubes")),
       	  menuSubItem("SECTOR IMPACT FUNCTIONS", tabName = "impactfunctions", icon = icon("cloud-download", lib = "glyphicon")),
@@ -85,10 +81,10 @@ ui <- dashboardPage(title="The Climate Service",
       	  menuSubItem("ADAPTATION BENEFIT/COST PLANNING", tabName = "adaptationplanning", icon = icon("tree-deciduous", lib = "glyphicon")),
       	  menuSubItem("OVERALL CLIMATE SCORE", tabName = "climatescore", icon = icon("certificate", lib = "glyphicon")),
       	  menuSubItem("DATABASE", tabName = "database", icon = icon("database")),
-      	  menuSubItem("Links", tabName = "links", icon = icon("external-link"))
-      ) #menuItem
+      	  menuSubItem("Links", tabName = "links", icon = icon("external-link"))),
+        menuItem("FAQ's", tabName = "faqs", icon = icon("question"))
     	) #sidebarMenu
-  ), #dashBoardSidebar
+  ), #dashboardSidebar
 
   ## Body content
   dashboardBody(
@@ -191,8 +187,7 @@ ui <- dashboardPage(title="The Climate Service",
                   uiOutput("selectInput_location")
                 ),
                 column(4,
-                  #sliderInput("sliderInputYear","Year", min = 1975, max = 2050, value = 2018, sep = "", animate = TRUE)
-                  sliderInput("sliderInputYear","Decade", min = 2010, max = 2090, value = 2010, sep = "", animate = TRUE, step=10)
+                  sliderInput("sliderInputYear","Decade", min = 2010, max = 2090, value = 2020, sep = "", animate = TRUE, step=10)
                 ),
                 column(4,
                   uiOutput("selectInput_scenario")
@@ -257,12 +252,12 @@ ui <- dashboardPage(title="The Climate Service",
         fluidRow(
           column(4,selectInput("selectCausalVariable","Causal Variable (Hazard)",c("Temperature","Coastal Flooding","Drought"))),
           column(4,selectInput("selectDamageFunction","Damage Function",c("Cooling","Building Damage","Corn Yield"))),
-          column(4,selectInput("selectPeriod","Time Period",c("1980","1990","2000","2010","2020","2030","2040","2050","2060","2070","2080","2090","2100")))
+          column(4,selectInput("selectPeriod","Time Period",choices = c("1980","1990","2000","2010","2020","2030","2040","2050","2060","2070","2080","2090","2100")))
         ),#fluidrow select inputs
         fluidRow(
           box(width=4,title="Hazard (Cause/Likelihood)",plotOutput("climplot5copy",height = 300)),
           box(width=4,title="Exposure (Mechanism/Severity)",plotOutput("impactplot_building_flood_copy", height = 300)),
-          box(width=4,title="Risk (Effect)","Loss curve here of VaR")
+          box(width=4,title="Risk (Effect)","Loss curve  of VaR", plotOutput("losscurve",height=300))
         )#fluidrow graphs
       ),#tabItem methodology
 
@@ -828,7 +823,19 @@ ui <- dashboardPage(title="The Climate Service",
 	  textOutput("database2_write")
 
         ) #end fluidRow
-      ) #end database tabItem
+      ), #end database tabItem
+
+# --------------------------------------
+#                 FAQ's
+# --------------------------------------
+      tabItem(tabName = "faqs",
+              h2("Frequently Asked Questions"),
+              fluidRow(
+                box(
+                  includeMarkdown("faqs.rmd")                
+                )
+              )#fluidRow
+      )#tabItem
 
     ),#tabItems
   hr(),

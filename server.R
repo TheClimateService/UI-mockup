@@ -38,7 +38,6 @@ server <- function(input, output, session) {
     }
   })
   
-
 # ----------------------------
 #         CONFIGURE
 # ----------------------------
@@ -93,7 +92,7 @@ server <- function(input, output, session) {
     if (input$inputLocations == 'All locations') {
       corpTable <- corpTable[which(corpTable$RiskYear == input$sliderInputYear),]
     }
-    plot_ly(corpTable, x = ~TCFDCategoryName, y = ~ValueAtRisk, type='bar', text=corpTable$RiskFactorName) %>%
+    plot_ly(corpTable, x = ~TCFDCategoryName, y = ~ValueAtRisk, type='bar', text=corpTable$RiskFactorName, marker=list(color=brewer.pal(6,"Spectral"))) %>%
       layout(yaxis = list(title = 'Impact ($M)'), barmode = 'stack')
   })
   
@@ -466,6 +465,9 @@ server <- function(input, output, session) {
     legend("topright", inset=.05, title="Periods", labels, lwd=3, lty=ltypes, col=colors)
   })
 
+  output$losscurve <- renderImage({list(src = "./images/Mandel-121514-graph.png", height="220px", alt = paste("loss curve"))
+  }, deleteFile = FALSE)
+  
   #### This is just for an example on the methodology tab - delete when replaced with real code
   output$climplot5copy <- renderPlot({
     shapes <- c(81.8730, 93.0240, 88.9460, 84.7620, 95.8550, 90.0690, 86.1060, 90.3700, 91.5810)
