@@ -74,7 +74,7 @@ server <- function(input, output, session) {
   # The version of this table with scoring-engine outputs for RCP8.5 and 9 decades is sheet 9.
   # When using the decadal form, set the sliderInputYear to the decadal version in ui.R.
    corpTable = dbsheet9
-  
+
   # UI Input selectors for the corporate finance page, based on the database values  
   output$selectInput_location <- renderUI({
     selectInput('inputLocations',"Locations",c('All locations', unique(subset(corpLocations, ParentCorpID == USER$ParentCorpID, select = LocationName))),selected='All locations',selectize = TRUE)
@@ -87,39 +87,36 @@ server <- function(input, output, session) {
   # Stacked bar chart
   output$stackedCorpFinImpactsPlot <- renderPlotly({
     if (input$inputLocations != 'All locations') {
-      corpTable <- corpTable[which(corpTable$Location == input$inputLocations & corpTable$RiskYear == input$sliderInputYear),]
+      corpTable <- corpTable[which(corpTable$ParentCorpID == USER$ParentCorpID & corpTable$Location == input$inputLocations & corpTable$RiskYear == input$sliderInputYear),]
     }
     if (input$inputLocations == 'All locations') {
-      corpTable <- corpTable[which(corpTable$RiskYear == input$sliderInputYear),]
+      corpTable <- corpTable[which(corpTable$ParentCorpID == USER$ParentCorpID & corpTable$RiskYear == input$sliderInputYear),]
     }
-    plot_ly(corpTable, x = ~TCFDCategoryName, y = ~ValueAtRisk, type='bar', text=corpTable$RiskFactorName, marker=list(color=brewer.pal(6,"Spectral"))) %>%
+    plot_ly(corpTable, x = ~TCFDCategoryName, y = ~ValueAtRisk, type='bar', text=corpTable$RiskFactorName, marker=list(color=brewer.pal(36,"Spectral"))) %>%
       layout(yaxis = list(title = 'Impact ($M)'), barmode = 'stack')
   })
   
   # Pie chart
   output$pieCorpFinImpactsPlot <- renderPlotly({
     if (input$inputLocations != 'All locations') {
-      corpTable <- corpTable[which(corpTable$Location == input$inputLocations & corpTable$RiskYear == input$sliderInputYear),]
+      corpTable <- corpTable[which(corpTable$ParentCorpID == USER$ParentCorpID & corpTable$Location == input$inputLocations & corpTable$RiskYear == input$sliderInputYear),]
     }
     if (input$inputLocations == 'All locations') {
-      corpTable <- corpTable[which(corpTable$RiskYear == input$sliderInputYear),]
-      # output$errorMessage <- renderText({
-      #   paste("got to equal All locations:", str(corpTable$))
-      # })
+      corpTable <- corpTable[which(corpTable$ParentCorpID == USER$ParentCorpID & corpTable$RiskYear == input$sliderInputYear),]
     }
     plot_ly(corpTable[order(corpTable$ValueAtRisk),], labels= ~RiskFactorName, values= ~ValueAtRisk, textinfo = 'label+percent', text = ~paste('$', ValueAtRisk, ' Million'), type='pie')
   })  
   
   #Data table
   output$corpFinImpacts <- DT::renderDataTable({
-    # colnames(corpTable) = c('TCFD Categories','Subcategory','Risk Factor','Value at Risk ($M)')  #----Can put this back at some point
+     #colnames(corpTable) = c('Location','TCFD Category','Subcategory','Risk Factor','Scenario','Year','Value at Risk ($M)') #someday figure this out
       if (input$inputLocations != 'All locations') {
-        corpTable <- corpTable[which(corpTable$Location == input$inputLocations & corpTable$RiskYear == input$sliderInputYear),]
+        corpTable <- corpTable[which(corpTable$ParentCorpID == USER$ParentCorpID & corpTable$Location == input$inputLocations & corpTable$RiskYear == input$sliderInputYear),]
       }
       if (input$inputLocations == 'All locations') {
-        corpTable <- corpTable[which(corpTable$RiskYear == input$sliderInputYear),]
+        corpTable <- corpTable[which(corpTable$ParentCorpID == USER$ParentCorpID & corpTable$RiskYear == input$sliderInputYear),]
       }
-      corpTable
+      corpTable[1:7]
   })
 
   # ----------------------------
