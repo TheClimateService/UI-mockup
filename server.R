@@ -92,20 +92,56 @@ server <- function(input, output, session) {
     if (input$inputLocations == 'All locations') {
       corpTable <- corpTable[which(corpTable$ParentCorpID == USER$ParentCorpID & corpTable$RiskYear == input$sliderInputYear),]
     }
-    plot_ly(corpTable, x = ~TCFDCategoryName, y = ~ValueAtRisk, type='bar', text=corpTable$RiskFactorName, marker=list(color=brewer.pal(36,"Spectral"))) %>%
+    plot_ly(corpTable, x = ~TCFDCategoryName, y = ~ValueAtRisk, type='bar', text=corpTable$RiskFactorName, marker = list(color = colorRampPalette(brewer.pal(11,"Spectral"))(36))) %>%
       layout(yaxis = list(title = 'Impact ($M)'), barmode = 'stack')
   })
   
   # Pie chart
-  output$pieCorpFinImpactsPlot <- renderPlotly({
+  # output$pieCorpFinImpactsPlot <- renderPlotly({
+  #   if (input$inputLocations != 'All locations') {
+  #     corpTable <- corpTable[which(corpTable$ParentCorpID == USER$ParentCorpID & corpTable$Location == input$inputLocations & corpTable$RiskYear == input$sliderInputYear),]
+  #   }
+  #   if (input$inputLocations == 'All locations') {
+  #     corpTable <- corpTable[which(corpTable$ParentCorpID == USER$ParentCorpID & corpTable$RiskYear == input$sliderInputYear),]
+  #   }
+  #   plot_ly(corpTable[order(corpTable$ValueAtRisk),], labels= ~RiskFactorName, values= ~ValueAtRisk, textinfo = 'label+percent', text = ~paste('$', ValueAtRisk, ' Million'), type='pie')
+  # })  
+  
+  #barByRiskFactor
+  output$barByRiskFactor <- renderPlotly({
     if (input$inputLocations != 'All locations') {
       corpTable <- corpTable[which(corpTable$ParentCorpID == USER$ParentCorpID & corpTable$Location == input$inputLocations & corpTable$RiskYear == input$sliderInputYear),]
     }
     if (input$inputLocations == 'All locations') {
       corpTable <- corpTable[which(corpTable$ParentCorpID == USER$ParentCorpID & corpTable$RiskYear == input$sliderInputYear),]
     }
-    plot_ly(corpTable[order(corpTable$ValueAtRisk),], labels= ~RiskFactorName, values= ~ValueAtRisk, textinfo = 'label+percent', text = ~paste('$', ValueAtRisk, ' Million'), type='pie')
-  })  
+    corpTable <- dplyr::arrange(corpTable,corpTable$ValueAtRisk)
+    plot_ly(x=corpTable$ValueAtRisk, y=corpTable$RiskFactorName, type = 'bar', orientation = 'h') %>% layout(margin = list(l = 200))
+  }) 
+  
+  output$barByLocation <- renderPlotly({
+    if (input$inputLocations != 'All locations') {
+      corpTable <- corpTable[which(corpTable$ParentCorpID == USER$ParentCorpID & corpTable$Location == input$inputLocations & corpTable$RiskYear == input$sliderInputYear),]
+    }
+    if (input$inputLocations == 'All locations') {
+      corpTable <- corpTable[which(corpTable$ParentCorpID == USER$ParentCorpID & corpTable$RiskYear == input$sliderInputYear),]
+    }
+    plot_ly(corpTable, x = ~Location, y = ~ValueAtRisk, type='bar', text=corpTable$RiskFactorName, marker = list(color = colorRampPalette(brewer.pal(11,"Spectral"))(36))) %>%
+      layout(yaxis = list(title = 'Impact ($M)'), barmode = 'stack')
+  }) 
+  
+  output$areaByTime <- renderPlotly({
+    if (input$inputLocations != 'All locations') {
+      corpTable <- corpTable[which(corpTable$ParentCorpID == USER$ParentCorpID & corpTable$Location == input$inputLocations),]
+    }
+    if (input$inputLocations == 'All locations') {
+      corpTable <- corpTable[which(corpTable$ParentCorpID == USER$ParentCorpID),]
+    }
+    corpTableWide <- corpTable %>% spread(RiskYear, ValueAtRisk)
+    time_series <- corpTableWide %>% group_by(RiskFactorName) %>% summarise_if(is.numeric, mean, na.rm = TRUE)
+    plot_ly(time_series, x = ~RiskYear, y = ~ValueAtRisk, type='scatter', mode = 'lines') %>%   #mode = 'lines', fill = 'tozeroy'
+      layout(yaxis = list(title = 'Impact ($M)'))
+  }) 
   
   #Data table
   output$corpFinImpacts <- DT::renderDataTable({

@@ -195,7 +195,14 @@ ui <- dashboardPage(title="The Climate Service",
               ),#fluidRow
         tabsetPanel(
           tabPanel(title = 'By Risk Factor',
-              plotlyOutput("pieCorpFinImpactsPlot")
+              plotlyOutput("barByRiskFactor")
+          ),
+          tabPanel(title = 'By Location',
+              plotlyOutput("barByLocation")          
+          ),
+          tabPanel(title = 'By Time Period',
+#              plotlyOutput("areaByTime")      
+"still working on it"
           ),
           tabPanel(title = 'By TCFD Category',
               plotlyOutput("stackedCorpFinImpactsPlot")

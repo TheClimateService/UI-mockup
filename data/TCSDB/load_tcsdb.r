@@ -2,8 +2,8 @@
 library(readxl)
 
 # Specify source.
-#db="./data/TCSDB/TCSDB_structure.xlsx"
-db="./data/TCSDB/TCSDB_structure_v3.xlsx"
+db="./data/TCSDB/TCSDB_structure.xlsx"
+#db="./data/TCSDB/TCSDB_structure_v3.xlsx"
 
 # Read each sheet.  
 # Current sheet names:  CorpRiskTable, ValueAtRisk, Location, ParentCorp, TCDFCategory, TCFDSubCat, RiskFactor, Scenarios, CorpRiskTable_withSEoutputs, and Users.
