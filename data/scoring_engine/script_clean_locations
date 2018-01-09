@@ -1,0 +1,9 @@
+
+sed 's/,/_/' TCSDB_structure_locations.csv > temp1
+sed 's/,/_/' temp1 > temp2
+sed 's/,/ /g' temp2 > temp3
+# tr "^M" " " < temp3 > temp4
+sed 's///g' temp3 > temp4
+# The above sed must be done manually from the control line.
+mv temp4 TCSDB_structure_locations.csv.cln
+

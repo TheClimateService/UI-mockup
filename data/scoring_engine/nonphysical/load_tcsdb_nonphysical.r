@@ -7,10 +7,10 @@ library(readxl)
 library(tidyverse)
 
 # Specify source.
-#db="./data/TCSDB/TCSDB_structure.xlsx"
+db="./data/TCSDB/TCSDB_structure.xlsx"
 #db="./data/TCSDB/TCSDB_structure_v3.xlsx"
 #db="./data/scoring_engine/nonphysical/TCSDB_structure.xlsx"
-db="./data/scoring_engine/nonphysical/TCSDB_structure_TT.xlsx"
+#db="./data/scoring_engine/nonphysical/TCSDB_structure_TT.xlsx"
 
 # Read each sheet.  
 # Current sheet names:  CorpRiskTable, ValueAtRisk, Location, ParentCorp, TCDFCategory, TCFDSubCat, RiskFactor, Scenarios, CorpRiskTable_withSEoutputs, and Users.
