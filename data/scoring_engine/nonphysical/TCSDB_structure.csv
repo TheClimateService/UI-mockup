@@ -1,0 +1,1081 @@
+ParentCorpID,LocationID,Location,TCFDCategoryName,TCFDSubCatName,RiskFactorName,ScenarioName,RiskYear,ValueAtRisk
+1,1,Boise,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP8.5,2018,2.187601396
+1,1,Boise,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP8.5,2019,1.635515733
+1,1,Boise,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP8.5,2020,2.213992215
+1,1,Boise,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP8.5,2021,2.858379259
+1,1,Boise,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP8.5,2022,2.046948032
+1,1,Boise,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP8.5,2023,1.971921902
+1,1,Boise,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP8.5,2024,2.095102689
+1,1,Boise,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP8.5,2025,3.110642893
+1,1,Boise,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP8.5,2026,3.240892335
+1,1,Boise,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP8.5,2027,2.780149835
+1,1,Boise,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP8.5,2028,2.90537337
+1,1,Boise,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP8.5,2029,2.163159146
+1,1,Boise,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP8.5,2030,2.329184794
+1,1,Boise,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP8.5,2031,3.711185658
+1,1,Boise,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP8.5,2032,2.241528973
+1,1,Boise,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP4.5,2018,0.761503
+1,1,Boise,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP4.5,2019,0.737418886
+1,1,Boise,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP4.5,2020,0.718042878
+1,1,Boise,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP4.5,2021,0.987505345
+1,1,Boise,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP4.5,2022,1.004965593
+1,1,Boise,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP4.5,2023,1.488800729
+1,1,Boise,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP4.5,2024,1.283000268
+1,1,Boise,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP4.5,2025,1.575491642
+1,1,Boise,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP4.5,2026,0.874583478
+1,1,Boise,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP4.5,2027,0.889636365
+1,1,Boise,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP4.5,2028,1.84353038
+1,1,Boise,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP4.5,2029,1.385171914
+1,1,Boise,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP4.5,2030,1.489001423
+1,1,Boise,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP4.5,2031,1.670036079
+1,1,Boise,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP4.5,2032,1.482799449
+1,1,Boise,Transition,Policy & Legal,Exposure to litigation,RCP8.5,2018,0.800100259
+1,1,Boise,Transition,Policy & Legal,Exposure to litigation,RCP8.5,2019,1.000459853
+1,1,Boise,Transition,Policy & Legal,Exposure to litigation,RCP8.5,2020,0.726936602
+1,1,Boise,Transition,Policy & Legal,Exposure to litigation,RCP8.5,2021,1.111172921
+1,1,Boise,Transition,Policy & Legal,Exposure to litigation,RCP8.5,2022,0.993548604
+1,1,Boise,Transition,Policy & Legal,Exposure to litigation,RCP8.5,2023,1.30155721
+1,1,Boise,Transition,Policy & Legal,Exposure to litigation,RCP8.5,2024,1.515883546
+1,1,Boise,Transition,Policy & Legal,Exposure to litigation,RCP8.5,2025,1.207265238
+1,1,Boise,Transition,Policy & Legal,Exposure to litigation,RCP8.5,2026,0.923770202
+1,1,Boise,Transition,Policy & Legal,Exposure to litigation,RCP8.5,2027,0.996490302
+1,1,Boise,Transition,Policy & Legal,Exposure to litigation,RCP8.5,2028,1.016678288
+1,1,Boise,Transition,Policy & Legal,Exposure to litigation,RCP8.5,2029,1.709537929
+1,1,Boise,Transition,Policy & Legal,Exposure to litigation,RCP8.5,2030,0.987627862
+1,1,Boise,Transition,Policy & Legal,Exposure to litigation,RCP8.5,2031,1.737881819
+1,1,Boise,Transition,Policy & Legal,Exposure to litigation,RCP8.5,2032,1.529992309
+1,1,Boise,Transition,Policy & Legal,Exposure to litigation,RCP4.5,2018,0.366685663
+1,1,Boise,Transition,Policy & Legal,Exposure to litigation,RCP4.5,2019,0.331502932
+1,1,Boise,Transition,Policy & Legal,Exposure to litigation,RCP4.5,2020,0.346640154
+1,1,Boise,Transition,Policy & Legal,Exposure to litigation,RCP4.5,2021,0.615887602
+1,1,Boise,Transition,Policy & Legal,Exposure to litigation,RCP4.5,2022,0.424511747
+1,1,Boise,Transition,Policy & Legal,Exposure to litigation,RCP4.5,2023,0.554830319
+1,1,Boise,Transition,Policy & Legal,Exposure to litigation,RCP4.5,2024,0.418722369
+1,1,Boise,Transition,Policy & Legal,Exposure to litigation,RCP4.5,2025,0.606446369
+1,1,Boise,Transition,Policy & Legal,Exposure to litigation,RCP4.5,2026,0.690589547
+1,1,Boise,Transition,Policy & Legal,Exposure to litigation,RCP4.5,2027,0.718292887
+1,1,Boise,Transition,Policy & Legal,Exposure to litigation,RCP4.5,2028,0.47133862
+1,1,Boise,Transition,Policy & Legal,Exposure to litigation,RCP4.5,2029,0.489799822
+1,1,Boise,Transition,Policy & Legal,Exposure to litigation,RCP4.5,2030,0.502478296
+1,1,Boise,Transition,Policy & Legal,Exposure to litigation,RCP4.5,2031,0.708277749
+1,1,Boise,Transition,Policy & Legal,Exposure to litigation,RCP4.5,2032,0.890468965
+1,1,Boise,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP8.5,2018,2.300500853
+1,1,Boise,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP8.5,2019,1.512825625
+1,1,Boise,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP8.5,2020,1.678626609
+1,1,Boise,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP8.5,2021,2.826813887
+1,1,Boise,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP8.5,2022,2.113132109
+1,1,Boise,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP8.5,2023,1.775246516
+1,1,Boise,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP8.5,2024,1.862516366
+1,1,Boise,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP8.5,2025,1.836111143
+1,1,Boise,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP8.5,2026,1.874906989
+1,1,Boise,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP8.5,2027,3.271921467
+1,1,Boise,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP8.5,2028,3.625817001
+1,1,Boise,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP8.5,2029,2.655740193
+1,1,Boise,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP8.5,2030,3.349185503
+1,1,Boise,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP8.5,2031,2.04839794
+1,1,Boise,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP8.5,2032,3.833061536
+1,1,Boise,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP4.5,2018,1.004194567
+1,1,Boise,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP4.5,2019,0.859021689
+1,1,Boise,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP4.5,2020,1.25114986
+1,1,Boise,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP4.5,2021,1.434406678
+1,1,Boise,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP4.5,2022,0.732351089
+1,1,Boise,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP4.5,2023,1.286376097
+1,1,Boise,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP4.5,2024,1.23289823
+1,1,Boise,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP4.5,2025,1.069304816
+1,1,Boise,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP4.5,2026,1.483408041
+1,1,Boise,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP4.5,2027,1.244274217
+1,1,Boise,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP4.5,2028,1.527794027
+1,1,Boise,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP4.5,2029,1.010500843
+1,1,Boise,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP4.5,2030,1.286087668
+1,1,Boise,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP4.5,2031,1.020051816
+1,1,Boise,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP4.5,2032,2.063814344
+1,1,Boise,Physical,Chronic,Temperature extremes,RCP8.5,2018,2.097201316
+1,1,Boise,Physical,Chronic,Temperature extremes,RCP8.5,2019,1.773421304
+1,1,Boise,Physical,Chronic,Temperature extremes,RCP8.5,2020,1.918965155
+1,1,Boise,Physical,Chronic,Temperature extremes,RCP8.5,2021,2.969420401
+1,1,Boise,Physical,Chronic,Temperature extremes,RCP8.5,2022,2.669725054
+1,1,Boise,Physical,Chronic,Temperature extremes,RCP8.5,2023,2.511938886
+1,1,Boise,Physical,Chronic,Temperature extremes,RCP8.5,2024,2.746945589
+1,1,Boise,Physical,Chronic,Temperature extremes,RCP8.5,2025,2.235471136
+1,1,Boise,Physical,Chronic,Temperature extremes,RCP8.5,2026,3.37524045
+1,1,Boise,Physical,Chronic,Temperature extremes,RCP8.5,2027,2.328950113
+1,1,Boise,Physical,Chronic,Temperature extremes,RCP8.5,2028,3.643992877
+1,1,Boise,Physical,Chronic,Temperature extremes,RCP8.5,2029,3.172413289
+1,1,Boise,Physical,Chronic,Temperature extremes,RCP8.5,2030,2.854613764
+1,1,Boise,Physical,Chronic,Temperature extremes,RCP8.5,2031,3.564882886
+1,1,Boise,Physical,Chronic,Temperature extremes,RCP8.5,2032,3.23494514
+1,1,Boise,Physical,Chronic,Temperature extremes,RCP4.5,2018,1.041558591
+1,1,Boise,Physical,Chronic,Temperature extremes,RCP4.5,2019,1.180430848
+1,1,Boise,Physical,Chronic,Temperature extremes,RCP4.5,2020,0.760461785
+1,1,Boise,Physical,Chronic,Temperature extremes,RCP4.5,2021,1.033734552
+1,1,Boise,Physical,Chronic,Temperature extremes,RCP4.5,2022,1.045120106
+1,1,Boise,Physical,Chronic,Temperature extremes,RCP4.5,2023,0.798570808
+1,1,Boise,Physical,Chronic,Temperature extremes,RCP4.5,2024,0.970435317
+1,1,Boise,Physical,Chronic,Temperature extremes,RCP4.5,2025,0.863693768
+1,1,Boise,Physical,Chronic,Temperature extremes,RCP4.5,2026,1.489030803
+1,1,Boise,Physical,Chronic,Temperature extremes,RCP4.5,2027,1.645630683
+1,1,Boise,Physical,Chronic,Temperature extremes,RCP4.5,2028,1.752583437
+1,1,Boise,Physical,Chronic,Temperature extremes,RCP4.5,2029,1.399481655
+1,1,Boise,Physical,Chronic,Temperature extremes,RCP4.5,2030,1.868412532
+1,1,Boise,Physical,Chronic,Temperature extremes,RCP4.5,2031,1.639658929
+1,1,Boise,Physical,Chronic,Temperature extremes,RCP4.5,2032,1.598557705
+1,1,Boise,Physical,Chronic,Coastal flooding,RCP8.5,2018,0.613539536
+1,1,Boise,Physical,Chronic,Coastal flooding,RCP8.5,2019,1.061067611
+1,1,Boise,Physical,Chronic,Coastal flooding,RCP8.5,2020,0.625818661
+1,1,Boise,Physical,Chronic,Coastal flooding,RCP8.5,2021,0.794290666
+1,1,Boise,Physical,Chronic,Coastal flooding,RCP8.5,2022,1.005385286
+1,1,Boise,Physical,Chronic,Coastal flooding,RCP8.5,2023,1.098056244
+1,1,Boise,Physical,Chronic,Coastal flooding,RCP8.5,2024,1.313975119
+1,1,Boise,Physical,Chronic,Coastal flooding,RCP8.5,2025,1.510119073
+1,1,Boise,Physical,Chronic,Coastal flooding,RCP8.5,2026,1.068901772
+1,1,Boise,Physical,Chronic,Coastal flooding,RCP8.5,2027,0.972552644
+1,1,Boise,Physical,Chronic,Coastal flooding,RCP8.5,2028,1.574149405
+1,1,Boise,Physical,Chronic,Coastal flooding,RCP8.5,2029,0.934553375
+1,1,Boise,Physical,Chronic,Coastal flooding,RCP8.5,2030,1.768813541
+1,1,Boise,Physical,Chronic,Coastal flooding,RCP8.5,2031,1.390029582
+1,1,Boise,Physical,Chronic,Coastal flooding,RCP8.5,2032,1.058426341
+1,1,Boise,Physical,Chronic,Coastal flooding,RCP4.5,2018,0.487813773
+1,1,Boise,Physical,Chronic,Coastal flooding,RCP4.5,2019,0.382065275
+1,1,Boise,Physical,Chronic,Coastal flooding,RCP4.5,2020,0.410035313
+1,1,Boise,Physical,Chronic,Coastal flooding,RCP4.5,2021,0.632815951
+1,1,Boise,Physical,Chronic,Coastal flooding,RCP4.5,2022,0.399464838
+1,1,Boise,Physical,Chronic,Coastal flooding,RCP4.5,2023,0.391701079
+1,1,Boise,Physical,Chronic,Coastal flooding,RCP4.5,2024,0.392482883
+1,1,Boise,Physical,Chronic,Coastal flooding,RCP4.5,2025,0.705282708
+1,1,Boise,Physical,Chronic,Coastal flooding,RCP4.5,2026,0.470238844
+1,1,Boise,Physical,Chronic,Coastal flooding,RCP4.5,2027,0.427148728
+1,1,Boise,Physical,Chronic,Coastal flooding,RCP4.5,2028,0.86569428
+1,1,Boise,Physical,Chronic,Coastal flooding,RCP4.5,2029,0.521136045
+1,1,Boise,Physical,Chronic,Coastal flooding,RCP4.5,2030,0.908379589
+1,1,Boise,Physical,Chronic,Coastal flooding,RCP4.5,2031,0.54973938
+1,1,Boise,Physical,Chronic,Coastal flooding,RCP4.5,2032,0.936146113
+1,1,Boise,Physical,Chronic,Drought,RCP8.5,2018,2.31436133
+1,1,Boise,Physical,Chronic,Drought,RCP8.5,2019,2.228685199
+1,1,Boise,Physical,Chronic,Drought,RCP8.5,2020,2.215613288
+1,1,Boise,Physical,Chronic,Drought,RCP8.5,2021,2.592491345
+1,1,Boise,Physical,Chronic,Drought,RCP8.5,2022,2.611490623
+1,1,Boise,Physical,Chronic,Drought,RCP8.5,2023,2.811601816
+1,1,Boise,Physical,Chronic,Drought,RCP8.5,2024,2.855384534
+1,1,Boise,Physical,Chronic,Drought,RCP8.5,2025,3.072804279
+1,1,Boise,Physical,Chronic,Drought,RCP8.5,2026,2.851687207
+1,1,Boise,Physical,Chronic,Drought,RCP8.5,2027,2.907070736
+1,1,Boise,Physical,Chronic,Drought,RCP8.5,2028,3.390696092
+1,1,Boise,Physical,Chronic,Drought,RCP8.5,2029,2.707768368
+1,1,Boise,Physical,Chronic,Drought,RCP8.5,2030,1.957934694
+1,1,Boise,Physical,Chronic,Drought,RCP8.5,2031,2.445890712
+1,1,Boise,Physical,Chronic,Drought,RCP8.5,2032,2.306055106
+1,1,Boise,Physical,Chronic,Drought,RCP4.5,2018,0.633130016
+1,1,Boise,Physical,Chronic,Drought,RCP4.5,2019,0.641183738
+1,1,Boise,Physical,Chronic,Drought,RCP4.5,2020,1.166663081
+1,1,Boise,Physical,Chronic,Drought,RCP4.5,2021,1.083811805
+1,1,Boise,Physical,Chronic,Drought,RCP4.5,2022,0.924028061
+1,1,Boise,Physical,Chronic,Drought,RCP4.5,2023,1.052700372
+1,1,Boise,Physical,Chronic,Drought,RCP4.5,2024,1.618648512
+1,1,Boise,Physical,Chronic,Drought,RCP4.5,2025,1.602720744
+1,1,Boise,Physical,Chronic,Drought,RCP4.5,2026,1.599032383
+1,1,Boise,Physical,Chronic,Drought,RCP4.5,2027,0.937971743
+1,1,Boise,Physical,Chronic,Drought,RCP4.5,2028,1.381616096
+1,1,Boise,Physical,Chronic,Drought,RCP4.5,2029,1.736413415
+1,1,Boise,Physical,Chronic,Drought,RCP4.5,2030,1.243662071
+1,1,Boise,Physical,Chronic,Drought,RCP4.5,2031,1.753358743
+1,1,Boise,Physical,Chronic,Drought,RCP4.5,2032,1.212264628
+1,2,Manassas,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP8.5,2018,1.418709486
+1,2,Manassas,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP8.5,2019,1.650702409
+1,2,Manassas,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP8.5,2020,1.365947917
+1,2,Manassas,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP8.5,2021,2.69753849
+1,2,Manassas,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP8.5,2022,2.493442287
+1,2,Manassas,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP8.5,2023,2.869123551
+1,2,Manassas,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP8.5,2024,2.965269208
+1,2,Manassas,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP8.5,2025,2.450621243
+1,2,Manassas,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP8.5,2026,3.096615767
+1,2,Manassas,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP8.5,2027,3.156782124
+1,2,Manassas,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP8.5,2028,2.409050204
+1,2,Manassas,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP8.5,2029,2.302025837
+1,2,Manassas,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP8.5,2030,2.825392696
+1,2,Manassas,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP8.5,2031,2.50306833
+1,2,Manassas,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP8.5,2032,4.3145231
+1,2,Manassas,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP4.5,2018,1.169515396
+1,2,Manassas,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP4.5,2019,1.15373705
+1,2,Manassas,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP4.5,2020,1.241666545
+1,2,Manassas,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP4.5,2021,1.407379169
+1,2,Manassas,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP4.5,2022,1.394501918
+1,2,Manassas,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP4.5,2023,1.475251285
+1,2,Manassas,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP4.5,2024,1.128616629
+1,2,Manassas,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP4.5,2025,1.505342112
+1,2,Manassas,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP4.5,2026,1.019382744
+1,2,Manassas,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP4.5,2027,1.646114824
+1,2,Manassas,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP4.5,2028,1.182048758
+1,2,Manassas,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP4.5,2029,1.500243919
+1,2,Manassas,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP4.5,2030,1.660925562
+1,2,Manassas,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP4.5,2031,1.398968326
+1,2,Manassas,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP4.5,2032,1.478690574
+1,2,Manassas,Transition,Policy & Legal,Exposure to litigation,RCP8.5,2018,1.042838134
+1,2,Manassas,Transition,Policy & Legal,Exposure to litigation,RCP8.5,2019,0.624167695
+1,2,Manassas,Transition,Policy & Legal,Exposure to litigation,RCP8.5,2020,0.761095302
+1,2,Manassas,Transition,Policy & Legal,Exposure to litigation,RCP8.5,2021,1.3629868
+1,2,Manassas,Transition,Policy & Legal,Exposure to litigation,RCP8.5,2022,1.303798005
+1,2,Manassas,Transition,Policy & Legal,Exposure to litigation,RCP8.5,2023,0.90846941
+1,2,Manassas,Transition,Policy & Legal,Exposure to litigation,RCP8.5,2024,1.447821822
+1,2,Manassas,Transition,Policy & Legal,Exposure to litigation,RCP8.5,2025,1.430573693
+1,2,Manassas,Transition,Policy & Legal,Exposure to litigation,RCP8.5,2026,0.859122805
+1,2,Manassas,Transition,Policy & Legal,Exposure to litigation,RCP8.5,2027,0.798934017
+1,2,Manassas,Transition,Policy & Legal,Exposure to litigation,RCP8.5,2028,0.921058311
+1,2,Manassas,Transition,Policy & Legal,Exposure to litigation,RCP8.5,2029,1.182402853
+1,2,Manassas,Transition,Policy & Legal,Exposure to litigation,RCP8.5,2030,1.798320346
+1,2,Manassas,Transition,Policy & Legal,Exposure to litigation,RCP8.5,2031,1.665978326
+1,2,Manassas,Transition,Policy & Legal,Exposure to litigation,RCP8.5,2032,1.2634323
+1,2,Manassas,Transition,Policy & Legal,Exposure to litigation,RCP4.5,2018,0.431813552
+1,2,Manassas,Transition,Policy & Legal,Exposure to litigation,RCP4.5,2019,0.283159763
+1,2,Manassas,Transition,Policy & Legal,Exposure to litigation,RCP4.5,2020,0.398568169
+1,2,Manassas,Transition,Policy & Legal,Exposure to litigation,RCP4.5,2021,0.637195654
+1,2,Manassas,Transition,Policy & Legal,Exposure to litigation,RCP4.5,2022,0.459109576
+1,2,Manassas,Transition,Policy & Legal,Exposure to litigation,RCP4.5,2023,0.401171818
+1,2,Manassas,Transition,Policy & Legal,Exposure to litigation,RCP4.5,2024,0.406711246
+1,2,Manassas,Transition,Policy & Legal,Exposure to litigation,RCP4.5,2025,0.754957042
+1,2,Manassas,Transition,Policy & Legal,Exposure to litigation,RCP4.5,2026,0.746676779
+1,2,Manassas,Transition,Policy & Legal,Exposure to litigation,RCP4.5,2027,0.398566071
+1,2,Manassas,Transition,Policy & Legal,Exposure to litigation,RCP4.5,2028,0.669276619
+1,2,Manassas,Transition,Policy & Legal,Exposure to litigation,RCP4.5,2029,0.534335127
+1,2,Manassas,Transition,Policy & Legal,Exposure to litigation,RCP4.5,2030,0.460131514
+1,2,Manassas,Transition,Policy & Legal,Exposure to litigation,RCP4.5,2031,0.485122421
+1,2,Manassas,Transition,Policy & Legal,Exposure to litigation,RCP4.5,2032,0.889710387
+1,2,Manassas,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP8.5,2018,1.626433531
+1,2,Manassas,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP8.5,2019,1.173199731
+1,2,Manassas,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP8.5,2020,2.004630173
+1,2,Manassas,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP8.5,2021,1.81505331
+1,2,Manassas,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP8.5,2022,2.777919441
+1,2,Manassas,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP8.5,2023,2.804016849
+1,2,Manassas,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP8.5,2024,3.205499668
+1,2,Manassas,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP8.5,2025,2.130944802
+1,2,Manassas,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP8.5,2026,2.56771527
+1,2,Manassas,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP8.5,2027,2.756758069
+1,2,Manassas,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP8.5,2028,3.369592929
+1,2,Manassas,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP8.5,2029,3.066632766
+1,2,Manassas,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP8.5,2030,2.118770768
+1,2,Manassas,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP8.5,2031,3.30696515
+1,2,Manassas,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP8.5,2032,2.667169125
+1,2,Manassas,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP4.5,2018,0.664009416
+1,2,Manassas,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP4.5,2019,1.135622566
+1,2,Manassas,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP4.5,2020,0.994229791
+1,2,Manassas,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP4.5,2021,0.948890594
+1,2,Manassas,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP4.5,2022,1.175767155
+1,2,Manassas,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP4.5,2023,0.985353295
+1,2,Manassas,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP4.5,2024,1.460831674
+1,2,Manassas,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP4.5,2025,1.379890452
+1,2,Manassas,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP4.5,2026,1.537017384
+1,2,Manassas,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP4.5,2027,1.119712319
+1,2,Manassas,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP4.5,2028,1.187860833
+1,2,Manassas,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP4.5,2029,1.52357065
+1,2,Manassas,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP4.5,2030,1.759882795
+1,2,Manassas,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP4.5,2031,1.583215904
+1,2,Manassas,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP4.5,2032,1.554676598
+1,2,Manassas,Physical,Chronic,Temperature extremes,RCP8.5,2018,1.34918738
+1,2,Manassas,Physical,Chronic,Temperature extremes,RCP8.5,2019,2.21079273
+1,2,Manassas,Physical,Chronic,Temperature extremes,RCP8.5,2020,1.811251966
+1,2,Manassas,Physical,Chronic,Temperature extremes,RCP8.5,2021,2.0813862
+1,2,Manassas,Physical,Chronic,Temperature extremes,RCP8.5,2022,2.188454837
+1,2,Manassas,Physical,Chronic,Temperature extremes,RCP8.5,2023,2.109022485
+1,2,Manassas,Physical,Chronic,Temperature extremes,RCP8.5,2024,2.96219586
+1,2,Manassas,Physical,Chronic,Temperature extremes,RCP8.5,2025,2.771415262
+1,2,Manassas,Physical,Chronic,Temperature extremes,RCP8.5,2026,2.133866057
+1,2,Manassas,Physical,Chronic,Temperature extremes,RCP8.5,2027,2.409367379
+1,2,Manassas,Physical,Chronic,Temperature extremes,RCP8.5,2028,2.652955917
+1,2,Manassas,Physical,Chronic,Temperature extremes,RCP8.5,2029,2.990503314
+1,2,Manassas,Physical,Chronic,Temperature extremes,RCP8.5,2030,3.806384715
+1,2,Manassas,Physical,Chronic,Temperature extremes,RCP8.5,2031,2.390793386
+1,2,Manassas,Physical,Chronic,Temperature extremes,RCP8.5,2032,2.295226612
+1,2,Manassas,Physical,Chronic,Temperature extremes,RCP4.5,2018,0.925271963
+1,2,Manassas,Physical,Chronic,Temperature extremes,RCP4.5,2019,1.063843999
+1,2,Manassas,Physical,Chronic,Temperature extremes,RCP4.5,2020,0.902168734
+1,2,Manassas,Physical,Chronic,Temperature extremes,RCP4.5,2021,1.0074316
+1,2,Manassas,Physical,Chronic,Temperature extremes,RCP4.5,2022,1.339687173
+1,2,Manassas,Physical,Chronic,Temperature extremes,RCP4.5,2023,1.075872453
+1,2,Manassas,Physical,Chronic,Temperature extremes,RCP4.5,2024,0.901481365
+1,2,Manassas,Physical,Chronic,Temperature extremes,RCP4.5,2025,1.617018676
+1,2,Manassas,Physical,Chronic,Temperature extremes,RCP4.5,2026,1.477367161
+1,2,Manassas,Physical,Chronic,Temperature extremes,RCP4.5,2027,0.901257168
+1,2,Manassas,Physical,Chronic,Temperature extremes,RCP4.5,2028,1.645621286
+1,2,Manassas,Physical,Chronic,Temperature extremes,RCP4.5,2029,1.697857412
+1,2,Manassas,Physical,Chronic,Temperature extremes,RCP4.5,2030,1.770367383
+1,2,Manassas,Physical,Chronic,Temperature extremes,RCP4.5,2031,1.081138497
+1,2,Manassas,Physical,Chronic,Temperature extremes,RCP4.5,2032,1.514727192
+1,2,Manassas,Physical,Chronic,Coastal flooding,RCP8.5,2018,0.791402041
+1,2,Manassas,Physical,Chronic,Coastal flooding,RCP8.5,2019,1.009265844
+1,2,Manassas,Physical,Chronic,Coastal flooding,RCP8.5,2020,1.073433284
+1,2,Manassas,Physical,Chronic,Coastal flooding,RCP8.5,2021,1.034560193
+1,2,Manassas,Physical,Chronic,Coastal flooding,RCP8.5,2022,1.106994497
+1,2,Manassas,Physical,Chronic,Coastal flooding,RCP8.5,2023,0.909773723
+1,2,Manassas,Physical,Chronic,Coastal flooding,RCP8.5,2024,0.84706898
+1,2,Manassas,Physical,Chronic,Coastal flooding,RCP8.5,2025,1.238001218
+1,2,Manassas,Physical,Chronic,Coastal flooding,RCP8.5,2026,1.4881118
+1,2,Manassas,Physical,Chronic,Coastal flooding,RCP8.5,2027,1.456865347
+1,2,Manassas,Physical,Chronic,Coastal flooding,RCP8.5,2028,0.937001434
+1,2,Manassas,Physical,Chronic,Coastal flooding,RCP8.5,2029,0.982543931
+1,2,Manassas,Physical,Chronic,Coastal flooding,RCP8.5,2030,1.004287675
+1,2,Manassas,Physical,Chronic,Coastal flooding,RCP8.5,2031,1.333848177
+1,2,Manassas,Physical,Chronic,Coastal flooding,RCP8.5,2032,1.390910375
+1,2,Manassas,Physical,Chronic,Coastal flooding,RCP4.5,2018,0.329822943
+1,2,Manassas,Physical,Chronic,Coastal flooding,RCP4.5,2019,0.356882274
+1,2,Manassas,Physical,Chronic,Coastal flooding,RCP4.5,2020,0.305506296
+1,2,Manassas,Physical,Chronic,Coastal flooding,RCP4.5,2021,0.359694714
+1,2,Manassas,Physical,Chronic,Coastal flooding,RCP4.5,2022,0.397820113
+1,2,Manassas,Physical,Chronic,Coastal flooding,RCP4.5,2023,0.52813184
+1,2,Manassas,Physical,Chronic,Coastal flooding,RCP4.5,2024,0.744349966
+1,2,Manassas,Physical,Chronic,Coastal flooding,RCP4.5,2025,0.517245025
+1,2,Manassas,Physical,Chronic,Coastal flooding,RCP4.5,2026,0.660656766
+1,2,Manassas,Physical,Chronic,Coastal flooding,RCP4.5,2027,0.508257447
+1,2,Manassas,Physical,Chronic,Coastal flooding,RCP4.5,2028,0.474297145
+1,2,Manassas,Physical,Chronic,Coastal flooding,RCP4.5,2029,0.764655161
+1,2,Manassas,Physical,Chronic,Coastal flooding,RCP4.5,2030,0.730643966
+1,2,Manassas,Physical,Chronic,Coastal flooding,RCP4.5,2031,0.856566016
+1,2,Manassas,Physical,Chronic,Coastal flooding,RCP4.5,2032,0.794667408
+1,2,Manassas,Physical,Chronic,Drought,RCP8.5,2018,2.239900156
+1,2,Manassas,Physical,Chronic,Drought,RCP8.5,2019,1.301702427
+1,2,Manassas,Physical,Chronic,Drought,RCP8.5,2020,2.42789919
+1,2,Manassas,Physical,Chronic,Drought,RCP8.5,2021,2.181156132
+1,2,Manassas,Physical,Chronic,Drought,RCP8.5,2022,1.47090145
+1,2,Manassas,Physical,Chronic,Drought,RCP8.5,2023,1.604680957
+1,2,Manassas,Physical,Chronic,Drought,RCP8.5,2024,2.549449101
+1,2,Manassas,Physical,Chronic,Drought,RCP8.5,2025,1.785535315
+1,2,Manassas,Physical,Chronic,Drought,RCP8.5,2026,1.716119811
+1,2,Manassas,Physical,Chronic,Drought,RCP8.5,2027,3.088774772
+1,2,Manassas,Physical,Chronic,Drought,RCP8.5,2028,2.006832971
+1,2,Manassas,Physical,Chronic,Drought,RCP8.5,2029,3.307211853
+1,2,Manassas,Physical,Chronic,Drought,RCP8.5,2030,2.153915078
+1,2,Manassas,Physical,Chronic,Drought,RCP8.5,2031,2.093703456
+1,2,Manassas,Physical,Chronic,Drought,RCP8.5,2032,2.555024884
+1,2,Manassas,Physical,Chronic,Drought,RCP4.5,2018,0.675567489
+1,2,Manassas,Physical,Chronic,Drought,RCP4.5,2019,0.795315997
+1,2,Manassas,Physical,Chronic,Drought,RCP4.5,2020,0.881938963
+1,2,Manassas,Physical,Chronic,Drought,RCP4.5,2021,0.84543762
+1,2,Manassas,Physical,Chronic,Drought,RCP4.5,2022,1.24783692
+1,2,Manassas,Physical,Chronic,Drought,RCP4.5,2023,1.255518882
+1,2,Manassas,Physical,Chronic,Drought,RCP4.5,2024,1.02666239
+1,2,Manassas,Physical,Chronic,Drought,RCP4.5,2025,0.910675656
+1,2,Manassas,Physical,Chronic,Drought,RCP4.5,2026,1.146127194
+1,2,Manassas,Physical,Chronic,Drought,RCP4.5,2027,0.97060724
+1,2,Manassas,Physical,Chronic,Drought,RCP4.5,2028,1.402671909
+1,2,Manassas,Physical,Chronic,Drought,RCP4.5,2029,1.600829789
+1,2,Manassas,Physical,Chronic,Drought,RCP4.5,2030,1.061206066
+1,2,Manassas,Physical,Chronic,Drought,RCP4.5,2031,1.774155871
+1,2,Manassas,Physical,Chronic,Drought,RCP4.5,2032,1.251350395
+1,3,Singapore_Hqs,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP8.5,2018,1.897765658
+1,3,Singapore_Hqs,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP8.5,2019,1.555129901
+1,3,Singapore_Hqs,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP8.5,2020,2.26146569
+1,3,Singapore_Hqs,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP8.5,2021,2.450710655
+1,3,Singapore_Hqs,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP8.5,2022,2.243612713
+1,3,Singapore_Hqs,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP8.5,2023,1.751632472
+1,3,Singapore_Hqs,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP8.5,2024,2.148412092
+1,3,Singapore_Hqs,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP8.5,2025,2.295008773
+1,3,Singapore_Hqs,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP8.5,2026,2.862589111
+1,3,Singapore_Hqs,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP8.5,2027,2.691814193
+1,3,Singapore_Hqs,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP8.5,2028,3.01623672
+1,3,Singapore_Hqs,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP8.5,2029,3.053675044
+1,3,Singapore_Hqs,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP8.5,2030,2.735629869
+1,3,Singapore_Hqs,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP8.5,2031,3.511482008
+1,3,Singapore_Hqs,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP8.5,2032,2.419775135
+1,3,Singapore_Hqs,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP4.5,2018,0.833670765
+1,3,Singapore_Hqs,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP4.5,2019,0.644763445
+1,3,Singapore_Hqs,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP4.5,2020,0.833271461
+1,3,Singapore_Hqs,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP4.5,2021,0.805529545
+1,3,Singapore_Hqs,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP4.5,2022,1.171171088
+1,3,Singapore_Hqs,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP4.5,2023,1.100836398
+1,3,Singapore_Hqs,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP4.5,2024,1.580256138
+1,3,Singapore_Hqs,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP4.5,2025,1.490395381
+1,3,Singapore_Hqs,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP4.5,2026,1.517484383
+1,3,Singapore_Hqs,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP4.5,2027,1.221573757
+1,3,Singapore_Hqs,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP4.5,2028,1.001568022
+1,3,Singapore_Hqs,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP4.5,2029,1.785456902
+1,3,Singapore_Hqs,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP4.5,2030,1.837482698
+1,3,Singapore_Hqs,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP4.5,2031,1.091728414
+1,3,Singapore_Hqs,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP4.5,2032,1.266338018
+1,3,Singapore_Hqs,Transition,Policy & Legal,Exposure to litigation,RCP8.5,2018,0.891421969
+1,3,Singapore_Hqs,Transition,Policy & Legal,Exposure to litigation,RCP8.5,2019,0.984213962
+1,3,Singapore_Hqs,Transition,Policy & Legal,Exposure to litigation,RCP8.5,2020,0.633000673
+1,3,Singapore_Hqs,Transition,Policy & Legal,Exposure to litigation,RCP8.5,2021,1.161267096
+1,3,Singapore_Hqs,Transition,Policy & Legal,Exposure to litigation,RCP8.5,2022,1.305965352
+1,3,Singapore_Hqs,Transition,Policy & Legal,Exposure to litigation,RCP8.5,2023,0.940211422
+1,3,Singapore_Hqs,Transition,Policy & Legal,Exposure to litigation,RCP8.5,2024,0.848994263
+1,3,Singapore_Hqs,Transition,Policy & Legal,Exposure to litigation,RCP8.5,2025,1.406599027
+1,3,Singapore_Hqs,Transition,Policy & Legal,Exposure to litigation,RCP8.5,2026,1.158376842
+1,3,Singapore_Hqs,Transition,Policy & Legal,Exposure to litigation,RCP8.5,2027,1.480395917
+1,3,Singapore_Hqs,Transition,Policy & Legal,Exposure to litigation,RCP8.5,2028,1.49245598
+1,3,Singapore_Hqs,Transition,Policy & Legal,Exposure to litigation,RCP8.5,2029,1.615690549
+1,3,Singapore_Hqs,Transition,Policy & Legal,Exposure to litigation,RCP8.5,2030,1.809346992
+1,3,Singapore_Hqs,Transition,Policy & Legal,Exposure to litigation,RCP8.5,2031,1.820429311
+1,3,Singapore_Hqs,Transition,Policy & Legal,Exposure to litigation,RCP8.5,2032,1.624922954
+1,3,Singapore_Hqs,Transition,Policy & Legal,Exposure to litigation,RCP4.5,2018,0.451765701
+1,3,Singapore_Hqs,Transition,Policy & Legal,Exposure to litigation,RCP4.5,2019,0.370452899
+1,3,Singapore_Hqs,Transition,Policy & Legal,Exposure to litigation,RCP4.5,2020,0.557416734
+1,3,Singapore_Hqs,Transition,Policy & Legal,Exposure to litigation,RCP4.5,2021,0.556591324
+1,3,Singapore_Hqs,Transition,Policy & Legal,Exposure to litigation,RCP4.5,2022,0.347928672
+1,3,Singapore_Hqs,Transition,Policy & Legal,Exposure to litigation,RCP4.5,2023,0.6410635
+1,3,Singapore_Hqs,Transition,Policy & Legal,Exposure to litigation,RCP4.5,2024,0.399065834
+1,3,Singapore_Hqs,Transition,Policy & Legal,Exposure to litigation,RCP4.5,2025,0.691761658
+1,3,Singapore_Hqs,Transition,Policy & Legal,Exposure to litigation,RCP4.5,2026,0.502144013
+1,3,Singapore_Hqs,Transition,Policy & Legal,Exposure to litigation,RCP4.5,2027,0.389070478
+1,3,Singapore_Hqs,Transition,Policy & Legal,Exposure to litigation,RCP4.5,2028,0.485931418
+1,3,Singapore_Hqs,Transition,Policy & Legal,Exposure to litigation,RCP4.5,2029,0.825779567
+1,3,Singapore_Hqs,Transition,Policy & Legal,Exposure to litigation,RCP4.5,2030,0.665919541
+1,3,Singapore_Hqs,Transition,Policy & Legal,Exposure to litigation,RCP4.5,2031,0.670802995
+1,3,Singapore_Hqs,Transition,Policy & Legal,Exposure to litigation,RCP4.5,2032,0.910434352
+1,3,Singapore_Hqs,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP8.5,2018,1.19667568
+1,3,Singapore_Hqs,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP8.5,2019,1.221006242
+1,3,Singapore_Hqs,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP8.5,2020,2.126386122
+1,3,Singapore_Hqs,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP8.5,2021,1.961413727
+1,3,Singapore_Hqs,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP8.5,2022,1.628295456
+1,3,Singapore_Hqs,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP8.5,2023,2.065670985
+1,3,Singapore_Hqs,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP8.5,2024,1.97886496
+1,3,Singapore_Hqs,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP8.5,2025,2.576371961
+1,3,Singapore_Hqs,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP8.5,2026,3.157173348
+1,3,Singapore_Hqs,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP8.5,2027,2.048890879
+1,3,Singapore_Hqs,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP8.5,2028,2.445980399
+1,3,Singapore_Hqs,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP8.5,2029,3.03746392
+1,3,Singapore_Hqs,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP8.5,2030,2.726651753
+1,3,Singapore_Hqs,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP8.5,2031,3.303395264
+1,3,Singapore_Hqs,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP8.5,2032,4.103433934
+1,3,Singapore_Hqs,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP4.5,2018,1.110344063
+1,3,Singapore_Hqs,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP4.5,2019,0.934981684
+1,3,Singapore_Hqs,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP4.5,2020,0.936842301
+1,3,Singapore_Hqs,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP4.5,2021,1.413741961
+1,3,Singapore_Hqs,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP4.5,2022,1.452110163
+1,3,Singapore_Hqs,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP4.5,2023,0.914447037
+1,3,Singapore_Hqs,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP4.5,2024,1.039196051
+1,3,Singapore_Hqs,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP4.5,2025,1.380027632
+1,3,Singapore_Hqs,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP4.5,2026,1.517477853
+1,3,Singapore_Hqs,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP4.5,2027,1.20387693
+1,3,Singapore_Hqs,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP4.5,2028,1.349970209
+1,3,Singapore_Hqs,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP4.5,2029,1.297262871
+1,3,Singapore_Hqs,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP4.5,2030,1.665350263
+1,3,Singapore_Hqs,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP4.5,2031,1.628442045
+1,3,Singapore_Hqs,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP4.5,2032,1.114404497
+1,3,Singapore_Hqs,Physical,Chronic,Temperature extremes,RCP8.5,2018,1.479195034
+1,3,Singapore_Hqs,Physical,Chronic,Temperature extremes,RCP8.5,2019,1.813329793
+1,3,Singapore_Hqs,Physical,Chronic,Temperature extremes,RCP8.5,2020,1.542407621
+1,3,Singapore_Hqs,Physical,Chronic,Temperature extremes,RCP8.5,2021,2.641147523
+1,3,Singapore_Hqs,Physical,Chronic,Temperature extremes,RCP8.5,2022,2.794724019
+1,3,Singapore_Hqs,Physical,Chronic,Temperature extremes,RCP8.5,2023,1.682041576
+1,3,Singapore_Hqs,Physical,Chronic,Temperature extremes,RCP8.5,2024,2.240241631
+1,3,Singapore_Hqs,Physical,Chronic,Temperature extremes,RCP8.5,2025,1.961218115
+1,3,Singapore_Hqs,Physical,Chronic,Temperature extremes,RCP8.5,2026,2.505850501
+1,3,Singapore_Hqs,Physical,Chronic,Temperature extremes,RCP8.5,2027,2.310766321
+1,3,Singapore_Hqs,Physical,Chronic,Temperature extremes,RCP8.5,2028,3.594232144
+1,3,Singapore_Hqs,Physical,Chronic,Temperature extremes,RCP8.5,2029,3.80714357
+1,3,Singapore_Hqs,Physical,Chronic,Temperature extremes,RCP8.5,2030,3.987727798
+1,3,Singapore_Hqs,Physical,Chronic,Temperature extremes,RCP8.5,2031,3.463080202
+1,3,Singapore_Hqs,Physical,Chronic,Temperature extremes,RCP8.5,2032,3.158812573
+1,3,Singapore_Hqs,Physical,Chronic,Temperature extremes,RCP4.5,2018,0.842859199
+1,3,Singapore_Hqs,Physical,Chronic,Temperature extremes,RCP4.5,2019,1.080004003
+1,3,Singapore_Hqs,Physical,Chronic,Temperature extremes,RCP4.5,2020,1.041962038
+1,3,Singapore_Hqs,Physical,Chronic,Temperature extremes,RCP4.5,2021,1.131370781
+1,3,Singapore_Hqs,Physical,Chronic,Temperature extremes,RCP4.5,2022,1.218339581
+1,3,Singapore_Hqs,Physical,Chronic,Temperature extremes,RCP4.5,2023,0.769097176
+1,3,Singapore_Hqs,Physical,Chronic,Temperature extremes,RCP4.5,2024,1.222106574
+1,3,Singapore_Hqs,Physical,Chronic,Temperature extremes,RCP4.5,2025,1.69993714
+1,3,Singapore_Hqs,Physical,Chronic,Temperature extremes,RCP4.5,2026,0.933068542
+1,3,Singapore_Hqs,Physical,Chronic,Temperature extremes,RCP4.5,2027,0.90449606
+1,3,Singapore_Hqs,Physical,Chronic,Temperature extremes,RCP4.5,2028,1.576414963
+1,3,Singapore_Hqs,Physical,Chronic,Temperature extremes,RCP4.5,2029,1.103604298
+1,3,Singapore_Hqs,Physical,Chronic,Temperature extremes,RCP4.5,2030,1.437374783
+1,3,Singapore_Hqs,Physical,Chronic,Temperature extremes,RCP4.5,2031,1.342887596
+1,3,Singapore_Hqs,Physical,Chronic,Temperature extremes,RCP4.5,2032,1.467188165
+1,3,Singapore_Hqs,Physical,Chronic,Coastal flooding,RCP8.5,2018,1.029489788
+1,3,Singapore_Hqs,Physical,Chronic,Coastal flooding,RCP8.5,2019,0.925391793
+1,3,Singapore_Hqs,Physical,Chronic,Coastal flooding,RCP8.5,2020,0.687640844
+1,3,Singapore_Hqs,Physical,Chronic,Coastal flooding,RCP8.5,2021,0.872821616
+1,3,Singapore_Hqs,Physical,Chronic,Coastal flooding,RCP8.5,2022,1.259715972
+1,3,Singapore_Hqs,Physical,Chronic,Coastal flooding,RCP8.5,2023,1.18156951
+1,3,Singapore_Hqs,Physical,Chronic,Coastal flooding,RCP8.5,2024,1.451590844
+1,3,Singapore_Hqs,Physical,Chronic,Coastal flooding,RCP8.5,2025,1.520884056
+1,3,Singapore_Hqs,Physical,Chronic,Coastal flooding,RCP8.5,2026,1.133067955
+1,3,Singapore_Hqs,Physical,Chronic,Coastal flooding,RCP8.5,2027,0.962605024
+1,3,Singapore_Hqs,Physical,Chronic,Coastal flooding,RCP8.5,2028,1.612025816
+1,3,Singapore_Hqs,Physical,Chronic,Coastal flooding,RCP8.5,2029,1.072725144
+1,3,Singapore_Hqs,Physical,Chronic,Coastal flooding,RCP8.5,2030,0.945126267
+1,3,Singapore_Hqs,Physical,Chronic,Coastal flooding,RCP8.5,2031,1.573719334
+1,3,Singapore_Hqs,Physical,Chronic,Coastal flooding,RCP8.5,2032,1.248432546
+1,3,Singapore_Hqs,Physical,Chronic,Coastal flooding,RCP4.5,2018,0.509516525
+1,3,Singapore_Hqs,Physical,Chronic,Coastal flooding,RCP4.5,2019,0.289792985
+1,3,Singapore_Hqs,Physical,Chronic,Coastal flooding,RCP4.5,2020,0.461870525
+1,3,Singapore_Hqs,Physical,Chronic,Coastal flooding,RCP4.5,2021,0.558694052
+1,3,Singapore_Hqs,Physical,Chronic,Coastal flooding,RCP4.5,2022,0.428264819
+1,3,Singapore_Hqs,Physical,Chronic,Coastal flooding,RCP4.5,2023,0.356727166
+1,3,Singapore_Hqs,Physical,Chronic,Coastal flooding,RCP4.5,2024,0.758201287
+1,3,Singapore_Hqs,Physical,Chronic,Coastal flooding,RCP4.5,2025,0.565570987
+1,3,Singapore_Hqs,Physical,Chronic,Coastal flooding,RCP4.5,2026,0.769831519
+1,3,Singapore_Hqs,Physical,Chronic,Coastal flooding,RCP4.5,2027,0.603021619
+1,3,Singapore_Hqs,Physical,Chronic,Coastal flooding,RCP4.5,2028,0.912579918
+1,3,Singapore_Hqs,Physical,Chronic,Coastal flooding,RCP4.5,2029,0.705472491
+1,3,Singapore_Hqs,Physical,Chronic,Coastal flooding,RCP4.5,2030,0.901051563
+1,3,Singapore_Hqs,Physical,Chronic,Coastal flooding,RCP4.5,2031,0.702704791
+1,3,Singapore_Hqs,Physical,Chronic,Coastal flooding,RCP4.5,2032,0.679010555
+1,3,Singapore_Hqs,Physical,Chronic,Drought,RCP8.5,2018,2.083615866
+1,3,Singapore_Hqs,Physical,Chronic,Drought,RCP8.5,2019,1.294905899
+1,3,Singapore_Hqs,Physical,Chronic,Drought,RCP8.5,2020,1.689071495
+1,3,Singapore_Hqs,Physical,Chronic,Drought,RCP8.5,2021,2.481991338
+1,3,Singapore_Hqs,Physical,Chronic,Drought,RCP8.5,2022,2.594612026
+1,3,Singapore_Hqs,Physical,Chronic,Drought,RCP8.5,2023,1.909701064
+1,3,Singapore_Hqs,Physical,Chronic,Drought,RCP8.5,2024,2.38837866
+1,3,Singapore_Hqs,Physical,Chronic,Drought,RCP8.5,2025,2.311061578
+1,3,Singapore_Hqs,Physical,Chronic,Drought,RCP8.5,2026,1.714499052
+1,3,Singapore_Hqs,Physical,Chronic,Drought,RCP8.5,2027,1.721104549
+1,3,Singapore_Hqs,Physical,Chronic,Drought,RCP8.5,2028,3.484636915
+1,3,Singapore_Hqs,Physical,Chronic,Drought,RCP8.5,2029,3.312702479
+1,3,Singapore_Hqs,Physical,Chronic,Drought,RCP8.5,2030,3.29221709
+1,3,Singapore_Hqs,Physical,Chronic,Drought,RCP8.5,2031,2.740616868
+1,3,Singapore_Hqs,Physical,Chronic,Drought,RCP8.5,2032,3.918129072
+1,3,Singapore_Hqs,Physical,Chronic,Drought,RCP4.5,2018,1.099492424
+1,3,Singapore_Hqs,Physical,Chronic,Drought,RCP4.5,2019,0.867445452
+1,3,Singapore_Hqs,Physical,Chronic,Drought,RCP4.5,2020,0.812429323
+1,3,Singapore_Hqs,Physical,Chronic,Drought,RCP4.5,2021,0.742852641
+1,3,Singapore_Hqs,Physical,Chronic,Drought,RCP4.5,2022,0.943153138
+1,3,Singapore_Hqs,Physical,Chronic,Drought,RCP4.5,2023,1.368774799
+1,3,Singapore_Hqs,Physical,Chronic,Drought,RCP4.5,2024,0.94098236
+1,3,Singapore_Hqs,Physical,Chronic,Drought,RCP4.5,2025,1.623517837
+1,3,Singapore_Hqs,Physical,Chronic,Drought,RCP4.5,2026,0.890899326
+1,3,Singapore_Hqs,Physical,Chronic,Drought,RCP4.5,2027,1.5832504
+1,3,Singapore_Hqs,Physical,Chronic,Drought,RCP4.5,2028,1.14586759
+1,3,Singapore_Hqs,Physical,Chronic,Drought,RCP4.5,2029,1.253155359
+1,3,Singapore_Hqs,Physical,Chronic,Drought,RCP4.5,2030,1.611578722
+1,3,Singapore_Hqs,Physical,Chronic,Drought,RCP4.5,2031,1.241779729
+1,3,Singapore_Hqs,Physical,Chronic,Drought,RCP4.5,2032,1.870556914
+1,4,Singapore_300mm_DRAM,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP8.5,2018,1.919107674
+1,4,Singapore_300mm_DRAM,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP8.5,2019,1.319179706
+1,4,Singapore_300mm_DRAM,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP8.5,2020,1.361420087
+1,4,Singapore_300mm_DRAM,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP8.5,2021,2.05940038
+1,4,Singapore_300mm_DRAM,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP8.5,2022,2.05956915
+1,4,Singapore_300mm_DRAM,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP8.5,2023,2.578025624
+1,4,Singapore_300mm_DRAM,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP8.5,2024,1.807700758
+1,4,Singapore_300mm_DRAM,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP8.5,2025,2.468532316
+1,4,Singapore_300mm_DRAM,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP8.5,2026,3.129841613
+1,4,Singapore_300mm_DRAM,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP8.5,2027,2.451306614
+1,4,Singapore_300mm_DRAM,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP8.5,2028,2.180352323
+1,4,Singapore_300mm_DRAM,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP8.5,2029,3.587874509
+1,4,Singapore_300mm_DRAM,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP8.5,2030,2.95498792
+1,4,Singapore_300mm_DRAM,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP8.5,2031,3.703658723
+1,4,Singapore_300mm_DRAM,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP8.5,2032,2.530791468
+1,4,Singapore_300mm_DRAM,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP4.5,2018,0.773963526
+1,4,Singapore_300mm_DRAM,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP4.5,2019,1.050490092
+1,4,Singapore_300mm_DRAM,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP4.5,2020,0.835589709
+1,4,Singapore_300mm_DRAM,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP4.5,2021,1.083832328
+1,4,Singapore_300mm_DRAM,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP4.5,2022,1.221360522
+1,4,Singapore_300mm_DRAM,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP4.5,2023,1.432585753
+1,4,Singapore_300mm_DRAM,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP4.5,2024,1.547777089
+1,4,Singapore_300mm_DRAM,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP4.5,2025,1.048355344
+1,4,Singapore_300mm_DRAM,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP4.5,2026,1.086119293
+1,4,Singapore_300mm_DRAM,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP4.5,2027,1.644044795
+1,4,Singapore_300mm_DRAM,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP4.5,2028,1.868129999
+1,4,Singapore_300mm_DRAM,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP4.5,2029,1.422627931
+1,4,Singapore_300mm_DRAM,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP4.5,2030,1.055450055
+1,4,Singapore_300mm_DRAM,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP4.5,2031,1.037811611
+1,4,Singapore_300mm_DRAM,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP4.5,2032,1.808817669
+1,4,Singapore_300mm_DRAM,Transition,Policy & Legal,Exposure to litigation,RCP8.5,2018,0.982798273
+1,4,Singapore_300mm_DRAM,Transition,Policy & Legal,Exposure to litigation,RCP8.5,2019,0.902273351
+1,4,Singapore_300mm_DRAM,Transition,Policy & Legal,Exposure to litigation,RCP8.5,2020,0.991828879
+1,4,Singapore_300mm_DRAM,Transition,Policy & Legal,Exposure to litigation,RCP8.5,2021,1.372319762
+1,4,Singapore_300mm_DRAM,Transition,Policy & Legal,Exposure to litigation,RCP8.5,2022,1.092490216
+1,4,Singapore_300mm_DRAM,Transition,Policy & Legal,Exposure to litigation,RCP8.5,2023,0.709306222
+1,4,Singapore_300mm_DRAM,Transition,Policy & Legal,Exposure to litigation,RCP8.5,2024,1.077788717
+1,4,Singapore_300mm_DRAM,Transition,Policy & Legal,Exposure to litigation,RCP8.5,2025,0.893855607
+1,4,Singapore_300mm_DRAM,Transition,Policy & Legal,Exposure to litigation,RCP8.5,2026,1.031565016
+1,4,Singapore_300mm_DRAM,Transition,Policy & Legal,Exposure to litigation,RCP8.5,2027,1.330753774
+1,4,Singapore_300mm_DRAM,Transition,Policy & Legal,Exposure to litigation,RCP8.5,2028,1.46104933
+1,4,Singapore_300mm_DRAM,Transition,Policy & Legal,Exposure to litigation,RCP8.5,2029,1.608983154
+1,4,Singapore_300mm_DRAM,Transition,Policy & Legal,Exposure to litigation,RCP8.5,2030,0.937499187
+1,4,Singapore_300mm_DRAM,Transition,Policy & Legal,Exposure to litigation,RCP8.5,2031,1.731327469
+1,4,Singapore_300mm_DRAM,Transition,Policy & Legal,Exposure to litigation,RCP8.5,2032,1.058939525
+1,4,Singapore_300mm_DRAM,Transition,Policy & Legal,Exposure to litigation,RCP4.5,2018,0.380422967
+1,4,Singapore_300mm_DRAM,Transition,Policy & Legal,Exposure to litigation,RCP4.5,2019,0.372772475
+1,4,Singapore_300mm_DRAM,Transition,Policy & Legal,Exposure to litigation,RCP4.5,2020,0.506427327
+1,4,Singapore_300mm_DRAM,Transition,Policy & Legal,Exposure to litigation,RCP4.5,2021,0.34863406
+1,4,Singapore_300mm_DRAM,Transition,Policy & Legal,Exposure to litigation,RCP4.5,2022,0.356141676
+1,4,Singapore_300mm_DRAM,Transition,Policy & Legal,Exposure to litigation,RCP4.5,2023,0.54942115
+1,4,Singapore_300mm_DRAM,Transition,Policy & Legal,Exposure to litigation,RCP4.5,2024,0.593255981
+1,4,Singapore_300mm_DRAM,Transition,Policy & Legal,Exposure to litigation,RCP4.5,2025,0.654850133
+1,4,Singapore_300mm_DRAM,Transition,Policy & Legal,Exposure to litigation,RCP4.5,2026,0.759182688
+1,4,Singapore_300mm_DRAM,Transition,Policy & Legal,Exposure to litigation,RCP4.5,2027,0.574821738
+1,4,Singapore_300mm_DRAM,Transition,Policy & Legal,Exposure to litigation,RCP4.5,2028,0.507750965
+1,4,Singapore_300mm_DRAM,Transition,Policy & Legal,Exposure to litigation,RCP4.5,2029,0.767807702
+1,4,Singapore_300mm_DRAM,Transition,Policy & Legal,Exposure to litigation,RCP4.5,2030,0.658714797
+1,4,Singapore_300mm_DRAM,Transition,Policy & Legal,Exposure to litigation,RCP4.5,2031,0.864097997
+1,4,Singapore_300mm_DRAM,Transition,Policy & Legal,Exposure to litigation,RCP4.5,2032,0.964119649
+1,4,Singapore_300mm_DRAM,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP8.5,2018,2.296578276
+1,4,Singapore_300mm_DRAM,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP8.5,2019,2.21093559
+1,4,Singapore_300mm_DRAM,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP8.5,2020,2.148171313
+1,4,Singapore_300mm_DRAM,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP8.5,2021,2.216285693
+1,4,Singapore_300mm_DRAM,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP8.5,2022,2.793636251
+1,4,Singapore_300mm_DRAM,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP8.5,2023,2.000302345
+1,4,Singapore_300mm_DRAM,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP8.5,2024,3.110048726
+1,4,Singapore_300mm_DRAM,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP8.5,2025,1.910214419
+1,4,Singapore_300mm_DRAM,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP8.5,2026,2.465624019
+1,4,Singapore_300mm_DRAM,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP8.5,2027,1.956915678
+1,4,Singapore_300mm_DRAM,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP8.5,2028,3.058182514
+1,4,Singapore_300mm_DRAM,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP8.5,2029,2.171801963
+1,4,Singapore_300mm_DRAM,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP8.5,2030,2.887090776
+1,4,Singapore_300mm_DRAM,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP8.5,2031,3.076269386
+1,4,Singapore_300mm_DRAM,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP8.5,2032,2.704688495
+1,4,Singapore_300mm_DRAM,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP4.5,2018,0.657298311
+1,4,Singapore_300mm_DRAM,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP4.5,2019,0.652895155
+1,4,Singapore_300mm_DRAM,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP4.5,2020,0.90248712
+1,4,Singapore_300mm_DRAM,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP4.5,2021,0.806892529
+1,4,Singapore_300mm_DRAM,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP4.5,2022,1.01743471
+1,4,Singapore_300mm_DRAM,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP4.5,2023,1.141140307
+1,4,Singapore_300mm_DRAM,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP4.5,2024,1.455701775
+1,4,Singapore_300mm_DRAM,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP4.5,2025,0.870096675
+1,4,Singapore_300mm_DRAM,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP4.5,2026,1.157333369
+1,4,Singapore_300mm_DRAM,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP4.5,2027,0.936042301
+1,4,Singapore_300mm_DRAM,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP4.5,2028,1.330158435
+1,4,Singapore_300mm_DRAM,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP4.5,2029,1.129493882
+1,4,Singapore_300mm_DRAM,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP4.5,2030,1.530995803
+1,4,Singapore_300mm_DRAM,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP4.5,2031,1.607806408
+1,4,Singapore_300mm_DRAM,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP4.5,2032,1.755732421
+1,4,Singapore_300mm_DRAM,Physical,Chronic,Temperature extremes,RCP8.5,2018,1.359689803
+1,4,Singapore_300mm_DRAM,Physical,Chronic,Temperature extremes,RCP8.5,2019,1.601632299
+1,4,Singapore_300mm_DRAM,Physical,Chronic,Temperature extremes,RCP8.5,2020,2.369847394
+1,4,Singapore_300mm_DRAM,Physical,Chronic,Temperature extremes,RCP8.5,2021,1.747019662
+1,4,Singapore_300mm_DRAM,Physical,Chronic,Temperature extremes,RCP8.5,2022,1.834872835
+1,4,Singapore_300mm_DRAM,Physical,Chronic,Temperature extremes,RCP8.5,2023,1.955419488
+1,4,Singapore_300mm_DRAM,Physical,Chronic,Temperature extremes,RCP8.5,2024,2.104859987
+1,4,Singapore_300mm_DRAM,Physical,Chronic,Temperature extremes,RCP8.5,2025,3.00289752
+1,4,Singapore_300mm_DRAM,Physical,Chronic,Temperature extremes,RCP8.5,2026,2.696334697
+1,4,Singapore_300mm_DRAM,Physical,Chronic,Temperature extremes,RCP8.5,2027,1.804390172
+1,4,Singapore_300mm_DRAM,Physical,Chronic,Temperature extremes,RCP8.5,2028,3.457630155
+1,4,Singapore_300mm_DRAM,Physical,Chronic,Temperature extremes,RCP8.5,2029,3.136558241
+1,4,Singapore_300mm_DRAM,Physical,Chronic,Temperature extremes,RCP8.5,2030,3.158051524
+1,4,Singapore_300mm_DRAM,Physical,Chronic,Temperature extremes,RCP8.5,2031,2.169493519
+1,4,Singapore_300mm_DRAM,Physical,Chronic,Temperature extremes,RCP8.5,2032,3.923485497
+1,4,Singapore_300mm_DRAM,Physical,Chronic,Temperature extremes,RCP4.5,2018,1.153286032
+1,4,Singapore_300mm_DRAM,Physical,Chronic,Temperature extremes,RCP4.5,2019,1.07855692
+1,4,Singapore_300mm_DRAM,Physical,Chronic,Temperature extremes,RCP4.5,2020,0.826942757
+1,4,Singapore_300mm_DRAM,Physical,Chronic,Temperature extremes,RCP4.5,2021,1.461264011
+1,4,Singapore_300mm_DRAM,Physical,Chronic,Temperature extremes,RCP4.5,2022,0.900310685
+1,4,Singapore_300mm_DRAM,Physical,Chronic,Temperature extremes,RCP4.5,2023,1.264766082
+1,4,Singapore_300mm_DRAM,Physical,Chronic,Temperature extremes,RCP4.5,2024,0.858132887
+1,4,Singapore_300mm_DRAM,Physical,Chronic,Temperature extremes,RCP4.5,2025,1.599082329
+1,4,Singapore_300mm_DRAM,Physical,Chronic,Temperature extremes,RCP4.5,2026,1.280518351
+1,4,Singapore_300mm_DRAM,Physical,Chronic,Temperature extremes,RCP4.5,2027,1.426594984
+1,4,Singapore_300mm_DRAM,Physical,Chronic,Temperature extremes,RCP4.5,2028,1.318610428
+1,4,Singapore_300mm_DRAM,Physical,Chronic,Temperature extremes,RCP4.5,2029,1.594025437
+1,4,Singapore_300mm_DRAM,Physical,Chronic,Temperature extremes,RCP4.5,2030,1.017448962
+1,4,Singapore_300mm_DRAM,Physical,Chronic,Temperature extremes,RCP4.5,2031,1.037791431
+1,4,Singapore_300mm_DRAM,Physical,Chronic,Temperature extremes,RCP4.5,2032,2.168410508
+1,4,Singapore_300mm_DRAM,Physical,Chronic,Coastal flooding,RCP8.5,2018,0.5862859
+1,4,Singapore_300mm_DRAM,Physical,Chronic,Coastal flooding,RCP8.5,2019,0.801406046
+1,4,Singapore_300mm_DRAM,Physical,Chronic,Coastal flooding,RCP8.5,2020,0.852454715
+1,4,Singapore_300mm_DRAM,Physical,Chronic,Coastal flooding,RCP8.5,2021,0.77784329
+1,4,Singapore_300mm_DRAM,Physical,Chronic,Coastal flooding,RCP8.5,2022,0.752937619
+1,4,Singapore_300mm_DRAM,Physical,Chronic,Coastal flooding,RCP8.5,2023,0.956057216
+1,4,Singapore_300mm_DRAM,Physical,Chronic,Coastal flooding,RCP8.5,2024,1.048820836
+1,4,Singapore_300mm_DRAM,Physical,Chronic,Coastal flooding,RCP8.5,2025,0.939627545
+1,4,Singapore_300mm_DRAM,Physical,Chronic,Coastal flooding,RCP8.5,2026,1.265799633
+1,4,Singapore_300mm_DRAM,Physical,Chronic,Coastal flooding,RCP8.5,2027,0.909578924
+1,4,Singapore_300mm_DRAM,Physical,Chronic,Coastal flooding,RCP8.5,2028,1.641603791
+1,4,Singapore_300mm_DRAM,Physical,Chronic,Coastal flooding,RCP8.5,2029,0.992791573
+1,4,Singapore_300mm_DRAM,Physical,Chronic,Coastal flooding,RCP8.5,2030,1.582196199
+1,4,Singapore_300mm_DRAM,Physical,Chronic,Coastal flooding,RCP8.5,2031,0.915665676
+1,4,Singapore_300mm_DRAM,Physical,Chronic,Coastal flooding,RCP8.5,2032,1.113733552
+1,4,Singapore_300mm_DRAM,Physical,Chronic,Coastal flooding,RCP4.5,2018,0.340048079
+1,4,Singapore_300mm_DRAM,Physical,Chronic,Coastal flooding,RCP4.5,2019,0.397118159
+1,4,Singapore_300mm_DRAM,Physical,Chronic,Coastal flooding,RCP4.5,2020,0.454416923
+1,4,Singapore_300mm_DRAM,Physical,Chronic,Coastal flooding,RCP4.5,2021,0.387131337
+1,4,Singapore_300mm_DRAM,Physical,Chronic,Coastal flooding,RCP4.5,2022,0.63001028
+1,4,Singapore_300mm_DRAM,Physical,Chronic,Coastal flooding,RCP4.5,2023,0.409045028
+1,4,Singapore_300mm_DRAM,Physical,Chronic,Coastal flooding,RCP4.5,2024,0.598867236
+1,4,Singapore_300mm_DRAM,Physical,Chronic,Coastal flooding,RCP4.5,2025,0.716446852
+1,4,Singapore_300mm_DRAM,Physical,Chronic,Coastal flooding,RCP4.5,2026,0.389649193
+1,4,Singapore_300mm_DRAM,Physical,Chronic,Coastal flooding,RCP4.5,2027,0.424471955
+1,4,Singapore_300mm_DRAM,Physical,Chronic,Coastal flooding,RCP4.5,2028,0.76452871
+1,4,Singapore_300mm_DRAM,Physical,Chronic,Coastal flooding,RCP4.5,2029,0.751454055
+1,4,Singapore_300mm_DRAM,Physical,Chronic,Coastal flooding,RCP4.5,2030,0.677187653
+1,4,Singapore_300mm_DRAM,Physical,Chronic,Coastal flooding,RCP4.5,2031,0.572675409
+1,4,Singapore_300mm_DRAM,Physical,Chronic,Coastal flooding,RCP4.5,2032,1.004007863
+1,4,Singapore_300mm_DRAM,Physical,Chronic,Drought,RCP8.5,2018,1.578537238
+1,4,Singapore_300mm_DRAM,Physical,Chronic,Drought,RCP8.5,2019,1.487913202
+1,4,Singapore_300mm_DRAM,Physical,Chronic,Drought,RCP8.5,2020,1.975488196
+1,4,Singapore_300mm_DRAM,Physical,Chronic,Drought,RCP8.5,2021,2.872048728
+1,4,Singapore_300mm_DRAM,Physical,Chronic,Drought,RCP8.5,2022,2.764853185
+1,4,Singapore_300mm_DRAM,Physical,Chronic,Drought,RCP8.5,2023,2.252799949
+1,4,Singapore_300mm_DRAM,Physical,Chronic,Drought,RCP8.5,2024,2.843251312
+1,4,Singapore_300mm_DRAM,Physical,Chronic,Drought,RCP8.5,2025,2.206965731
+1,4,Singapore_300mm_DRAM,Physical,Chronic,Drought,RCP8.5,2026,2.157013442
+1,4,Singapore_300mm_DRAM,Physical,Chronic,Drought,RCP8.5,2027,2.115335885
+1,4,Singapore_300mm_DRAM,Physical,Chronic,Drought,RCP8.5,2028,3.123166881
+1,4,Singapore_300mm_DRAM,Physical,Chronic,Drought,RCP8.5,2029,3.589475382
+1,4,Singapore_300mm_DRAM,Physical,Chronic,Drought,RCP8.5,2030,2.573978959
+1,4,Singapore_300mm_DRAM,Physical,Chronic,Drought,RCP8.5,2031,2.151266673
+1,4,Singapore_300mm_DRAM,Physical,Chronic,Drought,RCP8.5,2032,3.903134498
+1,4,Singapore_300mm_DRAM,Physical,Chronic,Drought,RCP4.5,2018,0.786570642
+1,4,Singapore_300mm_DRAM,Physical,Chronic,Drought,RCP4.5,2019,1.035738268
+1,4,Singapore_300mm_DRAM,Physical,Chronic,Drought,RCP4.5,2020,1.208610998
+1,4,Singapore_300mm_DRAM,Physical,Chronic,Drought,RCP4.5,2021,0.993838187
+1,4,Singapore_300mm_DRAM,Physical,Chronic,Drought,RCP4.5,2022,1.324479551
+1,4,Singapore_300mm_DRAM,Physical,Chronic,Drought,RCP4.5,2023,1.44966573
+1,4,Singapore_300mm_DRAM,Physical,Chronic,Drought,RCP4.5,2024,1.048738859
+1,4,Singapore_300mm_DRAM,Physical,Chronic,Drought,RCP4.5,2025,0.915281119
+1,4,Singapore_300mm_DRAM,Physical,Chronic,Drought,RCP4.5,2026,1.042465521
+1,4,Singapore_300mm_DRAM,Physical,Chronic,Drought,RCP4.5,2027,1.350431058
+1,4,Singapore_300mm_DRAM,Physical,Chronic,Drought,RCP4.5,2028,1.896851942
+1,4,Singapore_300mm_DRAM,Physical,Chronic,Drought,RCP4.5,2029,1.309705888
+1,4,Singapore_300mm_DRAM,Physical,Chronic,Drought,RCP4.5,2030,1.565518258
+1,4,Singapore_300mm_DRAM,Physical,Chronic,Drought,RCP4.5,2031,1.404220269
+1,4,Singapore_300mm_DRAM,Physical,Chronic,Drought,RCP4.5,2032,1.100671293
+1,5,Singapore_300mm_NAND,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP8.5,2018,1.412692592
+1,5,Singapore_300mm_NAND,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP8.5,2019,1.906935682
+1,5,Singapore_300mm_NAND,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP8.5,2020,2.359464735
+1,5,Singapore_300mm_NAND,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP8.5,2021,2.253265537
+1,5,Singapore_300mm_NAND,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP8.5,2022,2.237709441
+1,5,Singapore_300mm_NAND,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP8.5,2023,2.342552849
+1,5,Singapore_300mm_NAND,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP8.5,2024,1.838471876
+1,5,Singapore_300mm_NAND,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP8.5,2025,1.940528129
+1,5,Singapore_300mm_NAND,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP8.5,2026,3.337457231
+1,5,Singapore_300mm_NAND,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP8.5,2027,2.724152789
+1,5,Singapore_300mm_NAND,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP8.5,2028,3.974605084
+1,5,Singapore_300mm_NAND,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP8.5,2029,3.07433926
+1,5,Singapore_300mm_NAND,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP8.5,2030,3.648005395
+1,5,Singapore_300mm_NAND,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP8.5,2031,3.672385105
+1,5,Singapore_300mm_NAND,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP8.5,2032,3.074247913
+1,5,Singapore_300mm_NAND,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP4.5,2018,0.880473412
+1,5,Singapore_300mm_NAND,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP4.5,2019,0.87515091
+1,5,Singapore_300mm_NAND,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP4.5,2020,0.699312375
+1,5,Singapore_300mm_NAND,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP4.5,2021,0.945679504
+1,5,Singapore_300mm_NAND,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP4.5,2022,0.988532634
+1,5,Singapore_300mm_NAND,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP4.5,2023,0.915067408
+1,5,Singapore_300mm_NAND,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP4.5,2024,0.98507059
+1,5,Singapore_300mm_NAND,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP4.5,2025,1.621476502
+1,5,Singapore_300mm_NAND,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP4.5,2026,0.99056288
+1,5,Singapore_300mm_NAND,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP4.5,2027,1.063902149
+1,5,Singapore_300mm_NAND,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP4.5,2028,1.62214821
+1,5,Singapore_300mm_NAND,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP4.5,2029,1.251869235
+1,5,Singapore_300mm_NAND,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP4.5,2030,1.267402714
+1,5,Singapore_300mm_NAND,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP4.5,2031,1.741237697
+1,5,Singapore_300mm_NAND,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP4.5,2032,1.464235202
+1,5,Singapore_300mm_NAND,Transition,Policy & Legal,Exposure to litigation,RCP8.5,2018,0.915351421
+1,5,Singapore_300mm_NAND,Transition,Policy & Legal,Exposure to litigation,RCP8.5,2019,0.632534834
+1,5,Singapore_300mm_NAND,Transition,Policy & Legal,Exposure to litigation,RCP8.5,2020,0.636150166
+1,5,Singapore_300mm_NAND,Transition,Policy & Legal,Exposure to litigation,RCP8.5,2021,1.116031912
+1,5,Singapore_300mm_NAND,Transition,Policy & Legal,Exposure to litigation,RCP8.5,2022,1.342567447
+1,5,Singapore_300mm_NAND,Transition,Policy & Legal,Exposure to litigation,RCP8.5,2023,1.100995878
+1,5,Singapore_300mm_NAND,Transition,Policy & Legal,Exposure to litigation,RCP8.5,2024,1.419433723
+1,5,Singapore_300mm_NAND,Transition,Policy & Legal,Exposure to litigation,RCP8.5,2025,1.298020451
+1,5,Singapore_300mm_NAND,Transition,Policy & Legal,Exposure to litigation,RCP8.5,2026,0.871865353
+1,5,Singapore_300mm_NAND,Transition,Policy & Legal,Exposure to litigation,RCP8.5,2027,1.497282902
+1,5,Singapore_300mm_NAND,Transition,Policy & Legal,Exposure to litigation,RCP8.5,2028,1.032217877
+1,5,Singapore_300mm_NAND,Transition,Policy & Legal,Exposure to litigation,RCP8.5,2029,1.013885725
+1,5,Singapore_300mm_NAND,Transition,Policy & Legal,Exposure to litigation,RCP8.5,2030,1.811351188
+1,5,Singapore_300mm_NAND,Transition,Policy & Legal,Exposure to litigation,RCP8.5,2031,1.36751648
+1,5,Singapore_300mm_NAND,Transition,Policy & Legal,Exposure to litigation,RCP8.5,2032,1.030655402
+1,5,Singapore_300mm_NAND,Transition,Policy & Legal,Exposure to litigation,RCP4.5,2018,0.473562098
+1,5,Singapore_300mm_NAND,Transition,Policy & Legal,Exposure to litigation,RCP4.5,2019,0.330272554
+1,5,Singapore_300mm_NAND,Transition,Policy & Legal,Exposure to litigation,RCP4.5,2020,0.436977433
+1,5,Singapore_300mm_NAND,Transition,Policy & Legal,Exposure to litigation,RCP4.5,2021,0.37669287
+1,5,Singapore_300mm_NAND,Transition,Policy & Legal,Exposure to litigation,RCP4.5,2022,0.509761098
+1,5,Singapore_300mm_NAND,Transition,Policy & Legal,Exposure to litigation,RCP4.5,2023,0.479220547
+1,5,Singapore_300mm_NAND,Transition,Policy & Legal,Exposure to litigation,RCP4.5,2024,0.738102808
+1,5,Singapore_300mm_NAND,Transition,Policy & Legal,Exposure to litigation,RCP4.5,2025,0.487884145
+1,5,Singapore_300mm_NAND,Transition,Policy & Legal,Exposure to litigation,RCP4.5,2026,0.451232304
+1,5,Singapore_300mm_NAND,Transition,Policy & Legal,Exposure to litigation,RCP4.5,2027,0.675330268
+1,5,Singapore_300mm_NAND,Transition,Policy & Legal,Exposure to litigation,RCP4.5,2028,0.85302909
+1,5,Singapore_300mm_NAND,Transition,Policy & Legal,Exposure to litigation,RCP4.5,2029,0.679263693
+1,5,Singapore_300mm_NAND,Transition,Policy & Legal,Exposure to litigation,RCP4.5,2030,0.790413465
+1,5,Singapore_300mm_NAND,Transition,Policy & Legal,Exposure to litigation,RCP4.5,2031,0.871441208
+1,5,Singapore_300mm_NAND,Transition,Policy & Legal,Exposure to litigation,RCP4.5,2032,0.93936269
+1,5,Singapore_300mm_NAND,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP8.5,2018,1.943829897
+1,5,Singapore_300mm_NAND,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP8.5,2019,2.062590385
+1,5,Singapore_300mm_NAND,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP8.5,2020,1.314906281
+1,5,Singapore_300mm_NAND,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP8.5,2021,1.704928747
+1,5,Singapore_300mm_NAND,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP8.5,2022,2.557320533
+1,5,Singapore_300mm_NAND,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP8.5,2023,2.353255619
+1,5,Singapore_300mm_NAND,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP8.5,2024,1.899783243
+1,5,Singapore_300mm_NAND,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP8.5,2025,2.814369772
+1,5,Singapore_300mm_NAND,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP8.5,2026,3.057850396
+1,5,Singapore_300mm_NAND,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP8.5,2027,1.757948447
+1,5,Singapore_300mm_NAND,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP8.5,2028,1.952782369
+1,5,Singapore_300mm_NAND,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP8.5,2029,2.688825585
+1,5,Singapore_300mm_NAND,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP8.5,2030,2.201835293
+1,5,Singapore_300mm_NAND,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP8.5,2031,2.945034263
+1,5,Singapore_300mm_NAND,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP8.5,2032,3.486637868
+1,5,Singapore_300mm_NAND,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP4.5,2018,1.13756725
+1,5,Singapore_300mm_NAND,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP4.5,2019,0.885315506
+1,5,Singapore_300mm_NAND,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP4.5,2020,0.861750891
+1,5,Singapore_300mm_NAND,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP4.5,2021,0.790149336
+1,5,Singapore_300mm_NAND,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP4.5,2022,1.432289232
+1,5,Singapore_300mm_NAND,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP4.5,2023,0.935441356
+1,5,Singapore_300mm_NAND,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP4.5,2024,1.344783366
+1,5,Singapore_300mm_NAND,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP4.5,2025,1.10271724
+1,5,Singapore_300mm_NAND,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP4.5,2026,1.43543697
+1,5,Singapore_300mm_NAND,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP4.5,2027,1.526596227
+1,5,Singapore_300mm_NAND,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP4.5,2028,1.428953714
+1,5,Singapore_300mm_NAND,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP4.5,2029,1.579545028
+1,5,Singapore_300mm_NAND,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP4.5,2030,1.164475272
+1,5,Singapore_300mm_NAND,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP4.5,2031,1.27222324
+1,5,Singapore_300mm_NAND,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP4.5,2032,1.143918783
+1,5,Singapore_300mm_NAND,Physical,Chronic,Temperature extremes,RCP8.5,2018,1.346557925
+1,5,Singapore_300mm_NAND,Physical,Chronic,Temperature extremes,RCP8.5,2019,1.975944952
+1,5,Singapore_300mm_NAND,Physical,Chronic,Temperature extremes,RCP8.5,2020,1.890054725
+1,5,Singapore_300mm_NAND,Physical,Chronic,Temperature extremes,RCP8.5,2021,2.941375153
+1,5,Singapore_300mm_NAND,Physical,Chronic,Temperature extremes,RCP8.5,2022,2.599319409
+1,5,Singapore_300mm_NAND,Physical,Chronic,Temperature extremes,RCP8.5,2023,1.718006824
+1,5,Singapore_300mm_NAND,Physical,Chronic,Temperature extremes,RCP8.5,2024,2.534816193
+1,5,Singapore_300mm_NAND,Physical,Chronic,Temperature extremes,RCP8.5,2025,2.731863317
+1,5,Singapore_300mm_NAND,Physical,Chronic,Temperature extremes,RCP8.5,2026,2.74391705
+1,5,Singapore_300mm_NAND,Physical,Chronic,Temperature extremes,RCP8.5,2027,2.470850282
+1,5,Singapore_300mm_NAND,Physical,Chronic,Temperature extremes,RCP8.5,2028,3.124092246
+1,5,Singapore_300mm_NAND,Physical,Chronic,Temperature extremes,RCP8.5,2029,3.654811349
+1,5,Singapore_300mm_NAND,Physical,Chronic,Temperature extremes,RCP8.5,2030,2.635302242
+1,5,Singapore_300mm_NAND,Physical,Chronic,Temperature extremes,RCP8.5,2031,3.796674797
+1,5,Singapore_300mm_NAND,Physical,Chronic,Temperature extremes,RCP8.5,2032,4.186022508
+1,5,Singapore_300mm_NAND,Physical,Chronic,Temperature extremes,RCP4.5,2018,1.098786487
+1,5,Singapore_300mm_NAND,Physical,Chronic,Temperature extremes,RCP4.5,2019,0.869006792
+1,5,Singapore_300mm_NAND,Physical,Chronic,Temperature extremes,RCP4.5,2020,0.745806279
+1,5,Singapore_300mm_NAND,Physical,Chronic,Temperature extremes,RCP4.5,2021,1.411913946
+1,5,Singapore_300mm_NAND,Physical,Chronic,Temperature extremes,RCP4.5,2022,1.294334496
+1,5,Singapore_300mm_NAND,Physical,Chronic,Temperature extremes,RCP4.5,2023,1.286687189
+1,5,Singapore_300mm_NAND,Physical,Chronic,Temperature extremes,RCP4.5,2024,1.421139699
+1,5,Singapore_300mm_NAND,Physical,Chronic,Temperature extremes,RCP4.5,2025,1.515864832
+1,5,Singapore_300mm_NAND,Physical,Chronic,Temperature extremes,RCP4.5,2026,1.294825204
+1,5,Singapore_300mm_NAND,Physical,Chronic,Temperature extremes,RCP4.5,2027,1.181233924
+1,5,Singapore_300mm_NAND,Physical,Chronic,Temperature extremes,RCP4.5,2028,1.693414942
+1,5,Singapore_300mm_NAND,Physical,Chronic,Temperature extremes,RCP4.5,2029,1.188729909
+1,5,Singapore_300mm_NAND,Physical,Chronic,Temperature extremes,RCP4.5,2030,1.879619647
+1,5,Singapore_300mm_NAND,Physical,Chronic,Temperature extremes,RCP4.5,2031,1.766068855
+1,5,Singapore_300mm_NAND,Physical,Chronic,Temperature extremes,RCP4.5,2032,1.693352013
+1,5,Singapore_300mm_NAND,Physical,Chronic,Coastal flooding,RCP8.5,2018,0.741685694
+1,5,Singapore_300mm_NAND,Physical,Chronic,Coastal flooding,RCP8.5,2019,1.097258525
+1,5,Singapore_300mm_NAND,Physical,Chronic,Coastal flooding,RCP8.5,2020,1.096949489
+1,5,Singapore_300mm_NAND,Physical,Chronic,Coastal flooding,RCP8.5,2021,0.934505732
+1,5,Singapore_300mm_NAND,Physical,Chronic,Coastal flooding,RCP8.5,2022,0.834214968
+1,5,Singapore_300mm_NAND,Physical,Chronic,Coastal flooding,RCP8.5,2023,1.12955253
+1,5,Singapore_300mm_NAND,Physical,Chronic,Coastal flooding,RCP8.5,2024,1.441931919
+1,5,Singapore_300mm_NAND,Physical,Chronic,Coastal flooding,RCP8.5,2025,0.93556677
+1,5,Singapore_300mm_NAND,Physical,Chronic,Coastal flooding,RCP8.5,2026,0.974275096
+1,5,Singapore_300mm_NAND,Physical,Chronic,Coastal flooding,RCP8.5,2027,1.363370252
+1,5,Singapore_300mm_NAND,Physical,Chronic,Coastal flooding,RCP8.5,2028,1.699837204
+1,5,Singapore_300mm_NAND,Physical,Chronic,Coastal flooding,RCP8.5,2029,1.589536274
+1,5,Singapore_300mm_NAND,Physical,Chronic,Coastal flooding,RCP8.5,2030,1.588273636
+1,5,Singapore_300mm_NAND,Physical,Chronic,Coastal flooding,RCP8.5,2031,1.394028137
+1,5,Singapore_300mm_NAND,Physical,Chronic,Coastal flooding,RCP8.5,2032,1.316042289
+1,5,Singapore_300mm_NAND,Physical,Chronic,Coastal flooding,RCP4.5,2018,0.360643552
+1,5,Singapore_300mm_NAND,Physical,Chronic,Coastal flooding,RCP4.5,2019,0.426274159
+1,5,Singapore_300mm_NAND,Physical,Chronic,Coastal flooding,RCP4.5,2020,0.326401108
+1,5,Singapore_300mm_NAND,Physical,Chronic,Coastal flooding,RCP4.5,2021,0.68201148
+1,5,Singapore_300mm_NAND,Physical,Chronic,Coastal flooding,RCP4.5,2022,0.617418622
+1,5,Singapore_300mm_NAND,Physical,Chronic,Coastal flooding,RCP4.5,2023,0.37566173
+1,5,Singapore_300mm_NAND,Physical,Chronic,Coastal flooding,RCP4.5,2024,0.441017016
+1,5,Singapore_300mm_NAND,Physical,Chronic,Coastal flooding,RCP4.5,2025,0.433289507
+1,5,Singapore_300mm_NAND,Physical,Chronic,Coastal flooding,RCP4.5,2026,0.596192585
+1,5,Singapore_300mm_NAND,Physical,Chronic,Coastal flooding,RCP4.5,2027,0.646923747
+1,5,Singapore_300mm_NAND,Physical,Chronic,Coastal flooding,RCP4.5,2028,0.771217102
+1,5,Singapore_300mm_NAND,Physical,Chronic,Coastal flooding,RCP4.5,2029,0.848310049
+1,5,Singapore_300mm_NAND,Physical,Chronic,Coastal flooding,RCP4.5,2030,0.598045884
+1,5,Singapore_300mm_NAND,Physical,Chronic,Coastal flooding,RCP4.5,2031,0.794123716
+1,5,Singapore_300mm_NAND,Physical,Chronic,Coastal flooding,RCP4.5,2032,0.656430986
+1,5,Singapore_300mm_NAND,Physical,Chronic,Drought,RCP8.5,2018,1.373704389
+1,5,Singapore_300mm_NAND,Physical,Chronic,Drought,RCP8.5,2019,1.881916345
+1,5,Singapore_300mm_NAND,Physical,Chronic,Drought,RCP8.5,2020,1.622658018
+1,5,Singapore_300mm_NAND,Physical,Chronic,Drought,RCP8.5,2021,2.191643538
+1,5,Singapore_300mm_NAND,Physical,Chronic,Drought,RCP8.5,2022,1.911147342
+1,5,Singapore_300mm_NAND,Physical,Chronic,Drought,RCP8.5,2023,2.102131537
+1,5,Singapore_300mm_NAND,Physical,Chronic,Drought,RCP8.5,2024,2.785952261
+1,5,Singapore_300mm_NAND,Physical,Chronic,Drought,RCP8.5,2025,2.487811423
+1,5,Singapore_300mm_NAND,Physical,Chronic,Drought,RCP8.5,2026,2.66881695
+1,5,Singapore_300mm_NAND,Physical,Chronic,Drought,RCP8.5,2027,2.467280438
+1,5,Singapore_300mm_NAND,Physical,Chronic,Drought,RCP8.5,2028,2.206807593
+1,5,Singapore_300mm_NAND,Physical,Chronic,Drought,RCP8.5,2029,3.22558481
+1,5,Singapore_300mm_NAND,Physical,Chronic,Drought,RCP8.5,2030,3.59536201
+1,5,Singapore_300mm_NAND,Physical,Chronic,Drought,RCP8.5,2031,1.954549294
+1,5,Singapore_300mm_NAND,Physical,Chronic,Drought,RCP8.5,2032,2.560786377
+1,5,Singapore_300mm_NAND,Physical,Chronic,Drought,RCP4.5,2018,1.094570418
+1,5,Singapore_300mm_NAND,Physical,Chronic,Drought,RCP4.5,2019,0.921344384
+1,5,Singapore_300mm_NAND,Physical,Chronic,Drought,RCP4.5,2020,0.967900492
+1,5,Singapore_300mm_NAND,Physical,Chronic,Drought,RCP4.5,2021,1.152209799
+1,5,Singapore_300mm_NAND,Physical,Chronic,Drought,RCP4.5,2022,0.74136915
+1,5,Singapore_300mm_NAND,Physical,Chronic,Drought,RCP4.5,2023,0.973839703
+1,5,Singapore_300mm_NAND,Physical,Chronic,Drought,RCP4.5,2024,1.441464748
+1,5,Singapore_300mm_NAND,Physical,Chronic,Drought,RCP4.5,2025,1.492275836
+1,5,Singapore_300mm_NAND,Physical,Chronic,Drought,RCP4.5,2026,1.267129764
+1,5,Singapore_300mm_NAND,Physical,Chronic,Drought,RCP4.5,2027,1.443802838
+1,5,Singapore_300mm_NAND,Physical,Chronic,Drought,RCP4.5,2028,0.979777772
+1,5,Singapore_300mm_NAND,Physical,Chronic,Drought,RCP4.5,2029,1.872502729
+1,5,Singapore_300mm_NAND,Physical,Chronic,Drought,RCP4.5,2030,1.612425464
+1,5,Singapore_300mm_NAND,Physical,Chronic,Drought,RCP4.5,2031,1.087410742
+1,5,Singapore_300mm_NAND,Physical,Chronic,Drought,RCP4.5,2032,1.418172864
+1,6,Singapore_200mm_NOR,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP8.5,2018,2.195895895
+1,6,Singapore_200mm_NOR,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP8.5,2019,1.634494021
+1,6,Singapore_200mm_NOR,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP8.5,2020,1.559560357
+1,6,Singapore_200mm_NOR,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP8.5,2021,2.288771716
+1,6,Singapore_200mm_NOR,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP8.5,2022,1.757765842
+1,6,Singapore_200mm_NOR,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP8.5,2023,2.711653272
+1,6,Singapore_200mm_NOR,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP8.5,2024,2.651178925
+1,6,Singapore_200mm_NOR,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP8.5,2025,3.379185779
+1,6,Singapore_200mm_NOR,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP8.5,2026,2.227460713
+1,6,Singapore_200mm_NOR,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP8.5,2027,2.6700676
+1,6,Singapore_200mm_NOR,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP8.5,2028,3.886795147
+1,6,Singapore_200mm_NOR,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP8.5,2029,2.547801956
+1,6,Singapore_200mm_NOR,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP8.5,2030,2.221625781
+1,6,Singapore_200mm_NOR,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP8.5,2031,3.888621052
+1,6,Singapore_200mm_NOR,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP8.5,2032,2.351696766
+1,6,Singapore_200mm_NOR,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP4.5,2018,0.924353495
+1,6,Singapore_200mm_NOR,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP4.5,2019,1.021177148
+1,6,Singapore_200mm_NOR,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP4.5,2020,1.183727287
+1,6,Singapore_200mm_NOR,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP4.5,2021,0.789937616
+1,6,Singapore_200mm_NOR,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP4.5,2022,0.988871473
+1,6,Singapore_200mm_NOR,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP4.5,2023,1.001792368
+1,6,Singapore_200mm_NOR,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP4.5,2024,0.94890742
+1,6,Singapore_200mm_NOR,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP4.5,2025,1.686608238
+1,6,Singapore_200mm_NOR,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP4.5,2026,0.906389157
+1,6,Singapore_200mm_NOR,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP4.5,2027,0.879758619
+1,6,Singapore_200mm_NOR,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP4.5,2028,1.360597775
+1,6,Singapore_200mm_NOR,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP4.5,2029,1.875143684
+1,6,Singapore_200mm_NOR,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP4.5,2030,1.300073591
+1,6,Singapore_200mm_NOR,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP4.5,2031,1.334503972
+1,6,Singapore_200mm_NOR,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP4.5,2032,1.139091313
+1,6,Singapore_200mm_NOR,Transition,Policy & Legal,Exposure to litigation,RCP8.5,2018,0.817181494
+1,6,Singapore_200mm_NOR,Transition,Policy & Legal,Exposure to litigation,RCP8.5,2019,0.562374993
+1,6,Singapore_200mm_NOR,Transition,Policy & Legal,Exposure to litigation,RCP8.5,2020,0.850838264
+1,6,Singapore_200mm_NOR,Transition,Policy & Legal,Exposure to litigation,RCP8.5,2021,1.020196544
+1,6,Singapore_200mm_NOR,Transition,Policy & Legal,Exposure to litigation,RCP8.5,2022,1.123790006
+1,6,Singapore_200mm_NOR,Transition,Policy & Legal,Exposure to litigation,RCP8.5,2023,0.8210631
+1,6,Singapore_200mm_NOR,Transition,Policy & Legal,Exposure to litigation,RCP8.5,2024,0.848088751
+1,6,Singapore_200mm_NOR,Transition,Policy & Legal,Exposure to litigation,RCP8.5,2025,0.797148669
+1,6,Singapore_200mm_NOR,Transition,Policy & Legal,Exposure to litigation,RCP8.5,2026,1.013292396
+1,6,Singapore_200mm_NOR,Transition,Policy & Legal,Exposure to litigation,RCP8.5,2027,0.986912639
+1,6,Singapore_200mm_NOR,Transition,Policy & Legal,Exposure to litigation,RCP8.5,2028,1.367230795
+1,6,Singapore_200mm_NOR,Transition,Policy & Legal,Exposure to litigation,RCP8.5,2029,1.089240076
+1,6,Singapore_200mm_NOR,Transition,Policy & Legal,Exposure to litigation,RCP8.5,2030,1.577769207
+1,6,Singapore_200mm_NOR,Transition,Policy & Legal,Exposure to litigation,RCP8.5,2031,1.33095077
+1,6,Singapore_200mm_NOR,Transition,Policy & Legal,Exposure to litigation,RCP8.5,2032,1.630673609
+1,6,Singapore_200mm_NOR,Transition,Policy & Legal,Exposure to litigation,RCP4.5,2018,0.405656638
+1,6,Singapore_200mm_NOR,Transition,Policy & Legal,Exposure to litigation,RCP4.5,2019,0.462278392
+1,6,Singapore_200mm_NOR,Transition,Policy & Legal,Exposure to litigation,RCP4.5,2020,0.315935335
+1,6,Singapore_200mm_NOR,Transition,Policy & Legal,Exposure to litigation,RCP4.5,2021,0.37129022
+1,6,Singapore_200mm_NOR,Transition,Policy & Legal,Exposure to litigation,RCP4.5,2022,0.463543373
+1,6,Singapore_200mm_NOR,Transition,Policy & Legal,Exposure to litigation,RCP4.5,2023,0.345564339
+1,6,Singapore_200mm_NOR,Transition,Policy & Legal,Exposure to litigation,RCP4.5,2024,0.501730142
+1,6,Singapore_200mm_NOR,Transition,Policy & Legal,Exposure to litigation,RCP4.5,2025,0.774357313
+1,6,Singapore_200mm_NOR,Transition,Policy & Legal,Exposure to litigation,RCP4.5,2026,0.426949494
+1,6,Singapore_200mm_NOR,Transition,Policy & Legal,Exposure to litigation,RCP4.5,2027,0.659245969
+1,6,Singapore_200mm_NOR,Transition,Policy & Legal,Exposure to litigation,RCP4.5,2028,0.525783294
+1,6,Singapore_200mm_NOR,Transition,Policy & Legal,Exposure to litigation,RCP4.5,2029,0.825886458
+1,6,Singapore_200mm_NOR,Transition,Policy & Legal,Exposure to litigation,RCP4.5,2030,0.80640591
+1,6,Singapore_200mm_NOR,Transition,Policy & Legal,Exposure to litigation,RCP4.5,2031,0.477458409
+1,6,Singapore_200mm_NOR,Transition,Policy & Legal,Exposure to litigation,RCP4.5,2032,0.978381393
+1,6,Singapore_200mm_NOR,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP8.5,2018,1.915158249
+1,6,Singapore_200mm_NOR,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP8.5,2019,2.145333646
+1,6,Singapore_200mm_NOR,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP8.5,2020,2.472921141
+1,6,Singapore_200mm_NOR,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP8.5,2021,1.65932063
+1,6,Singapore_200mm_NOR,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP8.5,2022,1.77263774
+1,6,Singapore_200mm_NOR,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP8.5,2023,2.281228472
+1,6,Singapore_200mm_NOR,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP8.5,2024,3.147313438
+1,6,Singapore_200mm_NOR,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP8.5,2025,2.729309959
+1,6,Singapore_200mm_NOR,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP8.5,2026,2.356938847
+1,6,Singapore_200mm_NOR,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP8.5,2027,2.999362473
+1,6,Singapore_200mm_NOR,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP8.5,2028,2.956125129
+1,6,Singapore_200mm_NOR,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP8.5,2029,2.076932286
+1,6,Singapore_200mm_NOR,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP8.5,2030,2.882893385
+1,6,Singapore_200mm_NOR,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP8.5,2031,2.008975917
+1,6,Singapore_200mm_NOR,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP8.5,2032,4.207797214
+1,6,Singapore_200mm_NOR,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP4.5,2018,0.85233196
+1,6,Singapore_200mm_NOR,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP4.5,2019,1.033840865
+1,6,Singapore_200mm_NOR,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP4.5,2020,0.668475366
+1,6,Singapore_200mm_NOR,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP4.5,2021,0.900260857
+1,6,Singapore_200mm_NOR,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP4.5,2022,0.880008365
+1,6,Singapore_200mm_NOR,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP4.5,2023,1.16582963
+1,6,Singapore_200mm_NOR,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP4.5,2024,1.014590861
+1,6,Singapore_200mm_NOR,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP4.5,2025,1.122568846
+1,6,Singapore_200mm_NOR,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP4.5,2026,1.192725855
+1,6,Singapore_200mm_NOR,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP4.5,2027,1.324838563
+1,6,Singapore_200mm_NOR,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP4.5,2028,1.438924372
+1,6,Singapore_200mm_NOR,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP4.5,2029,1.358879336
+1,6,Singapore_200mm_NOR,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP4.5,2030,1.680106228
+1,6,Singapore_200mm_NOR,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP4.5,2031,1.429146696
+1,6,Singapore_200mm_NOR,Transition,Reputation,Increased stakeholder concern or negative stakeholder feedback,RCP4.5,2032,1.419450168
+1,6,Singapore_200mm_NOR,Physical,Chronic,Temperature extremes,RCP8.5,2018,2.124120935
+1,6,Singapore_200mm_NOR,Physical,Chronic,Temperature extremes,RCP8.5,2019,1.519833955
+1,6,Singapore_200mm_NOR,Physical,Chronic,Temperature extremes,RCP8.5,2020,2.48554808
+1,6,Singapore_200mm_NOR,Physical,Chronic,Temperature extremes,RCP8.5,2021,1.725758403
+1,6,Singapore_200mm_NOR,Physical,Chronic,Temperature extremes,RCP8.5,2022,2.28029001
+1,6,Singapore_200mm_NOR,Physical,Chronic,Temperature extremes,RCP8.5,2023,2.10351128
+1,6,Singapore_200mm_NOR,Physical,Chronic,Temperature extremes,RCP8.5,2024,2.726513431
+1,6,Singapore_200mm_NOR,Physical,Chronic,Temperature extremes,RCP8.5,2025,3.143876562
+1,6,Singapore_200mm_NOR,Physical,Chronic,Temperature extremes,RCP8.5,2026,1.778583
+1,6,Singapore_200mm_NOR,Physical,Chronic,Temperature extremes,RCP8.5,2027,3.104585663
+1,6,Singapore_200mm_NOR,Physical,Chronic,Temperature extremes,RCP8.5,2028,2.077154113
+1,6,Singapore_200mm_NOR,Physical,Chronic,Temperature extremes,RCP8.5,2029,3.897471563
+1,6,Singapore_200mm_NOR,Physical,Chronic,Temperature extremes,RCP8.5,2030,3.660063202
+1,6,Singapore_200mm_NOR,Physical,Chronic,Temperature extremes,RCP8.5,2031,2.894518335
+1,6,Singapore_200mm_NOR,Physical,Chronic,Temperature extremes,RCP8.5,2032,2.757464366
+1,6,Singapore_200mm_NOR,Physical,Chronic,Temperature extremes,RCP4.5,2018,1.14517847
+1,6,Singapore_200mm_NOR,Physical,Chronic,Temperature extremes,RCP4.5,2019,0.91774245
+1,6,Singapore_200mm_NOR,Physical,Chronic,Temperature extremes,RCP4.5,2020,1.179610556
+1,6,Singapore_200mm_NOR,Physical,Chronic,Temperature extremes,RCP4.5,2021,1.100606998
+1,6,Singapore_200mm_NOR,Physical,Chronic,Temperature extremes,RCP4.5,2022,1.236606488
+1,6,Singapore_200mm_NOR,Physical,Chronic,Temperature extremes,RCP4.5,2023,0.977432929
+1,6,Singapore_200mm_NOR,Physical,Chronic,Temperature extremes,RCP4.5,2024,1.435218598
+1,6,Singapore_200mm_NOR,Physical,Chronic,Temperature extremes,RCP4.5,2025,1.386504378
+1,6,Singapore_200mm_NOR,Physical,Chronic,Temperature extremes,RCP4.5,2026,1.506046429
+1,6,Singapore_200mm_NOR,Physical,Chronic,Temperature extremes,RCP4.5,2027,1.167998211
+1,6,Singapore_200mm_NOR,Physical,Chronic,Temperature extremes,RCP4.5,2028,1.46940503
+1,6,Singapore_200mm_NOR,Physical,Chronic,Temperature extremes,RCP4.5,2029,1.663226018
+1,6,Singapore_200mm_NOR,Physical,Chronic,Temperature extremes,RCP4.5,2030,1.385375925
+1,6,Singapore_200mm_NOR,Physical,Chronic,Temperature extremes,RCP4.5,2031,1.582690675
+1,6,Singapore_200mm_NOR,Physical,Chronic,Temperature extremes,RCP4.5,2032,1.124455285
+1,6,Singapore_200mm_NOR,Physical,Chronic,Coastal flooding,RCP8.5,2018,0.785922157
+1,6,Singapore_200mm_NOR,Physical,Chronic,Coastal flooding,RCP8.5,2019,1.029746075
+1,6,Singapore_200mm_NOR,Physical,Chronic,Coastal flooding,RCP8.5,2020,0.800067122
+1,6,Singapore_200mm_NOR,Physical,Chronic,Coastal flooding,RCP8.5,2021,1.103109124
+1,6,Singapore_200mm_NOR,Physical,Chronic,Coastal flooding,RCP8.5,2022,1.113160407
+1,6,Singapore_200mm_NOR,Physical,Chronic,Coastal flooding,RCP8.5,2023,0.884676409
+1,6,Singapore_200mm_NOR,Physical,Chronic,Coastal flooding,RCP8.5,2024,0.955221462
+1,6,Singapore_200mm_NOR,Physical,Chronic,Coastal flooding,RCP8.5,2025,1.021624434
+1,6,Singapore_200mm_NOR,Physical,Chronic,Coastal flooding,RCP8.5,2026,0.862977674
+1,6,Singapore_200mm_NOR,Physical,Chronic,Coastal flooding,RCP8.5,2027,1.545078657
+1,6,Singapore_200mm_NOR,Physical,Chronic,Coastal flooding,RCP8.5,2028,1.481185372
+1,6,Singapore_200mm_NOR,Physical,Chronic,Coastal flooding,RCP8.5,2029,1.264481124
+1,6,Singapore_200mm_NOR,Physical,Chronic,Coastal flooding,RCP8.5,2030,1.705281505
+1,6,Singapore_200mm_NOR,Physical,Chronic,Coastal flooding,RCP8.5,2031,1.518514618
+1,6,Singapore_200mm_NOR,Physical,Chronic,Coastal flooding,RCP8.5,2032,1.022378643
+1,6,Singapore_200mm_NOR,Physical,Chronic,Coastal flooding,RCP4.5,2018,0.545426582
+1,6,Singapore_200mm_NOR,Physical,Chronic,Coastal flooding,RCP4.5,2019,0.423122464
+1,6,Singapore_200mm_NOR,Physical,Chronic,Coastal flooding,RCP4.5,2020,0.49950869
+1,6,Singapore_200mm_NOR,Physical,Chronic,Coastal flooding,RCP4.5,2021,0.513639685
+1,6,Singapore_200mm_NOR,Physical,Chronic,Coastal flooding,RCP4.5,2022,0.361753643
+1,6,Singapore_200mm_NOR,Physical,Chronic,Coastal flooding,RCP4.5,2023,0.504014262
+1,6,Singapore_200mm_NOR,Physical,Chronic,Coastal flooding,RCP4.5,2024,0.702229405
+1,6,Singapore_200mm_NOR,Physical,Chronic,Coastal flooding,RCP4.5,2025,0.653162848
+1,6,Singapore_200mm_NOR,Physical,Chronic,Coastal flooding,RCP4.5,2026,0.541327797
+1,6,Singapore_200mm_NOR,Physical,Chronic,Coastal flooding,RCP4.5,2027,0.71912826
+1,6,Singapore_200mm_NOR,Physical,Chronic,Coastal flooding,RCP4.5,2028,0.834047914
+1,6,Singapore_200mm_NOR,Physical,Chronic,Coastal flooding,RCP4.5,2029,0.469125742
+1,6,Singapore_200mm_NOR,Physical,Chronic,Coastal flooding,RCP4.5,2030,0.504325677
+1,6,Singapore_200mm_NOR,Physical,Chronic,Coastal flooding,RCP4.5,2031,0.845662903
+1,6,Singapore_200mm_NOR,Physical,Chronic,Coastal flooding,RCP4.5,2032,0.93977521
+1,6,Singapore_200mm_NOR,Physical,Chronic,Drought,RCP8.5,2018,2.121879804
+1,6,Singapore_200mm_NOR,Physical,Chronic,Drought,RCP8.5,2019,2.230804949
+1,6,Singapore_200mm_NOR,Physical,Chronic,Drought,RCP8.5,2020,1.725165169
+1,6,Singapore_200mm_NOR,Physical,Chronic,Drought,RCP8.5,2021,2.236360617
+1,6,Singapore_200mm_NOR,Physical,Chronic,Drought,RCP8.5,2022,2.600191509
+1,6,Singapore_200mm_NOR,Physical,Chronic,Drought,RCP8.5,2023,2.323240372
+1,6,Singapore_200mm_NOR,Physical,Chronic,Drought,RCP8.5,2024,3.160515823
+1,6,Singapore_200mm_NOR,Physical,Chronic,Drought,RCP8.5,2025,3.002047337
+1,6,Singapore_200mm_NOR,Physical,Chronic,Drought,RCP8.5,2026,3.069882928
+1,6,Singapore_200mm_NOR,Physical,Chronic,Drought,RCP8.5,2027,2.761549285
+1,6,Singapore_200mm_NOR,Physical,Chronic,Drought,RCP8.5,2028,2.029730981
+1,6,Singapore_200mm_NOR,Physical,Chronic,Drought,RCP8.5,2029,3.887141067
+1,6,Singapore_200mm_NOR,Physical,Chronic,Drought,RCP8.5,2030,3.038750722
+1,6,Singapore_200mm_NOR,Physical,Chronic,Drought,RCP8.5,2031,2.563784226
+1,6,Singapore_200mm_NOR,Physical,Chronic,Drought,RCP8.5,2032,2.69644692
+1,6,Singapore_200mm_NOR,Physical,Chronic,Drought,RCP4.5,2018,0.842368225
+1,6,Singapore_200mm_NOR,Physical,Chronic,Drought,RCP4.5,2019,0.982107497
+1,6,Singapore_200mm_NOR,Physical,Chronic,Drought,RCP4.5,2020,0.783429734
+1,6,Singapore_200mm_NOR,Physical,Chronic,Drought,RCP4.5,2021,1.092737899
+1,6,Singapore_200mm_NOR,Physical,Chronic,Drought,RCP4.5,2022,1.246518358
+1,6,Singapore_200mm_NOR,Physical,Chronic,Drought,RCP4.5,2023,1.046484242
+1,6,Singapore_200mm_NOR,Physical,Chronic,Drought,RCP4.5,2024,1.464665614
+1,6,Singapore_200mm_NOR,Physical,Chronic,Drought,RCP4.5,2025,1.560807868
+1,6,Singapore_200mm_NOR,Physical,Chronic,Drought,RCP4.5,2026,1.174420918
+1,6,Singapore_200mm_NOR,Physical,Chronic,Drought,RCP4.5,2027,0.90175774
+1,6,Singapore_200mm_NOR,Physical,Chronic,Drought,RCP4.5,2028,1.643774442
+1,6,Singapore_200mm_NOR,Physical,Chronic,Drought,RCP4.5,2029,1.782482206
+1,6,Singapore_200mm_NOR,Physical,Chronic,Drought,RCP4.5,2030,1.097638831
+1,6,Singapore_200mm_NOR,Physical,Chronic,Drought,RCP4.5,2031,1.754580495
+1,6,Singapore_200mm_NOR,Physical,Chronic,Drought,RCP4.5,2032,1.588697076
