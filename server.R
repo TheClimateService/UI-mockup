@@ -137,9 +137,12 @@ server <- function(input, output, session) {
     if (input$inputLocations == 'All locations') {
       corpTable <- corpTable[which(corpTable$ParentCorpID == USER$ParentCorpID),]
     }
-    corpTableWide <- corpTable %>% spread(RiskYear, ValueAtRisk)
-    time_series <- corpTableWide %>% group_by(RiskFactorName) %>% summarise_if(is.numeric, mean, na.rm = TRUE)
-    plot_ly(time_series, x = ~RiskYear, y = ~ValueAtRisk, type='scatter', mode = 'lines') %>%   #mode = 'lines', fill = 'tozeroy'
+    # corpTableWide <- corpTable %>% spread(RiskYear, ValueAtRisk)
+
+    time_series1 <- filter(corpTable,corpTable$TCFDCategoryName=="Transition") %>% group_by(RiskYear) %>% summarise(svar1=sum(ValueAtRisk))
+    time_series1 <- filter(corpTable,corpTable$TCFDCategoryName=="Physical") %>% group_by(RiskYear) %>% summarise(svar2=sum(ValueAtRisk))
+    plot_ly(time_series1, x = ~RiskYear, y = ~svar1, name='Transition', type='scatter', mode = 'lines', fill = 'tozeroy') %>% 
+      add_trace(y = ~svar2, name = 'Physical') %>%
       layout(yaxis = list(title = 'Impact ($M)'))
   }) 
   

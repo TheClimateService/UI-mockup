@@ -201,8 +201,7 @@ ui <- dashboardPage(title="The Climate Service",
               plotlyOutput("barByLocation")          
           ),
           tabPanel(title = 'By Time Period',
-#              plotlyOutput("areaByTime")      
-"still working on it"
+              plotlyOutput("areaByTime")
           ),
           tabPanel(title = 'By TCFD Category',
               plotlyOutput("stackedCorpFinImpactsPlot")
