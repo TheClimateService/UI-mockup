@@ -1,0 +1,32 @@
+
+# SCRIPT TO RUN ALL STEPS IN THE SCORING-ENGINE PROCESS
+# TT - December 2017
+
+# Execution:  ./script_engine_runall_v1 <facilities file> <damage-function file>
+# Example:    ./script_engine_runall_v1 TCSDB_structure_v3_locations.csv damage_functions_v1.csv
+
+# N.B. - Script commands below assume that a copy of both the facilities file and the damage-function file are located in each indicator sub-directory.
+
+# Get input.
+facfile=$1
+damfile=$2
+
+cd ./tmax90pct/
+./script_process_location_runall $facfile tx90pETCCDI_yr_CMCC-CM_historical_r1i1p1_1850-2005.nc.timeseries.1.480.1.240.periods.5.30 tx90pETCCDI_yr_CMCC-CM_rcp85_r1i1p1_2006-2100.nc.timeseries.1.480.1.240.periods.9.10 
+./script_score_locations_tx90p_v1 $damfile $facfile $facfile.tx90p
+cp $facfile.tx90p.damages ../
+
+cd ../drought/
+./script_extract_pdsisc_v1_runall $facfile pdsisc.monthly.maps.1900-2099.r2.5x2.5.EnsAvg14Models.TP2.ipe\=2.nc.output.batch.9futperiods.withIDs
+./script_score_locations_psdisc_v1 $damfile $facfile $facfile.pdsisc 
+cp $facfile.pdsisc.damages ../
+
+cd ../coastalflooding/
+./script_get_nearest_segment_v1_runall_facilities $facfile GTSR.dbf.csv.nearest.slr.station 
+Rscript ./script_estimate_future_rp_v1.r
+./script_score_locations_coastalflood_v1 $damfile $facfile future_annprob_fromR
+cp $facfile.coastalflood.damages ../
+
+cd ../
+./script_assemble_damages_v1 $facfile
+

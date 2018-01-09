@@ -1,0 +1,28 @@
+
+# SCRIPT TO FIND THE SLR STATION NEAREST EACH LOCATION IN A LIST.
+# TT - December 2017
+
+# Execution:  ./script_get_nearest_station_v1_runall_gtsrsegment <input list of locations> <slr station file with slr data>
+# Example:    ./script_get_nearest_station_v1_runall_gtsrsegment GTSR.dbf.csv kopp_2014_eft237-sup-0006-Table07.tsv.extracted.with.lonlat
+
+# Get input.
+locfile=$1
+stationfile=$2
+
+# Build script to find nearest station for each gtsr segment centroid.
+awk -v stationfile=$stationfile '{FS=",";  \
+        if(NR>1) {  \
+	 print "./script_get_nearest_station_v1",$8,$6,stationfile;  \
+	 print "cat output.all temp2.single > temp.out";  \
+	 print "mv temp.out output.all"}  \
+	}' $locfile > temp.scr
+chmod a+x temp.scr
+rm output.all*
+./temp.scr
+
+# Save results and clean up.
+#echo "mindistkm station id lon lat background_rate rcp85_2030cm rcp85_2050cm rcp85_2100cm rcp45_2030cm rcp45_2050cm rcp45_2100cm rcp26_2030cm rcp26_2050cm rcp26_2100cm" > output.hdr
+echo ",mindistkm,station,id,lon,lat,background_rate,rcp85_2030cm,rcp85_2050cm,rcp85_2100cm,rcp45_2030cm,rcp45_2050cm,rcp45_2100cm,rcp26_2030cm,rcp26_2050cm,rcp26_2100cm" > output.hdr
+cat output.hdr output.all > output.all2
+paste $locfile output.all2 > $locfile.nearest.slr.station
+#rm temp*

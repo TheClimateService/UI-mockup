@@ -1,0 +1,121 @@
+
+# SCRIPT TO PROCESS DAI'S sc_PDSI_pm DATA.
+# TT - November 2017
+
+# Execution:  ./script_pdsisc_v1  <decimal longitude> <decimal latitude> <source nc file>
+# Example:   ./script_pdsisc_v1 25.0 -15.0 pdsisc.monthly.maps.1900-2099.r2.5x2.5.EnsAvg14Models.TP2.ipe\=2.nc
+# Note that ncks takes longitude values -180 to +180.
+
+# Extraction command template:
+#ncks -v pdsisc -d lon,25.0 -d lat,-15.0 pdsisc.monthly.maps.1900-2099.r2.5x2.5.EnsAvg14Models.TP2.ipe\=2.nc | grep time | grep lat > temp1
+
+# Get data.
+lon=$1
+lat=$2
+infile=$3
+
+# Extract values at nearest grid location for all available years
+# File for 1900-2099 uses pdsisc as variable name; 1850-2014 files use sc_PDSI_pm as name.
+ncks -v pdsisc -d lon,$lon -d lat,$lat $infile | grep time | grep lat > temp1
+#ncks -v sc_PDSI_pm -d lon,$lon -d lat,$lat $infile | grep time | grep lat > temp1
+sed 's/=/ /g' temp1 > temp2
+awk '{print $2,$4,$6,$8}' temp2 > temp3
+
+# Create 12-month average for each year.
+# XXX Figure 2b from Dai's 2012 paper is not reproducible unless some scale difference is applied.  This may be the 12 values for year 1900, which appear to be substantially offset from all later values.
+awk '{date=$1; year=substr(date,1,4); print year,$4}' temp3 > temp4
+echo LASTLINE >> temp4
+awk '{if(NR==1 || $1!=thisyear) {print thisyear,sum/12; thisyear=$1; sum=0};  \
+      #if($1==thisyear && $2!=-99999) sum=sum+$2  \
+      if($1==thisyear) sum=sum+$2  \
+      #print $0,sum  \
+     }' temp4 > temp5
+awk '{if(NR>1) print $0}' temp5 > temp6
+
+# Subset the annual values for specified periods.
+awk '{if($1>=1950 && $1<=1999) print $0}' temp6 > temp6a
+awk '{if($1>=2006 && $1<=2015) print $0}' temp6 > temp6aa
+awk '{if($1>=2016 && $1<=2025) print $0}' temp6 > temp6b
+awk '{if($1>=2026 && $1<=2035) print $0}' temp6 > temp6c
+awk '{if($1>=2036 && $1<=2045) print $0}' temp6 > temp6d
+awk '{if($1>=2046 && $1<=2055) print $0}' temp6 > temp6e
+awk '{if($1>=2056 && $1<=2065) print $0}' temp6 > temp6f
+awk '{if($1>=2066 && $1<=2075) print $0}' temp6 > temp6g
+awk '{if($1>=2076 && $1<=2085) print $0}' temp6 > temp6h
+awk '{if($1>=2086 && $1<=2095) print $0}' temp6 > temp6i
+
+# Order the base-period data and determine approximate 10th percentile.
+# Code assumes that base period is 50 years long.  There will thus be 5 values smaller than the value found as a threshold.
+sort -k 2 -n temp6a > temp6a1
+awk '{if(NR==6) print $0 }' temp6a1 > temp6a.10pctile
+
+cat temp6a.10pctile temp6aa > temp6aa1
+awk '{if(NR==1) threshold=$2; else {if($2<threshold) print $0} }' temp6aa1 > temp6aa.lt10th
+
+cat temp6a.10pctile temp6b > temp6b1
+awk '{if(NR==1) threshold=$2; else {if($2<threshold) print $0} }' temp6b1 > temp6b.lt10th
+cat temp6a.10pctile temp6c > temp6c1
+awk '{if(NR==1) threshold=$2; else {if($2<threshold) print $0} }' temp6c1 > temp6c.lt10th
+cat temp6a.10pctile temp6d > temp6d1
+awk '{if(NR==1) threshold=$2; else {if($2<threshold) print $0} }' temp6d1 > temp6d.lt10th
+cat temp6a.10pctile temp6e > temp6e1
+awk '{if(NR==1) threshold=$2; else {if($2<threshold) print $0} }' temp6e1 > temp6e.lt10th
+cat temp6a.10pctile temp6f > temp6f1
+awk '{if(NR==1) threshold=$2; else {if($2<threshold) print $0} }' temp6f1 > temp6f.lt10th
+cat temp6a.10pctile temp6g > temp6g1
+awk '{if(NR==1) threshold=$2; else {if($2<threshold) print $0} }' temp6g1 > temp6g.lt10th
+cat temp6a.10pctile temp6h > temp6h1
+awk '{if(NR==1) threshold=$2; else {if($2<threshold) print $0} }' temp6h1 > temp6h.lt10th
+cat temp6a.10pctile temp6i > temp6i1
+awk '{if(NR==1) threshold=$2; else {if($2<threshold) print $0} }' temp6i1 > temp6i.lt10th
+
+echo "5" > temp.events.lt10th
+#wc temp6*lt10th | awk '{nfutureperiods=8; if(NR<=nfutureperiods) print $1}' >> temp.events.lt10th
+wc temp6*lt10th | awk '{nfutureperiods=9; if(NR<=nfutureperiods) print $1}' >> temp.events.lt10th
+awk '{if(NR==1) print "1950-1999",$0,100*$1/50;  \
+      if(NR==2) print "2006-2015",$0,100*$1/10;  \
+      if(NR==3) print "2016-2025",$0,100*$1/10;  \
+      if(NR==4) print "2026-2035",$0,100*$1/10;  \
+      if(NR==5) print "2036-2045",$0,100*$1/10;  \
+      if(NR==6) print "2046-2055",$0,100*$1/10;  \
+      if(NR==7) print "2055-2065",$0,100*$1/10;  \
+      if(NR==8) print "2066-2075",$0,100*$1/10;  \
+      if(NR==9) print "2076-2085",$0,100*$1/10;  \
+      if(NR==10) print "2086-2095",$0,100*$1/10  \
+     }' temp.events.lt10th > temp.events.lt10th.wperiods
+awk '{print "period years_lt10thpctile("$2") annual_prob_pct"}' temp6a.10pctile > temp.events.hdr
+cat temp.events.hdr temp.events.lt10th.wperiods > temp.events.lt10th.labelled
+
+# Prepare annual probabilities for batch processing.
+# Note that annual probabilities are fractions and are calculated assuming 50-year base period and 10-year future periods.
+wc temp6*lt10th > temp.batch1
+cat temp6a.10pctile temp.batch1 > temp.batch1a
+#awk '{if(NR==1 && $2==-99999) print "No_data"}' temp.batch1a > temp.batch1b
+awk -v lon=$lon -v lat=$lat '{  \
+       if(NR==1 && $2==-99999) {nodataflag=1; print lon,lat,"No_data - - - - - - - - -"};  \
+       if(NR==1 && $2!=-99999) nodataflag=0;  \
+       if(nodataflag==0) {if($4=="total") print lon,lat,string;  \
+              else {if(NR==2) string=(5/50)" "($1/10); if(NR>2) string=string" "($1/10)}  \
+              }  \
+     }' temp.batch1a >> output.batch
+
+# Treat the 12 values for 1900 as the baseline for each monthly value.
+# XXX The shift does not look right.  Perhaps the 1900 values are not to be shifted, while other values are shifted by ADDING the corresponding 1900 value.
+#awk '{if(NR<=12) string=string"_"$4; if(NR==12) print string}' temp3 > temp3b
+#sed 's/_//' temp3b > temp3c
+#cat temp3c temp3 > temp10
+#awk '{if(NR==1) split($1,array,"_") ;  \
+#        else {id=NR-1; i=id%12; if(i==0) i=12; print $0,$4+array[i]} }' temp10 > temp11
+
+# Save results and clean up.
+# Following three lines save files for individual locations.  Turn them off for batch processing.
+#echo "year sc_psdi_pm" > temp6.hdr
+#cat temp6.hdr temp6 > pdsisc_pm_rcp45.$lon.$lat.csv
+#mv temp.events.lt10th.labelled pdsisc_pm_rcp45.$lon.$lat.years.lt10thpctile.csv
+
+# Following two lines save shifted monthly files for individual locations.  Turn them off for batch processing.
+#echo "year lat lon sc_psdi_pm sc_psdi_pm_shifted " > temp11.hdr
+#cat temp11.hdr temp11 > pdsisc_pm_rcp45.$lon.$lat.monthly.shifted.csv
+
+# The evolving batch output file is output.batch.
+#rm temp*

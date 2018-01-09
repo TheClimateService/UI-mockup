@@ -1,0 +1,253 @@
+library(DBI)
+library(dbplyr)
+install.packages("dbplyr")
+install.packages("RMariaDB")
+version()
+install.packages("RMySQL")
+flights
+flights[1,]
+flights[1,12]
+fligthts[1,]$tailnum
+flights[1,]$tailnum
+flights2 <- flights %>% #
+  select(year:day, hour, origin, dest, tailnum, carrier)
+flights2
+ftest <- function(x) sqrt(x%*%x)
+ftest(1:4)
+ftest(1)
+ftest <- function(x) {x %>% select(year:day, hour, origin, dest, tailnum, carrier)}
+ftest(flights)
+a <- ftest(flights)
+a
+flightsEWR <- flights %>% select(origin=="EWR)")
+top_dest <- flights %>%#
+  count(dest, sort = TRUE) %>%#
+  head(10)
+top_dest
+getwd()
+write_csv("flights")
+flights
+write_csv("./flights")
+write_csv(flights)
+write_csv(flights, path=./)
+write_csv(flights, path="./")
+write_csv(flights, path="junk")
+getwd()
+quit()
+pannual = c(.002,.005,.01,.02,.03,.04,.05,.05,.05,.07,.09,.1,.1,.1,.283)
+pannual
+lannual=c(25,15,10,5,3,2,1,.8,.7,.5,.5,.3,.2,.1,0)
+lannual
+eloss= for(i in 1:lenngth(pannual)
+eloss = pannual
+eloss= for(i in 1:lenngth(pannual) eloss[i]=pannual[i]*lannual[i]
+eloss= for(i in 1:lenngth(pannual)) eloss[i]=pannual[i]*lannual[i]
+eloss= for(i in 1:length(pannual)) eloss[i]=pannual[i]*lannual[i]
+eloss
+summary(eloss)
+library(tidyverse)
+p = as.tibble(pannual)
+p
+l = as.tibble(lannual)
+exploss = p
+eloss= for(i in 1:length(p)) exploss[i]=p[i]*l[i]
+eloss
+exploss = p
+exploss= for(i in 1:length(p)) exploss[i]=p[i]*l[i]
+exploss
+summary(exploss)
+p[1]
+p[1,1]
+exploss= for(i in 1:length(p)) exploss[1,i]=p[1,i]*l[1,i]
+length(p)
+length(p[1])
+length(p[,1])
+p[1,15]
+p[15,1]
+exploss= for(i in 1:15) exploss[i,1]=p[i,1]*l[i,1]
+p[15,1]
+p[14,1]
+for(i in 1:15) exploss[i,1]=p[i,1]*l[i,1]
+exploss
+exploss = p
+exploss
+for(i in 1:15) exploss[i,1]=p[i,1]*l[i,1]
+exploss
+history
+history()
+length(pannual)
+exceedance_prob = p
+exceedance_prob[1,1] = 1 - (1-p[1,1])
+exceedance_prob
+p
+exceedance_prob[1,1] = 1 - (1-p[1,1]*p[1,2])
+exceedance_prob[1,1] = 1 - (1-p[1,1]*p[2,1])
+exceedance_prob
+exceedance_prob[1,1] = 1 - (1-p[1,1])
+exceedance_prob[2,1] = 1 - (1-p[1,1]*p[2,1])
+exceedance_prob
+p
+exceedance_prob[2,1] = 1 - (1-p[1,1]*(1-p[2,1]))
+exceedance_prob
+exceedance_prob[2,1] = 1 - (1-p[1,1])*(1-p[2,1])
+exceedance_prob
+prod = p
+for(i in 1:length(pannual)) { for(i in 1:length(pannual)) prod[i,1] = p[j,1]  }
+t = c(1,2,3)
+prod(t)
+for(i in 1:length(pannual)) { for(i in 1:length(pannual)) prod[i,1] = prod  }
+t = c(1,2,3,4)
+t2=as.tibble(t)
+t2[2,1]
+for(j in 1:3) prod(t2)
+x = for(j in 1:3) prod(t2)
+x
+x = for(j in 1:3) prod(t2[j,1])
+x
+t = c(1,2,3,4)
+prod(t)
+prod(t,2)
+x = as.tibble(t)
+x
+prod(x)
+prod(x,1)
+prod(x[1,1]:x[3,1])
+prod(x[1,1],x[3,1])
+prod(x[1,1]:x[3,1])
+subset(t)
+subset(t[i,1], i %in% 1,3)
+subset(t, i %in% 1,3)
+subset(t, i %in% 1:3)
+subset(t[i,1], i %in% 1:3)
+t[1]
+subset(x[i,1], i %in% 1:3)
+subset(x[i,1], i<=3)
+p
+x = p
+for(i in 1:length(pannual)) {for(j <= i) x[i,1]=x[i,1]*x[j]}
+for(i in 1:length(pannual)) {for(j in 1:i) x[i,1]=x[i,1]*x[j]}
+for(i in 1:length(pannual)) {for(j in 1:i) x[i,1]=x[i,1]*x[j,1]}
+x
+for(i in 1:length(pannual)) {for(j in 1:i) x[i,1]=(1-x[i,1])*(1-x[j,1])}
+x
+x = p
+for(i in 1:length(pannual)) {for(j in 1:i) x[i,1]=(1-x[i,1])*(1-x[j,1])}
+x
+y = 1-x
+y
+x = p
+for(i in 1:length(pannual)) {for(j in 1:(i-1)) x[i,1]=(1-x[i,1])*(1-x[j,1])}
+x = p
+for(i in 1:length(pannual)) {for(j in 2:(i-1)) x[i,1]=(1-x[i,1])*(1-x[j,1])}
+x = p
+for(i in 1:length(pannual)) {for(j in 1:i) x[i,1]=(1-x[i,1])*(1-x[j,1])}
+x
+x = p
+for(i in 1:length(pannual)) {for(j in 1:i) x[i,1]=x[i,1]*(1-x[j,1])}
+x
+1-x
+x = p
+for(i in 1:length(pannual)) {for(j in 1:i) x[i,1]=(1-x[i,1])*(1-x[j,1])}
+x
+1-x
+x = p
+for(i in 1:length(pannual)) {for(j in 1:i) x[i,1]=1 - (1-x[i,1])*(1-x[j,1])}
+x
+x = p
+for(i in 1:length(pannual)) {for(j in 1:i) x[i,1]=(1-x[i,1])*(1-x[j,1])}
+x
+x = p
+for(i in 2:length(pannual)) {for(j in 1:i) x[i,1]=(1-x[i,1])*(1-x[j,1])}
+x
+1-x
+x = p
+for(i in 2:length(pannual)) {for(j in 1:i) x[i,1]=(x[i,1])*(1-x[j,1])}
+x
+p
+x = p
+for(i in 2:length(pannual)) {for(j in 1:i) x[i,1]=(1-x[i,1])*(1-x[j,1])}
+x
+test = 1 - .998*.993
+test
+test = 1 - .998*.995
+test
+test = 1 - .998*.995*.9831
+test
+test = 1 - .998*.995*.99
+test
+for(i in 1:length(pannual)) {for(j in 1:(1-1)) x[i,1]=(1-x[i,1])*(1-x[j,1])}
+x = p
+for(i in 2:length(pannual)) {for(j in 1:i) x[i,1]=(1-x[i,1])*(1-x[j,1])}
+x
+for(i in 2:length(pannual)) {for(j in 1:i) x[i,1]=(1-p[i,1])*(1-p[j,1])}
+x
+x = p
+for(i in 2:length(pannual)) {for(j in 1:i) x[i,1]=(x[i,1])*(1-p[j,1])}
+x
+for(i in 2:length(pannual)) {for(j in 1:i) x[i,1]=(1-x[i,1])*(1-p[j,1])}
+x
+for(i in 2:length(pannual)) {for(j in 1:i) x[i,1]=-1+(x[i,1])*(1-p[j,1])}
+x
+x = p
+for(i in 2:length(pannual)) {for(j in 1:i) x[i,1]=(1-x[i,1])*(1-p[j,1])}
+x
+x = p
+for(i in 2:length(pannual)) x[i,1]=(1-x[i-1,1])*(1-p[i,1])
+x
+x = p
+for(i in 2:length(pannual)) x[i,1]= 1-(1-x[i-1,1])*(1-p[i,1])
+x = p
+for(i in 2:length(pannual)) x[i,1]= 1-(1-x[i-1,1])*(1-p[i,1])
+x
+x = p
+for(i in 2:length(pannual)) x[i,1]= 1-(1-x[i-1,1])*(1-p[i,1])
+x
+plot(x)
+plot(x,l)
+plot(l,x)
+l
+plot(c(x,l))
+plot(l,x)
+c = c(l,x)
+plot(c)
+c
+c(1,)
+plot(c(l[1,1], l[2,1]), c(x[1,1], x[2,1]))
+quit()
+library(RMySQL)
+library(psych)
+con <- dbConnect(MySQL(), user = 'root', password = 'mysql_root', host = 'localhost', dbname='sys')
+con <- dbConnect(MySQL(), user = 'root', password = 'mysql_root', host = 'localhost', dbname='menagerie')
+dbWriteTable(conn = con, name = 'Test', value = as.data.frame(Thurstone))
+omega(dbReadTable(conn = con,name = 'Test'), title = "9 variables from Thurstone")
+install.packages(GPArotation)
+install.packages("GPArotation")
+library(GPArotation)
+omega(dbReadTable(conn = con,name = 'Test'), title = "9 variables from Thurstone")
+summary(Thurstone)
+Thurstone[1,]
+quit()
+library(pdsi)
+data(muc.clim)
+pdsi(12, 50, muc.clim, 1960, 2000)
+getwd()
+head(muc.clim)
+tail(muc.clim)
+x = pdsi(12, 50, muc.clim, 1960, 2000)
+x2 = pdsi(24, 50, muc.clim, 1960, 2000)
+head(x2-x)
+head(x2)
+x2[1]
+x2[1,1]
+x2[1,1,1]
+x2[1,]
+x[1]
+x2 = pdsi(60, 50, muc.clim, 1960, 2000)
+x2[1]
+x2 = pdsi(60, 40, muc.clim, 1960, 2000)
+x2[1]
+head(muc.clim)
+quit()
+setwd("/Users/terry/working_mac/os/apps/r/tcs/app_tcs_11/data/scoring_engine/coastalflooding")
+source("./script_estimate_future_rp_v1.r")
+quit()
