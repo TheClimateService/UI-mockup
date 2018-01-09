@@ -93,7 +93,8 @@ server <- function(input, output, session) {
     if (input$inputLocations == 'All locations') {
       corpTable <- corpTable[which(corpTable$ParentCorpID == USER$ParentCorpID & corpTable$RiskYear == input$sliderInputYear),]
     }
-    plot_ly(corpTable, x = ~TCFDCategoryName, y = ~ValueAtRisk, type='bar', text=corpTable$RiskFactorName, marker = list(color = colorRampPalette(brewer.pal(11,"Spectral"))(36))) %>%
+    ncorp <- pull(count(corpTable))
+    plot_ly(corpTable, x = ~TCFDCategoryName, y = ~ValueAtRisk, type='bar', text=corpTable$RiskFactorName, marker = list(color = colorRampPalette(brewer.pal(11,"Spectral"))(ncorp))) %>%
       layout(yaxis = list(title = 'Impact ($M)'), barmode = 'stack')
   })
   
@@ -127,7 +128,8 @@ server <- function(input, output, session) {
     if (input$inputLocations == 'All locations') {
       corpTable <- corpTable[which(corpTable$ParentCorpID == USER$ParentCorpID & corpTable$RiskYear == input$sliderInputYear),]
     }
-    plot_ly(corpTable, x = ~Location, y = ~ValueAtRisk, type='bar', text=corpTable$RiskFactorName, marker = list(color = colorRampPalette(brewer.pal(11,"Spectral"))(36))) %>%
+    ncorp <- pull(count(corpTable))
+    plot_ly(corpTable, x = ~Location, y = ~ValueAtRisk, type='bar', text=corpTable$RiskFactorName, marker = list(color = colorRampPalette(brewer.pal(11,"Spectral"))(ncorp))) %>%
       layout(yaxis = list(title = 'Impact ($M)'), barmode = 'stack')
   }) 
   
@@ -143,7 +145,7 @@ server <- function(input, output, session) {
     time_series1 <- filter(corpTable,corpTable$TCFDCategoryName=="Transition") %>% group_by(RiskYear) %>% summarise(svar1=sum(ValueAtRisk))
     time_series1 <- filter(corpTable,corpTable$TCFDCategoryName=="Physical") %>% group_by(RiskYear) %>% summarise(svar2=sum(ValueAtRisk))
     plot_ly(time_series1, x = ~RiskYear, y = ~svar1, name='Transition', type='scatter', mode = 'lines', fill = 'tozeroy') %>% 
-      add_trace(y = ~svar2, name = 'Physical') %>%
+      add_trace(y = ~svar1, name = 'Physical') %>%
       layout(yaxis = list(title = 'Impact ($M)'))
   }) 
   
