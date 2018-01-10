@@ -98,17 +98,6 @@ server <- function(input, output, session) {
       layout(yaxis = list(title = 'Impact ($M)'), barmode = 'stack')
   })
   
-  # Pie chart
-  # output$pieCorpFinImpactsPlot <- renderPlotly({
-  #   if (input$inputLocations != 'All locations') {
-  #     corpTable <- corpTable[which(corpTable$ParentCorpID == USER$ParentCorpID & corpTable$Location == input$inputLocations & corpTable$RiskYear == input$sliderInputYear),]
-  #   }
-  #   if (input$inputLocations == 'All locations') {
-  #     corpTable <- corpTable[which(corpTable$ParentCorpID == USER$ParentCorpID & corpTable$RiskYear == input$sliderInputYear),]
-  #   }
-  #   plot_ly(corpTable[order(corpTable$ValueAtRisk),], labels= ~RiskFactorName, values= ~ValueAtRisk, textinfo = 'label+percent', text = ~paste('$', ValueAtRisk, ' Million'), type='pie')
-  # })  
-  
   #barByRiskFactor
   output$barByRiskFactor <- renderPlotly({
     if (input$inputLocations != 'All locations') {
@@ -117,8 +106,8 @@ server <- function(input, output, session) {
     if (input$inputLocations == 'All locations') {
       corpTable <- corpTable[which(corpTable$ParentCorpID == USER$ParentCorpID & corpTable$RiskYear == input$sliderInputYear),]
     }
-    corpTable <- dplyr::arrange(corpTable,corpTable$ValueAtRisk)
-    plot_ly(x=corpTable$ValueAtRisk, y=corpTable$RiskFactorName, type = 'bar', orientation = 'h') %>% layout(margin = list(l = 200))
+    plot_ly(x=corpTable$ValueAtRisk, y=corpTable$RiskFactorName, type = 'bar', orientation = 'h') %>% layout(margin = list(l=200, b=100)) %>%
+      layout(xaxis = list(title = 'Impact ($M)'), yaxis = list(title = 'Risk Factor'))
   }) 
   
   output$barByLocation <- renderPlotly({
@@ -142,11 +131,15 @@ server <- function(input, output, session) {
     }
     # corpTableWide <- corpTable %>% spread(RiskYear, ValueAtRisk)
 
-    time_series1 <- filter(corpTable,corpTable$TCFDCategoryName=="Transition") %>% group_by(RiskYear) %>% summarise(svar1=sum(ValueAtRisk))
-    time_series1 <- filter(corpTable,corpTable$TCFDCategoryName=="Physical") %>% group_by(RiskYear) %>% summarise(svar2=sum(ValueAtRisk))
-    plot_ly(time_series1, x = ~RiskYear, y = ~svar1, name='Transition', type='scatter', mode = 'lines', fill = 'tozeroy') %>% 
-      add_trace(y = ~svar1, name = 'Physical') %>%
-      layout(yaxis = list(title = 'Impact ($M)'))
+    time_series$RiskYear <- corpTable %>% group_by(RiskYear) %>% summarise(svar=sum(ValueAtRisk)) %>% select(RiskYear) %>% pull()
+    time_series$Transition <- corpTable %>% filter(TCFDCategoryName=='Transition Risk') %>% group_by(RiskYear) %>% summarise(svar=sum(ValueAtRisk)) %>% select(svar) %>% pull()
+    time_series$Physical <- corpTable %>% filter(TCFDCategoryName=='Physical Risk') %>% group_by(RiskYear) %>% summarise(svar2=sum(ValueAtRisk)) %>% select(svar2) %>% pull()
+    time_series$Stack <- time_series$Transition + time_series$Physical
+# 
+#     time_series <- corpTable %>% group_by(RiskYear) %>% summarise(svar=sum(ValueAtRisk))
+    plot_ly(time_series, x = ~RiskYear, y = ~Transition, name='Transition', type='scatter', mode = 'none', fill = 'tonexty') %>% 
+      add_trace(y = ~Stack, name = 'Physical', fill = 'tonexty') %>%
+      layout(yaxis = list(title = 'Impact ($M)', showgrid = FALSE), xaxis = list(showgrid = FALSE))
   }) 
   
   #Data table

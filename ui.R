@@ -79,9 +79,9 @@ ui <- dashboardPage(title="The Climate Service",
       	  menuSubItem("FINANCIAL EFFECTS", tabName = "financialeffects", icon = icon("usd", lib = "glyphicon")),
       	  menuSubItem("SUSTAINABLE INFRASTRUCTURE", tabName = "sustainable_infrastructure", icon = icon("tree-conifer", lib = "glyphicon")),
       	  menuSubItem("ADAPTATION BENEFIT/COST PLANNING", tabName = "adaptationplanning", icon = icon("tree-deciduous", lib = "glyphicon")),
-      	  menuSubItem("OVERALL CLIMATE SCORE", tabName = "climatescore", icon = icon("certificate", lib = "glyphicon")),
-      	  menuSubItem("DATABASE", tabName = "database", icon = icon("database")),
-      	  menuSubItem("Links", tabName = "links", icon = icon("external-link"))),
+      	  menuSubItem("OVERALL CLIMATE SCORE", tabName = "climatescore", icon = icon("certificate", lib = "glyphicon"))),
+      	  # menuSubItem("DATABASE", tabName = "database", icon = icon("database")),
+      	  # menuSubItem("Links", tabName = "links", icon = icon("external-link"))),
         menuItem("FAQ's", tabName = "faqs", icon = icon("question"))
     	) #sidebarMenu
   ), #dashboardSidebar
