@@ -62,6 +62,14 @@ server <- function(input, output, session) {
        addMarkers(~lon, ~lat, popup = ~as.character(LocationName))
    })
 
+   output$individual_location_map <- renderLeaflet({
+     leaflet(data = subset(corpLocations, ParentCorpID == USER$ParentCorpID & LocationName == input$rbLocations, select = LocationID:lat)) %>%
+       addTiles() %>%
+       addMarkers(~lon, ~lat, popup = ~as.character(LocationName))
+   })
+   
+   observeEvent(input$btnConfig, {
+     updateTabItems(session, 'sidebar', 'analyze')})
    
 # ----------------------------
 #         ANALYZE
@@ -86,18 +94,7 @@ server <- function(input, output, session) {
     selectInput('inputScenarios',"Scenario",c(unique(as.character(corpTable$ScenarioName))),selected='RCP8.5',selectize = TRUE)
   })
   
-  # Stacked bar chart
-  output$stackedCorpFinImpactsPlot <- renderPlotly({
-    if (input$inputLocations != 'All locations') {
-      corpTable <- corpTable[which(corpTable$ParentCorpID == USER$ParentCorpID & corpTable$Location == input$inputLocations & corpTable$RiskYear == input$sliderInputYear),]
-    }
-    if (input$inputLocations == 'All locations') {
-      corpTable <- corpTable[which(corpTable$ParentCorpID == USER$ParentCorpID & corpTable$RiskYear == input$sliderInputYear),]
-    }
-    ncorp <- pull(count(corpTable))
-    plot_ly(corpTable, x = ~TCFDCategoryName, y = ~ValueAtRisk, type='bar', text=corpTable$RiskFactorName, marker = list(color = colorRampPalette(brewer.pal(11,"Spectral"))(ncorp))) %>%
-      layout(yaxis = list(title = 'Impact ($M)'), barmode = 'stack')
-  })
+
   
   #barByRiskFactor
   output$barByRiskFactor <- renderPlotly({
@@ -107,10 +104,11 @@ server <- function(input, output, session) {
     if (input$inputLocations == 'All locations') {
       corpTable <- corpTable[which(corpTable$ParentCorpID == USER$ParentCorpID & corpTable$RiskYear == input$sliderInputYear),]
     }
-    plot_ly(x=corpTable$ValueAtRisk, y=corpTable$RiskFactorName, type = 'bar', orientation = 'h') %>% layout(margin = list(l=200, b=100)) %>%
-      layout(xaxis = list(title = 'Impact ($M)'), yaxis = list(title = 'Risk Factor'))
+    plot_ly(x=corpTable$ValueAtRisk, y=corpTable$RiskFactorName, type = 'bar', orientation = 'h') %>% layout(margin = list(l=180, b=100)) %>%
+      layout(xaxis = list(title = 'Impact ($M)'))
   }) 
   
+  #barByLocation
   output$barByLocation <- renderPlotly({
     if (input$inputLocations != 'All locations') {
       corpTable <- corpTable[which(corpTable$ParentCorpID == USER$ParentCorpID & corpTable$Location == input$inputLocations & corpTable$RiskYear == input$sliderInputYear),]
@@ -120,9 +118,10 @@ server <- function(input, output, session) {
     }
     ncorp <- pull(count(corpTable))
     plot_ly(corpTable, x = ~Location, y = ~ValueAtRisk, type='bar', text=corpTable$RiskFactorName, marker = list(color = colorRampPalette(brewer.pal(11,"Spectral"))(ncorp))) %>%
-      layout(yaxis = list(title = 'Impact ($M)'), barmode = 'stack')
+      layout(yaxis = list(title = 'Impact ($M)'), barmode = 'stack', margin = list(l=80,b=100))
   }) 
   
+  #stacked area by Time
   output$areaByTime <- renderPlotly({
     if (input$inputLocations != 'All locations') {
       corpTable <- corpTable[which(corpTable$ParentCorpID == USER$ParentCorpID & corpTable$Location == input$inputLocations),]
@@ -140,8 +139,21 @@ server <- function(input, output, session) {
 #     time_series <- corpTable %>% group_by(RiskYear) %>% summarise(svar=sum(ValueAtRisk))
     plot_ly(time_series, x = ~RiskYear, y = ~Transition, name='Transition', type='scatter', mode = 'none', fill = 'tonexty') %>% 
       add_trace(y = ~Stack, name = 'Physical', fill = 'tonexty') %>%
-      layout(yaxis = list(title = 'Impact ($M)', showgrid = FALSE), xaxis = list(showgrid = FALSE))
+      layout(yaxis = list(title = 'Impact ($M)', showgrid = FALSE), xaxis = list(showgrid = FALSE), margin = list(l=80,b=100))
   }) 
+  
+  # TCFD stacked bar chart
+  output$stackedCorpFinImpactsPlot <- renderPlotly({
+    if (input$inputLocations != 'All locations') {
+      corpTable <- corpTable[which(corpTable$ParentCorpID == USER$ParentCorpID & corpTable$Location == input$inputLocations & corpTable$RiskYear == input$sliderInputYear),]
+    }
+    if (input$inputLocations == 'All locations') {
+      corpTable <- corpTable[which(corpTable$ParentCorpID == USER$ParentCorpID & corpTable$RiskYear == input$sliderInputYear),]
+    }
+    ncorp <- pull(count(corpTable))
+    plot_ly(corpTable, x = ~TCFDCategoryName, y = ~ValueAtRisk, type='bar', text=corpTable$RiskFactorName, marker = list(color = colorRampPalette(brewer.pal(11,"Spectral"))(ncorp))) %>%
+      layout(yaxis = list(title = 'Impact ($M)'), barmode = 'stack', margin = list(l=80,b=100))
+  })
   
   #Data table
   output$corpFinImpacts <- DT::renderDataTable({
