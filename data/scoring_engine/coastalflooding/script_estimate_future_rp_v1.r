@@ -12,7 +12,8 @@ rphist = c(2,5,10,25,50,100,250,500,1000)
 # Micron_Manassas -77.503845 38.750829 Manassas_Virginia tx90p-2 pdsisc-2 coastalflood-2 -	28.0292 4315 4315 -77.24 38.606 0.6275800178 0.7106921468 0.765719608 0.8352469511 0.8868263061 0.9380248071 1.0054360032 1.0563367272 1.1072006493 35.0505 WASHINGTON_DC 360 -77.02 38.87 Bkgd:_1.36_+/-_0.29_mm/y 20 38 93 20 35 74 20 34 62
 
 #locfile="./facility_locations.csv.testNA.nearest.gtsr.segment"
-locfile="./facility_locations_v2.csv.nearest.gtsr.segment"
+#locfile="./facility_locations_v2.csv.nearest.gtsr.segment"
+locfile="./input4r.nearest.gtsr.segment"
 data = read.table(locfile, header=TRUE)
 nlocations = length(readLines(locfile)) - 1
 #rldata = as.numeric( t( select(data,RLm100yr:RLm1000yr) ) )

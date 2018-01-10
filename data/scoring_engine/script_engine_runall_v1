@@ -28,6 +28,7 @@ cp $facfile.pdsisc.damages ../
 
 cd ../coastalflooding/
 ./script_get_nearest_segment_v1_runall_facilities $facfile GTSR.dbf.csv.nearest.slr.station 
+cp $facfile.nearest.gtsr.segment input4r.nearest.gtsr.segment
 Rscript ./script_estimate_future_rp_v1.r
 ./script_score_locations_coastalflood_v1 $damfile $facfile future_annprob_fromR
 cp $facfile.coastalflood.damages ../

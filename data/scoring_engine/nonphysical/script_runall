@@ -1,5 +1,12 @@
 
-# Get the needed files from the TCSDB xlsx file.
+# Get input.
+alldamages=$1
+
+# Get the needed files from tabs in the TCSDB xlsx file.
+cd ../../..
 Rscript ./data/scoring_engine/nonphysical/load_tcsdb_nonphysical.r 
 
+# Run the non-physical scoring.  This assumes that the physical scoring has already been run in ./data/scoring_engine.
+cd ./data/scoring_engine/nonphysical/
+./script_build_nonphysical_v1 locations.csv riskfactors.csv subcat.csv cat.csv $alldamages
 
