@@ -74,7 +74,8 @@ server <- function(input, output, session) {
   # The version of this table with scoring-engine outputs for RCP8.5 and 9 decades is sheet 9.
   # When using the decadal form, set the sliderInputYear to the decadal version in ui.R.
   # corpTable = dbsheet9
-  corpTable <- readr::read_csv("./data/scoring_engine/nonphysical/TCSDB_structure_v3_locations.csv.damages.allDFs.with.nonphysical.csv")
+  #corpTable <- readr::read_csv("./data/scoring_engine/nonphysical/TCSDB_structure_v3_locations.csv.damages.allDFs.with.nonphysical.csv")
+  corpTable <- readr::read_csv("./data/scoring_engine/nonphysical/TCSDB_structure_locations.csv.cln.damages.allDFs.with.nonphysical.csv")
 
   # UI Input selectors for the corporate finance page, based on the database values  
   output$selectInput_location <- renderUI({

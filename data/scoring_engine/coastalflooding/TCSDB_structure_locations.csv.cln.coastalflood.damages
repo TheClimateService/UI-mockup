@@ -29,18 +29,18 @@ LocationID_ParentCorpID_LocationName lon lat location df_tx90p df_pdsisc df_coas
 28_2_Evander_Andrews_Power_Complex -115.734315 43.179176 Mountain_Home_ID tx90p-1 pdsisc-1 coastalflood-1 -	coastalflood-1  NA NA NA NA NA NA NA NA NA
 29_2_Bennett_Mountain -115.666637 43.147153 Mountain_Home_ID tx90p-1 pdsisc-1 coastalflood-1 -	coastalflood-1  NA NA NA NA NA NA NA NA NA
 30_2_Langley_Gulch_Power_Plant -116.819722 43.904444 New_Plymouth_ID tx90p-1 pdsisc-1 coastalflood-1 -	coastalflood-1  NA NA NA NA NA NA NA NA NA
-31_3_Boise -116.3253437 43.658527 Boise_Idaho tx90p-1 pdsisc-1 coastalflood-1 -	
-32_3_Colorado_Springs -104.849597 38.9201781 Colorado_Springs_CO tx90p-1 pdsisc-1 coastalflood-1 -	
-33_3_Corvallis -123.2450786 44.5854276 Corvallis_OR tx90p-1 pdsisc-1 coastalflood-1 -	
-34_3_Cupertino -122.0327049 37.321732 Cupertino_CA tx90p-1 pdsisc-1 coastalflood-1 -	
-35_3_Houston -95.8236304 29.8128657 Houston_TX tx90p-1 pdsisc-1 coastalflood-1 -	
-36_3_Palo_Alto -122.1679636 37.4276363 Palo_Alto_CA tx90p-1 pdsisc-1 coastalflood-1 -	
-37_3_Plano -96.8055583 33.0430197 Plano_TX tx90p-1 pdsisc-1 coastalflood-1 -	
-38_3_Roseville -121.3208949 38.7856002 Roseville_CA tx90p-1 pdsisc-1 coastalflood-1 -	
-39_3_San_Bernadino -117.3939088 34.2112961 San_Bernadino_CA tx90p-1 pdsisc-1 coastalflood-1 -	
-40_3_Dublin -6.4846805 53.3728178 Dublin_Ireland tx90p-1 pdsisc-1 coastalflood-1 -	
-41_3_Puerto_Rico -67.1121777 18.486511 Puerto_Rico tx90p-1 pdsisc-1 coastalflood-1 -	
-42_3_Barcelona_Sant_Cugat 2.0603031 41.4918967 Barcelona_Sant_Cugat_Spain tx90p-1 pdsisc-1 coastalflood-1 -	
-43_3_Rehovot 34.8032196 31.9158052 Rehovot_Israel tx90p-1 pdsisc-1 coastalflood-1 -	
-44_3_Singapore_DRD 103.7995975 1.2765481 Singapore_DRD tx90p-1 pdsisc-1 coastalflood-1 -	
-45_3_San_Diego -117.2904943 2.9066098 San_Diego_CA tx90p-1 pdsisc-1 coastalflood-1 -	
+31_3_Boise -116.3253437 43.658527 Boise_Idaho tx90p-1 pdsisc-1 coastalflood-1 -	coastalflood-1  NA NA NA NA NA NA NA NA NA
+32_3_Colorado_Springs -104.849597 38.9201781 Colorado_Springs_CO tx90p-1 pdsisc-1 coastalflood-1 -	coastalflood-1  NA NA NA NA NA NA NA NA NA
+33_3_Corvallis -123.2450786 44.5854276 Corvallis_OR tx90p-1 pdsisc-1 coastalflood-1 -	coastalflood-1  NA NA NA NA NA NA NA NA NA
+34_3_Cupertino -122.0327049 37.321732 Cupertino_CA tx90p-1 pdsisc-1 coastalflood-1 -	coastalflood-1  NA NA NA NA NA NA NA NA NA
+35_3_Houston -95.8236304 29.8128657 Houston_TX tx90p-1 pdsisc-1 coastalflood-1 -	coastalflood-1  NA NA NA NA NA NA NA NA NA
+36_3_Palo_Alto -122.1679636 37.4276363 Palo_Alto_CA tx90p-1 pdsisc-1 coastalflood-1 -	coastalflood-1  -0.2123 -1.6738 -5.5037 -21.2696 -72.0451 -90 -90 -90 -90
+37_3_Plano -96.8055583 33.0430197 Plano_TX tx90p-1 pdsisc-1 coastalflood-1 -	coastalflood-1  NA NA NA NA NA NA NA NA NA
+38_3_Roseville -121.3208949 38.7856002 Roseville_CA tx90p-1 pdsisc-1 coastalflood-1 -	coastalflood-1  NA NA NA NA NA NA NA NA NA
+39_3_San_Bernadino -117.3939088 34.2112961 San_Bernadino_CA tx90p-1 pdsisc-1 coastalflood-1 -	coastalflood-1  NA NA NA NA NA NA NA NA NA
+40_3_Dublin -6.4846805 53.3728178 Dublin_Ireland tx90p-1 pdsisc-1 coastalflood-1 -	coastalflood-1  NA NA NA NA NA NA NA NA NA
+41_3_Puerto_Rico -67.1121777 18.486511 Puerto_Rico tx90p-1 pdsisc-1 coastalflood-1 -	coastalflood-1  NA NA NA NA NA NA NA NA NA
+42_3_Barcelona_Sant_Cugat 2.0603031 41.4918967 Barcelona_Sant_Cugat_Spain tx90p-1 pdsisc-1 coastalflood-1 -	coastalflood-1  NA NA NA NA NA NA NA NA NA
+43_3_Rehovot 34.8032196 31.9158052 Rehovot_Israel tx90p-1 pdsisc-1 coastalflood-1 -	coastalflood-1  -0.5634 -8.074 -86.2219 -90 -90 -90 -90 -90 -90
+44_3_Singapore_DRD 103.7995975 1.2765481 Singapore_DRD tx90p-1 pdsisc-1 coastalflood-1 -	coastalflood-1  NA NA NA NA NA NA NA NA NA
+45_3_San_Diego -117.2904943 32.9066098 San_Diego_CA tx90p-1 pdsisc-1 coastalflood-1 -	coastalflood-1  -1.265 -5.1353 -24.2748 -30 -30 -30 -30 -30 -30

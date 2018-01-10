@@ -37,10 +37,14 @@ awk '{xhist=$15; startxrcp=20; yrcpall=""; xrcpindall="";  \
       yhist= yarray[xindex] + (xhist-xarray[xindex])*(yarray[xindex+1] - yarray[xindex]) / (xarray[xindex+1] - xarray[xindex]);  \
       for(i=startxrcp; i<=NF; i++) {  \
       	for(j=2; j<=xlen; j++) if(xrcp[i]>=xarray[j-1] && xrcp[i]<xarray[j]) xrcpindex[i]=j-1;  \
-        yrcp[i]=yarray[xrcpindex[i]] + (xrcp[i]-xarray[xrcpindex[i]])*(yarray[xrcpindex[i]+1] - yarray[xrcpindex[i]]) / (xarray[xrcpindex[i]+1] - xarray[xrcpindex[i]]);  \
+	deltay = yarray[xrcpindex[i]+1] - yarray[xrcpindex[i]];  \
+	deltax = xarray[xrcpindex[i]+1] - xarray[xrcpindex[i]];  \
+        if(deltax>0) yrcp[i]=yarray[xrcpindex[i]] + (xrcp[i]-xarray[xrcpindex[i]])*(deltay / deltax);  \
+                else {if(xrcpindex[i]!=999) yrcp[i]=yarray[xrcpindex[i]]; else yrcp[i]=yarray[ylen] };  \
         yrcpall=yrcpall" "yrcp[i]; xrcpindall=xrcpindall" "xrcpindex[i]  };  \
       print $0,yhist,yrcpall}' temp11 > temp12
       #print $0,yhist,yrcpall,xrcpindall}' temp11 > temp12
+      #print $0,yhist,yrcpall}' temp11 > temp12
 
 # Convert the damages through time to be relative to the last historical period.
 # More damage in a future period than in the last historical period will be given as a negative number.

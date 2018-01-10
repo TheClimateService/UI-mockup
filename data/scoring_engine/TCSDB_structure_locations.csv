@@ -43,4 +43,4 @@ LocationID,ParentCorpID,LocationName,lon,lat,location,df_tx90p,df_pdsisc,df_coas
 42,3,Barcelona_Sant_Cugat,2.0603031,41.4918967,Barcelona_Sant_Cugat_Spain,tx90p-1,pdsisc-1,coastalflood-1,-
 43,3,Rehovot,34.8032196,31.9158052,Rehovot_Israel,tx90p-1,pdsisc-1,coastalflood-1,-
 44,3,Singapore_DRD,103.7995975,1.2765481,Singapore_DRD,tx90p-1,pdsisc-1,coastalflood-1,-
-45,3,San_Diego,-117.2904943,2.9066098,San_Diego_CA,tx90p-1,pdsisc-1,coastalflood-1,-
+45,3,San_Diego,-117.2904943,32.9066098,San_Diego_CA,tx90p-1,pdsisc-1,coastalflood-1,-
