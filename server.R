@@ -75,10 +75,7 @@ server <- function(input, output, session) {
 #         ANALYZE
 # ----------------------------  
    
-  # Read in the output table. *** This CSV should be created by real code, not by James's Excel spreadsheet
-  # corpTable <- readr::read_csv("data/TCSDB/TCSDB_temp_import.csv")
   # TCSDB in excel format is read in ui.R via:  source("./data/TCSDB/load_tcsdb.r")
-  # The CorpRiskTable sheet is currently sheet 1.
   # The version of this table with scoring-engine outputs for RCP8.5 and 9 decades is sheet 9.
   # When using the decadal form, set the sliderInputYear to the decadal version in ui.R.
   # corpTable = dbsheet9
@@ -129,16 +126,41 @@ server <- function(input, output, session) {
     if (input$inputLocations == 'All locations') {
       corpTable <- corpTable[which(corpTable$ParentCorpID == USER$ParentCorpID),]
     }
-    # corpTableWide <- corpTable %>% spread(RiskYear, ValueAtRisk)
-
+    
+    # to chart a time series, need to build a new datafame with additive traces. I'm sure there's a better way to do this.
     time_series$RiskYear <- corpTable %>% group_by(RiskYear) %>% summarise(svar=sum(ValueAtRisk)) %>% select(RiskYear) %>% pull()
-    time_series$Transition <- corpTable %>% filter(TCFDCategoryName=='Transition Risk') %>% group_by(RiskYear) %>% summarise(svar=sum(ValueAtRisk)) %>% select(svar) %>% pull()
-    time_series$Physical <- corpTable %>% filter(TCFDCategoryName=='Physical Risk') %>% group_by(RiskYear) %>% summarise(svar2=sum(ValueAtRisk)) %>% select(svar2) %>% pull()
-    time_series$Stack <- time_series$Transition + time_series$Physical
+    time_series$s1 <- corpTable %>% filter(TCFDSubCatName=='Policy and Legal') %>% group_by(RiskYear) %>% summarise(s1=sum(ValueAtRisk)) %>% select(s1) %>% pull()
+    time_series$s2 <- corpTable %>% filter(TCFDSubCatName=='Technology') %>% group_by(RiskYear) %>% summarise(s2=sum(ValueAtRisk)) %>% select(s2) %>% pull()
+    time_series$s3 <- corpTable %>% filter(TCFDSubCatName=='Market') %>% group_by(RiskYear) %>% summarise(s3=sum(ValueAtRisk)) %>% select(s3) %>% pull()
+    time_series$s4 <- corpTable %>% filter(TCFDSubCatName=='Reputation') %>% group_by(RiskYear) %>% summarise(s4=sum(ValueAtRisk)) %>% select(s4) %>% pull()
+    time_series$s5 <- corpTable %>% filter(TCFDSubCatName=='Acute') %>% group_by(RiskYear) %>% summarise(s5=sum(ValueAtRisk)) %>% select(s5) %>% pull()
+    time_series$s6 <- corpTable %>% filter(TCFDSubCatName=='Chronic') %>% group_by(RiskYear) %>% summarise(s6=sum(ValueAtRisk)) %>% select(s6) %>% pull()
+    time_series$s7 <- corpTable %>% filter(TCFDSubCatName=='Resource Efficiency') %>% group_by(RiskYear) %>% summarise(s7=sum(ValueAtRisk)) %>% select(s7) %>% pull()
+    time_series$s8 <- corpTable %>% filter(TCFDSubCatName=='Energy Source') %>% group_by(RiskYear) %>% summarise(s8=sum(ValueAtRisk)) %>% select(s8) %>% pull()
+    time_series$s9 <- corpTable %>% filter(TCFDSubCatName=='Resilience') %>% group_by(RiskYear) %>% summarise(s9=sum(ValueAtRisk)) %>% select(s9) %>% pull()
+    
+    time_series$stack1 <- time_series$s1
+    time_series$stack2 <- time_series$s1 + time_series$s2
+    time_series$stack3 <- time_series$s2 + time_series$s3
+    time_series$stack4 <- time_series$s3 + time_series$s4
+    time_series$stack5 <- time_series$s4 + time_series$s5
+    time_series$stack6 <- time_series$s5 + time_series$s6
+    time_series$stack7 <- time_series$s6 + time_series$s7
+    time_series$stack8 <- time_series$s7 + time_series$s8
+    time_series$stack9 <- time_series$s8 + time_series$s9
+    
 # 
 #     time_series <- corpTable %>% group_by(RiskYear) %>% summarise(svar=sum(ValueAtRisk))
-    plot_ly(time_series, x = ~RiskYear, y = ~Transition, name='Transition', type='scatter', mode = 'none', fill = 'tonexty') %>% 
-      add_trace(y = ~Stack, name = 'Physical', fill = 'tonexty') %>%
+    plot_ly(time_series, x = ~RiskYear, y = ~stack1, name='Policy & Legal', type='scatter', mode = 'none', fill = 'tonexty') %>% 
+      add_trace(y = ~stack2, name = 'Technology', fill = 'tonexty') %>%
+      add_trace(y = ~stack3, name = 'Market', fill = 'tonexty') %>%
+      add_trace(y = ~stack4, name = 'Reputation', fill = 'tonexty') %>%
+      add_trace(y = ~stack5, name = 'Acute', fill = 'tonexty') %>%
+      add_trace(y = ~stack6, name = 'Chronic', fill = 'tonexty') %>%
+      add_trace(y = ~stack7, name = 'Resource Efficiency', fill = 'tonexty') %>%
+      add_trace(y = ~stack8, name = 'Energy Source', fill = 'tonexty') %>%
+      add_trace(y = ~stack9, name = 'Resilience', fill = 'tonexty') %>%
+      
       layout(yaxis = list(title = 'Impact ($M)', showgrid = FALSE), xaxis = list(showgrid = FALSE), margin = list(l=80,b=100))
   }) 
   
