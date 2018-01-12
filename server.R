@@ -139,6 +139,7 @@ server <- function(input, output, session) {
     time_series$s8 <- corpTable %>% filter(TCFDSubCatName=='Energy Source') %>% group_by(RiskYear) %>% summarise(s8=sum(ValueAtRisk)) %>% select(s8) %>% pull()
     time_series$s9 <- corpTable %>% filter(TCFDSubCatName=='Resilience') %>% group_by(RiskYear) %>% summarise(s9=sum(ValueAtRisk)) %>% select(s9) %>% pull()
     
+    # hack the stacking (plotly doesn't actually do stacking - it's a documented problem.)
     time_series$stack1 <- time_series$s1
     time_series$stack2 <- time_series$s1 + time_series$s2
     time_series$stack3 <- time_series$s2 + time_series$s3
@@ -149,8 +150,7 @@ server <- function(input, output, session) {
     time_series$stack8 <- time_series$s7 + time_series$s8
     time_series$stack9 <- time_series$s8 + time_series$s9
     
-# 
-#     time_series <- corpTable %>% group_by(RiskYear) %>% summarise(svar=sum(ValueAtRisk))
+# Draw the graph
     plot_ly(time_series, x = ~RiskYear, y = ~stack1, name='Policy & Legal', type='scatter', mode = 'none', fill = 'tonexty') %>% 
       add_trace(y = ~stack2, name = 'Technology', fill = 'tonexty') %>%
       add_trace(y = ~stack3, name = 'Market', fill = 'tonexty') %>%
