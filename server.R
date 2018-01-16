@@ -1001,7 +1001,7 @@ output$drought_frequencies_facility <- renderPlot({
     } #endif
 
   if (input$impact_selected == "Maize Yield (US)") {
-    source("./functions/fit_maize_yield_us_v1.r", local=TRUE)
+    source("./functions/fit_maize_yield_us_hourly_temp.r", local=TRUE)
     } #endif
 
   })
