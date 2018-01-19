@@ -532,7 +532,7 @@ server <- function(input, output, session) {
     legend("topright", inset=.05, title="Periods", labels, lwd=3, lty=ltypes, col=colors)
   })
 
-  output$losscurve <- renderImage({list(src = "./images/Mandel-121514-graph.png", height="220px", alt = paste("loss curve"))
+  output$losscurve <- renderImage({list(src = "./images/Mandel-121514-graph.png", height="230px", alt = paste("loss curve"))
   }, deleteFile = FALSE)
   
   #### This is just for an example on the methodology tab - delete when replaced with real code

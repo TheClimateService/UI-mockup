@@ -67,11 +67,15 @@ ui <- dashboardPage(title="The Climate Service",
 	sidebarMenu(id = "sidebar",
     	menuItem("Log In", tabName = "login", icon = icon("lock")),
       menuItem("Corporate Risk Analyzer", tabName = "corporate", icon = icon("building-o"),
-          menuSubItem("1) Configure Locations",tabName = "config"),
-          menuSubItem("2) Analyze Risks",tabName = "analyze"),
-          menuSubItem("3) Report TCFD",tabName = "report"),
+          menuSubItem("1) Setup",tabName = "config"),
+          menuSubItem("2) Analyze",tabName = "analyze"),
+          menuSubItem("3) Report",tabName = "report"),
           menuSubItem("Methodology", tabName = "methodology", icon = icon("cog"))),
-      menuItem("Portfolio Analyzer", tabName = "portfolios", icon = icon("briefcase")),
+      menuItem("Portfolio Analyzer", tabName = "portfolios", icon = icon("briefcase"),
+          menuSubItem("1) Setup",tabName = "portConfig"),
+          menuSubItem("2) Analyze",tabName = "portAnalyze"),
+          menuSubItem("3) Report",tabName = "portReport")
+      ),
       menuItem("Technical Details", tabName = "overview", icon = icon("podcast"),
       	  menuSubItem("LOCALIZED CLIMATE PROBABILITIES", tabName = "localclimate", icon = icon("cubes")),
       	  menuSubItem("SECTOR IMPACT FUNCTIONS", tabName = "impactfunctions", icon = icon("cloud-download", lib = "glyphicon")),
@@ -158,7 +162,7 @@ ui <- dashboardPage(title="The Climate Service",
 #             ),#tabItem
 
 # --------------------------------------
-#               CONFIG 
+#               CORP CONFIG 
 # --------------------------------------
     tabItem(tabName = "config",
         h2("1) Configure your locations"),
@@ -187,7 +191,7 @@ ui <- dashboardPage(title="The Climate Service",
     ),#tabItem
 
 # --------------------------------------
-#                 ANALYZE
+#                 CORP ANALYZE
 # --------------------------------------
       tabItem(tabName = "analyze",
         h2("2) Analyze your corporate risk"),
@@ -223,7 +227,7 @@ ui <- dashboardPage(title="The Climate Service",
         ),#tabItem analyze
               
 # --------------------------------------
-#               REPORT 
+#               CORP REPORT 
 # --------------------------------------
 
         tabItem(tabName = "report",
@@ -261,7 +265,7 @@ ui <- dashboardPage(title="The Climate Service",
         ), #tabItem report
         
 # --------------------------------------
-#              METHODOLOGY
+#              CORP METHODOLOGY
 # --------------------------------------
       tabItem(tabName = "methodology",
         h2("Understand the details of your climate risk with the Cx Methodology"),
@@ -271,31 +275,98 @@ ui <- dashboardPage(title="The Climate Service",
           column(4,selectInput("selectPeriod","Time Period",choices = c("1980","1990","2000","2010","2020","2030","2040","2050","2060","2070","2080","2090","2100")))
         ),#fluidrow select inputs
         fluidRow(
-          box(width=4,title="Hazard (Cause/Likelihood)",plotOutput("climplot5copy",height = 300)),
-          box(width=4,title="Exposure (Mechanism/Severity)",plotOutput("impactplot_building_flood_copy", height = 300)),
-          box(width=4,title="Risk (Effect)","Loss curve  of VaR", plotOutput("losscurve",height=300))
+          box(width=4,title="Hazard","Probability of a damage-producing event",plotOutput("climplot5copy",height = 300)),
+          box(width=4,title="Exposure","Mechanism and severity of damage for a given event",plotOutput("impactplot_building_flood_copy", height = 300)),
+          box(width=4,title="Risk","Loss curve  of VaR","Probability of financial damage, with expected value", plotOutput("losscurve",height=300))
         )#fluidrow graphs
       ),#tabItem methodology
 
 # --------------------------------------
-#              PORTFOLIOS
+#              PORTFOLIO - SETUP
+# --------------------------------------
+      tabItem(tabName = "portConfig",
+        h2("1) Set up your porfolio"),
+        fluidRow(
+          box(width=4, title = "Select a company to add", 
+              selectInput("selected_nasdaq","Search Companies", width=400,
+                          names,  # [from source("./data/financial/load_financial_data.r") ]
+                          selected = "Apple Inc. - Common Stock"),
+              actionButton("addStock","Add a Listed Equity")),
+          box(width=8,
+              "listing"
+          )#box
+        )#fluidRow
+      ),#tabItem
+
+# --------------------------------------
+#              PORTFOLIO - ANALYZE
+# --------------------------------------
+      tabItem(tabName = "portAnalyze",
+        h2("2) Analyze the climate risks in your portfolio"),
+        fluidRow(
+          column(4,
+                 selectInput("siPortfolioCompany","Company",c("All companies","Apple","Coca-Cola","Happy Family","HP","Intel","Micron"),selectize = TRUE)
+          ),
+          column(4,
+                 sliderInput("siPortfolioYear","Decade", min = 2020, max = 2050, value = 2020, sep = "", animate = TRUE, step=1)
+          ),
+          column(4,
+                 selectInput("siPortfolioScenario","Scenario",c("Business as usual","Moderate action","2 degrees","1.5 degrees"))
+          )
+        ),#fluidRow
+        br(),
+        tabsetPanel(
+          tabPanel(title = 'By Company',
+"foo bar"
+          ),
+          tabPanel(title = 'By Location',
+"foo bar"                   
+          ),
+          tabPanel(title = 'By Time',
+"foo bar"               
+          ),
+          tabPanel(title = 'By Risk Factor',
+"foo bar"                   
+          ),
+          tabPanel(title = 'All Data',
+"foo bar"                   
+          )
+        )#tabsetPanel
+      ),#tabItem portAnalyze  
+
+
+# --------------------------------------
+#              PORTFOLIO - REPORT
+# --------------------------------------
+      tabItem(tabName = "portReport",
+        h2("3) Report your climate-related financial risk"),
+        box(title = "Download report",
+           "Download a draft report to a Microsoft Word file for your continued editing. The report will have all of the charts and graphs you created during analysis, and all of your TCFD reporting work.",
+           br(),
+           hr(),
+           downloadButton("portReport", "Generate report")
+        )
+      ), #tabItem report
+
+# --------------------------------------
+#              PORTFOLIOS - OLD
 # --------------------------------------
       tabItem(tabName = "portfolios",
         h2("Investment Portfolio Analyzer"),
         fluidRow(
           tabBox(width=500,
             tabPanel(
-              title = "Set up",
-              actionButton("addStock","Add a Listed Equity")
+              title = "Set up"#,
+              # actionButton("addStock","Add a Listed Equity")
             ),
           tabPanel(title="Analyze",
           	fluidRow(
-        	  	column(6,
-            		selectInput("selected_nasdaq","Search Companies", width=400,
-        	     		names,  # [from source("./data/financial/load_financial_data.r") ]
-        	     		selected = "Apple Inc. - Common Stock"
-                )#selectInput
-        		  ),#column
+        # 	  	column(6,
+        #    		selectInput("selected_nasdaq","Search Companies", width=400,
+        #	     		names,  # [from source("./data/financial/load_financial_data.r") ]
+        #	     		selected = "Apple Inc. - Common Stock"
+        #         )#selectInput
+        # 		  ),#column
           		column(3, offset=1,
           			tags$head(tags$script(src = "message-handler.js")),
           			actionButton("add2portfolio", "ADD TO PORTFOLIO")
