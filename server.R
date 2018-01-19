@@ -128,6 +128,9 @@ server <- function(input, output, session) {
     }
     
     # to chart a time series, need to build a new datafame with additive traces. I'm sure there's a better way to do this.
+    nriskyears = length(corpTable %>% group_by(RiskYear) %>% summarise(svar=sum(ValueAtRisk)) %>% select(RiskYear) %>% pull())
+    time_series = as.data.frame( matrix(0, nrow = nriskyears, ncol = 10, dimnames = list(c(1:nriskyears), c("RiskYear", "s1", "s2", "s3", "s4", "s5", "s6", "s7", "s8", "s9"))) )
+
     time_series$RiskYear <- corpTable %>% group_by(RiskYear) %>% summarise(svar=sum(ValueAtRisk)) %>% select(RiskYear) %>% pull()
     time_series$s1 <- corpTable %>% filter(TCFDSubCatName=='Policy and Legal') %>% group_by(RiskYear) %>% summarise(s1=sum(ValueAtRisk)) %>% select(s1) %>% pull()
     time_series$s2 <- corpTable %>% filter(TCFDSubCatName=='Technology') %>% group_by(RiskYear) %>% summarise(s2=sum(ValueAtRisk)) %>% select(s2) %>% pull()
