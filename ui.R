@@ -305,31 +305,35 @@ ui <- dashboardPage(title="The Climate Service",
         h2("2) Analyze the climate risks in your portfolio"),
         fluidRow(
           column(4,
-                 selectInput("siPortfolioCompany","Company",c("All companies","Apple","Coca-Cola","Happy Family","HP","Intel","Micron"),selectize = TRUE)
+                 #selectInput("siPortfolioCompany","Company",c("All companies","Apple","Coca-Cola","Happy Family","HP","Intel","Micron"),selectize = TRUE)
+                 #selectInput("siPortfolioCompany","Portfolio",c("All companies","Chip Manufacturers"),selectize = TRUE)
+                  uiOutput("selectInput_locationPort")
           ),
           column(4,
-                 sliderInput("siPortfolioYear","Decade", min = 2020, max = 2050, value = 2020, sep = "", animate = TRUE, step=1)
+                 #sliderInput("siPortfolioYear","Decade", min = 2020, max = 2050, value = 2020, sep = "", animate = TRUE, step=1)
+                  sliderInput("sliderInputYearPort","Decade", min = 2010, max = 2090, value = 2020, sep = "", animate = TRUE, step=10)
           ),
           column(4,
-                 selectInput("siPortfolioScenario","Scenario",c("Business as usual","Moderate action","2 degrees","1.5 degrees"))
+                 #selectInput("siPortfolioScenario","Scenario",c("Business as usual","Moderate action","2 degrees","1.5 degrees"))
+                  uiOutput("selectInput_scenarioPort")
           )
         ),#fluidRow
         br(),
         tabsetPanel(
-          tabPanel(title = 'By Company',
-"foo bar"
-          ),
-          tabPanel(title = 'By Location',
-"foo bar"                   
-          ),
-          tabPanel(title = 'By Time',
-"foo bar"               
-          ),
           tabPanel(title = 'By Risk Factor',
-"foo bar"                   
+              plotlyOutput("barByRiskFactorPort")
+          ),
+          tabPanel(title = 'By Company/Equity',
+              plotlyOutput("barByLocationPort")          
+          ),
+          tabPanel(title = 'By Time Period',
+              plotlyOutput("areaByTimePort")
+          ),
+          tabPanel(title = 'By TCFD Category',
+              plotlyOutput("stackedCorpFinImpactsPlotPort")
           ),
           tabPanel(title = 'All Data',
-"foo bar"                   
+              DT::dataTableOutput("corpFinImpactsPort")
           )
         )#tabsetPanel
       ),#tabItem portAnalyze  

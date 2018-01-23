@@ -1,0 +1,15 @@
+CORPXXX;  "Transition Risk";"Policy and Legal";Carbon pricing ;-13.0637;-11.506;-37.1106;-70.9655;-113.905;-148.108;-162.73;-204.347;-227.244
+CORPXXX;  "Physical Risk";"Chronic";Coastal flooding ;-2.887;-9.4088;-41.0522;-62.9375;-78.9813;-145.956;-297.016;-320;-320
+CORPXXX;  "Physical Risk";"Chronic";Drought ;-45;-5;-40;-105;-75;-115;-145;-155;-125
+CORPXXX;  "Physical Risk";"Acute";Employee impacts ;-1.30637;-1.1506;-3.71106;-7.09655;-11.3905;-14.8108;-16.273;-20.4347;-22.7244
+CORPXXX;  "Opportunity";"Resource Efficiency";Energy Efficiency ;-3.48366;-3.06826;-9.89615;-18.9241;-30.3748;-39.4956;-43.3946;-54.4926;-60.5985
+CORPXXX;  "Opportunity";"Resilience";Energy resilience ;-3.26594;-2.87649;-9.27765;-17.7413;-28.4764;-37.0271;-40.6824;-51.0868;-56.8111
+CORPXXX;  "Transition Risk";"Policy and Legal";Litigation risk ;-1.74183;-1.53413;-4.94808;-9.46205;-15.1874;-19.7478;-21.6973;-27.2463;-30.2993
+CORPXXX;  "Opportunity";"Resource Efficiency";Materials Efficiency ;-2.61275;-2.30119;-7.4221;-14.193;-22.7811;-29.6217;-32.5459;-40.8694;-45.4489
+CORPXXX;  "Transition Risk";"Reputation";Materials cost ;-2.17729;-1.91766;-6.1851;-11.8276;-18.9842;-24.6848;-27.1216;-34.0579;-37.8741
+CORPXXX;  "Transition Risk";"Technology";New technology ;-1.5241;-1.34236;-4.32957;-8.2793;-13.289;-17.2793;-18.9851;-23.8405;-26.5118
+CORPXXX;  "Opportunity";"Energy Source";Renewable price stability ;-0.653187;-0.575298;-1.85553;-3.54827;-5.69527;-7.40545;-8.13649;-10.2174;-11.3622
+CORPXXX;  "Transition Risk";"Market";Reputation damage ;-1.08864;-0.95883;-3.09255;-5.91379;-9.49212;-12.3424;-13.5608;-17.0289;-18.937
+CORPXXX;  "Physical Risk";"Acute";Storm damage ;-15.241;-13.4236;-43.2957;-82.7929;-132.89;-172.793;-189.851;-238.405;-265.118
+CORPXXX;  "Physical Risk";"Chronic";Temperature extremes ;-21.7729;-19.1766;-61.851;-118.275;-189.842;-246.848;-271.216;-340.579;-378.741
+CORPXXX;  "Opportunity";"Resource Efficiency";Water Efficiency ;-3.91912;-3.45179;-11.1332;-21.2896;-34.1716;-44.4326;-48.8189;-61.3042;-68.1734

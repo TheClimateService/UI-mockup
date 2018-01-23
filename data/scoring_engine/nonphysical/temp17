@@ -1,0 +1,4 @@
+sed SSSs/cat(1)/"Transition Risk"/SSS temp16.1 > temp16.2
+sed SSSs/cat(2)/"Physical Risk"/SSS temp16.2 > temp16.3
+sed SSSs/cat(3)/"Opportunity"/SSS temp16.3 > temp16.4
+cp temp16.4 temp16.out

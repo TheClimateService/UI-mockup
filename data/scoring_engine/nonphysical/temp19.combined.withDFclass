@@ -1,0 +1,675 @@
+1;1;"Boise";  "Transition Risk";"Policy and Legal";Carbon pricing;tx90p_60	;0;0;-1.2943;-1.1959;-0.817;-3.3868;-6.0184;-10.5988;-16.5782
+1;1;"Boise";  "Transition Risk";"Policy and Legal";Litigation risk;tx90p_8	;0;0;-1.2943;-1.1959;-0.817;-3.3868;-6.0184;-10.5988;-16.5782
+1;1;"Boise";  "Transition Risk";"Technology";New technology;tx90p_7	;0;0;-1.2943;-1.1959;-0.817;-3.3868;-6.0184;-10.5988;-16.5782
+1;1;"Boise";  "Transition Risk";"Market";Reputation damage;tx90p_5	;0;0;-1.2943;-1.1959;-0.817;-3.3868;-6.0184;-10.5988;-16.5782
+1;1;"Boise";  "Transition Risk";"Reputation";Materials cost;tx90p_10	;0;0;-1.2943;-1.1959;-0.817;-3.3868;-6.0184;-10.5988;-16.5782
+1;1;"Boise";  "Physical Risk";"Acute";Storm damage;tx90p_70	;0;0;-1.2943;-1.1959;-0.817;-3.3868;-6.0184;-10.5988;-16.5782
+1;1;"Boise";  "Physical Risk";"Acute";Employee impacts;tx90p_6	;0;0;-1.2943;-1.1959;-0.817;-3.3868;-6.0184;-10.5988;-16.5782
+1;1;"Boise";  "Physical Risk";"Chronic";Temperature extremes;tx90p_100	;0;0;-1.2943;-1.1959;-0.817;-3.3868;-6.0184;-10.5988;-16.5782
+1;1;"Boise";  "Physical Risk";"Chronic";Coastal flooding;coastalflood_100	;NA;NA;NA;NA;NA;NA;NA;NA;NA
+1;1;"Boise";  "Opportunity";"Resource Efficiency";Energy Efficiency;tx90p_16	;0;0;-1.2943;-1.1959;-0.817;-3.3868;-6.0184;-10.5988;-16.5782
+1;1;"Boise";  "Opportunity";"Resource Efficiency";Water Efficiency;tx90p_18	;0;0;-1.2943;-1.1959;-0.817;-3.3868;-6.0184;-10.5988;-16.5782
+1;1;"Boise";  "Opportunity";"Resource Efficiency";Materials Efficiency;tx90p_12	;0;0;-1.2943;-1.1959;-0.817;-3.3868;-6.0184;-10.5988;-16.5782
+1;1;"Boise";  "Opportunity";"Energy Source";Renewable price stability;tx90p_3	;0;0;-1.2943;-1.1959;-0.817;-3.3868;-6.0184;-10.5988;-16.5782
+1;1;"Boise";  "Opportunity";"Resilience";Energy resilience;tx90p_15	;0;0;-1.2943;-1.1959;-0.817;-3.3868;-6.0184;-10.5988;-16.5782
+1;1;"Boise";  "Physical Risk";"Chronic";Drought;pdsisc_100	;-30;0;-5;-40;-30;-50;-60;-50;-40
+1;2;"Manassas";  "Transition Risk";"Policy and Legal";Carbon pricing;tx90p_60	;-7.5559;-4.5684;-4.5181;-9.1366;-16.9166;-21.6237;-29.9291;-31.2286;-35.6756
+1;2;"Manassas";  "Transition Risk";"Policy and Legal";Litigation risk;tx90p_8	;-7.5559;-4.5684;-4.5181;-9.1366;-16.9166;-21.6237;-29.9291;-31.2286;-35.6756
+1;2;"Manassas";  "Transition Risk";"Technology";New technology;tx90p_7	;-7.5559;-4.5684;-4.5181;-9.1366;-16.9166;-21.6237;-29.9291;-31.2286;-35.6756
+1;2;"Manassas";  "Transition Risk";"Market";Reputation damage;tx90p_5	;-7.5559;-4.5684;-4.5181;-9.1366;-16.9166;-21.6237;-29.9291;-31.2286;-35.6756
+1;2;"Manassas";  "Transition Risk";"Reputation";Materials cost;tx90p_10	;-7.5559;-4.5684;-4.5181;-9.1366;-16.9166;-21.6237;-29.9291;-31.2286;-35.6756
+1;2;"Manassas";  "Physical Risk";"Acute";Storm damage;tx90p_70	;-7.5559;-4.5684;-4.5181;-9.1366;-16.9166;-21.6237;-29.9291;-31.2286;-35.6756
+1;2;"Manassas";  "Physical Risk";"Acute";Employee impacts;tx90p_6	;-7.5559;-4.5684;-4.5181;-9.1366;-16.9166;-21.6237;-29.9291;-31.2286;-35.6756
+1;2;"Manassas";  "Physical Risk";"Chronic";Temperature extremes;tx90p_100	;-7.5559;-4.5684;-4.5181;-9.1366;-16.9166;-21.6237;-29.9291;-31.2286;-35.6756
+1;2;"Manassas";  "Physical Risk";"Chronic";Coastal flooding;coastalflood_100	;NA;NA;NA;NA;NA;NA;NA;NA;NA
+1;2;"Manassas";  "Opportunity";"Resource Efficiency";Energy Efficiency;tx90p_16	;-7.5559;-4.5684;-4.5181;-9.1366;-16.9166;-21.6237;-29.9291;-31.2286;-35.6756
+1;2;"Manassas";  "Opportunity";"Resource Efficiency";Water Efficiency;tx90p_18	;-7.5559;-4.5684;-4.5181;-9.1366;-16.9166;-21.6237;-29.9291;-31.2286;-35.6756
+1;2;"Manassas";  "Opportunity";"Resource Efficiency";Materials Efficiency;tx90p_12	;-7.5559;-4.5684;-4.5181;-9.1366;-16.9166;-21.6237;-29.9291;-31.2286;-35.6756
+1;2;"Manassas";  "Opportunity";"Energy Source";Renewable price stability;tx90p_3	;-7.5559;-4.5684;-4.5181;-9.1366;-16.9166;-21.6237;-29.9291;-31.2286;-35.6756
+1;2;"Manassas";  "Opportunity";"Resilience";Energy resilience;tx90p_15	;-7.5559;-4.5684;-4.5181;-9.1366;-16.9166;-21.6237;-29.9291;-31.2286;-35.6756
+1;2;"Manassas";  "Physical Risk";"Chronic";Drought;pdsisc_100	;5;5;-25;-15;-5;-5;-15;-35;-15
+1;3;"Singapore_Hqs";  "Transition Risk";"Policy and Legal";Carbon pricing;tx90p_60	;-3.3892;-3.0422;-11.6682;-21.4371;-33.827;-40.6232;-41.0293;-52.4231;-56.7739
+1;3;"Singapore_Hqs";  "Transition Risk";"Policy and Legal";Litigation risk;tx90p_8	;-3.3892;-3.0422;-11.6682;-21.4371;-33.827;-40.6232;-41.0293;-52.4231;-56.7739
+1;3;"Singapore_Hqs";  "Transition Risk";"Technology";New technology;tx90p_7	;-3.3892;-3.0422;-11.6682;-21.4371;-33.827;-40.6232;-41.0293;-52.4231;-56.7739
+1;3;"Singapore_Hqs";  "Transition Risk";"Market";Reputation damage;tx90p_5	;-3.3892;-3.0422;-11.6682;-21.4371;-33.827;-40.6232;-41.0293;-52.4231;-56.7739
+1;3;"Singapore_Hqs";  "Transition Risk";"Reputation";Materials cost;tx90p_10	;-3.3892;-3.0422;-11.6682;-21.4371;-33.827;-40.6232;-41.0293;-52.4231;-56.7739
+1;3;"Singapore_Hqs";  "Physical Risk";"Acute";Storm damage;tx90p_70	;-3.3892;-3.0422;-11.6682;-21.4371;-33.827;-40.6232;-41.0293;-52.4231;-56.7739
+1;3;"Singapore_Hqs";  "Physical Risk";"Acute";Employee impacts;tx90p_6	;-3.3892;-3.0422;-11.6682;-21.4371;-33.827;-40.6232;-41.0293;-52.4231;-56.7739
+1;3;"Singapore_Hqs";  "Physical Risk";"Chronic";Temperature extremes;tx90p_100	;-3.3892;-3.0422;-11.6682;-21.4371;-33.827;-40.6232;-41.0293;-52.4231;-56.7739
+1;3;"Singapore_Hqs";  "Physical Risk";"Chronic";Coastal flooding;coastalflood_100	;NA;NA;NA;NA;NA;NA;NA;NA;NA
+1;3;"Singapore_Hqs";  "Opportunity";"Resource Efficiency";Energy Efficiency;tx90p_16	;-3.3892;-3.0422;-11.6682;-21.4371;-33.827;-40.6232;-41.0293;-52.4231;-56.7739
+1;3;"Singapore_Hqs";  "Opportunity";"Resource Efficiency";Water Efficiency;tx90p_18	;-3.3892;-3.0422;-11.6682;-21.4371;-33.827;-40.6232;-41.0293;-52.4231;-56.7739
+1;3;"Singapore_Hqs";  "Opportunity";"Resource Efficiency";Materials Efficiency;tx90p_12	;-3.3892;-3.0422;-11.6682;-21.4371;-33.827;-40.6232;-41.0293;-52.4231;-56.7739
+1;3;"Singapore_Hqs";  "Opportunity";"Energy Source";Renewable price stability;tx90p_3	;-3.3892;-3.0422;-11.6682;-21.4371;-33.827;-40.6232;-41.0293;-52.4231;-56.7739
+1;3;"Singapore_Hqs";  "Opportunity";"Resilience";Energy resilience;tx90p_15	;-3.3892;-3.0422;-11.6682;-21.4371;-33.827;-40.6232;-41.0293;-52.4231;-56.7739
+1;3;"Singapore_Hqs";  "Physical Risk";"Chronic";Drought;pdsisc_100	;0;0;0;0;0;0;0;0;0
+1;4;"Singapore_300mm_DRAM";  "Transition Risk";"Policy and Legal";Carbon pricing;tx90p_60	;-3.3892;-3.0422;-11.6682;-21.4371;-33.827;-40.6232;-41.0293;-52.4231;-56.7739
+1;4;"Singapore_300mm_DRAM";  "Transition Risk";"Policy and Legal";Litigation risk;tx90p_8	;-3.3892;-3.0422;-11.6682;-21.4371;-33.827;-40.6232;-41.0293;-52.4231;-56.7739
+1;4;"Singapore_300mm_DRAM";  "Transition Risk";"Technology";New technology;tx90p_7	;-3.3892;-3.0422;-11.6682;-21.4371;-33.827;-40.6232;-41.0293;-52.4231;-56.7739
+1;4;"Singapore_300mm_DRAM";  "Transition Risk";"Market";Reputation damage;tx90p_5	;-3.3892;-3.0422;-11.6682;-21.4371;-33.827;-40.6232;-41.0293;-52.4231;-56.7739
+1;4;"Singapore_300mm_DRAM";  "Transition Risk";"Reputation";Materials cost;tx90p_10	;-3.3892;-3.0422;-11.6682;-21.4371;-33.827;-40.6232;-41.0293;-52.4231;-56.7739
+1;4;"Singapore_300mm_DRAM";  "Physical Risk";"Acute";Storm damage;tx90p_70	;-3.3892;-3.0422;-11.6682;-21.4371;-33.827;-40.6232;-41.0293;-52.4231;-56.7739
+1;4;"Singapore_300mm_DRAM";  "Physical Risk";"Acute";Employee impacts;tx90p_6	;-3.3892;-3.0422;-11.6682;-21.4371;-33.827;-40.6232;-41.0293;-52.4231;-56.7739
+1;4;"Singapore_300mm_DRAM";  "Physical Risk";"Chronic";Temperature extremes;tx90p_100	;-3.3892;-3.0422;-11.6682;-21.4371;-33.827;-40.6232;-41.0293;-52.4231;-56.7739
+1;4;"Singapore_300mm_DRAM";  "Physical Risk";"Chronic";Coastal flooding;coastalflood_100	;-0.3439;-0.8721;-1.9636;-4.2932;-9.6051;-31.7392;-81.6298;-90;-90
+1;4;"Singapore_300mm_DRAM";  "Opportunity";"Resource Efficiency";Energy Efficiency;tx90p_16	;-3.3892;-3.0422;-11.6682;-21.4371;-33.827;-40.6232;-41.0293;-52.4231;-56.7739
+1;4;"Singapore_300mm_DRAM";  "Opportunity";"Resource Efficiency";Water Efficiency;tx90p_18	;-3.3892;-3.0422;-11.6682;-21.4371;-33.827;-40.6232;-41.0293;-52.4231;-56.7739
+1;4;"Singapore_300mm_DRAM";  "Opportunity";"Resource Efficiency";Materials Efficiency;tx90p_12	;-3.3892;-3.0422;-11.6682;-21.4371;-33.827;-40.6232;-41.0293;-52.4231;-56.7739
+1;4;"Singapore_300mm_DRAM";  "Opportunity";"Energy Source";Renewable price stability;tx90p_3	;-3.3892;-3.0422;-11.6682;-21.4371;-33.827;-40.6232;-41.0293;-52.4231;-56.7739
+1;4;"Singapore_300mm_DRAM";  "Opportunity";"Resilience";Energy resilience;tx90p_15	;-3.3892;-3.0422;-11.6682;-21.4371;-33.827;-40.6232;-41.0293;-52.4231;-56.7739
+1;4;"Singapore_300mm_DRAM";  "Physical Risk";"Chronic";Drought;pdsisc_100	;0;0;0;0;0;0;0;0;0
+1;5;"Singapore_300mm_NAND";  "Transition Risk";"Policy and Legal";Carbon pricing;tx90p_60	;-3.3892;-3.0422;-11.6682;-21.4371;-33.827;-40.6232;-41.0293;-52.4231;-56.7739
+1;5;"Singapore_300mm_NAND";  "Transition Risk";"Policy and Legal";Litigation risk;tx90p_8	;-3.3892;-3.0422;-11.6682;-21.4371;-33.827;-40.6232;-41.0293;-52.4231;-56.7739
+1;5;"Singapore_300mm_NAND";  "Transition Risk";"Technology";New technology;tx90p_7	;-3.3892;-3.0422;-11.6682;-21.4371;-33.827;-40.6232;-41.0293;-52.4231;-56.7739
+1;5;"Singapore_300mm_NAND";  "Transition Risk";"Market";Reputation damage;tx90p_5	;-3.3892;-3.0422;-11.6682;-21.4371;-33.827;-40.6232;-41.0293;-52.4231;-56.7739
+1;5;"Singapore_300mm_NAND";  "Transition Risk";"Reputation";Materials cost;tx90p_10	;-3.3892;-3.0422;-11.6682;-21.4371;-33.827;-40.6232;-41.0293;-52.4231;-56.7739
+1;5;"Singapore_300mm_NAND";  "Physical Risk";"Acute";Storm damage;tx90p_70	;-3.3892;-3.0422;-11.6682;-21.4371;-33.827;-40.6232;-41.0293;-52.4231;-56.7739
+1;5;"Singapore_300mm_NAND";  "Physical Risk";"Acute";Employee impacts;tx90p_6	;-3.3892;-3.0422;-11.6682;-21.4371;-33.827;-40.6232;-41.0293;-52.4231;-56.7739
+1;5;"Singapore_300mm_NAND";  "Physical Risk";"Chronic";Temperature extremes;tx90p_100	;-3.3892;-3.0422;-11.6682;-21.4371;-33.827;-40.6232;-41.0293;-52.4231;-56.7739
+1;5;"Singapore_300mm_NAND";  "Physical Risk";"Chronic";Coastal flooding;coastalflood_100	;-0.3439;-0.8721;-1.9636;-4.2932;-9.6051;-31.7392;-81.6298;-90;-90
+1;5;"Singapore_300mm_NAND";  "Opportunity";"Resource Efficiency";Energy Efficiency;tx90p_16	;-3.3892;-3.0422;-11.6682;-21.4371;-33.827;-40.6232;-41.0293;-52.4231;-56.7739
+1;5;"Singapore_300mm_NAND";  "Opportunity";"Resource Efficiency";Water Efficiency;tx90p_18	;-3.3892;-3.0422;-11.6682;-21.4371;-33.827;-40.6232;-41.0293;-52.4231;-56.7739
+1;5;"Singapore_300mm_NAND";  "Opportunity";"Resource Efficiency";Materials Efficiency;tx90p_12	;-3.3892;-3.0422;-11.6682;-21.4371;-33.827;-40.6232;-41.0293;-52.4231;-56.7739
+1;5;"Singapore_300mm_NAND";  "Opportunity";"Energy Source";Renewable price stability;tx90p_3	;-3.3892;-3.0422;-11.6682;-21.4371;-33.827;-40.6232;-41.0293;-52.4231;-56.7739
+1;5;"Singapore_300mm_NAND";  "Opportunity";"Resilience";Energy resilience;tx90p_15	;-3.3892;-3.0422;-11.6682;-21.4371;-33.827;-40.6232;-41.0293;-52.4231;-56.7739
+1;5;"Singapore_300mm_NAND";  "Physical Risk";"Chronic";Drought;pdsisc_100	;0;0;0;0;0;0;0;0;0
+1;6;"Singapore_200mm_NOR";  "Transition Risk";"Policy and Legal";Carbon pricing;tx90p_60	;-3.3892;-3.0422;-11.6682;-21.4371;-33.827;-40.6232;-41.0293;-52.4231;-56.7739
+1;6;"Singapore_200mm_NOR";  "Transition Risk";"Policy and Legal";Litigation risk;tx90p_8	;-3.3892;-3.0422;-11.6682;-21.4371;-33.827;-40.6232;-41.0293;-52.4231;-56.7739
+1;6;"Singapore_200mm_NOR";  "Transition Risk";"Technology";New technology;tx90p_7	;-3.3892;-3.0422;-11.6682;-21.4371;-33.827;-40.6232;-41.0293;-52.4231;-56.7739
+1;6;"Singapore_200mm_NOR";  "Transition Risk";"Market";Reputation damage;tx90p_5	;-3.3892;-3.0422;-11.6682;-21.4371;-33.827;-40.6232;-41.0293;-52.4231;-56.7739
+1;6;"Singapore_200mm_NOR";  "Transition Risk";"Reputation";Materials cost;tx90p_10	;-3.3892;-3.0422;-11.6682;-21.4371;-33.827;-40.6232;-41.0293;-52.4231;-56.7739
+1;6;"Singapore_200mm_NOR";  "Physical Risk";"Acute";Storm damage;tx90p_70	;-3.3892;-3.0422;-11.6682;-21.4371;-33.827;-40.6232;-41.0293;-52.4231;-56.7739
+1;6;"Singapore_200mm_NOR";  "Physical Risk";"Acute";Employee impacts;tx90p_6	;-3.3892;-3.0422;-11.6682;-21.4371;-33.827;-40.6232;-41.0293;-52.4231;-56.7739
+1;6;"Singapore_200mm_NOR";  "Physical Risk";"Chronic";Temperature extremes;tx90p_100	;-3.3892;-3.0422;-11.6682;-21.4371;-33.827;-40.6232;-41.0293;-52.4231;-56.7739
+1;6;"Singapore_200mm_NOR";  "Physical Risk";"Chronic";Coastal flooding;coastalflood_100	;-0.3466;-0.88;-1.9851;-4.3511;-9.7711;-32.4775;-83.7563;-90;-90
+1;6;"Singapore_200mm_NOR";  "Opportunity";"Resource Efficiency";Energy Efficiency;tx90p_16	;-3.3892;-3.0422;-11.6682;-21.4371;-33.827;-40.6232;-41.0293;-52.4231;-56.7739
+1;6;"Singapore_200mm_NOR";  "Opportunity";"Resource Efficiency";Water Efficiency;tx90p_18	;-3.3892;-3.0422;-11.6682;-21.4371;-33.827;-40.6232;-41.0293;-52.4231;-56.7739
+1;6;"Singapore_200mm_NOR";  "Opportunity";"Resource Efficiency";Materials Efficiency;tx90p_12	;-3.3892;-3.0422;-11.6682;-21.4371;-33.827;-40.6232;-41.0293;-52.4231;-56.7739
+1;6;"Singapore_200mm_NOR";  "Opportunity";"Energy Source";Renewable price stability;tx90p_3	;-3.3892;-3.0422;-11.6682;-21.4371;-33.827;-40.6232;-41.0293;-52.4231;-56.7739
+1;6;"Singapore_200mm_NOR";  "Opportunity";"Resilience";Energy resilience;tx90p_15	;-3.3892;-3.0422;-11.6682;-21.4371;-33.827;-40.6232;-41.0293;-52.4231;-56.7739
+1;6;"Singapore_200mm_NOR";  "Physical Risk";"Chronic";Drought;pdsisc_100	;0;0;0;0;0;0;0;0;0
+1;7;"Catania";  "Transition Risk";"Policy and Legal";Carbon pricing;tx90p_60	;-0.172;-2.4394;-6.7439;-6.1781;-18.5492;-25.5408;-35.1947;-43.9963;-52.3389
+1;7;"Catania";  "Transition Risk";"Policy and Legal";Litigation risk;tx90p_8	;-0.172;-2.4394;-6.7439;-6.1781;-18.5492;-25.5408;-35.1947;-43.9963;-52.3389
+1;7;"Catania";  "Transition Risk";"Technology";New technology;tx90p_7	;-0.172;-2.4394;-6.7439;-6.1781;-18.5492;-25.5408;-35.1947;-43.9963;-52.3389
+1;7;"Catania";  "Transition Risk";"Market";Reputation damage;tx90p_5	;-0.172;-2.4394;-6.7439;-6.1781;-18.5492;-25.5408;-35.1947;-43.9963;-52.3389
+1;7;"Catania";  "Transition Risk";"Reputation";Materials cost;tx90p_10	;-0.172;-2.4394;-6.7439;-6.1781;-18.5492;-25.5408;-35.1947;-43.9963;-52.3389
+1;7;"Catania";  "Physical Risk";"Acute";Storm damage;tx90p_70	;-0.172;-2.4394;-6.7439;-6.1781;-18.5492;-25.5408;-35.1947;-43.9963;-52.3389
+1;7;"Catania";  "Physical Risk";"Acute";Employee impacts;tx90p_6	;-0.172;-2.4394;-6.7439;-6.1781;-18.5492;-25.5408;-35.1947;-43.9963;-52.3389
+1;7;"Catania";  "Physical Risk";"Chronic";Temperature extremes;tx90p_100	;-0.172;-2.4394;-6.7439;-6.1781;-18.5492;-25.5408;-35.1947;-43.9963;-52.3389
+1;7;"Catania";  "Physical Risk";"Chronic";Coastal flooding;coastalflood_100	;-1.8526;-6.7846;-35.1399;-50;-50;-50;-50;-50;-50
+1;7;"Catania";  "Opportunity";"Resource Efficiency";Energy Efficiency;tx90p_16	;-0.172;-2.4394;-6.7439;-6.1781;-18.5492;-25.5408;-35.1947;-43.9963;-52.3389
+1;7;"Catania";  "Opportunity";"Resource Efficiency";Water Efficiency;tx90p_18	;-0.172;-2.4394;-6.7439;-6.1781;-18.5492;-25.5408;-35.1947;-43.9963;-52.3389
+1;7;"Catania";  "Opportunity";"Resource Efficiency";Materials Efficiency;tx90p_12	;-0.172;-2.4394;-6.7439;-6.1781;-18.5492;-25.5408;-35.1947;-43.9963;-52.3389
+1;7;"Catania";  "Opportunity";"Energy Source";Renewable price stability;tx90p_3	;-0.172;-2.4394;-6.7439;-6.1781;-18.5492;-25.5408;-35.1947;-43.9963;-52.3389
+1;7;"Catania";  "Opportunity";"Resilience";Energy resilience;tx90p_15	;-0.172;-2.4394;-6.7439;-6.1781;-18.5492;-25.5408;-35.1947;-43.9963;-52.3389
+1;7;"Catania";  "Physical Risk";"Chronic";Drought;pdsisc_100	;-10;-10;0;-50;-40;-60;-70;-70;-70
+1;8;"Bangalore";  "Transition Risk";"Policy and Legal";Carbon pricing;tx90p_60	;-0.4882;0;-2.6219;-16.0165;-18.2516;-33.8035;-35.9566;-45.0626;-47.0526
+1;8;"Bangalore";  "Transition Risk";"Policy and Legal";Litigation risk;tx90p_8	;-0.4882;0;-2.6219;-16.0165;-18.2516;-33.8035;-35.9566;-45.0626;-47.0526
+1;8;"Bangalore";  "Transition Risk";"Technology";New technology;tx90p_7	;-0.4882;0;-2.6219;-16.0165;-18.2516;-33.8035;-35.9566;-45.0626;-47.0526
+1;8;"Bangalore";  "Transition Risk";"Market";Reputation damage;tx90p_5	;-0.4882;0;-2.6219;-16.0165;-18.2516;-33.8035;-35.9566;-45.0626;-47.0526
+1;8;"Bangalore";  "Transition Risk";"Reputation";Materials cost;tx90p_10	;-0.4882;0;-2.6219;-16.0165;-18.2516;-33.8035;-35.9566;-45.0626;-47.0526
+1;8;"Bangalore";  "Physical Risk";"Acute";Storm damage;tx90p_70	;-0.4882;0;-2.6219;-16.0165;-18.2516;-33.8035;-35.9566;-45.0626;-47.0526
+1;8;"Bangalore";  "Physical Risk";"Acute";Employee impacts;tx90p_6	;-0.4882;0;-2.6219;-16.0165;-18.2516;-33.8035;-35.9566;-45.0626;-47.0526
+1;8;"Bangalore";  "Physical Risk";"Chronic";Temperature extremes;tx90p_100	;-0.4882;0;-2.6219;-16.0165;-18.2516;-33.8035;-35.9566;-45.0626;-47.0526
+1;8;"Bangalore";  "Physical Risk";"Chronic";Coastal flooding;coastalflood_100	;NA;NA;NA;NA;NA;NA;NA;NA;NA
+1;8;"Bangalore";  "Opportunity";"Resource Efficiency";Energy Efficiency;tx90p_16	;-0.4882;0;-2.6219;-16.0165;-18.2516;-33.8035;-35.9566;-45.0626;-47.0526
+1;8;"Bangalore";  "Opportunity";"Resource Efficiency";Water Efficiency;tx90p_18	;-0.4882;0;-2.6219;-16.0165;-18.2516;-33.8035;-35.9566;-45.0626;-47.0526
+1;8;"Bangalore";  "Opportunity";"Resource Efficiency";Materials Efficiency;tx90p_12	;-0.4882;0;-2.6219;-16.0165;-18.2516;-33.8035;-35.9566;-45.0626;-47.0526
+1;8;"Bangalore";  "Opportunity";"Energy Source";Renewable price stability;tx90p_3	;-0.4882;0;-2.6219;-16.0165;-18.2516;-33.8035;-35.9566;-45.0626;-47.0526
+1;8;"Bangalore";  "Opportunity";"Resilience";Energy resilience;tx90p_15	;-0.4882;0;-2.6219;-16.0165;-18.2516;-33.8035;-35.9566;-45.0626;-47.0526
+1;8;"Bangalore";  "Physical Risk";"Chronic";Drought;pdsisc_100	;-10;0;-10;0;0;0;0;0;0
+2;9;"American_Falls";  "Transition Risk";"Policy and Legal";Carbon pricing;tx90p_60	;0;0;-3.0602;-4.016;-2.4181;-5.9472;-9.0847;-19.8516;-25.3968
+2;9;"American_Falls";  "Transition Risk";"Policy and Legal";Litigation risk;tx90p_8	;0;0;-3.0602;-4.016;-2.4181;-5.9472;-9.0847;-19.8516;-25.3968
+2;9;"American_Falls";  "Transition Risk";"Technology";New technology;tx90p_7	;0;0;-3.0602;-4.016;-2.4181;-5.9472;-9.0847;-19.8516;-25.3968
+2;9;"American_Falls";  "Transition Risk";"Market";Reputation damage;tx90p_5	;0;0;-3.0602;-4.016;-2.4181;-5.9472;-9.0847;-19.8516;-25.3968
+2;9;"American_Falls";  "Transition Risk";"Reputation";Materials cost;tx90p_10	;0;0;-3.0602;-4.016;-2.4181;-5.9472;-9.0847;-19.8516;-25.3968
+2;9;"American_Falls";  "Physical Risk";"Acute";Storm damage;tx90p_70	;0;0;-3.0602;-4.016;-2.4181;-5.9472;-9.0847;-19.8516;-25.3968
+2;9;"American_Falls";  "Physical Risk";"Acute";Employee impacts;tx90p_6	;0;0;-3.0602;-4.016;-2.4181;-5.9472;-9.0847;-19.8516;-25.3968
+2;9;"American_Falls";  "Physical Risk";"Chronic";Temperature extremes;tx90p_100	;0;0;-3.0602;-4.016;-2.4181;-5.9472;-9.0847;-19.8516;-25.3968
+2;9;"American_Falls";  "Physical Risk";"Chronic";Coastal flooding;coastalflood_100	;NA;NA;NA;NA;NA;NA;NA;NA;NA
+2;9;"American_Falls";  "Opportunity";"Resource Efficiency";Energy Efficiency;tx90p_16	;0;0;-3.0602;-4.016;-2.4181;-5.9472;-9.0847;-19.8516;-25.3968
+2;9;"American_Falls";  "Opportunity";"Resource Efficiency";Water Efficiency;tx90p_18	;0;0;-3.0602;-4.016;-2.4181;-5.9472;-9.0847;-19.8516;-25.3968
+2;9;"American_Falls";  "Opportunity";"Resource Efficiency";Materials Efficiency;tx90p_12	;0;0;-3.0602;-4.016;-2.4181;-5.9472;-9.0847;-19.8516;-25.3968
+2;9;"American_Falls";  "Opportunity";"Energy Source";Renewable price stability;tx90p_3	;0;0;-3.0602;-4.016;-2.4181;-5.9472;-9.0847;-19.8516;-25.3968
+2;9;"American_Falls";  "Opportunity";"Resilience";Energy resilience;tx90p_15	;0;0;-3.0602;-4.016;-2.4181;-5.9472;-9.0847;-19.8516;-25.3968
+2;9;"American_Falls";  "Physical Risk";"Chronic";Drought;pdsisc_100	;-40;0;-5;-40;-40;-30;-40;-50;-60
+2;10;"Bliss";  "Transition Risk";"Policy and Legal";Carbon pricing;tx90p_60	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;10;"Bliss";  "Transition Risk";"Policy and Legal";Litigation risk;tx90p_8	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;10;"Bliss";  "Transition Risk";"Technology";New technology;tx90p_7	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;10;"Bliss";  "Transition Risk";"Market";Reputation damage;tx90p_5	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;10;"Bliss";  "Transition Risk";"Reputation";Materials cost;tx90p_10	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;10;"Bliss";  "Physical Risk";"Acute";Storm damage;tx90p_70	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;10;"Bliss";  "Physical Risk";"Acute";Employee impacts;tx90p_6	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;10;"Bliss";  "Physical Risk";"Chronic";Temperature extremes;tx90p_100	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;10;"Bliss";  "Physical Risk";"Chronic";Coastal flooding;coastalflood_100	;NA;NA;NA;NA;NA;NA;NA;NA;NA
+2;10;"Bliss";  "Opportunity";"Resource Efficiency";Energy Efficiency;tx90p_16	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;10;"Bliss";  "Opportunity";"Resource Efficiency";Water Efficiency;tx90p_18	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;10;"Bliss";  "Opportunity";"Resource Efficiency";Materials Efficiency;tx90p_12	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;10;"Bliss";  "Opportunity";"Energy Source";Renewable price stability;tx90p_3	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;10;"Bliss";  "Opportunity";"Resilience";Energy resilience;tx90p_15	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;10;"Bliss";  "Physical Risk";"Chronic";Drought;pdsisc_100	;-30;0;-5;-40;-30;-50;-60;-50;-40
+2;11;"Brownlee";  "Transition Risk";"Policy and Legal";Carbon pricing;tx90p_60	;0;0;-0.6925;-0.0051;-0.05;-2.8392;-4.7861;-9.1773;-13.9219
+2;11;"Brownlee";  "Transition Risk";"Policy and Legal";Litigation risk;tx90p_8	;0;0;-0.6925;-0.0051;-0.05;-2.8392;-4.7861;-9.1773;-13.9219
+2;11;"Brownlee";  "Transition Risk";"Technology";New technology;tx90p_7	;0;0;-0.6925;-0.0051;-0.05;-2.8392;-4.7861;-9.1773;-13.9219
+2;11;"Brownlee";  "Transition Risk";"Market";Reputation damage;tx90p_5	;0;0;-0.6925;-0.0051;-0.05;-2.8392;-4.7861;-9.1773;-13.9219
+2;11;"Brownlee";  "Transition Risk";"Reputation";Materials cost;tx90p_10	;0;0;-0.6925;-0.0051;-0.05;-2.8392;-4.7861;-9.1773;-13.9219
+2;11;"Brownlee";  "Physical Risk";"Acute";Storm damage;tx90p_70	;0;0;-0.6925;-0.0051;-0.05;-2.8392;-4.7861;-9.1773;-13.9219
+2;11;"Brownlee";  "Physical Risk";"Acute";Employee impacts;tx90p_6	;0;0;-0.6925;-0.0051;-0.05;-2.8392;-4.7861;-9.1773;-13.9219
+2;11;"Brownlee";  "Physical Risk";"Chronic";Temperature extremes;tx90p_100	;0;0;-0.6925;-0.0051;-0.05;-2.8392;-4.7861;-9.1773;-13.9219
+2;11;"Brownlee";  "Physical Risk";"Chronic";Coastal flooding;coastalflood_100	;NA;NA;NA;NA;NA;NA;NA;NA;NA
+2;11;"Brownlee";  "Opportunity";"Resource Efficiency";Energy Efficiency;tx90p_16	;0;0;-0.6925;-0.0051;-0.05;-2.8392;-4.7861;-9.1773;-13.9219
+2;11;"Brownlee";  "Opportunity";"Resource Efficiency";Water Efficiency;tx90p_18	;0;0;-0.6925;-0.0051;-0.05;-2.8392;-4.7861;-9.1773;-13.9219
+2;11;"Brownlee";  "Opportunity";"Resource Efficiency";Materials Efficiency;tx90p_12	;0;0;-0.6925;-0.0051;-0.05;-2.8392;-4.7861;-9.1773;-13.9219
+2;11;"Brownlee";  "Opportunity";"Energy Source";Renewable price stability;tx90p_3	;0;0;-0.6925;-0.0051;-0.05;-2.8392;-4.7861;-9.1773;-13.9219
+2;11;"Brownlee";  "Opportunity";"Resilience";Energy resilience;tx90p_15	;0;0;-0.6925;-0.0051;-0.05;-2.8392;-4.7861;-9.1773;-13.9219
+2;11;"Brownlee";  "Physical Risk";"Chronic";Drought;pdsisc_100	;-30;0;-5;-40;-30;-50;-60;-50;-40
+2;12;"C_J_Strike";  "Transition Risk";"Policy and Legal";Carbon pricing;tx90p_60	;0;0;-1.9098;-1.7022;-1.255;-4.2494;-7.072;-13.6093;-20.6316
+2;12;"C_J_Strike";  "Transition Risk";"Policy and Legal";Litigation risk;tx90p_8	;0;0;-1.9098;-1.7022;-1.255;-4.2494;-7.072;-13.6093;-20.6316
+2;12;"C_J_Strike";  "Transition Risk";"Technology";New technology;tx90p_7	;0;0;-1.9098;-1.7022;-1.255;-4.2494;-7.072;-13.6093;-20.6316
+2;12;"C_J_Strike";  "Transition Risk";"Market";Reputation damage;tx90p_5	;0;0;-1.9098;-1.7022;-1.255;-4.2494;-7.072;-13.6093;-20.6316
+2;12;"C_J_Strike";  "Transition Risk";"Reputation";Materials cost;tx90p_10	;0;0;-1.9098;-1.7022;-1.255;-4.2494;-7.072;-13.6093;-20.6316
+2;12;"C_J_Strike";  "Physical Risk";"Acute";Storm damage;tx90p_70	;0;0;-1.9098;-1.7022;-1.255;-4.2494;-7.072;-13.6093;-20.6316
+2;12;"C_J_Strike";  "Physical Risk";"Acute";Employee impacts;tx90p_6	;0;0;-1.9098;-1.7022;-1.255;-4.2494;-7.072;-13.6093;-20.6316
+2;12;"C_J_Strike";  "Physical Risk";"Chronic";Temperature extremes;tx90p_100	;0;0;-1.9098;-1.7022;-1.255;-4.2494;-7.072;-13.6093;-20.6316
+2;12;"C_J_Strike";  "Physical Risk";"Chronic";Coastal flooding;coastalflood_100	;NA;NA;NA;NA;NA;NA;NA;NA;NA
+2;12;"C_J_Strike";  "Opportunity";"Resource Efficiency";Energy Efficiency;tx90p_16	;0;0;-1.9098;-1.7022;-1.255;-4.2494;-7.072;-13.6093;-20.6316
+2;12;"C_J_Strike";  "Opportunity";"Resource Efficiency";Water Efficiency;tx90p_18	;0;0;-1.9098;-1.7022;-1.255;-4.2494;-7.072;-13.6093;-20.6316
+2;12;"C_J_Strike";  "Opportunity";"Resource Efficiency";Materials Efficiency;tx90p_12	;0;0;-1.9098;-1.7022;-1.255;-4.2494;-7.072;-13.6093;-20.6316
+2;12;"C_J_Strike";  "Opportunity";"Energy Source";Renewable price stability;tx90p_3	;0;0;-1.9098;-1.7022;-1.255;-4.2494;-7.072;-13.6093;-20.6316
+2;12;"C_J_Strike";  "Opportunity";"Resilience";Energy resilience;tx90p_15	;0;0;-1.9098;-1.7022;-1.255;-4.2494;-7.072;-13.6093;-20.6316
+2;12;"C_J_Strike";  "Physical Risk";"Chronic";Drought;pdsisc_100	;-30;0;-5;-40;-30;-50;-60;-50;-40
+2;13;"Cascade_Dam";  "Transition Risk";"Policy and Legal";Carbon pricing;tx90p_60	;0;0;-1.2813;-0.4977;-0.2146;-3.5376;-5.6072;-10.653;-16.5789
+2;13;"Cascade_Dam";  "Transition Risk";"Policy and Legal";Litigation risk;tx90p_8	;0;0;-1.2813;-0.4977;-0.2146;-3.5376;-5.6072;-10.653;-16.5789
+2;13;"Cascade_Dam";  "Transition Risk";"Technology";New technology;tx90p_7	;0;0;-1.2813;-0.4977;-0.2146;-3.5376;-5.6072;-10.653;-16.5789
+2;13;"Cascade_Dam";  "Transition Risk";"Market";Reputation damage;tx90p_5	;0;0;-1.2813;-0.4977;-0.2146;-3.5376;-5.6072;-10.653;-16.5789
+2;13;"Cascade_Dam";  "Transition Risk";"Reputation";Materials cost;tx90p_10	;0;0;-1.2813;-0.4977;-0.2146;-3.5376;-5.6072;-10.653;-16.5789
+2;13;"Cascade_Dam";  "Physical Risk";"Acute";Storm damage;tx90p_70	;0;0;-1.2813;-0.4977;-0.2146;-3.5376;-5.6072;-10.653;-16.5789
+2;13;"Cascade_Dam";  "Physical Risk";"Acute";Employee impacts;tx90p_6	;0;0;-1.2813;-0.4977;-0.2146;-3.5376;-5.6072;-10.653;-16.5789
+2;13;"Cascade_Dam";  "Physical Risk";"Chronic";Temperature extremes;tx90p_100	;0;0;-1.2813;-0.4977;-0.2146;-3.5376;-5.6072;-10.653;-16.5789
+2;13;"Cascade_Dam";  "Physical Risk";"Chronic";Coastal flooding;coastalflood_100	;NA;NA;NA;NA;NA;NA;NA;NA;NA
+2;13;"Cascade_Dam";  "Opportunity";"Resource Efficiency";Energy Efficiency;tx90p_16	;0;0;-1.2813;-0.4977;-0.2146;-3.5376;-5.6072;-10.653;-16.5789
+2;13;"Cascade_Dam";  "Opportunity";"Resource Efficiency";Water Efficiency;tx90p_18	;0;0;-1.2813;-0.4977;-0.2146;-3.5376;-5.6072;-10.653;-16.5789
+2;13;"Cascade_Dam";  "Opportunity";"Resource Efficiency";Materials Efficiency;tx90p_12	;0;0;-1.2813;-0.4977;-0.2146;-3.5376;-5.6072;-10.653;-16.5789
+2;13;"Cascade_Dam";  "Opportunity";"Energy Source";Renewable price stability;tx90p_3	;0;0;-1.2813;-0.4977;-0.2146;-3.5376;-5.6072;-10.653;-16.5789
+2;13;"Cascade_Dam";  "Opportunity";"Resilience";Energy resilience;tx90p_15	;0;0;-1.2813;-0.4977;-0.2146;-3.5376;-5.6072;-10.653;-16.5789
+2;13;"Cascade_Dam";  "Physical Risk";"Chronic";Drought;pdsisc_100	;-30;0;-5;-40;-30;-50;-60;-50;-40
+2;14;"Clear_Lake";  "Transition Risk";"Policy and Legal";Carbon pricing;tx90p_60	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;14;"Clear_Lake";  "Transition Risk";"Policy and Legal";Litigation risk;tx90p_8	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;14;"Clear_Lake";  "Transition Risk";"Technology";New technology;tx90p_7	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;14;"Clear_Lake";  "Transition Risk";"Market";Reputation damage;tx90p_5	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;14;"Clear_Lake";  "Transition Risk";"Reputation";Materials cost;tx90p_10	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;14;"Clear_Lake";  "Physical Risk";"Acute";Storm damage;tx90p_70	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;14;"Clear_Lake";  "Physical Risk";"Acute";Employee impacts;tx90p_6	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;14;"Clear_Lake";  "Physical Risk";"Chronic";Temperature extremes;tx90p_100	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;14;"Clear_Lake";  "Physical Risk";"Chronic";Coastal flooding;coastalflood_100	;NA;NA;NA;NA;NA;NA;NA;NA;NA
+2;14;"Clear_Lake";  "Opportunity";"Resource Efficiency";Energy Efficiency;tx90p_16	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;14;"Clear_Lake";  "Opportunity";"Resource Efficiency";Water Efficiency;tx90p_18	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;14;"Clear_Lake";  "Opportunity";"Resource Efficiency";Materials Efficiency;tx90p_12	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;14;"Clear_Lake";  "Opportunity";"Energy Source";Renewable price stability;tx90p_3	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;14;"Clear_Lake";  "Opportunity";"Resilience";Energy resilience;tx90p_15	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;14;"Clear_Lake";  "Physical Risk";"Chronic";Drought;pdsisc_100	;-40;0;-5;-40;-40;-30;-40;-50;-60
+2;15;"Lower_Malad";  "Transition Risk";"Policy and Legal";Carbon pricing;tx90p_60	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;15;"Lower_Malad";  "Transition Risk";"Policy and Legal";Litigation risk;tx90p_8	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;15;"Lower_Malad";  "Transition Risk";"Technology";New technology;tx90p_7	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;15;"Lower_Malad";  "Transition Risk";"Market";Reputation damage;tx90p_5	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;15;"Lower_Malad";  "Transition Risk";"Reputation";Materials cost;tx90p_10	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;15;"Lower_Malad";  "Physical Risk";"Acute";Storm damage;tx90p_70	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;15;"Lower_Malad";  "Physical Risk";"Acute";Employee impacts;tx90p_6	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;15;"Lower_Malad";  "Physical Risk";"Chronic";Temperature extremes;tx90p_100	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;15;"Lower_Malad";  "Physical Risk";"Chronic";Coastal flooding;coastalflood_100	;NA;NA;NA;NA;NA;NA;NA;NA;NA
+2;15;"Lower_Malad";  "Opportunity";"Resource Efficiency";Energy Efficiency;tx90p_16	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;15;"Lower_Malad";  "Opportunity";"Resource Efficiency";Water Efficiency;tx90p_18	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;15;"Lower_Malad";  "Opportunity";"Resource Efficiency";Materials Efficiency;tx90p_12	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;15;"Lower_Malad";  "Opportunity";"Energy Source";Renewable price stability;tx90p_3	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;15;"Lower_Malad";  "Opportunity";"Resilience";Energy resilience;tx90p_15	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;15;"Lower_Malad";  "Physical Risk";"Chronic";Drought;pdsisc_100	;-40;0;-5;-40;-40;-30;-40;-50;-60
+2;16;"Lower_Salmon";  "Transition Risk";"Policy and Legal";Carbon pricing;tx90p_60	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;16;"Lower_Salmon";  "Transition Risk";"Policy and Legal";Litigation risk;tx90p_8	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;16;"Lower_Salmon";  "Transition Risk";"Technology";New technology;tx90p_7	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;16;"Lower_Salmon";  "Transition Risk";"Market";Reputation damage;tx90p_5	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;16;"Lower_Salmon";  "Transition Risk";"Reputation";Materials cost;tx90p_10	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;16;"Lower_Salmon";  "Physical Risk";"Acute";Storm damage;tx90p_70	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;16;"Lower_Salmon";  "Physical Risk";"Acute";Employee impacts;tx90p_6	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;16;"Lower_Salmon";  "Physical Risk";"Chronic";Temperature extremes;tx90p_100	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;16;"Lower_Salmon";  "Physical Risk";"Chronic";Coastal flooding;coastalflood_100	;NA;NA;NA;NA;NA;NA;NA;NA;NA
+2;16;"Lower_Salmon";  "Opportunity";"Resource Efficiency";Energy Efficiency;tx90p_16	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;16;"Lower_Salmon";  "Opportunity";"Resource Efficiency";Water Efficiency;tx90p_18	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;16;"Lower_Salmon";  "Opportunity";"Resource Efficiency";Materials Efficiency;tx90p_12	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;16;"Lower_Salmon";  "Opportunity";"Energy Source";Renewable price stability;tx90p_3	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;16;"Lower_Salmon";  "Opportunity";"Resilience";Energy resilience;tx90p_15	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;16;"Lower_Salmon";  "Physical Risk";"Chronic";Drought;pdsisc_100	;-40;0;-5;-40;-40;-30;-40;-50;-60
+2;17;"Salmon_Diesel";  "Transition Risk";"Policy and Legal";Carbon pricing;tx90p_60	;0;0;-2.0195;-1.3336;-0.2833;-3.8665;-7.537;-13.3894;-19.3729
+2;17;"Salmon_Diesel";  "Transition Risk";"Policy and Legal";Litigation risk;tx90p_8	;0;0;-2.0195;-1.3336;-0.2833;-3.8665;-7.537;-13.3894;-19.3729
+2;17;"Salmon_Diesel";  "Transition Risk";"Technology";New technology;tx90p_7	;0;0;-2.0195;-1.3336;-0.2833;-3.8665;-7.537;-13.3894;-19.3729
+2;17;"Salmon_Diesel";  "Transition Risk";"Market";Reputation damage;tx90p_5	;0;0;-2.0195;-1.3336;-0.2833;-3.8665;-7.537;-13.3894;-19.3729
+2;17;"Salmon_Diesel";  "Transition Risk";"Reputation";Materials cost;tx90p_10	;0;0;-2.0195;-1.3336;-0.2833;-3.8665;-7.537;-13.3894;-19.3729
+2;17;"Salmon_Diesel";  "Physical Risk";"Acute";Storm damage;tx90p_70	;0;0;-2.0195;-1.3336;-0.2833;-3.8665;-7.537;-13.3894;-19.3729
+2;17;"Salmon_Diesel";  "Physical Risk";"Acute";Employee impacts;tx90p_6	;0;0;-2.0195;-1.3336;-0.2833;-3.8665;-7.537;-13.3894;-19.3729
+2;17;"Salmon_Diesel";  "Physical Risk";"Chronic";Temperature extremes;tx90p_100	;0;0;-2.0195;-1.3336;-0.2833;-3.8665;-7.537;-13.3894;-19.3729
+2;17;"Salmon_Diesel";  "Physical Risk";"Chronic";Coastal flooding;coastalflood_100	;NA;NA;NA;NA;NA;NA;NA;NA;NA
+2;17;"Salmon_Diesel";  "Opportunity";"Resource Efficiency";Energy Efficiency;tx90p_16	;0;0;-2.0195;-1.3336;-0.2833;-3.8665;-7.537;-13.3894;-19.3729
+2;17;"Salmon_Diesel";  "Opportunity";"Resource Efficiency";Water Efficiency;tx90p_18	;0;0;-2.0195;-1.3336;-0.2833;-3.8665;-7.537;-13.3894;-19.3729
+2;17;"Salmon_Diesel";  "Opportunity";"Resource Efficiency";Materials Efficiency;tx90p_12	;0;0;-2.0195;-1.3336;-0.2833;-3.8665;-7.537;-13.3894;-19.3729
+2;17;"Salmon_Diesel";  "Opportunity";"Energy Source";Renewable price stability;tx90p_3	;0;0;-2.0195;-1.3336;-0.2833;-3.8665;-7.537;-13.3894;-19.3729
+2;17;"Salmon_Diesel";  "Opportunity";"Resilience";Energy resilience;tx90p_15	;0;0;-2.0195;-1.3336;-0.2833;-3.8665;-7.537;-13.3894;-19.3729
+2;17;"Salmon_Diesel";  "Physical Risk";"Chronic";Drought;pdsisc_100	;-5;0;-5;-40;-20;-40;-60;-50;-20
+2;18;"Shoshone_Falls";  "Transition Risk";"Policy and Legal";Carbon pricing;tx90p_60	;0;0;-3.0597;-3.4682;-2.0493;-5.1121;-8.7561;-17.7706;-24.9599
+2;18;"Shoshone_Falls";  "Transition Risk";"Policy and Legal";Litigation risk;tx90p_8	;0;0;-3.0597;-3.4682;-2.0493;-5.1121;-8.7561;-17.7706;-24.9599
+2;18;"Shoshone_Falls";  "Transition Risk";"Technology";New technology;tx90p_7	;0;0;-3.0597;-3.4682;-2.0493;-5.1121;-8.7561;-17.7706;-24.9599
+2;18;"Shoshone_Falls";  "Transition Risk";"Market";Reputation damage;tx90p_5	;0;0;-3.0597;-3.4682;-2.0493;-5.1121;-8.7561;-17.7706;-24.9599
+2;18;"Shoshone_Falls";  "Transition Risk";"Reputation";Materials cost;tx90p_10	;0;0;-3.0597;-3.4682;-2.0493;-5.1121;-8.7561;-17.7706;-24.9599
+2;18;"Shoshone_Falls";  "Physical Risk";"Acute";Storm damage;tx90p_70	;0;0;-3.0597;-3.4682;-2.0493;-5.1121;-8.7561;-17.7706;-24.9599
+2;18;"Shoshone_Falls";  "Physical Risk";"Acute";Employee impacts;tx90p_6	;0;0;-3.0597;-3.4682;-2.0493;-5.1121;-8.7561;-17.7706;-24.9599
+2;18;"Shoshone_Falls";  "Physical Risk";"Chronic";Temperature extremes;tx90p_100	;0;0;-3.0597;-3.4682;-2.0493;-5.1121;-8.7561;-17.7706;-24.9599
+2;18;"Shoshone_Falls";  "Physical Risk";"Chronic";Coastal flooding;coastalflood_100	;NA;NA;NA;NA;NA;NA;NA;NA;NA
+2;18;"Shoshone_Falls";  "Opportunity";"Resource Efficiency";Energy Efficiency;tx90p_16	;0;0;-3.0597;-3.4682;-2.0493;-5.1121;-8.7561;-17.7706;-24.9599
+2;18;"Shoshone_Falls";  "Opportunity";"Resource Efficiency";Water Efficiency;tx90p_18	;0;0;-3.0597;-3.4682;-2.0493;-5.1121;-8.7561;-17.7706;-24.9599
+2;18;"Shoshone_Falls";  "Opportunity";"Resource Efficiency";Materials Efficiency;tx90p_12	;0;0;-3.0597;-3.4682;-2.0493;-5.1121;-8.7561;-17.7706;-24.9599
+2;18;"Shoshone_Falls";  "Opportunity";"Energy Source";Renewable price stability;tx90p_3	;0;0;-3.0597;-3.4682;-2.0493;-5.1121;-8.7561;-17.7706;-24.9599
+2;18;"Shoshone_Falls";  "Opportunity";"Resilience";Energy resilience;tx90p_15	;0;0;-3.0597;-3.4682;-2.0493;-5.1121;-8.7561;-17.7706;-24.9599
+2;18;"Shoshone_Falls";  "Physical Risk";"Chronic";Drought;pdsisc_100	;-40;0;-5;-40;-40;-30;-40;-50;-60
+2;19;"Swan_Falls";  "Transition Risk";"Policy and Legal";Carbon pricing;tx90p_60	;0;0;-1.9098;-1.7022;-1.255;-4.2494;-7.072;-13.6093;-20.6316
+2;19;"Swan_Falls";  "Transition Risk";"Policy and Legal";Litigation risk;tx90p_8	;0;0;-1.9098;-1.7022;-1.255;-4.2494;-7.072;-13.6093;-20.6316
+2;19;"Swan_Falls";  "Transition Risk";"Technology";New technology;tx90p_7	;0;0;-1.9098;-1.7022;-1.255;-4.2494;-7.072;-13.6093;-20.6316
+2;19;"Swan_Falls";  "Transition Risk";"Market";Reputation damage;tx90p_5	;0;0;-1.9098;-1.7022;-1.255;-4.2494;-7.072;-13.6093;-20.6316
+2;19;"Swan_Falls";  "Transition Risk";"Reputation";Materials cost;tx90p_10	;0;0;-1.9098;-1.7022;-1.255;-4.2494;-7.072;-13.6093;-20.6316
+2;19;"Swan_Falls";  "Physical Risk";"Acute";Storm damage;tx90p_70	;0;0;-1.9098;-1.7022;-1.255;-4.2494;-7.072;-13.6093;-20.6316
+2;19;"Swan_Falls";  "Physical Risk";"Acute";Employee impacts;tx90p_6	;0;0;-1.9098;-1.7022;-1.255;-4.2494;-7.072;-13.6093;-20.6316
+2;19;"Swan_Falls";  "Physical Risk";"Chronic";Temperature extremes;tx90p_100	;0;0;-1.9098;-1.7022;-1.255;-4.2494;-7.072;-13.6093;-20.6316
+2;19;"Swan_Falls";  "Physical Risk";"Chronic";Coastal flooding;coastalflood_100	;NA;NA;NA;NA;NA;NA;NA;NA;NA
+2;19;"Swan_Falls";  "Opportunity";"Resource Efficiency";Energy Efficiency;tx90p_16	;0;0;-1.9098;-1.7022;-1.255;-4.2494;-7.072;-13.6093;-20.6316
+2;19;"Swan_Falls";  "Opportunity";"Resource Efficiency";Water Efficiency;tx90p_18	;0;0;-1.9098;-1.7022;-1.255;-4.2494;-7.072;-13.6093;-20.6316
+2;19;"Swan_Falls";  "Opportunity";"Resource Efficiency";Materials Efficiency;tx90p_12	;0;0;-1.9098;-1.7022;-1.255;-4.2494;-7.072;-13.6093;-20.6316
+2;19;"Swan_Falls";  "Opportunity";"Energy Source";Renewable price stability;tx90p_3	;0;0;-1.9098;-1.7022;-1.255;-4.2494;-7.072;-13.6093;-20.6316
+2;19;"Swan_Falls";  "Opportunity";"Resilience";Energy resilience;tx90p_15	;0;0;-1.9098;-1.7022;-1.255;-4.2494;-7.072;-13.6093;-20.6316
+2;19;"Swan_Falls";  "Physical Risk";"Chronic";Drought;pdsisc_100	;-30;0;-5;-40;-30;-50;-60;-50;-40
+2;20;"Thousand_Springs";  "Transition Risk";"Policy and Legal";Carbon pricing;tx90p_60	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;20;"Thousand_Springs";  "Transition Risk";"Policy and Legal";Litigation risk;tx90p_8	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;20;"Thousand_Springs";  "Transition Risk";"Technology";New technology;tx90p_7	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;20;"Thousand_Springs";  "Transition Risk";"Market";Reputation damage;tx90p_5	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;20;"Thousand_Springs";  "Transition Risk";"Reputation";Materials cost;tx90p_10	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;20;"Thousand_Springs";  "Physical Risk";"Acute";Storm damage;tx90p_70	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;20;"Thousand_Springs";  "Physical Risk";"Acute";Employee impacts;tx90p_6	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;20;"Thousand_Springs";  "Physical Risk";"Chronic";Temperature extremes;tx90p_100	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;20;"Thousand_Springs";  "Physical Risk";"Chronic";Coastal flooding;coastalflood_100	;NA;NA;NA;NA;NA;NA;NA;NA;NA
+2;20;"Thousand_Springs";  "Opportunity";"Resource Efficiency";Energy Efficiency;tx90p_16	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;20;"Thousand_Springs";  "Opportunity";"Resource Efficiency";Water Efficiency;tx90p_18	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;20;"Thousand_Springs";  "Opportunity";"Resource Efficiency";Materials Efficiency;tx90p_12	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;20;"Thousand_Springs";  "Opportunity";"Energy Source";Renewable price stability;tx90p_3	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;20;"Thousand_Springs";  "Opportunity";"Resilience";Energy resilience;tx90p_15	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;20;"Thousand_Springs";  "Physical Risk";"Chronic";Drought;pdsisc_100	;-40;0;-5;-40;-40;-30;-40;-50;-60
+2;21;"Twin_Falls_(ID)";  "Transition Risk";"Policy and Legal";Carbon pricing;tx90p_60	;0;0;-3.3748;-4.0572;-2.7882;-5.7281;-9.3451;-19.8776;-26.4929
+2;21;"Twin_Falls_(ID)";  "Transition Risk";"Policy and Legal";Litigation risk;tx90p_8	;0;0;-3.3748;-4.0572;-2.7882;-5.7281;-9.3451;-19.8776;-26.4929
+2;21;"Twin_Falls_(ID)";  "Transition Risk";"Technology";New technology;tx90p_7	;0;0;-3.3748;-4.0572;-2.7882;-5.7281;-9.3451;-19.8776;-26.4929
+2;21;"Twin_Falls_(ID)";  "Transition Risk";"Market";Reputation damage;tx90p_5	;0;0;-3.3748;-4.0572;-2.7882;-5.7281;-9.3451;-19.8776;-26.4929
+2;21;"Twin_Falls_(ID)";  "Transition Risk";"Reputation";Materials cost;tx90p_10	;0;0;-3.3748;-4.0572;-2.7882;-5.7281;-9.3451;-19.8776;-26.4929
+2;21;"Twin_Falls_(ID)";  "Physical Risk";"Acute";Storm damage;tx90p_70	;0;0;-3.3748;-4.0572;-2.7882;-5.7281;-9.3451;-19.8776;-26.4929
+2;21;"Twin_Falls_(ID)";  "Physical Risk";"Acute";Employee impacts;tx90p_6	;0;0;-3.3748;-4.0572;-2.7882;-5.7281;-9.3451;-19.8776;-26.4929
+2;21;"Twin_Falls_(ID)";  "Physical Risk";"Chronic";Temperature extremes;tx90p_100	;0;0;-3.3748;-4.0572;-2.7882;-5.7281;-9.3451;-19.8776;-26.4929
+2;21;"Twin_Falls_(ID)";  "Physical Risk";"Chronic";Coastal flooding;coastalflood_100	;NA;NA;NA;NA;NA;NA;NA;NA;NA
+2;21;"Twin_Falls_(ID)";  "Opportunity";"Resource Efficiency";Energy Efficiency;tx90p_16	;0;0;-3.3748;-4.0572;-2.7882;-5.7281;-9.3451;-19.8776;-26.4929
+2;21;"Twin_Falls_(ID)";  "Opportunity";"Resource Efficiency";Water Efficiency;tx90p_18	;0;0;-3.3748;-4.0572;-2.7882;-5.7281;-9.3451;-19.8776;-26.4929
+2;21;"Twin_Falls_(ID)";  "Opportunity";"Resource Efficiency";Materials Efficiency;tx90p_12	;0;0;-3.3748;-4.0572;-2.7882;-5.7281;-9.3451;-19.8776;-26.4929
+2;21;"Twin_Falls_(ID)";  "Opportunity";"Energy Source";Renewable price stability;tx90p_3	;0;0;-3.3748;-4.0572;-2.7882;-5.7281;-9.3451;-19.8776;-26.4929
+2;21;"Twin_Falls_(ID)";  "Opportunity";"Resilience";Energy resilience;tx90p_15	;0;0;-3.3748;-4.0572;-2.7882;-5.7281;-9.3451;-19.8776;-26.4929
+2;21;"Twin_Falls_(ID)";  "Physical Risk";"Chronic";Drought;pdsisc_100	;-40;0;-5;-40;-40;-30;-40;-50;-60
+2;22;"Upper_Salmon_A";  "Transition Risk";"Policy and Legal";Carbon pricing;tx90p_60	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;22;"Upper_Salmon_A";  "Transition Risk";"Policy and Legal";Litigation risk;tx90p_8	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;22;"Upper_Salmon_A";  "Transition Risk";"Technology";New technology;tx90p_7	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;22;"Upper_Salmon_A";  "Transition Risk";"Market";Reputation damage;tx90p_5	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;22;"Upper_Salmon_A";  "Transition Risk";"Reputation";Materials cost;tx90p_10	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;22;"Upper_Salmon_A";  "Physical Risk";"Acute";Storm damage;tx90p_70	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;22;"Upper_Salmon_A";  "Physical Risk";"Acute";Employee impacts;tx90p_6	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;22;"Upper_Salmon_A";  "Physical Risk";"Chronic";Temperature extremes;tx90p_100	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;22;"Upper_Salmon_A";  "Physical Risk";"Chronic";Coastal flooding;coastalflood_100	;NA;NA;NA;NA;NA;NA;NA;NA;NA
+2;22;"Upper_Salmon_A";  "Opportunity";"Resource Efficiency";Energy Efficiency;tx90p_16	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;22;"Upper_Salmon_A";  "Opportunity";"Resource Efficiency";Water Efficiency;tx90p_18	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;22;"Upper_Salmon_A";  "Opportunity";"Resource Efficiency";Materials Efficiency;tx90p_12	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;22;"Upper_Salmon_A";  "Opportunity";"Energy Source";Renewable price stability;tx90p_3	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;22;"Upper_Salmon_A";  "Opportunity";"Resilience";Energy resilience;tx90p_15	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;22;"Upper_Salmon_A";  "Physical Risk";"Chronic";Drought;pdsisc_100	;-40;0;-5;-40;-40;-30;-40;-50;-60
+2;23;"Upper_Malad";  "Transition Risk";"Policy and Legal";Carbon pricing;tx90p_60	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;23;"Upper_Malad";  "Transition Risk";"Policy and Legal";Litigation risk;tx90p_8	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;23;"Upper_Malad";  "Transition Risk";"Technology";New technology;tx90p_7	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;23;"Upper_Malad";  "Transition Risk";"Market";Reputation damage;tx90p_5	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;23;"Upper_Malad";  "Transition Risk";"Reputation";Materials cost;tx90p_10	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;23;"Upper_Malad";  "Physical Risk";"Acute";Storm damage;tx90p_70	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;23;"Upper_Malad";  "Physical Risk";"Acute";Employee impacts;tx90p_6	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;23;"Upper_Malad";  "Physical Risk";"Chronic";Temperature extremes;tx90p_100	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;23;"Upper_Malad";  "Physical Risk";"Chronic";Coastal flooding;coastalflood_100	;NA;NA;NA;NA;NA;NA;NA;NA;NA
+2;23;"Upper_Malad";  "Opportunity";"Resource Efficiency";Energy Efficiency;tx90p_16	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;23;"Upper_Malad";  "Opportunity";"Resource Efficiency";Water Efficiency;tx90p_18	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;23;"Upper_Malad";  "Opportunity";"Resource Efficiency";Materials Efficiency;tx90p_12	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;23;"Upper_Malad";  "Opportunity";"Energy Source";Renewable price stability;tx90p_3	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;23;"Upper_Malad";  "Opportunity";"Resilience";Energy resilience;tx90p_15	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;23;"Upper_Malad";  "Physical Risk";"Chronic";Drought;pdsisc_100	;-40;0;-5;-40;-40;-30;-40;-50;-60
+2;24;"Hells_Canyon";  "Transition Risk";"Policy and Legal";Carbon pricing;tx90p_60	;0;0;-1.2403;-0.0051;0;-3.428;-5.4433;-10.7353;-15.8106
+2;24;"Hells_Canyon";  "Transition Risk";"Policy and Legal";Litigation risk;tx90p_8	;0;0;-1.2403;-0.0051;0;-3.428;-5.4433;-10.7353;-15.8106
+2;24;"Hells_Canyon";  "Transition Risk";"Technology";New technology;tx90p_7	;0;0;-1.2403;-0.0051;0;-3.428;-5.4433;-10.7353;-15.8106
+2;24;"Hells_Canyon";  "Transition Risk";"Market";Reputation damage;tx90p_5	;0;0;-1.2403;-0.0051;0;-3.428;-5.4433;-10.7353;-15.8106
+2;24;"Hells_Canyon";  "Transition Risk";"Reputation";Materials cost;tx90p_10	;0;0;-1.2403;-0.0051;0;-3.428;-5.4433;-10.7353;-15.8106
+2;24;"Hells_Canyon";  "Physical Risk";"Acute";Storm damage;tx90p_70	;0;0;-1.2403;-0.0051;0;-3.428;-5.4433;-10.7353;-15.8106
+2;24;"Hells_Canyon";  "Physical Risk";"Acute";Employee impacts;tx90p_6	;0;0;-1.2403;-0.0051;0;-3.428;-5.4433;-10.7353;-15.8106
+2;24;"Hells_Canyon";  "Physical Risk";"Chronic";Temperature extremes;tx90p_100	;0;0;-1.2403;-0.0051;0;-3.428;-5.4433;-10.7353;-15.8106
+2;24;"Hells_Canyon";  "Physical Risk";"Chronic";Coastal flooding;coastalflood_100	;NA;NA;NA;NA;NA;NA;NA;NA;NA
+2;24;"Hells_Canyon";  "Opportunity";"Resource Efficiency";Energy Efficiency;tx90p_16	;0;0;-1.2403;-0.0051;0;-3.428;-5.4433;-10.7353;-15.8106
+2;24;"Hells_Canyon";  "Opportunity";"Resource Efficiency";Water Efficiency;tx90p_18	;0;0;-1.2403;-0.0051;0;-3.428;-5.4433;-10.7353;-15.8106
+2;24;"Hells_Canyon";  "Opportunity";"Resource Efficiency";Materials Efficiency;tx90p_12	;0;0;-1.2403;-0.0051;0;-3.428;-5.4433;-10.7353;-15.8106
+2;24;"Hells_Canyon";  "Opportunity";"Energy Source";Renewable price stability;tx90p_3	;0;0;-1.2403;-0.0051;0;-3.428;-5.4433;-10.7353;-15.8106
+2;24;"Hells_Canyon";  "Opportunity";"Resilience";Energy resilience;tx90p_15	;0;0;-1.2403;-0.0051;0;-3.428;-5.4433;-10.7353;-15.8106
+2;24;"Hells_Canyon";  "Physical Risk";"Chronic";Drought;pdsisc_100	;0;0;-5;-20;-10;-20;-40;-10;-10
+2;25;"Oxbow_(OR)";  "Transition Risk";"Policy and Legal";Carbon pricing;tx90p_60	;0;0;-1.2403;-0.0051;0;-3.428;-5.4433;-10.7353;-15.8106
+2;25;"Oxbow_(OR)";  "Transition Risk";"Policy and Legal";Litigation risk;tx90p_8	;0;0;-1.2403;-0.0051;0;-3.428;-5.4433;-10.7353;-15.8106
+2;25;"Oxbow_(OR)";  "Transition Risk";"Technology";New technology;tx90p_7	;0;0;-1.2403;-0.0051;0;-3.428;-5.4433;-10.7353;-15.8106
+2;25;"Oxbow_(OR)";  "Transition Risk";"Market";Reputation damage;tx90p_5	;0;0;-1.2403;-0.0051;0;-3.428;-5.4433;-10.7353;-15.8106
+2;25;"Oxbow_(OR)";  "Transition Risk";"Reputation";Materials cost;tx90p_10	;0;0;-1.2403;-0.0051;0;-3.428;-5.4433;-10.7353;-15.8106
+2;25;"Oxbow_(OR)";  "Physical Risk";"Acute";Storm damage;tx90p_70	;0;0;-1.2403;-0.0051;0;-3.428;-5.4433;-10.7353;-15.8106
+2;25;"Oxbow_(OR)";  "Physical Risk";"Acute";Employee impacts;tx90p_6	;0;0;-1.2403;-0.0051;0;-3.428;-5.4433;-10.7353;-15.8106
+2;25;"Oxbow_(OR)";  "Physical Risk";"Chronic";Temperature extremes;tx90p_100	;0;0;-1.2403;-0.0051;0;-3.428;-5.4433;-10.7353;-15.8106
+2;25;"Oxbow_(OR)";  "Physical Risk";"Chronic";Coastal flooding;coastalflood_100	;NA;NA;NA;NA;NA;NA;NA;NA;NA
+2;25;"Oxbow_(OR)";  "Opportunity";"Resource Efficiency";Energy Efficiency;tx90p_16	;0;0;-1.2403;-0.0051;0;-3.428;-5.4433;-10.7353;-15.8106
+2;25;"Oxbow_(OR)";  "Opportunity";"Resource Efficiency";Water Efficiency;tx90p_18	;0;0;-1.2403;-0.0051;0;-3.428;-5.4433;-10.7353;-15.8106
+2;25;"Oxbow_(OR)";  "Opportunity";"Resource Efficiency";Materials Efficiency;tx90p_12	;0;0;-1.2403;-0.0051;0;-3.428;-5.4433;-10.7353;-15.8106
+2;25;"Oxbow_(OR)";  "Opportunity";"Energy Source";Renewable price stability;tx90p_3	;0;0;-1.2403;-0.0051;0;-3.428;-5.4433;-10.7353;-15.8106
+2;25;"Oxbow_(OR)";  "Opportunity";"Resilience";Energy resilience;tx90p_15	;0;0;-1.2403;-0.0051;0;-3.428;-5.4433;-10.7353;-15.8106
+2;25;"Oxbow_(OR)";  "Physical Risk";"Chronic";Drought;pdsisc_100	;-30;0;-5;-40;-30;-50;-60;-50;-40
+2;26;"Upper_Salmon_B";  "Transition Risk";"Policy and Legal";Carbon pricing;tx90p_60	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;26;"Upper_Salmon_B";  "Transition Risk";"Policy and Legal";Litigation risk;tx90p_8	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;26;"Upper_Salmon_B";  "Transition Risk";"Technology";New technology;tx90p_7	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;26;"Upper_Salmon_B";  "Transition Risk";"Market";Reputation damage;tx90p_5	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;26;"Upper_Salmon_B";  "Transition Risk";"Reputation";Materials cost;tx90p_10	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;26;"Upper_Salmon_B";  "Physical Risk";"Acute";Storm damage;tx90p_70	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;26;"Upper_Salmon_B";  "Physical Risk";"Acute";Employee impacts;tx90p_6	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;26;"Upper_Salmon_B";  "Physical Risk";"Chronic";Temperature extremes;tx90p_100	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;26;"Upper_Salmon_B";  "Physical Risk";"Chronic";Coastal flooding;coastalflood_100	;NA;NA;NA;NA;NA;NA;NA;NA;NA
+2;26;"Upper_Salmon_B";  "Opportunity";"Resource Efficiency";Energy Efficiency;tx90p_16	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;26;"Upper_Salmon_B";  "Opportunity";"Resource Efficiency";Water Efficiency;tx90p_18	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;26;"Upper_Salmon_B";  "Opportunity";"Resource Efficiency";Materials Efficiency;tx90p_12	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;26;"Upper_Salmon_B";  "Opportunity";"Energy Source";Renewable price stability;tx90p_3	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;26;"Upper_Salmon_B";  "Opportunity";"Resilience";Energy resilience;tx90p_15	;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2;26;"Upper_Salmon_B";  "Physical Risk";"Chronic";Drought;pdsisc_100	;-40;0;-5;-40;-40;-30;-40;-50;-60
+2;27;"Milner_Hydro";  "Transition Risk";"Policy and Legal";Carbon pricing;tx90p_60	;0;0;-3.3748;-4.0572;-2.7882;-5.7281;-9.3451;-19.8776;-26.4929
+2;27;"Milner_Hydro";  "Transition Risk";"Policy and Legal";Litigation risk;tx90p_8	;0;0;-3.3748;-4.0572;-2.7882;-5.7281;-9.3451;-19.8776;-26.4929
+2;27;"Milner_Hydro";  "Transition Risk";"Technology";New technology;tx90p_7	;0;0;-3.3748;-4.0572;-2.7882;-5.7281;-9.3451;-19.8776;-26.4929
+2;27;"Milner_Hydro";  "Transition Risk";"Market";Reputation damage;tx90p_5	;0;0;-3.3748;-4.0572;-2.7882;-5.7281;-9.3451;-19.8776;-26.4929
+2;27;"Milner_Hydro";  "Transition Risk";"Reputation";Materials cost;tx90p_10	;0;0;-3.3748;-4.0572;-2.7882;-5.7281;-9.3451;-19.8776;-26.4929
+2;27;"Milner_Hydro";  "Physical Risk";"Acute";Storm damage;tx90p_70	;0;0;-3.3748;-4.0572;-2.7882;-5.7281;-9.3451;-19.8776;-26.4929
+2;27;"Milner_Hydro";  "Physical Risk";"Acute";Employee impacts;tx90p_6	;0;0;-3.3748;-4.0572;-2.7882;-5.7281;-9.3451;-19.8776;-26.4929
+2;27;"Milner_Hydro";  "Physical Risk";"Chronic";Temperature extremes;tx90p_100	;0;0;-3.3748;-4.0572;-2.7882;-5.7281;-9.3451;-19.8776;-26.4929
+2;27;"Milner_Hydro";  "Physical Risk";"Chronic";Coastal flooding;coastalflood_100	;NA;NA;NA;NA;NA;NA;NA;NA;NA
+2;27;"Milner_Hydro";  "Opportunity";"Resource Efficiency";Energy Efficiency;tx90p_16	;0;0;-3.3748;-4.0572;-2.7882;-5.7281;-9.3451;-19.8776;-26.4929
+2;27;"Milner_Hydro";  "Opportunity";"Resource Efficiency";Water Efficiency;tx90p_18	;0;0;-3.3748;-4.0572;-2.7882;-5.7281;-9.3451;-19.8776;-26.4929
+2;27;"Milner_Hydro";  "Opportunity";"Resource Efficiency";Materials Efficiency;tx90p_12	;0;0;-3.3748;-4.0572;-2.7882;-5.7281;-9.3451;-19.8776;-26.4929
+2;27;"Milner_Hydro";  "Opportunity";"Energy Source";Renewable price stability;tx90p_3	;0;0;-3.3748;-4.0572;-2.7882;-5.7281;-9.3451;-19.8776;-26.4929
+2;27;"Milner_Hydro";  "Opportunity";"Resilience";Energy resilience;tx90p_15	;0;0;-3.3748;-4.0572;-2.7882;-5.7281;-9.3451;-19.8776;-26.4929
+2;27;"Milner_Hydro";  "Physical Risk";"Chronic";Drought;pdsisc_100	;-40;0;-5;-40;-40;-30;-40;-50;-60
+2;28;"Evander_Andrews_Power_Complex";  "Transition Risk";"Policy and Legal";Carbon pricing;tx90p_60	;0;0;-2.1835;-2.3046;-1.6794;-4.66;-7.2091;-14.4851;-19.756
+2;28;"Evander_Andrews_Power_Complex";  "Transition Risk";"Policy and Legal";Litigation risk;tx90p_8	;0;0;-2.1835;-2.3046;-1.6794;-4.66;-7.2091;-14.4851;-19.756
+2;28;"Evander_Andrews_Power_Complex";  "Transition Risk";"Technology";New technology;tx90p_7	;0;0;-2.1835;-2.3046;-1.6794;-4.66;-7.2091;-14.4851;-19.756
+2;28;"Evander_Andrews_Power_Complex";  "Transition Risk";"Market";Reputation damage;tx90p_5	;0;0;-2.1835;-2.3046;-1.6794;-4.66;-7.2091;-14.4851;-19.756
+2;28;"Evander_Andrews_Power_Complex";  "Transition Risk";"Reputation";Materials cost;tx90p_10	;0;0;-2.1835;-2.3046;-1.6794;-4.66;-7.2091;-14.4851;-19.756
+2;28;"Evander_Andrews_Power_Complex";  "Physical Risk";"Acute";Storm damage;tx90p_70	;0;0;-2.1835;-2.3046;-1.6794;-4.66;-7.2091;-14.4851;-19.756
+2;28;"Evander_Andrews_Power_Complex";  "Physical Risk";"Acute";Employee impacts;tx90p_6	;0;0;-2.1835;-2.3046;-1.6794;-4.66;-7.2091;-14.4851;-19.756
+2;28;"Evander_Andrews_Power_Complex";  "Physical Risk";"Chronic";Temperature extremes;tx90p_100	;0;0;-2.1835;-2.3046;-1.6794;-4.66;-7.2091;-14.4851;-19.756
+2;28;"Evander_Andrews_Power_Complex";  "Physical Risk";"Chronic";Coastal flooding;coastalflood_100	;NA;NA;NA;NA;NA;NA;NA;NA;NA
+2;28;"Evander_Andrews_Power_Complex";  "Opportunity";"Resource Efficiency";Energy Efficiency;tx90p_16	;0;0;-2.1835;-2.3046;-1.6794;-4.66;-7.2091;-14.4851;-19.756
+2;28;"Evander_Andrews_Power_Complex";  "Opportunity";"Resource Efficiency";Water Efficiency;tx90p_18	;0;0;-2.1835;-2.3046;-1.6794;-4.66;-7.2091;-14.4851;-19.756
+2;28;"Evander_Andrews_Power_Complex";  "Opportunity";"Resource Efficiency";Materials Efficiency;tx90p_12	;0;0;-2.1835;-2.3046;-1.6794;-4.66;-7.2091;-14.4851;-19.756
+2;28;"Evander_Andrews_Power_Complex";  "Opportunity";"Energy Source";Renewable price stability;tx90p_3	;0;0;-2.1835;-2.3046;-1.6794;-4.66;-7.2091;-14.4851;-19.756
+2;28;"Evander_Andrews_Power_Complex";  "Opportunity";"Resilience";Energy resilience;tx90p_15	;0;0;-2.1835;-2.3046;-1.6794;-4.66;-7.2091;-14.4851;-19.756
+2;28;"Evander_Andrews_Power_Complex";  "Physical Risk";"Chronic";Drought;pdsisc_100	;-30;0;-5;-40;-30;-50;-60;-50;-40
+2;29;"Bennett_Mountain";  "Transition Risk";"Policy and Legal";Carbon pricing;tx90p_60	;0;0;-2.1835;-2.3046;-1.6794;-4.66;-7.2091;-14.4851;-19.756
+2;29;"Bennett_Mountain";  "Transition Risk";"Policy and Legal";Litigation risk;tx90p_8	;0;0;-2.1835;-2.3046;-1.6794;-4.66;-7.2091;-14.4851;-19.756
+2;29;"Bennett_Mountain";  "Transition Risk";"Technology";New technology;tx90p_7	;0;0;-2.1835;-2.3046;-1.6794;-4.66;-7.2091;-14.4851;-19.756
+2;29;"Bennett_Mountain";  "Transition Risk";"Market";Reputation damage;tx90p_5	;0;0;-2.1835;-2.3046;-1.6794;-4.66;-7.2091;-14.4851;-19.756
+2;29;"Bennett_Mountain";  "Transition Risk";"Reputation";Materials cost;tx90p_10	;0;0;-2.1835;-2.3046;-1.6794;-4.66;-7.2091;-14.4851;-19.756
+2;29;"Bennett_Mountain";  "Physical Risk";"Acute";Storm damage;tx90p_70	;0;0;-2.1835;-2.3046;-1.6794;-4.66;-7.2091;-14.4851;-19.756
+2;29;"Bennett_Mountain";  "Physical Risk";"Acute";Employee impacts;tx90p_6	;0;0;-2.1835;-2.3046;-1.6794;-4.66;-7.2091;-14.4851;-19.756
+2;29;"Bennett_Mountain";  "Physical Risk";"Chronic";Temperature extremes;tx90p_100	;0;0;-2.1835;-2.3046;-1.6794;-4.66;-7.2091;-14.4851;-19.756
+2;29;"Bennett_Mountain";  "Physical Risk";"Chronic";Coastal flooding;coastalflood_100	;NA;NA;NA;NA;NA;NA;NA;NA;NA
+2;29;"Bennett_Mountain";  "Opportunity";"Resource Efficiency";Energy Efficiency;tx90p_16	;0;0;-2.1835;-2.3046;-1.6794;-4.66;-7.2091;-14.4851;-19.756
+2;29;"Bennett_Mountain";  "Opportunity";"Resource Efficiency";Water Efficiency;tx90p_18	;0;0;-2.1835;-2.3046;-1.6794;-4.66;-7.2091;-14.4851;-19.756
+2;29;"Bennett_Mountain";  "Opportunity";"Resource Efficiency";Materials Efficiency;tx90p_12	;0;0;-2.1835;-2.3046;-1.6794;-4.66;-7.2091;-14.4851;-19.756
+2;29;"Bennett_Mountain";  "Opportunity";"Energy Source";Renewable price stability;tx90p_3	;0;0;-2.1835;-2.3046;-1.6794;-4.66;-7.2091;-14.4851;-19.756
+2;29;"Bennett_Mountain";  "Opportunity";"Resilience";Energy resilience;tx90p_15	;0;0;-2.1835;-2.3046;-1.6794;-4.66;-7.2091;-14.4851;-19.756
+2;29;"Bennett_Mountain";  "Physical Risk";"Chronic";Drought;pdsisc_100	;-30;0;-5;-40;-30;-50;-60;-50;-40
+2;30;"Langley_Gulch_Power_Plant";  "Transition Risk";"Policy and Legal";Carbon pricing;tx90p_60	;0;0;-0.9794;-0.9632;-0.5842;-3.1539;-5.4843;-9.9164;-15.8392
+2;30;"Langley_Gulch_Power_Plant";  "Transition Risk";"Policy and Legal";Litigation risk;tx90p_8	;0;0;-0.9794;-0.9632;-0.5842;-3.1539;-5.4843;-9.9164;-15.8392
+2;30;"Langley_Gulch_Power_Plant";  "Transition Risk";"Technology";New technology;tx90p_7	;0;0;-0.9794;-0.9632;-0.5842;-3.1539;-5.4843;-9.9164;-15.8392
+2;30;"Langley_Gulch_Power_Plant";  "Transition Risk";"Market";Reputation damage;tx90p_5	;0;0;-0.9794;-0.9632;-0.5842;-3.1539;-5.4843;-9.9164;-15.8392
+2;30;"Langley_Gulch_Power_Plant";  "Transition Risk";"Reputation";Materials cost;tx90p_10	;0;0;-0.9794;-0.9632;-0.5842;-3.1539;-5.4843;-9.9164;-15.8392
+2;30;"Langley_Gulch_Power_Plant";  "Physical Risk";"Acute";Storm damage;tx90p_70	;0;0;-0.9794;-0.9632;-0.5842;-3.1539;-5.4843;-9.9164;-15.8392
+2;30;"Langley_Gulch_Power_Plant";  "Physical Risk";"Acute";Employee impacts;tx90p_6	;0;0;-0.9794;-0.9632;-0.5842;-3.1539;-5.4843;-9.9164;-15.8392
+2;30;"Langley_Gulch_Power_Plant";  "Physical Risk";"Chronic";Temperature extremes;tx90p_100	;0;0;-0.9794;-0.9632;-0.5842;-3.1539;-5.4843;-9.9164;-15.8392
+2;30;"Langley_Gulch_Power_Plant";  "Physical Risk";"Chronic";Coastal flooding;coastalflood_100	;NA;NA;NA;NA;NA;NA;NA;NA;NA
+2;30;"Langley_Gulch_Power_Plant";  "Opportunity";"Resource Efficiency";Energy Efficiency;tx90p_16	;0;0;-0.9794;-0.9632;-0.5842;-3.1539;-5.4843;-9.9164;-15.8392
+2;30;"Langley_Gulch_Power_Plant";  "Opportunity";"Resource Efficiency";Water Efficiency;tx90p_18	;0;0;-0.9794;-0.9632;-0.5842;-3.1539;-5.4843;-9.9164;-15.8392
+2;30;"Langley_Gulch_Power_Plant";  "Opportunity";"Resource Efficiency";Materials Efficiency;tx90p_12	;0;0;-0.9794;-0.9632;-0.5842;-3.1539;-5.4843;-9.9164;-15.8392
+2;30;"Langley_Gulch_Power_Plant";  "Opportunity";"Energy Source";Renewable price stability;tx90p_3	;0;0;-0.9794;-0.9632;-0.5842;-3.1539;-5.4843;-9.9164;-15.8392
+2;30;"Langley_Gulch_Power_Plant";  "Opportunity";"Resilience";Energy resilience;tx90p_15	;0;0;-0.9794;-0.9632;-0.5842;-3.1539;-5.4843;-9.9164;-15.8392
+2;30;"Langley_Gulch_Power_Plant";  "Physical Risk";"Chronic";Drought;pdsisc_100	;-30;0;-5;-40;-30;-50;-60;-50;-40
+3;31;"Boise";  "Transition Risk";"Policy and Legal";Carbon pricing;tx90p_60	;0;0;-1.2943;-1.1959;-0.817;-3.3868;-6.0184;-10.5988;-16.5782
+3;31;"Boise";  "Transition Risk";"Policy and Legal";Litigation risk;tx90p_8	;0;0;-1.2943;-1.1959;-0.817;-3.3868;-6.0184;-10.5988;-16.5782
+3;31;"Boise";  "Transition Risk";"Technology";New technology;tx90p_7	;0;0;-1.2943;-1.1959;-0.817;-3.3868;-6.0184;-10.5988;-16.5782
+3;31;"Boise";  "Transition Risk";"Market";Reputation damage;tx90p_5	;0;0;-1.2943;-1.1959;-0.817;-3.3868;-6.0184;-10.5988;-16.5782
+3;31;"Boise";  "Transition Risk";"Reputation";Materials cost;tx90p_10	;0;0;-1.2943;-1.1959;-0.817;-3.3868;-6.0184;-10.5988;-16.5782
+3;31;"Boise";  "Physical Risk";"Acute";Storm damage;tx90p_70	;0;0;-1.2943;-1.1959;-0.817;-3.3868;-6.0184;-10.5988;-16.5782
+3;31;"Boise";  "Physical Risk";"Acute";Employee impacts;tx90p_6	;0;0;-1.2943;-1.1959;-0.817;-3.3868;-6.0184;-10.5988;-16.5782
+3;31;"Boise";  "Physical Risk";"Chronic";Temperature extremes;tx90p_100	;0;0;-1.2943;-1.1959;-0.817;-3.3868;-6.0184;-10.5988;-16.5782
+3;31;"Boise";  "Physical Risk";"Chronic";Coastal flooding;coastalflood_100	;NA;NA;NA;NA;NA;NA;NA;NA;NA
+3;31;"Boise";  "Opportunity";"Resource Efficiency";Energy Efficiency;tx90p_16	;0;0;-1.2943;-1.1959;-0.817;-3.3868;-6.0184;-10.5988;-16.5782
+3;31;"Boise";  "Opportunity";"Resource Efficiency";Water Efficiency;tx90p_18	;0;0;-1.2943;-1.1959;-0.817;-3.3868;-6.0184;-10.5988;-16.5782
+3;31;"Boise";  "Opportunity";"Resource Efficiency";Materials Efficiency;tx90p_12	;0;0;-1.2943;-1.1959;-0.817;-3.3868;-6.0184;-10.5988;-16.5782
+3;31;"Boise";  "Opportunity";"Energy Source";Renewable price stability;tx90p_3	;0;0;-1.2943;-1.1959;-0.817;-3.3868;-6.0184;-10.5988;-16.5782
+3;31;"Boise";  "Opportunity";"Resilience";Energy resilience;tx90p_15	;0;0;-1.2943;-1.1959;-0.817;-3.3868;-6.0184;-10.5988;-16.5782
+3;31;"Boise";  "Physical Risk";"Chronic";Drought;pdsisc_100	;-30;0;-5;-40;-30;-50;-60;-50;-40
+3;32;"Colorado_Springs";  "Transition Risk";"Policy and Legal";Carbon pricing;tx90p_60	;0;-0.2523;-7.6591;-9.6697;-7.9904;-11.7763;-19.1768;-35.8388;-41.9905
+3;32;"Colorado_Springs";  "Transition Risk";"Policy and Legal";Litigation risk;tx90p_8	;0;-0.2523;-7.6591;-9.6697;-7.9904;-11.7763;-19.1768;-35.8388;-41.9905
+3;32;"Colorado_Springs";  "Transition Risk";"Technology";New technology;tx90p_7	;0;-0.2523;-7.6591;-9.6697;-7.9904;-11.7763;-19.1768;-35.8388;-41.9905
+3;32;"Colorado_Springs";  "Transition Risk";"Market";Reputation damage;tx90p_5	;0;-0.2523;-7.6591;-9.6697;-7.9904;-11.7763;-19.1768;-35.8388;-41.9905
+3;32;"Colorado_Springs";  "Transition Risk";"Reputation";Materials cost;tx90p_10	;0;-0.2523;-7.6591;-9.6697;-7.9904;-11.7763;-19.1768;-35.8388;-41.9905
+3;32;"Colorado_Springs";  "Physical Risk";"Acute";Storm damage;tx90p_70	;0;-0.2523;-7.6591;-9.6697;-7.9904;-11.7763;-19.1768;-35.8388;-41.9905
+3;32;"Colorado_Springs";  "Physical Risk";"Acute";Employee impacts;tx90p_6	;0;-0.2523;-7.6591;-9.6697;-7.9904;-11.7763;-19.1768;-35.8388;-41.9905
+3;32;"Colorado_Springs";  "Physical Risk";"Chronic";Temperature extremes;tx90p_100	;0;-0.2523;-7.6591;-9.6697;-7.9904;-11.7763;-19.1768;-35.8388;-41.9905
+3;32;"Colorado_Springs";  "Physical Risk";"Chronic";Coastal flooding;coastalflood_100	;NA;NA;NA;NA;NA;NA;NA;NA;NA
+3;32;"Colorado_Springs";  "Opportunity";"Resource Efficiency";Energy Efficiency;tx90p_16	;0;-0.2523;-7.6591;-9.6697;-7.9904;-11.7763;-19.1768;-35.8388;-41.9905
+3;32;"Colorado_Springs";  "Opportunity";"Resource Efficiency";Water Efficiency;tx90p_18	;0;-0.2523;-7.6591;-9.6697;-7.9904;-11.7763;-19.1768;-35.8388;-41.9905
+3;32;"Colorado_Springs";  "Opportunity";"Resource Efficiency";Materials Efficiency;tx90p_12	;0;-0.2523;-7.6591;-9.6697;-7.9904;-11.7763;-19.1768;-35.8388;-41.9905
+3;32;"Colorado_Springs";  "Opportunity";"Energy Source";Renewable price stability;tx90p_3	;0;-0.2523;-7.6591;-9.6697;-7.9904;-11.7763;-19.1768;-35.8388;-41.9905
+3;32;"Colorado_Springs";  "Opportunity";"Resilience";Energy resilience;tx90p_15	;0;-0.2523;-7.6591;-9.6697;-7.9904;-11.7763;-19.1768;-35.8388;-41.9905
+3;32;"Colorado_Springs";  "Physical Risk";"Chronic";Drought;pdsisc_100	;0;-5;-20;-5;-30;-30;-40;-10;-50
+3;33;"Corvallis";  "Transition Risk";"Policy and Legal";Carbon pricing;tx90p_60	;0;0;0;0;0;0;-0.6787;-3.5363;-5.4168
+3;33;"Corvallis";  "Transition Risk";"Policy and Legal";Litigation risk;tx90p_8	;0;0;0;0;0;0;-0.6787;-3.5363;-5.4168
+3;33;"Corvallis";  "Transition Risk";"Technology";New technology;tx90p_7	;0;0;0;0;0;0;-0.6787;-3.5363;-5.4168
+3;33;"Corvallis";  "Transition Risk";"Market";Reputation damage;tx90p_5	;0;0;0;0;0;0;-0.6787;-3.5363;-5.4168
+3;33;"Corvallis";  "Transition Risk";"Reputation";Materials cost;tx90p_10	;0;0;0;0;0;0;-0.6787;-3.5363;-5.4168
+3;33;"Corvallis";  "Physical Risk";"Acute";Storm damage;tx90p_70	;0;0;0;0;0;0;-0.6787;-3.5363;-5.4168
+3;33;"Corvallis";  "Physical Risk";"Acute";Employee impacts;tx90p_6	;0;0;0;0;0;0;-0.6787;-3.5363;-5.4168
+3;33;"Corvallis";  "Physical Risk";"Chronic";Temperature extremes;tx90p_100	;0;0;0;0;0;0;-0.6787;-3.5363;-5.4168
+3;33;"Corvallis";  "Physical Risk";"Chronic";Coastal flooding;coastalflood_100	;NA;NA;NA;NA;NA;NA;NA;NA;NA
+3;33;"Corvallis";  "Opportunity";"Resource Efficiency";Energy Efficiency;tx90p_16	;0;0;0;0;0;0;-0.6787;-3.5363;-5.4168
+3;33;"Corvallis";  "Opportunity";"Resource Efficiency";Water Efficiency;tx90p_18	;0;0;0;0;0;0;-0.6787;-3.5363;-5.4168
+3;33;"Corvallis";  "Opportunity";"Resource Efficiency";Materials Efficiency;tx90p_12	;0;0;0;0;0;0;-0.6787;-3.5363;-5.4168
+3;33;"Corvallis";  "Opportunity";"Energy Source";Renewable price stability;tx90p_3	;0;0;0;0;0;0;-0.6787;-3.5363;-5.4168
+3;33;"Corvallis";  "Opportunity";"Resilience";Energy resilience;tx90p_15	;0;0;0;0;0;0;-0.6787;-3.5363;-5.4168
+3;33;"Corvallis";  "Physical Risk";"Chronic";Drought;pdsisc_100	;-20;-30;-10;-40;-40;-70;-70;-60;-40
+3;34;"Cupertino";  "Transition Risk";"Policy and Legal";Carbon pricing;tx90p_60	;0;0;-5.2806;-7.2326;-4.4191;-18.0108;-27.4805;-39.6719;-46.6402
+3;34;"Cupertino";  "Transition Risk";"Policy and Legal";Litigation risk;tx90p_8	;0;0;-5.2806;-7.2326;-4.4191;-18.0108;-27.4805;-39.6719;-46.6402
+3;34;"Cupertino";  "Transition Risk";"Technology";New technology;tx90p_7	;0;0;-5.2806;-7.2326;-4.4191;-18.0108;-27.4805;-39.6719;-46.6402
+3;34;"Cupertino";  "Transition Risk";"Market";Reputation damage;tx90p_5	;0;0;-5.2806;-7.2326;-4.4191;-18.0108;-27.4805;-39.6719;-46.6402
+3;34;"Cupertino";  "Transition Risk";"Reputation";Materials cost;tx90p_10	;0;0;-5.2806;-7.2326;-4.4191;-18.0108;-27.4805;-39.6719;-46.6402
+3;34;"Cupertino";  "Physical Risk";"Acute";Storm damage;tx90p_70	;0;0;-5.2806;-7.2326;-4.4191;-18.0108;-27.4805;-39.6719;-46.6402
+3;34;"Cupertino";  "Physical Risk";"Acute";Employee impacts;tx90p_6	;0;0;-5.2806;-7.2326;-4.4191;-18.0108;-27.4805;-39.6719;-46.6402
+3;34;"Cupertino";  "Physical Risk";"Chronic";Temperature extremes;tx90p_100	;0;0;-5.2806;-7.2326;-4.4191;-18.0108;-27.4805;-39.6719;-46.6402
+3;34;"Cupertino";  "Physical Risk";"Chronic";Coastal flooding;coastalflood_100	;NA;NA;NA;NA;NA;NA;NA;NA;NA
+3;34;"Cupertino";  "Opportunity";"Resource Efficiency";Energy Efficiency;tx90p_16	;0;0;-5.2806;-7.2326;-4.4191;-18.0108;-27.4805;-39.6719;-46.6402
+3;34;"Cupertino";  "Opportunity";"Resource Efficiency";Water Efficiency;tx90p_18	;0;0;-5.2806;-7.2326;-4.4191;-18.0108;-27.4805;-39.6719;-46.6402
+3;34;"Cupertino";  "Opportunity";"Resource Efficiency";Materials Efficiency;tx90p_12	;0;0;-5.2806;-7.2326;-4.4191;-18.0108;-27.4805;-39.6719;-46.6402
+3;34;"Cupertino";  "Opportunity";"Energy Source";Renewable price stability;tx90p_3	;0;0;-5.2806;-7.2326;-4.4191;-18.0108;-27.4805;-39.6719;-46.6402
+3;34;"Cupertino";  "Opportunity";"Resilience";Energy resilience;tx90p_15	;0;0;-5.2806;-7.2326;-4.4191;-18.0108;-27.4805;-39.6719;-46.6402
+3;34;"Cupertino";  "Physical Risk";"Chronic";Drought;pdsisc_100	;-5;-5;0;0;0;-10;-10;-5;-30
+3;35;"Houston";  "Transition Risk";"Policy and Legal";Carbon pricing;tx90p_60	;0;-3.5258;-7.2633;-15.9579;-14.9855;-25.5954;-35.1158;-41.6961;-47.712
+3;35;"Houston";  "Transition Risk";"Policy and Legal";Litigation risk;tx90p_8	;0;-3.5258;-7.2633;-15.9579;-14.9855;-25.5954;-35.1158;-41.6961;-47.712
+3;35;"Houston";  "Transition Risk";"Technology";New technology;tx90p_7	;0;-3.5258;-7.2633;-15.9579;-14.9855;-25.5954;-35.1158;-41.6961;-47.712
+3;35;"Houston";  "Transition Risk";"Market";Reputation damage;tx90p_5	;0;-3.5258;-7.2633;-15.9579;-14.9855;-25.5954;-35.1158;-41.6961;-47.712
+3;35;"Houston";  "Transition Risk";"Reputation";Materials cost;tx90p_10	;0;-3.5258;-7.2633;-15.9579;-14.9855;-25.5954;-35.1158;-41.6961;-47.712
+3;35;"Houston";  "Physical Risk";"Acute";Storm damage;tx90p_70	;0;-3.5258;-7.2633;-15.9579;-14.9855;-25.5954;-35.1158;-41.6961;-47.712
+3;35;"Houston";  "Physical Risk";"Acute";Employee impacts;tx90p_6	;0;-3.5258;-7.2633;-15.9579;-14.9855;-25.5954;-35.1158;-41.6961;-47.712
+3;35;"Houston";  "Physical Risk";"Chronic";Temperature extremes;tx90p_100	;0;-3.5258;-7.2633;-15.9579;-14.9855;-25.5954;-35.1158;-41.6961;-47.712
+3;35;"Houston";  "Physical Risk";"Chronic";Coastal flooding;coastalflood_100	;NA;NA;NA;NA;NA;NA;NA;NA;NA
+3;35;"Houston";  "Opportunity";"Resource Efficiency";Energy Efficiency;tx90p_16	;0;-3.5258;-7.2633;-15.9579;-14.9855;-25.5954;-35.1158;-41.6961;-47.712
+3;35;"Houston";  "Opportunity";"Resource Efficiency";Water Efficiency;tx90p_18	;0;-3.5258;-7.2633;-15.9579;-14.9855;-25.5954;-35.1158;-41.6961;-47.712
+3;35;"Houston";  "Opportunity";"Resource Efficiency";Materials Efficiency;tx90p_12	;0;-3.5258;-7.2633;-15.9579;-14.9855;-25.5954;-35.1158;-41.6961;-47.712
+3;35;"Houston";  "Opportunity";"Energy Source";Renewable price stability;tx90p_3	;0;-3.5258;-7.2633;-15.9579;-14.9855;-25.5954;-35.1158;-41.6961;-47.712
+3;35;"Houston";  "Opportunity";"Resilience";Energy resilience;tx90p_15	;0;-3.5258;-7.2633;-15.9579;-14.9855;-25.5954;-35.1158;-41.6961;-47.712
+3;35;"Houston";  "Physical Risk";"Chronic";Drought;pdsisc_100	;-5;-10;-30;-20;-20;-10;-30;-40;-50
+3;36;"Palo_Alto";  "Transition Risk";"Policy and Legal";Carbon pricing;tx90p_60	;0;0;-7.1839;-11.2005;-6.7612;-26.6331;-36.6522;-47.9093;-54.3907
+3;36;"Palo_Alto";  "Transition Risk";"Policy and Legal";Litigation risk;tx90p_8	;0;0;-7.1839;-11.2005;-6.7612;-26.6331;-36.6522;-47.9093;-54.3907
+3;36;"Palo_Alto";  "Transition Risk";"Technology";New technology;tx90p_7	;0;0;-7.1839;-11.2005;-6.7612;-26.6331;-36.6522;-47.9093;-54.3907
+3;36;"Palo_Alto";  "Transition Risk";"Market";Reputation damage;tx90p_5	;0;0;-7.1839;-11.2005;-6.7612;-26.6331;-36.6522;-47.9093;-54.3907
+3;36;"Palo_Alto";  "Transition Risk";"Reputation";Materials cost;tx90p_10	;0;0;-7.1839;-11.2005;-6.7612;-26.6331;-36.6522;-47.9093;-54.3907
+3;36;"Palo_Alto";  "Physical Risk";"Acute";Storm damage;tx90p_70	;0;0;-7.1839;-11.2005;-6.7612;-26.6331;-36.6522;-47.9093;-54.3907
+3;36;"Palo_Alto";  "Physical Risk";"Acute";Employee impacts;tx90p_6	;0;0;-7.1839;-11.2005;-6.7612;-26.6331;-36.6522;-47.9093;-54.3907
+3;36;"Palo_Alto";  "Physical Risk";"Chronic";Temperature extremes;tx90p_100	;0;0;-7.1839;-11.2005;-6.7612;-26.6331;-36.6522;-47.9093;-54.3907
+3;36;"Palo_Alto";  "Physical Risk";"Chronic";Coastal flooding;coastalflood_100	;-0.2123;-1.6738;-5.5037;-21.2696;-72.0451;-90;-90;-90;-90
+3;36;"Palo_Alto";  "Opportunity";"Resource Efficiency";Energy Efficiency;tx90p_16	;0;0;-7.1839;-11.2005;-6.7612;-26.6331;-36.6522;-47.9093;-54.3907
+3;36;"Palo_Alto";  "Opportunity";"Resource Efficiency";Water Efficiency;tx90p_18	;0;0;-7.1839;-11.2005;-6.7612;-26.6331;-36.6522;-47.9093;-54.3907
+3;36;"Palo_Alto";  "Opportunity";"Resource Efficiency";Materials Efficiency;tx90p_12	;0;0;-7.1839;-11.2005;-6.7612;-26.6331;-36.6522;-47.9093;-54.3907
+3;36;"Palo_Alto";  "Opportunity";"Energy Source";Renewable price stability;tx90p_3	;0;0;-7.1839;-11.2005;-6.7612;-26.6331;-36.6522;-47.9093;-54.3907
+3;36;"Palo_Alto";  "Opportunity";"Resilience";Energy resilience;tx90p_15	;0;0;-7.1839;-11.2005;-6.7612;-26.6331;-36.6522;-47.9093;-54.3907
+3;36;"Palo_Alto";  "Physical Risk";"Chronic";Drought;pdsisc_100	;-5;-5;0;0;0;-10;-10;-5;-30
+3;37;"Plano";  "Transition Risk";"Policy and Legal";Carbon pricing;tx90p_60	;0;0;-2.6078;-6.6696;-5.2649;-7.9274;-17.12;-29.9827;-37.0082
+3;37;"Plano";  "Transition Risk";"Policy and Legal";Litigation risk;tx90p_8	;0;0;-2.6078;-6.6696;-5.2649;-7.9274;-17.12;-29.9827;-37.0082
+3;37;"Plano";  "Transition Risk";"Technology";New technology;tx90p_7	;0;0;-2.6078;-6.6696;-5.2649;-7.9274;-17.12;-29.9827;-37.0082
+3;37;"Plano";  "Transition Risk";"Market";Reputation damage;tx90p_5	;0;0;-2.6078;-6.6696;-5.2649;-7.9274;-17.12;-29.9827;-37.0082
+3;37;"Plano";  "Transition Risk";"Reputation";Materials cost;tx90p_10	;0;0;-2.6078;-6.6696;-5.2649;-7.9274;-17.12;-29.9827;-37.0082
+3;37;"Plano";  "Physical Risk";"Acute";Storm damage;tx90p_70	;0;0;-2.6078;-6.6696;-5.2649;-7.9274;-17.12;-29.9827;-37.0082
+3;37;"Plano";  "Physical Risk";"Acute";Employee impacts;tx90p_6	;0;0;-2.6078;-6.6696;-5.2649;-7.9274;-17.12;-29.9827;-37.0082
+3;37;"Plano";  "Physical Risk";"Chronic";Temperature extremes;tx90p_100	;0;0;-2.6078;-6.6696;-5.2649;-7.9274;-17.12;-29.9827;-37.0082
+3;37;"Plano";  "Physical Risk";"Chronic";Coastal flooding;coastalflood_100	;NA;NA;NA;NA;NA;NA;NA;NA;NA
+3;37;"Plano";  "Opportunity";"Resource Efficiency";Energy Efficiency;tx90p_16	;0;0;-2.6078;-6.6696;-5.2649;-7.9274;-17.12;-29.9827;-37.0082
+3;37;"Plano";  "Opportunity";"Resource Efficiency";Water Efficiency;tx90p_18	;0;0;-2.6078;-6.6696;-5.2649;-7.9274;-17.12;-29.9827;-37.0082
+3;37;"Plano";  "Opportunity";"Resource Efficiency";Materials Efficiency;tx90p_12	;0;0;-2.6078;-6.6696;-5.2649;-7.9274;-17.12;-29.9827;-37.0082
+3;37;"Plano";  "Opportunity";"Energy Source";Renewable price stability;tx90p_3	;0;0;-2.6078;-6.6696;-5.2649;-7.9274;-17.12;-29.9827;-37.0082
+3;37;"Plano";  "Opportunity";"Resilience";Energy resilience;tx90p_15	;0;0;-2.6078;-6.6696;-5.2649;-7.9274;-17.12;-29.9827;-37.0082
+3;37;"Plano";  "Physical Risk";"Chronic";Drought;pdsisc_100	;-20;-10;-30;-5;-30;0;-30;-10;-30
+3;38;"Roseville";  "Transition Risk";"Policy and Legal";Carbon pricing;tx90p_60	;0;0;-0.0344;-0.4568;-0.7772;-2.3735;-6.3603;-10.514;-14.0322
+3;38;"Roseville";  "Transition Risk";"Policy and Legal";Litigation risk;tx90p_8	;0;0;-0.0344;-0.4568;-0.7772;-2.3735;-6.3603;-10.514;-14.0322
+3;38;"Roseville";  "Transition Risk";"Technology";New technology;tx90p_7	;0;0;-0.0344;-0.4568;-0.7772;-2.3735;-6.3603;-10.514;-14.0322
+3;38;"Roseville";  "Transition Risk";"Market";Reputation damage;tx90p_5	;0;0;-0.0344;-0.4568;-0.7772;-2.3735;-6.3603;-10.514;-14.0322
+3;38;"Roseville";  "Transition Risk";"Reputation";Materials cost;tx90p_10	;0;0;-0.0344;-0.4568;-0.7772;-2.3735;-6.3603;-10.514;-14.0322
+3;38;"Roseville";  "Physical Risk";"Acute";Storm damage;tx90p_70	;0;0;-0.0344;-0.4568;-0.7772;-2.3735;-6.3603;-10.514;-14.0322
+3;38;"Roseville";  "Physical Risk";"Acute";Employee impacts;tx90p_6	;0;0;-0.0344;-0.4568;-0.7772;-2.3735;-6.3603;-10.514;-14.0322
+3;38;"Roseville";  "Physical Risk";"Chronic";Temperature extremes;tx90p_100	;0;0;-0.0344;-0.4568;-0.7772;-2.3735;-6.3603;-10.514;-14.0322
+3;38;"Roseville";  "Physical Risk";"Chronic";Coastal flooding;coastalflood_100	;NA;NA;NA;NA;NA;NA;NA;NA;NA
+3;38;"Roseville";  "Opportunity";"Resource Efficiency";Energy Efficiency;tx90p_16	;0;0;-0.0344;-0.4568;-0.7772;-2.3735;-6.3603;-10.514;-14.0322
+3;38;"Roseville";  "Opportunity";"Resource Efficiency";Water Efficiency;tx90p_18	;0;0;-0.0344;-0.4568;-0.7772;-2.3735;-6.3603;-10.514;-14.0322
+3;38;"Roseville";  "Opportunity";"Resource Efficiency";Materials Efficiency;tx90p_12	;0;0;-0.0344;-0.4568;-0.7772;-2.3735;-6.3603;-10.514;-14.0322
+3;38;"Roseville";  "Opportunity";"Energy Source";Renewable price stability;tx90p_3	;0;0;-0.0344;-0.4568;-0.7772;-2.3735;-6.3603;-10.514;-14.0322
+3;38;"Roseville";  "Opportunity";"Resilience";Energy resilience;tx90p_15	;0;0;-0.0344;-0.4568;-0.7772;-2.3735;-6.3603;-10.514;-14.0322
+3;38;"Roseville";  "Physical Risk";"Chronic";Drought;pdsisc_100	;0;0;-5;-5;-5;-40;-40;-10;-30
+3;39;"San_Bernadino";  "Transition Risk";"Policy and Legal";Carbon pricing;tx90p_60	;0;0;-8.1945;-13.9623;-8.5138;-22.0076;-31.2324;-43.5318;-49.299
+3;39;"San_Bernadino";  "Transition Risk";"Policy and Legal";Litigation risk;tx90p_8	;0;0;-8.1945;-13.9623;-8.5138;-22.0076;-31.2324;-43.5318;-49.299
+3;39;"San_Bernadino";  "Transition Risk";"Technology";New technology;tx90p_7	;0;0;-8.1945;-13.9623;-8.5138;-22.0076;-31.2324;-43.5318;-49.299
+3;39;"San_Bernadino";  "Transition Risk";"Market";Reputation damage;tx90p_5	;0;0;-8.1945;-13.9623;-8.5138;-22.0076;-31.2324;-43.5318;-49.299
+3;39;"San_Bernadino";  "Transition Risk";"Reputation";Materials cost;tx90p_10	;0;0;-8.1945;-13.9623;-8.5138;-22.0076;-31.2324;-43.5318;-49.299
+3;39;"San_Bernadino";  "Physical Risk";"Acute";Storm damage;tx90p_70	;0;0;-8.1945;-13.9623;-8.5138;-22.0076;-31.2324;-43.5318;-49.299
+3;39;"San_Bernadino";  "Physical Risk";"Acute";Employee impacts;tx90p_6	;0;0;-8.1945;-13.9623;-8.5138;-22.0076;-31.2324;-43.5318;-49.299
+3;39;"San_Bernadino";  "Physical Risk";"Chronic";Temperature extremes;tx90p_100	;0;0;-8.1945;-13.9623;-8.5138;-22.0076;-31.2324;-43.5318;-49.299
+3;39;"San_Bernadino";  "Physical Risk";"Chronic";Coastal flooding;coastalflood_100	;NA;NA;NA;NA;NA;NA;NA;NA;NA
+3;39;"San_Bernadino";  "Opportunity";"Resource Efficiency";Energy Efficiency;tx90p_16	;0;0;-8.1945;-13.9623;-8.5138;-22.0076;-31.2324;-43.5318;-49.299
+3;39;"San_Bernadino";  "Opportunity";"Resource Efficiency";Water Efficiency;tx90p_18	;0;0;-8.1945;-13.9623;-8.5138;-22.0076;-31.2324;-43.5318;-49.299
+3;39;"San_Bernadino";  "Opportunity";"Resource Efficiency";Materials Efficiency;tx90p_12	;0;0;-8.1945;-13.9623;-8.5138;-22.0076;-31.2324;-43.5318;-49.299
+3;39;"San_Bernadino";  "Opportunity";"Energy Source";Renewable price stability;tx90p_3	;0;0;-8.1945;-13.9623;-8.5138;-22.0076;-31.2324;-43.5318;-49.299
+3;39;"San_Bernadino";  "Opportunity";"Resilience";Energy resilience;tx90p_15	;0;0;-8.1945;-13.9623;-8.5138;-22.0076;-31.2324;-43.5318;-49.299
+3;39;"San_Bernadino";  "Physical Risk";"Chronic";Drought;pdsisc_100	;-10;-5;0;0;0;-10;-30;-20;-20
+3;40;"Dublin";  "Transition Risk";"Policy and Legal";Carbon pricing;tx90p_60	;-0.5153;-4.0721;-3.0472;-4.0699;-11.5929;-17.6329;-22.0496;-28.0629;-24.7942
+3;40;"Dublin";  "Transition Risk";"Policy and Legal";Litigation risk;tx90p_8	;-0.5153;-4.0721;-3.0472;-4.0699;-11.5929;-17.6329;-22.0496;-28.0629;-24.7942
+3;40;"Dublin";  "Transition Risk";"Technology";New technology;tx90p_7	;-0.5153;-4.0721;-3.0472;-4.0699;-11.5929;-17.6329;-22.0496;-28.0629;-24.7942
+3;40;"Dublin";  "Transition Risk";"Market";Reputation damage;tx90p_5	;-0.5153;-4.0721;-3.0472;-4.0699;-11.5929;-17.6329;-22.0496;-28.0629;-24.7942
+3;40;"Dublin";  "Transition Risk";"Reputation";Materials cost;tx90p_10	;-0.5153;-4.0721;-3.0472;-4.0699;-11.5929;-17.6329;-22.0496;-28.0629;-24.7942
+3;40;"Dublin";  "Physical Risk";"Acute";Storm damage;tx90p_70	;-0.5153;-4.0721;-3.0472;-4.0699;-11.5929;-17.6329;-22.0496;-28.0629;-24.7942
+3;40;"Dublin";  "Physical Risk";"Acute";Employee impacts;tx90p_6	;-0.5153;-4.0721;-3.0472;-4.0699;-11.5929;-17.6329;-22.0496;-28.0629;-24.7942
+3;40;"Dublin";  "Physical Risk";"Chronic";Temperature extremes;tx90p_100	;-0.5153;-4.0721;-3.0472;-4.0699;-11.5929;-17.6329;-22.0496;-28.0629;-24.7942
+3;40;"Dublin";  "Physical Risk";"Chronic";Coastal flooding;coastalflood_100	;NA;NA;NA;NA;NA;NA;NA;NA;NA
+3;40;"Dublin";  "Opportunity";"Resource Efficiency";Energy Efficiency;tx90p_16	;-0.5153;-4.0721;-3.0472;-4.0699;-11.5929;-17.6329;-22.0496;-28.0629;-24.7942
+3;40;"Dublin";  "Opportunity";"Resource Efficiency";Water Efficiency;tx90p_18	;-0.5153;-4.0721;-3.0472;-4.0699;-11.5929;-17.6329;-22.0496;-28.0629;-24.7942
+3;40;"Dublin";  "Opportunity";"Resource Efficiency";Materials Efficiency;tx90p_12	;-0.5153;-4.0721;-3.0472;-4.0699;-11.5929;-17.6329;-22.0496;-28.0629;-24.7942
+3;40;"Dublin";  "Opportunity";"Energy Source";Renewable price stability;tx90p_3	;-0.5153;-4.0721;-3.0472;-4.0699;-11.5929;-17.6329;-22.0496;-28.0629;-24.7942
+3;40;"Dublin";  "Opportunity";"Resilience";Energy resilience;tx90p_15	;-0.5153;-4.0721;-3.0472;-4.0699;-11.5929;-17.6329;-22.0496;-28.0629;-24.7942
+3;40;"Dublin";  "Physical Risk";"Chronic";Drought;pdsisc_100	;0;-5;-5;0;-5;-5;-40;-30;-5
+3;41;"Puerto_Rico";  "Transition Risk";"Policy and Legal";Carbon pricing;tx90p_60	;-8.0193;-28.1442;-46.1532;-61.268;-67.7819;-69.0415;-69.589;-69.8086;-70
+3;41;"Puerto_Rico";  "Transition Risk";"Policy and Legal";Litigation risk;tx90p_8	;-8.0193;-28.1442;-46.1532;-61.268;-67.7819;-69.0415;-69.589;-69.8086;-70
+3;41;"Puerto_Rico";  "Transition Risk";"Technology";New technology;tx90p_7	;-8.0193;-28.1442;-46.1532;-61.268;-67.7819;-69.0415;-69.589;-69.8086;-70
+3;41;"Puerto_Rico";  "Transition Risk";"Market";Reputation damage;tx90p_5	;-8.0193;-28.1442;-46.1532;-61.268;-67.7819;-69.0415;-69.589;-69.8086;-70
+3;41;"Puerto_Rico";  "Transition Risk";"Reputation";Materials cost;tx90p_10	;-8.0193;-28.1442;-46.1532;-61.268;-67.7819;-69.0415;-69.589;-69.8086;-70
+3;41;"Puerto_Rico";  "Physical Risk";"Acute";Storm damage;tx90p_70	;-8.0193;-28.1442;-46.1532;-61.268;-67.7819;-69.0415;-69.589;-69.8086;-70
+3;41;"Puerto_Rico";  "Physical Risk";"Acute";Employee impacts;tx90p_6	;-8.0193;-28.1442;-46.1532;-61.268;-67.7819;-69.0415;-69.589;-69.8086;-70
+3;41;"Puerto_Rico";  "Physical Risk";"Chronic";Temperature extremes;tx90p_100	;-8.0193;-28.1442;-46.1532;-61.268;-67.7819;-69.0415;-69.589;-69.8086;-70
+3;41;"Puerto_Rico";  "Physical Risk";"Chronic";Coastal flooding;coastalflood_100	;NA;NA;NA;NA;NA;NA;NA;NA;NA
+3;41;"Puerto_Rico";  "Opportunity";"Resource Efficiency";Energy Efficiency;tx90p_16	;-8.0193;-28.1442;-46.1532;-61.268;-67.7819;-69.0415;-69.589;-69.8086;-70
+3;41;"Puerto_Rico";  "Opportunity";"Resource Efficiency";Water Efficiency;tx90p_18	;-8.0193;-28.1442;-46.1532;-61.268;-67.7819;-69.0415;-69.589;-69.8086;-70
+3;41;"Puerto_Rico";  "Opportunity";"Resource Efficiency";Materials Efficiency;tx90p_12	;-8.0193;-28.1442;-46.1532;-61.268;-67.7819;-69.0415;-69.589;-69.8086;-70
+3;41;"Puerto_Rico";  "Opportunity";"Energy Source";Renewable price stability;tx90p_3	;-8.0193;-28.1442;-46.1532;-61.268;-67.7819;-69.0415;-69.589;-69.8086;-70
+3;41;"Puerto_Rico";  "Opportunity";"Resilience";Energy resilience;tx90p_15	;-8.0193;-28.1442;-46.1532;-61.268;-67.7819;-69.0415;-69.589;-69.8086;-70
+3;41;"Puerto_Rico";  "Physical Risk";"Chronic";Drought;pdsisc_100	;-5;-20;-30;-5;-50;-50;-50;-60;-60
+3;42;"Barcelona_Sant_Cugat";  "Transition Risk";"Policy and Legal";Carbon pricing;tx90p_60	;-8.3187;-19.7921;-26.2425;-25.7573;-45.6869;-55.3261;-60.828;-65.5669;-68.0288
+3;42;"Barcelona_Sant_Cugat";  "Transition Risk";"Policy and Legal";Litigation risk;tx90p_8	;-8.3187;-19.7921;-26.2425;-25.7573;-45.6869;-55.3261;-60.828;-65.5669;-68.0288
+3;42;"Barcelona_Sant_Cugat";  "Transition Risk";"Technology";New technology;tx90p_7	;-8.3187;-19.7921;-26.2425;-25.7573;-45.6869;-55.3261;-60.828;-65.5669;-68.0288
+3;42;"Barcelona_Sant_Cugat";  "Transition Risk";"Market";Reputation damage;tx90p_5	;-8.3187;-19.7921;-26.2425;-25.7573;-45.6869;-55.3261;-60.828;-65.5669;-68.0288
+3;42;"Barcelona_Sant_Cugat";  "Transition Risk";"Reputation";Materials cost;tx90p_10	;-8.3187;-19.7921;-26.2425;-25.7573;-45.6869;-55.3261;-60.828;-65.5669;-68.0288
+3;42;"Barcelona_Sant_Cugat";  "Physical Risk";"Acute";Storm damage;tx90p_70	;-8.3187;-19.7921;-26.2425;-25.7573;-45.6869;-55.3261;-60.828;-65.5669;-68.0288
+3;42;"Barcelona_Sant_Cugat";  "Physical Risk";"Acute";Employee impacts;tx90p_6	;-8.3187;-19.7921;-26.2425;-25.7573;-45.6869;-55.3261;-60.828;-65.5669;-68.0288
+3;42;"Barcelona_Sant_Cugat";  "Physical Risk";"Chronic";Temperature extremes;tx90p_100	;-8.3187;-19.7921;-26.2425;-25.7573;-45.6869;-55.3261;-60.828;-65.5669;-68.0288
+3;42;"Barcelona_Sant_Cugat";  "Physical Risk";"Chronic";Coastal flooding;coastalflood_100	;NA;NA;NA;NA;NA;NA;NA;NA;NA
+3;42;"Barcelona_Sant_Cugat";  "Opportunity";"Resource Efficiency";Energy Efficiency;tx90p_16	;-8.3187;-19.7921;-26.2425;-25.7573;-45.6869;-55.3261;-60.828;-65.5669;-68.0288
+3;42;"Barcelona_Sant_Cugat";  "Opportunity";"Resource Efficiency";Water Efficiency;tx90p_18	;-8.3187;-19.7921;-26.2425;-25.7573;-45.6869;-55.3261;-60.828;-65.5669;-68.0288
+3;42;"Barcelona_Sant_Cugat";  "Opportunity";"Resource Efficiency";Materials Efficiency;tx90p_12	;-8.3187;-19.7921;-26.2425;-25.7573;-45.6869;-55.3261;-60.828;-65.5669;-68.0288
+3;42;"Barcelona_Sant_Cugat";  "Opportunity";"Energy Source";Renewable price stability;tx90p_3	;-8.3187;-19.7921;-26.2425;-25.7573;-45.6869;-55.3261;-60.828;-65.5669;-68.0288
+3;42;"Barcelona_Sant_Cugat";  "Opportunity";"Resilience";Energy resilience;tx90p_15	;-8.3187;-19.7921;-26.2425;-25.7573;-45.6869;-55.3261;-60.828;-65.5669;-68.0288
+3;42;"Barcelona_Sant_Cugat";  "Physical Risk";"Chronic";Drought;pdsisc_100	;-50;-50;-40;-70;-70;-70;-70;-70;-70
+3;43;"Rehovot";  "Transition Risk";"Policy and Legal";Carbon pricing;tx90p_60	;0;0;0;-1.0742;-2.802;-6.4109;-9.5495;-17.3591;-22.7416
+3;43;"Rehovot";  "Transition Risk";"Policy and Legal";Litigation risk;tx90p_8	;0;0;0;-1.0742;-2.802;-6.4109;-9.5495;-17.3591;-22.7416
+3;43;"Rehovot";  "Transition Risk";"Technology";New technology;tx90p_7	;0;0;0;-1.0742;-2.802;-6.4109;-9.5495;-17.3591;-22.7416
+3;43;"Rehovot";  "Transition Risk";"Market";Reputation damage;tx90p_5	;0;0;0;-1.0742;-2.802;-6.4109;-9.5495;-17.3591;-22.7416
+3;43;"Rehovot";  "Transition Risk";"Reputation";Materials cost;tx90p_10	;0;0;0;-1.0742;-2.802;-6.4109;-9.5495;-17.3591;-22.7416
+3;43;"Rehovot";  "Physical Risk";"Acute";Storm damage;tx90p_70	;0;0;0;-1.0742;-2.802;-6.4109;-9.5495;-17.3591;-22.7416
+3;43;"Rehovot";  "Physical Risk";"Acute";Employee impacts;tx90p_6	;0;0;0;-1.0742;-2.802;-6.4109;-9.5495;-17.3591;-22.7416
+3;43;"Rehovot";  "Physical Risk";"Chronic";Temperature extremes;tx90p_100	;0;0;0;-1.0742;-2.802;-6.4109;-9.5495;-17.3591;-22.7416
+3;43;"Rehovot";  "Physical Risk";"Chronic";Coastal flooding;coastalflood_100	;-0.5634;-8.074;-86.2219;-90;-90;-90;-90;-90;-90
+3;43;"Rehovot";  "Opportunity";"Resource Efficiency";Energy Efficiency;tx90p_16	;0;0;0;-1.0742;-2.802;-6.4109;-9.5495;-17.3591;-22.7416
+3;43;"Rehovot";  "Opportunity";"Resource Efficiency";Water Efficiency;tx90p_18	;0;0;0;-1.0742;-2.802;-6.4109;-9.5495;-17.3591;-22.7416
+3;43;"Rehovot";  "Opportunity";"Resource Efficiency";Materials Efficiency;tx90p_12	;0;0;0;-1.0742;-2.802;-6.4109;-9.5495;-17.3591;-22.7416
+3;43;"Rehovot";  "Opportunity";"Energy Source";Renewable price stability;tx90p_3	;0;0;0;-1.0742;-2.802;-6.4109;-9.5495;-17.3591;-22.7416
+3;43;"Rehovot";  "Opportunity";"Resilience";Energy resilience;tx90p_15	;0;0;0;-1.0742;-2.802;-6.4109;-9.5495;-17.3591;-22.7416
+3;43;"Rehovot";  "Physical Risk";"Chronic";Drought;pdsisc_100	;0;-5;-30;-10;-40;-60;-70;-60;-70
+3;44;"Singapore_DRD";  "Transition Risk";"Policy and Legal";Carbon pricing;tx90p_60	;-3.3892;-3.0422;-11.6682;-21.4371;-33.827;-40.6232;-41.0293;-52.4231;-56.7739
+3;44;"Singapore_DRD";  "Transition Risk";"Policy and Legal";Litigation risk;tx90p_8	;-3.3892;-3.0422;-11.6682;-21.4371;-33.827;-40.6232;-41.0293;-52.4231;-56.7739
+3;44;"Singapore_DRD";  "Transition Risk";"Technology";New technology;tx90p_7	;-3.3892;-3.0422;-11.6682;-21.4371;-33.827;-40.6232;-41.0293;-52.4231;-56.7739
+3;44;"Singapore_DRD";  "Transition Risk";"Market";Reputation damage;tx90p_5	;-3.3892;-3.0422;-11.6682;-21.4371;-33.827;-40.6232;-41.0293;-52.4231;-56.7739
+3;44;"Singapore_DRD";  "Transition Risk";"Reputation";Materials cost;tx90p_10	;-3.3892;-3.0422;-11.6682;-21.4371;-33.827;-40.6232;-41.0293;-52.4231;-56.7739
+3;44;"Singapore_DRD";  "Physical Risk";"Acute";Storm damage;tx90p_70	;-3.3892;-3.0422;-11.6682;-21.4371;-33.827;-40.6232;-41.0293;-52.4231;-56.7739
+3;44;"Singapore_DRD";  "Physical Risk";"Acute";Employee impacts;tx90p_6	;-3.3892;-3.0422;-11.6682;-21.4371;-33.827;-40.6232;-41.0293;-52.4231;-56.7739
+3;44;"Singapore_DRD";  "Physical Risk";"Chronic";Temperature extremes;tx90p_100	;-3.3892;-3.0422;-11.6682;-21.4371;-33.827;-40.6232;-41.0293;-52.4231;-56.7739
+3;44;"Singapore_DRD";  "Physical Risk";"Chronic";Coastal flooding;coastalflood_100	;NA;NA;NA;NA;NA;NA;NA;NA;NA
+3;44;"Singapore_DRD";  "Opportunity";"Resource Efficiency";Energy Efficiency;tx90p_16	;-3.3892;-3.0422;-11.6682;-21.4371;-33.827;-40.6232;-41.0293;-52.4231;-56.7739
+3;44;"Singapore_DRD";  "Opportunity";"Resource Efficiency";Water Efficiency;tx90p_18	;-3.3892;-3.0422;-11.6682;-21.4371;-33.827;-40.6232;-41.0293;-52.4231;-56.7739
+3;44;"Singapore_DRD";  "Opportunity";"Resource Efficiency";Materials Efficiency;tx90p_12	;-3.3892;-3.0422;-11.6682;-21.4371;-33.827;-40.6232;-41.0293;-52.4231;-56.7739
+3;44;"Singapore_DRD";  "Opportunity";"Energy Source";Renewable price stability;tx90p_3	;-3.3892;-3.0422;-11.6682;-21.4371;-33.827;-40.6232;-41.0293;-52.4231;-56.7739
+3;44;"Singapore_DRD";  "Opportunity";"Resilience";Energy resilience;tx90p_15	;-3.3892;-3.0422;-11.6682;-21.4371;-33.827;-40.6232;-41.0293;-52.4231;-56.7739
+3;44;"Singapore_DRD";  "Physical Risk";"Chronic";Drought;pdsisc_100	;0;0;0;0;0;0;0;0;0
+3;45;"San_Diego";  "Transition Risk";"Policy and Legal";Carbon pricing;tx90p_60	;0;0;-6.7293;-10.7045;-6.9112;-17.2461;-25.7291;-37.9739;-45.247
+3;45;"San_Diego";  "Transition Risk";"Policy and Legal";Litigation risk;tx90p_8	;0;0;-6.7293;-10.7045;-6.9112;-17.2461;-25.7291;-37.9739;-45.247
+3;45;"San_Diego";  "Transition Risk";"Technology";New technology;tx90p_7	;0;0;-6.7293;-10.7045;-6.9112;-17.2461;-25.7291;-37.9739;-45.247
+3;45;"San_Diego";  "Transition Risk";"Market";Reputation damage;tx90p_5	;0;0;-6.7293;-10.7045;-6.9112;-17.2461;-25.7291;-37.9739;-45.247
+3;45;"San_Diego";  "Transition Risk";"Reputation";Materials cost;tx90p_10	;0;0;-6.7293;-10.7045;-6.9112;-17.2461;-25.7291;-37.9739;-45.247
+3;45;"San_Diego";  "Physical Risk";"Acute";Storm damage;tx90p_70	;0;0;-6.7293;-10.7045;-6.9112;-17.2461;-25.7291;-37.9739;-45.247
+3;45;"San_Diego";  "Physical Risk";"Acute";Employee impacts;tx90p_6	;0;0;-6.7293;-10.7045;-6.9112;-17.2461;-25.7291;-37.9739;-45.247
+3;45;"San_Diego";  "Physical Risk";"Chronic";Temperature extremes;tx90p_100	;0;0;-6.7293;-10.7045;-6.9112;-17.2461;-25.7291;-37.9739;-45.247
+3;45;"San_Diego";  "Physical Risk";"Chronic";Coastal flooding;coastalflood_100	;-1.265;-5.1353;-24.2748;-30;-30;-30;-30;-30;-30
+3;45;"San_Diego";  "Opportunity";"Resource Efficiency";Energy Efficiency;tx90p_16	;0;0;-6.7293;-10.7045;-6.9112;-17.2461;-25.7291;-37.9739;-45.247
+3;45;"San_Diego";  "Opportunity";"Resource Efficiency";Water Efficiency;tx90p_18	;0;0;-6.7293;-10.7045;-6.9112;-17.2461;-25.7291;-37.9739;-45.247
+3;45;"San_Diego";  "Opportunity";"Resource Efficiency";Materials Efficiency;tx90p_12	;0;0;-6.7293;-10.7045;-6.9112;-17.2461;-25.7291;-37.9739;-45.247
+3;45;"San_Diego";  "Opportunity";"Energy Source";Renewable price stability;tx90p_3	;0;0;-6.7293;-10.7045;-6.9112;-17.2461;-25.7291;-37.9739;-45.247
+3;45;"San_Diego";  "Opportunity";"Resilience";Energy resilience;tx90p_15	;0;0;-6.7293;-10.7045;-6.9112;-17.2461;-25.7291;-37.9739;-45.247
+3;45;"San_Diego";  "Physical Risk";"Chronic";Drought;pdsisc_100	;-10;-5;0;0;0;-10;-30;-20;-20

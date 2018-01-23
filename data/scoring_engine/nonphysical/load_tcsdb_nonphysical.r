@@ -27,6 +27,7 @@ dbsheet10 = read_excel(db,10)
 
 locall = dbsheet3
 loc= dbsheet3 %>% select(ParentCorpID, LocationID, LocationName)
+corp = dbsheet4
 cat = dbsheet5
 subcat = dbsheet6 %>% select(TCFDSubCatID, TCFDCategoryID, TCFDSubCatName)
 riskfac = dbsheet7
@@ -37,4 +38,5 @@ write.table(locall,"./data/scoring_engine/nonphysical/locations4SE.csv", sep=";"
 write.table(riskfac,"./data/scoring_engine/nonphysical/riskfactors.csv", sep=";")
 write.table(subcat,"./data/scoring_engine/nonphysical/subcat.csv", sep=";")
 write.table(cat,"./data/scoring_engine/nonphysical/cat.csv", sep=";")
+write.table(corp,"./data/scoring_engine/nonphysical/corp.csv", sep=";")
 
