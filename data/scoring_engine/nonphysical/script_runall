@@ -3,7 +3,7 @@
 # TT - January 2017
 
 # Execution:  	./script_runall <physical damages file>
-# Example:	./script_runall TCSDB_structure_v3_locations.csv.damages.allDFs
+# Example:	./script_runall TCSDB_structure_locations.csv.damages.allDFs
 
 # Get input.
 alldamages=$1
@@ -13,8 +13,11 @@ alldamages=$1
 cd ../../..
 Rscript ./data/scoring_engine/nonphysical/load_tcsdb_nonphysical.r 
 
-# Run the non-physical scoring.  This assumes that the physical scoring has already been run in ./data/scoring_engine.
+# Run the non-physical scoring.  
+# This assumes that the physical scoring has already been run in ./data/scoring_engine generating the alldamages input file called above.
+# It also assumes that this file is present in the scoring_engine directory.
 cd ./data/scoring_engine/nonphysical/
+cp ../$alldamages ./
 ./script_build_nonphysical_v1 locations.csv riskfactors.csv subcat.csv cat.csv $alldamages corp.csv
 
 

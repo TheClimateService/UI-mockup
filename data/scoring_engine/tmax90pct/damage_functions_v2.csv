@@ -1,0 +1,10 @@
+id,source,descripiion,xvariable,xunits,yvariable,yunits,nvalues,list_xvalues,list_yvalues
+tx90p-1,test,average system response to tmax90p,tmax90p,percent,productivity,percent,6,0;20;40;60;80;100,100;100;90;70;50;30
+tx90p-2,test,high system response to tmax90p,tmax90p,percent,productivity,percent,6,0;20;40;60;80;100,100;90;70;50;30;10
+tx90p-3,test,low system response to tmax90p,tmax90p,percent,productivity,percent,6,0;20;40;60;80;100,100;100;100;90;80;70
+pdsisc-1,test,average system response to psdisc,annual probability of pdsisc below historical 10th percentile,fraction,productivity,percent,9,0;0.1;0.2;0.4;0.6;0.8;1;5;10,100;100;100;90;70;50;30;10;0
+pdsisc-2,test,high system response to psdisc,annual probability of pdsisc below historical 10th percentile,fraction,productivity,percent,9,0;0.1;0.2;0.4;0.6;0.8;1;5;10,100;100;90;70;50;30;10;0;0
+pdsisc-3,test,low system response to psdisc,annual probability of pdsisc below historical 10th percentile,fraction,productivity,percent,9,0;0.1;0.2;0.4;0.6;0.8;1;5;10,100;100;100;100;90;80;70;50;30
+coastalflood-1,test,average system response to coastal flood,annual probability of historical 100-year flood,fraction,productivity,percent,12,0;0.2;0.4;0.6;0.8;1;5;10,100;100;90;70;50;30;10;0;0;0;0;0
+coastalflood-2,test,high system response to coastal flood,annual probability of historical 100-year flood,fraction,productivity,percent,12,"0;0.01;0.1;0.2;0.3;0.4;0.5,0.6;0.7;0.8;0.9;1.0",100;100;70;50;30;10;0;0;0;0;0;0
+coastalflood-3,test,low system response to coastal flood,annual probability of historical 100-year flood,fraction,productivity,percent,12,"0;0.01;0.1;0.2;0.3;0.4;0.5,0.6;0.7;0.8;0.9;1.0",100;100;100;90;70;50;30;10;0;0;0;0

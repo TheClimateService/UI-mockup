@@ -1,139 +1,409 @@
 Location,TCFDCategoryName,TCFDSubCatName,RiskFactorName,ScenarioName,RiskYear,ValueAtRisk,ParentCorpID
-Boise,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2010,0,1
-Boise,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2020,0,1
-Boise,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2030,0.77658,1
-Boise,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2040,0.71754,1
-Boise,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2050,0.4902,1
-Boise,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2060,2.03208,1
-Boise,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2070,3.61104,1
-Boise,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2080,6.35928,1
-Boise,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2090,9.94692,1
-Boise,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2010,0,1
-Boise,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2020,0,1
-Boise,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2030,0.103544,1
-Boise,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2040,0.095672,1
-Boise,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2050,0.06536,1
-Boise,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2060,0.270944,1
-Boise,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2070,0.481472,1
-Boise,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2080,0.847904,1
-Boise,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2090,1.32626,1
-Boise,  Transition Risk,Technology,New technology ,RCP8.5,2010,0,1
-Boise,  Transition Risk,Technology,New technology ,RCP8.5,2020,0,1
-Boise,  Transition Risk,Technology,New technology ,RCP8.5,2030,0.090601,1
-Boise,  Transition Risk,Technology,New technology ,RCP8.5,2040,0.083713,1
-Boise,  Transition Risk,Technology,New technology ,RCP8.5,2050,0.05719,1
-Boise,  Transition Risk,Technology,New technology ,RCP8.5,2060,0.237076,1
-Boise,  Transition Risk,Technology,New technology ,RCP8.5,2070,0.421288,1
-Boise,  Transition Risk,Technology,New technology ,RCP8.5,2080,0.741916,1
-Boise,  Transition Risk,Technology,New technology ,RCP8.5,2090,1.16047,1
-Boise,  Transition Risk,Market,Reputation damage ,RCP8.5,2010,0,1
-Boise,  Transition Risk,Market,Reputation damage ,RCP8.5,2020,0,1
-Boise,  Transition Risk,Market,Reputation damage ,RCP8.5,2030,0.064715,1
-Boise,  Transition Risk,Market,Reputation damage ,RCP8.5,2040,0.059795,1
-Boise,  Transition Risk,Market,Reputation damage ,RCP8.5,2050,0.04085,1
-Boise,  Transition Risk,Market,Reputation damage ,RCP8.5,2060,0.16934,1
-Boise,  Transition Risk,Market,Reputation damage ,RCP8.5,2070,0.30092,1
-Boise,  Transition Risk,Market,Reputation damage ,RCP8.5,2080,0.52994,1
-Boise,  Transition Risk,Market,Reputation damage ,RCP8.5,2090,0.82891,1
-Boise,  Transition Risk,Reputation,Materials cost ,RCP8.5,2010,0,1
-Boise,  Transition Risk,Reputation,Materials cost ,RCP8.5,2020,0,1
-Boise,  Transition Risk,Reputation,Materials cost ,RCP8.5,2030,0.12943,1
-Boise,  Transition Risk,Reputation,Materials cost ,RCP8.5,2040,0.11959,1
-Boise,  Transition Risk,Reputation,Materials cost ,RCP8.5,2050,0.0817,1
-Boise,  Transition Risk,Reputation,Materials cost ,RCP8.5,2060,0.33868,1
-Boise,  Transition Risk,Reputation,Materials cost ,RCP8.5,2070,0.60184,1
-Boise,  Transition Risk,Reputation,Materials cost ,RCP8.5,2080,1.05988,1
-Boise,  Transition Risk,Reputation,Materials cost ,RCP8.5,2090,1.65782,1
-Boise,  Physical Risk,Acute,Storm damage ,RCP8.5,2010,0,1
-Boise,  Physical Risk,Acute,Storm damage ,RCP8.5,2020,0,1
-Boise,  Physical Risk,Acute,Storm damage ,RCP8.5,2030,0.90601,1
-Boise,  Physical Risk,Acute,Storm damage ,RCP8.5,2040,0.83713,1
-Boise,  Physical Risk,Acute,Storm damage ,RCP8.5,2050,0.5719,1
-Boise,  Physical Risk,Acute,Storm damage ,RCP8.5,2060,2.37076,1
-Boise,  Physical Risk,Acute,Storm damage ,RCP8.5,2070,4.21288,1
-Boise,  Physical Risk,Acute,Storm damage ,RCP8.5,2080,7.41916,1
-Boise,  Physical Risk,Acute,Storm damage ,RCP8.5,2090,11.6047,1
-Boise,  Physical Risk,Acute,Employee impacts ,RCP8.5,2010,0,1
-Boise,  Physical Risk,Acute,Employee impacts ,RCP8.5,2020,0,1
-Boise,  Physical Risk,Acute,Employee impacts ,RCP8.5,2030,0.077658,1
-Boise,  Physical Risk,Acute,Employee impacts ,RCP8.5,2040,0.071754,1
-Boise,  Physical Risk,Acute,Employee impacts ,RCP8.5,2050,0.04902,1
-Boise,  Physical Risk,Acute,Employee impacts ,RCP8.5,2060,0.203208,1
-Boise,  Physical Risk,Acute,Employee impacts ,RCP8.5,2070,0.361104,1
-Boise,  Physical Risk,Acute,Employee impacts ,RCP8.5,2080,0.635928,1
-Boise,  Physical Risk,Acute,Employee impacts ,RCP8.5,2090,0.994692,1
-Boise,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2010,0,1
-Boise,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2020,0,1
-Boise,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2030,1.2943,1
-Boise,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2040,1.1959,1
-Boise,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2050,0.817,1
-Boise,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2060,3.3868,1
-Boise,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2070,6.0184,1
-Boise,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2080,10.5988,1
-Boise,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2090,16.5782,1
-Boise,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2010,0,1
-Boise,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2020,0,1
-Boise,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2030,0,1
-Boise,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2040,0,1
-Boise,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2050,0,1
-Boise,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2060,0,1
-Boise,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2070,0,1
-Boise,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2080,0,1
-Boise,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2090,0,1
-Boise,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2010,0,1
-Boise,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2020,0,1
-Boise,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2030,0.207088,1
-Boise,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2040,0.191344,1
-Boise,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2050,0.13072,1
-Boise,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2060,0.541888,1
-Boise,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2070,0.962944,1
-Boise,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2080,1.69581,1
-Boise,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2090,2.65251,1
-Boise,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2010,0,1
-Boise,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2020,0,1
-Boise,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2030,0.232974,1
-Boise,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2040,0.215262,1
-Boise,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2050,0.14706,1
-Boise,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2060,0.609624,1
-Boise,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2070,1.08331,1
-Boise,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2080,1.90778,1
-Boise,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2090,2.98408,1
-Boise,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2010,0,1
-Boise,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2020,0,1
-Boise,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2030,0.155316,1
-Boise,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2040,0.143508,1
-Boise,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2050,0.09804,1
-Boise,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2060,0.406416,1
-Boise,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2070,0.722208,1
-Boise,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2080,1.27186,1
-Boise,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2090,1.98938,1
-Boise,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2010,0,1
-Boise,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2020,0,1
-Boise,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2030,0.038829,1
-Boise,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2040,0.035877,1
-Boise,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2050,0.02451,1
-Boise,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2060,0.101604,1
-Boise,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2070,0.180552,1
-Boise,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2080,0.317964,1
-Boise,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2090,0.497346,1
-Boise,  Opportunity,Resilience,Energy resilience ,RCP8.5,2010,0,1
-Boise,  Opportunity,Resilience,Energy resilience ,RCP8.5,2020,0,1
-Boise,  Opportunity,Resilience,Energy resilience ,RCP8.5,2030,0.194145,1
-Boise,  Opportunity,Resilience,Energy resilience ,RCP8.5,2040,0.179385,1
-Boise,  Opportunity,Resilience,Energy resilience ,RCP8.5,2050,0.12255,1
-Boise,  Opportunity,Resilience,Energy resilience ,RCP8.5,2060,0.50802,1
-Boise,  Opportunity,Resilience,Energy resilience ,RCP8.5,2070,0.90276,1
-Boise,  Opportunity,Resilience,Energy resilience ,RCP8.5,2080,1.58982,1
-Boise,  Opportunity,Resilience,Energy resilience ,RCP8.5,2090,2.48673,1
-Boise,  Physical Risk,Chronic,Drought ,RCP8.5,2010,50,1
-Boise,  Physical Risk,Chronic,Drought ,RCP8.5,2020,10,1
-Boise,  Physical Risk,Chronic,Drought ,RCP8.5,2030,20,1
-Boise,  Physical Risk,Chronic,Drought ,RCP8.5,2040,60,1
-Boise,  Physical Risk,Chronic,Drought ,RCP8.5,2050,50,1
-Boise,  Physical Risk,Chronic,Drought ,RCP8.5,2060,70,1
-Boise,  Physical Risk,Chronic,Drought ,RCP8.5,2070,80,1
-Boise,  Physical Risk,Chronic,Drought ,RCP8.5,2080,70,1
-Boise,  Physical Risk,Chronic,Drought ,RCP8.5,2090,60,1
+BoiseInfra,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2010,0,1
+BoiseInfra,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2020,0,1
+BoiseInfra,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2030,0.77658,1
+BoiseInfra,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2040,0.71754,1
+BoiseInfra,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2050,0.4902,1
+BoiseInfra,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2060,2.03208,1
+BoiseInfra,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2070,3.61104,1
+BoiseInfra,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2080,6.35928,1
+BoiseInfra,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2090,9.94692,1
+BoiseInfra,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2010,0,1
+BoiseInfra,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2020,0,1
+BoiseInfra,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2030,0.103544,1
+BoiseInfra,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2040,0.095672,1
+BoiseInfra,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2050,0.06536,1
+BoiseInfra,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2060,0.270944,1
+BoiseInfra,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2070,0.481472,1
+BoiseInfra,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2080,0.847904,1
+BoiseInfra,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2090,1.32626,1
+BoiseInfra,  Transition Risk,Technology,New technology ,RCP8.5,2010,0,1
+BoiseInfra,  Transition Risk,Technology,New technology ,RCP8.5,2020,0,1
+BoiseInfra,  Transition Risk,Technology,New technology ,RCP8.5,2030,0.090601,1
+BoiseInfra,  Transition Risk,Technology,New technology ,RCP8.5,2040,0.083713,1
+BoiseInfra,  Transition Risk,Technology,New technology ,RCP8.5,2050,0.05719,1
+BoiseInfra,  Transition Risk,Technology,New technology ,RCP8.5,2060,0.237076,1
+BoiseInfra,  Transition Risk,Technology,New technology ,RCP8.5,2070,0.421288,1
+BoiseInfra,  Transition Risk,Technology,New technology ,RCP8.5,2080,0.741916,1
+BoiseInfra,  Transition Risk,Technology,New technology ,RCP8.5,2090,1.16047,1
+BoiseInfra,  Transition Risk,Market,Reputation damage ,RCP8.5,2010,0,1
+BoiseInfra,  Transition Risk,Market,Reputation damage ,RCP8.5,2020,0,1
+BoiseInfra,  Transition Risk,Market,Reputation damage ,RCP8.5,2030,0.064715,1
+BoiseInfra,  Transition Risk,Market,Reputation damage ,RCP8.5,2040,0.059795,1
+BoiseInfra,  Transition Risk,Market,Reputation damage ,RCP8.5,2050,0.04085,1
+BoiseInfra,  Transition Risk,Market,Reputation damage ,RCP8.5,2060,0.16934,1
+BoiseInfra,  Transition Risk,Market,Reputation damage ,RCP8.5,2070,0.30092,1
+BoiseInfra,  Transition Risk,Market,Reputation damage ,RCP8.5,2080,0.52994,1
+BoiseInfra,  Transition Risk,Market,Reputation damage ,RCP8.5,2090,0.82891,1
+BoiseInfra,  Transition Risk,Reputation,Materials cost ,RCP8.5,2010,0,1
+BoiseInfra,  Transition Risk,Reputation,Materials cost ,RCP8.5,2020,0,1
+BoiseInfra,  Transition Risk,Reputation,Materials cost ,RCP8.5,2030,0.12943,1
+BoiseInfra,  Transition Risk,Reputation,Materials cost ,RCP8.5,2040,0.11959,1
+BoiseInfra,  Transition Risk,Reputation,Materials cost ,RCP8.5,2050,0.0817,1
+BoiseInfra,  Transition Risk,Reputation,Materials cost ,RCP8.5,2060,0.33868,1
+BoiseInfra,  Transition Risk,Reputation,Materials cost ,RCP8.5,2070,0.60184,1
+BoiseInfra,  Transition Risk,Reputation,Materials cost ,RCP8.5,2080,1.05988,1
+BoiseInfra,  Transition Risk,Reputation,Materials cost ,RCP8.5,2090,1.65782,1
+BoiseInfra,  Physical Risk,Acute,Storm damage ,RCP8.5,2010,0,1
+BoiseInfra,  Physical Risk,Acute,Storm damage ,RCP8.5,2020,0,1
+BoiseInfra,  Physical Risk,Acute,Storm damage ,RCP8.5,2030,0.90601,1
+BoiseInfra,  Physical Risk,Acute,Storm damage ,RCP8.5,2040,0.83713,1
+BoiseInfra,  Physical Risk,Acute,Storm damage ,RCP8.5,2050,0.5719,1
+BoiseInfra,  Physical Risk,Acute,Storm damage ,RCP8.5,2060,2.37076,1
+BoiseInfra,  Physical Risk,Acute,Storm damage ,RCP8.5,2070,4.21288,1
+BoiseInfra,  Physical Risk,Acute,Storm damage ,RCP8.5,2080,7.41916,1
+BoiseInfra,  Physical Risk,Acute,Storm damage ,RCP8.5,2090,11.6047,1
+BoiseInfra,  Physical Risk,Acute,Employee impacts ,RCP8.5,2010,0,1
+BoiseInfra,  Physical Risk,Acute,Employee impacts ,RCP8.5,2020,0,1
+BoiseInfra,  Physical Risk,Acute,Employee impacts ,RCP8.5,2030,0.077658,1
+BoiseInfra,  Physical Risk,Acute,Employee impacts ,RCP8.5,2040,0.071754,1
+BoiseInfra,  Physical Risk,Acute,Employee impacts ,RCP8.5,2050,0.04902,1
+BoiseInfra,  Physical Risk,Acute,Employee impacts ,RCP8.5,2060,0.203208,1
+BoiseInfra,  Physical Risk,Acute,Employee impacts ,RCP8.5,2070,0.361104,1
+BoiseInfra,  Physical Risk,Acute,Employee impacts ,RCP8.5,2080,0.635928,1
+BoiseInfra,  Physical Risk,Acute,Employee impacts ,RCP8.5,2090,0.994692,1
+BoiseInfra,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2010,0,1
+BoiseInfra,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2020,0,1
+BoiseInfra,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2030,1.2943,1
+BoiseInfra,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2040,1.1959,1
+BoiseInfra,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2050,0.817,1
+BoiseInfra,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2060,3.3868,1
+BoiseInfra,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2070,6.0184,1
+BoiseInfra,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2080,10.5988,1
+BoiseInfra,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2090,16.5782,1
+BoiseInfra,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2010,0,1
+BoiseInfra,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2020,0,1
+BoiseInfra,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2030,0,1
+BoiseInfra,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2040,0,1
+BoiseInfra,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2050,0,1
+BoiseInfra,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2060,0,1
+BoiseInfra,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2070,0,1
+BoiseInfra,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2080,0,1
+BoiseInfra,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2090,0,1
+BoiseInfra,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2010,0,1
+BoiseInfra,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2020,0,1
+BoiseInfra,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2030,0.207088,1
+BoiseInfra,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2040,0.191344,1
+BoiseInfra,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2050,0.13072,1
+BoiseInfra,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2060,0.541888,1
+BoiseInfra,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2070,0.962944,1
+BoiseInfra,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2080,1.69581,1
+BoiseInfra,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2090,2.65251,1
+BoiseInfra,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2010,0,1
+BoiseInfra,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2020,0,1
+BoiseInfra,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2030,0.232974,1
+BoiseInfra,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2040,0.215262,1
+BoiseInfra,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2050,0.14706,1
+BoiseInfra,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2060,0.609624,1
+BoiseInfra,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2070,1.08331,1
+BoiseInfra,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2080,1.90778,1
+BoiseInfra,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2090,2.98408,1
+BoiseInfra,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2010,0,1
+BoiseInfra,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2020,0,1
+BoiseInfra,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2030,0.155316,1
+BoiseInfra,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2040,0.143508,1
+BoiseInfra,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2050,0.09804,1
+BoiseInfra,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2060,0.406416,1
+BoiseInfra,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2070,0.722208,1
+BoiseInfra,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2080,1.27186,1
+BoiseInfra,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2090,1.98938,1
+BoiseInfra,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2010,0,1
+BoiseInfra,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2020,0,1
+BoiseInfra,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2030,0.038829,1
+BoiseInfra,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2040,0.035877,1
+BoiseInfra,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2050,0.02451,1
+BoiseInfra,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2060,0.101604,1
+BoiseInfra,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2070,0.180552,1
+BoiseInfra,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2080,0.317964,1
+BoiseInfra,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2090,0.497346,1
+BoiseInfra,  Opportunity,Resilience,Energy resilience ,RCP8.5,2010,0,1
+BoiseInfra,  Opportunity,Resilience,Energy resilience ,RCP8.5,2020,0,1
+BoiseInfra,  Opportunity,Resilience,Energy resilience ,RCP8.5,2030,0.194145,1
+BoiseInfra,  Opportunity,Resilience,Energy resilience ,RCP8.5,2040,0.179385,1
+BoiseInfra,  Opportunity,Resilience,Energy resilience ,RCP8.5,2050,0.12255,1
+BoiseInfra,  Opportunity,Resilience,Energy resilience ,RCP8.5,2060,0.50802,1
+BoiseInfra,  Opportunity,Resilience,Energy resilience ,RCP8.5,2070,0.90276,1
+BoiseInfra,  Opportunity,Resilience,Energy resilience ,RCP8.5,2080,1.58982,1
+BoiseInfra,  Opportunity,Resilience,Energy resilience ,RCP8.5,2090,2.48673,1
+BoiseInfra,  Physical Risk,Chronic,Drought ,RCP8.5,2010,30,1
+BoiseInfra,  Physical Risk,Chronic,Drought ,RCP8.5,2020,0,1
+BoiseInfra,  Physical Risk,Chronic,Drought ,RCP8.5,2030,5,1
+BoiseInfra,  Physical Risk,Chronic,Drought ,RCP8.5,2040,40,1
+BoiseInfra,  Physical Risk,Chronic,Drought ,RCP8.5,2050,30,1
+BoiseInfra,  Physical Risk,Chronic,Drought ,RCP8.5,2060,50,1
+BoiseInfra,  Physical Risk,Chronic,Drought ,RCP8.5,2070,60,1
+BoiseInfra,  Physical Risk,Chronic,Drought ,RCP8.5,2080,50,1
+BoiseInfra,  Physical Risk,Chronic,Drought ,RCP8.5,2090,40,1
+BoiseHuman,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2010,0,1
+BoiseHuman,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2020,0,1
+BoiseHuman,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2030,0.77658,1
+BoiseHuman,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2040,0.71754,1
+BoiseHuman,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2050,0.4902,1
+BoiseHuman,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2060,2.03208,1
+BoiseHuman,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2070,3.61104,1
+BoiseHuman,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2080,6.35928,1
+BoiseHuman,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2090,9.94692,1
+BoiseHuman,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2010,0,1
+BoiseHuman,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2020,0,1
+BoiseHuman,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2030,0.103544,1
+BoiseHuman,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2040,0.095672,1
+BoiseHuman,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2050,0.06536,1
+BoiseHuman,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2060,0.270944,1
+BoiseHuman,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2070,0.481472,1
+BoiseHuman,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2080,0.847904,1
+BoiseHuman,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2090,1.32626,1
+BoiseHuman,  Transition Risk,Technology,New technology ,RCP8.5,2010,0,1
+BoiseHuman,  Transition Risk,Technology,New technology ,RCP8.5,2020,0,1
+BoiseHuman,  Transition Risk,Technology,New technology ,RCP8.5,2030,0.090601,1
+BoiseHuman,  Transition Risk,Technology,New technology ,RCP8.5,2040,0.083713,1
+BoiseHuman,  Transition Risk,Technology,New technology ,RCP8.5,2050,0.05719,1
+BoiseHuman,  Transition Risk,Technology,New technology ,RCP8.5,2060,0.237076,1
+BoiseHuman,  Transition Risk,Technology,New technology ,RCP8.5,2070,0.421288,1
+BoiseHuman,  Transition Risk,Technology,New technology ,RCP8.5,2080,0.741916,1
+BoiseHuman,  Transition Risk,Technology,New technology ,RCP8.5,2090,1.16047,1
+BoiseHuman,  Transition Risk,Market,Reputation damage ,RCP8.5,2010,0,1
+BoiseHuman,  Transition Risk,Market,Reputation damage ,RCP8.5,2020,0,1
+BoiseHuman,  Transition Risk,Market,Reputation damage ,RCP8.5,2030,0.064715,1
+BoiseHuman,  Transition Risk,Market,Reputation damage ,RCP8.5,2040,0.059795,1
+BoiseHuman,  Transition Risk,Market,Reputation damage ,RCP8.5,2050,0.04085,1
+BoiseHuman,  Transition Risk,Market,Reputation damage ,RCP8.5,2060,0.16934,1
+BoiseHuman,  Transition Risk,Market,Reputation damage ,RCP8.5,2070,0.30092,1
+BoiseHuman,  Transition Risk,Market,Reputation damage ,RCP8.5,2080,0.52994,1
+BoiseHuman,  Transition Risk,Market,Reputation damage ,RCP8.5,2090,0.82891,1
+BoiseHuman,  Transition Risk,Reputation,Materials cost ,RCP8.5,2010,0,1
+BoiseHuman,  Transition Risk,Reputation,Materials cost ,RCP8.5,2020,0,1
+BoiseHuman,  Transition Risk,Reputation,Materials cost ,RCP8.5,2030,0.12943,1
+BoiseHuman,  Transition Risk,Reputation,Materials cost ,RCP8.5,2040,0.11959,1
+BoiseHuman,  Transition Risk,Reputation,Materials cost ,RCP8.5,2050,0.0817,1
+BoiseHuman,  Transition Risk,Reputation,Materials cost ,RCP8.5,2060,0.33868,1
+BoiseHuman,  Transition Risk,Reputation,Materials cost ,RCP8.5,2070,0.60184,1
+BoiseHuman,  Transition Risk,Reputation,Materials cost ,RCP8.5,2080,1.05988,1
+BoiseHuman,  Transition Risk,Reputation,Materials cost ,RCP8.5,2090,1.65782,1
+BoiseHuman,  Physical Risk,Acute,Storm damage ,RCP8.5,2010,0,1
+BoiseHuman,  Physical Risk,Acute,Storm damage ,RCP8.5,2020,0,1
+BoiseHuman,  Physical Risk,Acute,Storm damage ,RCP8.5,2030,0.90601,1
+BoiseHuman,  Physical Risk,Acute,Storm damage ,RCP8.5,2040,0.83713,1
+BoiseHuman,  Physical Risk,Acute,Storm damage ,RCP8.5,2050,0.5719,1
+BoiseHuman,  Physical Risk,Acute,Storm damage ,RCP8.5,2060,2.37076,1
+BoiseHuman,  Physical Risk,Acute,Storm damage ,RCP8.5,2070,4.21288,1
+BoiseHuman,  Physical Risk,Acute,Storm damage ,RCP8.5,2080,7.41916,1
+BoiseHuman,  Physical Risk,Acute,Storm damage ,RCP8.5,2090,11.6047,1
+BoiseHuman,  Physical Risk,Acute,Employee impacts ,RCP8.5,2010,0,1
+BoiseHuman,  Physical Risk,Acute,Employee impacts ,RCP8.5,2020,0,1
+BoiseHuman,  Physical Risk,Acute,Employee impacts ,RCP8.5,2030,0.077658,1
+BoiseHuman,  Physical Risk,Acute,Employee impacts ,RCP8.5,2040,0.071754,1
+BoiseHuman,  Physical Risk,Acute,Employee impacts ,RCP8.5,2050,0.04902,1
+BoiseHuman,  Physical Risk,Acute,Employee impacts ,RCP8.5,2060,0.203208,1
+BoiseHuman,  Physical Risk,Acute,Employee impacts ,RCP8.5,2070,0.361104,1
+BoiseHuman,  Physical Risk,Acute,Employee impacts ,RCP8.5,2080,0.635928,1
+BoiseHuman,  Physical Risk,Acute,Employee impacts ,RCP8.5,2090,0.994692,1
+BoiseHuman,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2010,0,1
+BoiseHuman,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2020,0,1
+BoiseHuman,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2030,1.2943,1
+BoiseHuman,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2040,1.1959,1
+BoiseHuman,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2050,0.817,1
+BoiseHuman,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2060,3.3868,1
+BoiseHuman,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2070,6.0184,1
+BoiseHuman,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2080,10.5988,1
+BoiseHuman,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2090,16.5782,1
+BoiseHuman,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2010,0,1
+BoiseHuman,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2020,0,1
+BoiseHuman,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2030,0,1
+BoiseHuman,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2040,0,1
+BoiseHuman,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2050,0,1
+BoiseHuman,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2060,0,1
+BoiseHuman,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2070,0,1
+BoiseHuman,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2080,0,1
+BoiseHuman,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2090,0,1
+BoiseHuman,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2010,0,1
+BoiseHuman,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2020,0,1
+BoiseHuman,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2030,0.207088,1
+BoiseHuman,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2040,0.191344,1
+BoiseHuman,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2050,0.13072,1
+BoiseHuman,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2060,0.541888,1
+BoiseHuman,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2070,0.962944,1
+BoiseHuman,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2080,1.69581,1
+BoiseHuman,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2090,2.65251,1
+BoiseHuman,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2010,0,1
+BoiseHuman,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2020,0,1
+BoiseHuman,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2030,0.232974,1
+BoiseHuman,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2040,0.215262,1
+BoiseHuman,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2050,0.14706,1
+BoiseHuman,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2060,0.609624,1
+BoiseHuman,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2070,1.08331,1
+BoiseHuman,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2080,1.90778,1
+BoiseHuman,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2090,2.98408,1
+BoiseHuman,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2010,0,1
+BoiseHuman,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2020,0,1
+BoiseHuman,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2030,0.155316,1
+BoiseHuman,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2040,0.143508,1
+BoiseHuman,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2050,0.09804,1
+BoiseHuman,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2060,0.406416,1
+BoiseHuman,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2070,0.722208,1
+BoiseHuman,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2080,1.27186,1
+BoiseHuman,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2090,1.98938,1
+BoiseHuman,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2010,0,1
+BoiseHuman,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2020,0,1
+BoiseHuman,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2030,0.038829,1
+BoiseHuman,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2040,0.035877,1
+BoiseHuman,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2050,0.02451,1
+BoiseHuman,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2060,0.101604,1
+BoiseHuman,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2070,0.180552,1
+BoiseHuman,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2080,0.317964,1
+BoiseHuman,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2090,0.497346,1
+BoiseHuman,  Opportunity,Resilience,Energy resilience ,RCP8.5,2010,0,1
+BoiseHuman,  Opportunity,Resilience,Energy resilience ,RCP8.5,2020,0,1
+BoiseHuman,  Opportunity,Resilience,Energy resilience ,RCP8.5,2030,0.194145,1
+BoiseHuman,  Opportunity,Resilience,Energy resilience ,RCP8.5,2040,0.179385,1
+BoiseHuman,  Opportunity,Resilience,Energy resilience ,RCP8.5,2050,0.12255,1
+BoiseHuman,  Opportunity,Resilience,Energy resilience ,RCP8.5,2060,0.50802,1
+BoiseHuman,  Opportunity,Resilience,Energy resilience ,RCP8.5,2070,0.90276,1
+BoiseHuman,  Opportunity,Resilience,Energy resilience ,RCP8.5,2080,1.58982,1
+BoiseHuman,  Opportunity,Resilience,Energy resilience ,RCP8.5,2090,2.48673,1
+BoiseHuman,  Physical Risk,Chronic,Drought ,RCP8.5,2010,30,1
+BoiseHuman,  Physical Risk,Chronic,Drought ,RCP8.5,2020,0,1
+BoiseHuman,  Physical Risk,Chronic,Drought ,RCP8.5,2030,5,1
+BoiseHuman,  Physical Risk,Chronic,Drought ,RCP8.5,2040,40,1
+BoiseHuman,  Physical Risk,Chronic,Drought ,RCP8.5,2050,30,1
+BoiseHuman,  Physical Risk,Chronic,Drought ,RCP8.5,2060,50,1
+BoiseHuman,  Physical Risk,Chronic,Drought ,RCP8.5,2070,60,1
+BoiseHuman,  Physical Risk,Chronic,Drought ,RCP8.5,2080,50,1
+BoiseHuman,  Physical Risk,Chronic,Drought ,RCP8.5,2090,40,1
+BoiseEnergy,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2010,0,1
+BoiseEnergy,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2020,0,1
+BoiseEnergy,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2030,0.77658,1
+BoiseEnergy,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2040,0.71754,1
+BoiseEnergy,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2050,0.4902,1
+BoiseEnergy,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2060,2.03208,1
+BoiseEnergy,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2070,3.61104,1
+BoiseEnergy,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2080,6.35928,1
+BoiseEnergy,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2090,9.94692,1
+BoiseEnergy,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2010,0,1
+BoiseEnergy,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2020,0,1
+BoiseEnergy,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2030,0.103544,1
+BoiseEnergy,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2040,0.095672,1
+BoiseEnergy,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2050,0.06536,1
+BoiseEnergy,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2060,0.270944,1
+BoiseEnergy,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2070,0.481472,1
+BoiseEnergy,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2080,0.847904,1
+BoiseEnergy,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2090,1.32626,1
+BoiseEnergy,  Transition Risk,Technology,New technology ,RCP8.5,2010,0,1
+BoiseEnergy,  Transition Risk,Technology,New technology ,RCP8.5,2020,0,1
+BoiseEnergy,  Transition Risk,Technology,New technology ,RCP8.5,2030,0.090601,1
+BoiseEnergy,  Transition Risk,Technology,New technology ,RCP8.5,2040,0.083713,1
+BoiseEnergy,  Transition Risk,Technology,New technology ,RCP8.5,2050,0.05719,1
+BoiseEnergy,  Transition Risk,Technology,New technology ,RCP8.5,2060,0.237076,1
+BoiseEnergy,  Transition Risk,Technology,New technology ,RCP8.5,2070,0.421288,1
+BoiseEnergy,  Transition Risk,Technology,New technology ,RCP8.5,2080,0.741916,1
+BoiseEnergy,  Transition Risk,Technology,New technology ,RCP8.5,2090,1.16047,1
+BoiseEnergy,  Transition Risk,Market,Reputation damage ,RCP8.5,2010,0,1
+BoiseEnergy,  Transition Risk,Market,Reputation damage ,RCP8.5,2020,0,1
+BoiseEnergy,  Transition Risk,Market,Reputation damage ,RCP8.5,2030,0.064715,1
+BoiseEnergy,  Transition Risk,Market,Reputation damage ,RCP8.5,2040,0.059795,1
+BoiseEnergy,  Transition Risk,Market,Reputation damage ,RCP8.5,2050,0.04085,1
+BoiseEnergy,  Transition Risk,Market,Reputation damage ,RCP8.5,2060,0.16934,1
+BoiseEnergy,  Transition Risk,Market,Reputation damage ,RCP8.5,2070,0.30092,1
+BoiseEnergy,  Transition Risk,Market,Reputation damage ,RCP8.5,2080,0.52994,1
+BoiseEnergy,  Transition Risk,Market,Reputation damage ,RCP8.5,2090,0.82891,1
+BoiseEnergy,  Transition Risk,Reputation,Materials cost ,RCP8.5,2010,0,1
+BoiseEnergy,  Transition Risk,Reputation,Materials cost ,RCP8.5,2020,0,1
+BoiseEnergy,  Transition Risk,Reputation,Materials cost ,RCP8.5,2030,0.12943,1
+BoiseEnergy,  Transition Risk,Reputation,Materials cost ,RCP8.5,2040,0.11959,1
+BoiseEnergy,  Transition Risk,Reputation,Materials cost ,RCP8.5,2050,0.0817,1
+BoiseEnergy,  Transition Risk,Reputation,Materials cost ,RCP8.5,2060,0.33868,1
+BoiseEnergy,  Transition Risk,Reputation,Materials cost ,RCP8.5,2070,0.60184,1
+BoiseEnergy,  Transition Risk,Reputation,Materials cost ,RCP8.5,2080,1.05988,1
+BoiseEnergy,  Transition Risk,Reputation,Materials cost ,RCP8.5,2090,1.65782,1
+BoiseEnergy,  Physical Risk,Acute,Storm damage ,RCP8.5,2010,0,1
+BoiseEnergy,  Physical Risk,Acute,Storm damage ,RCP8.5,2020,0,1
+BoiseEnergy,  Physical Risk,Acute,Storm damage ,RCP8.5,2030,0.90601,1
+BoiseEnergy,  Physical Risk,Acute,Storm damage ,RCP8.5,2040,0.83713,1
+BoiseEnergy,  Physical Risk,Acute,Storm damage ,RCP8.5,2050,0.5719,1
+BoiseEnergy,  Physical Risk,Acute,Storm damage ,RCP8.5,2060,2.37076,1
+BoiseEnergy,  Physical Risk,Acute,Storm damage ,RCP8.5,2070,4.21288,1
+BoiseEnergy,  Physical Risk,Acute,Storm damage ,RCP8.5,2080,7.41916,1
+BoiseEnergy,  Physical Risk,Acute,Storm damage ,RCP8.5,2090,11.6047,1
+BoiseEnergy,  Physical Risk,Acute,Employee impacts ,RCP8.5,2010,0,1
+BoiseEnergy,  Physical Risk,Acute,Employee impacts ,RCP8.5,2020,0,1
+BoiseEnergy,  Physical Risk,Acute,Employee impacts ,RCP8.5,2030,0.077658,1
+BoiseEnergy,  Physical Risk,Acute,Employee impacts ,RCP8.5,2040,0.071754,1
+BoiseEnergy,  Physical Risk,Acute,Employee impacts ,RCP8.5,2050,0.04902,1
+BoiseEnergy,  Physical Risk,Acute,Employee impacts ,RCP8.5,2060,0.203208,1
+BoiseEnergy,  Physical Risk,Acute,Employee impacts ,RCP8.5,2070,0.361104,1
+BoiseEnergy,  Physical Risk,Acute,Employee impacts ,RCP8.5,2080,0.635928,1
+BoiseEnergy,  Physical Risk,Acute,Employee impacts ,RCP8.5,2090,0.994692,1
+BoiseEnergy,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2010,0,1
+BoiseEnergy,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2020,0,1
+BoiseEnergy,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2030,1.2943,1
+BoiseEnergy,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2040,1.1959,1
+BoiseEnergy,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2050,0.817,1
+BoiseEnergy,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2060,3.3868,1
+BoiseEnergy,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2070,6.0184,1
+BoiseEnergy,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2080,10.5988,1
+BoiseEnergy,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2090,16.5782,1
+BoiseEnergy,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2010,0,1
+BoiseEnergy,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2020,0,1
+BoiseEnergy,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2030,0,1
+BoiseEnergy,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2040,0,1
+BoiseEnergy,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2050,0,1
+BoiseEnergy,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2060,0,1
+BoiseEnergy,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2070,0,1
+BoiseEnergy,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2080,0,1
+BoiseEnergy,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2090,0,1
+BoiseEnergy,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2010,0,1
+BoiseEnergy,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2020,0,1
+BoiseEnergy,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2030,0.207088,1
+BoiseEnergy,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2040,0.191344,1
+BoiseEnergy,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2050,0.13072,1
+BoiseEnergy,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2060,0.541888,1
+BoiseEnergy,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2070,0.962944,1
+BoiseEnergy,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2080,1.69581,1
+BoiseEnergy,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2090,2.65251,1
+BoiseEnergy,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2010,0,1
+BoiseEnergy,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2020,0,1
+BoiseEnergy,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2030,0.232974,1
+BoiseEnergy,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2040,0.215262,1
+BoiseEnergy,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2050,0.14706,1
+BoiseEnergy,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2060,0.609624,1
+BoiseEnergy,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2070,1.08331,1
+BoiseEnergy,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2080,1.90778,1
+BoiseEnergy,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2090,2.98408,1
+BoiseEnergy,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2010,0,1
+BoiseEnergy,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2020,0,1
+BoiseEnergy,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2030,0.155316,1
+BoiseEnergy,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2040,0.143508,1
+BoiseEnergy,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2050,0.09804,1
+BoiseEnergy,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2060,0.406416,1
+BoiseEnergy,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2070,0.722208,1
+BoiseEnergy,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2080,1.27186,1
+BoiseEnergy,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2090,1.98938,1
+BoiseEnergy,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2010,0,1
+BoiseEnergy,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2020,0,1
+BoiseEnergy,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2030,0.038829,1
+BoiseEnergy,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2040,0.035877,1
+BoiseEnergy,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2050,0.02451,1
+BoiseEnergy,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2060,0.101604,1
+BoiseEnergy,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2070,0.180552,1
+BoiseEnergy,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2080,0.317964,1
+BoiseEnergy,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2090,0.497346,1
+BoiseEnergy,  Opportunity,Resilience,Energy resilience ,RCP8.5,2010,0,1
+BoiseEnergy,  Opportunity,Resilience,Energy resilience ,RCP8.5,2020,0,1
+BoiseEnergy,  Opportunity,Resilience,Energy resilience ,RCP8.5,2030,0.194145,1
+BoiseEnergy,  Opportunity,Resilience,Energy resilience ,RCP8.5,2040,0.179385,1
+BoiseEnergy,  Opportunity,Resilience,Energy resilience ,RCP8.5,2050,0.12255,1
+BoiseEnergy,  Opportunity,Resilience,Energy resilience ,RCP8.5,2060,0.50802,1
+BoiseEnergy,  Opportunity,Resilience,Energy resilience ,RCP8.5,2070,0.90276,1
+BoiseEnergy,  Opportunity,Resilience,Energy resilience ,RCP8.5,2080,1.58982,1
+BoiseEnergy,  Opportunity,Resilience,Energy resilience ,RCP8.5,2090,2.48673,1
+BoiseEnergy,  Physical Risk,Chronic,Drought ,RCP8.5,2010,30,1
+BoiseEnergy,  Physical Risk,Chronic,Drought ,RCP8.5,2020,0,1
+BoiseEnergy,  Physical Risk,Chronic,Drought ,RCP8.5,2030,5,1
+BoiseEnergy,  Physical Risk,Chronic,Drought ,RCP8.5,2040,40,1
+BoiseEnergy,  Physical Risk,Chronic,Drought ,RCP8.5,2050,30,1
+BoiseEnergy,  Physical Risk,Chronic,Drought ,RCP8.5,2060,50,1
+BoiseEnergy,  Physical Risk,Chronic,Drought ,RCP8.5,2070,60,1
+BoiseEnergy,  Physical Risk,Chronic,Drought ,RCP8.5,2080,50,1
+BoiseEnergy,  Physical Risk,Chronic,Drought ,RCP8.5,2090,40,1
 Manassas,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2010,4.53354,1
 Manassas,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2020,2.74104,1
 Manassas,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2030,2.71086,1
@@ -260,15 +530,15 @@ Manassas,  Opportunity,Resilience,Energy resilience ,RCP8.5,2060,3.24355,1
 Manassas,  Opportunity,Resilience,Energy resilience ,RCP8.5,2070,4.48936,1
 Manassas,  Opportunity,Resilience,Energy resilience ,RCP8.5,2080,4.68429,1
 Manassas,  Opportunity,Resilience,Energy resilience ,RCP8.5,2090,5.35134,1
-Manassas,  Physical Risk,Chronic,Drought ,RCP8.5,2010,0,1
-Manassas,  Physical Risk,Chronic,Drought ,RCP8.5,2020,0,1
-Manassas,  Physical Risk,Chronic,Drought ,RCP8.5,2030,30,1
-Manassas,  Physical Risk,Chronic,Drought ,RCP8.5,2040,20,1
-Manassas,  Physical Risk,Chronic,Drought ,RCP8.5,2050,10,1
-Manassas,  Physical Risk,Chronic,Drought ,RCP8.5,2060,10,1
-Manassas,  Physical Risk,Chronic,Drought ,RCP8.5,2070,20,1
-Manassas,  Physical Risk,Chronic,Drought ,RCP8.5,2080,40,1
-Manassas,  Physical Risk,Chronic,Drought ,RCP8.5,2090,20,1
+Manassas,  Physical Risk,Chronic,Drought ,RCP8.5,2010,-5,1
+Manassas,  Physical Risk,Chronic,Drought ,RCP8.5,2020,-5,1
+Manassas,  Physical Risk,Chronic,Drought ,RCP8.5,2030,25,1
+Manassas,  Physical Risk,Chronic,Drought ,RCP8.5,2040,15,1
+Manassas,  Physical Risk,Chronic,Drought ,RCP8.5,2050,5,1
+Manassas,  Physical Risk,Chronic,Drought ,RCP8.5,2060,5,1
+Manassas,  Physical Risk,Chronic,Drought ,RCP8.5,2070,15,1
+Manassas,  Physical Risk,Chronic,Drought ,RCP8.5,2080,35,1
+Manassas,  Physical Risk,Chronic,Drought ,RCP8.5,2090,15,1
 Singapore_Hqs,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2010,2.03352,1
 Singapore_Hqs,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2020,1.82532,1
 Singapore_Hqs,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2030,7.00092,1
@@ -276,8 +546,8 @@ Singapore_Hqs,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2040,12.
 Singapore_Hqs,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2050,20.2962,1
 Singapore_Hqs,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2060,24.3739,1
 Singapore_Hqs,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2070,24.6176,1
-Singapore_Hqs,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2080,33.4166,1
-Singapore_Hqs,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2090,39.5512,1
+Singapore_Hqs,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2080,31.4539,1
+Singapore_Hqs,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2090,34.0643,1
 Singapore_Hqs,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2010,0.271136,1
 Singapore_Hqs,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2020,0.243376,1
 Singapore_Hqs,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2030,0.933456,1
@@ -285,8 +555,8 @@ Singapore_Hqs,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2040,1.
 Singapore_Hqs,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2050,2.70616,1
 Singapore_Hqs,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2060,3.24986,1
 Singapore_Hqs,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2070,3.28234,1
-Singapore_Hqs,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2080,4.45554,1
-Singapore_Hqs,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2090,5.2735,1
+Singapore_Hqs,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2080,4.19385,1
+Singapore_Hqs,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2090,4.54191,1
 Singapore_Hqs,  Transition Risk,Technology,New technology ,RCP8.5,2010,0.237244,1
 Singapore_Hqs,  Transition Risk,Technology,New technology ,RCP8.5,2020,0.212954,1
 Singapore_Hqs,  Transition Risk,Technology,New technology ,RCP8.5,2030,0.816774,1
@@ -294,8 +564,8 @@ Singapore_Hqs,  Transition Risk,Technology,New technology ,RCP8.5,2040,1.5006,1
 Singapore_Hqs,  Transition Risk,Technology,New technology ,RCP8.5,2050,2.36789,1
 Singapore_Hqs,  Transition Risk,Technology,New technology ,RCP8.5,2060,2.84362,1
 Singapore_Hqs,  Transition Risk,Technology,New technology ,RCP8.5,2070,2.87205,1
-Singapore_Hqs,  Transition Risk,Technology,New technology ,RCP8.5,2080,3.8986,1
-Singapore_Hqs,  Transition Risk,Technology,New technology ,RCP8.5,2090,4.61431,1
+Singapore_Hqs,  Transition Risk,Technology,New technology ,RCP8.5,2080,3.66962,1
+Singapore_Hqs,  Transition Risk,Technology,New technology ,RCP8.5,2090,3.97417,1
 Singapore_Hqs,  Transition Risk,Market,Reputation damage ,RCP8.5,2010,0.16946,1
 Singapore_Hqs,  Transition Risk,Market,Reputation damage ,RCP8.5,2020,0.15211,1
 Singapore_Hqs,  Transition Risk,Market,Reputation damage ,RCP8.5,2030,0.58341,1
@@ -303,8 +573,8 @@ Singapore_Hqs,  Transition Risk,Market,Reputation damage ,RCP8.5,2040,1.07186,1
 Singapore_Hqs,  Transition Risk,Market,Reputation damage ,RCP8.5,2050,1.69135,1
 Singapore_Hqs,  Transition Risk,Market,Reputation damage ,RCP8.5,2060,2.03116,1
 Singapore_Hqs,  Transition Risk,Market,Reputation damage ,RCP8.5,2070,2.05146,1
-Singapore_Hqs,  Transition Risk,Market,Reputation damage ,RCP8.5,2080,2.78472,1
-Singapore_Hqs,  Transition Risk,Market,Reputation damage ,RCP8.5,2090,3.29594,1
+Singapore_Hqs,  Transition Risk,Market,Reputation damage ,RCP8.5,2080,2.62115,1
+Singapore_Hqs,  Transition Risk,Market,Reputation damage ,RCP8.5,2090,2.83869,1
 Singapore_Hqs,  Transition Risk,Reputation,Materials cost ,RCP8.5,2010,0.33892,1
 Singapore_Hqs,  Transition Risk,Reputation,Materials cost ,RCP8.5,2020,0.30422,1
 Singapore_Hqs,  Transition Risk,Reputation,Materials cost ,RCP8.5,2030,1.16682,1
@@ -312,8 +582,8 @@ Singapore_Hqs,  Transition Risk,Reputation,Materials cost ,RCP8.5,2040,2.14371,1
 Singapore_Hqs,  Transition Risk,Reputation,Materials cost ,RCP8.5,2050,3.3827,1
 Singapore_Hqs,  Transition Risk,Reputation,Materials cost ,RCP8.5,2060,4.06232,1
 Singapore_Hqs,  Transition Risk,Reputation,Materials cost ,RCP8.5,2070,4.10293,1
-Singapore_Hqs,  Transition Risk,Reputation,Materials cost ,RCP8.5,2080,5.56943,1
-Singapore_Hqs,  Transition Risk,Reputation,Materials cost ,RCP8.5,2090,6.59187,1
+Singapore_Hqs,  Transition Risk,Reputation,Materials cost ,RCP8.5,2080,5.24231,1
+Singapore_Hqs,  Transition Risk,Reputation,Materials cost ,RCP8.5,2090,5.67739,1
 Singapore_Hqs,  Physical Risk,Acute,Storm damage ,RCP8.5,2010,2.37244,1
 Singapore_Hqs,  Physical Risk,Acute,Storm damage ,RCP8.5,2020,2.12954,1
 Singapore_Hqs,  Physical Risk,Acute,Storm damage ,RCP8.5,2030,8.16774,1
@@ -321,8 +591,8 @@ Singapore_Hqs,  Physical Risk,Acute,Storm damage ,RCP8.5,2040,15.006,1
 Singapore_Hqs,  Physical Risk,Acute,Storm damage ,RCP8.5,2050,23.6789,1
 Singapore_Hqs,  Physical Risk,Acute,Storm damage ,RCP8.5,2060,28.4362,1
 Singapore_Hqs,  Physical Risk,Acute,Storm damage ,RCP8.5,2070,28.7205,1
-Singapore_Hqs,  Physical Risk,Acute,Storm damage ,RCP8.5,2080,38.986,1
-Singapore_Hqs,  Physical Risk,Acute,Storm damage ,RCP8.5,2090,46.1431,1
+Singapore_Hqs,  Physical Risk,Acute,Storm damage ,RCP8.5,2080,36.6962,1
+Singapore_Hqs,  Physical Risk,Acute,Storm damage ,RCP8.5,2090,39.7417,1
 Singapore_Hqs,  Physical Risk,Acute,Employee impacts ,RCP8.5,2010,0.203352,1
 Singapore_Hqs,  Physical Risk,Acute,Employee impacts ,RCP8.5,2020,0.182532,1
 Singapore_Hqs,  Physical Risk,Acute,Employee impacts ,RCP8.5,2030,0.700092,1
@@ -330,8 +600,8 @@ Singapore_Hqs,  Physical Risk,Acute,Employee impacts ,RCP8.5,2040,1.28623,1
 Singapore_Hqs,  Physical Risk,Acute,Employee impacts ,RCP8.5,2050,2.02962,1
 Singapore_Hqs,  Physical Risk,Acute,Employee impacts ,RCP8.5,2060,2.43739,1
 Singapore_Hqs,  Physical Risk,Acute,Employee impacts ,RCP8.5,2070,2.46176,1
-Singapore_Hqs,  Physical Risk,Acute,Employee impacts ,RCP8.5,2080,3.34166,1
-Singapore_Hqs,  Physical Risk,Acute,Employee impacts ,RCP8.5,2090,3.95512,1
+Singapore_Hqs,  Physical Risk,Acute,Employee impacts ,RCP8.5,2080,3.14539,1
+Singapore_Hqs,  Physical Risk,Acute,Employee impacts ,RCP8.5,2090,3.40643,1
 Singapore_Hqs,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2010,3.3892,1
 Singapore_Hqs,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2020,3.0422,1
 Singapore_Hqs,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2030,11.6682,1
@@ -339,8 +609,8 @@ Singapore_Hqs,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2040,21.4371,
 Singapore_Hqs,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2050,33.827,1
 Singapore_Hqs,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2060,40.6232,1
 Singapore_Hqs,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2070,41.0293,1
-Singapore_Hqs,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2080,55.6943,1
-Singapore_Hqs,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2090,65.9187,1
+Singapore_Hqs,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2080,52.4231,1
+Singapore_Hqs,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2090,56.7739,1
 Singapore_Hqs,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2010,0,1
 Singapore_Hqs,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2020,0,1
 Singapore_Hqs,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2030,0,1
@@ -357,8 +627,8 @@ Singapore_Hqs,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2040,3
 Singapore_Hqs,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2050,5.41232,1
 Singapore_Hqs,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2060,6.49971,1
 Singapore_Hqs,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2070,6.56469,1
-Singapore_Hqs,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2080,8.91109,1
-Singapore_Hqs,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2090,10.547,1
+Singapore_Hqs,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2080,8.3877,1
+Singapore_Hqs,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2090,9.08382,1
 Singapore_Hqs,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2010,0.610056,1
 Singapore_Hqs,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2020,0.547596,1
 Singapore_Hqs,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2030,2.10028,1
@@ -366,8 +636,8 @@ Singapore_Hqs,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2040,3.
 Singapore_Hqs,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2050,6.08886,1
 Singapore_Hqs,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2060,7.31218,1
 Singapore_Hqs,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2070,7.38527,1
-Singapore_Hqs,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2080,10.025,1
-Singapore_Hqs,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2090,11.8654,1
+Singapore_Hqs,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2080,9.43616,1
+Singapore_Hqs,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2090,10.2193,1
 Singapore_Hqs,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2010,0.406704,1
 Singapore_Hqs,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2020,0.365064,1
 Singapore_Hqs,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2030,1.40018,1
@@ -375,8 +645,8 @@ Singapore_Hqs,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,204
 Singapore_Hqs,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2050,4.05924,1
 Singapore_Hqs,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2060,4.87478,1
 Singapore_Hqs,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2070,4.92352,1
-Singapore_Hqs,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2080,6.68332,1
-Singapore_Hqs,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2090,7.91024,1
+Singapore_Hqs,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2080,6.29077,1
+Singapore_Hqs,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2090,6.81287,1
 Singapore_Hqs,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2010,0.101676,1
 Singapore_Hqs,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2020,0.091266,1
 Singapore_Hqs,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2030,0.350046,1
@@ -384,8 +654,8 @@ Singapore_Hqs,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2040
 Singapore_Hqs,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2050,1.01481,1
 Singapore_Hqs,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2060,1.2187,1
 Singapore_Hqs,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2070,1.23088,1
-Singapore_Hqs,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2080,1.67083,1
-Singapore_Hqs,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2090,1.97756,1
+Singapore_Hqs,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2080,1.57269,1
+Singapore_Hqs,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2090,1.70322,1
 Singapore_Hqs,  Opportunity,Resilience,Energy resilience ,RCP8.5,2010,0.50838,1
 Singapore_Hqs,  Opportunity,Resilience,Energy resilience ,RCP8.5,2020,0.45633,1
 Singapore_Hqs,  Opportunity,Resilience,Energy resilience ,RCP8.5,2030,1.75023,1
@@ -393,8 +663,8 @@ Singapore_Hqs,  Opportunity,Resilience,Energy resilience ,RCP8.5,2040,3.21557,1
 Singapore_Hqs,  Opportunity,Resilience,Energy resilience ,RCP8.5,2050,5.07405,1
 Singapore_Hqs,  Opportunity,Resilience,Energy resilience ,RCP8.5,2060,6.09348,1
 Singapore_Hqs,  Opportunity,Resilience,Energy resilience ,RCP8.5,2070,6.1544,1
-Singapore_Hqs,  Opportunity,Resilience,Energy resilience ,RCP8.5,2080,8.35414,1
-Singapore_Hqs,  Opportunity,Resilience,Energy resilience ,RCP8.5,2090,9.88781,1
+Singapore_Hqs,  Opportunity,Resilience,Energy resilience ,RCP8.5,2080,7.86346,1
+Singapore_Hqs,  Opportunity,Resilience,Energy resilience ,RCP8.5,2090,8.51608,1
 Singapore_Hqs,  Physical Risk,Chronic,Drought ,RCP8.5,2010,0,1
 Singapore_Hqs,  Physical Risk,Chronic,Drought ,RCP8.5,2020,0,1
 Singapore_Hqs,  Physical Risk,Chronic,Drought ,RCP8.5,2030,0,1
@@ -411,8 +681,8 @@ Singapore_300mm_DRAM,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2
 Singapore_300mm_DRAM,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2050,20.2962,1
 Singapore_300mm_DRAM,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2060,24.3739,1
 Singapore_300mm_DRAM,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2070,24.6176,1
-Singapore_300mm_DRAM,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2080,33.4166,1
-Singapore_300mm_DRAM,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2090,39.5512,1
+Singapore_300mm_DRAM,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2080,31.4539,1
+Singapore_300mm_DRAM,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2090,34.0643,1
 Singapore_300mm_DRAM,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2010,0.271136,1
 Singapore_300mm_DRAM,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2020,0.243376,1
 Singapore_300mm_DRAM,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2030,0.933456,1
@@ -420,8 +690,8 @@ Singapore_300mm_DRAM,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,
 Singapore_300mm_DRAM,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2050,2.70616,1
 Singapore_300mm_DRAM,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2060,3.24986,1
 Singapore_300mm_DRAM,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2070,3.28234,1
-Singapore_300mm_DRAM,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2080,4.45554,1
-Singapore_300mm_DRAM,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2090,5.2735,1
+Singapore_300mm_DRAM,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2080,4.19385,1
+Singapore_300mm_DRAM,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2090,4.54191,1
 Singapore_300mm_DRAM,  Transition Risk,Technology,New technology ,RCP8.5,2010,0.237244,1
 Singapore_300mm_DRAM,  Transition Risk,Technology,New technology ,RCP8.5,2020,0.212954,1
 Singapore_300mm_DRAM,  Transition Risk,Technology,New technology ,RCP8.5,2030,0.816774,1
@@ -429,8 +699,8 @@ Singapore_300mm_DRAM,  Transition Risk,Technology,New technology ,RCP8.5,2040,1.
 Singapore_300mm_DRAM,  Transition Risk,Technology,New technology ,RCP8.5,2050,2.36789,1
 Singapore_300mm_DRAM,  Transition Risk,Technology,New technology ,RCP8.5,2060,2.84362,1
 Singapore_300mm_DRAM,  Transition Risk,Technology,New technology ,RCP8.5,2070,2.87205,1
-Singapore_300mm_DRAM,  Transition Risk,Technology,New technology ,RCP8.5,2080,3.8986,1
-Singapore_300mm_DRAM,  Transition Risk,Technology,New technology ,RCP8.5,2090,4.61431,1
+Singapore_300mm_DRAM,  Transition Risk,Technology,New technology ,RCP8.5,2080,3.66962,1
+Singapore_300mm_DRAM,  Transition Risk,Technology,New technology ,RCP8.5,2090,3.97417,1
 Singapore_300mm_DRAM,  Transition Risk,Market,Reputation damage ,RCP8.5,2010,0.16946,1
 Singapore_300mm_DRAM,  Transition Risk,Market,Reputation damage ,RCP8.5,2020,0.15211,1
 Singapore_300mm_DRAM,  Transition Risk,Market,Reputation damage ,RCP8.5,2030,0.58341,1
@@ -438,8 +708,8 @@ Singapore_300mm_DRAM,  Transition Risk,Market,Reputation damage ,RCP8.5,2040,1.0
 Singapore_300mm_DRAM,  Transition Risk,Market,Reputation damage ,RCP8.5,2050,1.69135,1
 Singapore_300mm_DRAM,  Transition Risk,Market,Reputation damage ,RCP8.5,2060,2.03116,1
 Singapore_300mm_DRAM,  Transition Risk,Market,Reputation damage ,RCP8.5,2070,2.05146,1
-Singapore_300mm_DRAM,  Transition Risk,Market,Reputation damage ,RCP8.5,2080,2.78472,1
-Singapore_300mm_DRAM,  Transition Risk,Market,Reputation damage ,RCP8.5,2090,3.29594,1
+Singapore_300mm_DRAM,  Transition Risk,Market,Reputation damage ,RCP8.5,2080,2.62115,1
+Singapore_300mm_DRAM,  Transition Risk,Market,Reputation damage ,RCP8.5,2090,2.83869,1
 Singapore_300mm_DRAM,  Transition Risk,Reputation,Materials cost ,RCP8.5,2010,0.33892,1
 Singapore_300mm_DRAM,  Transition Risk,Reputation,Materials cost ,RCP8.5,2020,0.30422,1
 Singapore_300mm_DRAM,  Transition Risk,Reputation,Materials cost ,RCP8.5,2030,1.16682,1
@@ -447,8 +717,8 @@ Singapore_300mm_DRAM,  Transition Risk,Reputation,Materials cost ,RCP8.5,2040,2.
 Singapore_300mm_DRAM,  Transition Risk,Reputation,Materials cost ,RCP8.5,2050,3.3827,1
 Singapore_300mm_DRAM,  Transition Risk,Reputation,Materials cost ,RCP8.5,2060,4.06232,1
 Singapore_300mm_DRAM,  Transition Risk,Reputation,Materials cost ,RCP8.5,2070,4.10293,1
-Singapore_300mm_DRAM,  Transition Risk,Reputation,Materials cost ,RCP8.5,2080,5.56943,1
-Singapore_300mm_DRAM,  Transition Risk,Reputation,Materials cost ,RCP8.5,2090,6.59187,1
+Singapore_300mm_DRAM,  Transition Risk,Reputation,Materials cost ,RCP8.5,2080,5.24231,1
+Singapore_300mm_DRAM,  Transition Risk,Reputation,Materials cost ,RCP8.5,2090,5.67739,1
 Singapore_300mm_DRAM,  Physical Risk,Acute,Storm damage ,RCP8.5,2010,2.37244,1
 Singapore_300mm_DRAM,  Physical Risk,Acute,Storm damage ,RCP8.5,2020,2.12954,1
 Singapore_300mm_DRAM,  Physical Risk,Acute,Storm damage ,RCP8.5,2030,8.16774,1
@@ -456,8 +726,8 @@ Singapore_300mm_DRAM,  Physical Risk,Acute,Storm damage ,RCP8.5,2040,15.006,1
 Singapore_300mm_DRAM,  Physical Risk,Acute,Storm damage ,RCP8.5,2050,23.6789,1
 Singapore_300mm_DRAM,  Physical Risk,Acute,Storm damage ,RCP8.5,2060,28.4362,1
 Singapore_300mm_DRAM,  Physical Risk,Acute,Storm damage ,RCP8.5,2070,28.7205,1
-Singapore_300mm_DRAM,  Physical Risk,Acute,Storm damage ,RCP8.5,2080,38.986,1
-Singapore_300mm_DRAM,  Physical Risk,Acute,Storm damage ,RCP8.5,2090,46.1431,1
+Singapore_300mm_DRAM,  Physical Risk,Acute,Storm damage ,RCP8.5,2080,36.6962,1
+Singapore_300mm_DRAM,  Physical Risk,Acute,Storm damage ,RCP8.5,2090,39.7417,1
 Singapore_300mm_DRAM,  Physical Risk,Acute,Employee impacts ,RCP8.5,2010,0.203352,1
 Singapore_300mm_DRAM,  Physical Risk,Acute,Employee impacts ,RCP8.5,2020,0.182532,1
 Singapore_300mm_DRAM,  Physical Risk,Acute,Employee impacts ,RCP8.5,2030,0.700092,1
@@ -465,8 +735,8 @@ Singapore_300mm_DRAM,  Physical Risk,Acute,Employee impacts ,RCP8.5,2040,1.28623
 Singapore_300mm_DRAM,  Physical Risk,Acute,Employee impacts ,RCP8.5,2050,2.02962,1
 Singapore_300mm_DRAM,  Physical Risk,Acute,Employee impacts ,RCP8.5,2060,2.43739,1
 Singapore_300mm_DRAM,  Physical Risk,Acute,Employee impacts ,RCP8.5,2070,2.46176,1
-Singapore_300mm_DRAM,  Physical Risk,Acute,Employee impacts ,RCP8.5,2080,3.34166,1
-Singapore_300mm_DRAM,  Physical Risk,Acute,Employee impacts ,RCP8.5,2090,3.95512,1
+Singapore_300mm_DRAM,  Physical Risk,Acute,Employee impacts ,RCP8.5,2080,3.14539,1
+Singapore_300mm_DRAM,  Physical Risk,Acute,Employee impacts ,RCP8.5,2090,3.40643,1
 Singapore_300mm_DRAM,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2010,3.3892,1
 Singapore_300mm_DRAM,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2020,3.0422,1
 Singapore_300mm_DRAM,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2030,11.6682,1
@@ -474,17 +744,17 @@ Singapore_300mm_DRAM,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2040,2
 Singapore_300mm_DRAM,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2050,33.827,1
 Singapore_300mm_DRAM,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2060,40.6232,1
 Singapore_300mm_DRAM,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2070,41.0293,1
-Singapore_300mm_DRAM,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2080,55.6943,1
-Singapore_300mm_DRAM,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2090,65.9187,1
-Singapore_300mm_DRAM,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2010,0,1
-Singapore_300mm_DRAM,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2020,0,1
-Singapore_300mm_DRAM,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2030,0,1
-Singapore_300mm_DRAM,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2040,0,1
-Singapore_300mm_DRAM,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2050,0,1
-Singapore_300mm_DRAM,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2060,0.4348,1
-Singapore_300mm_DRAM,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2070,15.8149,1
-Singapore_300mm_DRAM,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2080,30,1
-Singapore_300mm_DRAM,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2090,30,1
+Singapore_300mm_DRAM,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2080,52.4231,1
+Singapore_300mm_DRAM,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2090,56.7739,1
+Singapore_300mm_DRAM,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2010,0.3439,1
+Singapore_300mm_DRAM,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2020,0.8721,1
+Singapore_300mm_DRAM,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2030,1.9636,1
+Singapore_300mm_DRAM,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2040,4.2932,1
+Singapore_300mm_DRAM,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2050,9.6051,1
+Singapore_300mm_DRAM,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2060,31.7392,1
+Singapore_300mm_DRAM,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2070,81.6298,1
+Singapore_300mm_DRAM,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2080,90,1
+Singapore_300mm_DRAM,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2090,90,1
 Singapore_300mm_DRAM,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2010,0.542272,1
 Singapore_300mm_DRAM,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2020,0.486752,1
 Singapore_300mm_DRAM,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2030,1.86691,1
@@ -492,8 +762,8 @@ Singapore_300mm_DRAM,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5
 Singapore_300mm_DRAM,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2050,5.41232,1
 Singapore_300mm_DRAM,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2060,6.49971,1
 Singapore_300mm_DRAM,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2070,6.56469,1
-Singapore_300mm_DRAM,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2080,8.91109,1
-Singapore_300mm_DRAM,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2090,10.547,1
+Singapore_300mm_DRAM,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2080,8.3877,1
+Singapore_300mm_DRAM,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2090,9.08382,1
 Singapore_300mm_DRAM,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2010,0.610056,1
 Singapore_300mm_DRAM,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2020,0.547596,1
 Singapore_300mm_DRAM,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2030,2.10028,1
@@ -501,8 +771,8 @@ Singapore_300mm_DRAM,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,
 Singapore_300mm_DRAM,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2050,6.08886,1
 Singapore_300mm_DRAM,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2060,7.31218,1
 Singapore_300mm_DRAM,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2070,7.38527,1
-Singapore_300mm_DRAM,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2080,10.025,1
-Singapore_300mm_DRAM,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2090,11.8654,1
+Singapore_300mm_DRAM,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2080,9.43616,1
+Singapore_300mm_DRAM,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2090,10.2193,1
 Singapore_300mm_DRAM,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2010,0.406704,1
 Singapore_300mm_DRAM,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2020,0.365064,1
 Singapore_300mm_DRAM,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2030,1.40018,1
@@ -510,8 +780,8 @@ Singapore_300mm_DRAM,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP
 Singapore_300mm_DRAM,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2050,4.05924,1
 Singapore_300mm_DRAM,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2060,4.87478,1
 Singapore_300mm_DRAM,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2070,4.92352,1
-Singapore_300mm_DRAM,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2080,6.68332,1
-Singapore_300mm_DRAM,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2090,7.91024,1
+Singapore_300mm_DRAM,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2080,6.29077,1
+Singapore_300mm_DRAM,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2090,6.81287,1
 Singapore_300mm_DRAM,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2010,0.101676,1
 Singapore_300mm_DRAM,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2020,0.091266,1
 Singapore_300mm_DRAM,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2030,0.350046,1
@@ -519,8 +789,8 @@ Singapore_300mm_DRAM,  Opportunity,Energy Source,Renewable price stability ,RCP8
 Singapore_300mm_DRAM,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2050,1.01481,1
 Singapore_300mm_DRAM,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2060,1.2187,1
 Singapore_300mm_DRAM,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2070,1.23088,1
-Singapore_300mm_DRAM,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2080,1.67083,1
-Singapore_300mm_DRAM,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2090,1.97756,1
+Singapore_300mm_DRAM,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2080,1.57269,1
+Singapore_300mm_DRAM,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2090,1.70322,1
 Singapore_300mm_DRAM,  Opportunity,Resilience,Energy resilience ,RCP8.5,2010,0.50838,1
 Singapore_300mm_DRAM,  Opportunity,Resilience,Energy resilience ,RCP8.5,2020,0.45633,1
 Singapore_300mm_DRAM,  Opportunity,Resilience,Energy resilience ,RCP8.5,2030,1.75023,1
@@ -528,8 +798,8 @@ Singapore_300mm_DRAM,  Opportunity,Resilience,Energy resilience ,RCP8.5,2040,3.2
 Singapore_300mm_DRAM,  Opportunity,Resilience,Energy resilience ,RCP8.5,2050,5.07405,1
 Singapore_300mm_DRAM,  Opportunity,Resilience,Energy resilience ,RCP8.5,2060,6.09348,1
 Singapore_300mm_DRAM,  Opportunity,Resilience,Energy resilience ,RCP8.5,2070,6.1544,1
-Singapore_300mm_DRAM,  Opportunity,Resilience,Energy resilience ,RCP8.5,2080,8.35414,1
-Singapore_300mm_DRAM,  Opportunity,Resilience,Energy resilience ,RCP8.5,2090,9.88781,1
+Singapore_300mm_DRAM,  Opportunity,Resilience,Energy resilience ,RCP8.5,2080,7.86346,1
+Singapore_300mm_DRAM,  Opportunity,Resilience,Energy resilience ,RCP8.5,2090,8.51608,1
 Singapore_300mm_DRAM,  Physical Risk,Chronic,Drought ,RCP8.5,2010,0,1
 Singapore_300mm_DRAM,  Physical Risk,Chronic,Drought ,RCP8.5,2020,0,1
 Singapore_300mm_DRAM,  Physical Risk,Chronic,Drought ,RCP8.5,2030,0,1
@@ -546,8 +816,8 @@ Singapore_300mm_NAND,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2
 Singapore_300mm_NAND,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2050,20.2962,1
 Singapore_300mm_NAND,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2060,24.3739,1
 Singapore_300mm_NAND,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2070,24.6176,1
-Singapore_300mm_NAND,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2080,33.4166,1
-Singapore_300mm_NAND,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2090,39.5512,1
+Singapore_300mm_NAND,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2080,31.4539,1
+Singapore_300mm_NAND,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2090,34.0643,1
 Singapore_300mm_NAND,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2010,0.271136,1
 Singapore_300mm_NAND,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2020,0.243376,1
 Singapore_300mm_NAND,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2030,0.933456,1
@@ -555,8 +825,8 @@ Singapore_300mm_NAND,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,
 Singapore_300mm_NAND,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2050,2.70616,1
 Singapore_300mm_NAND,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2060,3.24986,1
 Singapore_300mm_NAND,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2070,3.28234,1
-Singapore_300mm_NAND,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2080,4.45554,1
-Singapore_300mm_NAND,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2090,5.2735,1
+Singapore_300mm_NAND,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2080,4.19385,1
+Singapore_300mm_NAND,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2090,4.54191,1
 Singapore_300mm_NAND,  Transition Risk,Technology,New technology ,RCP8.5,2010,0.237244,1
 Singapore_300mm_NAND,  Transition Risk,Technology,New technology ,RCP8.5,2020,0.212954,1
 Singapore_300mm_NAND,  Transition Risk,Technology,New technology ,RCP8.5,2030,0.816774,1
@@ -564,8 +834,8 @@ Singapore_300mm_NAND,  Transition Risk,Technology,New technology ,RCP8.5,2040,1.
 Singapore_300mm_NAND,  Transition Risk,Technology,New technology ,RCP8.5,2050,2.36789,1
 Singapore_300mm_NAND,  Transition Risk,Technology,New technology ,RCP8.5,2060,2.84362,1
 Singapore_300mm_NAND,  Transition Risk,Technology,New technology ,RCP8.5,2070,2.87205,1
-Singapore_300mm_NAND,  Transition Risk,Technology,New technology ,RCP8.5,2080,3.8986,1
-Singapore_300mm_NAND,  Transition Risk,Technology,New technology ,RCP8.5,2090,4.61431,1
+Singapore_300mm_NAND,  Transition Risk,Technology,New technology ,RCP8.5,2080,3.66962,1
+Singapore_300mm_NAND,  Transition Risk,Technology,New technology ,RCP8.5,2090,3.97417,1
 Singapore_300mm_NAND,  Transition Risk,Market,Reputation damage ,RCP8.5,2010,0.16946,1
 Singapore_300mm_NAND,  Transition Risk,Market,Reputation damage ,RCP8.5,2020,0.15211,1
 Singapore_300mm_NAND,  Transition Risk,Market,Reputation damage ,RCP8.5,2030,0.58341,1
@@ -573,8 +843,8 @@ Singapore_300mm_NAND,  Transition Risk,Market,Reputation damage ,RCP8.5,2040,1.0
 Singapore_300mm_NAND,  Transition Risk,Market,Reputation damage ,RCP8.5,2050,1.69135,1
 Singapore_300mm_NAND,  Transition Risk,Market,Reputation damage ,RCP8.5,2060,2.03116,1
 Singapore_300mm_NAND,  Transition Risk,Market,Reputation damage ,RCP8.5,2070,2.05146,1
-Singapore_300mm_NAND,  Transition Risk,Market,Reputation damage ,RCP8.5,2080,2.78472,1
-Singapore_300mm_NAND,  Transition Risk,Market,Reputation damage ,RCP8.5,2090,3.29594,1
+Singapore_300mm_NAND,  Transition Risk,Market,Reputation damage ,RCP8.5,2080,2.62115,1
+Singapore_300mm_NAND,  Transition Risk,Market,Reputation damage ,RCP8.5,2090,2.83869,1
 Singapore_300mm_NAND,  Transition Risk,Reputation,Materials cost ,RCP8.5,2010,0.33892,1
 Singapore_300mm_NAND,  Transition Risk,Reputation,Materials cost ,RCP8.5,2020,0.30422,1
 Singapore_300mm_NAND,  Transition Risk,Reputation,Materials cost ,RCP8.5,2030,1.16682,1
@@ -582,8 +852,8 @@ Singapore_300mm_NAND,  Transition Risk,Reputation,Materials cost ,RCP8.5,2040,2.
 Singapore_300mm_NAND,  Transition Risk,Reputation,Materials cost ,RCP8.5,2050,3.3827,1
 Singapore_300mm_NAND,  Transition Risk,Reputation,Materials cost ,RCP8.5,2060,4.06232,1
 Singapore_300mm_NAND,  Transition Risk,Reputation,Materials cost ,RCP8.5,2070,4.10293,1
-Singapore_300mm_NAND,  Transition Risk,Reputation,Materials cost ,RCP8.5,2080,5.56943,1
-Singapore_300mm_NAND,  Transition Risk,Reputation,Materials cost ,RCP8.5,2090,6.59187,1
+Singapore_300mm_NAND,  Transition Risk,Reputation,Materials cost ,RCP8.5,2080,5.24231,1
+Singapore_300mm_NAND,  Transition Risk,Reputation,Materials cost ,RCP8.5,2090,5.67739,1
 Singapore_300mm_NAND,  Physical Risk,Acute,Storm damage ,RCP8.5,2010,2.37244,1
 Singapore_300mm_NAND,  Physical Risk,Acute,Storm damage ,RCP8.5,2020,2.12954,1
 Singapore_300mm_NAND,  Physical Risk,Acute,Storm damage ,RCP8.5,2030,8.16774,1
@@ -591,8 +861,8 @@ Singapore_300mm_NAND,  Physical Risk,Acute,Storm damage ,RCP8.5,2040,15.006,1
 Singapore_300mm_NAND,  Physical Risk,Acute,Storm damage ,RCP8.5,2050,23.6789,1
 Singapore_300mm_NAND,  Physical Risk,Acute,Storm damage ,RCP8.5,2060,28.4362,1
 Singapore_300mm_NAND,  Physical Risk,Acute,Storm damage ,RCP8.5,2070,28.7205,1
-Singapore_300mm_NAND,  Physical Risk,Acute,Storm damage ,RCP8.5,2080,38.986,1
-Singapore_300mm_NAND,  Physical Risk,Acute,Storm damage ,RCP8.5,2090,46.1431,1
+Singapore_300mm_NAND,  Physical Risk,Acute,Storm damage ,RCP8.5,2080,36.6962,1
+Singapore_300mm_NAND,  Physical Risk,Acute,Storm damage ,RCP8.5,2090,39.7417,1
 Singapore_300mm_NAND,  Physical Risk,Acute,Employee impacts ,RCP8.5,2010,0.203352,1
 Singapore_300mm_NAND,  Physical Risk,Acute,Employee impacts ,RCP8.5,2020,0.182532,1
 Singapore_300mm_NAND,  Physical Risk,Acute,Employee impacts ,RCP8.5,2030,0.700092,1
@@ -600,8 +870,8 @@ Singapore_300mm_NAND,  Physical Risk,Acute,Employee impacts ,RCP8.5,2040,1.28623
 Singapore_300mm_NAND,  Physical Risk,Acute,Employee impacts ,RCP8.5,2050,2.02962,1
 Singapore_300mm_NAND,  Physical Risk,Acute,Employee impacts ,RCP8.5,2060,2.43739,1
 Singapore_300mm_NAND,  Physical Risk,Acute,Employee impacts ,RCP8.5,2070,2.46176,1
-Singapore_300mm_NAND,  Physical Risk,Acute,Employee impacts ,RCP8.5,2080,3.34166,1
-Singapore_300mm_NAND,  Physical Risk,Acute,Employee impacts ,RCP8.5,2090,3.95512,1
+Singapore_300mm_NAND,  Physical Risk,Acute,Employee impacts ,RCP8.5,2080,3.14539,1
+Singapore_300mm_NAND,  Physical Risk,Acute,Employee impacts ,RCP8.5,2090,3.40643,1
 Singapore_300mm_NAND,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2010,3.3892,1
 Singapore_300mm_NAND,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2020,3.0422,1
 Singapore_300mm_NAND,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2030,11.6682,1
@@ -609,17 +879,17 @@ Singapore_300mm_NAND,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2040,2
 Singapore_300mm_NAND,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2050,33.827,1
 Singapore_300mm_NAND,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2060,40.6232,1
 Singapore_300mm_NAND,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2070,41.0293,1
-Singapore_300mm_NAND,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2080,55.6943,1
-Singapore_300mm_NAND,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2090,65.9187,1
-Singapore_300mm_NAND,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2010,0,1
-Singapore_300mm_NAND,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2020,0,1
-Singapore_300mm_NAND,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2030,0,1
-Singapore_300mm_NAND,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2040,0,1
-Singapore_300mm_NAND,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2050,0,1
-Singapore_300mm_NAND,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2060,0.4348,1
-Singapore_300mm_NAND,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2070,15.8149,1
-Singapore_300mm_NAND,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2080,30,1
-Singapore_300mm_NAND,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2090,30,1
+Singapore_300mm_NAND,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2080,52.4231,1
+Singapore_300mm_NAND,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2090,56.7739,1
+Singapore_300mm_NAND,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2010,0.3439,1
+Singapore_300mm_NAND,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2020,0.8721,1
+Singapore_300mm_NAND,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2030,1.9636,1
+Singapore_300mm_NAND,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2040,4.2932,1
+Singapore_300mm_NAND,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2050,9.6051,1
+Singapore_300mm_NAND,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2060,31.7392,1
+Singapore_300mm_NAND,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2070,81.6298,1
+Singapore_300mm_NAND,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2080,90,1
+Singapore_300mm_NAND,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2090,90,1
 Singapore_300mm_NAND,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2010,0.542272,1
 Singapore_300mm_NAND,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2020,0.486752,1
 Singapore_300mm_NAND,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2030,1.86691,1
@@ -627,8 +897,8 @@ Singapore_300mm_NAND,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5
 Singapore_300mm_NAND,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2050,5.41232,1
 Singapore_300mm_NAND,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2060,6.49971,1
 Singapore_300mm_NAND,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2070,6.56469,1
-Singapore_300mm_NAND,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2080,8.91109,1
-Singapore_300mm_NAND,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2090,10.547,1
+Singapore_300mm_NAND,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2080,8.3877,1
+Singapore_300mm_NAND,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2090,9.08382,1
 Singapore_300mm_NAND,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2010,0.610056,1
 Singapore_300mm_NAND,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2020,0.547596,1
 Singapore_300mm_NAND,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2030,2.10028,1
@@ -636,8 +906,8 @@ Singapore_300mm_NAND,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,
 Singapore_300mm_NAND,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2050,6.08886,1
 Singapore_300mm_NAND,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2060,7.31218,1
 Singapore_300mm_NAND,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2070,7.38527,1
-Singapore_300mm_NAND,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2080,10.025,1
-Singapore_300mm_NAND,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2090,11.8654,1
+Singapore_300mm_NAND,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2080,9.43616,1
+Singapore_300mm_NAND,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2090,10.2193,1
 Singapore_300mm_NAND,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2010,0.406704,1
 Singapore_300mm_NAND,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2020,0.365064,1
 Singapore_300mm_NAND,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2030,1.40018,1
@@ -645,8 +915,8 @@ Singapore_300mm_NAND,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP
 Singapore_300mm_NAND,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2050,4.05924,1
 Singapore_300mm_NAND,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2060,4.87478,1
 Singapore_300mm_NAND,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2070,4.92352,1
-Singapore_300mm_NAND,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2080,6.68332,1
-Singapore_300mm_NAND,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2090,7.91024,1
+Singapore_300mm_NAND,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2080,6.29077,1
+Singapore_300mm_NAND,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2090,6.81287,1
 Singapore_300mm_NAND,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2010,0.101676,1
 Singapore_300mm_NAND,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2020,0.091266,1
 Singapore_300mm_NAND,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2030,0.350046,1
@@ -654,8 +924,8 @@ Singapore_300mm_NAND,  Opportunity,Energy Source,Renewable price stability ,RCP8
 Singapore_300mm_NAND,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2050,1.01481,1
 Singapore_300mm_NAND,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2060,1.2187,1
 Singapore_300mm_NAND,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2070,1.23088,1
-Singapore_300mm_NAND,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2080,1.67083,1
-Singapore_300mm_NAND,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2090,1.97756,1
+Singapore_300mm_NAND,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2080,1.57269,1
+Singapore_300mm_NAND,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2090,1.70322,1
 Singapore_300mm_NAND,  Opportunity,Resilience,Energy resilience ,RCP8.5,2010,0.50838,1
 Singapore_300mm_NAND,  Opportunity,Resilience,Energy resilience ,RCP8.5,2020,0.45633,1
 Singapore_300mm_NAND,  Opportunity,Resilience,Energy resilience ,RCP8.5,2030,1.75023,1
@@ -663,8 +933,8 @@ Singapore_300mm_NAND,  Opportunity,Resilience,Energy resilience ,RCP8.5,2040,3.2
 Singapore_300mm_NAND,  Opportunity,Resilience,Energy resilience ,RCP8.5,2050,5.07405,1
 Singapore_300mm_NAND,  Opportunity,Resilience,Energy resilience ,RCP8.5,2060,6.09348,1
 Singapore_300mm_NAND,  Opportunity,Resilience,Energy resilience ,RCP8.5,2070,6.1544,1
-Singapore_300mm_NAND,  Opportunity,Resilience,Energy resilience ,RCP8.5,2080,8.35414,1
-Singapore_300mm_NAND,  Opportunity,Resilience,Energy resilience ,RCP8.5,2090,9.88781,1
+Singapore_300mm_NAND,  Opportunity,Resilience,Energy resilience ,RCP8.5,2080,7.86346,1
+Singapore_300mm_NAND,  Opportunity,Resilience,Energy resilience ,RCP8.5,2090,8.51608,1
 Singapore_300mm_NAND,  Physical Risk,Chronic,Drought ,RCP8.5,2010,0,1
 Singapore_300mm_NAND,  Physical Risk,Chronic,Drought ,RCP8.5,2020,0,1
 Singapore_300mm_NAND,  Physical Risk,Chronic,Drought ,RCP8.5,2030,0,1
@@ -681,8 +951,8 @@ Singapore_200mm_NOR,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,20
 Singapore_200mm_NOR,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2050,20.2962,1
 Singapore_200mm_NOR,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2060,24.3739,1
 Singapore_200mm_NOR,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2070,24.6176,1
-Singapore_200mm_NOR,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2080,33.4166,1
-Singapore_200mm_NOR,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2090,39.5512,1
+Singapore_200mm_NOR,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2080,31.4539,1
+Singapore_200mm_NOR,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2090,34.0643,1
 Singapore_200mm_NOR,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2010,0.271136,1
 Singapore_200mm_NOR,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2020,0.243376,1
 Singapore_200mm_NOR,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2030,0.933456,1
@@ -690,8 +960,8 @@ Singapore_200mm_NOR,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2
 Singapore_200mm_NOR,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2050,2.70616,1
 Singapore_200mm_NOR,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2060,3.24986,1
 Singapore_200mm_NOR,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2070,3.28234,1
-Singapore_200mm_NOR,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2080,4.45554,1
-Singapore_200mm_NOR,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2090,5.2735,1
+Singapore_200mm_NOR,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2080,4.19385,1
+Singapore_200mm_NOR,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2090,4.54191,1
 Singapore_200mm_NOR,  Transition Risk,Technology,New technology ,RCP8.5,2010,0.237244,1
 Singapore_200mm_NOR,  Transition Risk,Technology,New technology ,RCP8.5,2020,0.212954,1
 Singapore_200mm_NOR,  Transition Risk,Technology,New technology ,RCP8.5,2030,0.816774,1
@@ -699,8 +969,8 @@ Singapore_200mm_NOR,  Transition Risk,Technology,New technology ,RCP8.5,2040,1.5
 Singapore_200mm_NOR,  Transition Risk,Technology,New technology ,RCP8.5,2050,2.36789,1
 Singapore_200mm_NOR,  Transition Risk,Technology,New technology ,RCP8.5,2060,2.84362,1
 Singapore_200mm_NOR,  Transition Risk,Technology,New technology ,RCP8.5,2070,2.87205,1
-Singapore_200mm_NOR,  Transition Risk,Technology,New technology ,RCP8.5,2080,3.8986,1
-Singapore_200mm_NOR,  Transition Risk,Technology,New technology ,RCP8.5,2090,4.61431,1
+Singapore_200mm_NOR,  Transition Risk,Technology,New technology ,RCP8.5,2080,3.66962,1
+Singapore_200mm_NOR,  Transition Risk,Technology,New technology ,RCP8.5,2090,3.97417,1
 Singapore_200mm_NOR,  Transition Risk,Market,Reputation damage ,RCP8.5,2010,0.16946,1
 Singapore_200mm_NOR,  Transition Risk,Market,Reputation damage ,RCP8.5,2020,0.15211,1
 Singapore_200mm_NOR,  Transition Risk,Market,Reputation damage ,RCP8.5,2030,0.58341,1
@@ -708,8 +978,8 @@ Singapore_200mm_NOR,  Transition Risk,Market,Reputation damage ,RCP8.5,2040,1.07
 Singapore_200mm_NOR,  Transition Risk,Market,Reputation damage ,RCP8.5,2050,1.69135,1
 Singapore_200mm_NOR,  Transition Risk,Market,Reputation damage ,RCP8.5,2060,2.03116,1
 Singapore_200mm_NOR,  Transition Risk,Market,Reputation damage ,RCP8.5,2070,2.05146,1
-Singapore_200mm_NOR,  Transition Risk,Market,Reputation damage ,RCP8.5,2080,2.78472,1
-Singapore_200mm_NOR,  Transition Risk,Market,Reputation damage ,RCP8.5,2090,3.29594,1
+Singapore_200mm_NOR,  Transition Risk,Market,Reputation damage ,RCP8.5,2080,2.62115,1
+Singapore_200mm_NOR,  Transition Risk,Market,Reputation damage ,RCP8.5,2090,2.83869,1
 Singapore_200mm_NOR,  Transition Risk,Reputation,Materials cost ,RCP8.5,2010,0.33892,1
 Singapore_200mm_NOR,  Transition Risk,Reputation,Materials cost ,RCP8.5,2020,0.30422,1
 Singapore_200mm_NOR,  Transition Risk,Reputation,Materials cost ,RCP8.5,2030,1.16682,1
@@ -717,8 +987,8 @@ Singapore_200mm_NOR,  Transition Risk,Reputation,Materials cost ,RCP8.5,2040,2.1
 Singapore_200mm_NOR,  Transition Risk,Reputation,Materials cost ,RCP8.5,2050,3.3827,1
 Singapore_200mm_NOR,  Transition Risk,Reputation,Materials cost ,RCP8.5,2060,4.06232,1
 Singapore_200mm_NOR,  Transition Risk,Reputation,Materials cost ,RCP8.5,2070,4.10293,1
-Singapore_200mm_NOR,  Transition Risk,Reputation,Materials cost ,RCP8.5,2080,5.56943,1
-Singapore_200mm_NOR,  Transition Risk,Reputation,Materials cost ,RCP8.5,2090,6.59187,1
+Singapore_200mm_NOR,  Transition Risk,Reputation,Materials cost ,RCP8.5,2080,5.24231,1
+Singapore_200mm_NOR,  Transition Risk,Reputation,Materials cost ,RCP8.5,2090,5.67739,1
 Singapore_200mm_NOR,  Physical Risk,Acute,Storm damage ,RCP8.5,2010,2.37244,1
 Singapore_200mm_NOR,  Physical Risk,Acute,Storm damage ,RCP8.5,2020,2.12954,1
 Singapore_200mm_NOR,  Physical Risk,Acute,Storm damage ,RCP8.5,2030,8.16774,1
@@ -726,8 +996,8 @@ Singapore_200mm_NOR,  Physical Risk,Acute,Storm damage ,RCP8.5,2040,15.006,1
 Singapore_200mm_NOR,  Physical Risk,Acute,Storm damage ,RCP8.5,2050,23.6789,1
 Singapore_200mm_NOR,  Physical Risk,Acute,Storm damage ,RCP8.5,2060,28.4362,1
 Singapore_200mm_NOR,  Physical Risk,Acute,Storm damage ,RCP8.5,2070,28.7205,1
-Singapore_200mm_NOR,  Physical Risk,Acute,Storm damage ,RCP8.5,2080,38.986,1
-Singapore_200mm_NOR,  Physical Risk,Acute,Storm damage ,RCP8.5,2090,46.1431,1
+Singapore_200mm_NOR,  Physical Risk,Acute,Storm damage ,RCP8.5,2080,36.6962,1
+Singapore_200mm_NOR,  Physical Risk,Acute,Storm damage ,RCP8.5,2090,39.7417,1
 Singapore_200mm_NOR,  Physical Risk,Acute,Employee impacts ,RCP8.5,2010,0.203352,1
 Singapore_200mm_NOR,  Physical Risk,Acute,Employee impacts ,RCP8.5,2020,0.182532,1
 Singapore_200mm_NOR,  Physical Risk,Acute,Employee impacts ,RCP8.5,2030,0.700092,1
@@ -735,8 +1005,8 @@ Singapore_200mm_NOR,  Physical Risk,Acute,Employee impacts ,RCP8.5,2040,1.28623,
 Singapore_200mm_NOR,  Physical Risk,Acute,Employee impacts ,RCP8.5,2050,2.02962,1
 Singapore_200mm_NOR,  Physical Risk,Acute,Employee impacts ,RCP8.5,2060,2.43739,1
 Singapore_200mm_NOR,  Physical Risk,Acute,Employee impacts ,RCP8.5,2070,2.46176,1
-Singapore_200mm_NOR,  Physical Risk,Acute,Employee impacts ,RCP8.5,2080,3.34166,1
-Singapore_200mm_NOR,  Physical Risk,Acute,Employee impacts ,RCP8.5,2090,3.95512,1
+Singapore_200mm_NOR,  Physical Risk,Acute,Employee impacts ,RCP8.5,2080,3.14539,1
+Singapore_200mm_NOR,  Physical Risk,Acute,Employee impacts ,RCP8.5,2090,3.40643,1
 Singapore_200mm_NOR,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2010,3.3892,1
 Singapore_200mm_NOR,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2020,3.0422,1
 Singapore_200mm_NOR,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2030,11.6682,1
@@ -744,17 +1014,17 @@ Singapore_200mm_NOR,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2040,21
 Singapore_200mm_NOR,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2050,33.827,1
 Singapore_200mm_NOR,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2060,40.6232,1
 Singapore_200mm_NOR,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2070,41.0293,1
-Singapore_200mm_NOR,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2080,55.6943,1
-Singapore_200mm_NOR,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2090,65.9187,1
-Singapore_200mm_NOR,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2010,0,1
-Singapore_200mm_NOR,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2020,0,1
-Singapore_200mm_NOR,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2030,0,1
-Singapore_200mm_NOR,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2040,0,1
-Singapore_200mm_NOR,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2050,0,1
-Singapore_200mm_NOR,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2060,0.6194,1
-Singapore_200mm_NOR,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2070,16.8781,1
-Singapore_200mm_NOR,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2080,30,1
-Singapore_200mm_NOR,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2090,30,1
+Singapore_200mm_NOR,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2080,52.4231,1
+Singapore_200mm_NOR,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2090,56.7739,1
+Singapore_200mm_NOR,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2010,0.3466,1
+Singapore_200mm_NOR,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2020,0.88,1
+Singapore_200mm_NOR,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2030,1.9851,1
+Singapore_200mm_NOR,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2040,4.3511,1
+Singapore_200mm_NOR,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2050,9.7711,1
+Singapore_200mm_NOR,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2060,32.4775,1
+Singapore_200mm_NOR,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2070,83.7563,1
+Singapore_200mm_NOR,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2080,90,1
+Singapore_200mm_NOR,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2090,90,1
 Singapore_200mm_NOR,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2010,0.542272,1
 Singapore_200mm_NOR,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2020,0.486752,1
 Singapore_200mm_NOR,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2030,1.86691,1
@@ -762,8 +1032,8 @@ Singapore_200mm_NOR,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,
 Singapore_200mm_NOR,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2050,5.41232,1
 Singapore_200mm_NOR,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2060,6.49971,1
 Singapore_200mm_NOR,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2070,6.56469,1
-Singapore_200mm_NOR,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2080,8.91109,1
-Singapore_200mm_NOR,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2090,10.547,1
+Singapore_200mm_NOR,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2080,8.3877,1
+Singapore_200mm_NOR,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2090,9.08382,1
 Singapore_200mm_NOR,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2010,0.610056,1
 Singapore_200mm_NOR,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2020,0.547596,1
 Singapore_200mm_NOR,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2030,2.10028,1
@@ -771,8 +1041,8 @@ Singapore_200mm_NOR,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2
 Singapore_200mm_NOR,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2050,6.08886,1
 Singapore_200mm_NOR,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2060,7.31218,1
 Singapore_200mm_NOR,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2070,7.38527,1
-Singapore_200mm_NOR,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2080,10.025,1
-Singapore_200mm_NOR,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2090,11.8654,1
+Singapore_200mm_NOR,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2080,9.43616,1
+Singapore_200mm_NOR,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2090,10.2193,1
 Singapore_200mm_NOR,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2010,0.406704,1
 Singapore_200mm_NOR,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2020,0.365064,1
 Singapore_200mm_NOR,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2030,1.40018,1
@@ -780,8 +1050,8 @@ Singapore_200mm_NOR,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8
 Singapore_200mm_NOR,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2050,4.05924,1
 Singapore_200mm_NOR,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2060,4.87478,1
 Singapore_200mm_NOR,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2070,4.92352,1
-Singapore_200mm_NOR,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2080,6.68332,1
-Singapore_200mm_NOR,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2090,7.91024,1
+Singapore_200mm_NOR,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2080,6.29077,1
+Singapore_200mm_NOR,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2090,6.81287,1
 Singapore_200mm_NOR,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2010,0.101676,1
 Singapore_200mm_NOR,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2020,0.091266,1
 Singapore_200mm_NOR,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2030,0.350046,1
@@ -789,8 +1059,8 @@ Singapore_200mm_NOR,  Opportunity,Energy Source,Renewable price stability ,RCP8.
 Singapore_200mm_NOR,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2050,1.01481,1
 Singapore_200mm_NOR,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2060,1.2187,1
 Singapore_200mm_NOR,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2070,1.23088,1
-Singapore_200mm_NOR,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2080,1.67083,1
-Singapore_200mm_NOR,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2090,1.97756,1
+Singapore_200mm_NOR,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2080,1.57269,1
+Singapore_200mm_NOR,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2090,1.70322,1
 Singapore_200mm_NOR,  Opportunity,Resilience,Energy resilience ,RCP8.5,2010,0.50838,1
 Singapore_200mm_NOR,  Opportunity,Resilience,Energy resilience ,RCP8.5,2020,0.45633,1
 Singapore_200mm_NOR,  Opportunity,Resilience,Energy resilience ,RCP8.5,2030,1.75023,1
@@ -798,8 +1068,8 @@ Singapore_200mm_NOR,  Opportunity,Resilience,Energy resilience ,RCP8.5,2040,3.21
 Singapore_200mm_NOR,  Opportunity,Resilience,Energy resilience ,RCP8.5,2050,5.07405,1
 Singapore_200mm_NOR,  Opportunity,Resilience,Energy resilience ,RCP8.5,2060,6.09348,1
 Singapore_200mm_NOR,  Opportunity,Resilience,Energy resilience ,RCP8.5,2070,6.1544,1
-Singapore_200mm_NOR,  Opportunity,Resilience,Energy resilience ,RCP8.5,2080,8.35414,1
-Singapore_200mm_NOR,  Opportunity,Resilience,Energy resilience ,RCP8.5,2090,9.88781,1
+Singapore_200mm_NOR,  Opportunity,Resilience,Energy resilience ,RCP8.5,2080,7.86346,1
+Singapore_200mm_NOR,  Opportunity,Resilience,Energy resilience ,RCP8.5,2090,8.51608,1
 Singapore_200mm_NOR,  Physical Risk,Chronic,Drought ,RCP8.5,2010,0,1
 Singapore_200mm_NOR,  Physical Risk,Chronic,Drought ,RCP8.5,2020,0,1
 Singapore_200mm_NOR,  Physical Risk,Chronic,Drought ,RCP8.5,2030,0,1
@@ -817,7 +1087,7 @@ Catania,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2050,11.1295,1
 Catania,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2060,15.3245,1
 Catania,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2070,21.1168,1
 Catania,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2080,26.3978,1
-Catania,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2090,33.2978,1
+Catania,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2090,31.4033,1
 Catania,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2010,0.01376,1
 Catania,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2020,0.195152,1
 Catania,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2030,0.539512,1
@@ -826,7 +1096,7 @@ Catania,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2050,1.48394,
 Catania,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2060,2.04326,1
 Catania,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2070,2.81558,1
 Catania,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2080,3.5197,1
-Catania,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2090,4.43971,1
+Catania,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2090,4.18711,1
 Catania,  Transition Risk,Technology,New technology ,RCP8.5,2010,0.01204,1
 Catania,  Transition Risk,Technology,New technology ,RCP8.5,2020,0.170758,1
 Catania,  Transition Risk,Technology,New technology ,RCP8.5,2030,0.472073,1
@@ -835,7 +1105,7 @@ Catania,  Transition Risk,Technology,New technology ,RCP8.5,2050,1.29844,1
 Catania,  Transition Risk,Technology,New technology ,RCP8.5,2060,1.78786,1
 Catania,  Transition Risk,Technology,New technology ,RCP8.5,2070,2.46363,1
 Catania,  Transition Risk,Technology,New technology ,RCP8.5,2080,3.07974,1
-Catania,  Transition Risk,Technology,New technology ,RCP8.5,2090,3.88475,1
+Catania,  Transition Risk,Technology,New technology ,RCP8.5,2090,3.66372,1
 Catania,  Transition Risk,Market,Reputation damage ,RCP8.5,2010,0.0086,1
 Catania,  Transition Risk,Market,Reputation damage ,RCP8.5,2020,0.12197,1
 Catania,  Transition Risk,Market,Reputation damage ,RCP8.5,2030,0.337195,1
@@ -844,7 +1114,7 @@ Catania,  Transition Risk,Market,Reputation damage ,RCP8.5,2050,0.92746,1
 Catania,  Transition Risk,Market,Reputation damage ,RCP8.5,2060,1.27704,1
 Catania,  Transition Risk,Market,Reputation damage ,RCP8.5,2070,1.75974,1
 Catania,  Transition Risk,Market,Reputation damage ,RCP8.5,2080,2.19982,1
-Catania,  Transition Risk,Market,Reputation damage ,RCP8.5,2090,2.77482,1
+Catania,  Transition Risk,Market,Reputation damage ,RCP8.5,2090,2.61695,1
 Catania,  Transition Risk,Reputation,Materials cost ,RCP8.5,2010,0.0172,1
 Catania,  Transition Risk,Reputation,Materials cost ,RCP8.5,2020,0.24394,1
 Catania,  Transition Risk,Reputation,Materials cost ,RCP8.5,2030,0.67439,1
@@ -853,7 +1123,7 @@ Catania,  Transition Risk,Reputation,Materials cost ,RCP8.5,2050,1.85492,1
 Catania,  Transition Risk,Reputation,Materials cost ,RCP8.5,2060,2.55408,1
 Catania,  Transition Risk,Reputation,Materials cost ,RCP8.5,2070,3.51947,1
 Catania,  Transition Risk,Reputation,Materials cost ,RCP8.5,2080,4.39963,1
-Catania,  Transition Risk,Reputation,Materials cost ,RCP8.5,2090,5.54964,1
+Catania,  Transition Risk,Reputation,Materials cost ,RCP8.5,2090,5.23389,1
 Catania,  Physical Risk,Acute,Storm damage ,RCP8.5,2010,0.1204,1
 Catania,  Physical Risk,Acute,Storm damage ,RCP8.5,2020,1.70758,1
 Catania,  Physical Risk,Acute,Storm damage ,RCP8.5,2030,4.72073,1
@@ -862,7 +1132,7 @@ Catania,  Physical Risk,Acute,Storm damage ,RCP8.5,2050,12.9844,1
 Catania,  Physical Risk,Acute,Storm damage ,RCP8.5,2060,17.8786,1
 Catania,  Physical Risk,Acute,Storm damage ,RCP8.5,2070,24.6363,1
 Catania,  Physical Risk,Acute,Storm damage ,RCP8.5,2080,30.7974,1
-Catania,  Physical Risk,Acute,Storm damage ,RCP8.5,2090,38.8475,1
+Catania,  Physical Risk,Acute,Storm damage ,RCP8.5,2090,36.6372,1
 Catania,  Physical Risk,Acute,Employee impacts ,RCP8.5,2010,0.01032,1
 Catania,  Physical Risk,Acute,Employee impacts ,RCP8.5,2020,0.146364,1
 Catania,  Physical Risk,Acute,Employee impacts ,RCP8.5,2030,0.404634,1
@@ -871,7 +1141,7 @@ Catania,  Physical Risk,Acute,Employee impacts ,RCP8.5,2050,1.11295,1
 Catania,  Physical Risk,Acute,Employee impacts ,RCP8.5,2060,1.53245,1
 Catania,  Physical Risk,Acute,Employee impacts ,RCP8.5,2070,2.11168,1
 Catania,  Physical Risk,Acute,Employee impacts ,RCP8.5,2080,2.63978,1
-Catania,  Physical Risk,Acute,Employee impacts ,RCP8.5,2090,3.32978,1
+Catania,  Physical Risk,Acute,Employee impacts ,RCP8.5,2090,3.14033,1
 Catania,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2010,0.172,1
 Catania,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2020,2.4394,1
 Catania,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2030,6.7439,1
@@ -880,16 +1150,16 @@ Catania,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2050,18.5492,1
 Catania,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2060,25.5408,1
 Catania,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2070,35.1947,1
 Catania,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2080,43.9963,1
-Catania,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2090,55.4964,1
-Catania,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2010,0,1
-Catania,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2020,0,1
-Catania,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2030,1.285,1
-Catania,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2040,10,1
-Catania,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2050,10,1
-Catania,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2060,10,1
-Catania,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2070,10,1
-Catania,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2080,10,1
-Catania,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2090,10,1
+Catania,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2090,52.3389,1
+Catania,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2010,1.8526,1
+Catania,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2020,6.7846,1
+Catania,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2030,35.1399,1
+Catania,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2040,50,1
+Catania,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2050,50,1
+Catania,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2060,50,1
+Catania,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2070,50,1
+Catania,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2080,50,1
+Catania,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2090,50,1
 Catania,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2010,0.02752,1
 Catania,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2020,0.390304,1
 Catania,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2030,1.07902,1
@@ -898,7 +1168,7 @@ Catania,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2050,2.96787
 Catania,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2060,4.08653,1
 Catania,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2070,5.63115,1
 Catania,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2080,7.03941,1
-Catania,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2090,8.87942,1
+Catania,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2090,8.37422,1
 Catania,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2010,0.03096,1
 Catania,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2020,0.439092,1
 Catania,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2030,1.2139,1
@@ -907,7 +1177,7 @@ Catania,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2050,3.33886,
 Catania,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2060,4.59734,1
 Catania,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2070,6.33505,1
 Catania,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2080,7.91933,1
-Catania,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2090,9.98935,1
+Catania,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2090,9.421,1
 Catania,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2010,0.02064,1
 Catania,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2020,0.292728,1
 Catania,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2030,0.809268,1
@@ -916,7 +1186,7 @@ Catania,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2050,2.22
 Catania,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2060,3.0649,1
 Catania,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2070,4.22336,1
 Catania,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2080,5.27956,1
-Catania,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2090,6.65957,1
+Catania,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2090,6.28067,1
 Catania,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2010,0.00516,1
 Catania,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2020,0.073182,1
 Catania,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2030,0.202317,1
@@ -925,7 +1195,7 @@ Catania,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2050,0.556
 Catania,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2060,0.766224,1
 Catania,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2070,1.05584,1
 Catania,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2080,1.31989,1
-Catania,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2090,1.66489,1
+Catania,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2090,1.57017,1
 Catania,  Opportunity,Resilience,Energy resilience ,RCP8.5,2010,0.0258,1
 Catania,  Opportunity,Resilience,Energy resilience ,RCP8.5,2020,0.36591,1
 Catania,  Opportunity,Resilience,Energy resilience ,RCP8.5,2030,1.01158,1
@@ -934,7 +1204,7 @@ Catania,  Opportunity,Resilience,Energy resilience ,RCP8.5,2050,2.78238,1
 Catania,  Opportunity,Resilience,Energy resilience ,RCP8.5,2060,3.83112,1
 Catania,  Opportunity,Resilience,Energy resilience ,RCP8.5,2070,5.2792,1
 Catania,  Opportunity,Resilience,Energy resilience ,RCP8.5,2080,6.59944,1
-Catania,  Opportunity,Resilience,Energy resilience ,RCP8.5,2090,8.32446,1
+Catania,  Opportunity,Resilience,Energy resilience ,RCP8.5,2090,7.85084,1
 Catania,  Physical Risk,Chronic,Drought ,RCP8.5,2010,10,1
 Catania,  Physical Risk,Chronic,Drought ,RCP8.5,2020,10,1
 Catania,  Physical Risk,Chronic,Drought ,RCP8.5,2030,0,1
@@ -4732,7 +5002,7 @@ Palo_Alto,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2050,4.05672
 Palo_Alto,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2060,15.9799,3
 Palo_Alto,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2070,21.9913,3
 Palo_Alto,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2080,28.7456,3
-Palo_Alto,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2090,36.1909,3
+Palo_Alto,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2090,32.6344,3
 Palo_Alto,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2010,0,3
 Palo_Alto,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2020,0,3
 Palo_Alto,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2030,0.574712,3
@@ -4741,7 +5011,7 @@ Palo_Alto,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2050,0.5408
 Palo_Alto,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2060,2.13065,3
 Palo_Alto,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2070,2.93218,3
 Palo_Alto,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2080,3.83274,3
-Palo_Alto,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2090,4.82545,3
+Palo_Alto,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2090,4.35126,3
 Palo_Alto,  Transition Risk,Technology,New technology ,RCP8.5,2010,0,3
 Palo_Alto,  Transition Risk,Technology,New technology ,RCP8.5,2020,0,3
 Palo_Alto,  Transition Risk,Technology,New technology ,RCP8.5,2030,0.502873,3
@@ -4750,7 +5020,7 @@ Palo_Alto,  Transition Risk,Technology,New technology ,RCP8.5,2050,0.473284,3
 Palo_Alto,  Transition Risk,Technology,New technology ,RCP8.5,2060,1.86432,3
 Palo_Alto,  Transition Risk,Technology,New technology ,RCP8.5,2070,2.56565,3
 Palo_Alto,  Transition Risk,Technology,New technology ,RCP8.5,2080,3.35365,3
-Palo_Alto,  Transition Risk,Technology,New technology ,RCP8.5,2090,4.22227,3
+Palo_Alto,  Transition Risk,Technology,New technology ,RCP8.5,2090,3.80735,3
 Palo_Alto,  Transition Risk,Market,Reputation damage ,RCP8.5,2010,0,3
 Palo_Alto,  Transition Risk,Market,Reputation damage ,RCP8.5,2020,0,3
 Palo_Alto,  Transition Risk,Market,Reputation damage ,RCP8.5,2030,0.359195,3
@@ -4759,7 +5029,7 @@ Palo_Alto,  Transition Risk,Market,Reputation damage ,RCP8.5,2050,0.33806,3
 Palo_Alto,  Transition Risk,Market,Reputation damage ,RCP8.5,2060,1.33166,3
 Palo_Alto,  Transition Risk,Market,Reputation damage ,RCP8.5,2070,1.83261,3
 Palo_Alto,  Transition Risk,Market,Reputation damage ,RCP8.5,2080,2.39547,3
-Palo_Alto,  Transition Risk,Market,Reputation damage ,RCP8.5,2090,3.01591,3
+Palo_Alto,  Transition Risk,Market,Reputation damage ,RCP8.5,2090,2.71954,3
 Palo_Alto,  Transition Risk,Reputation,Materials cost ,RCP8.5,2010,0,3
 Palo_Alto,  Transition Risk,Reputation,Materials cost ,RCP8.5,2020,0,3
 Palo_Alto,  Transition Risk,Reputation,Materials cost ,RCP8.5,2030,0.71839,3
@@ -4768,7 +5038,7 @@ Palo_Alto,  Transition Risk,Reputation,Materials cost ,RCP8.5,2050,0.67612,3
 Palo_Alto,  Transition Risk,Reputation,Materials cost ,RCP8.5,2060,2.66331,3
 Palo_Alto,  Transition Risk,Reputation,Materials cost ,RCP8.5,2070,3.66522,3
 Palo_Alto,  Transition Risk,Reputation,Materials cost ,RCP8.5,2080,4.79093,3
-Palo_Alto,  Transition Risk,Reputation,Materials cost ,RCP8.5,2090,6.03181,3
+Palo_Alto,  Transition Risk,Reputation,Materials cost ,RCP8.5,2090,5.43907,3
 Palo_Alto,  Physical Risk,Acute,Storm damage ,RCP8.5,2010,0,3
 Palo_Alto,  Physical Risk,Acute,Storm damage ,RCP8.5,2020,0,3
 Palo_Alto,  Physical Risk,Acute,Storm damage ,RCP8.5,2030,5.02873,3
@@ -4777,7 +5047,7 @@ Palo_Alto,  Physical Risk,Acute,Storm damage ,RCP8.5,2050,4.73284,3
 Palo_Alto,  Physical Risk,Acute,Storm damage ,RCP8.5,2060,18.6432,3
 Palo_Alto,  Physical Risk,Acute,Storm damage ,RCP8.5,2070,25.6565,3
 Palo_Alto,  Physical Risk,Acute,Storm damage ,RCP8.5,2080,33.5365,3
-Palo_Alto,  Physical Risk,Acute,Storm damage ,RCP8.5,2090,42.2227,3
+Palo_Alto,  Physical Risk,Acute,Storm damage ,RCP8.5,2090,38.0735,3
 Palo_Alto,  Physical Risk,Acute,Employee impacts ,RCP8.5,2010,0,3
 Palo_Alto,  Physical Risk,Acute,Employee impacts ,RCP8.5,2020,0,3
 Palo_Alto,  Physical Risk,Acute,Employee impacts ,RCP8.5,2030,0.431034,3
@@ -4786,7 +5056,7 @@ Palo_Alto,  Physical Risk,Acute,Employee impacts ,RCP8.5,2050,0.405672,3
 Palo_Alto,  Physical Risk,Acute,Employee impacts ,RCP8.5,2060,1.59799,3
 Palo_Alto,  Physical Risk,Acute,Employee impacts ,RCP8.5,2070,2.19913,3
 Palo_Alto,  Physical Risk,Acute,Employee impacts ,RCP8.5,2080,2.87456,3
-Palo_Alto,  Physical Risk,Acute,Employee impacts ,RCP8.5,2090,3.61909,3
+Palo_Alto,  Physical Risk,Acute,Employee impacts ,RCP8.5,2090,3.26344,3
 Palo_Alto,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2010,0,3
 Palo_Alto,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2020,0,3
 Palo_Alto,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2030,7.1839,3
@@ -4795,16 +5065,16 @@ Palo_Alto,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2050,6.7612,3
 Palo_Alto,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2060,26.6331,3
 Palo_Alto,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2070,36.6522,3
 Palo_Alto,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2080,47.9093,3
-Palo_Alto,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2090,60.3181,3
-Palo_Alto,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2010,0,3
-Palo_Alto,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2020,0,3
-Palo_Alto,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2030,0,3
-Palo_Alto,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2040,0,3
-Palo_Alto,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2050,11.0226,3
-Palo_Alto,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2060,30,3
-Palo_Alto,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2070,30,3
-Palo_Alto,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2080,30,3
-Palo_Alto,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2090,30,3
+Palo_Alto,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2090,54.3907,3
+Palo_Alto,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2010,0.2123,3
+Palo_Alto,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2020,1.6738,3
+Palo_Alto,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2030,5.5037,3
+Palo_Alto,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2040,21.2696,3
+Palo_Alto,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2050,72.0451,3
+Palo_Alto,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2060,90,3
+Palo_Alto,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2070,90,3
+Palo_Alto,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2080,90,3
+Palo_Alto,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2090,90,3
 Palo_Alto,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2010,0,3
 Palo_Alto,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2020,0,3
 Palo_Alto,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2030,1.14942,3
@@ -4813,7 +5083,7 @@ Palo_Alto,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2050,1.081
 Palo_Alto,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2060,4.2613,3
 Palo_Alto,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2070,5.86435,3
 Palo_Alto,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2080,7.66549,3
-Palo_Alto,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2090,9.6509,3
+Palo_Alto,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2090,8.70251,3
 Palo_Alto,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2010,0,3
 Palo_Alto,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2020,0,3
 Palo_Alto,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2030,1.2931,3
@@ -4822,7 +5092,7 @@ Palo_Alto,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2050,1.2170
 Palo_Alto,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2060,4.79396,3
 Palo_Alto,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2070,6.5974,3
 Palo_Alto,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2080,8.62367,3
-Palo_Alto,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2090,10.8573,3
+Palo_Alto,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2090,9.79033,3
 Palo_Alto,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2010,0,3
 Palo_Alto,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2020,0,3
 Palo_Alto,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2030,0.862068,3
@@ -4831,7 +5101,7 @@ Palo_Alto,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2050,0.
 Palo_Alto,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2060,3.19597,3
 Palo_Alto,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2070,4.39826,3
 Palo_Alto,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2080,5.74912,3
-Palo_Alto,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2090,7.23817,3
+Palo_Alto,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2090,6.52688,3
 Palo_Alto,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2010,0,3
 Palo_Alto,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2020,0,3
 Palo_Alto,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2030,0.215517,3
@@ -4840,7 +5110,7 @@ Palo_Alto,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2050,0.2
 Palo_Alto,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2060,0.798993,3
 Palo_Alto,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2070,1.09957,3
 Palo_Alto,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2080,1.43728,3
-Palo_Alto,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2090,1.80954,3
+Palo_Alto,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2090,1.63172,3
 Palo_Alto,  Opportunity,Resilience,Energy resilience ,RCP8.5,2010,0,3
 Palo_Alto,  Opportunity,Resilience,Energy resilience ,RCP8.5,2020,0,3
 Palo_Alto,  Opportunity,Resilience,Energy resilience ,RCP8.5,2030,1.07759,3
@@ -4849,7 +5119,7 @@ Palo_Alto,  Opportunity,Resilience,Energy resilience ,RCP8.5,2050,1.01418,3
 Palo_Alto,  Opportunity,Resilience,Energy resilience ,RCP8.5,2060,3.99496,3
 Palo_Alto,  Opportunity,Resilience,Energy resilience ,RCP8.5,2070,5.49783,3
 Palo_Alto,  Opportunity,Resilience,Energy resilience ,RCP8.5,2080,7.1864,3
-Palo_Alto,  Opportunity,Resilience,Energy resilience ,RCP8.5,2090,9.04772,3
+Palo_Alto,  Opportunity,Resilience,Energy resilience ,RCP8.5,2090,8.1586,3
 Palo_Alto,  Physical Risk,Chronic,Drought ,RCP8.5,2010,5,3
 Palo_Alto,  Physical Risk,Chronic,Drought ,RCP8.5,2020,5,3
 Palo_Alto,  Physical Risk,Chronic,Drought ,RCP8.5,2030,0,3
@@ -5402,75 +5672,75 @@ Dublin,  Physical Risk,Chronic,Drought ,RCP8.5,2090,5,3
 Puerto_Rico,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2010,4.81158,3
 Puerto_Rico,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2020,16.8865,3
 Puerto_Rico,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2030,27.6919,3
-Puerto_Rico,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2040,45.8879,3
-Puerto_Rico,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2050,55.0725,3
-Puerto_Rico,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2060,56.8485,3
-Puerto_Rico,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2070,57.6205,3
-Puerto_Rico,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2080,57.9301,3
-Puerto_Rico,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2090,58.2,3
+Puerto_Rico,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2040,36.7608,3
+Puerto_Rico,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2050,40.6691,3
+Puerto_Rico,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2060,41.4249,3
+Puerto_Rico,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2070,41.7534,3
+Puerto_Rico,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2080,41.8852,3
+Puerto_Rico,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2090,42,3
 Puerto_Rico,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2010,0.641544,3
 Puerto_Rico,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2020,2.25154,3
 Puerto_Rico,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2030,3.69226,3
-Puerto_Rico,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2040,6.11838,3
-Puerto_Rico,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2050,7.343,3
-Puerto_Rico,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2060,7.5798,3
-Puerto_Rico,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2070,7.68273,3
-Puerto_Rico,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2080,7.72402,3
-Puerto_Rico,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2090,7.76,3
+Puerto_Rico,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2040,4.90144,3
+Puerto_Rico,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2050,5.42255,3
+Puerto_Rico,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2060,5.52332,3
+Puerto_Rico,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2070,5.56712,3
+Puerto_Rico,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2080,5.58469,3
+Puerto_Rico,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2090,5.6,3
 Puerto_Rico,  Transition Risk,Technology,New technology ,RCP8.5,2010,0.561351,3
 Puerto_Rico,  Transition Risk,Technology,New technology ,RCP8.5,2020,1.97009,3
 Puerto_Rico,  Transition Risk,Technology,New technology ,RCP8.5,2030,3.23072,3
-Puerto_Rico,  Transition Risk,Technology,New technology ,RCP8.5,2040,5.35359,3
-Puerto_Rico,  Transition Risk,Technology,New technology ,RCP8.5,2050,6.42513,3
-Puerto_Rico,  Transition Risk,Technology,New technology ,RCP8.5,2060,6.63233,3
-Puerto_Rico,  Transition Risk,Technology,New technology ,RCP8.5,2070,6.72239,3
-Puerto_Rico,  Transition Risk,Technology,New technology ,RCP8.5,2080,6.75851,3
-Puerto_Rico,  Transition Risk,Technology,New technology ,RCP8.5,2090,6.79,3
+Puerto_Rico,  Transition Risk,Technology,New technology ,RCP8.5,2040,4.28876,3
+Puerto_Rico,  Transition Risk,Technology,New technology ,RCP8.5,2050,4.74473,3
+Puerto_Rico,  Transition Risk,Technology,New technology ,RCP8.5,2060,4.83291,3
+Puerto_Rico,  Transition Risk,Technology,New technology ,RCP8.5,2070,4.87123,3
+Puerto_Rico,  Transition Risk,Technology,New technology ,RCP8.5,2080,4.8866,3
+Puerto_Rico,  Transition Risk,Technology,New technology ,RCP8.5,2090,4.9,3
 Puerto_Rico,  Transition Risk,Market,Reputation damage ,RCP8.5,2010,0.400965,3
 Puerto_Rico,  Transition Risk,Market,Reputation damage ,RCP8.5,2020,1.40721,3
 Puerto_Rico,  Transition Risk,Market,Reputation damage ,RCP8.5,2030,2.30766,3
-Puerto_Rico,  Transition Risk,Market,Reputation damage ,RCP8.5,2040,3.82399,3
-Puerto_Rico,  Transition Risk,Market,Reputation damage ,RCP8.5,2050,4.58937,3
-Puerto_Rico,  Transition Risk,Market,Reputation damage ,RCP8.5,2060,4.73738,3
-Puerto_Rico,  Transition Risk,Market,Reputation damage ,RCP8.5,2070,4.80171,3
-Puerto_Rico,  Transition Risk,Market,Reputation damage ,RCP8.5,2080,4.82751,3
-Puerto_Rico,  Transition Risk,Market,Reputation damage ,RCP8.5,2090,4.85,3
+Puerto_Rico,  Transition Risk,Market,Reputation damage ,RCP8.5,2040,3.0634,3
+Puerto_Rico,  Transition Risk,Market,Reputation damage ,RCP8.5,2050,3.38909,3
+Puerto_Rico,  Transition Risk,Market,Reputation damage ,RCP8.5,2060,3.45208,3
+Puerto_Rico,  Transition Risk,Market,Reputation damage ,RCP8.5,2070,3.47945,3
+Puerto_Rico,  Transition Risk,Market,Reputation damage ,RCP8.5,2080,3.49043,3
+Puerto_Rico,  Transition Risk,Market,Reputation damage ,RCP8.5,2090,3.5,3
 Puerto_Rico,  Transition Risk,Reputation,Materials cost ,RCP8.5,2010,0.80193,3
 Puerto_Rico,  Transition Risk,Reputation,Materials cost ,RCP8.5,2020,2.81442,3
 Puerto_Rico,  Transition Risk,Reputation,Materials cost ,RCP8.5,2030,4.61532,3
-Puerto_Rico,  Transition Risk,Reputation,Materials cost ,RCP8.5,2040,7.64798,3
-Puerto_Rico,  Transition Risk,Reputation,Materials cost ,RCP8.5,2050,9.17875,3
-Puerto_Rico,  Transition Risk,Reputation,Materials cost ,RCP8.5,2060,9.47475,3
-Puerto_Rico,  Transition Risk,Reputation,Materials cost ,RCP8.5,2070,9.60341,3
-Puerto_Rico,  Transition Risk,Reputation,Materials cost ,RCP8.5,2080,9.65502,3
-Puerto_Rico,  Transition Risk,Reputation,Materials cost ,RCP8.5,2090,9.7,3
+Puerto_Rico,  Transition Risk,Reputation,Materials cost ,RCP8.5,2040,6.1268,3
+Puerto_Rico,  Transition Risk,Reputation,Materials cost ,RCP8.5,2050,6.77819,3
+Puerto_Rico,  Transition Risk,Reputation,Materials cost ,RCP8.5,2060,6.90415,3
+Puerto_Rico,  Transition Risk,Reputation,Materials cost ,RCP8.5,2070,6.9589,3
+Puerto_Rico,  Transition Risk,Reputation,Materials cost ,RCP8.5,2080,6.98086,3
+Puerto_Rico,  Transition Risk,Reputation,Materials cost ,RCP8.5,2090,7,3
 Puerto_Rico,  Physical Risk,Acute,Storm damage ,RCP8.5,2010,5.61351,3
 Puerto_Rico,  Physical Risk,Acute,Storm damage ,RCP8.5,2020,19.7009,3
 Puerto_Rico,  Physical Risk,Acute,Storm damage ,RCP8.5,2030,32.3072,3
-Puerto_Rico,  Physical Risk,Acute,Storm damage ,RCP8.5,2040,53.5359,3
-Puerto_Rico,  Physical Risk,Acute,Storm damage ,RCP8.5,2050,64.2512,3
-Puerto_Rico,  Physical Risk,Acute,Storm damage ,RCP8.5,2060,66.3233,3
-Puerto_Rico,  Physical Risk,Acute,Storm damage ,RCP8.5,2070,67.2239,3
-Puerto_Rico,  Physical Risk,Acute,Storm damage ,RCP8.5,2080,67.5851,3
-Puerto_Rico,  Physical Risk,Acute,Storm damage ,RCP8.5,2090,67.9,3
+Puerto_Rico,  Physical Risk,Acute,Storm damage ,RCP8.5,2040,42.8876,3
+Puerto_Rico,  Physical Risk,Acute,Storm damage ,RCP8.5,2050,47.4473,3
+Puerto_Rico,  Physical Risk,Acute,Storm damage ,RCP8.5,2060,48.329,3
+Puerto_Rico,  Physical Risk,Acute,Storm damage ,RCP8.5,2070,48.7123,3
+Puerto_Rico,  Physical Risk,Acute,Storm damage ,RCP8.5,2080,48.866,3
+Puerto_Rico,  Physical Risk,Acute,Storm damage ,RCP8.5,2090,49,3
 Puerto_Rico,  Physical Risk,Acute,Employee impacts ,RCP8.5,2010,0.481158,3
 Puerto_Rico,  Physical Risk,Acute,Employee impacts ,RCP8.5,2020,1.68865,3
 Puerto_Rico,  Physical Risk,Acute,Employee impacts ,RCP8.5,2030,2.76919,3
-Puerto_Rico,  Physical Risk,Acute,Employee impacts ,RCP8.5,2040,4.58879,3
-Puerto_Rico,  Physical Risk,Acute,Employee impacts ,RCP8.5,2050,5.50725,3
-Puerto_Rico,  Physical Risk,Acute,Employee impacts ,RCP8.5,2060,5.68485,3
-Puerto_Rico,  Physical Risk,Acute,Employee impacts ,RCP8.5,2070,5.76205,3
-Puerto_Rico,  Physical Risk,Acute,Employee impacts ,RCP8.5,2080,5.79301,3
-Puerto_Rico,  Physical Risk,Acute,Employee impacts ,RCP8.5,2090,5.82,3
+Puerto_Rico,  Physical Risk,Acute,Employee impacts ,RCP8.5,2040,3.67608,3
+Puerto_Rico,  Physical Risk,Acute,Employee impacts ,RCP8.5,2050,4.06691,3
+Puerto_Rico,  Physical Risk,Acute,Employee impacts ,RCP8.5,2060,4.14249,3
+Puerto_Rico,  Physical Risk,Acute,Employee impacts ,RCP8.5,2070,4.17534,3
+Puerto_Rico,  Physical Risk,Acute,Employee impacts ,RCP8.5,2080,4.18852,3
+Puerto_Rico,  Physical Risk,Acute,Employee impacts ,RCP8.5,2090,4.2,3
 Puerto_Rico,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2010,8.0193,3
 Puerto_Rico,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2020,28.1442,3
 Puerto_Rico,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2030,46.1532,3
-Puerto_Rico,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2040,76.4798,3
-Puerto_Rico,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2050,91.7875,3
-Puerto_Rico,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2060,94.7475,3
-Puerto_Rico,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2070,96.0341,3
-Puerto_Rico,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2080,96.5502,3
-Puerto_Rico,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2090,97,3
+Puerto_Rico,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2040,61.268,3
+Puerto_Rico,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2050,67.7819,3
+Puerto_Rico,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2060,69.0415,3
+Puerto_Rico,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2070,69.589,3
+Puerto_Rico,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2080,69.8086,3
+Puerto_Rico,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2090,70,3
 Puerto_Rico,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2010,0,3
 Puerto_Rico,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2020,0,3
 Puerto_Rico,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2030,0,3
@@ -5483,48 +5753,48 @@ Puerto_Rico,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2090,0,3
 Puerto_Rico,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2010,1.28309,3
 Puerto_Rico,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2020,4.50307,3
 Puerto_Rico,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2030,7.38451,3
-Puerto_Rico,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2040,12.2368,3
-Puerto_Rico,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2050,14.686,3
-Puerto_Rico,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2060,15.1596,3
-Puerto_Rico,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2070,15.3655,3
-Puerto_Rico,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2080,15.448,3
-Puerto_Rico,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2090,15.52,3
+Puerto_Rico,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2040,9.80288,3
+Puerto_Rico,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2050,10.8451,3
+Puerto_Rico,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2060,11.0466,3
+Puerto_Rico,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2070,11.1342,3
+Puerto_Rico,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2080,11.1694,3
+Puerto_Rico,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2090,11.2,3
 Puerto_Rico,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2010,1.44347,3
 Puerto_Rico,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2020,5.06596,3
 Puerto_Rico,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2030,8.30758,3
-Puerto_Rico,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2040,13.7664,3
-Puerto_Rico,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2050,16.5217,3
-Puerto_Rico,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2060,17.0545,3
-Puerto_Rico,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2070,17.2861,3
-Puerto_Rico,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2080,17.379,3
-Puerto_Rico,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2090,17.46,3
+Puerto_Rico,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2040,11.0282,3
+Puerto_Rico,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2050,12.2007,3
+Puerto_Rico,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2060,12.4275,3
+Puerto_Rico,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2070,12.526,3
+Puerto_Rico,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2080,12.5655,3
+Puerto_Rico,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2090,12.6,3
 Puerto_Rico,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2010,0.962316,3
 Puerto_Rico,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2020,3.3773,3
 Puerto_Rico,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2030,5.53838,3
-Puerto_Rico,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2040,9.17758,3
-Puerto_Rico,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2050,11.0145,3
-Puerto_Rico,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2060,11.3697,3
-Puerto_Rico,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2070,11.5241,3
-Puerto_Rico,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2080,11.586,3
-Puerto_Rico,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2090,11.64,3
+Puerto_Rico,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2040,7.35216,3
+Puerto_Rico,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2050,8.13383,3
+Puerto_Rico,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2060,8.28498,3
+Puerto_Rico,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2070,8.35068,3
+Puerto_Rico,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2080,8.37703,3
+Puerto_Rico,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2090,8.4,3
 Puerto_Rico,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2010,0.240579,3
 Puerto_Rico,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2020,0.844326,3
 Puerto_Rico,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2030,1.3846,3
-Puerto_Rico,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2040,2.29439,3
-Puerto_Rico,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2050,2.75362,3
-Puerto_Rico,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2060,2.84242,3
-Puerto_Rico,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2070,2.88102,3
-Puerto_Rico,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2080,2.89651,3
-Puerto_Rico,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2090,2.91,3
+Puerto_Rico,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2040,1.83804,3
+Puerto_Rico,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2050,2.03346,3
+Puerto_Rico,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2060,2.07124,3
+Puerto_Rico,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2070,2.08767,3
+Puerto_Rico,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2080,2.09426,3
+Puerto_Rico,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2090,2.1,3
 Puerto_Rico,  Opportunity,Resilience,Energy resilience ,RCP8.5,2010,1.20289,3
 Puerto_Rico,  Opportunity,Resilience,Energy resilience ,RCP8.5,2020,4.22163,3
 Puerto_Rico,  Opportunity,Resilience,Energy resilience ,RCP8.5,2030,6.92298,3
-Puerto_Rico,  Opportunity,Resilience,Energy resilience ,RCP8.5,2040,11.472,3
-Puerto_Rico,  Opportunity,Resilience,Energy resilience ,RCP8.5,2050,13.7681,3
-Puerto_Rico,  Opportunity,Resilience,Energy resilience ,RCP8.5,2060,14.2121,3
-Puerto_Rico,  Opportunity,Resilience,Energy resilience ,RCP8.5,2070,14.4051,3
-Puerto_Rico,  Opportunity,Resilience,Energy resilience ,RCP8.5,2080,14.4825,3
-Puerto_Rico,  Opportunity,Resilience,Energy resilience ,RCP8.5,2090,14.55,3
+Puerto_Rico,  Opportunity,Resilience,Energy resilience ,RCP8.5,2040,9.1902,3
+Puerto_Rico,  Opportunity,Resilience,Energy resilience ,RCP8.5,2050,10.1673,3
+Puerto_Rico,  Opportunity,Resilience,Energy resilience ,RCP8.5,2060,10.3562,3
+Puerto_Rico,  Opportunity,Resilience,Energy resilience ,RCP8.5,2070,10.4383,3
+Puerto_Rico,  Opportunity,Resilience,Energy resilience ,RCP8.5,2080,10.4713,3
+Puerto_Rico,  Opportunity,Resilience,Energy resilience ,RCP8.5,2090,10.5,3
 Puerto_Rico,  Physical Risk,Chronic,Drought ,RCP8.5,2010,5,3
 Puerto_Rico,  Physical Risk,Chronic,Drought ,RCP8.5,2020,20,3
 Puerto_Rico,  Physical Risk,Chronic,Drought ,RCP8.5,2030,30,3
@@ -5539,73 +5809,73 @@ Barcelona_Sant_Cugat,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2
 Barcelona_Sant_Cugat,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2030,15.7455,3
 Barcelona_Sant_Cugat,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2040,15.4544,3
 Barcelona_Sant_Cugat,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2050,27.4121,3
-Barcelona_Sant_Cugat,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2060,37.5098,3
-Barcelona_Sant_Cugat,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2070,45.2675,3
-Barcelona_Sant_Cugat,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2080,51.9493,3
-Barcelona_Sant_Cugat,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2090,55.4206,3
+Barcelona_Sant_Cugat,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2060,33.1957,3
+Barcelona_Sant_Cugat,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2070,36.4968,3
+Barcelona_Sant_Cugat,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2080,39.3401,3
+Barcelona_Sant_Cugat,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2090,40.8173,3
 Barcelona_Sant_Cugat,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2010,0.665496,3
 Barcelona_Sant_Cugat,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2020,1.58337,3
 Barcelona_Sant_Cugat,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2030,2.0994,3
 Barcelona_Sant_Cugat,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2040,2.06058,3
 Barcelona_Sant_Cugat,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2050,3.65495,3
-Barcelona_Sant_Cugat,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2060,5.0013,3
-Barcelona_Sant_Cugat,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2070,6.03566,3
-Barcelona_Sant_Cugat,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2080,6.92658,3
-Barcelona_Sant_Cugat,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2090,7.38942,3
+Barcelona_Sant_Cugat,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2060,4.42609,3
+Barcelona_Sant_Cugat,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2070,4.86624,3
+Barcelona_Sant_Cugat,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2080,5.24535,3
+Barcelona_Sant_Cugat,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2090,5.4423,3
 Barcelona_Sant_Cugat,  Transition Risk,Technology,New technology ,RCP8.5,2010,0.582309,3
 Barcelona_Sant_Cugat,  Transition Risk,Technology,New technology ,RCP8.5,2020,1.38545,3
 Barcelona_Sant_Cugat,  Transition Risk,Technology,New technology ,RCP8.5,2030,1.83698,3
 Barcelona_Sant_Cugat,  Transition Risk,Technology,New technology ,RCP8.5,2040,1.80301,3
 Barcelona_Sant_Cugat,  Transition Risk,Technology,New technology ,RCP8.5,2050,3.19808,3
-Barcelona_Sant_Cugat,  Transition Risk,Technology,New technology ,RCP8.5,2060,4.37614,3
-Barcelona_Sant_Cugat,  Transition Risk,Technology,New technology ,RCP8.5,2070,5.28121,3
-Barcelona_Sant_Cugat,  Transition Risk,Technology,New technology ,RCP8.5,2080,6.06075,3
-Barcelona_Sant_Cugat,  Transition Risk,Technology,New technology ,RCP8.5,2090,6.46574,3
+Barcelona_Sant_Cugat,  Transition Risk,Technology,New technology ,RCP8.5,2060,3.87283,3
+Barcelona_Sant_Cugat,  Transition Risk,Technology,New technology ,RCP8.5,2070,4.25796,3
+Barcelona_Sant_Cugat,  Transition Risk,Technology,New technology ,RCP8.5,2080,4.58968,3
+Barcelona_Sant_Cugat,  Transition Risk,Technology,New technology ,RCP8.5,2090,4.76202,3
 Barcelona_Sant_Cugat,  Transition Risk,Market,Reputation damage ,RCP8.5,2010,0.415935,3
 Barcelona_Sant_Cugat,  Transition Risk,Market,Reputation damage ,RCP8.5,2020,0.989605,3
 Barcelona_Sant_Cugat,  Transition Risk,Market,Reputation damage ,RCP8.5,2030,1.31212,3
 Barcelona_Sant_Cugat,  Transition Risk,Market,Reputation damage ,RCP8.5,2040,1.28787,3
 Barcelona_Sant_Cugat,  Transition Risk,Market,Reputation damage ,RCP8.5,2050,2.28435,3
-Barcelona_Sant_Cugat,  Transition Risk,Market,Reputation damage ,RCP8.5,2060,3.12582,3
-Barcelona_Sant_Cugat,  Transition Risk,Market,Reputation damage ,RCP8.5,2070,3.77229,3
-Barcelona_Sant_Cugat,  Transition Risk,Market,Reputation damage ,RCP8.5,2080,4.32911,3
-Barcelona_Sant_Cugat,  Transition Risk,Market,Reputation damage ,RCP8.5,2090,4.61838,3
+Barcelona_Sant_Cugat,  Transition Risk,Market,Reputation damage ,RCP8.5,2060,2.76631,3
+Barcelona_Sant_Cugat,  Transition Risk,Market,Reputation damage ,RCP8.5,2070,3.0414,3
+Barcelona_Sant_Cugat,  Transition Risk,Market,Reputation damage ,RCP8.5,2080,3.27835,3
+Barcelona_Sant_Cugat,  Transition Risk,Market,Reputation damage ,RCP8.5,2090,3.40144,3
 Barcelona_Sant_Cugat,  Transition Risk,Reputation,Materials cost ,RCP8.5,2010,0.83187,3
 Barcelona_Sant_Cugat,  Transition Risk,Reputation,Materials cost ,RCP8.5,2020,1.97921,3
 Barcelona_Sant_Cugat,  Transition Risk,Reputation,Materials cost ,RCP8.5,2030,2.62425,3
 Barcelona_Sant_Cugat,  Transition Risk,Reputation,Materials cost ,RCP8.5,2040,2.57573,3
 Barcelona_Sant_Cugat,  Transition Risk,Reputation,Materials cost ,RCP8.5,2050,4.56869,3
-Barcelona_Sant_Cugat,  Transition Risk,Reputation,Materials cost ,RCP8.5,2060,6.25163,3
-Barcelona_Sant_Cugat,  Transition Risk,Reputation,Materials cost ,RCP8.5,2070,7.54458,3
-Barcelona_Sant_Cugat,  Transition Risk,Reputation,Materials cost ,RCP8.5,2080,8.65822,3
-Barcelona_Sant_Cugat,  Transition Risk,Reputation,Materials cost ,RCP8.5,2090,9.23677,3
+Barcelona_Sant_Cugat,  Transition Risk,Reputation,Materials cost ,RCP8.5,2060,5.53261,3
+Barcelona_Sant_Cugat,  Transition Risk,Reputation,Materials cost ,RCP8.5,2070,6.0828,3
+Barcelona_Sant_Cugat,  Transition Risk,Reputation,Materials cost ,RCP8.5,2080,6.55669,3
+Barcelona_Sant_Cugat,  Transition Risk,Reputation,Materials cost ,RCP8.5,2090,6.80288,3
 Barcelona_Sant_Cugat,  Physical Risk,Acute,Storm damage ,RCP8.5,2010,5.82309,3
 Barcelona_Sant_Cugat,  Physical Risk,Acute,Storm damage ,RCP8.5,2020,13.8545,3
 Barcelona_Sant_Cugat,  Physical Risk,Acute,Storm damage ,RCP8.5,2030,18.3697,3
 Barcelona_Sant_Cugat,  Physical Risk,Acute,Storm damage ,RCP8.5,2040,18.0301,3
 Barcelona_Sant_Cugat,  Physical Risk,Acute,Storm damage ,RCP8.5,2050,31.9808,3
-Barcelona_Sant_Cugat,  Physical Risk,Acute,Storm damage ,RCP8.5,2060,43.7614,3
-Barcelona_Sant_Cugat,  Physical Risk,Acute,Storm damage ,RCP8.5,2070,52.8121,3
-Barcelona_Sant_Cugat,  Physical Risk,Acute,Storm damage ,RCP8.5,2080,60.6075,3
-Barcelona_Sant_Cugat,  Physical Risk,Acute,Storm damage ,RCP8.5,2090,64.6574,3
+Barcelona_Sant_Cugat,  Physical Risk,Acute,Storm damage ,RCP8.5,2060,38.7283,3
+Barcelona_Sant_Cugat,  Physical Risk,Acute,Storm damage ,RCP8.5,2070,42.5796,3
+Barcelona_Sant_Cugat,  Physical Risk,Acute,Storm damage ,RCP8.5,2080,45.8968,3
+Barcelona_Sant_Cugat,  Physical Risk,Acute,Storm damage ,RCP8.5,2090,47.6202,3
 Barcelona_Sant_Cugat,  Physical Risk,Acute,Employee impacts ,RCP8.5,2010,0.499122,3
 Barcelona_Sant_Cugat,  Physical Risk,Acute,Employee impacts ,RCP8.5,2020,1.18753,3
 Barcelona_Sant_Cugat,  Physical Risk,Acute,Employee impacts ,RCP8.5,2030,1.57455,3
 Barcelona_Sant_Cugat,  Physical Risk,Acute,Employee impacts ,RCP8.5,2040,1.54544,3
 Barcelona_Sant_Cugat,  Physical Risk,Acute,Employee impacts ,RCP8.5,2050,2.74121,3
-Barcelona_Sant_Cugat,  Physical Risk,Acute,Employee impacts ,RCP8.5,2060,3.75098,3
-Barcelona_Sant_Cugat,  Physical Risk,Acute,Employee impacts ,RCP8.5,2070,4.52675,3
-Barcelona_Sant_Cugat,  Physical Risk,Acute,Employee impacts ,RCP8.5,2080,5.19493,3
-Barcelona_Sant_Cugat,  Physical Risk,Acute,Employee impacts ,RCP8.5,2090,5.54206,3
+Barcelona_Sant_Cugat,  Physical Risk,Acute,Employee impacts ,RCP8.5,2060,3.31957,3
+Barcelona_Sant_Cugat,  Physical Risk,Acute,Employee impacts ,RCP8.5,2070,3.64968,3
+Barcelona_Sant_Cugat,  Physical Risk,Acute,Employee impacts ,RCP8.5,2080,3.93401,3
+Barcelona_Sant_Cugat,  Physical Risk,Acute,Employee impacts ,RCP8.5,2090,4.08173,3
 Barcelona_Sant_Cugat,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2010,8.3187,3
 Barcelona_Sant_Cugat,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2020,19.7921,3
 Barcelona_Sant_Cugat,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2030,26.2425,3
 Barcelona_Sant_Cugat,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2040,25.7573,3
 Barcelona_Sant_Cugat,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2050,45.6869,3
-Barcelona_Sant_Cugat,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2060,62.5163,3
-Barcelona_Sant_Cugat,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2070,75.4458,3
-Barcelona_Sant_Cugat,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2080,86.5822,3
-Barcelona_Sant_Cugat,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2090,92.3677,3
+Barcelona_Sant_Cugat,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2060,55.3261,3
+Barcelona_Sant_Cugat,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2070,60.828,3
+Barcelona_Sant_Cugat,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2080,65.5669,3
+Barcelona_Sant_Cugat,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2090,68.0288,3
 Barcelona_Sant_Cugat,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2010,0,3
 Barcelona_Sant_Cugat,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2020,0,3
 Barcelona_Sant_Cugat,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2030,0,3
@@ -5620,46 +5890,46 @@ Barcelona_Sant_Cugat,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5
 Barcelona_Sant_Cugat,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2030,4.1988,3
 Barcelona_Sant_Cugat,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2040,4.12117,3
 Barcelona_Sant_Cugat,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2050,7.3099,3
-Barcelona_Sant_Cugat,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2060,10.0026,3
-Barcelona_Sant_Cugat,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2070,12.0713,3
-Barcelona_Sant_Cugat,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2080,13.8532,3
-Barcelona_Sant_Cugat,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2090,14.7788,3
+Barcelona_Sant_Cugat,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2060,8.85218,3
+Barcelona_Sant_Cugat,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2070,9.73248,3
+Barcelona_Sant_Cugat,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2080,10.4907,3
+Barcelona_Sant_Cugat,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2090,10.8846,3
 Barcelona_Sant_Cugat,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2010,1.49737,3
 Barcelona_Sant_Cugat,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2020,3.56258,3
 Barcelona_Sant_Cugat,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2030,4.72365,3
 Barcelona_Sant_Cugat,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2040,4.63631,3
 Barcelona_Sant_Cugat,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2050,8.22364,3
-Barcelona_Sant_Cugat,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2060,11.2529,3
-Barcelona_Sant_Cugat,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2070,13.5802,3
-Barcelona_Sant_Cugat,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2080,15.5848,3
-Barcelona_Sant_Cugat,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2090,16.6262,3
+Barcelona_Sant_Cugat,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2060,9.9587,3
+Barcelona_Sant_Cugat,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2070,10.949,3
+Barcelona_Sant_Cugat,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2080,11.802,3
+Barcelona_Sant_Cugat,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2090,12.2452,3
 Barcelona_Sant_Cugat,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2010,0.998244,3
 Barcelona_Sant_Cugat,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2020,2.37505,3
 Barcelona_Sant_Cugat,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2030,3.1491,3
 Barcelona_Sant_Cugat,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2040,3.09088,3
 Barcelona_Sant_Cugat,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2050,5.48243,3
-Barcelona_Sant_Cugat,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2060,7.50196,3
-Barcelona_Sant_Cugat,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2070,9.0535,3
-Barcelona_Sant_Cugat,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2080,10.3899,3
-Barcelona_Sant_Cugat,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2090,11.0841,3
+Barcelona_Sant_Cugat,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2060,6.63913,3
+Barcelona_Sant_Cugat,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2070,7.29936,3
+Barcelona_Sant_Cugat,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2080,7.86803,3
+Barcelona_Sant_Cugat,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2090,8.16346,3
 Barcelona_Sant_Cugat,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2010,0.249561,3
 Barcelona_Sant_Cugat,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2020,0.593763,3
 Barcelona_Sant_Cugat,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2030,0.787275,3
 Barcelona_Sant_Cugat,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2040,0.772719,3
 Barcelona_Sant_Cugat,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2050,1.37061,3
-Barcelona_Sant_Cugat,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2060,1.87549,3
-Barcelona_Sant_Cugat,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2070,2.26337,3
-Barcelona_Sant_Cugat,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2080,2.59747,3
-Barcelona_Sant_Cugat,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2090,2.77103,3
+Barcelona_Sant_Cugat,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2060,1.65978,3
+Barcelona_Sant_Cugat,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2070,1.82484,3
+Barcelona_Sant_Cugat,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2080,1.96701,3
+Barcelona_Sant_Cugat,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2090,2.04086,3
 Barcelona_Sant_Cugat,  Opportunity,Resilience,Energy resilience ,RCP8.5,2010,1.2478,3
 Barcelona_Sant_Cugat,  Opportunity,Resilience,Energy resilience ,RCP8.5,2020,2.96882,3
 Barcelona_Sant_Cugat,  Opportunity,Resilience,Energy resilience ,RCP8.5,2030,3.93637,3
 Barcelona_Sant_Cugat,  Opportunity,Resilience,Energy resilience ,RCP8.5,2040,3.8636,3
 Barcelona_Sant_Cugat,  Opportunity,Resilience,Energy resilience ,RCP8.5,2050,6.85304,3
-Barcelona_Sant_Cugat,  Opportunity,Resilience,Energy resilience ,RCP8.5,2060,9.37744,3
-Barcelona_Sant_Cugat,  Opportunity,Resilience,Energy resilience ,RCP8.5,2070,11.3169,3
-Barcelona_Sant_Cugat,  Opportunity,Resilience,Energy resilience ,RCP8.5,2080,12.9873,3
-Barcelona_Sant_Cugat,  Opportunity,Resilience,Energy resilience ,RCP8.5,2090,13.8552,3
+Barcelona_Sant_Cugat,  Opportunity,Resilience,Energy resilience ,RCP8.5,2060,8.29891,3
+Barcelona_Sant_Cugat,  Opportunity,Resilience,Energy resilience ,RCP8.5,2070,9.1242,3
+Barcelona_Sant_Cugat,  Opportunity,Resilience,Energy resilience ,RCP8.5,2080,9.83503,3
+Barcelona_Sant_Cugat,  Opportunity,Resilience,Energy resilience ,RCP8.5,2090,10.2043,3
 Barcelona_Sant_Cugat,  Physical Risk,Chronic,Drought ,RCP8.5,2010,50,3
 Barcelona_Sant_Cugat,  Physical Risk,Chronic,Drought ,RCP8.5,2020,50,3
 Barcelona_Sant_Cugat,  Physical Risk,Chronic,Drought ,RCP8.5,2030,40,3
@@ -5741,15 +6011,15 @@ Rehovot,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2060,6.4109,3
 Rehovot,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2070,9.5495,3
 Rehovot,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2080,17.3591,3
 Rehovot,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2090,22.7416,3
-Rehovot,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2010,0,3
-Rehovot,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2020,0,3
-Rehovot,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2030,18.111,3
-Rehovot,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2040,30,3
-Rehovot,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2050,30,3
-Rehovot,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2060,30,3
-Rehovot,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2070,30,3
-Rehovot,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2080,30,3
-Rehovot,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2090,30,3
+Rehovot,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2010,0.5634,3
+Rehovot,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2020,8.074,3
+Rehovot,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2030,86.2219,3
+Rehovot,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2040,90,3
+Rehovot,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2050,90,3
+Rehovot,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2060,90,3
+Rehovot,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2070,90,3
+Rehovot,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2080,90,3
+Rehovot,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2090,90,3
 Rehovot,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2010,0,3
 Rehovot,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2020,0,3
 Rehovot,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2030,0,3
@@ -5811,8 +6081,8 @@ Singapore_DRD,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2040,12.
 Singapore_DRD,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2050,20.2962,3
 Singapore_DRD,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2060,24.3739,3
 Singapore_DRD,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2070,24.6176,3
-Singapore_DRD,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2080,33.4166,3
-Singapore_DRD,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2090,39.5512,3
+Singapore_DRD,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2080,31.4539,3
+Singapore_DRD,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2090,34.0643,3
 Singapore_DRD,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2010,0.271136,3
 Singapore_DRD,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2020,0.243376,3
 Singapore_DRD,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2030,0.933456,3
@@ -5820,8 +6090,8 @@ Singapore_DRD,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2040,1.
 Singapore_DRD,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2050,2.70616,3
 Singapore_DRD,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2060,3.24986,3
 Singapore_DRD,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2070,3.28234,3
-Singapore_DRD,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2080,4.45554,3
-Singapore_DRD,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2090,5.2735,3
+Singapore_DRD,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2080,4.19385,3
+Singapore_DRD,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2090,4.54191,3
 Singapore_DRD,  Transition Risk,Technology,New technology ,RCP8.5,2010,0.237244,3
 Singapore_DRD,  Transition Risk,Technology,New technology ,RCP8.5,2020,0.212954,3
 Singapore_DRD,  Transition Risk,Technology,New technology ,RCP8.5,2030,0.816774,3
@@ -5829,8 +6099,8 @@ Singapore_DRD,  Transition Risk,Technology,New technology ,RCP8.5,2040,1.5006,3
 Singapore_DRD,  Transition Risk,Technology,New technology ,RCP8.5,2050,2.36789,3
 Singapore_DRD,  Transition Risk,Technology,New technology ,RCP8.5,2060,2.84362,3
 Singapore_DRD,  Transition Risk,Technology,New technology ,RCP8.5,2070,2.87205,3
-Singapore_DRD,  Transition Risk,Technology,New technology ,RCP8.5,2080,3.8986,3
-Singapore_DRD,  Transition Risk,Technology,New technology ,RCP8.5,2090,4.61431,3
+Singapore_DRD,  Transition Risk,Technology,New technology ,RCP8.5,2080,3.66962,3
+Singapore_DRD,  Transition Risk,Technology,New technology ,RCP8.5,2090,3.97417,3
 Singapore_DRD,  Transition Risk,Market,Reputation damage ,RCP8.5,2010,0.16946,3
 Singapore_DRD,  Transition Risk,Market,Reputation damage ,RCP8.5,2020,0.15211,3
 Singapore_DRD,  Transition Risk,Market,Reputation damage ,RCP8.5,2030,0.58341,3
@@ -5838,8 +6108,8 @@ Singapore_DRD,  Transition Risk,Market,Reputation damage ,RCP8.5,2040,1.07186,3
 Singapore_DRD,  Transition Risk,Market,Reputation damage ,RCP8.5,2050,1.69135,3
 Singapore_DRD,  Transition Risk,Market,Reputation damage ,RCP8.5,2060,2.03116,3
 Singapore_DRD,  Transition Risk,Market,Reputation damage ,RCP8.5,2070,2.05146,3
-Singapore_DRD,  Transition Risk,Market,Reputation damage ,RCP8.5,2080,2.78472,3
-Singapore_DRD,  Transition Risk,Market,Reputation damage ,RCP8.5,2090,3.29594,3
+Singapore_DRD,  Transition Risk,Market,Reputation damage ,RCP8.5,2080,2.62115,3
+Singapore_DRD,  Transition Risk,Market,Reputation damage ,RCP8.5,2090,2.83869,3
 Singapore_DRD,  Transition Risk,Reputation,Materials cost ,RCP8.5,2010,0.33892,3
 Singapore_DRD,  Transition Risk,Reputation,Materials cost ,RCP8.5,2020,0.30422,3
 Singapore_DRD,  Transition Risk,Reputation,Materials cost ,RCP8.5,2030,1.16682,3
@@ -5847,8 +6117,8 @@ Singapore_DRD,  Transition Risk,Reputation,Materials cost ,RCP8.5,2040,2.14371,3
 Singapore_DRD,  Transition Risk,Reputation,Materials cost ,RCP8.5,2050,3.3827,3
 Singapore_DRD,  Transition Risk,Reputation,Materials cost ,RCP8.5,2060,4.06232,3
 Singapore_DRD,  Transition Risk,Reputation,Materials cost ,RCP8.5,2070,4.10293,3
-Singapore_DRD,  Transition Risk,Reputation,Materials cost ,RCP8.5,2080,5.56943,3
-Singapore_DRD,  Transition Risk,Reputation,Materials cost ,RCP8.5,2090,6.59187,3
+Singapore_DRD,  Transition Risk,Reputation,Materials cost ,RCP8.5,2080,5.24231,3
+Singapore_DRD,  Transition Risk,Reputation,Materials cost ,RCP8.5,2090,5.67739,3
 Singapore_DRD,  Physical Risk,Acute,Storm damage ,RCP8.5,2010,2.37244,3
 Singapore_DRD,  Physical Risk,Acute,Storm damage ,RCP8.5,2020,2.12954,3
 Singapore_DRD,  Physical Risk,Acute,Storm damage ,RCP8.5,2030,8.16774,3
@@ -5856,8 +6126,8 @@ Singapore_DRD,  Physical Risk,Acute,Storm damage ,RCP8.5,2040,15.006,3
 Singapore_DRD,  Physical Risk,Acute,Storm damage ,RCP8.5,2050,23.6789,3
 Singapore_DRD,  Physical Risk,Acute,Storm damage ,RCP8.5,2060,28.4362,3
 Singapore_DRD,  Physical Risk,Acute,Storm damage ,RCP8.5,2070,28.7205,3
-Singapore_DRD,  Physical Risk,Acute,Storm damage ,RCP8.5,2080,38.986,3
-Singapore_DRD,  Physical Risk,Acute,Storm damage ,RCP8.5,2090,46.1431,3
+Singapore_DRD,  Physical Risk,Acute,Storm damage ,RCP8.5,2080,36.6962,3
+Singapore_DRD,  Physical Risk,Acute,Storm damage ,RCP8.5,2090,39.7417,3
 Singapore_DRD,  Physical Risk,Acute,Employee impacts ,RCP8.5,2010,0.203352,3
 Singapore_DRD,  Physical Risk,Acute,Employee impacts ,RCP8.5,2020,0.182532,3
 Singapore_DRD,  Physical Risk,Acute,Employee impacts ,RCP8.5,2030,0.700092,3
@@ -5865,8 +6135,8 @@ Singapore_DRD,  Physical Risk,Acute,Employee impacts ,RCP8.5,2040,1.28623,3
 Singapore_DRD,  Physical Risk,Acute,Employee impacts ,RCP8.5,2050,2.02962,3
 Singapore_DRD,  Physical Risk,Acute,Employee impacts ,RCP8.5,2060,2.43739,3
 Singapore_DRD,  Physical Risk,Acute,Employee impacts ,RCP8.5,2070,2.46176,3
-Singapore_DRD,  Physical Risk,Acute,Employee impacts ,RCP8.5,2080,3.34166,3
-Singapore_DRD,  Physical Risk,Acute,Employee impacts ,RCP8.5,2090,3.95512,3
+Singapore_DRD,  Physical Risk,Acute,Employee impacts ,RCP8.5,2080,3.14539,3
+Singapore_DRD,  Physical Risk,Acute,Employee impacts ,RCP8.5,2090,3.40643,3
 Singapore_DRD,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2010,3.3892,3
 Singapore_DRD,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2020,3.0422,3
 Singapore_DRD,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2030,11.6682,3
@@ -5874,8 +6144,8 @@ Singapore_DRD,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2040,21.4371,
 Singapore_DRD,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2050,33.827,3
 Singapore_DRD,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2060,40.6232,3
 Singapore_DRD,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2070,41.0293,3
-Singapore_DRD,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2080,55.6943,3
-Singapore_DRD,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2090,65.9187,3
+Singapore_DRD,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2080,52.4231,3
+Singapore_DRD,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2090,56.7739,3
 Singapore_DRD,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2010,0,3
 Singapore_DRD,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2020,0,3
 Singapore_DRD,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2030,0,3
@@ -5892,8 +6162,8 @@ Singapore_DRD,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2040,3
 Singapore_DRD,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2050,5.41232,3
 Singapore_DRD,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2060,6.49971,3
 Singapore_DRD,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2070,6.56469,3
-Singapore_DRD,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2080,8.91109,3
-Singapore_DRD,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2090,10.547,3
+Singapore_DRD,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2080,8.3877,3
+Singapore_DRD,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2090,9.08382,3
 Singapore_DRD,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2010,0.610056,3
 Singapore_DRD,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2020,0.547596,3
 Singapore_DRD,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2030,2.10028,3
@@ -5901,8 +6171,8 @@ Singapore_DRD,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2040,3.
 Singapore_DRD,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2050,6.08886,3
 Singapore_DRD,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2060,7.31218,3
 Singapore_DRD,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2070,7.38527,3
-Singapore_DRD,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2080,10.025,3
-Singapore_DRD,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2090,11.8654,3
+Singapore_DRD,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2080,9.43616,3
+Singapore_DRD,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2090,10.2193,3
 Singapore_DRD,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2010,0.406704,3
 Singapore_DRD,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2020,0.365064,3
 Singapore_DRD,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2030,1.40018,3
@@ -5910,8 +6180,8 @@ Singapore_DRD,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,204
 Singapore_DRD,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2050,4.05924,3
 Singapore_DRD,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2060,4.87478,3
 Singapore_DRD,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2070,4.92352,3
-Singapore_DRD,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2080,6.68332,3
-Singapore_DRD,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2090,7.91024,3
+Singapore_DRD,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2080,6.29077,3
+Singapore_DRD,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2090,6.81287,3
 Singapore_DRD,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2010,0.101676,3
 Singapore_DRD,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2020,0.091266,3
 Singapore_DRD,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2030,0.350046,3
@@ -5919,8 +6189,8 @@ Singapore_DRD,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2040
 Singapore_DRD,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2050,1.01481,3
 Singapore_DRD,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2060,1.2187,3
 Singapore_DRD,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2070,1.23088,3
-Singapore_DRD,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2080,1.67083,3
-Singapore_DRD,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2090,1.97756,3
+Singapore_DRD,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2080,1.57269,3
+Singapore_DRD,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2090,1.70322,3
 Singapore_DRD,  Opportunity,Resilience,Energy resilience ,RCP8.5,2010,0.50838,3
 Singapore_DRD,  Opportunity,Resilience,Energy resilience ,RCP8.5,2020,0.45633,3
 Singapore_DRD,  Opportunity,Resilience,Energy resilience ,RCP8.5,2030,1.75023,3
@@ -5928,8 +6198,8 @@ Singapore_DRD,  Opportunity,Resilience,Energy resilience ,RCP8.5,2040,3.21557,3
 Singapore_DRD,  Opportunity,Resilience,Energy resilience ,RCP8.5,2050,5.07405,3
 Singapore_DRD,  Opportunity,Resilience,Energy resilience ,RCP8.5,2060,6.09348,3
 Singapore_DRD,  Opportunity,Resilience,Energy resilience ,RCP8.5,2070,6.1544,3
-Singapore_DRD,  Opportunity,Resilience,Energy resilience ,RCP8.5,2080,8.35414,3
-Singapore_DRD,  Opportunity,Resilience,Energy resilience ,RCP8.5,2090,9.88781,3
+Singapore_DRD,  Opportunity,Resilience,Energy resilience ,RCP8.5,2080,7.86346,3
+Singapore_DRD,  Opportunity,Resilience,Energy resilience ,RCP8.5,2090,8.51608,3
 Singapore_DRD,  Physical Risk,Chronic,Drought ,RCP8.5,2010,0,3
 Singapore_DRD,  Physical Risk,Chronic,Drought ,RCP8.5,2020,0,3
 Singapore_DRD,  Physical Risk,Chronic,Drought ,RCP8.5,2030,0,3
@@ -6011,15 +6281,15 @@ San_Diego,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2060,17.2461,3
 San_Diego,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2070,25.7291,3
 San_Diego,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2080,37.9739,3
 San_Diego,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2090,45.247,3
-San_Diego,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2010,0,3
-San_Diego,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2020,0,3
-San_Diego,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2030,0,3
-San_Diego,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2040,0,3
-San_Diego,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2050,0,3
-San_Diego,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2060,0,3
-San_Diego,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2070,0,3
-San_Diego,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2080,0,3
-San_Diego,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2090,0,3
+San_Diego,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2010,1.265,3
+San_Diego,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2020,5.1353,3
+San_Diego,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2030,24.2748,3
+San_Diego,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2040,30,3
+San_Diego,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2050,30,3
+San_Diego,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2060,30,3
+San_Diego,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2070,30,3
+San_Diego,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2080,30,3
+San_Diego,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2090,30,3
 San_Diego,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2010,0,3
 San_Diego,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2020,0,3
 San_Diego,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2030,1.07669,3

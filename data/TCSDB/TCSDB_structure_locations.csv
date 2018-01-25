@@ -1,5 +1,5 @@
 LocationID,ParentCorpID,LocationName,lon,lat,location,df_tx90p,df_pdsisc,df_coastalflood,notes
-1,1,Boise,-116.149136,43.529396,Boise_Idaho,tx90p-1,pdsisc-1,coastalflood-1,-
+1,1,Boise,-116.149136,43.529396,Boise_Idaho,tx90p-1,pdsisc-2,coastalflood-1,-
 2,1,Manassas,-77.503845,38.750829,Manassas_Virginia,tx90p-2,pdsisc-2,coastalflood-2,-
 3,1,Singapore_Hqs,103.864621,1.31839,Singapore,tx90p-1,pdsisc-1,coastalflood-1,-
 4,1,Singapore_300mm_DRAM,103.767569,1.432186,Singapore,tx90p-1,pdsisc-1,coastalflood-1,-
