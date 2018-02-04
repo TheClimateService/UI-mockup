@@ -1,0 +1,36 @@
+
+# SCRIPT TO EXTRACT DAMAGE FUNCTION IDS/DESCRIPTIONS AND DATA FOR COVER_CLASS="Bldg"
+# TT - December 2017
+
+# Get the ids/descriptions for "Bldg" class.
+sed 's/" "/;/g' hazus_flood_depth_damage.csv > temp10
+sed 's/"//' temp10 > temp11
+sed 's/"/;/g' temp11 > temp12
+sed 's/,//g' temp12 > temp13
+sed 's/ /_/g' temp13 > temp14
+awk '{FS=";"; if($(NF-1)=="Bldg") print $3,$5}' temp14 > temp15
+sed 's/_//' temp15 > temp16
+sort -n temp16 > temp16b
+sed 's/ //g' temp16b > temp17
+
+# Remove exact duplicates
+sort -u temp17 > temp17b
+
+# Get the 29 data fields corresponding to -4,-3,-2,-1,0,1,2,...24 feet of flood depth and assemble fields for TCSDB damage-function sheet.
+# Fields required:  id,source,description,xvariable,xunits,yvariable,yunits,nvalues,list_xvalues,list_yvalues
+awk '{FS=";"; if($(NF-1)=="Bldg") print "floodbldg-"$3", hazus,"$5", flooddepth, feet, structural damage, percent, 29"}' temp14 > temp20
+sed 's/_//' temp20 | sed 's/_//' > temp21
+awk '{FS=";"; if($(NF-1)=="Bldg") print $6"XXX"}' temp14 > temp22
+sed 's/_//' temp22 | sed 's/_XXX//' | sed 's/_/;/g' > temp23
+awk '{for(i=-4; i<=24; i++) string=string";"i; print string", "$0; string=""}' temp23 > temp24
+sed 's/;/,/' temp24 > temp25
+paste temp21 temp25 > temp26
+echo "id,source,description,xvariable,xunits,yvariable,yunits,nvalues,list_xvalues,list_yvalues" > temp26.hdr
+cat temp26.hdr temp26 > temp27
+
+# Save results and clean up.
+echo "dmgfunctionid_description" > temp.hdr
+cat temp.hdr temp17b > hazus_flood_depth_damage.csv.bldg.list
+echo "id,source,description,xvariable,xunits,yvariable,yunits,nvalues,list_xvalues,list_yvalues" > temp26.hdr
+cat temp26.hdr temp26 > hazus_flood_depth_damage.csv.bldg.4TCSDB.csv
+rm temp*

@@ -1,0 +1,19 @@
+
+# SCRIPT TO PREPARE THE LOCATIONS FROM TCSDB_structure.xlsx FOR PROCESSING BY THE SCORING ENGINE
+# TT - January 2018
+
+# This script assumes that the TCSDB_structure.xlsx page for locations has been saved as a csv file with spaces at field separators.
+# Execution:  ./script_clean_locations_v1 <locations file saved as csv>
+# Example:    ./script_clean_locations_v1 TCSDB_structure_locations.csv
+
+# Get input.
+infile=$1
+
+# Merge the LocationID ParentCorpID LocationName fields into one field.	
+sed 's/ /_/' $infile > temp1
+sed 's/ /_/' temp1 > temp2
+
+# Save results.
+mv temp2 $infile.cln
+rm temp*
+

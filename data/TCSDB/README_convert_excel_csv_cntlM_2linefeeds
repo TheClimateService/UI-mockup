@@ -3,6 +3,10 @@ Since the sed 's/^M/\n/g' command does not work, use the following to convert a 
 
 	cat junk | tr "^M" "\n" > junk2  (do not copy/paste this; enter it on the command line)
 
+The above inserts an additional linefeed, so use:
+
+	cat junk | tr "^M" " " > junk2
+
 On the command line, the cntl-M symbol is obtained by entering cntl-V and then cntl-M.
 
 

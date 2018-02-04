@@ -1,0 +1,37 @@
+
+# SCRIPT TO READ TCSDB SPREADSHEET AND RUN BOTH PHYSICAL AND NON-PHYSICAL SCORING.
+# TT - January 2018
+
+# Execution:  ./script_runall <name of TCSDB spreadsheet without file type>
+# Example:    ./script_runall TCSDB_structure 
+
+# Get target TCSDB spreadsheet.
+tcsdbfile=$1
+# damfile=$2 # Now read in by load_tcsdb_4scoringengine.r 
+
+# Get the needed files from tabs in the TCSDB xlsx file.
+# This generates locations.csv, locations4SE, riskfactors.csv, subcat.csv, cat.csv, corp.csv, and df.csv .
+Rscript ./load_tcsdb_4scoringengine.r
+
+# Move and rename the location information.
+cp ./nonphysical/locations4SE.csv temp1
+sed 's/;/ /g' temp1 > temp2
+sed 's/ /_/' temp2 > temp3
+sed 's/ /_/' temp3 > temp4
+sed 's/"//g' temp4 > temp5
+mv temp5 $tcsdbfile.locations.csv
+
+# Clean up the damage-function data and discard the last (11th) column containing notes.
+sed 's/"//g' df.csv | cut -d "," -f 1-10 > df.csv.cln
+
+# Run physical scoring.
+#./script_runall_physical $tcsdbfile.locations.csv $damfile
+./script_runall_physical $tcsdbfile.locations.csv df.csv.cln
+
+# Run non-physical scoring and assemble with physical.
+cp $tcsdbfile.locations.csv.damages.allDFs ./nonphysical/
+cd ./nonphysical/
+./script_runall_nonphysical $tcsdbfile.locations.csv.damages.allDFs
+
+# Outputs are the in the ./nonphysical/ directory:   TCSDB_structure.locations.csv.damages.allDFs.with.nonphysical.byparentcorp.csv and TCSDB_structure.locations.csv.damages.allDFs.with.nonphysical.csv
+

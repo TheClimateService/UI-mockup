@@ -1,0 +1,172 @@
+
+# SCRIPT TO BUILD NONPHYSICAL RISK VALUES FOR EACH LOCATION ACROSS ALL RISK FACTORS
+# TT - January 2018
+
+# The input files used below are produced by ./data/scoring_engine/nonphysical/load_tcsdb_nonphysical.r 
+# Execution:	./script_build_nonphysical_v1 <file of location ids and names> <file of riskfactors> <file of TCFD subcategories> <file of TCFD categories> <damages file from the scoring engine> <file of parent corporation ids and names>
+# Example:	./script_build_nonphysical_v1 locations.csv riskfactors.csv subcat.csv cat.csv TCSDB_structure_locations.csv.damages.allDFs corp.csv
+
+# Get input
+locfile=$1
+riskfac=$2
+subcat=$3
+cat=$4
+damfile=$5
+corpfile=$6
+
+# Simplify the locations and corportations files as written out by load_tcsdb_nonphysical.r .
+awk '{FS=";"; print $2";"$3";"$4";"}' $locfile > temp9
+awk '{FS=";"; print $2";"$3";"}' $corpfile > temp9.corp
+sed 's/ /_/g' temp9.corp > temp9.corp.cln
+
+# Make script generating one line for every risk factor for each location.
+# Due to row number added in r, "RiskFactorID";"TCFDSubCatID";"RiskFactorName";"DamageFunctionClass" are in fields 2-5.
+awk '{FS=";"; print "DDDsubcat("$3");"}' $riskfac > temp0
+sed 's/DDD/"/' temp0 > temp0b
+#awk '{FS=";"; print $4}' $riskfac > temp1
+awk '{FS=";"; print $4";"$5}' $riskfac > temp1
+sed 's/"//' temp1 > temp1b
+paste temp0b temp1b > temp1c
+sed 's/\";\"/;/g' temp1c > temp1d
+echo LASTLINE >> temp1d
+awk '{if(NR>1 && $1!="LASTLINE") string=string"; print $0,"$0;  \
+      if($1=="LASTLINE") print string}' temp1d > temp2
+sed 's/;//' temp2 > temp3
+echo "awk '{if(NR>1) {" > temp3.hdr
+echo "} }' temp9 > temp10.1" > temp3.ftr
+cat temp3.hdr temp3 temp3.ftr > temp4
+chmod a+x temp4
+./temp4
+# This produces temp10.1 covering all facilities with the following format:
+# 1;1;"Boise"; subcat(1); Carbon pricing;tx90p_60
+# 1;1;"Boise"; subcat(1); Litigation risk;tx90p_8
+
+# Combine the cat and subcat names.
+awk '{FS=";"; print "cat("$2");"$3}' $cat > temp15
+awk '{FS=";"; print $2"; cat("$3");"$4}' $subcat > temp16.1
+echo LASTLINE >> temp15
+awk '{FS=";"; if(NR>1 && $1!="LASTLINE") print "sed SSSs/"$1"/"$2"/SSS temp16."(NR-1)" > temp16."NR;  \
+              if($1=="LASTLINE") print "cp temp16."(NR-1)" temp16.out" }' temp15 > temp17
+sed "s/SSS/'/g" temp17 > temp18
+chmod a+x temp18
+./temp18
+sed 's/\&/and/g' temp16.out > temp16b
+echo LASTLINE >> temp16b
+
+# Get the cat and subcat names and insert them.
+awk '{FS=";"; print $2";"$4}' $subcat > temp11
+sed 's/\&/and/g' temp11 > temp11b
+sed 's/"//g' temp11b > temp12
+echo LASTLINE >> temp12
+#awk '{FS=";"; if(NR>1 && $1!="LASTLINE") print "sed SSSs/subcat("$1")/"$2"/SSS temp10."(NR-1)" > temp10."NR;  \
+              #if($1=="LASTLINE") print "cp temp10."(NR-1)" temp.out" }' temp12 > temp13
+awk '{FS=";"; if(NR>1 && $1!="LASTLINE") print "sed SSSs/subcat("$1")/"$2";"$3"/SSS temp10."(NR-1)" > temp10."NR;  \
+              if($1=="LASTLINE") print "cp temp10."(NR-1)" temp.out" }' temp16b > temp13
+sed "s/SSS/'/g" temp13 > temp14
+chmod a+x temp14
+./temp14
+
+# The above produces temp.out with the following format:
+#ParentCorpID	LocationID	Location	TCFDCategoryName	TCFDSubCatName	RiskFactorName	
+#1;1;"Boise";  "Transition Risk";"Policy and Legal";     Increased pricing of GHG emissions
+#1;1;"Boise";  "Transition Risk";"Policy and Legal";     Exposure to litigation
+# Note that the fields to be added are: ScenarioName	RiskYear	ValueAtRisk
+# Remove tabs in temp.out.
+tr -d "\t" < temp.out > temp.out.cln
+
+# Map each risk factor to a damage function type (e.g., tx90p).
+# This is now done in the RiskFactor tab of the TCSDB spreadsheet.
+
+# Merge with SE data.
+# Note that the first field in the SE output is facID_companyID_locationName (e.g., 2_1_Manassas or 30_2_Langley_Gulch_Power_Plant)
+cp temp.out.cln temp19
+echo XXX > temp19.hdr
+cat temp19.hdr temp19 > temp19b
+# Field 7 in temp19b contains the damage function class.  
+# This class was first defined as the first part of actual DF names; that is tx90p from tx90p-N, pdsisc from pdsisc-N, and coastalflood from coastalflood-N.
+# As an initial approach to non-physical DFs, this class is now being defined with a scaling factor in the RiskFactor tab of the TCSDB spreadsheet.  For example "tx90p_100" means damage for a non-physical risk factor will be the same as the tx90p damage for a given location, while "tx90p_50" means that it will be half as large, etc.
+#awk -v damfile=$damfile '{FS=";"; if(NR>1) print "awk SSS{split($1,array,DDD_DDD); if(array[2]=="$1" && array[1]=="$2" && substr($9,1,length($9)-2)==DDD"$7"DDD) print $0}SSS "damfile" >> temp.damages" }' temp19b > temp19c
+awk -v damfile=$damfile '{FS=";"; split($7,array,"_"); if(NR>1) print "awk SSS{split($1,array,DDD_DDD); if(array[2]=="$1" && array[1]=="$2" && substr($9,1,length($9)-2)==DDD"array[1]"DDD) print $0}SSS "damfile" >> temp.damages" }' temp19b > temp19c
+sed "s/SSS/'/g" temp19c > temp19d
+sed 's/DDD/"/g' temp19d > temp19e
+chmod a+x temp19e
+./temp19e
+tr "\t" " " < temp.damages > temp.damages.cln
+# (for verification of row matches) cut -d " " -f 1,9-19 temp.damages.cln > temp.damages.cln2
+cut -d " " -f 10-19 temp.damages.cln > temp.damages.cln2
+sed 's/ /;/g' temp.damages.cln2 > temp.damages.cln3
+cut -d ";" -f 1-6 temp.out.cln > temp.out.cln2
+paste temp.out.cln2 temp.damages.cln3 > temp19.combined
+paste temp.out.cln temp.damages.cln3 > temp19.combined.withDFclass
+cat temp19.hdr temp19.combined.withDFclass > temp19.combined.withDFclass2
+awk '{FS=";"; if(NR>1) {split($7,array,"_"); scalefac=array[2]/100; for(i=1; i<=9; i++) string=string";"$(i+7)*scalefac; print $1";"$2";"$3";"$4";"$5";"$6,string; string=""} }' temp19.combined.withDFclass2 > temp19.combined.withDFclass.scaled
+
+# Break each row into one row per period, assuming 9 period values have been provided by the SE output used above.
+#cat temp19.hdr temp19.combined > temp30
+cat temp19.hdr temp19.combined.withDFclass.scaled > temp30
+awk '{FS=";"; if(NR>1) for(i=1; i<=9; i++) print $1";"$2";"$3";"$4";"$5";"$6";RCP8.5;"(2000+i*10)";"$(NF-9+i)  \
+     }' temp30 > temp31
+cat temp19.hdr temp31 > temp31b
+awk '{FS=";"; if(NR>1) {if($NF!="NA") damage=$NF; else damage=0;  \
+                        VaR=100*(-damage)/100;  \
+			print $0";"VaR}  \
+     }' temp31b > temp32
+
+# Cast into desired output format for reading into corpTable in server.R:
+# Location,TCFDCategoryName,TCFDSubCatName,RiskFactorName,ScenarioName,RiskYear,ValueAtRisk,ParentCorpID
+# Boise,Transition,Policy & Legal,Increased pricing of GHG emissions,RCP8.5,2010, 2.15, 1
+echo "Location,TCFDCategoryName,TCFDSubCatName,RiskFactorName,ScenarioName,RiskYear,ValueAtRisk,ParentCorpID" > temp32.hdr
+cat temp32.hdr temp32 > temp33
+sed 's/;/,/g' temp33 > temp34
+awk '{FS=","; if(NR==1) print $0; else print $3","$4","$5","$6","$7","$8","$10","$1}' temp34 > temp35
+sed 's/"//g' temp35 > temp36
+tr -d "\t" < temp36 > temp36.cln
+
+# Aggregate at corporate/equity level.
+#awk '{FS=";"; if($1==1) print $6";"$0}' temp30 | sort > temp40
+awk '{FS=";"; print $1"_"$6";"$0}' temp30 | sort > temp40
+cat temp19.hdr temp40 > temp41
+#echo LASTLINE >> temp41
+awk '{FS=";"; if(NR>1) {split($1,array,"_");  \
+        if($1==lastrisk) {for(i=8; i<=16; i++) sum[i]=sum[i]+$i; last5=$5; last6=$6; last7=$7; lastcorpid=array[1]}  \
+                else {for(i=8; i<=16; i++) string=string";"sum[i];  \
+		      print lastcorpid";"last5";"last6";"last7""string;  \
+                      for(i=8; i<=16; i++) sum[i]=$i; string="";  \
+                      lastrisk=$1; lastcorpid=array[1] } } }' temp41 > temp42
+#      print $0";"sum[8], sum[9], sum[16]";"lastrisk;  \
+#      lastrisk=$1 } }' temp41 > temp42
+awk '{if(NR>1) print $0}' temp42 > temp43
+echo "ParentCorp,TCFDCategoryName,TCFDSubCatName,RiskFactorName,ScenarioName,RiskYear,ValueAtRisk,ParentCorpID" > temp43.hdr
+cat temp43.hdr temp43 > temp44
+
+# Change corporate ids to ticker symbols.
+cp $corpfile  temp49
+echo LASTLINE >> temp49
+awk '{FS=";";  \
+      if(NR>1 && $1!="LASTLINE") print "awk SSS{FS=DDD;DDD; if($1=="$2") print "$5",$0}SSS temp44 > temp44."(NR-1);  \
+      if($1=="LASTLINE") print "cat temp44.* > temp44.out"  \
+     }' temp49 > temp50
+sed 's/DDD/"/g' temp50 > temp51
+#sed 's/""/"/g' temp51 > temp52
+sed "s/SSS/'/g" temp51 > temp52
+chmod a+x temp52
+./temp52
+sed 's/ /;/' temp44.out > temp45
+cat temp19.hdr temp45 > temp46
+
+# Break into single rows for each period and assign header like temp36.cln.
+awk '{FS=";"; if(NR>1) for(i=1; i<=9; i++) print $1";"$2";"$3";"$4";"$5";RCP8.5;"(2000+i*10)";"$(NF-9+i)  \
+     }' temp46 > temp47
+cat temp19.hdr temp47 > temp47b
+awk '{FS=";"; if(NR>1) {if($(NF)!="NA") damage=$(NF); else damage=0;  \
+                        VaR=100*(-damage)/100;  \
+			print $0";"VaR}  \
+     }' temp47b > temp47c
+cat temp32.hdr temp47c | sed 's/;/,/g' | sed 's/"//g' > temp48
+awk '{FS=","; if(NR==1) print $0; else print $1","$3","$4","$5","$6","$7","$9","$2}' temp48 > temp48b
+
+# Save results and clean up.
+mv temp36.cln $damfile.with.nonphysical.csv
+mv temp48b $damfile.with.nonphysical.byparentcorp.csv
+rm temp*
+

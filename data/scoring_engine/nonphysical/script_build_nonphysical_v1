@@ -14,7 +14,7 @@ cat=$4
 damfile=$5
 corpfile=$6
 
-# Simplify the locations and corportations files as written out by load_tcsdb_nonphysical.r .
+# Simplify the locations and corporations files as written out by load_tcsdb_nonphysical.r .
 awk '{FS=";"; print $2";"$3";"$4";"}' $locfile > temp9
 awk '{FS=";"; print $2";"$3";"}' $corpfile > temp9.corp
 sed 's/ /_/g' temp9.corp > temp9.corp.cln
@@ -86,14 +86,20 @@ cat temp19.hdr temp19 > temp19b
 # This class was first defined as the first part of actual DF names; that is tx90p from tx90p-N, pdsisc from pdsisc-N, and coastalflood from coastalflood-N.
 # As an initial approach to non-physical DFs, this class is now being defined with a scaling factor in the RiskFactor tab of the TCSDB spreadsheet.  For example "tx90p_100" means damage for a non-physical risk factor will be the same as the tx90p damage for a given location, while "tx90p_50" means that it will be half as large, etc.
 #awk -v damfile=$damfile '{FS=";"; if(NR>1) print "awk SSS{split($1,array,DDD_DDD); if(array[2]=="$1" && array[1]=="$2" && substr($9,1,length($9)-2)==DDD"$7"DDD) print $0}SSS "damfile" >> temp.damages" }' temp19b > temp19c
-awk -v damfile=$damfile '{FS=";"; split($7,array,"_"); if(NR>1) print "awk SSS{split($1,array,DDD_DDD); if(array[2]=="$1" && array[1]=="$2" && substr($9,1,length($9)-2)==DDD"array[1]"DDD) print $0}SSS "damfile" >> temp.damages" }' temp19b > temp19c
+# startcol below is 1 more than the number of columns in the facilities file made from the locations sheet of TCSDB_structure.xlsx.
+# As long as the number of periods being processed is 9 (2010s - 2090s), startcol is also given by NF-9 when processing a damage file. 
+# Note that the substr in the following assumes that the DFs are of the form xxx-n, where xxx can be of any length, but n is a single digit.
+#awk -v damfile=$damfile -v startcol=10 '{FS=";"; split($7,array,"_"); if(NR>1) print "awk SSS{split($1,array,DDD_DDD); if(array[2]=="$1" && array[1]=="$2" && substr($"startcol",1,length($"startcol")-2)==DDD"array[1]"DDD) print $0}SSS "damfile" >> temp.damages" }' temp19b > temp19c
+#awk -v damfile=$damfile '{FS=";"; split($7,array,"_"); if(NR>1) print "awk SSS{split($1,array,DDD_DDD); if(array[2]=="$1" && array[1]=="$2" && substr($(NF-9),1,length($(NF-9))-2)==DDD"array[1]"DDD) print $0}SSS "damfile" >> temp.damages" }' temp19b > temp19c
+awk -v damfile=$damfile '{FS=";"; split($7,array,"_"); if(NR>1) print "awk SSS{split($1,array,DDD_DDD); if(NF>1) split($(NF-9),arraydf,DDD-DDD); if(array[2]=="$1" && array[1]=="$2" && arraydf[1]==DDD"array[1]"DDD) print $0}SSS "damfile" >> temp.damages" }' temp19b > temp19c
 sed "s/SSS/'/g" temp19c > temp19d
 sed 's/DDD/"/g' temp19d > temp19e
 chmod a+x temp19e
 ./temp19e
 tr "\t" " " < temp.damages > temp.damages.cln
 # (for verification of row matches) cut -d " " -f 1,9-19 temp.damages.cln > temp.damages.cln2
-cut -d " " -f 10-19 temp.damages.cln > temp.damages.cln2
+#cut -d " " -f 10-19 temp.damages.cln > temp.damages.cln2
+awk '{if(NR==1) {periods=9; start=NF-periods}; for(i=1; i<=periods; i++) string=string" "$(start+i); print string; string=""}' temp.damages.cln > temp.damages.cln2
 sed 's/ /;/g' temp.damages.cln2 > temp.damages.cln3
 cut -d ";" -f 1-6 temp.out.cln > temp.out.cln2
 paste temp.out.cln2 temp.damages.cln3 > temp19.combined
@@ -159,7 +165,8 @@ awk '{FS=";"; if(NR>1) for(i=1; i<=9; i++) print $1";"$2";"$3";"$4";"$5";RCP8.5;
      }' temp46 > temp47
 cat temp19.hdr temp47 > temp47b
 awk '{FS=";"; if(NR>1) {if($(NF)!="NA") damage=$(NF); else damage=0;  \
-                        VaR=100*(-damage)/100;  \
+                        #VaR=100*(-damage)/100;  \
+                        VaR=-damage;  \
 			print $0";"VaR}  \
      }' temp47b > temp47c
 cat temp32.hdr temp47c | sed 's/;/,/g' | sed 's/"//g' > temp48

@@ -1,4 +1,6 @@
 
+--- VaR is assigned (as of 30jan18) in the creation of the two final outputs of script_build_nonphysical_v1 in the nonphysical directory.
+
 0.  All of the commands below are encapsulated in one master script:  script_engine_runall_v1.
 
 1.  tmax90p indicator
