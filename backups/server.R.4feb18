@@ -195,105 +195,6 @@ server <- function(input, output, session) {
 #              CORP METHODOLOGY
 # --------------------------------------
 
-  output$selectCausalVariable<- renderUI({
-    selectInput("selectCausalVariable","Causal Variable (Hazard)",c("Temperature","Coastal Flooding","Drought"),selected = c("Coastal Flooding"), selectize=TRUE)
-  })
-
-  output$selectDamageFunction<- renderUI({
-    selectInput("selectDamageFunction","Damage Function",c("Building Damage","Cooling","Corn Yield"),selected = c("Building Damage"), selectize=TRUE)
-  })
-
-  output$selectPeriod<- renderUI({
-    selectInput("selectPeriod","Time Period",choices = c("1980","1990","2000","2010","2020","2030","2040","2050","2060","2070","2080","2090","2100"), selected=c("2010"), selectize=TRUE)
-  })
-
- #### This is just for an example on the methodology tab - delete when replaced with real code
-  output$climplot5copy <- renderPlot({
-
-   if(input$selectCausalVariable=="Temperature") {
-    shapes <- c(81.8730, 93.0240, 88.9460, 84.7620, 95.8550, 90.0690, 86.1060, 90.3700, 91.5810)
-    scales <- c(292.0320, 293.0880, 293.0820, 293.3870, 293.7670, 293.9150, 294.5310, 295.7390, 295.7960)
-    #colors <- brewer.pal(length(shapes), "Spectral")
-    colors <- brewer.pal(length(shapes), "Paired")
-    ltypes <- c(1:length(shapes))
-    labels <- c("1976-2005", "2016-25", "2026-35", "2036-45", "2046-55", "2056-65", "2066-75", "2076-85", "2086-95")
-    x <- seq(275,315,0.1)
-    plot(x,dweibull(x,shapes[1],scales[1]), type="l", lwd=3, lty=1, col=colors[1], xlim=c(275,315), ylim=c(0,0.12), xlab="Daily Maximum Surface Temperature (degK)", ylab="Probability Density")
-    for(i in 2:length(shapes) ) {
-      lines( x, dweibull(x,shapes[i],scales[i]), lwd=2, lty=i, col=colors[i] )
-    }
-    # legend("topright", inset=.05, title="Periods", labels, lwd=3, lty=ltypes, col=colors)
-   }
-
-   if(input$selectCausalVariable=="Coastal Flooding") {
-	profile1 = filter(proj,Site==input$sealevelProjectionLocation) %>% filter(Scenario=="0.3_-_MED") %>% select(7:17)
-	z = t(profile1)
-	profile2 = filter(proj,Site==input$sealevelProjectionLocation) %>% filter(Scenario=="0.5_-_MED") %>% select(7:17)
-	z2 = t(profile2)
-	profile3 = filter(proj,Site==input$sealevelProjectionLocation) %>% filter(Scenario=="1.0_-_MED") %>% select(7:17)
-	z3 = t(profile3)
-	profile4 = filter(proj,Site==input$sealevelProjectionLocation) %>% filter(Scenario=="1.5_-_MED") %>% select(7:17)
-	z4 = t(profile4)
-	profile5 = filter(proj,Site==input$sealevelProjectionLocation) %>% filter(Scenario=="2.0_-_MED") %>% select(7:17)
-	z5 = t(profile5)
-	profile6 = filter(proj,Site==input$sealevelProjectionLocation) %>% filter(Scenario=="2.5_-_MED") %>% select(7:17)
-	z6 = t(profile6)
-	plot(z, type="l",lwd=3,col="black", xlab="Year", ylab="Relative Local Sea Level Rise (cm)", xaxt="n")
-	lines(z2, lwd=3, col="blue")
-	lines(z3, lwd=3, col="green")
-	lines(z4, lwd=3, col="yellow")
-	lines(z5, lwd=3, col="orange")
-	lines(z6, lwd=3, col="red")
-	axis(1, at=c(1:11), labels=c("2000","2010","2020","2030","2040","2050","2060","2070","2080","2090","2100"))
-     	legend("topleft", inset=.05, title="Scenarios (GMSL 2100)",legend=c("0.3m","0.5m","1.0m","1.5m","2.0m","2.5m"), lwd=3, col=c("black","blue","green","yellow","orange","red"))
-   }
-
-   if(input$selectCausalVariable=="Drought") {
-	# Processed drought data is read into dataframe d by load_drought_data.r, which is sourced at the beginning of server.R.
-	fac_selected = facility_locations %>% filter(facility==input$drought_facility)
-	lon=as.numeric(fac_selected[1,2])
-	lat=as.numeric(fac_selected[1,3])
-	source("./data/drought/process_drought_data.r", local=TRUE)
-	#paste(input$droughtlon,input$droughtlat,upperlon,lowerlon,upperlat,lowerlat)
-	#paste(as.numeric(d4[3,]), as.numeric(d4[4,]) )
-	#plot(as.numeric(d4[3,]), as.numeric(d4[4,]) )
-	values = select(d3, V3:V11)
-	tvalues = 100*as.numeric( t(values) )
-	plot(tvalues, type="l", lwd=3, lty=1, col="black", ylim=c(0,100), xlab="Period", ylab="Annual Probability (%)", xaxt="n")
-	axis(1, at=c(1:length(droughtPeriods)), labels=droughtPeriods)
-     	legend("topleft", inset=.05, title="Scenarios",legend=c("RCP4.5","RCP8.5"), lwd=3, col=c("black","blue","green","yellow","orange","red"))
-     	if(d4[3,1]=="No_data") legend("center", title="NO DATA AVAILABLE AT THIS LOCATION", legend=" ", bg="red", text.col="white", text.font=2)
-   }
-
-  })
-  
-  #This is an example for the methodology screen. Delete when replaced with real code.
-  output$plot_selectDamageFunction <- renderPlot({
-
-   if(input$selectDamageFunction=="Building Damage") {
-    damage_function_name = as.character(input$hazus_damage_function_id)
-    s = unlist( strsplit(damage_function_name, "_") )
-    # Given a list structure x, unlist simplifies it to produce a vector which contains all the atomic components which occur in x.
-    #s2 = paste(s[1])
-    damage_function_id = as.numeric(s[1])
-    #fl_dept <- extract_hazus_functions()  # done at start of server.R in data section
-    source("./data/hazus/function_extract_hazus_flood_depth_damage.r", local=TRUE)
-    get_hazus_damage_function(damage_function_id)
-   }
-
-   if(input$selectDamageFunction=="Corn Yield") {
-    source("./functions/fit_corn_yield_us_drought.r", local=TRUE)
-   }
-
-   if(input$selectDamageFunction=="Cooling") {
-    source("./functions/fit_elec_load_v1.r", local=TRUE)
-   }
-
-  })
-  
-  output$losscurve <- renderImage({list(src = "./images/Mandel-121514-graph.png", height="230px", alt = paste("loss curve"))
-  }, deleteFile = FALSE)
-  
 
 # ----------------------------
 #         PORTFOLIO - ANALYZE
@@ -769,6 +670,25 @@ server <- function(input, output, session) {
     legend("topright", inset=.05, title="Periods", labels, lwd=3, lty=ltypes, col=colors)
   })
 
+  output$losscurve <- renderImage({list(src = "./images/Mandel-121514-graph.png", height="230px", alt = paste("loss curve"))
+  }, deleteFile = FALSE)
+  
+  #### This is just for an example on the methodology tab - delete when replaced with real code
+  output$climplot5copy <- renderPlot({
+    shapes <- c(81.8730, 93.0240, 88.9460, 84.7620, 95.8550, 90.0690, 86.1060, 90.3700, 91.5810)
+    scales <- c(292.0320, 293.0880, 293.0820, 293.3870, 293.7670, 293.9150, 294.5310, 295.7390, 295.7960)
+    #colors <- brewer.pal(length(shapes), "Spectral")
+    colors <- brewer.pal(length(shapes), "Paired")
+    ltypes <- c(1:length(shapes))
+    labels <- c("1976-2005", "2016-25", "2026-35", "2036-45", "2046-55", "2056-65", "2066-75", "2076-85", "2086-95")
+    x <- seq(275,315,0.1)
+    plot(x,dweibull(x,shapes[1],scales[1]), type="l", lwd=3, lty=1, col=colors[1], xlim=c(275,315), ylim=c(0,0.12), xlab="Daily Maximum Surface Temperature (degK)", ylab="Probability Density")
+    for(i in 2:length(shapes) ) {
+      lines( x, dweibull(x,shapes[i],scales[i]), lwd=2, lty=i, col=colors[i] )
+    }
+    # legend("topright", inset=.05, title="Periods", labels, lwd=3, lty=ltypes, col=colors)
+  })
+  
   output$sealevel_extremes_plot1 <- renderPlot({
     shapes <- c(81.8730, 93.0240, 88.9460, 84.7620, 95.8550, 90.0690, 86.1060, 90.3700, 91.5810)
     scales <- c(292.0320, 293.0880, 293.0820, 293.3870, 293.7670, 293.9150, 294.5310, 295.7390, 295.7960)
@@ -971,6 +891,18 @@ output$drought_frequencies_facility <- renderPlot({
     get_hazus_damage_function(damage_function_id)
   })
 
+  #This is an example for the methodology screen. Delete when replaced with real code.
+  output$impactplot_building_flood_copy <- renderPlot({
+    damage_function_name = as.character(input$hazus_damage_function_id)
+    s = unlist( strsplit(damage_function_name, "_") )
+    # Given a list structure x, unlist simplifies it to produce a vector which contains all the atomic components which occur in x.
+    #s2 = paste(s[1])
+    damage_function_id = as.numeric(s[1])
+    #fl_dept <- extract_hazus_functions()  # done at start of server.R in data section
+    source("./data/hazus/function_extract_hazus_flood_depth_damage.r", local=TRUE)
+    get_hazus_damage_function(damage_function_id)
+  })
+  
   output$impactplot_corn_drought_return_period <- renderPlot({
     source("./functions/fit_corn_yield_us_drought.r", local=TRUE)
   })
