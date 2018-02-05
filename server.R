@@ -229,9 +229,10 @@ server <- function(input, output, session) {
 	source("./data/sealevel_us/annual_probability_withslr.r", local=TRUE)
 	position="topleft"
 	if(input$returnLevel==1) position="topright"
+	level = as.character(input$returnLevel)
     # slrYears are defined in annual_probability_withslr.r.
     # xaxt="n" in plot below turns off xaxis tickmarks.  These are added explicitly with axis.
-    plot(annual_probability_withslr[1,], type="l", lwd=3, lty=1, col="black", ylim=c(0,100), xlab="Year", ylab="Annual Probability (%)", xaxt="n")
+    plot(annual_probability_withslr[1,], type="l", lwd=3, lty=1, col="black", ylim=c(0,100), xlab="Year", ylab=paste("Ann. Prob. Exceed Flood Level",level,"m (%)"), xaxt="n")
 	lines(annual_probability_withslr[2,], col="blue")
 	lines(annual_probability_withslr[3,], col="green")
 	lines(annual_probability_withslr[4,], col="yellow")
@@ -252,7 +253,7 @@ server <- function(input, output, session) {
 	#plot(as.numeric(d4[3,]), as.numeric(d4[4,]) )
 	values = select(d3, V3:V11)
 	tvalues = 100*as.numeric( t(values) )
-	plot(tvalues, type="l", lwd=3, lty=1, col="black", ylim=c(0,100), xlab="Period", ylab="Annual Probability (%)", xaxt="n")
+	plot(tvalues, type="l", lwd=3, lty=1, col="black", ylim=c(0,100), xlab="Period", ylab="Ann. Prob. of 90th-pctile Drought (%)", xaxt="n")
 	axis(1, at=c(1:length(droughtPeriods)), labels=droughtPeriods)
      	legend("topleft", inset=.05, title="Scenarios",legend=c("RCP4.5","RCP8.5"), lwd=3, col=c("black","blue","green","yellow","orange","red"))
      	if(d4[3,1]=="No_data") legend("center", title="NO DATA AVAILABLE AT THIS LOCATION", legend=" ", bg="red", text.col="white", text.font=2)
