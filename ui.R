@@ -273,14 +273,14 @@ ui <- dashboardPage(title="The Climate Service",
                 #column(4,uiOutput("selectCausalVariable")),
                 #column(4,uiOutput("selectDamageFunction")),
                 #column(4,uiOutput("selectPeriod"))
-          column(4,selectInput("selectCausalVariable","Causal Variable (Hazard)",c("Coastal Flooding","Temperature", "Drought"),selected = c("Coastal Flooding"))),
-          column(4,selectInput("selectDamageFunction","Damage Function",c("Building Damage","Cooling","Corn Yield"),selected = c("Building Damage"))),
+          column(4,selectInput("selectCausalVariable","Causal Variable (Hazard)",c("Temperature","Coastal Flooding", "Drought"),selected = c("Temperature"))),
+          column(4,selectInput("selectDamageFunction","Damage Function",c("Cooling","Building Damage","Corn Yield"),selected = c("Cooling"))),
           column(4,selectInput("selectPeriod","Time Period",choices = c("1980","1990","2000","2010","2020","2030","2040","2050","2060","2070","2080","2090","2100")))
         ),#fluidrow select inputs
 
         fluidRow(
           box(width=4,title="Hazard","Probability of a damage-producing event",plotOutput("climplot5copy",height = 300)),
-          box(width=4,title="Exposure","Mechanism and severity of damage for a given event",
+          box(width=4,title="Vulnerability","Mechanism and severity of damage for a given event",
 		#plotOutput("impactplot_building_flood_copy", height = 300)),
 		plotOutput("plot_selectDamageFunction", height = 300)),
           box(width=4,title="Risk","Loss curve  of VaR","Probability of financial damage, with expected value", plotOutput("losscurve",height=300))

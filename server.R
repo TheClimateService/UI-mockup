@@ -226,26 +226,19 @@ server <- function(input, output, session) {
    }
 
    if(input$selectCausalVariable=="Coastal Flooding") {
-	profile1 = filter(proj,Site==input$sealevelProjectionLocation) %>% filter(Scenario=="0.3_-_MED") %>% select(7:17)
-	z = t(profile1)
-	profile2 = filter(proj,Site==input$sealevelProjectionLocation) %>% filter(Scenario=="0.5_-_MED") %>% select(7:17)
-	z2 = t(profile2)
-	profile3 = filter(proj,Site==input$sealevelProjectionLocation) %>% filter(Scenario=="1.0_-_MED") %>% select(7:17)
-	z3 = t(profile3)
-	profile4 = filter(proj,Site==input$sealevelProjectionLocation) %>% filter(Scenario=="1.5_-_MED") %>% select(7:17)
-	z4 = t(profile4)
-	profile5 = filter(proj,Site==input$sealevelProjectionLocation) %>% filter(Scenario=="2.0_-_MED") %>% select(7:17)
-	z5 = t(profile5)
-	profile6 = filter(proj,Site==input$sealevelProjectionLocation) %>% filter(Scenario=="2.5_-_MED") %>% select(7:17)
-	z6 = t(profile6)
-	plot(z, type="l",lwd=3,col="black", xlab="Year", ylab="Relative Local Sea Level Rise (cm)", xaxt="n")
-	lines(z2, lwd=3, col="blue")
-	lines(z3, lwd=3, col="green")
-	lines(z4, lwd=3, col="yellow")
-	lines(z5, lwd=3, col="orange")
-	lines(z6, lwd=3, col="red")
-	axis(1, at=c(1:11), labels=c("2000","2010","2020","2030","2040","2050","2060","2070","2080","2090","2100"))
-     	legend("topleft", inset=.05, title="Scenarios (GMSL 2100)",legend=c("0.3m","0.5m","1.0m","1.5m","2.0m","2.5m"), lwd=3, col=c("black","blue","green","yellow","orange","red"))
+	source("./data/sealevel_us/annual_probability_withslr.r", local=TRUE)
+	position="topleft"
+	if(input$returnLevel==1) position="topright"
+    # slrYears are defined in annual_probability_withslr.r.
+    # xaxt="n" in plot below turns off xaxis tickmarks.  These are added explicitly with axis.
+    plot(annual_probability_withslr[1,], type="l", lwd=3, lty=1, col="black", ylim=c(0,100), xlab="Year", ylab="Annual Probability (%)", xaxt="n")
+	lines(annual_probability_withslr[2,], col="blue")
+	lines(annual_probability_withslr[3,], col="green")
+	lines(annual_probability_withslr[4,], col="yellow")
+	lines(annual_probability_withslr[5,], col="orange")
+	lines(annual_probability_withslr[6,], col="red")
+	axis(1, at=c(1:length(slrYears)), labels=slrYears)
+     	legend(position, inset=.05, title="Scenarios (GMSL 2100)",legend=c("0.3m","0.5m","1.0m","1.5m","2.0m","2.5m"), lwd=3, col=c("black","blue","green","yellow","orange","red"))
    }
 
    if(input$selectCausalVariable=="Drought") {
