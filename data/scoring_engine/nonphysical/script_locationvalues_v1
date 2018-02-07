@@ -50,11 +50,14 @@ awk '{split($(NF-12), array1, "-"); split($(NF-1), array2, "_");  \
       dfid1=array1[1]; dfid2=array2[2];  \
       if(dfid1!=dfid2) print "***** ERROR:  DFs do not match for line", NR}' temp9
 
-# Apply the values.
+# Apply the values, handling units as needed to get impacts in $M.
+# Many damage functions are in percent, with corresponding values in $M.
+# The carbon-price DF is given in USD per ton emissions and the location values for this DF are in Mtons of emissions.  The resulting costs are then in $M USD.
 awk '{if(NR==1) {periods=9; start=NF-periods-3};  \
+      split($(NF-12),array,"-");  if(array[1]=="carbonprice") factor=1; else factor=100;  \
       for(i=1; i<=start; i++) string1=string1" "$i;  \
       for(i=1; i<=periods; i++) {value=$NF;  \
-               if($(NF-4)!="NA") string2=string2" "(value*$(start+i)/100); else string2=string2" NA"};  \
+               if($(NF-4)!="NA") string2=string2" "(value*$(start+i)/factor); else string2=string2" NA"};  \
       print string1,string2; string1=""; string2=""}' temp9 > temp10
 
 # Combine values for each DF.
@@ -74,5 +77,5 @@ awk '{if(NR==1) {imin=NF-8; imax=NF; split($1,array,"_"); lastfac=array[1]; for(
 
 # Save results and clean up.
 mv temp12 $allDFsfile.withvalues
-#rm temp*
+rm temp*
 

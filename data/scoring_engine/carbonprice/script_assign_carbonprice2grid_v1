@@ -1,0 +1,23 @@
+
+# SCRIPT TO ASSIGN CARBON PRICE UNIFORMLY TO ALL GRID POINTS
+# TT - February 2018
+
+# Input grid format:
+# 0 0	-178.75 -58.75
+# 1 0	-176.25 -58.75
+# 2 0	-173.75 -58.75
+
+# Get input.
+gridfile=$1
+
+# Assign a time series of carbon prices to each grid point.  
+# First is historical value, others are 2010-2090 by decades.
+# SSP2 marker scenario with RCP6.0; world values.
+#awk '{print $0,"0 0.000 15.479 8.462 1.444 2.352 3.831 6.240 10.165 16.557"}' $gridfile > temp1
+# SSP3 marker scenario with RCP6.0; world values.
+awk '{print $0,"0 2.463 15.581 19.858 19.951 28.588 28.588 41.052 57.487 68.734"}' $gridfile > temp1
+
+# Save results and clean up.
+mv temp1 $gridfile.carbonprice.uniform
+rm temp*
+

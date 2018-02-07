@@ -17,9 +17,11 @@ locfile=$2
 locvalues=$3
 
 # Get damage-function values specific to each location.
-# Note that the damage-function csv file is assumed to be comma-separated and the field corresponding to the pdsisc df in the locfile is field 6.
+# Note that the damage-function csv file is assumed to be comma-separated and the field corresponding to the pdsisc df in the locfile is found in the NR==1 portion of the awk statement below.
 #awk -v dfid=$dfid '{FS=","; if($1==dfid) print $1,$(NF-1),$NF}' $locfile > temp1
-awk '{if(NR>1) print $6}' $locfile > temp1
+#awk '{if(NR>1) print $6}' $locfile > temp1
+awk '{if(NR==1) {for(i=1; i<=NF; i++) {split($i,array,"_"); if(array[2]=="pdsisc") column=i} };  \
+      if(NR>1) print $column}' $locfile > temp1
 awk -v dfsource=$dfsource '{print "awk SSS{FS=DDD,DDD; if($1==DDD"$1"DDD) print $1,$(NF-1),substr($NF,1,length($NF)-1)}SSS "dfsource" >> temp10"}' temp1 > temp2
 sed 's/DDD/"/g' temp2 > temp2b
 sed "s/SSS/'/g" temp2b > temp2c

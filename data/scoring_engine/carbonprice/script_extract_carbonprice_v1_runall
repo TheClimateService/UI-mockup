@@ -1,0 +1,28 @@
+
+# SCRIPT TO EXTRACT PDSISC VALUES FOR LIST OF LOCATIONS
+# TT - December 2017
+
+# Execution:  ./script_extract_carbonprice_v1 <locations file> <worldwide carbon-price data file>
+# Example:  ./script_extract_carbonprice_v1 facility_locations.csv.testNA grid_2.5x2.5.txt.carbonprice.uniform
+
+# Get input.
+locfile=$1
+datafile=$2
+
+# Build calls to processing script.
+# Note that grid data file uses lon values on -180/+180.
+awk -v datafile=$datafile '{if(NR>1) {  \
+	if($2>=180) lon=$2-360; else lon=$2;  \
+        lat=$3;  \
+	print "./script_extract_carbonprice_v1",lon,lat,datafile;  \
+	print "paste temp99 >> temp.outall"}  \
+        }' $locfile > temp1.scr
+chmod a+x temp1.scr
+./temp1.scr
+
+# Assemble output.
+awk '{if(NR>1) print $1,$2,$3}' $locfile > temp2
+paste temp2 temp.outall > $locfile.carbonprice
+rm temp*
+
+

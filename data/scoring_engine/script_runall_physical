@@ -39,6 +39,13 @@ Rscript ./script_estimate_future_rp_v1.r
 ./script_score_locations_coastalflood_v1 $damfile $facfile future_annprob_fromR
 mv $facfile.coastalflood.damages ../
 
+cd ../carbonprice/
+cp ../$facfile ./
+cp ../$damfile ./
+./script_extract_carbonprice_v1_runall $facfile grid_2.5x2.5.txt.carbonprice.uniform
+./script_score_locations_carbonprice_v1 $damfile $facfile $facfile.carbonprice 
+mv $facfile.carbonprice.damages ../
+
 cd ../
 ./script_assemble_damages_v1 $facfile
 

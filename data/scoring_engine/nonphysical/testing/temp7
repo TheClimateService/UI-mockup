@@ -1,0 +1,225 @@
+1_1_Boise df_carbonprice 0.4
+1_1_Boise df_coastalflood 80
+1_1_Boise df_pdsisc 90
+1_1_Boise df_tx90p 100
+----
+2_1_Manassas df_carbonprice 0.4
+2_1_Manassas df_coastalflood 80
+2_1_Manassas df_pdsisc 90
+2_1_Manassas df_tx90p 100
+----
+3_1_Singapore_Hqs df_carbonprice 0.4
+3_1_Singapore_Hqs df_coastalflood 80
+3_1_Singapore_Hqs df_pdsisc 90
+3_1_Singapore_Hqs df_tx90p 100
+----
+4_1_Singapore_300mm_DRAM df_carbonprice 0.4
+4_1_Singapore_300mm_DRAM df_coastalflood 80
+4_1_Singapore_300mm_DRAM df_pdsisc 90
+4_1_Singapore_300mm_DRAM df_tx90p 100
+----
+5_1_Singapore_300mm_NAND df_carbonprice 0.4
+5_1_Singapore_300mm_NAND df_coastalflood 80
+5_1_Singapore_300mm_NAND df_pdsisc 90
+5_1_Singapore_300mm_NAND df_tx90p 100
+----
+6_1_Singapore_200mm_NOR df_carbonprice 0.4
+6_1_Singapore_200mm_NOR df_coastalflood 80
+6_1_Singapore_200mm_NOR df_pdsisc 90
+6_1_Singapore_200mm_NOR df_tx90p 100
+----
+7_1_Catania df_carbonprice 0.4
+7_1_Catania df_coastalflood 80
+7_1_Catania df_pdsisc 90
+7_1_Catania df_tx90p 100
+----
+8_1_Bangalore df_carbonprice 0.4
+8_1_Bangalore df_coastalflood 80
+8_1_Bangalore df_pdsisc 90
+8_1_Bangalore df_tx90p 100
+----
+9_2_American_Falls df_carbonprice 0.4
+9_2_American_Falls df_coastalflood 80
+9_2_American_Falls df_pdsisc 90
+9_2_American_Falls df_tx90p 100
+----
+10_2_Bliss df_carbonprice 0.4
+10_2_Bliss df_coastalflood 80
+10_2_Bliss df_pdsisc 90
+10_2_Bliss df_tx90p 100
+----
+11_2_Brownlee df_carbonprice 0.4
+11_2_Brownlee df_coastalflood 80
+11_2_Brownlee df_pdsisc 90
+11_2_Brownlee df_tx90p 100
+----
+12_2_C_J_Strike df_carbonprice 0.4
+12_2_C_J_Strike df_coastalflood 80
+12_2_C_J_Strike df_pdsisc 90
+12_2_C_J_Strike df_tx90p 100
+----
+13_2_Cascade_Dam df_carbonprice 0.4
+13_2_Cascade_Dam df_coastalflood 80
+13_2_Cascade_Dam df_pdsisc 90
+13_2_Cascade_Dam df_tx90p 100
+----
+14_2_Clear_Lake df_carbonprice 0.4
+14_2_Clear_Lake df_coastalflood 80
+14_2_Clear_Lake df_pdsisc 90
+14_2_Clear_Lake df_tx90p 100
+----
+15_2_Lower_Malad df_carbonprice 0.4
+15_2_Lower_Malad df_coastalflood 80
+15_2_Lower_Malad df_pdsisc 90
+15_2_Lower_Malad df_tx90p 100
+----
+16_2_Lower_Salmon df_carbonprice 0.4
+16_2_Lower_Salmon df_coastalflood 80
+16_2_Lower_Salmon df_pdsisc 90
+16_2_Lower_Salmon df_tx90p 100
+----
+17_2_Salmon_Diesel df_carbonprice 0.4
+17_2_Salmon_Diesel df_coastalflood 80
+17_2_Salmon_Diesel df_pdsisc 90
+17_2_Salmon_Diesel df_tx90p 100
+----
+18_2_Shoshone_Falls df_carbonprice 0.4
+18_2_Shoshone_Falls df_coastalflood 80
+18_2_Shoshone_Falls df_pdsisc 90
+18_2_Shoshone_Falls df_tx90p 100
+----
+19_2_Swan_Falls df_carbonprice 0.4
+19_2_Swan_Falls df_coastalflood 80
+19_2_Swan_Falls df_pdsisc 90
+19_2_Swan_Falls df_tx90p 100
+----
+20_2_Thousand_Springs df_carbonprice 0.4
+20_2_Thousand_Springs df_coastalflood 80
+20_2_Thousand_Springs df_pdsisc 90
+20_2_Thousand_Springs df_tx90p 100
+----
+21_2_Twin_Falls_(ID) df_carbonprice 0.4
+21_2_Twin_Falls_(ID) df_coastalflood 80
+21_2_Twin_Falls_(ID) df_pdsisc 90
+21_2_Twin_Falls_(ID) df_tx90p 100
+----
+22_2_Upper_Salmon_A df_carbonprice 0.4
+22_2_Upper_Salmon_A df_coastalflood 80
+22_2_Upper_Salmon_A df_pdsisc 90
+22_2_Upper_Salmon_A df_tx90p 100
+----
+23_2_Upper_Malad df_carbonprice 0.4
+23_2_Upper_Malad df_coastalflood 80
+23_2_Upper_Malad df_pdsisc 90
+23_2_Upper_Malad df_tx90p 100
+----
+24_2_Hells_Canyon df_carbonprice 0.4
+24_2_Hells_Canyon df_coastalflood 80
+24_2_Hells_Canyon df_pdsisc 90
+24_2_Hells_Canyon df_tx90p 100
+----
+25_2_Oxbow_(OR) df_carbonprice 0.4
+25_2_Oxbow_(OR) df_coastalflood 80
+25_2_Oxbow_(OR) df_pdsisc 90
+25_2_Oxbow_(OR) df_tx90p 100
+----
+26_2_Upper_Salmon_B df_carbonprice 0.4
+26_2_Upper_Salmon_B df_coastalflood 80
+26_2_Upper_Salmon_B df_pdsisc 90
+26_2_Upper_Salmon_B df_tx90p 100
+----
+27_2_Milner_Hydro df_carbonprice 0.4
+27_2_Milner_Hydro df_coastalflood 80
+27_2_Milner_Hydro df_pdsisc 90
+27_2_Milner_Hydro df_tx90p 100
+----
+28_2_Evander_Andrews_Power_Complex df_carbonprice 0.4
+28_2_Evander_Andrews_Power_Complex df_coastalflood 80
+28_2_Evander_Andrews_Power_Complex df_pdsisc 90
+28_2_Evander_Andrews_Power_Complex df_tx90p 100
+----
+29_2_Bennett_Mountain df_carbonprice 0.4
+29_2_Bennett_Mountain df_coastalflood 80
+29_2_Bennett_Mountain df_pdsisc 90
+29_2_Bennett_Mountain df_tx90p 100
+----
+30_2_Langley_Gulch_Power_Plant df_carbonprice 0.4
+30_2_Langley_Gulch_Power_Plant df_coastalflood 80
+30_2_Langley_Gulch_Power_Plant df_pdsisc 90
+30_2_Langley_Gulch_Power_Plant df_tx90p 100
+----
+31_3_Boise df_carbonprice 0.4
+31_3_Boise df_coastalflood 80
+31_3_Boise df_pdsisc 90
+31_3_Boise df_tx90p 100
+----
+32_3_Colorado_Springs df_carbonprice 0.4
+32_3_Colorado_Springs df_coastalflood 80
+32_3_Colorado_Springs df_pdsisc 90
+32_3_Colorado_Springs df_tx90p 100
+----
+33_3_Corvallis df_carbonprice 0.4
+33_3_Corvallis df_coastalflood 80
+33_3_Corvallis df_pdsisc 90
+33_3_Corvallis df_tx90p 100
+----
+34_3_Cupertino df_carbonprice 0.4
+34_3_Cupertino df_coastalflood 80
+34_3_Cupertino df_pdsisc 90
+34_3_Cupertino df_tx90p 100
+----
+35_3_Houston df_carbonprice 0.4
+35_3_Houston df_coastalflood 80
+35_3_Houston df_pdsisc 90
+35_3_Houston df_tx90p 100
+----
+36_3_Palo_Alto df_carbonprice 0.4
+36_3_Palo_Alto df_coastalflood 80
+36_3_Palo_Alto df_pdsisc 90
+36_3_Palo_Alto df_tx90p 100
+----
+37_3_Plano df_carbonprice 0.4
+37_3_Plano df_coastalflood 80
+37_3_Plano df_pdsisc 90
+37_3_Plano df_tx90p 100
+----
+38_3_Roseville df_carbonprice 0.4
+38_3_Roseville df_coastalflood 80
+38_3_Roseville df_pdsisc 90
+38_3_Roseville df_tx90p 100
+----
+39_3_San_Bernadino df_carbonprice 0.4
+39_3_San_Bernadino df_coastalflood 80
+39_3_San_Bernadino df_pdsisc 90
+39_3_San_Bernadino df_tx90p 100
+----
+40_3_Dublin df_carbonprice 0.4
+40_3_Dublin df_coastalflood 80
+40_3_Dublin df_pdsisc 90
+40_3_Dublin df_tx90p 100
+----
+41_3_Puerto_Rico df_carbonprice 0.4
+41_3_Puerto_Rico df_coastalflood 80
+41_3_Puerto_Rico df_pdsisc 90
+41_3_Puerto_Rico df_tx90p 100
+----
+42_3_Barcelona_Sant_Cugat df_carbonprice 0.4
+42_3_Barcelona_Sant_Cugat df_coastalflood 80
+42_3_Barcelona_Sant_Cugat df_pdsisc 90
+42_3_Barcelona_Sant_Cugat df_tx90p 100
+----
+43_3_Rehovot df_carbonprice 0.4
+43_3_Rehovot df_coastalflood 80
+43_3_Rehovot df_pdsisc 90
+43_3_Rehovot df_tx90p 100
+----
+44_3_Singapore_DRD df_carbonprice 0.4
+44_3_Singapore_DRD df_coastalflood 80
+44_3_Singapore_DRD df_pdsisc 90
+44_3_Singapore_DRD df_tx90p 100
+----
+45_3_San_Diego df_carbonprice 0.4
+45_3_San_Diego df_coastalflood 80
+45_3_San_Diego df_pdsisc 90
+45_3_San_Diego df_tx90p 100
+----

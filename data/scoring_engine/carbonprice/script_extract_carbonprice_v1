@@ -1,0 +1,33 @@
+
+# SCRIPT TO EXTRACT PDSISC DATA FOR GIVEN LOCATION FROM THE LIST OF GRIDDED DATA.
+# TT - December 2017
+
+# Execution:  ./script_extract_carbonprice_v1 lon lat <carbonprice data file>
+# Example:    ./script_extract_carbonprice_v1 -90 40 grid_2.5x2.5.txt.carbonprice.uniform
+# Get input.
+lon=$1
+lat=$2
+infile=$3
+
+# For each location, find the closest grid-cell center.
+#awk -v datafile=$datafile '{lon=$2; lat=$3;  \
+#      if(NR>1) print "if($1>="lon,lat,datafile}' $loclist > temp1
+
+# Calculate carbonprice idlon and idlat.
+# For the current carbonprice data (see file in example above), lon has indices 0-143 and runs from -178.75 to +178.75 while lat has indices 0-54 and runs from -58.75 to +58.75.  Both lon and lat have 2.5-degree spacing.
+echo XXX > temp1
+awk -v lon=$lon -v lat=$lat '{idlon=71+int(lon/2.5);  \
+        idlat=23+int(lat/2.5);  \
+        #if(lon%0.75 > 0.75/2) idlon=idlon+1;  \
+        if(lon>0) idlon=idlon+1;  \
+        if(lat>0) idlat=idlat+1;  \
+        print idlon,idlat,lon,lat}' temp1 > temp2
+
+# Get the data for this lon/lat from the infile.
+awk -v file=$infile '{print "awk SSS{if($1=="$1" && $2=="$2") print $0}SSS",file,"> temp99"}' temp2 > temp3
+sed "s/SSS/'/g" temp3 > temp4
+chmod a+x temp4
+./temp4
+
+# Data for this lon/lat is in temp99.
+
