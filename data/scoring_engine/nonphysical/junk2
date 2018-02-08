@@ -1,0 +1,8 @@
+ 1_1_Boise -116.149136 43.529396 Boise_Idaho tx90p-1 pdsisc-2 coastalflood-1 carbonprice-1 - - - pdsisc-2  -45 -9 -18 -54 -45 -63 -72 -63 -54
+ 2_1_Manassas -77.503845 38.750829 Manassas_Virginia tx90p-2 pdsisc-2 coastalflood-2 carbonprice-1 - - - pdsisc-2  0 0 -27 -18 -9 -9 -18 -36 -18
+ 3_1_Singapore_Hqs 103.864621 1.31839 Singapore tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - - pdsisc-1  0 0 0 0 0 0 0 0 0
+ 4_1_Singapore_300mm_DRAM 103.767569 1.432186 Singapore tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - - pdsisc-1  0 0 0 0 0 0 0 0 0
+ 5_1_Singapore_300mm_NAND 103.793645 1.454831 Singapore tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - - pdsisc-1  0 0 0 0 0 0 0 0 0
+ 6_1_Singapore_200mm_NOR 103.866405 1.37479 Singapore tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - - pdsisc-1  0 0 0 0 0 0 0 0 0
+ 7_1_Catania 14.99 37.421801 Catania_Italy tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - XXX_original_lon=15.056097_moved_west_4landpoint pdsisc-1  -9 -9 0 -45 -36 -54 -63 -63 -63
+ 8_1_Bangalore 77.623906 12.982352 Bangalore_India tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - - pdsisc-1  -9 0 -9 0 0 0 0 0 0

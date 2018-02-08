@@ -99,6 +99,9 @@ server <- function(input, output, session) {
     }
     if (input$inputLocations == 'All locations') {
       corpTable <- corpTable[which(corpTable$ParentCorpID == USER$ParentCorpID & corpTable$RiskYear == input$sliderInputYear),]
+      corpTable = select(corpTable, RiskFactorName, ValueAtRisk)
+      corpTable = as.data.table(corpTable)
+      corpTable = corpTable[,lapply(.SD,sum),by="RiskFactorName"]
     }
     plot_ly(x=corpTable$ValueAtRisk, y=corpTable$RiskFactorName, type = 'bar', orientation = 'h') %>% layout(margin = list(l=180, b=100)) %>%
       layout(xaxis = list(title = 'Impact ($M)'))
