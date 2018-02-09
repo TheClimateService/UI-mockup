@@ -127,6 +127,9 @@ server <- function(input, output, session) {
     }
     if (input$inputLocations == 'All locations') {
       corpTable <- corpTable[which(corpTable$ParentCorpID == USER$ParentCorpID),]
+      #corpTable = select(corpTable, RiskYear, ValueAtRisk)
+      #corpTable = as.data.table(corpTable)
+      #corpTable = corpTable[,lapply(.SD,sum),by="RiskYear"]
     }
     
     # to chart a time series, need to build a new datafame with additive traces. I'm sure there's a better way to do this.
@@ -146,14 +149,14 @@ server <- function(input, output, session) {
     
     # hack the stacking (plotly doesn't actually do stacking - it's a documented problem.)
     time_series$stack1 <- time_series$s1
-    time_series$stack2 <- time_series$s1 + time_series$s2
-    time_series$stack3 <- time_series$s2 + time_series$s3
-    time_series$stack4 <- time_series$s3 + time_series$s4
-    time_series$stack5 <- time_series$s4 + time_series$s5
-    time_series$stack6 <- time_series$s5 + time_series$s6
-    time_series$stack7 <- time_series$s6 + time_series$s7
-    time_series$stack8 <- time_series$s7 + time_series$s8
-    time_series$stack9 <- time_series$s8 + time_series$s9
+    time_series$stack2 <- time_series$stack1 + time_series$s2
+    time_series$stack3 <- time_series$stack2 + time_series$s3
+    time_series$stack4 <- time_series$stack3 + time_series$s4
+    time_series$stack5 <- time_series$stack4 + time_series$s5
+    time_series$stack6 <- time_series$stack5 + time_series$s6
+    time_series$stack7 <- time_series$stack6 + time_series$s7
+    time_series$stack8 <- time_series$stack7 + time_series$s8
+    time_series$stack9 <- time_series$stack8 + time_series$s9
     
 # Draw the graph
     plot_ly(time_series, x = ~RiskYear, y = ~stack1, name='Policy & Legal', type='scatter', mode = 'none', fill = 'tonexty') %>% 
@@ -166,7 +169,7 @@ server <- function(input, output, session) {
       add_trace(y = ~stack8, name = 'Energy Source', fill = 'tonexty') %>%
       add_trace(y = ~stack9, name = 'Resilience', fill = 'tonexty') %>%
       
-      layout(yaxis = list(title = 'Impact ($M)', showgrid = FALSE), xaxis = list(showgrid = FALSE), margin = list(l=80,b=100))
+      layout(yaxis = list(title = 'Impact ($M)', showgrid = TRUE), xaxis = list(showgrid = TRUE), margin = list(l=80,b=100))
   }) 
   
   # TCFD stacked bar chart
@@ -176,10 +179,15 @@ server <- function(input, output, session) {
     }
     if (input$inputLocations == 'All locations') {
       corpTable <- corpTable[which(corpTable$ParentCorpID == USER$ParentCorpID & corpTable$RiskYear == input$sliderInputYear),]
+      #corpTable = select(corpTable, TCFDCategoryName, ValueAtRisk)
+      #corpTable = as.data.table(corpTable)
+      #corpTable = corpTable[,lapply(.SD,sum),by="TCFDCategoryName"]
     }
     ncorp <- pull(count(corpTable))
     plot_ly(corpTable, x = ~TCFDCategoryName, y = ~ValueAtRisk, type='bar', text=corpTable$RiskFactorName, marker = list(color = colorRampPalette(brewer.pal(11,"Spectral"))(ncorp))) %>%
       layout(yaxis = list(title = 'Impact ($M)'), barmode = 'stack', margin = list(l=80,b=100))
+    #plot_ly(corpTable, x = list("Opportunity","Physical Risk","Transition Risk"), y = ~ValueAtRisk, type='bar', text=corpTable$RiskFactorName, marker = list(color = colorRampPalette(brewer.pal(11,"Spectral"))(ncorp))) %>%
+      #layout(yaxis = list(title = 'Impact ($M)'), barmode = 'stack', margin = list(l=80,b=100), showlegend=TRUE)
   })
   
   #Data table
@@ -371,14 +379,14 @@ server <- function(input, output, session) {
     
     # hack the stacking (plotly doesn't actually do stacking - it's a documented problem.)
     time_series$stack1 <- time_series$s1
-    time_series$stack2 <- time_series$s1 + time_series$s2
-    time_series$stack3 <- time_series$s2 + time_series$s3
-    time_series$stack4 <- time_series$s3 + time_series$s4
-    time_series$stack5 <- time_series$s4 + time_series$s5
-    time_series$stack6 <- time_series$s5 + time_series$s6
-    time_series$stack7 <- time_series$s6 + time_series$s7
-    time_series$stack8 <- time_series$s7 + time_series$s8
-    time_series$stack9 <- time_series$s8 + time_series$s9
+    time_series$stack2 <- time_series$stack1 + time_series$s2
+    time_series$stack3 <- time_series$stack2 + time_series$s3
+    time_series$stack4 <- time_series$stack3 + time_series$s4
+    time_series$stack5 <- time_series$stack4 + time_series$s5
+    time_series$stack6 <- time_series$stack5 + time_series$s6
+    time_series$stack7 <- time_series$stack6 + time_series$s7
+    time_series$stack8 <- time_series$stack7 + time_series$s8
+    time_series$stack9 <- time_series$stack8 + time_series$s9
     
 # Draw the graph
     plot_ly(time_series, x = ~RiskYear, y = ~stack1, name='Policy & Legal', type='scatter', mode = 'none', fill = 'tonexty') %>% 
