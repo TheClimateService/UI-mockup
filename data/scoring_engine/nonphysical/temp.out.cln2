@@ -1,0 +1,840 @@
+1;1;"Boise";  "Transition Risk";"Policy and Legal";Carbon pricing
+1;1;"Boise";  "Transition Risk";"Policy and Legal";Litigation risk
+1;1;"Boise";  "Transition Risk";"Technology";New technology
+1;1;"Boise";  "Transition Risk";"Market";Reputation damage
+1;1;"Boise";  "Transition Risk";"Reputation";Materials cost
+1;1;"Boise";  "Physical Risk";"Acute";Storm damage
+1;1;"Boise";  "Physical Risk";"Acute";Employee impacts
+1;1;"Boise";  "Physical Risk";"Chronic";Temperature extremes
+1;1;"Boise";  "Physical Risk";"Chronic";Coastal flooding
+1;1;"Boise";  "Opportunity";"Resource Efficiency";Energy Efficiency
+1;1;"Boise";  "Opportunity";"Resource Efficiency";Water Efficiency
+1;1;"Boise";  "Opportunity";"Resource Efficiency";Materials Efficiency
+1;1;"Boise";  "Opportunity";"Energy Source";Renewable price stability
+1;1;"Boise";  "Opportunity";"Resilience";Energy resilience
+1;1;"Boise";  "Physical Risk";"Chronic";Drought
+1;2;"Manassas";  "Transition Risk";"Policy and Legal";Carbon pricing
+1;2;"Manassas";  "Transition Risk";"Policy and Legal";Litigation risk
+1;2;"Manassas";  "Transition Risk";"Technology";New technology
+1;2;"Manassas";  "Transition Risk";"Market";Reputation damage
+1;2;"Manassas";  "Transition Risk";"Reputation";Materials cost
+1;2;"Manassas";  "Physical Risk";"Acute";Storm damage
+1;2;"Manassas";  "Physical Risk";"Acute";Employee impacts
+1;2;"Manassas";  "Physical Risk";"Chronic";Temperature extremes
+1;2;"Manassas";  "Physical Risk";"Chronic";Coastal flooding
+1;2;"Manassas";  "Opportunity";"Resource Efficiency";Energy Efficiency
+1;2;"Manassas";  "Opportunity";"Resource Efficiency";Water Efficiency
+1;2;"Manassas";  "Opportunity";"Resource Efficiency";Materials Efficiency
+1;2;"Manassas";  "Opportunity";"Energy Source";Renewable price stability
+1;2;"Manassas";  "Opportunity";"Resilience";Energy resilience
+1;2;"Manassas";  "Physical Risk";"Chronic";Drought
+1;3;"Singapore_Hqs";  "Transition Risk";"Policy and Legal";Carbon pricing
+1;3;"Singapore_Hqs";  "Transition Risk";"Policy and Legal";Litigation risk
+1;3;"Singapore_Hqs";  "Transition Risk";"Technology";New technology
+1;3;"Singapore_Hqs";  "Transition Risk";"Market";Reputation damage
+1;3;"Singapore_Hqs";  "Transition Risk";"Reputation";Materials cost
+1;3;"Singapore_Hqs";  "Physical Risk";"Acute";Storm damage
+1;3;"Singapore_Hqs";  "Physical Risk";"Acute";Employee impacts
+1;3;"Singapore_Hqs";  "Physical Risk";"Chronic";Temperature extremes
+1;3;"Singapore_Hqs";  "Physical Risk";"Chronic";Coastal flooding
+1;3;"Singapore_Hqs";  "Opportunity";"Resource Efficiency";Energy Efficiency
+1;3;"Singapore_Hqs";  "Opportunity";"Resource Efficiency";Water Efficiency
+1;3;"Singapore_Hqs";  "Opportunity";"Resource Efficiency";Materials Efficiency
+1;3;"Singapore_Hqs";  "Opportunity";"Energy Source";Renewable price stability
+1;3;"Singapore_Hqs";  "Opportunity";"Resilience";Energy resilience
+1;3;"Singapore_Hqs";  "Physical Risk";"Chronic";Drought
+1;4;"Singapore_300mm_DRAM";  "Transition Risk";"Policy and Legal";Carbon pricing
+1;4;"Singapore_300mm_DRAM";  "Transition Risk";"Policy and Legal";Litigation risk
+1;4;"Singapore_300mm_DRAM";  "Transition Risk";"Technology";New technology
+1;4;"Singapore_300mm_DRAM";  "Transition Risk";"Market";Reputation damage
+1;4;"Singapore_300mm_DRAM";  "Transition Risk";"Reputation";Materials cost
+1;4;"Singapore_300mm_DRAM";  "Physical Risk";"Acute";Storm damage
+1;4;"Singapore_300mm_DRAM";  "Physical Risk";"Acute";Employee impacts
+1;4;"Singapore_300mm_DRAM";  "Physical Risk";"Chronic";Temperature extremes
+1;4;"Singapore_300mm_DRAM";  "Physical Risk";"Chronic";Coastal flooding
+1;4;"Singapore_300mm_DRAM";  "Opportunity";"Resource Efficiency";Energy Efficiency
+1;4;"Singapore_300mm_DRAM";  "Opportunity";"Resource Efficiency";Water Efficiency
+1;4;"Singapore_300mm_DRAM";  "Opportunity";"Resource Efficiency";Materials Efficiency
+1;4;"Singapore_300mm_DRAM";  "Opportunity";"Energy Source";Renewable price stability
+1;4;"Singapore_300mm_DRAM";  "Opportunity";"Resilience";Energy resilience
+1;4;"Singapore_300mm_DRAM";  "Physical Risk";"Chronic";Drought
+1;5;"Singapore_300mm_NAND";  "Transition Risk";"Policy and Legal";Carbon pricing
+1;5;"Singapore_300mm_NAND";  "Transition Risk";"Policy and Legal";Litigation risk
+1;5;"Singapore_300mm_NAND";  "Transition Risk";"Technology";New technology
+1;5;"Singapore_300mm_NAND";  "Transition Risk";"Market";Reputation damage
+1;5;"Singapore_300mm_NAND";  "Transition Risk";"Reputation";Materials cost
+1;5;"Singapore_300mm_NAND";  "Physical Risk";"Acute";Storm damage
+1;5;"Singapore_300mm_NAND";  "Physical Risk";"Acute";Employee impacts
+1;5;"Singapore_300mm_NAND";  "Physical Risk";"Chronic";Temperature extremes
+1;5;"Singapore_300mm_NAND";  "Physical Risk";"Chronic";Coastal flooding
+1;5;"Singapore_300mm_NAND";  "Opportunity";"Resource Efficiency";Energy Efficiency
+1;5;"Singapore_300mm_NAND";  "Opportunity";"Resource Efficiency";Water Efficiency
+1;5;"Singapore_300mm_NAND";  "Opportunity";"Resource Efficiency";Materials Efficiency
+1;5;"Singapore_300mm_NAND";  "Opportunity";"Energy Source";Renewable price stability
+1;5;"Singapore_300mm_NAND";  "Opportunity";"Resilience";Energy resilience
+1;5;"Singapore_300mm_NAND";  "Physical Risk";"Chronic";Drought
+1;6;"Singapore_200mm_NOR";  "Transition Risk";"Policy and Legal";Carbon pricing
+1;6;"Singapore_200mm_NOR";  "Transition Risk";"Policy and Legal";Litigation risk
+1;6;"Singapore_200mm_NOR";  "Transition Risk";"Technology";New technology
+1;6;"Singapore_200mm_NOR";  "Transition Risk";"Market";Reputation damage
+1;6;"Singapore_200mm_NOR";  "Transition Risk";"Reputation";Materials cost
+1;6;"Singapore_200mm_NOR";  "Physical Risk";"Acute";Storm damage
+1;6;"Singapore_200mm_NOR";  "Physical Risk";"Acute";Employee impacts
+1;6;"Singapore_200mm_NOR";  "Physical Risk";"Chronic";Temperature extremes
+1;6;"Singapore_200mm_NOR";  "Physical Risk";"Chronic";Coastal flooding
+1;6;"Singapore_200mm_NOR";  "Opportunity";"Resource Efficiency";Energy Efficiency
+1;6;"Singapore_200mm_NOR";  "Opportunity";"Resource Efficiency";Water Efficiency
+1;6;"Singapore_200mm_NOR";  "Opportunity";"Resource Efficiency";Materials Efficiency
+1;6;"Singapore_200mm_NOR";  "Opportunity";"Energy Source";Renewable price stability
+1;6;"Singapore_200mm_NOR";  "Opportunity";"Resilience";Energy resilience
+1;6;"Singapore_200mm_NOR";  "Physical Risk";"Chronic";Drought
+1;7;"Catania";  "Transition Risk";"Policy and Legal";Carbon pricing
+1;7;"Catania";  "Transition Risk";"Policy and Legal";Litigation risk
+1;7;"Catania";  "Transition Risk";"Technology";New technology
+1;7;"Catania";  "Transition Risk";"Market";Reputation damage
+1;7;"Catania";  "Transition Risk";"Reputation";Materials cost
+1;7;"Catania";  "Physical Risk";"Acute";Storm damage
+1;7;"Catania";  "Physical Risk";"Acute";Employee impacts
+1;7;"Catania";  "Physical Risk";"Chronic";Temperature extremes
+1;7;"Catania";  "Physical Risk";"Chronic";Coastal flooding
+1;7;"Catania";  "Opportunity";"Resource Efficiency";Energy Efficiency
+1;7;"Catania";  "Opportunity";"Resource Efficiency";Water Efficiency
+1;7;"Catania";  "Opportunity";"Resource Efficiency";Materials Efficiency
+1;7;"Catania";  "Opportunity";"Energy Source";Renewable price stability
+1;7;"Catania";  "Opportunity";"Resilience";Energy resilience
+1;7;"Catania";  "Physical Risk";"Chronic";Drought
+1;8;"Bangalore";  "Transition Risk";"Policy and Legal";Carbon pricing
+1;8;"Bangalore";  "Transition Risk";"Policy and Legal";Litigation risk
+1;8;"Bangalore";  "Transition Risk";"Technology";New technology
+1;8;"Bangalore";  "Transition Risk";"Market";Reputation damage
+1;8;"Bangalore";  "Transition Risk";"Reputation";Materials cost
+1;8;"Bangalore";  "Physical Risk";"Acute";Storm damage
+1;8;"Bangalore";  "Physical Risk";"Acute";Employee impacts
+1;8;"Bangalore";  "Physical Risk";"Chronic";Temperature extremes
+1;8;"Bangalore";  "Physical Risk";"Chronic";Coastal flooding
+1;8;"Bangalore";  "Opportunity";"Resource Efficiency";Energy Efficiency
+1;8;"Bangalore";  "Opportunity";"Resource Efficiency";Water Efficiency
+1;8;"Bangalore";  "Opportunity";"Resource Efficiency";Materials Efficiency
+1;8;"Bangalore";  "Opportunity";"Energy Source";Renewable price stability
+1;8;"Bangalore";  "Opportunity";"Resilience";Energy resilience
+1;8;"Bangalore";  "Physical Risk";"Chronic";Drought
+2;9;"American_Falls";  "Transition Risk";"Policy and Legal";Carbon pricing
+2;9;"American_Falls";  "Transition Risk";"Policy and Legal";Litigation risk
+2;9;"American_Falls";  "Transition Risk";"Technology";New technology
+2;9;"American_Falls";  "Transition Risk";"Market";Reputation damage
+2;9;"American_Falls";  "Transition Risk";"Reputation";Materials cost
+2;9;"American_Falls";  "Physical Risk";"Acute";Storm damage
+2;9;"American_Falls";  "Physical Risk";"Acute";Employee impacts
+2;9;"American_Falls";  "Physical Risk";"Chronic";Temperature extremes
+2;9;"American_Falls";  "Physical Risk";"Chronic";Coastal flooding
+2;9;"American_Falls";  "Opportunity";"Resource Efficiency";Energy Efficiency
+2;9;"American_Falls";  "Opportunity";"Resource Efficiency";Water Efficiency
+2;9;"American_Falls";  "Opportunity";"Resource Efficiency";Materials Efficiency
+2;9;"American_Falls";  "Opportunity";"Energy Source";Renewable price stability
+2;9;"American_Falls";  "Opportunity";"Resilience";Energy resilience
+2;9;"American_Falls";  "Physical Risk";"Chronic";Drought
+2;10;"Bliss";  "Transition Risk";"Policy and Legal";Carbon pricing
+2;10;"Bliss";  "Transition Risk";"Policy and Legal";Litigation risk
+2;10;"Bliss";  "Transition Risk";"Technology";New technology
+2;10;"Bliss";  "Transition Risk";"Market";Reputation damage
+2;10;"Bliss";  "Transition Risk";"Reputation";Materials cost
+2;10;"Bliss";  "Physical Risk";"Acute";Storm damage
+2;10;"Bliss";  "Physical Risk";"Acute";Employee impacts
+2;10;"Bliss";  "Physical Risk";"Chronic";Temperature extremes
+2;10;"Bliss";  "Physical Risk";"Chronic";Coastal flooding
+2;10;"Bliss";  "Opportunity";"Resource Efficiency";Energy Efficiency
+2;10;"Bliss";  "Opportunity";"Resource Efficiency";Water Efficiency
+2;10;"Bliss";  "Opportunity";"Resource Efficiency";Materials Efficiency
+2;10;"Bliss";  "Opportunity";"Energy Source";Renewable price stability
+2;10;"Bliss";  "Opportunity";"Resilience";Energy resilience
+2;10;"Bliss";  "Physical Risk";"Chronic";Drought
+2;11;"Brownlee";  "Transition Risk";"Policy and Legal";Carbon pricing
+2;11;"Brownlee";  "Transition Risk";"Policy and Legal";Litigation risk
+2;11;"Brownlee";  "Transition Risk";"Technology";New technology
+2;11;"Brownlee";  "Transition Risk";"Market";Reputation damage
+2;11;"Brownlee";  "Transition Risk";"Reputation";Materials cost
+2;11;"Brownlee";  "Physical Risk";"Acute";Storm damage
+2;11;"Brownlee";  "Physical Risk";"Acute";Employee impacts
+2;11;"Brownlee";  "Physical Risk";"Chronic";Temperature extremes
+2;11;"Brownlee";  "Physical Risk";"Chronic";Coastal flooding
+2;11;"Brownlee";  "Opportunity";"Resource Efficiency";Energy Efficiency
+2;11;"Brownlee";  "Opportunity";"Resource Efficiency";Water Efficiency
+2;11;"Brownlee";  "Opportunity";"Resource Efficiency";Materials Efficiency
+2;11;"Brownlee";  "Opportunity";"Energy Source";Renewable price stability
+2;11;"Brownlee";  "Opportunity";"Resilience";Energy resilience
+2;11;"Brownlee";  "Physical Risk";"Chronic";Drought
+2;12;"C_J_Strike";  "Transition Risk";"Policy and Legal";Carbon pricing
+2;12;"C_J_Strike";  "Transition Risk";"Policy and Legal";Litigation risk
+2;12;"C_J_Strike";  "Transition Risk";"Technology";New technology
+2;12;"C_J_Strike";  "Transition Risk";"Market";Reputation damage
+2;12;"C_J_Strike";  "Transition Risk";"Reputation";Materials cost
+2;12;"C_J_Strike";  "Physical Risk";"Acute";Storm damage
+2;12;"C_J_Strike";  "Physical Risk";"Acute";Employee impacts
+2;12;"C_J_Strike";  "Physical Risk";"Chronic";Temperature extremes
+2;12;"C_J_Strike";  "Physical Risk";"Chronic";Coastal flooding
+2;12;"C_J_Strike";  "Opportunity";"Resource Efficiency";Energy Efficiency
+2;12;"C_J_Strike";  "Opportunity";"Resource Efficiency";Water Efficiency
+2;12;"C_J_Strike";  "Opportunity";"Resource Efficiency";Materials Efficiency
+2;12;"C_J_Strike";  "Opportunity";"Energy Source";Renewable price stability
+2;12;"C_J_Strike";  "Opportunity";"Resilience";Energy resilience
+2;12;"C_J_Strike";  "Physical Risk";"Chronic";Drought
+2;13;"Cascade_Dam";  "Transition Risk";"Policy and Legal";Carbon pricing
+2;13;"Cascade_Dam";  "Transition Risk";"Policy and Legal";Litigation risk
+2;13;"Cascade_Dam";  "Transition Risk";"Technology";New technology
+2;13;"Cascade_Dam";  "Transition Risk";"Market";Reputation damage
+2;13;"Cascade_Dam";  "Transition Risk";"Reputation";Materials cost
+2;13;"Cascade_Dam";  "Physical Risk";"Acute";Storm damage
+2;13;"Cascade_Dam";  "Physical Risk";"Acute";Employee impacts
+2;13;"Cascade_Dam";  "Physical Risk";"Chronic";Temperature extremes
+2;13;"Cascade_Dam";  "Physical Risk";"Chronic";Coastal flooding
+2;13;"Cascade_Dam";  "Opportunity";"Resource Efficiency";Energy Efficiency
+2;13;"Cascade_Dam";  "Opportunity";"Resource Efficiency";Water Efficiency
+2;13;"Cascade_Dam";  "Opportunity";"Resource Efficiency";Materials Efficiency
+2;13;"Cascade_Dam";  "Opportunity";"Energy Source";Renewable price stability
+2;13;"Cascade_Dam";  "Opportunity";"Resilience";Energy resilience
+2;13;"Cascade_Dam";  "Physical Risk";"Chronic";Drought
+2;14;"Clear_Lake";  "Transition Risk";"Policy and Legal";Carbon pricing
+2;14;"Clear_Lake";  "Transition Risk";"Policy and Legal";Litigation risk
+2;14;"Clear_Lake";  "Transition Risk";"Technology";New technology
+2;14;"Clear_Lake";  "Transition Risk";"Market";Reputation damage
+2;14;"Clear_Lake";  "Transition Risk";"Reputation";Materials cost
+2;14;"Clear_Lake";  "Physical Risk";"Acute";Storm damage
+2;14;"Clear_Lake";  "Physical Risk";"Acute";Employee impacts
+2;14;"Clear_Lake";  "Physical Risk";"Chronic";Temperature extremes
+2;14;"Clear_Lake";  "Physical Risk";"Chronic";Coastal flooding
+2;14;"Clear_Lake";  "Opportunity";"Resource Efficiency";Energy Efficiency
+2;14;"Clear_Lake";  "Opportunity";"Resource Efficiency";Water Efficiency
+2;14;"Clear_Lake";  "Opportunity";"Resource Efficiency";Materials Efficiency
+2;14;"Clear_Lake";  "Opportunity";"Energy Source";Renewable price stability
+2;14;"Clear_Lake";  "Opportunity";"Resilience";Energy resilience
+2;14;"Clear_Lake";  "Physical Risk";"Chronic";Drought
+2;15;"Lower_Malad";  "Transition Risk";"Policy and Legal";Carbon pricing
+2;15;"Lower_Malad";  "Transition Risk";"Policy and Legal";Litigation risk
+2;15;"Lower_Malad";  "Transition Risk";"Technology";New technology
+2;15;"Lower_Malad";  "Transition Risk";"Market";Reputation damage
+2;15;"Lower_Malad";  "Transition Risk";"Reputation";Materials cost
+2;15;"Lower_Malad";  "Physical Risk";"Acute";Storm damage
+2;15;"Lower_Malad";  "Physical Risk";"Acute";Employee impacts
+2;15;"Lower_Malad";  "Physical Risk";"Chronic";Temperature extremes
+2;15;"Lower_Malad";  "Physical Risk";"Chronic";Coastal flooding
+2;15;"Lower_Malad";  "Opportunity";"Resource Efficiency";Energy Efficiency
+2;15;"Lower_Malad";  "Opportunity";"Resource Efficiency";Water Efficiency
+2;15;"Lower_Malad";  "Opportunity";"Resource Efficiency";Materials Efficiency
+2;15;"Lower_Malad";  "Opportunity";"Energy Source";Renewable price stability
+2;15;"Lower_Malad";  "Opportunity";"Resilience";Energy resilience
+2;15;"Lower_Malad";  "Physical Risk";"Chronic";Drought
+2;16;"Lower_Salmon";  "Transition Risk";"Policy and Legal";Carbon pricing
+2;16;"Lower_Salmon";  "Transition Risk";"Policy and Legal";Litigation risk
+2;16;"Lower_Salmon";  "Transition Risk";"Technology";New technology
+2;16;"Lower_Salmon";  "Transition Risk";"Market";Reputation damage
+2;16;"Lower_Salmon";  "Transition Risk";"Reputation";Materials cost
+2;16;"Lower_Salmon";  "Physical Risk";"Acute";Storm damage
+2;16;"Lower_Salmon";  "Physical Risk";"Acute";Employee impacts
+2;16;"Lower_Salmon";  "Physical Risk";"Chronic";Temperature extremes
+2;16;"Lower_Salmon";  "Physical Risk";"Chronic";Coastal flooding
+2;16;"Lower_Salmon";  "Opportunity";"Resource Efficiency";Energy Efficiency
+2;16;"Lower_Salmon";  "Opportunity";"Resource Efficiency";Water Efficiency
+2;16;"Lower_Salmon";  "Opportunity";"Resource Efficiency";Materials Efficiency
+2;16;"Lower_Salmon";  "Opportunity";"Energy Source";Renewable price stability
+2;16;"Lower_Salmon";  "Opportunity";"Resilience";Energy resilience
+2;16;"Lower_Salmon";  "Physical Risk";"Chronic";Drought
+2;17;"Salmon_Diesel";  "Transition Risk";"Policy and Legal";Carbon pricing
+2;17;"Salmon_Diesel";  "Transition Risk";"Policy and Legal";Litigation risk
+2;17;"Salmon_Diesel";  "Transition Risk";"Technology";New technology
+2;17;"Salmon_Diesel";  "Transition Risk";"Market";Reputation damage
+2;17;"Salmon_Diesel";  "Transition Risk";"Reputation";Materials cost
+2;17;"Salmon_Diesel";  "Physical Risk";"Acute";Storm damage
+2;17;"Salmon_Diesel";  "Physical Risk";"Acute";Employee impacts
+2;17;"Salmon_Diesel";  "Physical Risk";"Chronic";Temperature extremes
+2;17;"Salmon_Diesel";  "Physical Risk";"Chronic";Coastal flooding
+2;17;"Salmon_Diesel";  "Opportunity";"Resource Efficiency";Energy Efficiency
+2;17;"Salmon_Diesel";  "Opportunity";"Resource Efficiency";Water Efficiency
+2;17;"Salmon_Diesel";  "Opportunity";"Resource Efficiency";Materials Efficiency
+2;17;"Salmon_Diesel";  "Opportunity";"Energy Source";Renewable price stability
+2;17;"Salmon_Diesel";  "Opportunity";"Resilience";Energy resilience
+2;17;"Salmon_Diesel";  "Physical Risk";"Chronic";Drought
+2;18;"Shoshone_Falls";  "Transition Risk";"Policy and Legal";Carbon pricing
+2;18;"Shoshone_Falls";  "Transition Risk";"Policy and Legal";Litigation risk
+2;18;"Shoshone_Falls";  "Transition Risk";"Technology";New technology
+2;18;"Shoshone_Falls";  "Transition Risk";"Market";Reputation damage
+2;18;"Shoshone_Falls";  "Transition Risk";"Reputation";Materials cost
+2;18;"Shoshone_Falls";  "Physical Risk";"Acute";Storm damage
+2;18;"Shoshone_Falls";  "Physical Risk";"Acute";Employee impacts
+2;18;"Shoshone_Falls";  "Physical Risk";"Chronic";Temperature extremes
+2;18;"Shoshone_Falls";  "Physical Risk";"Chronic";Coastal flooding
+2;18;"Shoshone_Falls";  "Opportunity";"Resource Efficiency";Energy Efficiency
+2;18;"Shoshone_Falls";  "Opportunity";"Resource Efficiency";Water Efficiency
+2;18;"Shoshone_Falls";  "Opportunity";"Resource Efficiency";Materials Efficiency
+2;18;"Shoshone_Falls";  "Opportunity";"Energy Source";Renewable price stability
+2;18;"Shoshone_Falls";  "Opportunity";"Resilience";Energy resilience
+2;18;"Shoshone_Falls";  "Physical Risk";"Chronic";Drought
+2;19;"Swan_Falls";  "Transition Risk";"Policy and Legal";Carbon pricing
+2;19;"Swan_Falls";  "Transition Risk";"Policy and Legal";Litigation risk
+2;19;"Swan_Falls";  "Transition Risk";"Technology";New technology
+2;19;"Swan_Falls";  "Transition Risk";"Market";Reputation damage
+2;19;"Swan_Falls";  "Transition Risk";"Reputation";Materials cost
+2;19;"Swan_Falls";  "Physical Risk";"Acute";Storm damage
+2;19;"Swan_Falls";  "Physical Risk";"Acute";Employee impacts
+2;19;"Swan_Falls";  "Physical Risk";"Chronic";Temperature extremes
+2;19;"Swan_Falls";  "Physical Risk";"Chronic";Coastal flooding
+2;19;"Swan_Falls";  "Opportunity";"Resource Efficiency";Energy Efficiency
+2;19;"Swan_Falls";  "Opportunity";"Resource Efficiency";Water Efficiency
+2;19;"Swan_Falls";  "Opportunity";"Resource Efficiency";Materials Efficiency
+2;19;"Swan_Falls";  "Opportunity";"Energy Source";Renewable price stability
+2;19;"Swan_Falls";  "Opportunity";"Resilience";Energy resilience
+2;19;"Swan_Falls";  "Physical Risk";"Chronic";Drought
+2;20;"Thousand_Springs";  "Transition Risk";"Policy and Legal";Carbon pricing
+2;20;"Thousand_Springs";  "Transition Risk";"Policy and Legal";Litigation risk
+2;20;"Thousand_Springs";  "Transition Risk";"Technology";New technology
+2;20;"Thousand_Springs";  "Transition Risk";"Market";Reputation damage
+2;20;"Thousand_Springs";  "Transition Risk";"Reputation";Materials cost
+2;20;"Thousand_Springs";  "Physical Risk";"Acute";Storm damage
+2;20;"Thousand_Springs";  "Physical Risk";"Acute";Employee impacts
+2;20;"Thousand_Springs";  "Physical Risk";"Chronic";Temperature extremes
+2;20;"Thousand_Springs";  "Physical Risk";"Chronic";Coastal flooding
+2;20;"Thousand_Springs";  "Opportunity";"Resource Efficiency";Energy Efficiency
+2;20;"Thousand_Springs";  "Opportunity";"Resource Efficiency";Water Efficiency
+2;20;"Thousand_Springs";  "Opportunity";"Resource Efficiency";Materials Efficiency
+2;20;"Thousand_Springs";  "Opportunity";"Energy Source";Renewable price stability
+2;20;"Thousand_Springs";  "Opportunity";"Resilience";Energy resilience
+2;20;"Thousand_Springs";  "Physical Risk";"Chronic";Drought
+2;21;"Twin_Falls_(ID)";  "Transition Risk";"Policy and Legal";Carbon pricing
+2;21;"Twin_Falls_(ID)";  "Transition Risk";"Policy and Legal";Litigation risk
+2;21;"Twin_Falls_(ID)";  "Transition Risk";"Technology";New technology
+2;21;"Twin_Falls_(ID)";  "Transition Risk";"Market";Reputation damage
+2;21;"Twin_Falls_(ID)";  "Transition Risk";"Reputation";Materials cost
+2;21;"Twin_Falls_(ID)";  "Physical Risk";"Acute";Storm damage
+2;21;"Twin_Falls_(ID)";  "Physical Risk";"Acute";Employee impacts
+2;21;"Twin_Falls_(ID)";  "Physical Risk";"Chronic";Temperature extremes
+2;21;"Twin_Falls_(ID)";  "Physical Risk";"Chronic";Coastal flooding
+2;21;"Twin_Falls_(ID)";  "Opportunity";"Resource Efficiency";Energy Efficiency
+2;21;"Twin_Falls_(ID)";  "Opportunity";"Resource Efficiency";Water Efficiency
+2;21;"Twin_Falls_(ID)";  "Opportunity";"Resource Efficiency";Materials Efficiency
+2;21;"Twin_Falls_(ID)";  "Opportunity";"Energy Source";Renewable price stability
+2;21;"Twin_Falls_(ID)";  "Opportunity";"Resilience";Energy resilience
+2;21;"Twin_Falls_(ID)";  "Physical Risk";"Chronic";Drought
+2;22;"Upper_Salmon_A";  "Transition Risk";"Policy and Legal";Carbon pricing
+2;22;"Upper_Salmon_A";  "Transition Risk";"Policy and Legal";Litigation risk
+2;22;"Upper_Salmon_A";  "Transition Risk";"Technology";New technology
+2;22;"Upper_Salmon_A";  "Transition Risk";"Market";Reputation damage
+2;22;"Upper_Salmon_A";  "Transition Risk";"Reputation";Materials cost
+2;22;"Upper_Salmon_A";  "Physical Risk";"Acute";Storm damage
+2;22;"Upper_Salmon_A";  "Physical Risk";"Acute";Employee impacts
+2;22;"Upper_Salmon_A";  "Physical Risk";"Chronic";Temperature extremes
+2;22;"Upper_Salmon_A";  "Physical Risk";"Chronic";Coastal flooding
+2;22;"Upper_Salmon_A";  "Opportunity";"Resource Efficiency";Energy Efficiency
+2;22;"Upper_Salmon_A";  "Opportunity";"Resource Efficiency";Water Efficiency
+2;22;"Upper_Salmon_A";  "Opportunity";"Resource Efficiency";Materials Efficiency
+2;22;"Upper_Salmon_A";  "Opportunity";"Energy Source";Renewable price stability
+2;22;"Upper_Salmon_A";  "Opportunity";"Resilience";Energy resilience
+2;22;"Upper_Salmon_A";  "Physical Risk";"Chronic";Drought
+2;23;"Upper_Malad";  "Transition Risk";"Policy and Legal";Carbon pricing
+2;23;"Upper_Malad";  "Transition Risk";"Policy and Legal";Litigation risk
+2;23;"Upper_Malad";  "Transition Risk";"Technology";New technology
+2;23;"Upper_Malad";  "Transition Risk";"Market";Reputation damage
+2;23;"Upper_Malad";  "Transition Risk";"Reputation";Materials cost
+2;23;"Upper_Malad";  "Physical Risk";"Acute";Storm damage
+2;23;"Upper_Malad";  "Physical Risk";"Acute";Employee impacts
+2;23;"Upper_Malad";  "Physical Risk";"Chronic";Temperature extremes
+2;23;"Upper_Malad";  "Physical Risk";"Chronic";Coastal flooding
+2;23;"Upper_Malad";  "Opportunity";"Resource Efficiency";Energy Efficiency
+2;23;"Upper_Malad";  "Opportunity";"Resource Efficiency";Water Efficiency
+2;23;"Upper_Malad";  "Opportunity";"Resource Efficiency";Materials Efficiency
+2;23;"Upper_Malad";  "Opportunity";"Energy Source";Renewable price stability
+2;23;"Upper_Malad";  "Opportunity";"Resilience";Energy resilience
+2;23;"Upper_Malad";  "Physical Risk";"Chronic";Drought
+2;24;"Hells_Canyon";  "Transition Risk";"Policy and Legal";Carbon pricing
+2;24;"Hells_Canyon";  "Transition Risk";"Policy and Legal";Litigation risk
+2;24;"Hells_Canyon";  "Transition Risk";"Technology";New technology
+2;24;"Hells_Canyon";  "Transition Risk";"Market";Reputation damage
+2;24;"Hells_Canyon";  "Transition Risk";"Reputation";Materials cost
+2;24;"Hells_Canyon";  "Physical Risk";"Acute";Storm damage
+2;24;"Hells_Canyon";  "Physical Risk";"Acute";Employee impacts
+2;24;"Hells_Canyon";  "Physical Risk";"Chronic";Temperature extremes
+2;24;"Hells_Canyon";  "Physical Risk";"Chronic";Coastal flooding
+2;24;"Hells_Canyon";  "Opportunity";"Resource Efficiency";Energy Efficiency
+2;24;"Hells_Canyon";  "Opportunity";"Resource Efficiency";Water Efficiency
+2;24;"Hells_Canyon";  "Opportunity";"Resource Efficiency";Materials Efficiency
+2;24;"Hells_Canyon";  "Opportunity";"Energy Source";Renewable price stability
+2;24;"Hells_Canyon";  "Opportunity";"Resilience";Energy resilience
+2;24;"Hells_Canyon";  "Physical Risk";"Chronic";Drought
+2;25;"Oxbow_(OR)";  "Transition Risk";"Policy and Legal";Carbon pricing
+2;25;"Oxbow_(OR)";  "Transition Risk";"Policy and Legal";Litigation risk
+2;25;"Oxbow_(OR)";  "Transition Risk";"Technology";New technology
+2;25;"Oxbow_(OR)";  "Transition Risk";"Market";Reputation damage
+2;25;"Oxbow_(OR)";  "Transition Risk";"Reputation";Materials cost
+2;25;"Oxbow_(OR)";  "Physical Risk";"Acute";Storm damage
+2;25;"Oxbow_(OR)";  "Physical Risk";"Acute";Employee impacts
+2;25;"Oxbow_(OR)";  "Physical Risk";"Chronic";Temperature extremes
+2;25;"Oxbow_(OR)";  "Physical Risk";"Chronic";Coastal flooding
+2;25;"Oxbow_(OR)";  "Opportunity";"Resource Efficiency";Energy Efficiency
+2;25;"Oxbow_(OR)";  "Opportunity";"Resource Efficiency";Water Efficiency
+2;25;"Oxbow_(OR)";  "Opportunity";"Resource Efficiency";Materials Efficiency
+2;25;"Oxbow_(OR)";  "Opportunity";"Energy Source";Renewable price stability
+2;25;"Oxbow_(OR)";  "Opportunity";"Resilience";Energy resilience
+2;25;"Oxbow_(OR)";  "Physical Risk";"Chronic";Drought
+2;26;"Upper_Salmon_B";  "Transition Risk";"Policy and Legal";Carbon pricing
+2;26;"Upper_Salmon_B";  "Transition Risk";"Policy and Legal";Litigation risk
+2;26;"Upper_Salmon_B";  "Transition Risk";"Technology";New technology
+2;26;"Upper_Salmon_B";  "Transition Risk";"Market";Reputation damage
+2;26;"Upper_Salmon_B";  "Transition Risk";"Reputation";Materials cost
+2;26;"Upper_Salmon_B";  "Physical Risk";"Acute";Storm damage
+2;26;"Upper_Salmon_B";  "Physical Risk";"Acute";Employee impacts
+2;26;"Upper_Salmon_B";  "Physical Risk";"Chronic";Temperature extremes
+2;26;"Upper_Salmon_B";  "Physical Risk";"Chronic";Coastal flooding
+2;26;"Upper_Salmon_B";  "Opportunity";"Resource Efficiency";Energy Efficiency
+2;26;"Upper_Salmon_B";  "Opportunity";"Resource Efficiency";Water Efficiency
+2;26;"Upper_Salmon_B";  "Opportunity";"Resource Efficiency";Materials Efficiency
+2;26;"Upper_Salmon_B";  "Opportunity";"Energy Source";Renewable price stability
+2;26;"Upper_Salmon_B";  "Opportunity";"Resilience";Energy resilience
+2;26;"Upper_Salmon_B";  "Physical Risk";"Chronic";Drought
+2;27;"Milner_Hydro";  "Transition Risk";"Policy and Legal";Carbon pricing
+2;27;"Milner_Hydro";  "Transition Risk";"Policy and Legal";Litigation risk
+2;27;"Milner_Hydro";  "Transition Risk";"Technology";New technology
+2;27;"Milner_Hydro";  "Transition Risk";"Market";Reputation damage
+2;27;"Milner_Hydro";  "Transition Risk";"Reputation";Materials cost
+2;27;"Milner_Hydro";  "Physical Risk";"Acute";Storm damage
+2;27;"Milner_Hydro";  "Physical Risk";"Acute";Employee impacts
+2;27;"Milner_Hydro";  "Physical Risk";"Chronic";Temperature extremes
+2;27;"Milner_Hydro";  "Physical Risk";"Chronic";Coastal flooding
+2;27;"Milner_Hydro";  "Opportunity";"Resource Efficiency";Energy Efficiency
+2;27;"Milner_Hydro";  "Opportunity";"Resource Efficiency";Water Efficiency
+2;27;"Milner_Hydro";  "Opportunity";"Resource Efficiency";Materials Efficiency
+2;27;"Milner_Hydro";  "Opportunity";"Energy Source";Renewable price stability
+2;27;"Milner_Hydro";  "Opportunity";"Resilience";Energy resilience
+2;27;"Milner_Hydro";  "Physical Risk";"Chronic";Drought
+2;28;"Evander_Andrews_Power_Complex";  "Transition Risk";"Policy and Legal";Carbon pricing
+2;28;"Evander_Andrews_Power_Complex";  "Transition Risk";"Policy and Legal";Litigation risk
+2;28;"Evander_Andrews_Power_Complex";  "Transition Risk";"Technology";New technology
+2;28;"Evander_Andrews_Power_Complex";  "Transition Risk";"Market";Reputation damage
+2;28;"Evander_Andrews_Power_Complex";  "Transition Risk";"Reputation";Materials cost
+2;28;"Evander_Andrews_Power_Complex";  "Physical Risk";"Acute";Storm damage
+2;28;"Evander_Andrews_Power_Complex";  "Physical Risk";"Acute";Employee impacts
+2;28;"Evander_Andrews_Power_Complex";  "Physical Risk";"Chronic";Temperature extremes
+2;28;"Evander_Andrews_Power_Complex";  "Physical Risk";"Chronic";Coastal flooding
+2;28;"Evander_Andrews_Power_Complex";  "Opportunity";"Resource Efficiency";Energy Efficiency
+2;28;"Evander_Andrews_Power_Complex";  "Opportunity";"Resource Efficiency";Water Efficiency
+2;28;"Evander_Andrews_Power_Complex";  "Opportunity";"Resource Efficiency";Materials Efficiency
+2;28;"Evander_Andrews_Power_Complex";  "Opportunity";"Energy Source";Renewable price stability
+2;28;"Evander_Andrews_Power_Complex";  "Opportunity";"Resilience";Energy resilience
+2;28;"Evander_Andrews_Power_Complex";  "Physical Risk";"Chronic";Drought
+2;29;"Bennett_Mountain";  "Transition Risk";"Policy and Legal";Carbon pricing
+2;29;"Bennett_Mountain";  "Transition Risk";"Policy and Legal";Litigation risk
+2;29;"Bennett_Mountain";  "Transition Risk";"Technology";New technology
+2;29;"Bennett_Mountain";  "Transition Risk";"Market";Reputation damage
+2;29;"Bennett_Mountain";  "Transition Risk";"Reputation";Materials cost
+2;29;"Bennett_Mountain";  "Physical Risk";"Acute";Storm damage
+2;29;"Bennett_Mountain";  "Physical Risk";"Acute";Employee impacts
+2;29;"Bennett_Mountain";  "Physical Risk";"Chronic";Temperature extremes
+2;29;"Bennett_Mountain";  "Physical Risk";"Chronic";Coastal flooding
+2;29;"Bennett_Mountain";  "Opportunity";"Resource Efficiency";Energy Efficiency
+2;29;"Bennett_Mountain";  "Opportunity";"Resource Efficiency";Water Efficiency
+2;29;"Bennett_Mountain";  "Opportunity";"Resource Efficiency";Materials Efficiency
+2;29;"Bennett_Mountain";  "Opportunity";"Energy Source";Renewable price stability
+2;29;"Bennett_Mountain";  "Opportunity";"Resilience";Energy resilience
+2;29;"Bennett_Mountain";  "Physical Risk";"Chronic";Drought
+2;30;"Langley_Gulch_Power_Plant";  "Transition Risk";"Policy and Legal";Carbon pricing
+2;30;"Langley_Gulch_Power_Plant";  "Transition Risk";"Policy and Legal";Litigation risk
+2;30;"Langley_Gulch_Power_Plant";  "Transition Risk";"Technology";New technology
+2;30;"Langley_Gulch_Power_Plant";  "Transition Risk";"Market";Reputation damage
+2;30;"Langley_Gulch_Power_Plant";  "Transition Risk";"Reputation";Materials cost
+2;30;"Langley_Gulch_Power_Plant";  "Physical Risk";"Acute";Storm damage
+2;30;"Langley_Gulch_Power_Plant";  "Physical Risk";"Acute";Employee impacts
+2;30;"Langley_Gulch_Power_Plant";  "Physical Risk";"Chronic";Temperature extremes
+2;30;"Langley_Gulch_Power_Plant";  "Physical Risk";"Chronic";Coastal flooding
+2;30;"Langley_Gulch_Power_Plant";  "Opportunity";"Resource Efficiency";Energy Efficiency
+2;30;"Langley_Gulch_Power_Plant";  "Opportunity";"Resource Efficiency";Water Efficiency
+2;30;"Langley_Gulch_Power_Plant";  "Opportunity";"Resource Efficiency";Materials Efficiency
+2;30;"Langley_Gulch_Power_Plant";  "Opportunity";"Energy Source";Renewable price stability
+2;30;"Langley_Gulch_Power_Plant";  "Opportunity";"Resilience";Energy resilience
+2;30;"Langley_Gulch_Power_Plant";  "Physical Risk";"Chronic";Drought
+3;31;"Boise";  "Transition Risk";"Policy and Legal";Carbon pricing
+3;31;"Boise";  "Transition Risk";"Policy and Legal";Litigation risk
+3;31;"Boise";  "Transition Risk";"Technology";New technology
+3;31;"Boise";  "Transition Risk";"Market";Reputation damage
+3;31;"Boise";  "Transition Risk";"Reputation";Materials cost
+3;31;"Boise";  "Physical Risk";"Acute";Storm damage
+3;31;"Boise";  "Physical Risk";"Acute";Employee impacts
+3;31;"Boise";  "Physical Risk";"Chronic";Temperature extremes
+3;31;"Boise";  "Physical Risk";"Chronic";Coastal flooding
+3;31;"Boise";  "Opportunity";"Resource Efficiency";Energy Efficiency
+3;31;"Boise";  "Opportunity";"Resource Efficiency";Water Efficiency
+3;31;"Boise";  "Opportunity";"Resource Efficiency";Materials Efficiency
+3;31;"Boise";  "Opportunity";"Energy Source";Renewable price stability
+3;31;"Boise";  "Opportunity";"Resilience";Energy resilience
+3;31;"Boise";  "Physical Risk";"Chronic";Drought
+3;32;"Colorado_Springs";  "Transition Risk";"Policy and Legal";Carbon pricing
+3;32;"Colorado_Springs";  "Transition Risk";"Policy and Legal";Litigation risk
+3;32;"Colorado_Springs";  "Transition Risk";"Technology";New technology
+3;32;"Colorado_Springs";  "Transition Risk";"Market";Reputation damage
+3;32;"Colorado_Springs";  "Transition Risk";"Reputation";Materials cost
+3;32;"Colorado_Springs";  "Physical Risk";"Acute";Storm damage
+3;32;"Colorado_Springs";  "Physical Risk";"Acute";Employee impacts
+3;32;"Colorado_Springs";  "Physical Risk";"Chronic";Temperature extremes
+3;32;"Colorado_Springs";  "Physical Risk";"Chronic";Coastal flooding
+3;32;"Colorado_Springs";  "Opportunity";"Resource Efficiency";Energy Efficiency
+3;32;"Colorado_Springs";  "Opportunity";"Resource Efficiency";Water Efficiency
+3;32;"Colorado_Springs";  "Opportunity";"Resource Efficiency";Materials Efficiency
+3;32;"Colorado_Springs";  "Opportunity";"Energy Source";Renewable price stability
+3;32;"Colorado_Springs";  "Opportunity";"Resilience";Energy resilience
+3;32;"Colorado_Springs";  "Physical Risk";"Chronic";Drought
+3;33;"Corvallis";  "Transition Risk";"Policy and Legal";Carbon pricing
+3;33;"Corvallis";  "Transition Risk";"Policy and Legal";Litigation risk
+3;33;"Corvallis";  "Transition Risk";"Technology";New technology
+3;33;"Corvallis";  "Transition Risk";"Market";Reputation damage
+3;33;"Corvallis";  "Transition Risk";"Reputation";Materials cost
+3;33;"Corvallis";  "Physical Risk";"Acute";Storm damage
+3;33;"Corvallis";  "Physical Risk";"Acute";Employee impacts
+3;33;"Corvallis";  "Physical Risk";"Chronic";Temperature extremes
+3;33;"Corvallis";  "Physical Risk";"Chronic";Coastal flooding
+3;33;"Corvallis";  "Opportunity";"Resource Efficiency";Energy Efficiency
+3;33;"Corvallis";  "Opportunity";"Resource Efficiency";Water Efficiency
+3;33;"Corvallis";  "Opportunity";"Resource Efficiency";Materials Efficiency
+3;33;"Corvallis";  "Opportunity";"Energy Source";Renewable price stability
+3;33;"Corvallis";  "Opportunity";"Resilience";Energy resilience
+3;33;"Corvallis";  "Physical Risk";"Chronic";Drought
+3;34;"Cupertino";  "Transition Risk";"Policy and Legal";Carbon pricing
+3;34;"Cupertino";  "Transition Risk";"Policy and Legal";Litigation risk
+3;34;"Cupertino";  "Transition Risk";"Technology";New technology
+3;34;"Cupertino";  "Transition Risk";"Market";Reputation damage
+3;34;"Cupertino";  "Transition Risk";"Reputation";Materials cost
+3;34;"Cupertino";  "Physical Risk";"Acute";Storm damage
+3;34;"Cupertino";  "Physical Risk";"Acute";Employee impacts
+3;34;"Cupertino";  "Physical Risk";"Chronic";Temperature extremes
+3;34;"Cupertino";  "Physical Risk";"Chronic";Coastal flooding
+3;34;"Cupertino";  "Opportunity";"Resource Efficiency";Energy Efficiency
+3;34;"Cupertino";  "Opportunity";"Resource Efficiency";Water Efficiency
+3;34;"Cupertino";  "Opportunity";"Resource Efficiency";Materials Efficiency
+3;34;"Cupertino";  "Opportunity";"Energy Source";Renewable price stability
+3;34;"Cupertino";  "Opportunity";"Resilience";Energy resilience
+3;34;"Cupertino";  "Physical Risk";"Chronic";Drought
+3;35;"Houston";  "Transition Risk";"Policy and Legal";Carbon pricing
+3;35;"Houston";  "Transition Risk";"Policy and Legal";Litigation risk
+3;35;"Houston";  "Transition Risk";"Technology";New technology
+3;35;"Houston";  "Transition Risk";"Market";Reputation damage
+3;35;"Houston";  "Transition Risk";"Reputation";Materials cost
+3;35;"Houston";  "Physical Risk";"Acute";Storm damage
+3;35;"Houston";  "Physical Risk";"Acute";Employee impacts
+3;35;"Houston";  "Physical Risk";"Chronic";Temperature extremes
+3;35;"Houston";  "Physical Risk";"Chronic";Coastal flooding
+3;35;"Houston";  "Opportunity";"Resource Efficiency";Energy Efficiency
+3;35;"Houston";  "Opportunity";"Resource Efficiency";Water Efficiency
+3;35;"Houston";  "Opportunity";"Resource Efficiency";Materials Efficiency
+3;35;"Houston";  "Opportunity";"Energy Source";Renewable price stability
+3;35;"Houston";  "Opportunity";"Resilience";Energy resilience
+3;35;"Houston";  "Physical Risk";"Chronic";Drought
+3;36;"Palo_Alto";  "Transition Risk";"Policy and Legal";Carbon pricing
+3;36;"Palo_Alto";  "Transition Risk";"Policy and Legal";Litigation risk
+3;36;"Palo_Alto";  "Transition Risk";"Technology";New technology
+3;36;"Palo_Alto";  "Transition Risk";"Market";Reputation damage
+3;36;"Palo_Alto";  "Transition Risk";"Reputation";Materials cost
+3;36;"Palo_Alto";  "Physical Risk";"Acute";Storm damage
+3;36;"Palo_Alto";  "Physical Risk";"Acute";Employee impacts
+3;36;"Palo_Alto";  "Physical Risk";"Chronic";Temperature extremes
+3;36;"Palo_Alto";  "Physical Risk";"Chronic";Coastal flooding
+3;36;"Palo_Alto";  "Opportunity";"Resource Efficiency";Energy Efficiency
+3;36;"Palo_Alto";  "Opportunity";"Resource Efficiency";Water Efficiency
+3;36;"Palo_Alto";  "Opportunity";"Resource Efficiency";Materials Efficiency
+3;36;"Palo_Alto";  "Opportunity";"Energy Source";Renewable price stability
+3;36;"Palo_Alto";  "Opportunity";"Resilience";Energy resilience
+3;36;"Palo_Alto";  "Physical Risk";"Chronic";Drought
+3;37;"Plano";  "Transition Risk";"Policy and Legal";Carbon pricing
+3;37;"Plano";  "Transition Risk";"Policy and Legal";Litigation risk
+3;37;"Plano";  "Transition Risk";"Technology";New technology
+3;37;"Plano";  "Transition Risk";"Market";Reputation damage
+3;37;"Plano";  "Transition Risk";"Reputation";Materials cost
+3;37;"Plano";  "Physical Risk";"Acute";Storm damage
+3;37;"Plano";  "Physical Risk";"Acute";Employee impacts
+3;37;"Plano";  "Physical Risk";"Chronic";Temperature extremes
+3;37;"Plano";  "Physical Risk";"Chronic";Coastal flooding
+3;37;"Plano";  "Opportunity";"Resource Efficiency";Energy Efficiency
+3;37;"Plano";  "Opportunity";"Resource Efficiency";Water Efficiency
+3;37;"Plano";  "Opportunity";"Resource Efficiency";Materials Efficiency
+3;37;"Plano";  "Opportunity";"Energy Source";Renewable price stability
+3;37;"Plano";  "Opportunity";"Resilience";Energy resilience
+3;37;"Plano";  "Physical Risk";"Chronic";Drought
+3;38;"Roseville";  "Transition Risk";"Policy and Legal";Carbon pricing
+3;38;"Roseville";  "Transition Risk";"Policy and Legal";Litigation risk
+3;38;"Roseville";  "Transition Risk";"Technology";New technology
+3;38;"Roseville";  "Transition Risk";"Market";Reputation damage
+3;38;"Roseville";  "Transition Risk";"Reputation";Materials cost
+3;38;"Roseville";  "Physical Risk";"Acute";Storm damage
+3;38;"Roseville";  "Physical Risk";"Acute";Employee impacts
+3;38;"Roseville";  "Physical Risk";"Chronic";Temperature extremes
+3;38;"Roseville";  "Physical Risk";"Chronic";Coastal flooding
+3;38;"Roseville";  "Opportunity";"Resource Efficiency";Energy Efficiency
+3;38;"Roseville";  "Opportunity";"Resource Efficiency";Water Efficiency
+3;38;"Roseville";  "Opportunity";"Resource Efficiency";Materials Efficiency
+3;38;"Roseville";  "Opportunity";"Energy Source";Renewable price stability
+3;38;"Roseville";  "Opportunity";"Resilience";Energy resilience
+3;38;"Roseville";  "Physical Risk";"Chronic";Drought
+3;39;"San_Bernadino";  "Transition Risk";"Policy and Legal";Carbon pricing
+3;39;"San_Bernadino";  "Transition Risk";"Policy and Legal";Litigation risk
+3;39;"San_Bernadino";  "Transition Risk";"Technology";New technology
+3;39;"San_Bernadino";  "Transition Risk";"Market";Reputation damage
+3;39;"San_Bernadino";  "Transition Risk";"Reputation";Materials cost
+3;39;"San_Bernadino";  "Physical Risk";"Acute";Storm damage
+3;39;"San_Bernadino";  "Physical Risk";"Acute";Employee impacts
+3;39;"San_Bernadino";  "Physical Risk";"Chronic";Temperature extremes
+3;39;"San_Bernadino";  "Physical Risk";"Chronic";Coastal flooding
+3;39;"San_Bernadino";  "Opportunity";"Resource Efficiency";Energy Efficiency
+3;39;"San_Bernadino";  "Opportunity";"Resource Efficiency";Water Efficiency
+3;39;"San_Bernadino";  "Opportunity";"Resource Efficiency";Materials Efficiency
+3;39;"San_Bernadino";  "Opportunity";"Energy Source";Renewable price stability
+3;39;"San_Bernadino";  "Opportunity";"Resilience";Energy resilience
+3;39;"San_Bernadino";  "Physical Risk";"Chronic";Drought
+3;40;"Dublin";  "Transition Risk";"Policy and Legal";Carbon pricing
+3;40;"Dublin";  "Transition Risk";"Policy and Legal";Litigation risk
+3;40;"Dublin";  "Transition Risk";"Technology";New technology
+3;40;"Dublin";  "Transition Risk";"Market";Reputation damage
+3;40;"Dublin";  "Transition Risk";"Reputation";Materials cost
+3;40;"Dublin";  "Physical Risk";"Acute";Storm damage
+3;40;"Dublin";  "Physical Risk";"Acute";Employee impacts
+3;40;"Dublin";  "Physical Risk";"Chronic";Temperature extremes
+3;40;"Dublin";  "Physical Risk";"Chronic";Coastal flooding
+3;40;"Dublin";  "Opportunity";"Resource Efficiency";Energy Efficiency
+3;40;"Dublin";  "Opportunity";"Resource Efficiency";Water Efficiency
+3;40;"Dublin";  "Opportunity";"Resource Efficiency";Materials Efficiency
+3;40;"Dublin";  "Opportunity";"Energy Source";Renewable price stability
+3;40;"Dublin";  "Opportunity";"Resilience";Energy resilience
+3;40;"Dublin";  "Physical Risk";"Chronic";Drought
+3;41;"Puerto_Rico";  "Transition Risk";"Policy and Legal";Carbon pricing
+3;41;"Puerto_Rico";  "Transition Risk";"Policy and Legal";Litigation risk
+3;41;"Puerto_Rico";  "Transition Risk";"Technology";New technology
+3;41;"Puerto_Rico";  "Transition Risk";"Market";Reputation damage
+3;41;"Puerto_Rico";  "Transition Risk";"Reputation";Materials cost
+3;41;"Puerto_Rico";  "Physical Risk";"Acute";Storm damage
+3;41;"Puerto_Rico";  "Physical Risk";"Acute";Employee impacts
+3;41;"Puerto_Rico";  "Physical Risk";"Chronic";Temperature extremes
+3;41;"Puerto_Rico";  "Physical Risk";"Chronic";Coastal flooding
+3;41;"Puerto_Rico";  "Opportunity";"Resource Efficiency";Energy Efficiency
+3;41;"Puerto_Rico";  "Opportunity";"Resource Efficiency";Water Efficiency
+3;41;"Puerto_Rico";  "Opportunity";"Resource Efficiency";Materials Efficiency
+3;41;"Puerto_Rico";  "Opportunity";"Energy Source";Renewable price stability
+3;41;"Puerto_Rico";  "Opportunity";"Resilience";Energy resilience
+3;41;"Puerto_Rico";  "Physical Risk";"Chronic";Drought
+3;42;"Barcelona_Sant_Cugat";  "Transition Risk";"Policy and Legal";Carbon pricing
+3;42;"Barcelona_Sant_Cugat";  "Transition Risk";"Policy and Legal";Litigation risk
+3;42;"Barcelona_Sant_Cugat";  "Transition Risk";"Technology";New technology
+3;42;"Barcelona_Sant_Cugat";  "Transition Risk";"Market";Reputation damage
+3;42;"Barcelona_Sant_Cugat";  "Transition Risk";"Reputation";Materials cost
+3;42;"Barcelona_Sant_Cugat";  "Physical Risk";"Acute";Storm damage
+3;42;"Barcelona_Sant_Cugat";  "Physical Risk";"Acute";Employee impacts
+3;42;"Barcelona_Sant_Cugat";  "Physical Risk";"Chronic";Temperature extremes
+3;42;"Barcelona_Sant_Cugat";  "Physical Risk";"Chronic";Coastal flooding
+3;42;"Barcelona_Sant_Cugat";  "Opportunity";"Resource Efficiency";Energy Efficiency
+3;42;"Barcelona_Sant_Cugat";  "Opportunity";"Resource Efficiency";Water Efficiency
+3;42;"Barcelona_Sant_Cugat";  "Opportunity";"Resource Efficiency";Materials Efficiency
+3;42;"Barcelona_Sant_Cugat";  "Opportunity";"Energy Source";Renewable price stability
+3;42;"Barcelona_Sant_Cugat";  "Opportunity";"Resilience";Energy resilience
+3;42;"Barcelona_Sant_Cugat";  "Physical Risk";"Chronic";Drought
+3;43;"Rehovot";  "Transition Risk";"Policy and Legal";Carbon pricing
+3;43;"Rehovot";  "Transition Risk";"Policy and Legal";Litigation risk
+3;43;"Rehovot";  "Transition Risk";"Technology";New technology
+3;43;"Rehovot";  "Transition Risk";"Market";Reputation damage
+3;43;"Rehovot";  "Transition Risk";"Reputation";Materials cost
+3;43;"Rehovot";  "Physical Risk";"Acute";Storm damage
+3;43;"Rehovot";  "Physical Risk";"Acute";Employee impacts
+3;43;"Rehovot";  "Physical Risk";"Chronic";Temperature extremes
+3;43;"Rehovot";  "Physical Risk";"Chronic";Coastal flooding
+3;43;"Rehovot";  "Opportunity";"Resource Efficiency";Energy Efficiency
+3;43;"Rehovot";  "Opportunity";"Resource Efficiency";Water Efficiency
+3;43;"Rehovot";  "Opportunity";"Resource Efficiency";Materials Efficiency
+3;43;"Rehovot";  "Opportunity";"Energy Source";Renewable price stability
+3;43;"Rehovot";  "Opportunity";"Resilience";Energy resilience
+3;43;"Rehovot";  "Physical Risk";"Chronic";Drought
+3;44;"Singapore_DRD";  "Transition Risk";"Policy and Legal";Carbon pricing
+3;44;"Singapore_DRD";  "Transition Risk";"Policy and Legal";Litigation risk
+3;44;"Singapore_DRD";  "Transition Risk";"Technology";New technology
+3;44;"Singapore_DRD";  "Transition Risk";"Market";Reputation damage
+3;44;"Singapore_DRD";  "Transition Risk";"Reputation";Materials cost
+3;44;"Singapore_DRD";  "Physical Risk";"Acute";Storm damage
+3;44;"Singapore_DRD";  "Physical Risk";"Acute";Employee impacts
+3;44;"Singapore_DRD";  "Physical Risk";"Chronic";Temperature extremes
+3;44;"Singapore_DRD";  "Physical Risk";"Chronic";Coastal flooding
+3;44;"Singapore_DRD";  "Opportunity";"Resource Efficiency";Energy Efficiency
+3;44;"Singapore_DRD";  "Opportunity";"Resource Efficiency";Water Efficiency
+3;44;"Singapore_DRD";  "Opportunity";"Resource Efficiency";Materials Efficiency
+3;44;"Singapore_DRD";  "Opportunity";"Energy Source";Renewable price stability
+3;44;"Singapore_DRD";  "Opportunity";"Resilience";Energy resilience
+3;44;"Singapore_DRD";  "Physical Risk";"Chronic";Drought
+3;45;"San_Diego";  "Transition Risk";"Policy and Legal";Carbon pricing
+3;45;"San_Diego";  "Transition Risk";"Policy and Legal";Litigation risk
+3;45;"San_Diego";  "Transition Risk";"Technology";New technology
+3;45;"San_Diego";  "Transition Risk";"Market";Reputation damage
+3;45;"San_Diego";  "Transition Risk";"Reputation";Materials cost
+3;45;"San_Diego";  "Physical Risk";"Acute";Storm damage
+3;45;"San_Diego";  "Physical Risk";"Acute";Employee impacts
+3;45;"San_Diego";  "Physical Risk";"Chronic";Temperature extremes
+3;45;"San_Diego";  "Physical Risk";"Chronic";Coastal flooding
+3;45;"San_Diego";  "Opportunity";"Resource Efficiency";Energy Efficiency
+3;45;"San_Diego";  "Opportunity";"Resource Efficiency";Water Efficiency
+3;45;"San_Diego";  "Opportunity";"Resource Efficiency";Materials Efficiency
+3;45;"San_Diego";  "Opportunity";"Energy Source";Renewable price stability
+3;45;"San_Diego";  "Opportunity";"Resilience";Energy resilience
+3;45;"San_Diego";  "Physical Risk";"Chronic";Drought
+4;46;"Indooroopilly_Shopping_Centre";  "Transition Risk";"Policy and Legal";Carbon pricing
+4;46;"Indooroopilly_Shopping_Centre";  "Transition Risk";"Policy and Legal";Litigation risk
+4;46;"Indooroopilly_Shopping_Centre";  "Transition Risk";"Technology";New technology
+4;46;"Indooroopilly_Shopping_Centre";  "Transition Risk";"Market";Reputation damage
+4;46;"Indooroopilly_Shopping_Centre";  "Transition Risk";"Reputation";Materials cost
+4;46;"Indooroopilly_Shopping_Centre";  "Physical Risk";"Acute";Storm damage
+4;46;"Indooroopilly_Shopping_Centre";  "Physical Risk";"Acute";Employee impacts
+4;46;"Indooroopilly_Shopping_Centre";  "Physical Risk";"Chronic";Temperature extremes
+4;46;"Indooroopilly_Shopping_Centre";  "Physical Risk";"Chronic";Coastal flooding
+4;46;"Indooroopilly_Shopping_Centre";  "Opportunity";"Resource Efficiency";Energy Efficiency
+4;46;"Indooroopilly_Shopping_Centre";  "Opportunity";"Resource Efficiency";Water Efficiency
+4;46;"Indooroopilly_Shopping_Centre";  "Opportunity";"Resource Efficiency";Materials Efficiency
+4;46;"Indooroopilly_Shopping_Centre";  "Opportunity";"Energy Source";Renewable price stability
+4;46;"Indooroopilly_Shopping_Centre";  "Opportunity";"Resilience";Energy resilience
+4;46;"Indooroopilly_Shopping_Centre";  "Physical Risk";"Chronic";Drought
+4;47;"Pacific_Fair";  "Transition Risk";"Policy and Legal";Carbon pricing
+4;47;"Pacific_Fair";  "Transition Risk";"Policy and Legal";Litigation risk
+4;47;"Pacific_Fair";  "Transition Risk";"Technology";New technology
+4;47;"Pacific_Fair";  "Transition Risk";"Market";Reputation damage
+4;47;"Pacific_Fair";  "Transition Risk";"Reputation";Materials cost
+4;47;"Pacific_Fair";  "Physical Risk";"Acute";Storm damage
+4;47;"Pacific_Fair";  "Physical Risk";"Acute";Employee impacts
+4;47;"Pacific_Fair";  "Physical Risk";"Chronic";Temperature extremes
+4;47;"Pacific_Fair";  "Physical Risk";"Chronic";Coastal flooding
+4;47;"Pacific_Fair";  "Opportunity";"Resource Efficiency";Energy Efficiency
+4;47;"Pacific_Fair";  "Opportunity";"Resource Efficiency";Water Efficiency
+4;47;"Pacific_Fair";  "Opportunity";"Resource Efficiency";Materials Efficiency
+4;47;"Pacific_Fair";  "Opportunity";"Energy Source";Renewable price stability
+4;47;"Pacific_Fair";  "Opportunity";"Resilience";Energy resilience
+4;47;"Pacific_Fair";  "Physical Risk";"Chronic";Drought
+4;48;"Stanley_Plaza";  "Transition Risk";"Policy and Legal";Carbon pricing
+4;48;"Stanley_Plaza";  "Transition Risk";"Policy and Legal";Litigation risk
+4;48;"Stanley_Plaza";  "Transition Risk";"Technology";New technology
+4;48;"Stanley_Plaza";  "Transition Risk";"Market";Reputation damage
+4;48;"Stanley_Plaza";  "Transition Risk";"Reputation";Materials cost
+4;48;"Stanley_Plaza";  "Physical Risk";"Acute";Storm damage
+4;48;"Stanley_Plaza";  "Physical Risk";"Acute";Employee impacts
+4;48;"Stanley_Plaza";  "Physical Risk";"Chronic";Temperature extremes
+4;48;"Stanley_Plaza";  "Physical Risk";"Chronic";Coastal flooding
+4;48;"Stanley_Plaza";  "Opportunity";"Resource Efficiency";Energy Efficiency
+4;48;"Stanley_Plaza";  "Opportunity";"Resource Efficiency";Water Efficiency
+4;48;"Stanley_Plaza";  "Opportunity";"Resource Efficiency";Materials Efficiency
+4;48;"Stanley_Plaza";  "Opportunity";"Energy Source";Renewable price stability
+4;48;"Stanley_Plaza";  "Opportunity";"Resilience";Energy resilience
+4;48;"Stanley_Plaza";  "Physical Risk";"Chronic";Drought
+4;49;"Coronation_Drive_Office_Park";  "Transition Risk";"Policy and Legal";Carbon pricing
+4;49;"Coronation_Drive_Office_Park";  "Transition Risk";"Policy and Legal";Litigation risk
+4;49;"Coronation_Drive_Office_Park";  "Transition Risk";"Technology";New technology
+4;49;"Coronation_Drive_Office_Park";  "Transition Risk";"Market";Reputation damage
+4;49;"Coronation_Drive_Office_Park";  "Transition Risk";"Reputation";Materials cost
+4;49;"Coronation_Drive_Office_Park";  "Physical Risk";"Acute";Storm damage
+4;49;"Coronation_Drive_Office_Park";  "Physical Risk";"Acute";Employee impacts
+4;49;"Coronation_Drive_Office_Park";  "Physical Risk";"Chronic";Temperature extremes
+4;49;"Coronation_Drive_Office_Park";  "Physical Risk";"Chronic";Coastal flooding
+4;49;"Coronation_Drive_Office_Park";  "Opportunity";"Resource Efficiency";Energy Efficiency
+4;49;"Coronation_Drive_Office_Park";  "Opportunity";"Resource Efficiency";Water Efficiency
+4;49;"Coronation_Drive_Office_Park";  "Opportunity";"Resource Efficiency";Materials Efficiency
+4;49;"Coronation_Drive_Office_Park";  "Opportunity";"Energy Source";Renewable price stability
+4;49;"Coronation_Drive_Office_Park";  "Opportunity";"Resilience";Energy resilience
+4;49;"Coronation_Drive_Office_Park";  "Physical Risk";"Chronic";Drought
+4;50;"Macquarie_Centre";  "Transition Risk";"Policy and Legal";Carbon pricing
+4;50;"Macquarie_Centre";  "Transition Risk";"Policy and Legal";Litigation risk
+4;50;"Macquarie_Centre";  "Transition Risk";"Technology";New technology
+4;50;"Macquarie_Centre";  "Transition Risk";"Market";Reputation damage
+4;50;"Macquarie_Centre";  "Transition Risk";"Reputation";Materials cost
+4;50;"Macquarie_Centre";  "Physical Risk";"Acute";Storm damage
+4;50;"Macquarie_Centre";  "Physical Risk";"Acute";Employee impacts
+4;50;"Macquarie_Centre";  "Physical Risk";"Chronic";Temperature extremes
+4;50;"Macquarie_Centre";  "Physical Risk";"Chronic";Coastal flooding
+4;50;"Macquarie_Centre";  "Opportunity";"Resource Efficiency";Energy Efficiency
+4;50;"Macquarie_Centre";  "Opportunity";"Resource Efficiency";Water Efficiency
+4;50;"Macquarie_Centre";  "Opportunity";"Resource Efficiency";Materials Efficiency
+4;50;"Macquarie_Centre";  "Opportunity";"Energy Source";Renewable price stability
+4;50;"Macquarie_Centre";  "Opportunity";"Resilience";Energy resilience
+4;50;"Macquarie_Centre";  "Physical Risk";"Chronic";Drought
+4;51;"AMP_Building";  "Transition Risk";"Policy and Legal";Carbon pricing
+4;51;"AMP_Building";  "Transition Risk";"Policy and Legal";Litigation risk
+4;51;"AMP_Building";  "Transition Risk";"Technology";New technology
+4;51;"AMP_Building";  "Transition Risk";"Market";Reputation damage
+4;51;"AMP_Building";  "Transition Risk";"Reputation";Materials cost
+4;51;"AMP_Building";  "Physical Risk";"Acute";Storm damage
+4;51;"AMP_Building";  "Physical Risk";"Acute";Employee impacts
+4;51;"AMP_Building";  "Physical Risk";"Chronic";Temperature extremes
+4;51;"AMP_Building";  "Physical Risk";"Chronic";Coastal flooding
+4;51;"AMP_Building";  "Opportunity";"Resource Efficiency";Energy Efficiency
+4;51;"AMP_Building";  "Opportunity";"Resource Efficiency";Water Efficiency
+4;51;"AMP_Building";  "Opportunity";"Resource Efficiency";Materials Efficiency
+4;51;"AMP_Building";  "Opportunity";"Energy Source";Renewable price stability
+4;51;"AMP_Building";  "Opportunity";"Resilience";Energy resilience
+4;51;"AMP_Building";  "Physical Risk";"Chronic";Drought
+4;52;"NAB_Headquarters";  "Transition Risk";"Policy and Legal";Carbon pricing
+4;52;"NAB_Headquarters";  "Transition Risk";"Policy and Legal";Litigation risk
+4;52;"NAB_Headquarters";  "Transition Risk";"Technology";New technology
+4;52;"NAB_Headquarters";  "Transition Risk";"Market";Reputation damage
+4;52;"NAB_Headquarters";  "Transition Risk";"Reputation";Materials cost
+4;52;"NAB_Headquarters";  "Physical Risk";"Acute";Storm damage
+4;52;"NAB_Headquarters";  "Physical Risk";"Acute";Employee impacts
+4;52;"NAB_Headquarters";  "Physical Risk";"Chronic";Temperature extremes
+4;52;"NAB_Headquarters";  "Physical Risk";"Chronic";Coastal flooding
+4;52;"NAB_Headquarters";  "Opportunity";"Resource Efficiency";Energy Efficiency
+4;52;"NAB_Headquarters";  "Opportunity";"Resource Efficiency";Water Efficiency
+4;52;"NAB_Headquarters";  "Opportunity";"Resource Efficiency";Materials Efficiency
+4;52;"NAB_Headquarters";  "Opportunity";"Energy Source";Renewable price stability
+4;52;"NAB_Headquarters";  "Opportunity";"Resilience";Energy resilience
+4;52;"NAB_Headquarters";  "Physical Risk";"Chronic";Drought
+4;53;"Malvern_Central";  "Transition Risk";"Policy and Legal";Carbon pricing
+4;53;"Malvern_Central";  "Transition Risk";"Policy and Legal";Litigation risk
+4;53;"Malvern_Central";  "Transition Risk";"Technology";New technology
+4;53;"Malvern_Central";  "Transition Risk";"Market";Reputation damage
+4;53;"Malvern_Central";  "Transition Risk";"Reputation";Materials cost
+4;53;"Malvern_Central";  "Physical Risk";"Acute";Storm damage
+4;53;"Malvern_Central";  "Physical Risk";"Acute";Employee impacts
+4;53;"Malvern_Central";  "Physical Risk";"Chronic";Temperature extremes
+4;53;"Malvern_Central";  "Physical Risk";"Chronic";Coastal flooding
+4;53;"Malvern_Central";  "Opportunity";"Resource Efficiency";Energy Efficiency
+4;53;"Malvern_Central";  "Opportunity";"Resource Efficiency";Water Efficiency
+4;53;"Malvern_Central";  "Opportunity";"Resource Efficiency";Materials Efficiency
+4;53;"Malvern_Central";  "Opportunity";"Energy Source";Renewable price stability
+4;53;"Malvern_Central";  "Opportunity";"Resilience";Energy resilience
+4;53;"Malvern_Central";  "Physical Risk";"Chronic";Drought
+4;54;"Exchange_Tower";  "Transition Risk";"Policy and Legal";Carbon pricing
+4;54;"Exchange_Tower";  "Transition Risk";"Policy and Legal";Litigation risk
+4;54;"Exchange_Tower";  "Transition Risk";"Technology";New technology
+4;54;"Exchange_Tower";  "Transition Risk";"Market";Reputation damage
+4;54;"Exchange_Tower";  "Transition Risk";"Reputation";Materials cost
+4;54;"Exchange_Tower";  "Physical Risk";"Acute";Storm damage
+4;54;"Exchange_Tower";  "Physical Risk";"Acute";Employee impacts
+4;54;"Exchange_Tower";  "Physical Risk";"Chronic";Temperature extremes
+4;54;"Exchange_Tower";  "Physical Risk";"Chronic";Coastal flooding
+4;54;"Exchange_Tower";  "Opportunity";"Resource Efficiency";Energy Efficiency
+4;54;"Exchange_Tower";  "Opportunity";"Resource Efficiency";Water Efficiency
+4;54;"Exchange_Tower";  "Opportunity";"Resource Efficiency";Materials Efficiency
+4;54;"Exchange_Tower";  "Opportunity";"Energy Source";Renewable price stability
+4;54;"Exchange_Tower";  "Opportunity";"Resilience";Energy resilience
+4;54;"Exchange_Tower";  "Physical Risk";"Chronic";Drought
+4;55;"Garden_City";  "Transition Risk";"Policy and Legal";Carbon pricing
+4;55;"Garden_City";  "Transition Risk";"Policy and Legal";Litigation risk
+4;55;"Garden_City";  "Transition Risk";"Technology";New technology
+4;55;"Garden_City";  "Transition Risk";"Market";Reputation damage
+4;55;"Garden_City";  "Transition Risk";"Reputation";Materials cost
+4;55;"Garden_City";  "Physical Risk";"Acute";Storm damage
+4;55;"Garden_City";  "Physical Risk";"Acute";Employee impacts
+4;55;"Garden_City";  "Physical Risk";"Chronic";Temperature extremes
+4;55;"Garden_City";  "Physical Risk";"Chronic";Coastal flooding
+4;55;"Garden_City";  "Opportunity";"Resource Efficiency";Energy Efficiency
+4;55;"Garden_City";  "Opportunity";"Resource Efficiency";Water Efficiency
+4;55;"Garden_City";  "Opportunity";"Resource Efficiency";Materials Efficiency
+4;55;"Garden_City";  "Opportunity";"Energy Source";Renewable price stability
+4;55;"Garden_City";  "Opportunity";"Resilience";Energy resilience
+4;55;"Garden_City";  "Physical Risk";"Chronic";Drought
+4;56;"The_Palms_NZ";  "Transition Risk";"Policy and Legal";Carbon pricing
+4;56;"The_Palms_NZ";  "Transition Risk";"Policy and Legal";Litigation risk
+4;56;"The_Palms_NZ";  "Transition Risk";"Technology";New technology
+4;56;"The_Palms_NZ";  "Transition Risk";"Market";Reputation damage
+4;56;"The_Palms_NZ";  "Transition Risk";"Reputation";Materials cost
+4;56;"The_Palms_NZ";  "Physical Risk";"Acute";Storm damage
+4;56;"The_Palms_NZ";  "Physical Risk";"Acute";Employee impacts
+4;56;"The_Palms_NZ";  "Physical Risk";"Chronic";Temperature extremes
+4;56;"The_Palms_NZ";  "Physical Risk";"Chronic";Coastal flooding
+4;56;"The_Palms_NZ";  "Opportunity";"Resource Efficiency";Energy Efficiency
+4;56;"The_Palms_NZ";  "Opportunity";"Resource Efficiency";Water Efficiency
+4;56;"The_Palms_NZ";  "Opportunity";"Resource Efficiency";Materials Efficiency
+4;56;"The_Palms_NZ";  "Opportunity";"Energy Source";Renewable price stability
+4;56;"The_Palms_NZ";  "Opportunity";"Resilience";Energy resilience
+4;56;"The_Palms_NZ";  "Physical Risk";"Chronic";Drought

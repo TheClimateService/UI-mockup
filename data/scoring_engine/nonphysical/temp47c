@@ -1,0 +1,540 @@
+MU;1;  "Transition Risk";"Policy and Legal";Carbon pricing ;RCP8.5;2010;-7.8816;7.8816
+MU;1;  "Transition Risk";"Policy and Legal";Carbon pricing ;RCP8.5;2020;-49.8592;49.8592
+MU;1;  "Transition Risk";"Policy and Legal";Carbon pricing ;RCP8.5;2030;-63.5456;63.5456
+MU;1;  "Transition Risk";"Policy and Legal";Carbon pricing ;RCP8.5;2040;-63.8432;63.8432
+MU;1;  "Transition Risk";"Policy and Legal";Carbon pricing ;RCP8.5;2050;-91.4816;91.4816
+MU;1;  "Transition Risk";"Policy and Legal";Carbon pricing ;RCP8.5;2060;-91.4816;91.4816
+MU;1;  "Transition Risk";"Policy and Legal";Carbon pricing ;RCP8.5;2070;-131.366;131.366
+MU;1;  "Transition Risk";"Policy and Legal";Carbon pricing ;RCP8.5;2080;-183.958;183.958
+MU;1;  "Transition Risk";"Policy and Legal";Carbon pricing ;RCP8.5;2090;-219.949;219.949
+MU;1;  "Physical Risk";"Chronic";Coastal flooding ;RCP8.5;2010;0;0
+MU;1;  "Physical Risk";"Chronic";Coastal flooding ;RCP8.5;2020;0;0
+MU;1;  "Physical Risk";"Chronic";Coastal flooding ;RCP8.5;2030;-1.028;1.028
+MU;1;  "Physical Risk";"Chronic";Coastal flooding ;RCP8.5;2040;-8;8
+MU;1;  "Physical Risk";"Chronic";Coastal flooding ;RCP8.5;2050;-8;8
+MU;1;  "Physical Risk";"Chronic";Coastal flooding ;RCP8.5;2060;-9.1912;9.1912
+MU;1;  "Physical Risk";"Chronic";Coastal flooding ;RCP8.5;2070;-46.8063;46.8063
+MU;1;  "Physical Risk";"Chronic";Coastal flooding ;RCP8.5;2080;-80;80
+MU;1;  "Physical Risk";"Chronic";Coastal flooding ;RCP8.5;2090;-80;80
+MU;1;  "Physical Risk";"Chronic";Drought ;RCP8.5;2010;-63;63
+MU;1;  "Physical Risk";"Chronic";Drought ;RCP8.5;2020;-18;18
+MU;1;  "Physical Risk";"Chronic";Drought ;RCP8.5;2030;-54;54
+MU;1;  "Physical Risk";"Chronic";Drought ;RCP8.5;2040;-117;117
+MU;1;  "Physical Risk";"Chronic";Drought ;RCP8.5;2050;-90;90
+MU;1;  "Physical Risk";"Chronic";Drought ;RCP8.5;2060;-126;126
+MU;1;  "Physical Risk";"Chronic";Drought ;RCP8.5;2070;-153;153
+MU;1;  "Physical Risk";"Chronic";Drought ;RCP8.5;2080;-162;162
+MU;1;  "Physical Risk";"Chronic";Drought ;RCP8.5;2090;-135;135
+MU;1;  "Physical Risk";"Acute";Employee impacts ;RCP8.5;2010;-1.30637;1.30637
+MU;1;  "Physical Risk";"Acute";Employee impacts ;RCP8.5;2020;-1.1506;1.1506
+MU;1;  "Physical Risk";"Acute";Employee impacts ;RCP8.5;2030;-3.71106;3.71106
+MU;1;  "Physical Risk";"Acute";Employee impacts ;RCP8.5;2040;-7.09655;7.09655
+MU;1;  "Physical Risk";"Acute";Employee impacts ;RCP8.5;2050;-11.3905;11.3905
+MU;1;  "Physical Risk";"Acute";Employee impacts ;RCP8.5;2060;-14.8108;14.8108
+MU;1;  "Physical Risk";"Acute";Employee impacts ;RCP8.5;2070;-16.273;16.273
+MU;1;  "Physical Risk";"Acute";Employee impacts ;RCP8.5;2080;-21.2198;21.2198
+MU;1;  "Physical Risk";"Acute";Employee impacts ;RCP8.5;2090;-25.1087;25.1087
+MU;1;  "Opportunity";"Resource Efficiency";Energy Efficiency ;RCP8.5;2010;-3.48366;3.48366
+MU;1;  "Opportunity";"Resource Efficiency";Energy Efficiency ;RCP8.5;2020;-3.06826;3.06826
+MU;1;  "Opportunity";"Resource Efficiency";Energy Efficiency ;RCP8.5;2030;-9.89615;9.89615
+MU;1;  "Opportunity";"Resource Efficiency";Energy Efficiency ;RCP8.5;2040;-18.9241;18.9241
+MU;1;  "Opportunity";"Resource Efficiency";Energy Efficiency ;RCP8.5;2050;-30.3748;30.3748
+MU;1;  "Opportunity";"Resource Efficiency";Energy Efficiency ;RCP8.5;2060;-39.4956;39.4956
+MU;1;  "Opportunity";"Resource Efficiency";Energy Efficiency ;RCP8.5;2070;-43.3946;43.3946
+MU;1;  "Opportunity";"Resource Efficiency";Energy Efficiency ;RCP8.5;2080;-56.5862;56.5862
+MU;1;  "Opportunity";"Resource Efficiency";Energy Efficiency ;RCP8.5;2090;-66.9564;66.9564
+MU;1;  "Opportunity";"Resilience";Energy resilience ;RCP8.5;2010;-3.26594;3.26594
+MU;1;  "Opportunity";"Resilience";Energy resilience ;RCP8.5;2020;-2.87649;2.87649
+MU;1;  "Opportunity";"Resilience";Energy resilience ;RCP8.5;2030;-9.27765;9.27765
+MU;1;  "Opportunity";"Resilience";Energy resilience ;RCP8.5;2040;-17.7413;17.7413
+MU;1;  "Opportunity";"Resilience";Energy resilience ;RCP8.5;2050;-28.4764;28.4764
+MU;1;  "Opportunity";"Resilience";Energy resilience ;RCP8.5;2060;-37.0271;37.0271
+MU;1;  "Opportunity";"Resilience";Energy resilience ;RCP8.5;2070;-40.6824;40.6824
+MU;1;  "Opportunity";"Resilience";Energy resilience ;RCP8.5;2080;-53.0495;53.0495
+MU;1;  "Opportunity";"Resilience";Energy resilience ;RCP8.5;2090;-62.7717;62.7717
+MU;1;  "Transition Risk";"Policy and Legal";Litigation risk ;RCP8.5;2010;-1.74183;1.74183
+MU;1;  "Transition Risk";"Policy and Legal";Litigation risk ;RCP8.5;2020;-1.53413;1.53413
+MU;1;  "Transition Risk";"Policy and Legal";Litigation risk ;RCP8.5;2030;-4.94808;4.94808
+MU;1;  "Transition Risk";"Policy and Legal";Litigation risk ;RCP8.5;2040;-9.46205;9.46205
+MU;1;  "Transition Risk";"Policy and Legal";Litigation risk ;RCP8.5;2050;-15.1874;15.1874
+MU;1;  "Transition Risk";"Policy and Legal";Litigation risk ;RCP8.5;2060;-19.7478;19.7478
+MU;1;  "Transition Risk";"Policy and Legal";Litigation risk ;RCP8.5;2070;-21.6973;21.6973
+MU;1;  "Transition Risk";"Policy and Legal";Litigation risk ;RCP8.5;2080;-28.2931;28.2931
+MU;1;  "Transition Risk";"Policy and Legal";Litigation risk ;RCP8.5;2090;-33.4782;33.4782
+MU;1;  "Opportunity";"Resource Efficiency";Materials Efficiency ;RCP8.5;2010;-2.61275;2.61275
+MU;1;  "Opportunity";"Resource Efficiency";Materials Efficiency ;RCP8.5;2020;-2.30119;2.30119
+MU;1;  "Opportunity";"Resource Efficiency";Materials Efficiency ;RCP8.5;2030;-7.4221;7.4221
+MU;1;  "Opportunity";"Resource Efficiency";Materials Efficiency ;RCP8.5;2040;-14.193;14.193
+MU;1;  "Opportunity";"Resource Efficiency";Materials Efficiency ;RCP8.5;2050;-22.7811;22.7811
+MU;1;  "Opportunity";"Resource Efficiency";Materials Efficiency ;RCP8.5;2060;-29.6217;29.6217
+MU;1;  "Opportunity";"Resource Efficiency";Materials Efficiency ;RCP8.5;2070;-32.5459;32.5459
+MU;1;  "Opportunity";"Resource Efficiency";Materials Efficiency ;RCP8.5;2080;-42.4396;42.4396
+MU;1;  "Opportunity";"Resource Efficiency";Materials Efficiency ;RCP8.5;2090;-50.2173;50.2173
+MU;1;  "Transition Risk";"Reputation";Materials cost ;RCP8.5;2010;-2.17729;2.17729
+MU;1;  "Transition Risk";"Reputation";Materials cost ;RCP8.5;2020;-1.91766;1.91766
+MU;1;  "Transition Risk";"Reputation";Materials cost ;RCP8.5;2030;-6.1851;6.1851
+MU;1;  "Transition Risk";"Reputation";Materials cost ;RCP8.5;2040;-11.8276;11.8276
+MU;1;  "Transition Risk";"Reputation";Materials cost ;RCP8.5;2050;-18.9842;18.9842
+MU;1;  "Transition Risk";"Reputation";Materials cost ;RCP8.5;2060;-24.6848;24.6848
+MU;1;  "Transition Risk";"Reputation";Materials cost ;RCP8.5;2070;-27.1216;27.1216
+MU;1;  "Transition Risk";"Reputation";Materials cost ;RCP8.5;2080;-35.3663;35.3663
+MU;1;  "Transition Risk";"Reputation";Materials cost ;RCP8.5;2090;-41.8478;41.8478
+MU;1;  "Transition Risk";"Technology";New technology ;RCP8.5;2010;-1.5241;1.5241
+MU;1;  "Transition Risk";"Technology";New technology ;RCP8.5;2020;-1.34236;1.34236
+MU;1;  "Transition Risk";"Technology";New technology ;RCP8.5;2030;-4.32957;4.32957
+MU;1;  "Transition Risk";"Technology";New technology ;RCP8.5;2040;-8.2793;8.2793
+MU;1;  "Transition Risk";"Technology";New technology ;RCP8.5;2050;-13.289;13.289
+MU;1;  "Transition Risk";"Technology";New technology ;RCP8.5;2060;-17.2793;17.2793
+MU;1;  "Transition Risk";"Technology";New technology ;RCP8.5;2070;-18.9851;18.9851
+MU;1;  "Transition Risk";"Technology";New technology ;RCP8.5;2080;-24.7564;24.7564
+MU;1;  "Transition Risk";"Technology";New technology ;RCP8.5;2090;-29.2934;29.2934
+MU;1;  "Opportunity";"Energy Source";Renewable price stability ;RCP8.5;2010;-0.653187;0.653187
+MU;1;  "Opportunity";"Energy Source";Renewable price stability ;RCP8.5;2020;-0.575298;0.575298
+MU;1;  "Opportunity";"Energy Source";Renewable price stability ;RCP8.5;2030;-1.85553;1.85553
+MU;1;  "Opportunity";"Energy Source";Renewable price stability ;RCP8.5;2040;-3.54827;3.54827
+MU;1;  "Opportunity";"Energy Source";Renewable price stability ;RCP8.5;2050;-5.69527;5.69527
+MU;1;  "Opportunity";"Energy Source";Renewable price stability ;RCP8.5;2060;-7.40545;7.40545
+MU;1;  "Opportunity";"Energy Source";Renewable price stability ;RCP8.5;2070;-8.13649;8.13649
+MU;1;  "Opportunity";"Energy Source";Renewable price stability ;RCP8.5;2080;-10.6099;10.6099
+MU;1;  "Opportunity";"Energy Source";Renewable price stability ;RCP8.5;2090;-12.5543;12.5543
+MU;1;  "Transition Risk";"Market";Reputation damage ;RCP8.5;2010;-1.08864;1.08864
+MU;1;  "Transition Risk";"Market";Reputation damage ;RCP8.5;2020;-0.95883;0.95883
+MU;1;  "Transition Risk";"Market";Reputation damage ;RCP8.5;2030;-3.09255;3.09255
+MU;1;  "Transition Risk";"Market";Reputation damage ;RCP8.5;2040;-5.91379;5.91379
+MU;1;  "Transition Risk";"Market";Reputation damage ;RCP8.5;2050;-9.49212;9.49212
+MU;1;  "Transition Risk";"Market";Reputation damage ;RCP8.5;2060;-12.3424;12.3424
+MU;1;  "Transition Risk";"Market";Reputation damage ;RCP8.5;2070;-13.5608;13.5608
+MU;1;  "Transition Risk";"Market";Reputation damage ;RCP8.5;2080;-17.6832;17.6832
+MU;1;  "Transition Risk";"Market";Reputation damage ;RCP8.5;2090;-20.9239;20.9239
+MU;1;  "Physical Risk";"Acute";Storm damage ;RCP8.5;2010;-15.241;15.241
+MU;1;  "Physical Risk";"Acute";Storm damage ;RCP8.5;2020;-13.4236;13.4236
+MU;1;  "Physical Risk";"Acute";Storm damage ;RCP8.5;2030;-43.2957;43.2957
+MU;1;  "Physical Risk";"Acute";Storm damage ;RCP8.5;2040;-82.7929;82.7929
+MU;1;  "Physical Risk";"Acute";Storm damage ;RCP8.5;2050;-132.89;132.89
+MU;1;  "Physical Risk";"Acute";Storm damage ;RCP8.5;2060;-172.793;172.793
+MU;1;  "Physical Risk";"Acute";Storm damage ;RCP8.5;2070;-189.851;189.851
+MU;1;  "Physical Risk";"Acute";Storm damage ;RCP8.5;2080;-247.564;247.564
+MU;1;  "Physical Risk";"Acute";Storm damage ;RCP8.5;2090;-292.934;292.934
+MU;1;  "Physical Risk";"Chronic";Temperature extremes ;RCP8.5;2010;-21.7729;21.7729
+MU;1;  "Physical Risk";"Chronic";Temperature extremes ;RCP8.5;2020;-19.1766;19.1766
+MU;1;  "Physical Risk";"Chronic";Temperature extremes ;RCP8.5;2030;-61.851;61.851
+MU;1;  "Physical Risk";"Chronic";Temperature extremes ;RCP8.5;2040;-118.275;118.275
+MU;1;  "Physical Risk";"Chronic";Temperature extremes ;RCP8.5;2050;-189.842;189.842
+MU;1;  "Physical Risk";"Chronic";Temperature extremes ;RCP8.5;2060;-246.848;246.848
+MU;1;  "Physical Risk";"Chronic";Temperature extremes ;RCP8.5;2070;-271.216;271.216
+MU;1;  "Physical Risk";"Chronic";Temperature extremes ;RCP8.5;2080;-353.663;353.663
+MU;1;  "Physical Risk";"Chronic";Temperature extremes ;RCP8.5;2090;-418.478;418.478
+MU;1;  "Opportunity";"Resource Efficiency";Water Efficiency ;RCP8.5;2010;-3.91912;3.91912
+MU;1;  "Opportunity";"Resource Efficiency";Water Efficiency ;RCP8.5;2020;-3.45179;3.45179
+MU;1;  "Opportunity";"Resource Efficiency";Water Efficiency ;RCP8.5;2030;-11.1332;11.1332
+MU;1;  "Opportunity";"Resource Efficiency";Water Efficiency ;RCP8.5;2040;-21.2896;21.2896
+MU;1;  "Opportunity";"Resource Efficiency";Water Efficiency ;RCP8.5;2050;-34.1716;34.1716
+MU;1;  "Opportunity";"Resource Efficiency";Water Efficiency ;RCP8.5;2060;-44.4326;44.4326
+MU;1;  "Opportunity";"Resource Efficiency";Water Efficiency ;RCP8.5;2070;-48.8189;48.8189
+MU;1;  "Opportunity";"Resource Efficiency";Water Efficiency ;RCP8.5;2080;-63.6595;63.6595
+MU;1;  "Opportunity";"Resource Efficiency";Water Efficiency ;RCP8.5;2090;-75.3261;75.3261
+IDA;2;  "Transition Risk";"Policy and Legal";Carbon pricing ;RCP8.5;2010;-5.4186;5.4186
+IDA;2;  "Transition Risk";"Policy and Legal";Carbon pricing ;RCP8.5;2020;-34.2782;34.2782
+IDA;2;  "Transition Risk";"Policy and Legal";Carbon pricing ;RCP8.5;2030;-43.6876;43.6876
+IDA;2;  "Transition Risk";"Policy and Legal";Carbon pricing ;RCP8.5;2040;-43.8922;43.8922
+IDA;2;  "Transition Risk";"Policy and Legal";Carbon pricing ;RCP8.5;2050;-62.8936;62.8936
+IDA;2;  "Transition Risk";"Policy and Legal";Carbon pricing ;RCP8.5;2060;-62.8936;62.8936
+IDA;2;  "Transition Risk";"Policy and Legal";Carbon pricing ;RCP8.5;2070;-90.3144;90.3144
+IDA;2;  "Transition Risk";"Policy and Legal";Carbon pricing ;RCP8.5;2080;-126.471;126.471
+IDA;2;  "Transition Risk";"Policy and Legal";Carbon pricing ;RCP8.5;2090;-151.215;151.215
+IDA;2;  "Physical Risk";"Chronic";Coastal flooding ;RCP8.5;2010;0;0
+IDA;2;  "Physical Risk";"Chronic";Coastal flooding ;RCP8.5;2020;0;0
+IDA;2;  "Physical Risk";"Chronic";Coastal flooding ;RCP8.5;2030;0;0
+IDA;2;  "Physical Risk";"Chronic";Coastal flooding ;RCP8.5;2040;0;0
+IDA;2;  "Physical Risk";"Chronic";Coastal flooding ;RCP8.5;2050;0;0
+IDA;2;  "Physical Risk";"Chronic";Coastal flooding ;RCP8.5;2060;0;0
+IDA;2;  "Physical Risk";"Chronic";Coastal flooding ;RCP8.5;2070;0;0
+IDA;2;  "Physical Risk";"Chronic";Coastal flooding ;RCP8.5;2080;0;0
+IDA;2;  "Physical Risk";"Chronic";Coastal flooding ;RCP8.5;2090;0;0
+IDA;2;  "Physical Risk";"Chronic";Drought ;RCP8.5;2010;-643.5;643.5
+IDA;2;  "Physical Risk";"Chronic";Drought ;RCP8.5;2020;0;0
+IDA;2;  "Physical Risk";"Chronic";Drought ;RCP8.5;2030;-99;99
+IDA;2;  "Physical Risk";"Chronic";Drought ;RCP8.5;2040;-774;774
+IDA;2;  "Physical Risk";"Chronic";Drought ;RCP8.5;2050;-666;666
+IDA;2;  "Physical Risk";"Chronic";Drought ;RCP8.5;2060;-756;756
+IDA;2;  "Physical Risk";"Chronic";Drought ;RCP8.5;2070;-972;972
+IDA;2;  "Physical Risk";"Chronic";Drought ;RCP8.5;2080;-954;954
+IDA;2;  "Physical Risk";"Chronic";Drought ;RCP8.5;2090;-945;945
+IDA;2;  "Physical Risk";"Acute";Employee impacts ;RCP8.5;2010;0;0
+IDA;2;  "Physical Risk";"Acute";Employee impacts ;RCP8.5;2020;0;0
+IDA;2;  "Physical Risk";"Acute";Employee impacts ;RCP8.5;2030;-2.86405;2.86405
+IDA;2;  "Physical Risk";"Acute";Employee impacts ;RCP8.5;2040;-2.85583;2.85583
+IDA;2;  "Physical Risk";"Acute";Employee impacts ;RCP8.5;2050;-1.90103;1.90103
+IDA;2;  "Physical Risk";"Acute";Employee impacts ;RCP8.5;2060;-6.04317;6.04317
+IDA;2;  "Physical Risk";"Acute";Employee impacts ;RCP8.5;2070;-9.58176;9.58176
+IDA;2;  "Physical Risk";"Acute";Employee impacts ;RCP8.5;2080;-19.2113;19.2113
+IDA;2;  "Physical Risk";"Acute";Employee impacts ;RCP8.5;2090;-26.9352;26.9352
+IDA;2;  "Opportunity";"Resource Efficiency";Energy Efficiency ;RCP8.5;2010;0;0
+IDA;2;  "Opportunity";"Resource Efficiency";Energy Efficiency ;RCP8.5;2020;0;0
+IDA;2;  "Opportunity";"Resource Efficiency";Energy Efficiency ;RCP8.5;2030;-7.63747;7.63747
+IDA;2;  "Opportunity";"Resource Efficiency";Energy Efficiency ;RCP8.5;2040;-7.61555;7.61555
+IDA;2;  "Opportunity";"Resource Efficiency";Energy Efficiency ;RCP8.5;2050;-5.06942;5.06942
+IDA;2;  "Opportunity";"Resource Efficiency";Energy Efficiency ;RCP8.5;2060;-16.1151;16.1151
+IDA;2;  "Opportunity";"Resource Efficiency";Energy Efficiency ;RCP8.5;2070;-25.5514;25.5514
+IDA;2;  "Opportunity";"Resource Efficiency";Energy Efficiency ;RCP8.5;2080;-51.2302;51.2302
+IDA;2;  "Opportunity";"Resource Efficiency";Energy Efficiency ;RCP8.5;2090;-71.8272;71.8272
+IDA;2;  "Opportunity";"Resilience";Energy resilience ;RCP8.5;2010;0;0
+IDA;2;  "Opportunity";"Resilience";Energy resilience ;RCP8.5;2020;0;0
+IDA;2;  "Opportunity";"Resilience";Energy resilience ;RCP8.5;2030;-7.16013;7.16013
+IDA;2;  "Opportunity";"Resilience";Energy resilience ;RCP8.5;2040;-7.13958;7.13958
+IDA;2;  "Opportunity";"Resilience";Energy resilience ;RCP8.5;2050;-4.75258;4.75258
+IDA;2;  "Opportunity";"Resilience";Energy resilience ;RCP8.5;2060;-15.1079;15.1079
+IDA;2;  "Opportunity";"Resilience";Energy resilience ;RCP8.5;2070;-23.9543;23.9543
+IDA;2;  "Opportunity";"Resilience";Energy resilience ;RCP8.5;2080;-48.0283;48.0283
+IDA;2;  "Opportunity";"Resilience";Energy resilience ;RCP8.5;2090;-67.3379;67.3379
+IDA;2;  "Transition Risk";"Policy and Legal";Litigation risk ;RCP8.5;2010;0;0
+IDA;2;  "Transition Risk";"Policy and Legal";Litigation risk ;RCP8.5;2020;0;0
+IDA;2;  "Transition Risk";"Policy and Legal";Litigation risk ;RCP8.5;2030;-3.81874;3.81874
+IDA;2;  "Transition Risk";"Policy and Legal";Litigation risk ;RCP8.5;2040;-3.80778;3.80778
+IDA;2;  "Transition Risk";"Policy and Legal";Litigation risk ;RCP8.5;2050;-2.53471;2.53471
+IDA;2;  "Transition Risk";"Policy and Legal";Litigation risk ;RCP8.5;2060;-8.05756;8.05756
+IDA;2;  "Transition Risk";"Policy and Legal";Litigation risk ;RCP8.5;2070;-12.7757;12.7757
+IDA;2;  "Transition Risk";"Policy and Legal";Litigation risk ;RCP8.5;2080;-25.6151;25.6151
+IDA;2;  "Transition Risk";"Policy and Legal";Litigation risk ;RCP8.5;2090;-35.9136;35.9136
+IDA;2;  "Opportunity";"Resource Efficiency";Materials Efficiency ;RCP8.5;2010;0;0
+IDA;2;  "Opportunity";"Resource Efficiency";Materials Efficiency ;RCP8.5;2020;0;0
+IDA;2;  "Opportunity";"Resource Efficiency";Materials Efficiency ;RCP8.5;2030;-5.7281;5.7281
+IDA;2;  "Opportunity";"Resource Efficiency";Materials Efficiency ;RCP8.5;2040;-5.71166;5.71166
+IDA;2;  "Opportunity";"Resource Efficiency";Materials Efficiency ;RCP8.5;2050;-3.80207;3.80207
+IDA;2;  "Opportunity";"Resource Efficiency";Materials Efficiency ;RCP8.5;2060;-12.0863;12.0863
+IDA;2;  "Opportunity";"Resource Efficiency";Materials Efficiency ;RCP8.5;2070;-19.1635;19.1635
+IDA;2;  "Opportunity";"Resource Efficiency";Materials Efficiency ;RCP8.5;2080;-38.4227;38.4227
+IDA;2;  "Opportunity";"Resource Efficiency";Materials Efficiency ;RCP8.5;2090;-53.8704;53.8704
+IDA;2;  "Transition Risk";"Reputation";Materials cost ;RCP8.5;2010;0;0
+IDA;2;  "Transition Risk";"Reputation";Materials cost ;RCP8.5;2020;0;0
+IDA;2;  "Transition Risk";"Reputation";Materials cost ;RCP8.5;2030;-4.77342;4.77342
+IDA;2;  "Transition Risk";"Reputation";Materials cost ;RCP8.5;2040;-4.75972;4.75972
+IDA;2;  "Transition Risk";"Reputation";Materials cost ;RCP8.5;2050;-3.16839;3.16839
+IDA;2;  "Transition Risk";"Reputation";Materials cost ;RCP8.5;2060;-10.072;10.072
+IDA;2;  "Transition Risk";"Reputation";Materials cost ;RCP8.5;2070;-15.9696;15.9696
+IDA;2;  "Transition Risk";"Reputation";Materials cost ;RCP8.5;2080;-32.0189;32.0189
+IDA;2;  "Transition Risk";"Reputation";Materials cost ;RCP8.5;2090;-44.892;44.892
+IDA;2;  "Transition Risk";"Technology";New technology ;RCP8.5;2010;0;0
+IDA;2;  "Transition Risk";"Technology";New technology ;RCP8.5;2020;0;0
+IDA;2;  "Transition Risk";"Technology";New technology ;RCP8.5;2030;-3.34139;3.34139
+IDA;2;  "Transition Risk";"Technology";New technology ;RCP8.5;2040;-3.3318;3.3318
+IDA;2;  "Transition Risk";"Technology";New technology ;RCP8.5;2050;-2.21787;2.21787
+IDA;2;  "Transition Risk";"Technology";New technology ;RCP8.5;2060;-7.05037;7.05037
+IDA;2;  "Transition Risk";"Technology";New technology ;RCP8.5;2070;-11.1787;11.1787
+IDA;2;  "Transition Risk";"Technology";New technology ;RCP8.5;2080;-22.4132;22.4132
+IDA;2;  "Transition Risk";"Technology";New technology ;RCP8.5;2090;-31.4244;31.4244
+IDA;2;  "Opportunity";"Energy Source";Renewable price stability ;RCP8.5;2010;0;0
+IDA;2;  "Opportunity";"Energy Source";Renewable price stability ;RCP8.5;2020;0;0
+IDA;2;  "Opportunity";"Energy Source";Renewable price stability ;RCP8.5;2030;-1.43203;1.43203
+IDA;2;  "Opportunity";"Energy Source";Renewable price stability ;RCP8.5;2040;-1.42792;1.42792
+IDA;2;  "Opportunity";"Energy Source";Renewable price stability ;RCP8.5;2050;-0.950517;0.950517
+IDA;2;  "Opportunity";"Energy Source";Renewable price stability ;RCP8.5;2060;-3.02158;3.02158
+IDA;2;  "Opportunity";"Energy Source";Renewable price stability ;RCP8.5;2070;-4.79088;4.79088
+IDA;2;  "Opportunity";"Energy Source";Renewable price stability ;RCP8.5;2080;-9.60567;9.60567
+IDA;2;  "Opportunity";"Energy Source";Renewable price stability ;RCP8.5;2090;-13.4676;13.4676
+IDA;2;  "Transition Risk";"Market";Reputation damage ;RCP8.5;2010;0;0
+IDA;2;  "Transition Risk";"Market";Reputation damage ;RCP8.5;2020;0;0
+IDA;2;  "Transition Risk";"Market";Reputation damage ;RCP8.5;2030;-2.38671;2.38671
+IDA;2;  "Transition Risk";"Market";Reputation damage ;RCP8.5;2040;-2.37986;2.37986
+IDA;2;  "Transition Risk";"Market";Reputation damage ;RCP8.5;2050;-1.5842;1.5842
+IDA;2;  "Transition Risk";"Market";Reputation damage ;RCP8.5;2060;-5.03598;5.03598
+IDA;2;  "Transition Risk";"Market";Reputation damage ;RCP8.5;2070;-7.9848;7.9848
+IDA;2;  "Transition Risk";"Market";Reputation damage ;RCP8.5;2080;-16.0094;16.0094
+IDA;2;  "Transition Risk";"Market";Reputation damage ;RCP8.5;2090;-22.446;22.446
+IDA;2;  "Physical Risk";"Acute";Storm damage ;RCP8.5;2010;0;0
+IDA;2;  "Physical Risk";"Acute";Storm damage ;RCP8.5;2020;0;0
+IDA;2;  "Physical Risk";"Acute";Storm damage ;RCP8.5;2030;-33.4139;33.4139
+IDA;2;  "Physical Risk";"Acute";Storm damage ;RCP8.5;2040;-33.318;33.318
+IDA;2;  "Physical Risk";"Acute";Storm damage ;RCP8.5;2050;-22.1787;22.1787
+IDA;2;  "Physical Risk";"Acute";Storm damage ;RCP8.5;2060;-70.5036;70.5036
+IDA;2;  "Physical Risk";"Acute";Storm damage ;RCP8.5;2070;-111.787;111.787
+IDA;2;  "Physical Risk";"Acute";Storm damage ;RCP8.5;2080;-224.132;224.132
+IDA;2;  "Physical Risk";"Acute";Storm damage ;RCP8.5;2090;-314.243;314.243
+IDA;2;  "Physical Risk";"Chronic";Temperature extremes ;RCP8.5;2010;0;0
+IDA;2;  "Physical Risk";"Chronic";Temperature extremes ;RCP8.5;2020;0;0
+IDA;2;  "Physical Risk";"Chronic";Temperature extremes ;RCP8.5;2030;-47.7342;47.7342
+IDA;2;  "Physical Risk";"Chronic";Temperature extremes ;RCP8.5;2040;-47.5972;47.5972
+IDA;2;  "Physical Risk";"Chronic";Temperature extremes ;RCP8.5;2050;-31.6839;31.6839
+IDA;2;  "Physical Risk";"Chronic";Temperature extremes ;RCP8.5;2060;-100.719;100.719
+IDA;2;  "Physical Risk";"Chronic";Temperature extremes ;RCP8.5;2070;-159.696;159.696
+IDA;2;  "Physical Risk";"Chronic";Temperature extremes ;RCP8.5;2080;-320.189;320.189
+IDA;2;  "Physical Risk";"Chronic";Temperature extremes ;RCP8.5;2090;-448.92;448.92
+IDA;2;  "Opportunity";"Resource Efficiency";Water Efficiency ;RCP8.5;2010;0;0
+IDA;2;  "Opportunity";"Resource Efficiency";Water Efficiency ;RCP8.5;2020;0;0
+IDA;2;  "Opportunity";"Resource Efficiency";Water Efficiency ;RCP8.5;2030;-8.59216;8.59216
+IDA;2;  "Opportunity";"Resource Efficiency";Water Efficiency ;RCP8.5;2040;-8.5675;8.5675
+IDA;2;  "Opportunity";"Resource Efficiency";Water Efficiency ;RCP8.5;2050;-5.7031;5.7031
+IDA;2;  "Opportunity";"Resource Efficiency";Water Efficiency ;RCP8.5;2060;-18.1295;18.1295
+IDA;2;  "Opportunity";"Resource Efficiency";Water Efficiency ;RCP8.5;2070;-28.7453;28.7453
+IDA;2;  "Opportunity";"Resource Efficiency";Water Efficiency ;RCP8.5;2080;-57.634;57.634
+IDA;2;  "Opportunity";"Resource Efficiency";Water Efficiency ;RCP8.5;2090;-80.8056;80.8056
+HPQ;3;  "Transition Risk";"Policy and Legal";Carbon pricing ;RCP8.5;2010;-4.80285;4.80285
+HPQ;3;  "Transition Risk";"Policy and Legal";Carbon pricing ;RCP8.5;2020;-30.3829;30.3829
+HPQ;3;  "Transition Risk";"Policy and Legal";Carbon pricing ;RCP8.5;2030;-38.7231;38.7231
+HPQ;3;  "Transition Risk";"Policy and Legal";Carbon pricing ;RCP8.5;2040;-38.9045;38.9045
+HPQ;3;  "Transition Risk";"Policy and Legal";Carbon pricing ;RCP8.5;2050;-55.7466;55.7466
+HPQ;3;  "Transition Risk";"Policy and Legal";Carbon pricing ;RCP8.5;2060;-55.7466;55.7466
+HPQ;3;  "Transition Risk";"Policy and Legal";Carbon pricing ;RCP8.5;2070;-80.0514;80.0514
+HPQ;3;  "Transition Risk";"Policy and Legal";Carbon pricing ;RCP8.5;2080;-112.1;112.1
+HPQ;3;  "Transition Risk";"Policy and Legal";Carbon pricing ;RCP8.5;2090;-134.031;134.031
+HPQ;3;  "Physical Risk";"Chronic";Coastal flooding ;RCP8.5;2010;0;0
+HPQ;3;  "Physical Risk";"Chronic";Coastal flooding ;RCP8.5;2020;0;0
+HPQ;3;  "Physical Risk";"Chronic";Coastal flooding ;RCP8.5;2030;-14.4888;14.4888
+HPQ;3;  "Physical Risk";"Chronic";Coastal flooding ;RCP8.5;2040;-24;24
+HPQ;3;  "Physical Risk";"Chronic";Coastal flooding ;RCP8.5;2050;-32.8181;32.8181
+HPQ;3;  "Physical Risk";"Chronic";Coastal flooding ;RCP8.5;2060;-48;48
+HPQ;3;  "Physical Risk";"Chronic";Coastal flooding ;RCP8.5;2070;-48;48
+HPQ;3;  "Physical Risk";"Chronic";Coastal flooding ;RCP8.5;2080;-48;48
+HPQ;3;  "Physical Risk";"Chronic";Coastal flooding ;RCP8.5;2090;-48;48
+HPQ;3;  "Physical Risk";"Chronic";Drought ;RCP8.5;2010;-162;162
+HPQ;3;  "Physical Risk";"Chronic";Drought ;RCP8.5;2020;-148.5;148.5
+HPQ;3;  "Physical Risk";"Chronic";Drought ;RCP8.5;2030;-198;198
+HPQ;3;  "Physical Risk";"Chronic";Drought ;RCP8.5;2040;-198;198
+HPQ;3;  "Physical Risk";"Chronic";Drought ;RCP8.5;2050;-306;306
+HPQ;3;  "Physical Risk";"Chronic";Drought ;RCP8.5;2060;-400.5;400.5
+HPQ;3;  "Physical Risk";"Chronic";Drought ;RCP8.5;2070;-540;540
+HPQ;3;  "Physical Risk";"Chronic";Drought ;RCP8.5;2080;-423;423
+HPQ;3;  "Physical Risk";"Chronic";Drought ;RCP8.5;2090;-508.5;508.5
+HPQ;3;  "Physical Risk";"Acute";Employee impacts ;RCP8.5;2010;-1.21455;1.21455
+HPQ;3;  "Physical Risk";"Acute";Employee impacts ;RCP8.5;2020;-3.52972;3.52972
+HPQ;3;  "Physical Risk";"Acute";Employee impacts ;RCP8.5;2030;-8.0015;8.0015
+HPQ;3;  "Physical Risk";"Acute";Employee impacts ;RCP8.5;2040;-12.3521;12.3521
+HPQ;3;  "Physical Risk";"Acute";Employee impacts ;RCP8.5;2050;-14.5282;14.5282
+HPQ;3;  "Physical Risk";"Acute";Employee impacts ;RCP8.5;2060;-21.4133;21.4133
+HPQ;3;  "Physical Risk";"Acute";Employee impacts ;RCP8.5;2070;-26.9804;26.9804
+HPQ;3;  "Physical Risk";"Acute";Employee impacts ;RCP8.5;2080;-35.1301;35.1301
+HPQ;3;  "Physical Risk";"Acute";Employee impacts ;RCP8.5;2090;-40.0239;40.0239
+HPQ;3;  "Opportunity";"Resource Efficiency";Energy Efficiency ;RCP8.5;2010;-3.2388;3.2388
+HPQ;3;  "Opportunity";"Resource Efficiency";Energy Efficiency ;RCP8.5;2020;-9.41259;9.41259
+HPQ;3;  "Opportunity";"Resource Efficiency";Energy Efficiency ;RCP8.5;2030;-21.3373;21.3373
+HPQ;3;  "Opportunity";"Resource Efficiency";Energy Efficiency ;RCP8.5;2040;-32.9389;32.9389
+HPQ;3;  "Opportunity";"Resource Efficiency";Energy Efficiency ;RCP8.5;2050;-38.7418;38.7418
+HPQ;3;  "Opportunity";"Resource Efficiency";Energy Efficiency ;RCP8.5;2060;-57.102;57.102
+HPQ;3;  "Opportunity";"Resource Efficiency";Energy Efficiency ;RCP8.5;2070;-71.9476;71.9476
+HPQ;3;  "Opportunity";"Resource Efficiency";Energy Efficiency ;RCP8.5;2080;-93.6804;93.6804
+HPQ;3;  "Opportunity";"Resource Efficiency";Energy Efficiency ;RCP8.5;2090;-106.73;106.73
+HPQ;3;  "Opportunity";"Resilience";Energy resilience ;RCP8.5;2010;-3.03636;3.03636
+HPQ;3;  "Opportunity";"Resilience";Energy resilience ;RCP8.5;2020;-8.82431;8.82431
+HPQ;3;  "Opportunity";"Resilience";Energy resilience ;RCP8.5;2030;-20.0037;20.0037
+HPQ;3;  "Opportunity";"Resilience";Energy resilience ;RCP8.5;2040;-30.8803;30.8803
+HPQ;3;  "Opportunity";"Resilience";Energy resilience ;RCP8.5;2050;-36.3205;36.3205
+HPQ;3;  "Opportunity";"Resilience";Energy resilience ;RCP8.5;2060;-53.5331;53.5331
+HPQ;3;  "Opportunity";"Resilience";Energy resilience ;RCP8.5;2070;-67.4509;67.4509
+HPQ;3;  "Opportunity";"Resilience";Energy resilience ;RCP8.5;2080;-87.8253;87.8253
+HPQ;3;  "Opportunity";"Resilience";Energy resilience ;RCP8.5;2090;-100.06;100.06
+HPQ;3;  "Transition Risk";"Policy and Legal";Litigation risk ;RCP8.5;2010;-1.6194;1.6194
+HPQ;3;  "Transition Risk";"Policy and Legal";Litigation risk ;RCP8.5;2020;-4.7063;4.7063
+HPQ;3;  "Transition Risk";"Policy and Legal";Litigation risk ;RCP8.5;2030;-10.6687;10.6687
+HPQ;3;  "Transition Risk";"Policy and Legal";Litigation risk ;RCP8.5;2040;-16.4694;16.4694
+HPQ;3;  "Transition Risk";"Policy and Legal";Litigation risk ;RCP8.5;2050;-19.3709;19.3709
+HPQ;3;  "Transition Risk";"Policy and Legal";Litigation risk ;RCP8.5;2060;-28.551;28.551
+HPQ;3;  "Transition Risk";"Policy and Legal";Litigation risk ;RCP8.5;2070;-35.9738;35.9738
+HPQ;3;  "Transition Risk";"Policy and Legal";Litigation risk ;RCP8.5;2080;-46.8402;46.8402
+HPQ;3;  "Transition Risk";"Policy and Legal";Litigation risk ;RCP8.5;2090;-53.3652;53.3652
+HPQ;3;  "Opportunity";"Resource Efficiency";Materials Efficiency ;RCP8.5;2010;-2.4291;2.4291
+HPQ;3;  "Opportunity";"Resource Efficiency";Materials Efficiency ;RCP8.5;2020;-7.05944;7.05944
+HPQ;3;  "Opportunity";"Resource Efficiency";Materials Efficiency ;RCP8.5;2030;-16.003;16.003
+HPQ;3;  "Opportunity";"Resource Efficiency";Materials Efficiency ;RCP8.5;2040;-24.7042;24.7042
+HPQ;3;  "Opportunity";"Resource Efficiency";Materials Efficiency ;RCP8.5;2050;-29.0564;29.0564
+HPQ;3;  "Opportunity";"Resource Efficiency";Materials Efficiency ;RCP8.5;2060;-42.8265;42.8265
+HPQ;3;  "Opportunity";"Resource Efficiency";Materials Efficiency ;RCP8.5;2070;-53.9607;53.9607
+HPQ;3;  "Opportunity";"Resource Efficiency";Materials Efficiency ;RCP8.5;2080;-70.2603;70.2603
+HPQ;3;  "Opportunity";"Resource Efficiency";Materials Efficiency ;RCP8.5;2090;-80.0477;80.0477
+HPQ;3;  "Transition Risk";"Reputation";Materials cost ;RCP8.5;2010;-2.02425;2.02425
+HPQ;3;  "Transition Risk";"Reputation";Materials cost ;RCP8.5;2020;-5.88287;5.88287
+HPQ;3;  "Transition Risk";"Reputation";Materials cost ;RCP8.5;2030;-13.3358;13.3358
+HPQ;3;  "Transition Risk";"Reputation";Materials cost ;RCP8.5;2040;-20.5868;20.5868
+HPQ;3;  "Transition Risk";"Reputation";Materials cost ;RCP8.5;2050;-24.2137;24.2137
+HPQ;3;  "Transition Risk";"Reputation";Materials cost ;RCP8.5;2060;-35.6888;35.6888
+HPQ;3;  "Transition Risk";"Reputation";Materials cost ;RCP8.5;2070;-44.9672;44.9672
+HPQ;3;  "Transition Risk";"Reputation";Materials cost ;RCP8.5;2080;-58.5502;58.5502
+HPQ;3;  "Transition Risk";"Reputation";Materials cost ;RCP8.5;2090;-66.7064;66.7064
+HPQ;3;  "Transition Risk";"Technology";New technology ;RCP8.5;2010;-1.41697;1.41697
+HPQ;3;  "Transition Risk";"Technology";New technology ;RCP8.5;2020;-4.11801;4.11801
+HPQ;3;  "Transition Risk";"Technology";New technology ;RCP8.5;2030;-9.33508;9.33508
+HPQ;3;  "Transition Risk";"Technology";New technology ;RCP8.5;2040;-14.4108;14.4108
+HPQ;3;  "Transition Risk";"Technology";New technology ;RCP8.5;2050;-16.9496;16.9496
+HPQ;3;  "Transition Risk";"Technology";New technology ;RCP8.5;2060;-24.9822;24.9822
+HPQ;3;  "Transition Risk";"Technology";New technology ;RCP8.5;2070;-31.4771;31.4771
+HPQ;3;  "Transition Risk";"Technology";New technology ;RCP8.5;2080;-40.9852;40.9852
+HPQ;3;  "Transition Risk";"Technology";New technology ;RCP8.5;2090;-46.6945;46.6945
+HPQ;3;  "Opportunity";"Energy Source";Renewable price stability ;RCP8.5;2010;-0.607275;0.607275
+HPQ;3;  "Opportunity";"Energy Source";Renewable price stability ;RCP8.5;2020;-1.76486;1.76486
+HPQ;3;  "Opportunity";"Energy Source";Renewable price stability ;RCP8.5;2030;-4.00075;4.00075
+HPQ;3;  "Opportunity";"Energy Source";Renewable price stability ;RCP8.5;2040;-6.17604;6.17604
+HPQ;3;  "Opportunity";"Energy Source";Renewable price stability ;RCP8.5;2050;-7.2641;7.2641
+HPQ;3;  "Opportunity";"Energy Source";Renewable price stability ;RCP8.5;2060;-10.7066;10.7066
+HPQ;3;  "Opportunity";"Energy Source";Renewable price stability ;RCP8.5;2070;-13.4902;13.4902
+HPQ;3;  "Opportunity";"Energy Source";Renewable price stability ;RCP8.5;2080;-17.5651;17.5651
+HPQ;3;  "Opportunity";"Energy Source";Renewable price stability ;RCP8.5;2090;-20.0119;20.0119
+HPQ;3;  "Transition Risk";"Market";Reputation damage ;RCP8.5;2010;-1.01212;1.01212
+HPQ;3;  "Transition Risk";"Market";Reputation damage ;RCP8.5;2020;-2.94144;2.94144
+HPQ;3;  "Transition Risk";"Market";Reputation damage ;RCP8.5;2030;-6.66791;6.66791
+HPQ;3;  "Transition Risk";"Market";Reputation damage ;RCP8.5;2040;-10.2934;10.2934
+HPQ;3;  "Transition Risk";"Market";Reputation damage ;RCP8.5;2050;-12.1068;12.1068
+HPQ;3;  "Transition Risk";"Market";Reputation damage ;RCP8.5;2060;-17.8444;17.8444
+HPQ;3;  "Transition Risk";"Market";Reputation damage ;RCP8.5;2070;-22.4836;22.4836
+HPQ;3;  "Transition Risk";"Market";Reputation damage ;RCP8.5;2080;-29.2752;29.2752
+HPQ;3;  "Transition Risk";"Market";Reputation damage ;RCP8.5;2090;-33.3532;33.3532
+HPQ;3;  "Physical Risk";"Acute";Storm damage ;RCP8.5;2010;-14.1698;14.1698
+HPQ;3;  "Physical Risk";"Acute";Storm damage ;RCP8.5;2020;-41.1801;41.1801
+HPQ;3;  "Physical Risk";"Acute";Storm damage ;RCP8.5;2030;-93.3507;93.3507
+HPQ;3;  "Physical Risk";"Acute";Storm damage ;RCP8.5;2040;-144.108;144.108
+HPQ;3;  "Physical Risk";"Acute";Storm damage ;RCP8.5;2050;-169.495;169.495
+HPQ;3;  "Physical Risk";"Acute";Storm damage ;RCP8.5;2060;-249.822;249.822
+HPQ;3;  "Physical Risk";"Acute";Storm damage ;RCP8.5;2070;-314.771;314.771
+HPQ;3;  "Physical Risk";"Acute";Storm damage ;RCP8.5;2080;-409.852;409.852
+HPQ;3;  "Physical Risk";"Acute";Storm damage ;RCP8.5;2090;-466.945;466.945
+HPQ;3;  "Physical Risk";"Chronic";Temperature extremes ;RCP8.5;2010;-20.2425;20.2425
+HPQ;3;  "Physical Risk";"Chronic";Temperature extremes ;RCP8.5;2020;-58.8287;58.8287
+HPQ;3;  "Physical Risk";"Chronic";Temperature extremes ;RCP8.5;2030;-133.358;133.358
+HPQ;3;  "Physical Risk";"Chronic";Temperature extremes ;RCP8.5;2040;-205.868;205.868
+HPQ;3;  "Physical Risk";"Chronic";Temperature extremes ;RCP8.5;2050;-242.137;242.137
+HPQ;3;  "Physical Risk";"Chronic";Temperature extremes ;RCP8.5;2060;-356.888;356.888
+HPQ;3;  "Physical Risk";"Chronic";Temperature extremes ;RCP8.5;2070;-449.673;449.673
+HPQ;3;  "Physical Risk";"Chronic";Temperature extremes ;RCP8.5;2080;-585.502;585.502
+HPQ;3;  "Physical Risk";"Chronic";Temperature extremes ;RCP8.5;2090;-667.064;667.064
+HPQ;3;  "Opportunity";"Resource Efficiency";Water Efficiency ;RCP8.5;2010;-3.64365;3.64365
+HPQ;3;  "Opportunity";"Resource Efficiency";Water Efficiency ;RCP8.5;2020;-10.5892;10.5892
+HPQ;3;  "Opportunity";"Resource Efficiency";Water Efficiency ;RCP8.5;2030;-24.0045;24.0045
+HPQ;3;  "Opportunity";"Resource Efficiency";Water Efficiency ;RCP8.5;2040;-37.0563;37.0563
+HPQ;3;  "Opportunity";"Resource Efficiency";Water Efficiency ;RCP8.5;2050;-43.5845;43.5845
+HPQ;3;  "Opportunity";"Resource Efficiency";Water Efficiency ;RCP8.5;2060;-64.2397;64.2397
+HPQ;3;  "Opportunity";"Resource Efficiency";Water Efficiency ;RCP8.5;2070;-80.941;80.941
+HPQ;3;  "Opportunity";"Resource Efficiency";Water Efficiency ;RCP8.5;2080;-105.39;105.39
+HPQ;3;  "Opportunity";"Resource Efficiency";Water Efficiency ;RCP8.5;2090;-120.072;120.072
+AXA;4;  "Transition Risk";"Policy and Legal";Carbon pricing ;RCP8.5;2010;-2.7093;2.7093
+AXA;4;  "Transition Risk";"Policy and Legal";Carbon pricing ;RCP8.5;2020;-17.1391;17.1391
+AXA;4;  "Transition Risk";"Policy and Legal";Carbon pricing ;RCP8.5;2030;-21.8438;21.8438
+AXA;4;  "Transition Risk";"Policy and Legal";Carbon pricing ;RCP8.5;2040;-21.9461;21.9461
+AXA;4;  "Transition Risk";"Policy and Legal";Carbon pricing ;RCP8.5;2050;-31.4468;31.4468
+AXA;4;  "Transition Risk";"Policy and Legal";Carbon pricing ;RCP8.5;2060;-31.4468;31.4468
+AXA;4;  "Transition Risk";"Policy and Legal";Carbon pricing ;RCP8.5;2070;-45.1572;45.1572
+AXA;4;  "Transition Risk";"Policy and Legal";Carbon pricing ;RCP8.5;2080;-63.2357;63.2357
+AXA;4;  "Transition Risk";"Policy and Legal";Carbon pricing ;RCP8.5;2090;-75.6074;75.6074
+AXA;4;  "Physical Risk";"Chronic";Coastal flooding ;RCP8.5;2010;0;0
+AXA;4;  "Physical Risk";"Chronic";Coastal flooding ;RCP8.5;2020;0;0
+AXA;4;  "Physical Risk";"Chronic";Coastal flooding ;RCP8.5;2030;-6.54992;6.54992
+AXA;4;  "Physical Risk";"Chronic";Coastal flooding ;RCP8.5;2040;-8;8
+AXA;4;  "Physical Risk";"Chronic";Coastal flooding ;RCP8.5;2050;-10.3109;10.3109
+AXA;4;  "Physical Risk";"Chronic";Coastal flooding ;RCP8.5;2060;-16;16
+AXA;4;  "Physical Risk";"Chronic";Coastal flooding ;RCP8.5;2070;-20.3298;20.3298
+AXA;4;  "Physical Risk";"Chronic";Coastal flooding ;RCP8.5;2080;-24;24
+AXA;4;  "Physical Risk";"Chronic";Coastal flooding ;RCP8.5;2090;-24;24
+AXA;4;  "Physical Risk";"Chronic";Drought ;RCP8.5;2010;-9;9
+AXA;4;  "Physical Risk";"Chronic";Drought ;RCP8.5;2020;-117;117
+AXA;4;  "Physical Risk";"Chronic";Drought ;RCP8.5;2030;-157.5;157.5
+AXA;4;  "Physical Risk";"Chronic";Drought ;RCP8.5;2040;-139.5;139.5
+AXA;4;  "Physical Risk";"Chronic";Drought ;RCP8.5;2050;-157.5;157.5
+AXA;4;  "Physical Risk";"Chronic";Drought ;RCP8.5;2060;-207;207
+AXA;4;  "Physical Risk";"Chronic";Drought ;RCP8.5;2070;-207;207
+AXA;4;  "Physical Risk";"Chronic";Drought ;RCP8.5;2080;-297;297
+AXA;4;  "Physical Risk";"Chronic";Drought ;RCP8.5;2090;0;0
+AXA;4;  "Physical Risk";"Acute";Employee impacts ;RCP8.5;2010;0;0
+AXA;4;  "Physical Risk";"Acute";Employee impacts ;RCP8.5;2020;-0.071388;0.071388
+AXA;4;  "Physical Risk";"Acute";Employee impacts ;RCP8.5;2030;-0.392454;0.392454
+AXA;4;  "Physical Risk";"Acute";Employee impacts ;RCP8.5;2040;-1.95037;1.95037
+AXA;4;  "Physical Risk";"Acute";Employee impacts ;RCP8.5;2050;-3.35291;3.35291
+AXA;4;  "Physical Risk";"Acute";Employee impacts ;RCP8.5;2060;-6.54179;6.54179
+AXA;4;  "Physical Risk";"Acute";Employee impacts ;RCP8.5;2070;-8.84916;8.84916
+AXA;4;  "Physical Risk";"Acute";Employee impacts ;RCP8.5;2080;-13.4449;13.4449
+AXA;4;  "Physical Risk";"Acute";Employee impacts ;RCP8.5;2090;-18.1995;18.1995
+AXA;4;  "Opportunity";"Resource Efficiency";Energy Efficiency ;RCP8.5;2010;0;0
+AXA;4;  "Opportunity";"Resource Efficiency";Energy Efficiency ;RCP8.5;2020;-0.190368;0.190368
+AXA;4;  "Opportunity";"Resource Efficiency";Energy Efficiency ;RCP8.5;2030;-1.04654;1.04654
+AXA;4;  "Opportunity";"Resource Efficiency";Energy Efficiency ;RCP8.5;2040;-5.20099;5.20099
+AXA;4;  "Opportunity";"Resource Efficiency";Energy Efficiency ;RCP8.5;2050;-8.9411;8.9411
+AXA;4;  "Opportunity";"Resource Efficiency";Energy Efficiency ;RCP8.5;2060;-17.4448;17.4448
+AXA;4;  "Opportunity";"Resource Efficiency";Energy Efficiency ;RCP8.5;2070;-23.5977;23.5977
+AXA;4;  "Opportunity";"Resource Efficiency";Energy Efficiency ;RCP8.5;2080;-35.8531;35.8531
+AXA;4;  "Opportunity";"Resource Efficiency";Energy Efficiency ;RCP8.5;2090;-48.5321;48.5321
+AXA;4;  "Opportunity";"Resilience";Energy resilience ;RCP8.5;2010;0;0
+AXA;4;  "Opportunity";"Resilience";Energy resilience ;RCP8.5;2020;-0.17847;0.17847
+AXA;4;  "Opportunity";"Resilience";Energy resilience ;RCP8.5;2030;-0.981135;0.981135
+AXA;4;  "Opportunity";"Resilience";Energy resilience ;RCP8.5;2040;-4.87593;4.87593
+AXA;4;  "Opportunity";"Resilience";Energy resilience ;RCP8.5;2050;-8.38228;8.38228
+AXA;4;  "Opportunity";"Resilience";Energy resilience ;RCP8.5;2060;-16.3545;16.3545
+AXA;4;  "Opportunity";"Resilience";Energy resilience ;RCP8.5;2070;-22.1229;22.1229
+AXA;4;  "Opportunity";"Resilience";Energy resilience ;RCP8.5;2080;-33.6123;33.6123
+AXA;4;  "Opportunity";"Resilience";Energy resilience ;RCP8.5;2090;-45.4988;45.4988
+AXA;4;  "Transition Risk";"Policy and Legal";Litigation risk ;RCP8.5;2010;0;0
+AXA;4;  "Transition Risk";"Policy and Legal";Litigation risk ;RCP8.5;2020;-0.095184;0.095184
+AXA;4;  "Transition Risk";"Policy and Legal";Litigation risk ;RCP8.5;2030;-0.523272;0.523272
+AXA;4;  "Transition Risk";"Policy and Legal";Litigation risk ;RCP8.5;2040;-2.6005;2.6005
+AXA;4;  "Transition Risk";"Policy and Legal";Litigation risk ;RCP8.5;2050;-4.47055;4.47055
+AXA;4;  "Transition Risk";"Policy and Legal";Litigation risk ;RCP8.5;2060;-8.7224;8.7224
+AXA;4;  "Transition Risk";"Policy and Legal";Litigation risk ;RCP8.5;2070;-11.7989;11.7989
+AXA;4;  "Transition Risk";"Policy and Legal";Litigation risk ;RCP8.5;2080;-17.9266;17.9266
+AXA;4;  "Transition Risk";"Policy and Legal";Litigation risk ;RCP8.5;2090;-24.266;24.266
+AXA;4;  "Opportunity";"Resource Efficiency";Materials Efficiency ;RCP8.5;2010;0;0
+AXA;4;  "Opportunity";"Resource Efficiency";Materials Efficiency ;RCP8.5;2020;-0.142776;0.142776
+AXA;4;  "Opportunity";"Resource Efficiency";Materials Efficiency ;RCP8.5;2030;-0.784908;0.784908
+AXA;4;  "Opportunity";"Resource Efficiency";Materials Efficiency ;RCP8.5;2040;-3.90074;3.90074
+AXA;4;  "Opportunity";"Resource Efficiency";Materials Efficiency ;RCP8.5;2050;-6.70583;6.70583
+AXA;4;  "Opportunity";"Resource Efficiency";Materials Efficiency ;RCP8.5;2060;-13.0836;13.0836
+AXA;4;  "Opportunity";"Resource Efficiency";Materials Efficiency ;RCP8.5;2070;-17.6983;17.6983
+AXA;4;  "Opportunity";"Resource Efficiency";Materials Efficiency ;RCP8.5;2080;-26.8899;26.8899
+AXA;4;  "Opportunity";"Resource Efficiency";Materials Efficiency ;RCP8.5;2090;-36.3991;36.3991
+AXA;4;  "Transition Risk";"Reputation";Materials cost ;RCP8.5;2010;0;0
+AXA;4;  "Transition Risk";"Reputation";Materials cost ;RCP8.5;2020;-0.11898;0.11898
+AXA;4;  "Transition Risk";"Reputation";Materials cost ;RCP8.5;2030;-0.65409;0.65409
+AXA;4;  "Transition Risk";"Reputation";Materials cost ;RCP8.5;2040;-3.25062;3.25062
+AXA;4;  "Transition Risk";"Reputation";Materials cost ;RCP8.5;2050;-5.58819;5.58819
+AXA;4;  "Transition Risk";"Reputation";Materials cost ;RCP8.5;2060;-10.903;10.903
+AXA;4;  "Transition Risk";"Reputation";Materials cost ;RCP8.5;2070;-14.7486;14.7486
+AXA;4;  "Transition Risk";"Reputation";Materials cost ;RCP8.5;2080;-22.4082;22.4082
+AXA;4;  "Transition Risk";"Reputation";Materials cost ;RCP8.5;2090;-30.3325;30.3325
+AXA;4;  "Transition Risk";"Technology";New technology ;RCP8.5;2010;0;0
+AXA;4;  "Transition Risk";"Technology";New technology ;RCP8.5;2020;-0.083286;0.083286
+AXA;4;  "Transition Risk";"Technology";New technology ;RCP8.5;2030;-0.457863;0.457863
+AXA;4;  "Transition Risk";"Technology";New technology ;RCP8.5;2040;-2.27543;2.27543
+AXA;4;  "Transition Risk";"Technology";New technology ;RCP8.5;2050;-3.91173;3.91173
+AXA;4;  "Transition Risk";"Technology";New technology ;RCP8.5;2060;-7.6321;7.6321
+AXA;4;  "Transition Risk";"Technology";New technology ;RCP8.5;2070;-10.324;10.324
+AXA;4;  "Transition Risk";"Technology";New technology ;RCP8.5;2080;-15.6857;15.6857
+AXA;4;  "Transition Risk";"Technology";New technology ;RCP8.5;2090;-21.2328;21.2328
+AXA;4;  "Opportunity";"Energy Source";Renewable price stability ;RCP8.5;2010;0;0
+AXA;4;  "Opportunity";"Energy Source";Renewable price stability ;RCP8.5;2020;-0.035694;0.035694
+AXA;4;  "Opportunity";"Energy Source";Renewable price stability ;RCP8.5;2030;-0.196227;0.196227
+AXA;4;  "Opportunity";"Energy Source";Renewable price stability ;RCP8.5;2040;-0.975186;0.975186
+AXA;4;  "Opportunity";"Energy Source";Renewable price stability ;RCP8.5;2050;-1.67646;1.67646
+AXA;4;  "Opportunity";"Energy Source";Renewable price stability ;RCP8.5;2060;-3.2709;3.2709
+AXA;4;  "Opportunity";"Energy Source";Renewable price stability ;RCP8.5;2070;-4.42458;4.42458
+AXA;4;  "Opportunity";"Energy Source";Renewable price stability ;RCP8.5;2080;-6.72246;6.72246
+AXA;4;  "Opportunity";"Energy Source";Renewable price stability ;RCP8.5;2090;-9.09976;9.09976
+AXA;4;  "Transition Risk";"Market";Reputation damage ;RCP8.5;2010;0;0
+AXA;4;  "Transition Risk";"Market";Reputation damage ;RCP8.5;2020;-0.05949;0.05949
+AXA;4;  "Transition Risk";"Market";Reputation damage ;RCP8.5;2030;-0.327045;0.327045
+AXA;4;  "Transition Risk";"Market";Reputation damage ;RCP8.5;2040;-1.62531;1.62531
+AXA;4;  "Transition Risk";"Market";Reputation damage ;RCP8.5;2050;-2.79409;2.79409
+AXA;4;  "Transition Risk";"Market";Reputation damage ;RCP8.5;2060;-5.4515;5.4515
+AXA;4;  "Transition Risk";"Market";Reputation damage ;RCP8.5;2070;-7.37429;7.37429
+AXA;4;  "Transition Risk";"Market";Reputation damage ;RCP8.5;2080;-11.2041;11.2041
+AXA;4;  "Transition Risk";"Market";Reputation damage ;RCP8.5;2090;-15.1663;15.1663
+AXA;4;  "Physical Risk";"Acute";Storm damage ;RCP8.5;2010;0;0
+AXA;4;  "Physical Risk";"Acute";Storm damage ;RCP8.5;2020;-0.83286;0.83286
+AXA;4;  "Physical Risk";"Acute";Storm damage ;RCP8.5;2030;-4.57863;4.57863
+AXA;4;  "Physical Risk";"Acute";Storm damage ;RCP8.5;2040;-22.7543;22.7543
+AXA;4;  "Physical Risk";"Acute";Storm damage ;RCP8.5;2050;-39.1173;39.1173
+AXA;4;  "Physical Risk";"Acute";Storm damage ;RCP8.5;2060;-76.321;76.321
+AXA;4;  "Physical Risk";"Acute";Storm damage ;RCP8.5;2070;-103.24;103.24
+AXA;4;  "Physical Risk";"Acute";Storm damage ;RCP8.5;2080;-156.857;156.857
+AXA;4;  "Physical Risk";"Acute";Storm damage ;RCP8.5;2090;-212.328;212.328
+AXA;4;  "Physical Risk";"Chronic";Temperature extremes ;RCP8.5;2010;0;0
+AXA;4;  "Physical Risk";"Chronic";Temperature extremes ;RCP8.5;2020;-1.1898;1.1898
+AXA;4;  "Physical Risk";"Chronic";Temperature extremes ;RCP8.5;2030;-6.5409;6.5409
+AXA;4;  "Physical Risk";"Chronic";Temperature extremes ;RCP8.5;2040;-32.5062;32.5062
+AXA;4;  "Physical Risk";"Chronic";Temperature extremes ;RCP8.5;2050;-55.8819;55.8819
+AXA;4;  "Physical Risk";"Chronic";Temperature extremes ;RCP8.5;2060;-109.03;109.03
+AXA;4;  "Physical Risk";"Chronic";Temperature extremes ;RCP8.5;2070;-147.486;147.486
+AXA;4;  "Physical Risk";"Chronic";Temperature extremes ;RCP8.5;2080;-224.082;224.082
+AXA;4;  "Physical Risk";"Chronic";Temperature extremes ;RCP8.5;2090;-303.326;303.326
+AXA;4;  "Opportunity";"Resource Efficiency";Water Efficiency ;RCP8.5;2010;0;0
+AXA;4;  "Opportunity";"Resource Efficiency";Water Efficiency ;RCP8.5;2020;-0.214164;0.214164
+AXA;4;  "Opportunity";"Resource Efficiency";Water Efficiency ;RCP8.5;2030;-1.17736;1.17736
+AXA;4;  "Opportunity";"Resource Efficiency";Water Efficiency ;RCP8.5;2040;-5.85112;5.85112
+AXA;4;  "Opportunity";"Resource Efficiency";Water Efficiency ;RCP8.5;2050;-10.0587;10.0587
+AXA;4;  "Opportunity";"Resource Efficiency";Water Efficiency ;RCP8.5;2060;-19.6254;19.6254
+AXA;4;  "Opportunity";"Resource Efficiency";Water Efficiency ;RCP8.5;2070;-26.5475;26.5475
+AXA;4;  "Opportunity";"Resource Efficiency";Water Efficiency ;RCP8.5;2080;-40.3348;40.3348
+AXA;4;  "Opportunity";"Resource Efficiency";Water Efficiency ;RCP8.5;2090;-54.5986;54.5986

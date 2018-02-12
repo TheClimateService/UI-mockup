@@ -1,0 +1,4 @@
+sed 's/cat(1)/"Transition Risk"/' temp16.1 > temp16.2
+sed 's/cat(2)/"Physical Risk"/' temp16.2 > temp16.3
+sed 's/cat(3)/"Opportunity"/' temp16.3 > temp16.4
+cp temp16.4 temp16.out

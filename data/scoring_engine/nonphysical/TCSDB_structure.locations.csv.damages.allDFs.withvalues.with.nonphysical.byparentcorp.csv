@@ -404,3 +404,138 @@ HPQ,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2060,64.2397,3
 HPQ,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2070,80.941,3
 HPQ,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2080,105.39,3
 HPQ,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2090,120.072,3
+AXA,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2010,2.7093,4
+AXA,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2020,17.1391,4
+AXA,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2030,21.8438,4
+AXA,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2040,21.9461,4
+AXA,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2050,31.4468,4
+AXA,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2060,31.4468,4
+AXA,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2070,45.1572,4
+AXA,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2080,63.2357,4
+AXA,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2090,75.6074,4
+AXA,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2010,0,4
+AXA,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2020,0,4
+AXA,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2030,6.54992,4
+AXA,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2040,8,4
+AXA,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2050,10.3109,4
+AXA,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2060,16,4
+AXA,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2070,20.3298,4
+AXA,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2080,24,4
+AXA,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2090,24,4
+AXA,  Physical Risk,Chronic,Drought ,RCP8.5,2010,9,4
+AXA,  Physical Risk,Chronic,Drought ,RCP8.5,2020,117,4
+AXA,  Physical Risk,Chronic,Drought ,RCP8.5,2030,157.5,4
+AXA,  Physical Risk,Chronic,Drought ,RCP8.5,2040,139.5,4
+AXA,  Physical Risk,Chronic,Drought ,RCP8.5,2050,157.5,4
+AXA,  Physical Risk,Chronic,Drought ,RCP8.5,2060,207,4
+AXA,  Physical Risk,Chronic,Drought ,RCP8.5,2070,207,4
+AXA,  Physical Risk,Chronic,Drought ,RCP8.5,2080,297,4
+AXA,  Physical Risk,Chronic,Drought ,RCP8.5,2090,0,4
+AXA,  Physical Risk,Acute,Employee impacts ,RCP8.5,2010,0,4
+AXA,  Physical Risk,Acute,Employee impacts ,RCP8.5,2020,0.071388,4
+AXA,  Physical Risk,Acute,Employee impacts ,RCP8.5,2030,0.392454,4
+AXA,  Physical Risk,Acute,Employee impacts ,RCP8.5,2040,1.95037,4
+AXA,  Physical Risk,Acute,Employee impacts ,RCP8.5,2050,3.35291,4
+AXA,  Physical Risk,Acute,Employee impacts ,RCP8.5,2060,6.54179,4
+AXA,  Physical Risk,Acute,Employee impacts ,RCP8.5,2070,8.84916,4
+AXA,  Physical Risk,Acute,Employee impacts ,RCP8.5,2080,13.4449,4
+AXA,  Physical Risk,Acute,Employee impacts ,RCP8.5,2090,18.1995,4
+AXA,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2010,0,4
+AXA,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2020,0.190368,4
+AXA,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2030,1.04654,4
+AXA,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2040,5.20099,4
+AXA,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2050,8.9411,4
+AXA,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2060,17.4448,4
+AXA,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2070,23.5977,4
+AXA,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2080,35.8531,4
+AXA,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2090,48.5321,4
+AXA,  Opportunity,Resilience,Energy resilience ,RCP8.5,2010,0,4
+AXA,  Opportunity,Resilience,Energy resilience ,RCP8.5,2020,0.17847,4
+AXA,  Opportunity,Resilience,Energy resilience ,RCP8.5,2030,0.981135,4
+AXA,  Opportunity,Resilience,Energy resilience ,RCP8.5,2040,4.87593,4
+AXA,  Opportunity,Resilience,Energy resilience ,RCP8.5,2050,8.38228,4
+AXA,  Opportunity,Resilience,Energy resilience ,RCP8.5,2060,16.3545,4
+AXA,  Opportunity,Resilience,Energy resilience ,RCP8.5,2070,22.1229,4
+AXA,  Opportunity,Resilience,Energy resilience ,RCP8.5,2080,33.6123,4
+AXA,  Opportunity,Resilience,Energy resilience ,RCP8.5,2090,45.4988,4
+AXA,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2010,0,4
+AXA,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2020,0.095184,4
+AXA,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2030,0.523272,4
+AXA,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2040,2.6005,4
+AXA,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2050,4.47055,4
+AXA,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2060,8.7224,4
+AXA,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2070,11.7989,4
+AXA,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2080,17.9266,4
+AXA,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2090,24.266,4
+AXA,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2010,0,4
+AXA,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2020,0.142776,4
+AXA,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2030,0.784908,4
+AXA,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2040,3.90074,4
+AXA,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2050,6.70583,4
+AXA,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2060,13.0836,4
+AXA,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2070,17.6983,4
+AXA,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2080,26.8899,4
+AXA,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2090,36.3991,4
+AXA,  Transition Risk,Reputation,Materials cost ,RCP8.5,2010,0,4
+AXA,  Transition Risk,Reputation,Materials cost ,RCP8.5,2020,0.11898,4
+AXA,  Transition Risk,Reputation,Materials cost ,RCP8.5,2030,0.65409,4
+AXA,  Transition Risk,Reputation,Materials cost ,RCP8.5,2040,3.25062,4
+AXA,  Transition Risk,Reputation,Materials cost ,RCP8.5,2050,5.58819,4
+AXA,  Transition Risk,Reputation,Materials cost ,RCP8.5,2060,10.903,4
+AXA,  Transition Risk,Reputation,Materials cost ,RCP8.5,2070,14.7486,4
+AXA,  Transition Risk,Reputation,Materials cost ,RCP8.5,2080,22.4082,4
+AXA,  Transition Risk,Reputation,Materials cost ,RCP8.5,2090,30.3325,4
+AXA,  Transition Risk,Technology,New technology ,RCP8.5,2010,0,4
+AXA,  Transition Risk,Technology,New technology ,RCP8.5,2020,0.083286,4
+AXA,  Transition Risk,Technology,New technology ,RCP8.5,2030,0.457863,4
+AXA,  Transition Risk,Technology,New technology ,RCP8.5,2040,2.27543,4
+AXA,  Transition Risk,Technology,New technology ,RCP8.5,2050,3.91173,4
+AXA,  Transition Risk,Technology,New technology ,RCP8.5,2060,7.6321,4
+AXA,  Transition Risk,Technology,New technology ,RCP8.5,2070,10.324,4
+AXA,  Transition Risk,Technology,New technology ,RCP8.5,2080,15.6857,4
+AXA,  Transition Risk,Technology,New technology ,RCP8.5,2090,21.2328,4
+AXA,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2010,0,4
+AXA,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2020,0.035694,4
+AXA,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2030,0.196227,4
+AXA,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2040,0.975186,4
+AXA,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2050,1.67646,4
+AXA,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2060,3.2709,4
+AXA,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2070,4.42458,4
+AXA,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2080,6.72246,4
+AXA,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2090,9.09976,4
+AXA,  Transition Risk,Market,Reputation damage ,RCP8.5,2010,0,4
+AXA,  Transition Risk,Market,Reputation damage ,RCP8.5,2020,0.05949,4
+AXA,  Transition Risk,Market,Reputation damage ,RCP8.5,2030,0.327045,4
+AXA,  Transition Risk,Market,Reputation damage ,RCP8.5,2040,1.62531,4
+AXA,  Transition Risk,Market,Reputation damage ,RCP8.5,2050,2.79409,4
+AXA,  Transition Risk,Market,Reputation damage ,RCP8.5,2060,5.4515,4
+AXA,  Transition Risk,Market,Reputation damage ,RCP8.5,2070,7.37429,4
+AXA,  Transition Risk,Market,Reputation damage ,RCP8.5,2080,11.2041,4
+AXA,  Transition Risk,Market,Reputation damage ,RCP8.5,2090,15.1663,4
+AXA,  Physical Risk,Acute,Storm damage ,RCP8.5,2010,0,4
+AXA,  Physical Risk,Acute,Storm damage ,RCP8.5,2020,0.83286,4
+AXA,  Physical Risk,Acute,Storm damage ,RCP8.5,2030,4.57863,4
+AXA,  Physical Risk,Acute,Storm damage ,RCP8.5,2040,22.7543,4
+AXA,  Physical Risk,Acute,Storm damage ,RCP8.5,2050,39.1173,4
+AXA,  Physical Risk,Acute,Storm damage ,RCP8.5,2060,76.321,4
+AXA,  Physical Risk,Acute,Storm damage ,RCP8.5,2070,103.24,4
+AXA,  Physical Risk,Acute,Storm damage ,RCP8.5,2080,156.857,4
+AXA,  Physical Risk,Acute,Storm damage ,RCP8.5,2090,212.328,4
+AXA,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2010,0,4
+AXA,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2020,1.1898,4
+AXA,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2030,6.5409,4
+AXA,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2040,32.5062,4
+AXA,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2050,55.8819,4
+AXA,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2060,109.03,4
+AXA,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2070,147.486,4
+AXA,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2080,224.082,4
+AXA,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2090,303.326,4
+AXA,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2010,0,4
+AXA,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2020,0.214164,4
+AXA,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2030,1.17736,4
+AXA,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2040,5.85112,4
+AXA,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2050,10.0587,4
+AXA,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2060,19.6254,4
+AXA,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2070,26.5475,4
+AXA,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2080,40.3348,4
+AXA,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2090,54.5986,4

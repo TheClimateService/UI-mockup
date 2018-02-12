@@ -4,6 +4,7 @@ ParentCorpID_allfacilities - - - - - - - df_used dperiod1 dperiod2 dperiod3 dper
 1_all_8_facilities - - - - - - - z--allthisco--z  -13.9346 -20.4781 -35.25 -52.2354 -66.0683 -78.3801 -103.517 -136.695 -152.294
 2_all_22_facilities - - - - - - - z--allthisco--z  -34.963 -15.581 -27.0277 -61.2054 -63.6645 -71.348 -97.4018 -120.223 -136.867
 3_all_15_facilities - - - - - - - z--allthisco--z  -15.8125 -30.5029 -44.6226 -50.3422 -70.1319 -86.0472 -115.03 -131.854 -154.872
+4_all_11_facilities - - - - - - - z--allthisco--z  -3.37209 -27.5073 -37.106 -37.9061 -50.7489 -61.2271 -77.679 -110.585 -99.0363
 ----------------------------------------------------------------------
 LocationID_ParentCorpID_LocationName lon lat location df_tx90p df_pdsisc df_coastalflood df_carbonprice df_tbd2 df_tbd3 notes	df_used dperiod1 dperiod2 dperiod3 dperiod4 dperiod5 dperiod6 dperiod7 dperiod8 dperiod9
 ----------------------------------------------------------------------
@@ -232,3 +233,58 @@ LocationID_ParentCorpID_LocationName lon lat location df_tx90p df_pdsisc df_coas
 45_3_San_Diego -117.2904943 32.9066098 San_Diego_CA tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	pdsisc-1  -10 -5 0 0 0 -10 -30 -20 -20
 45_3_San_Diego -117.2904943 32.9066098 San_Diego_CA tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	tx90p-1  0 0 -6.7293 -10.7045 -6.9112 -17.2461 -25.7291 -37.9739 -45.247
 45_3_San_Diego -117.2904943 32.9066098 San_Diego_CA tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	z--allDFs--z  -12.463 -20.581 -26.5873 -30.6555 -35.4992 -55.8341 -96.7811 -115.461 -133.981
+46_4_Indooroopilly_Shopping_Centre 152.9704551 -27.4996058 Indooroopilly_QLD tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	carbonprice-1  -2.463 -15.581 -19.858 -19.951 -28.588 -28.588 -41.052 -57.487 -68.734
+46_4_Indooroopilly_Shopping_Centre 152.9704551 -27.4996058 Indooroopilly_QLD tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	coastalflood-1  NA NA NA NA NA NA NA NA NA
+46_4_Indooroopilly_Shopping_Centre 152.9704551 -27.4996058 Indooroopilly_QLD tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	pdsisc-1  0 0 0 0 0 0 0 0 100
+46_4_Indooroopilly_Shopping_Centre 152.9704551 -27.4996058 Indooroopilly_QLD tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	tx90p-1  0 0 0 -3.7695 -3.9214 -8.1363 -9.0319 -15.9082 -25.3695
+46_4_Indooroopilly_Shopping_Centre 152.9704551 -27.4996058 Indooroopilly_QLD tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	z--allDFs--z  -2.463 -15.581 -19.858 -23.7205 -32.5094 -36.7243 -50.0839 -73.3952 5.8965
+47_4_Pacific_Fair 153.4258423 -28.036514 Broadbeach_QLD tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	carbonprice-1  -2.463 -15.581 -19.858 -19.951 -28.588 -28.588 -41.052 -57.487 -68.734
+47_4_Pacific_Fair 153.4258423 -28.036514 Broadbeach_QLD tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	coastalflood-1  0 0 -8.1874 -10 -10 -10 -10 -10 -10
+47_4_Pacific_Fair 153.4258423 -28.036514 Broadbeach_QLD tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	pdsisc-1  0 -20 0 -20 0 -10 -30 -50 -30
+47_4_Pacific_Fair 153.4258423 -28.036514 Broadbeach_QLD tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	tx90p-1  0 0 0 -6.1101 -9.3298 -21.9555 -27.392 -37.8114 -46.3407
+47_4_Pacific_Fair 153.4258423 -28.036514 Broadbeach_QLD tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	z--allDFs--z  -2.463 -35.581 -28.0454 -56.0611 -47.9178 -70.5435 -108.444 -155.298 -155.075
+48_4_Stanley_Plaza 153.0207033 -27.4786392 South_Brisbane_QLD tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	carbonprice-1  -2.463 -15.581 -19.858 -19.951 -28.588 -28.588 -41.052 -57.487 -68.734
+48_4_Stanley_Plaza 153.0207033 -27.4786392 South_Brisbane_QLD tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	coastalflood-1  NA NA NA NA NA NA NA NA NA
+48_4_Stanley_Plaza 153.0207033 -27.4786392 South_Brisbane_QLD tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	pdsisc-1  0 0 0 0 0 0 0 0 100
+48_4_Stanley_Plaza 153.0207033 -27.4786392 South_Brisbane_QLD tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	tx90p-1  0 0 0 -3.7695 -3.9214 -8.1363 -9.0319 -15.9082 -25.3695
+48_4_Stanley_Plaza 153.0207033 -27.4786392 South_Brisbane_QLD tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	z--allDFs--z  -2.463 -15.581 -19.858 -23.7205 -32.5094 -36.7243 -50.0839 -73.3952 5.8965
+49_4_Coronation_Drive_Office_Park 153.0067519 -27.4695483 Milton_QLD tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	carbonprice-1  -2.463 -15.581 -19.858 -19.951 -28.588 -28.588 -41.052 -57.487 -68.734
+49_4_Coronation_Drive_Office_Park 153.0067519 -27.4695483 Milton_QLD tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	coastalflood-1  NA NA NA NA NA NA NA NA NA
+49_4_Coronation_Drive_Office_Park 153.0067519 -27.4695483 Milton_QLD tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	pdsisc-1  0 0 0 0 0 0 0 0 100
+49_4_Coronation_Drive_Office_Park 153.0067519 -27.4695483 Milton_QLD tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	tx90p-1  0 0 0 -3.7695 -3.9214 -8.1363 -9.0319 -15.9082 -25.3695
+49_4_Coronation_Drive_Office_Park 153.0067519 -27.4695483 Milton_QLD tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	z--allDFs--z  -2.463 -15.581 -19.858 -23.7205 -32.5094 -36.7243 -50.0839 -73.3952 5.8965
+50_4_Macquarie_Centre 151.1183266 -33.7767473 North_Ryde_NSW tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	carbonprice-1  -2.463 -15.581 -19.858 -19.951 -28.588 -28.588 -41.052 -57.487 -68.734
+50_4_Macquarie_Centre 151.1183266 -33.7767473 North_Ryde_NSW tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	coastalflood-1  NA NA NA NA NA NA NA NA NA
+50_4_Macquarie_Centre 151.1183266 -33.7767473 North_Ryde_NSW tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	pdsisc-1  0 0 0 0 0 0 -5 -20 0
+50_4_Macquarie_Centre 151.1183266 -33.7767473 North_Ryde_NSW tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	tx90p-1  0 0 0 -1.622 -0.3501 -4.7271 -6.4695 -8.1351 -12.4433
+50_4_Macquarie_Centre 151.1183266 -33.7767473 North_Ryde_NSW tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	z--allDFs--z  -2.463 -15.581 -19.858 -21.573 -28.9381 -33.3151 -52.5215 -85.6221 -81.1773
+51_4_AMP_Building 151.2099354 -33.8625739 Sydney tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	carbonprice-1  -2.463 -15.581 -19.858 -19.951 -28.588 -28.588 -41.052 -57.487 -68.734
+51_4_AMP_Building 151.2099354 -33.8625739 Sydney tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	coastalflood-1  NA NA NA NA NA NA NA NA NA
+51_4_AMP_Building 151.2099354 -33.8625739 Sydney tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	pdsisc-1  0 0 0 0 0 0 -5 -20 0
+51_4_AMP_Building 151.2099354 -33.8625739 Sydney tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	tx90p-1  0 0 -1.2682 -4.8526 -5.8804 -14.6187 -18.6836 -27.135 -36.3465
+51_4_AMP_Building 151.2099354 -33.8625739 Sydney tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	z--allDFs--z  -2.463 -15.581 -21.1262 -24.8036 -34.4684 -43.2067 -64.7356 -104.622 -105.081
+52_4_NAB_Headquarters 144.9472084 -37.817371 Melbourne tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	carbonprice-1  -2.463 -15.581 -19.858 -19.951 -28.588 -28.588 -41.052 -57.487 -68.734
+52_4_NAB_Headquarters 144.9472084 -37.817371 Melbourne tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	coastalflood-1  0 0 0 0 -2.8886 -10 -10 -10 -10
+52_4_NAB_Headquarters 144.9472084 -37.817371 Melbourne tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	pdsisc-1  0 -30 -40 -5 -5 -30 -30 -40 -40
+52_4_NAB_Headquarters 144.9472084 -37.817371 Melbourne tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	tx90p-1  0 0 0 0 0 -2.3185 -5.0474 -5.1799 -8.7015
+52_4_NAB_Headquarters 144.9472084 -37.817371 Melbourne tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	z--allDFs--z  -2.463 -45.581 -59.858 -24.951 -36.4766 -70.9065 -86.0994 -112.667 -127.435
+53_4_Malvern_Central 145.0249768 -37.8628425 Armadale_VIC tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	carbonprice-1  -2.463 -15.581 -19.858 -19.951 -28.588 -28.588 -41.052 -57.487 -68.734
+53_4_Malvern_Central 145.0249768 -37.8628425 Armadale_VIC tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	coastalflood-1  NA NA NA NA NA NA NA NA NA
+53_4_Malvern_Central 145.0249768 -37.8628425 Armadale_VIC tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	pdsisc-1  0 0 -5 0 0 -20 -20 -50 -50
+53_4_Malvern_Central 145.0249768 -37.8628425 Armadale_VIC tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	tx90p-1  0 0 0 0 0 -2.3185 -5.0474 -5.1799 -8.7015
+53_4_Malvern_Central 145.0249768 -37.8628425 Armadale_VIC tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	z--allDFs--z  -2.463 -15.581 -24.858 -19.951 -28.588 -50.9065 -66.0994 -112.667 -127.435
+54_4_Exchange_Tower 115.8564435 -31.956254 Perth_WA tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	carbonprice-1  -2.463 -15.581 -19.858 -19.951 -28.588 -28.588 -41.052 -57.487 -68.734
+54_4_Exchange_Tower 115.8564435 -31.956254 Perth_WA tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	coastalflood-1  NA NA NA NA NA NA NA NA NA
+54_4_Exchange_Tower 115.8564435 -31.956254 Perth_WA tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	pdsisc-1  -5 -40 -60 -60 -70 -70 -60 -70 -70
+54_4_Exchange_Tower 115.8564435 -31.956254 Perth_WA tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	tx90p-1  0 -0.5949 -1.5842 -3.0031 -6.7982 -10.2941 -16.9033 -26.8553 -34.2124
+54_4_Exchange_Tower 115.8564435 -31.956254 Perth_WA tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	z--allDFs--z  -7.463 -56.1759 -81.4422 -82.9541 -105.386 -108.882 -117.955 -154.342 -172.946
+55_4_Garden_City 115.8337414 -32.0339551 Booragoon_WA tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	carbonprice-1  -2.463 -15.581 -19.858 -19.951 -28.588 -28.588 -41.052 -57.487 -68.734
+55_4_Garden_City 115.8337414 -32.0339551 Booragoon_WA tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	coastalflood-1  NA NA NA NA NA NA NA NA NA
+55_4_Garden_City 115.8337414 -32.0339551 Booragoon_WA tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	pdsisc-1  -5 -40 -60 -60 -70 -70 -60 -70 -70
+55_4_Garden_City 115.8337414 -32.0339551 Booragoon_WA tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	tx90p-1  0 -0.5949 -1.5842 -3.0031 -6.7982 -10.2941 -16.9033 -26.8553 -34.2124
+55_4_Garden_City 115.8337414 -32.0339551 Booragoon_WA tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	z--allDFs--z  -7.463 -56.1759 -81.4422 -82.9541 -105.386 -108.882 -117.955 -154.342 -172.946
+56_4_The_Palms_NZ 172.6626893 -43.5074711 Christchurch_NZ tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	carbonprice-1  -2.463 -15.581 -19.858 -19.951 -28.588 -28.588 -41.052 -57.487 -68.734
+56_4_The_Palms_NZ 172.6626893 -43.5074711 Christchurch_NZ tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	coastalflood-1  0 0 0 0 0 0 -5.4122 -10 -10
+56_4_The_Palms_NZ 172.6626893 -43.5074711 Christchurch_NZ tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	pdsisc-1  0 0 -10 -10 -30 -30 -20 -10 -40
+56_4_The_Palms_NZ 172.6626893 -43.5074711 Christchurch_NZ tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	tx90p-1  0 0 -2.1043 -2.6068 -14.961 -18.0945 -23.9437 -39.2057 -46.2587
+56_4_The_Palms_NZ 172.6626893 -43.5074711 Christchurch_NZ tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	z--allDFs--z  -2.463 -15.581 -31.9623 -32.5578 -73.549 -76.6825 -90.4079 -116.693 -164.993
