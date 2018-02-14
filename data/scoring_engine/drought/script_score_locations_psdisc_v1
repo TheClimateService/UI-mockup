@@ -31,7 +31,8 @@ paste temp10 $locvalues > temp11
 
 # Apply the damage functions.
 # Note that the historical value of pdsisc annual probability is in a specific column that depends on the format of the facilities.pdsisc file, including the number of historical periods defined (currently 1).  Additionally, 3 fields from the df file are prepended in the paste above, so the input to this step has the form:
-# pdsisc-1 0;0.2;0.4;0.6;0.8;1;5;10 100;100;90;70;50;30;20;10	Micron_Boise -116.149136 43.529396	25 41	-116.25 43.75 0.1 0.2 0.3 0.7 0.6 0.8 0.9 0.8 0.7
+# OLD: pdsisc-1 0;0.2;0.4;0.6;0.8;1;5;10 100;100;90;70;50;30;20;10	Micron_Boise -116.149136 43.529396	25 41	-116.25 43.75 0.1 0.2 0.3 0.7 0.6 0.8 0.9 0.8 0.7
+# CURRENT: pdsisc-2 0;0.1;0.2;0.4;0.6;0.8;1;5;10 100;100;90;70;50;30;10;0; 1_1_Boise -116.149136 43.529396 25 41   -116.25 43.75 0.1 0.6 0.2 0.3 0.7 0.6 0.8 0.9 0.8 0.7
 awk '{xhist=$11; startxrcp=12; yrcpall=""; xrcpindall="";  \
       for(i=startxrcp; i<=NF; i++) {xrcp[i]=$i; xrcpindex[i]=999; yrcp[i]=999};  \
       split($2,xarray,";"); xlen=length(xarray);  \

@@ -1,10 +1,10 @@
 ----------------------------------------------------------------------
 ParentCorpID_allfacilities - - - - - - - df_used dperiod1 dperiod2 dperiod3 dperiod4 dperiod5 dperiod6 dperiod7 dperiod8 dperiod9
 ----------------------------------------------------------------------
-1_all_8_facilities - - - - - - - z--allthisco--z  -13.9346 -20.4781 -35.25 -52.2354 -66.0683 -78.3801 -103.517 -136.695 -152.294
+1_all_8_facilities - - - - - - - z--allthisco--z  -14.2955 -21.6542 -40.2209 -58.8526 -74.6909 -95.1884 -133.331 -164.195 -179.794
 2_all_22_facilities - - - - - - - z--allthisco--z  -34.963 -15.581 -27.0277 -61.2054 -63.6645 -71.348 -97.4018 -120.223 -136.867
-3_all_15_facilities - - - - - - - z--allthisco--z  -15.8125 -30.5029 -44.6226 -50.3422 -70.1319 -86.0472 -115.03 -131.854 -154.872
-4_all_11_facilities - - - - - - - z--allthisco--z  -3.37209 -27.5073 -37.106 -37.9061 -50.7489 -61.2271 -77.679 -110.585 -99.0363
+3_all_15_facilities - - - - - - - z--allthisco--z  -15.9485 -31.4951 -51.1486 -57.7602 -80.2001 -96.0471 -125.03 -141.854 -164.872
+4_all_11_facilities - - - - - - - z--allthisco--z  -3.57304 -28.519 -42.7491 -46.3838 -60.5365 -72.4634 -96.4278 -133.313 -143.582
 ----------------------------------------------------------------------
 LocationID_ParentCorpID_LocationName lon lat location df_tx90p df_pdsisc df_coastalflood df_carbonprice df_tbd2 df_tbd3 notes	df_used dperiod1 dperiod2 dperiod3 dperiod4 dperiod5 dperiod6 dperiod7 dperiod8 dperiod9
 ----------------------------------------------------------------------
@@ -24,25 +24,25 @@ LocationID_ParentCorpID_LocationName lon lat location df_tx90p df_pdsisc df_coas
 3_1_Singapore_Hqs 103.864621 1.31839 Singapore tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	tx90p-1  -3.3892 -3.0422 -11.6682 -21.4371 -33.827 -40.6232 -41.0293 -55.6943 -65.9187
 3_1_Singapore_Hqs 103.864621 1.31839 Singapore tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	z--allDFs--z  -5.8522 -18.6232 -31.5262 -41.3881 -62.415 -69.2112 -82.0813 -113.181 -134.653
 4_1_Singapore_300mm_DRAM 103.767569 1.432186 Singapore tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	carbonprice-1  -2.463 -15.581 -19.858 -19.951 -28.588 -28.588 -41.052 -57.487 -68.734
-4_1_Singapore_300mm_DRAM 103.767569 1.432186 Singapore tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	coastalflood-1  0 0 0 0 0 -0.4348 -15.8149 -30 -30
+4_1_Singapore_300mm_DRAM 103.767569 1.432186 Singapore tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	coastalflood-1  -0.3439 -0.8721 -1.9636 -4.2932 -9.6051 -31.7392 -81.6298 -90 -90
 4_1_Singapore_300mm_DRAM 103.767569 1.432186 Singapore tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	pdsisc-1  0 0 0 0 0 0 0 0 0
 4_1_Singapore_300mm_DRAM 103.767569 1.432186 Singapore tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	tx90p-1  -3.3892 -3.0422 -11.6682 -21.4371 -33.827 -40.6232 -41.0293 -55.6943 -65.9187
-4_1_Singapore_300mm_DRAM 103.767569 1.432186 Singapore tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	z--allDFs--z  -5.8522 -18.6232 -31.5262 -41.3881 -62.415 -69.646 -97.8962 -143.181 -164.653
+4_1_Singapore_300mm_DRAM 103.767569 1.432186 Singapore tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	z--allDFs--z  -6.1961 -19.4953 -33.4898 -45.6813 -72.0201 -100.95 -163.711 -203.181 -224.653
 5_1_Singapore_300mm_NAND 103.793645 1.454831 Singapore tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	carbonprice-1  -2.463 -15.581 -19.858 -19.951 -28.588 -28.588 -41.052 -57.487 -68.734
-5_1_Singapore_300mm_NAND 103.793645 1.454831 Singapore tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	coastalflood-1  0 0 0 0 0 -0.4348 -15.8149 -30 -30
+5_1_Singapore_300mm_NAND 103.793645 1.454831 Singapore tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	coastalflood-1  -0.3439 -0.8721 -1.9636 -4.2932 -9.6051 -31.7392 -81.6298 -90 -90
 5_1_Singapore_300mm_NAND 103.793645 1.454831 Singapore tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	pdsisc-1  0 0 0 0 0 0 0 0 0
 5_1_Singapore_300mm_NAND 103.793645 1.454831 Singapore tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	tx90p-1  -3.3892 -3.0422 -11.6682 -21.4371 -33.827 -40.6232 -41.0293 -55.6943 -65.9187
-5_1_Singapore_300mm_NAND 103.793645 1.454831 Singapore tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	z--allDFs--z  -5.8522 -18.6232 -31.5262 -41.3881 -62.415 -69.646 -97.8962 -143.181 -164.653
+5_1_Singapore_300mm_NAND 103.793645 1.454831 Singapore tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	z--allDFs--z  -6.1961 -19.4953 -33.4898 -45.6813 -72.0201 -100.95 -163.711 -203.181 -224.653
 6_1_Singapore_200mm_NOR 103.866405 1.37479 Singapore tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	carbonprice-1  -2.463 -15.581 -19.858 -19.951 -28.588 -28.588 -41.052 -57.487 -68.734
-6_1_Singapore_200mm_NOR 103.866405 1.37479 Singapore tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	coastalflood-1  0 0 0 0 0 -0.6194 -16.8781 -30 -30
+6_1_Singapore_200mm_NOR 103.866405 1.37479 Singapore tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	coastalflood-1  -0.3466 -0.88 -1.9851 -4.3511 -9.7711 -32.4775 -83.7563 -90 -90
 6_1_Singapore_200mm_NOR 103.866405 1.37479 Singapore tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	pdsisc-1  0 0 0 0 0 0 0 0 0
 6_1_Singapore_200mm_NOR 103.866405 1.37479 Singapore tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	tx90p-1  -3.3892 -3.0422 -11.6682 -21.4371 -33.827 -40.6232 -41.0293 -55.6943 -65.9187
-6_1_Singapore_200mm_NOR 103.866405 1.37479 Singapore tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	z--allDFs--z  -5.8522 -18.6232 -31.5262 -41.3881 -62.415 -69.8306 -98.9594 -143.181 -164.653
+6_1_Singapore_200mm_NOR 103.866405 1.37479 Singapore tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	z--allDFs--z  -6.1988 -19.5032 -33.5113 -45.7392 -72.1861 -101.689 -165.838 -203.181 -224.653
 7_1_Catania 14.99 37.421801 Catania_Italy tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - XXX_original_lon=15.056097_moved_west_4landpoint	carbonprice-1  -2.463 -15.581 -19.858 -19.951 -28.588 -28.588 -41.052 -57.487 -68.734
-7_1_Catania 14.99 37.421801 Catania_Italy tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - XXX_original_lon=15.056097_moved_west_4landpoint	coastalflood-1  0 0 -1.285 -10 -10 -10 -10 -10 -10
+7_1_Catania 14.99 37.421801 Catania_Italy tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - XXX_original_lon=15.056097_moved_west_4landpoint	coastalflood-1  -1.8526 -6.7846 -35.1399 -50 -50 -50 -50 -50 -50
 7_1_Catania 14.99 37.421801 Catania_Italy tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - XXX_original_lon=15.056097_moved_west_4landpoint	pdsisc-1  -10 -10 0 -50 -40 -60 -70 -70 -70
 7_1_Catania 14.99 37.421801 Catania_Italy tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - XXX_original_lon=15.056097_moved_west_4landpoint	tx90p-1  -0.172 -2.4394 -6.7439 -6.1781 -18.5492 -25.5408 -35.1947 -43.9963 -55.4964
-7_1_Catania 14.99 37.421801 Catania_Italy tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - XXX_original_lon=15.056097_moved_west_4landpoint	z--allDFs--z  -12.635 -28.0204 -27.8869 -86.1291 -97.1372 -124.129 -156.247 -181.483 -204.23
+7_1_Catania 14.99 37.421801 Catania_Italy tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - XXX_original_lon=15.056097_moved_west_4landpoint	z--allDFs--z  -14.4876 -34.805 -61.7418 -126.129 -137.137 -164.129 -196.247 -221.483 -244.23
 8_1_Bangalore 77.623906 12.982352 Bangalore_India tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	carbonprice-1  -2.463 -15.581 -19.858 -19.951 -28.588 -28.588 -41.052 -57.487 -68.734
 8_1_Bangalore 77.623906 12.982352 Bangalore_India tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	coastalflood-1  NA NA NA NA NA NA NA NA NA
 8_1_Bangalore 77.623906 12.982352 Bangalore_India tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	pdsisc-1  -10 0 -10 0 0 0 0 0 0
@@ -184,10 +184,10 @@ LocationID_ParentCorpID_LocationName lon lat location df_tx90p df_pdsisc df_coas
 35_3_Houston -95.8236304 29.8128657 Houston_TX tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	tx90p-1  0 -3.5258 -7.2633 -15.9579 -14.9855 -25.5954 -35.1158 -41.6961 -47.712
 35_3_Houston -95.8236304 29.8128657 Houston_TX tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	z--allDFs--z  -7.463 -29.1068 -57.1213 -55.9089 -63.5735 -64.1834 -106.168 -139.183 -166.446
 36_3_Palo_Alto -122.1679636 37.4276363 Palo_Alto_CA tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	carbonprice-1  -2.463 -15.581 -19.858 -19.951 -28.588 -28.588 -41.052 -57.487 -68.734
-36_3_Palo_Alto -122.1679636 37.4276363 Palo_Alto_CA tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	coastalflood-1  0 0 0 0 -11.0226 -30 -30 -30 -30
+36_3_Palo_Alto -122.1679636 37.4276363 Palo_Alto_CA tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	coastalflood-1  -0.2123 -1.6738 -5.5037 -21.2696 -72.0451 -90 -90 -90 -90
 36_3_Palo_Alto -122.1679636 37.4276363 Palo_Alto_CA tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	pdsisc-1  -5 -5 0 0 0 -10 -10 -5 -30
 36_3_Palo_Alto -122.1679636 37.4276363 Palo_Alto_CA tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	tx90p-1  0 0 -7.1839 -11.2005 -6.7612 -26.6331 -36.6522 -47.9093 -60.3181
-36_3_Palo_Alto -122.1679636 37.4276363 Palo_Alto_CA tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	z--allDFs--z  -7.463 -20.581 -27.0419 -31.1515 -46.3718 -95.2211 -117.704 -140.396 -189.052
+36_3_Palo_Alto -122.1679636 37.4276363 Palo_Alto_CA tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	z--allDFs--z  -7.6753 -22.2548 -32.5456 -52.4211 -107.394 -155.221 -177.704 -200.396 -249.052
 37_3_Plano -96.8055583 33.0430197 Plano_TX tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	carbonprice-1  -2.463 -15.581 -19.858 -19.951 -28.588 -28.588 -41.052 -57.487 -68.734
 37_3_Plano -96.8055583 33.0430197 Plano_TX tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	coastalflood-1  NA NA NA NA NA NA NA NA NA
 37_3_Plano -96.8055583 33.0430197 Plano_TX tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	pdsisc-1  -20 -10 -30 -5 -30 0 -30 -10 -30
@@ -219,40 +219,40 @@ LocationID_ParentCorpID_LocationName lon lat location df_tx90p df_pdsisc df_coas
 42_3_Barcelona_Sant_Cugat 2.0603031 41.4918967 Barcelona_Sant_Cugat_Spain tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	tx90p-1  -8.3187 -19.7921 -26.2425 -25.7573 -45.6869 -62.5163 -75.4458 -86.5822 -92.3677
 42_3_Barcelona_Sant_Cugat 2.0603031 41.4918967 Barcelona_Sant_Cugat_Spain tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	z--allDFs--z  -60.7817 -85.3731 -86.1005 -115.708 -144.275 -161.104 -186.498 -214.069 -231.102
 43_3_Rehovot 34.8032196 31.9158052 Rehovot_Israel tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	carbonprice-1  -2.463 -15.581 -19.858 -19.951 -28.588 -28.588 -41.052 -57.487 -68.734
-43_3_Rehovot 34.8032196 31.9158052 Rehovot_Israel tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	coastalflood-1  0 0 -18.111 -30 -30 -30 -30 -30 -30
+43_3_Rehovot 34.8032196 31.9158052 Rehovot_Israel tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	coastalflood-1  -0.5634 -8.074 -86.2219 -90 -90 -90 -90 -90 -90
 43_3_Rehovot 34.8032196 31.9158052 Rehovot_Israel tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	pdsisc-1  0 -5 -30 -10 -40 -60 -70 -60 -70
 43_3_Rehovot 34.8032196 31.9158052 Rehovot_Israel tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	tx90p-1  0 0 0 -1.0742 -2.802 -6.4109 -9.5495 -17.3591 -22.7416
-43_3_Rehovot 34.8032196 31.9158052 Rehovot_Israel tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	z--allDFs--z  -2.463 -20.581 -67.969 -61.0252 -101.39 -124.999 -150.601 -164.846 -191.476
+43_3_Rehovot 34.8032196 31.9158052 Rehovot_Israel tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	z--allDFs--z  -3.0264 -28.655 -136.08 -121.025 -161.39 -184.999 -210.601 -224.846 -251.476
 44_3_Singapore_DRD 103.7995975 1.2765481 Singapore_DRD tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	carbonprice-1  -2.463 -15.581 -19.858 -19.951 -28.588 -28.588 -41.052 -57.487 -68.734
 44_3_Singapore_DRD 103.7995975 1.2765481 Singapore_DRD tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	coastalflood-1  NA NA NA NA NA NA NA NA NA
 44_3_Singapore_DRD 103.7995975 1.2765481 Singapore_DRD tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	pdsisc-1  0 0 0 0 0 0 0 0 0
 44_3_Singapore_DRD 103.7995975 1.2765481 Singapore_DRD tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	tx90p-1  -3.3892 -3.0422 -11.6682 -21.4371 -33.827 -40.6232 -41.0293 -55.6943 -65.9187
 44_3_Singapore_DRD 103.7995975 1.2765481 Singapore_DRD tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	z--allDFs--z  -5.8522 -18.6232 -31.5262 -41.3881 -62.415 -69.2112 -82.0813 -113.181 -134.653
 45_3_San_Diego -117.2904943 32.9066098 San_Diego_CA tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	carbonprice-1  -2.463 -15.581 -19.858 -19.951 -28.588 -28.588 -41.052 -57.487 -68.734
-45_3_San_Diego -117.2904943 32.9066098 San_Diego_CA tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	coastalflood-1  0 0 0 0 0 0 0 0 0
+45_3_San_Diego -117.2904943 32.9066098 San_Diego_CA tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	coastalflood-1  -1.265 -5.1353 -24.2748 -30 -30 -30 -30 -30 -30
 45_3_San_Diego -117.2904943 32.9066098 San_Diego_CA tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	pdsisc-1  -10 -5 0 0 0 -10 -30 -20 -20
 45_3_San_Diego -117.2904943 32.9066098 San_Diego_CA tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	tx90p-1  0 0 -6.7293 -10.7045 -6.9112 -17.2461 -25.7291 -37.9739 -45.247
-45_3_San_Diego -117.2904943 32.9066098 San_Diego_CA tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	z--allDFs--z  -12.463 -20.581 -26.5873 -30.6555 -35.4992 -55.8341 -96.7811 -115.461 -133.981
+45_3_San_Diego -117.2904943 32.9066098 San_Diego_CA tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	z--allDFs--z  -13.728 -25.7163 -50.8621 -60.6555 -65.4992 -85.8341 -126.781 -145.461 -163.981
 46_4_Indooroopilly_Shopping_Centre 152.9704551 -27.4996058 Indooroopilly_QLD tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	carbonprice-1  -2.463 -15.581 -19.858 -19.951 -28.588 -28.588 -41.052 -57.487 -68.734
 46_4_Indooroopilly_Shopping_Centre 152.9704551 -27.4996058 Indooroopilly_QLD tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	coastalflood-1  NA NA NA NA NA NA NA NA NA
-46_4_Indooroopilly_Shopping_Centre 152.9704551 -27.4996058 Indooroopilly_QLD tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	pdsisc-1  0 0 0 0 0 0 0 0 100
+46_4_Indooroopilly_Shopping_Centre 152.9704551 -27.4996058 Indooroopilly_QLD tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	pdsisc-1  0 0 0 -5 0 0 -20 -30 -10
 46_4_Indooroopilly_Shopping_Centre 152.9704551 -27.4996058 Indooroopilly_QLD tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	tx90p-1  0 0 0 -3.7695 -3.9214 -8.1363 -9.0319 -15.9082 -25.3695
-46_4_Indooroopilly_Shopping_Centre 152.9704551 -27.4996058 Indooroopilly_QLD tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	z--allDFs--z  -2.463 -15.581 -19.858 -23.7205 -32.5094 -36.7243 -50.0839 -73.3952 5.8965
+46_4_Indooroopilly_Shopping_Centre 152.9704551 -27.4996058 Indooroopilly_QLD tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	z--allDFs--z  -2.463 -15.581 -19.858 -28.7205 -32.5094 -36.7243 -70.0839 -103.395 -104.103
 47_4_Pacific_Fair 153.4258423 -28.036514 Broadbeach_QLD tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	carbonprice-1  -2.463 -15.581 -19.858 -19.951 -28.588 -28.588 -41.052 -57.487 -68.734
-47_4_Pacific_Fair 153.4258423 -28.036514 Broadbeach_QLD tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	coastalflood-1  0 0 -8.1874 -10 -10 -10 -10 -10 -10
+47_4_Pacific_Fair 153.4258423 -28.036514 Broadbeach_QLD tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	coastalflood-1  -0.9755 -7.8203 -62.7497 -70 -70 -70 -70 -70 -70
 47_4_Pacific_Fair 153.4258423 -28.036514 Broadbeach_QLD tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	pdsisc-1  0 -20 0 -20 0 -10 -30 -50 -30
 47_4_Pacific_Fair 153.4258423 -28.036514 Broadbeach_QLD tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	tx90p-1  0 0 0 -6.1101 -9.3298 -21.9555 -27.392 -37.8114 -46.3407
-47_4_Pacific_Fair 153.4258423 -28.036514 Broadbeach_QLD tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	z--allDFs--z  -2.463 -35.581 -28.0454 -56.0611 -47.9178 -70.5435 -108.444 -155.298 -155.075
+47_4_Pacific_Fair 153.4258423 -28.036514 Broadbeach_QLD tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	z--allDFs--z  -3.4385 -43.4013 -82.6077 -116.061 -107.918 -130.543 -168.444 -215.298 -215.075
 48_4_Stanley_Plaza 153.0207033 -27.4786392 South_Brisbane_QLD tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	carbonprice-1  -2.463 -15.581 -19.858 -19.951 -28.588 -28.588 -41.052 -57.487 -68.734
 48_4_Stanley_Plaza 153.0207033 -27.4786392 South_Brisbane_QLD tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	coastalflood-1  NA NA NA NA NA NA NA NA NA
-48_4_Stanley_Plaza 153.0207033 -27.4786392 South_Brisbane_QLD tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	pdsisc-1  0 0 0 0 0 0 0 0 100
+48_4_Stanley_Plaza 153.0207033 -27.4786392 South_Brisbane_QLD tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	pdsisc-1  0 0 0 -5 0 0 -20 -30 -10
 48_4_Stanley_Plaza 153.0207033 -27.4786392 South_Brisbane_QLD tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	tx90p-1  0 0 0 -3.7695 -3.9214 -8.1363 -9.0319 -15.9082 -25.3695
-48_4_Stanley_Plaza 153.0207033 -27.4786392 South_Brisbane_QLD tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	z--allDFs--z  -2.463 -15.581 -19.858 -23.7205 -32.5094 -36.7243 -50.0839 -73.3952 5.8965
+48_4_Stanley_Plaza 153.0207033 -27.4786392 South_Brisbane_QLD tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	z--allDFs--z  -2.463 -15.581 -19.858 -28.7205 -32.5094 -36.7243 -70.0839 -103.395 -104.103
 49_4_Coronation_Drive_Office_Park 153.0067519 -27.4695483 Milton_QLD tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	carbonprice-1  -2.463 -15.581 -19.858 -19.951 -28.588 -28.588 -41.052 -57.487 -68.734
 49_4_Coronation_Drive_Office_Park 153.0067519 -27.4695483 Milton_QLD tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	coastalflood-1  NA NA NA NA NA NA NA NA NA
-49_4_Coronation_Drive_Office_Park 153.0067519 -27.4695483 Milton_QLD tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	pdsisc-1  0 0 0 0 0 0 0 0 100
+49_4_Coronation_Drive_Office_Park 153.0067519 -27.4695483 Milton_QLD tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	pdsisc-1  0 0 0 -5 0 0 -20 -30 -10
 49_4_Coronation_Drive_Office_Park 153.0067519 -27.4695483 Milton_QLD tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	tx90p-1  0 0 0 -3.7695 -3.9214 -8.1363 -9.0319 -15.9082 -25.3695
-49_4_Coronation_Drive_Office_Park 153.0067519 -27.4695483 Milton_QLD tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	z--allDFs--z  -2.463 -15.581 -19.858 -23.7205 -32.5094 -36.7243 -50.0839 -73.3952 5.8965
+49_4_Coronation_Drive_Office_Park 153.0067519 -27.4695483 Milton_QLD tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	z--allDFs--z  -2.463 -15.581 -19.858 -28.7205 -32.5094 -36.7243 -70.0839 -103.395 -104.103
 50_4_Macquarie_Centre 151.1183266 -33.7767473 North_Ryde_NSW tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	carbonprice-1  -2.463 -15.581 -19.858 -19.951 -28.588 -28.588 -41.052 -57.487 -68.734
 50_4_Macquarie_Centre 151.1183266 -33.7767473 North_Ryde_NSW tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	coastalflood-1  NA NA NA NA NA NA NA NA NA
 50_4_Macquarie_Centre 151.1183266 -33.7767473 North_Ryde_NSW tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	pdsisc-1  0 0 0 0 0 0 -5 -20 0
@@ -264,10 +264,10 @@ LocationID_ParentCorpID_LocationName lon lat location df_tx90p df_pdsisc df_coas
 51_4_AMP_Building 151.2099354 -33.8625739 Sydney tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	tx90p-1  0 0 -1.2682 -4.8526 -5.8804 -14.6187 -18.6836 -27.135 -36.3465
 51_4_AMP_Building 151.2099354 -33.8625739 Sydney tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	z--allDFs--z  -2.463 -15.581 -21.1262 -24.8036 -34.4684 -43.2067 -64.7356 -104.622 -105.081
 52_4_NAB_Headquarters 144.9472084 -37.817371 Melbourne tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	carbonprice-1  -2.463 -15.581 -19.858 -19.951 -28.588 -28.588 -41.052 -57.487 -68.734
-52_4_NAB_Headquarters 144.9472084 -37.817371 Melbourne tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	coastalflood-1  0 0 0 0 -2.8886 -10 -10 -10 -10
+52_4_NAB_Headquarters 144.9472084 -37.817371 Melbourne tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	coastalflood-1  -0.9114 -2.2803 -5.2355 -13.6786 -41.5542 -50 -50 -50 -50
 52_4_NAB_Headquarters 144.9472084 -37.817371 Melbourne tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	pdsisc-1  0 -30 -40 -5 -5 -30 -30 -40 -40
 52_4_NAB_Headquarters 144.9472084 -37.817371 Melbourne tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	tx90p-1  0 0 0 0 0 -2.3185 -5.0474 -5.1799 -8.7015
-52_4_NAB_Headquarters 144.9472084 -37.817371 Melbourne tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	z--allDFs--z  -2.463 -45.581 -59.858 -24.951 -36.4766 -70.9065 -86.0994 -112.667 -127.435
+52_4_NAB_Headquarters 144.9472084 -37.817371 Melbourne tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	z--allDFs--z  -3.3744 -47.8613 -65.0935 -38.6296 -75.1422 -110.906 -126.099 -152.667 -167.435
 53_4_Malvern_Central 145.0249768 -37.8628425 Armadale_VIC tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	carbonprice-1  -2.463 -15.581 -19.858 -19.951 -28.588 -28.588 -41.052 -57.487 -68.734
 53_4_Malvern_Central 145.0249768 -37.8628425 Armadale_VIC tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	coastalflood-1  NA NA NA NA NA NA NA NA NA
 53_4_Malvern_Central 145.0249768 -37.8628425 Armadale_VIC tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	pdsisc-1  0 0 -5 0 0 -20 -20 -50 -50
@@ -284,7 +284,7 @@ LocationID_ParentCorpID_LocationName lon lat location df_tx90p df_pdsisc df_coas
 55_4_Garden_City 115.8337414 -32.0339551 Booragoon_WA tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	tx90p-1  0 -0.5949 -1.5842 -3.0031 -6.7982 -10.2941 -16.9033 -26.8553 -34.2124
 55_4_Garden_City 115.8337414 -32.0339551 Booragoon_WA tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	z--allDFs--z  -7.463 -56.1759 -81.4422 -82.9541 -105.386 -108.882 -117.955 -154.342 -172.946
 56_4_The_Palms_NZ 172.6626893 -43.5074711 Christchurch_NZ tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	carbonprice-1  -2.463 -15.581 -19.858 -19.951 -28.588 -28.588 -41.052 -57.487 -68.734
-56_4_The_Palms_NZ 172.6626893 -43.5074711 Christchurch_NZ tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	coastalflood-1  0 0 0 0 0 0 -5.4122 -10 -10
+56_4_The_Palms_NZ 172.6626893 -43.5074711 Christchurch_NZ tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	coastalflood-1  -0.3235 -1.0273 -2.2762 -4.5763 -8.9977 -23.6001 -51.6489 -70 -70
 56_4_The_Palms_NZ 172.6626893 -43.5074711 Christchurch_NZ tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	pdsisc-1  0 0 -10 -10 -30 -30 -20 -10 -40
 56_4_The_Palms_NZ 172.6626893 -43.5074711 Christchurch_NZ tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	tx90p-1  0 0 -2.1043 -2.6068 -14.961 -18.0945 -23.9437 -39.2057 -46.2587
-56_4_The_Palms_NZ 172.6626893 -43.5074711 Christchurch_NZ tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	z--allDFs--z  -2.463 -15.581 -31.9623 -32.5578 -73.549 -76.6825 -90.4079 -116.693 -164.993
+56_4_The_Palms_NZ 172.6626893 -43.5074711 Christchurch_NZ tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	z--allDFs--z  -2.7865 -16.6083 -34.2385 -37.1341 -82.5467 -100.283 -136.645 -176.693 -224.993

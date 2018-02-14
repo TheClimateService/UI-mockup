@@ -59,12 +59,14 @@ server <- function(input, output, session) {
    output$facility_location_map <- renderLeaflet({
      leaflet(data = subset(corpLocations, ParentCorpID == USER$ParentCorpID, select = LocationID:lat)) %>%
        addTiles() %>%
+       addScaleBar() %>%
        addMarkers(~lon, ~lat, popup = ~as.character(LocationName))
    })
 
    output$individual_location_map <- renderLeaflet({
      leaflet(data = subset(corpLocations, ParentCorpID == USER$ParentCorpID & LocationName == input$rbLocations, select = LocationID:lat)) %>%
        addTiles() %>%
+       addScaleBar() %>%
        addMarkers(~lon, ~lat, popup = ~as.character(LocationName))
    })
    
@@ -218,7 +220,7 @@ server <- function(input, output, session) {
     selectInput("selectPeriod","Time Period",choices = c("1980","1990","2000","2010","2020","2030","2040","2050","2060","2070","2080","2090","2100"), selected=c("2010"), selectize=TRUE)
   })
 
- #### This is just for an example on the methodology tab - delete when replaced with real code
+ #### These are examples for the methodology tab.
   output$climplot5copy <- renderPlot({
 
    if(input$selectCausalVariable=="Temperature") {
@@ -254,20 +256,31 @@ server <- function(input, output, session) {
    }
 
    if(input$selectCausalVariable=="Drought") {
-	# Processed drought data is read into dataframe d by load_drought_data.r, which is sourced at the beginning of server.R.
-	fac_selected = facility_locations %>% filter(facility==input$drought_facility)
+	source("./data/drought/script_pdsisc_pdfs.r")
+   }
+
+   if(input$selectCausalVariable=="Drought (90th percentile)") {
+	# Processed drought data is read into dataframe d by ./data/drought/load_drought_data.r, which is sourced at the beginning of server.R.
+	#fac_selected = facility_locations %>% filter(facility==input$drought_facility)
+	fac_selected = facility_locations %>% filter(LocationID_ParentCorpID_LocationName==input$drought_facility)
 	lon=as.numeric(fac_selected[1,2])
 	lat=as.numeric(fac_selected[1,3])
-	source("./data/drought/process_drought_data.r", local=TRUE)
+
+	#source("./data/drought/process_drought_data.r", local=TRUE)
 	#paste(input$droughtlon,input$droughtlat,upperlon,lowerlon,upperlat,lowerlat)
 	#paste(as.numeric(d4[3,]), as.numeric(d4[4,]) )
 	#plot(as.numeric(d4[3,]), as.numeric(d4[4,]) )
-	values = select(d3, V3:V11)
+	#values = select(d3, V3:V11)
+	#tvalues = 100*as.numeric( t(values) )
+
+	nd = read.table("./data/scoring_engine/drought/TCSDB_structure.locations.csv.pdsisc", header=FALSE)
+	values = nd %>% filter(nd$V1==input$drought_facility) %>% select(V8:V17)
 	tvalues = 100*as.numeric( t(values) )
+
 	plot(tvalues, type="l", lwd=3, lty=1, col="black", ylim=c(0,100), xlab="Period", ylab="Ann. Prob. of 90th-pctile Drought (%)", xaxt="n")
 	axis(1, at=c(1:length(droughtPeriods)), labels=droughtPeriods)
      	legend("topleft", inset=.05, title="Scenarios",legend=c("RCP4.5","RCP8.5"), lwd=3, col=c("black","blue","green","yellow","orange","red"))
-     	if(d4[3,1]=="No_data") legend("center", title="NO DATA AVAILABLE AT THIS LOCATION", legend=" ", bg="red", text.col="white", text.font=2)
+     	if(values$V8=="No_data") legend("center", title="NO DATA AVAILABLE AT THIS LOCATION", legend=" ", bg="red", text.col="white", text.font=2)
    }
 
   })
@@ -299,6 +312,13 @@ server <- function(input, output, session) {
   output$losscurve <- renderImage({list(src = "./images/Mandel-121514-graph.png", height="230px", alt = paste("loss curve"))
   }, deleteFile = FALSE)
   
+  output$methodologyTracebackHazard <- renderText({
+paste("Drought90p location - ",input$drought_facility)
+        })
+
+  output$methodologyTracebackVuln <- renderText({
+paste("Damage function - ",input$selectDamageFunction)
+        })
 
 # ----------------------------
 #         PORTFOLIO - ANALYZE
@@ -926,19 +946,28 @@ output$drought_frequencies_lonlat <- renderPlot({
 
 output$drought_frequencies_facility <- renderPlot({
 	# Processed drought data is read into dataframe d by load_drought_data.r, which is sourced at the beginning of server.R.
-	fac_selected = facility_locations %>% filter(facility==input$drought_facility)
+	# facility_locations list is defined by ./data/financial/load_financial_data.r
+	# The most up-to-date locations list is created by the last run of the SE and is located at ./data/scoring_engine/TCSDB_structure.locations.csv.  This is accessed by load_financial_data.r.
+	#fac_selected = facility_locations %>% filter(facility==input$drought_facility)
+	fac_selected = facility_locations %>% filter(LocationID_ParentCorpID_LocationName==input$drought_facility)
 	lon=as.numeric(fac_selected[1,2])
 	lat=as.numeric(fac_selected[1,3])
-	source("./data/drought/process_drought_data.r", local=TRUE)
+
+	#source("./data/drought/process_drought_data.r", local=TRUE)
 	#paste(input$droughtlon,input$droughtlat,upperlon,lowerlon,upperlat,lowerlat)
 	#paste(as.numeric(d4[3,]), as.numeric(d4[4,]) )
 	#plot(as.numeric(d4[3,]), as.numeric(d4[4,]) )
-	values = select(d3, V3:V11)
+	#values = select(d3, V3:V11)
+	#tvalues = 100*as.numeric( t(values) )
+
+	nd = read.table("./data/scoring_engine/drought/TCSDB_structure.locations.csv.pdsisc", header=FALSE)
+	values = nd %>% filter(nd$V1==input$drought_facility) %>% select(V8:V17)
 	tvalues = 100*as.numeric( t(values) )
+
 	plot(tvalues, type="l", lwd=3, lty=1, col="black", ylim=c(0,100), xlab="Period", ylab="Annual Probability (%)", xaxt="n")
 	axis(1, at=c(1:length(droughtPeriods)), labels=droughtPeriods)
      	legend("topleft", inset=.05, title="Scenarios",legend=c("RCP4.5","RCP8.5"), lwd=3, col=c("black","blue","green","yellow","orange","red"))
-     	if(d4[3,1]=="No_data") legend("center", title="NO DATA AVAILABLE AT THIS LOCATION", legend=" ", bg="red", text.col="white", text.font=2)
+     	if(values$V8=="No_data") legend("center", title="NO DATA AVAILABLE AT THIS LOCATION", legend=" ", bg="red", text.col="white", text.font=2)
 	})
 
 # -----------
@@ -1130,17 +1159,26 @@ output$drought_frequencies_facility <- renderPlot({
 	location_name = "Selected Location"
 	lon=as.numeric(input$droughtlon)
 	lat=as.numeric(input$droughtlat)
-	fac_selected = facility_locations %>% filter(facility==input$drought_facility)
+	# facility_locations list is defined by ./data/financial/load_financial_data.r
+	# The most up-to-date locations list is created by the last run of the SE and is located at ./data/scoring_engine/TCSDB_structure.locations.csv.  This is accessed by load_financial_data.r.
+	#fac_selected = facility_locations %>% filter(facility==input$drought_facility)
+	fac_selected = facility_locations %>% filter(LocationID_ParentCorpID_LocationName==input$drought_facility)
 	if(input$use_facility_for_drought=="TRUE") {
 		lon=as.numeric(fac_selected[1,2])
 		lat=as.numeric(fac_selected[1,3]) 
 		location_name = fac_selected[1,1]}
-	source("./data/drought/process_drought_data.r", local=TRUE)
+
+	#source("./data/drought/process_drought_data.r", local=TRUE)
 	# process_drought_data.r produces the data vector d3.  It also writes this data to /output/output_drought_annual_prob.csv .
 	# Fields in d3 used below are lon, lat, and fractional annual probabilities for 9 periods defined in load_drought_data.r.
 	# For example, droughtPeriods = c("1950-99","2016-25","2026-35","2036-45","2046-55","2056-65","2066-75","2076-85","2086-95")
-	values = select(d3, V3:V11)
+	#values = select(d3, V3:V11)
+	#tvalues = 100*as.numeric( t(values) )
+
+	nd = read.table("./data/scoring_engine/drought/TCSDB_structure.locations.csv.pdsisc", header=FALSE)
+	values = nd %>% filter(nd$V1==input$drought_facility) %>% select(V8:V17)
 	tvalues = 100*as.numeric( t(values) )
+
         source("./functions/fit_corn_yield_us_drought.r", local=TRUE)
         historical_reduction_10yr_return_period = yield_reduction_pct[4]
         projected_return_period_same_reduction = (10/tvalues) * 10
@@ -1164,7 +1202,7 @@ output$drought_frequencies_facility <- renderPlot({
 	plot(annual_expected_reduction, type="l", lwd=3, lty=1, col="black", main=paste("Yield Change at",location_name,"(",lon,",",lat,")"), xlab="Periods", ylab="Expected Annual Yield Loss (%)", xaxt="n", ylim=c(-1.0*historical_reduction_10yr_return_period, 0))
 	axis(1, at=c(1:length(droughtPeriods)), labels=droughtPeriods)
      	legend("topright", inset=.05, title="Scenarios",legend=c("RCP4.5","RCP8.5"), lwd=3, col=c("black","blue","green","yellow","orange","red"))
-     	if(d4[3,1]=="No_data") legend("center", title="NO DATA AVAILABLE AT SPECIFIED LOCATION", legend=" ", bg="red", text.col="white", text.font=2)
+     	if(values$V8=="No_data") legend("center", title="NO DATA AVAILABLE AT SPECIFIED LOCATION", legend=" ", bg="red", text.col="white", text.font=2)
     } #endif
 
   if (input$impact_selected == "Agricultural Income (Brazil)") {

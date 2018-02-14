@@ -2,8 +2,6 @@
 # SCRIPT TO PROCESS DAI'S sc_PDSI_pm DATA.
 # TT - November 2017
 
-# February 2018:  modified to shift in specified direction to find values when nearest grid cell has no data (-99999).  See shiftlon and shiftlat in building of temp3.shifted below.  Note that the shift specified is dependent on the resolution of the pdsisc data (2.5 degrees presently).
-
 # Execution:  ./script_pdsisc_v1  <decimal longitude> <decimal latitude> <source nc file>
 # Example:   ./script_pdsisc_v1 25.0 -15.0 pdsisc.monthly.maps.1900-2099.r2.5x2.5.EnsAvg14Models.TP2.ipe\=2.nc
 # Note that ncks takes longitude values -180 to +180.
@@ -23,24 +21,9 @@ ncks -v pdsisc -d lon,$lon -d lat,$lat $infile | grep time | grep lat > temp1
 sed 's/=/ /g' temp1 > temp2
 awk '{print $2,$4,$6,$8}' temp2 > temp3
 
-# Check for no data at the nearest grid location and run alternative location.
-rm temp*shifted
-awk -v lon=$lon -v lat=$lat -v infile=$infile '{  \
-      shiftlon=-2.5; shiftlat=0.0;  \
-      if(NR==1 && $4==-99999)  \
-        {lon2=lon+shiftlon; lat2=lat+shiftlat;  \
-         print "echo ---WARNING---NoDataAtNearestGrid---ShiftedToFindData";   \
-         print "ncks -v pdsisc -d lon,"lon2" -d lat,"lat2" "infile" | grep time | grep lat > temp1.shifted" }
-  }' temp3 > temp3.script
-chmod a+x temp3.script
-./temp3.script
-sed 's/=/ /g' temp1.shifted > temp2.shifted
-awk '{print $2,$4,$6,$8}' temp2.shifted > temp3.shifted
-cp temp3.shifted temp3.final
-
 # Create 12-month average for each year.
 # XXX Figure 2b from Dai's 2012 paper is not reproducible unless some scale difference is applied.  This may be the 12 values for year 1900, which appear to be substantially offset from all later values.
-awk '{date=$1; year=substr(date,1,4); print year,$4}' temp3.final > temp4
+awk '{date=$1; year=substr(date,1,4); print year,$4}' temp3 > temp4
 echo LASTLINE >> temp4
 awk '{if(NR==1 || $1!=thisyear) {print thisyear,sum/12; thisyear=$1; sum=0};  \
       #if($1==thisyear && $2!=-99999) sum=sum+$2  \
@@ -118,7 +101,7 @@ awk -v lon=$lon -v lat=$lat '{  \
 
 # Treat the 12 values for 1900 as the baseline for each monthly value.
 # XXX The shift does not look right.  Perhaps the 1900 values are not to be shifted, while other values are shifted by ADDING the corresponding 1900 value.
-#awk '{if(NR<=12) string=string"_"$4; if(NR==12) print string}' temp3.final > temp3b
+#awk '{if(NR<=12) string=string"_"$4; if(NR==12) print string}' temp3 > temp3b
 #sed 's/_//' temp3b > temp3c
 #cat temp3c temp3 > temp10
 #awk '{if(NR==1) split($1,array,"_") ;  \
@@ -135,4 +118,4 @@ awk -v lon=$lon -v lat=$lat '{  \
 #cat temp11.hdr temp11 > pdsisc_pm_rcp45.$lon.$lat.monthly.shifted.csv
 
 # The evolving batch output file is output.batch.
-rm temp*
+#rm temp*

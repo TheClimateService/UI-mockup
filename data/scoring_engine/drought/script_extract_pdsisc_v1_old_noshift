@@ -24,25 +24,10 @@ awk -v lon=$lon -v lat=$lat '{idlon=71+int(lon/2.5);  \
         print idlon,idlat,lon,lat}' temp1 > temp2
 
 # Get the data for this lon/lat from the infile.
-# Also include grid points to W/E/S/N and SW/NW/SE/NE in case the nearest has no data.
-awk -v file=$infile '{print "awk SSS{if($1=="$1" && $2=="$2") print $0}SSS",file,"> temp98";  \
-		      print "awk SSS{if($1=="$1-1" && $2=="$2") print $0}SSS",file,">> temp98";  \
-		      print "awk SSS{if($1=="$1+1" && $2=="$2") print $0}SSS",file,">> temp98";  \
-		      print "awk SSS{if($1=="$1" && $2=="$2-1") print $0}SSS",file,">> temp98";  \
-		      print "awk SSS{if($1=="$1" && $2=="$2+1") print $0}SSS",file,">> temp98";  \
-		      print "awk SSS{if($1=="$1-1" && $2=="$2-1") print $0}SSS",file,">> temp98";  \
-		      print "awk SSS{if($1=="$1-1" && $2=="$2+1") print $0}SSS",file,">> temp98";  \
-		      print "awk SSS{if($1=="$1+1" && $2=="$2-1") print $0}SSS",file,">> temp98";  \
-		      print "awk SSS{if($1=="$1+1" && $2=="$2+1") print $0}SSS",file,">> temp98"  \
-	}' temp2 > temp3
+awk -v file=$infile '{print "awk SSS{if($1=="$1" && $2=="$2") print $0}SSS",file,"> temp99"}' temp2 > temp3
 sed "s/SSS/'/g" temp3 > temp4
 chmod a+x temp4
 ./temp4
-
-# Find the first grid square with data from those retrieved above.
-echo LASTLINE >> temp98
-awk '{if(found!=1 && $5!="No_data") {string=$0; found=1};  \
-      if($1=="LASTLINE") print string}' temp98 > temp99
 
 # Data for this lon/lat is in temp99.
 

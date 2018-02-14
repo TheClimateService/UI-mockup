@@ -32,4 +32,6 @@ stocks_nasdaq_parameters = read.table("./data/financial/stocks_nasdaq.csv.parame
 stocks_nasdaq_factors = read.table("./data/financial/stocks_nasdaq.csv.factors", header=TRUE)
 
 # Load facility locations.
-facility_locations = read.table("./data/financial/facility_locations.csv", header=TRUE)
+# Now read from the scoring engine since this creates the latest .csv for the locations.
+#facility_locations = read.table("./data/financial/facility_locations.csv", header=TRUE)
+facility_locations = read.table("./data/scoring_engine/TCSDB_structure.locations.csv", header=TRUE)
