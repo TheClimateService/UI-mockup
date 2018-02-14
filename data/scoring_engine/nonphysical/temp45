@@ -1,0 +1,60 @@
+MU;1;  "Transition Risk";"Policy and Legal";Carbon pricing ;-7.8816;-49.8592;-63.5456;-63.8432;-91.4816;-91.4816;-131.366;-183.958;-219.949
+MU;1;  "Physical Risk";"Chronic";Coastal flooding ;-2.3096;-7.52704;-32.8417;-50.35;-63.185;-116.765;-237.613;-256;-256
+MU;1;  "Physical Risk";"Chronic";Drought ;-63;-18;-54;-117;-90;-126;-153;-162;-135
+MU;1;  "Physical Risk";"Acute";Employee impacts ;-1.30637;-1.1506;-3.71106;-7.09655;-11.3905;-14.8108;-16.273;-21.2198;-25.1087
+MU;1;  "Opportunity";"Resource Efficiency";Energy Efficiency ;-3.48366;-3.06826;-9.89615;-18.9241;-30.3748;-39.4956;-43.3946;-56.5862;-66.9564
+MU;1;  "Opportunity";"Resilience";Energy resilience ;-3.26594;-2.87649;-9.27765;-17.7413;-28.4764;-37.0271;-40.6824;-53.0495;-62.7717
+MU;1;  "Transition Risk";"Policy and Legal";Litigation risk ;-1.74183;-1.53413;-4.94808;-9.46205;-15.1874;-19.7478;-21.6973;-28.2931;-33.4782
+MU;1;  "Opportunity";"Resource Efficiency";Materials Efficiency ;-2.61275;-2.30119;-7.4221;-14.193;-22.7811;-29.6217;-32.5459;-42.4396;-50.2173
+MU;1;  "Transition Risk";"Reputation";Materials cost ;-2.17729;-1.91766;-6.1851;-11.8276;-18.9842;-24.6848;-27.1216;-35.3663;-41.8478
+MU;1;  "Transition Risk";"Technology";New technology ;-1.5241;-1.34236;-4.32957;-8.2793;-13.289;-17.2793;-18.9851;-24.7564;-29.2934
+MU;1;  "Opportunity";"Energy Source";Renewable price stability ;-0.653187;-0.575298;-1.85553;-3.54827;-5.69527;-7.40545;-8.13649;-10.6099;-12.5543
+MU;1;  "Transition Risk";"Market";Reputation damage ;-1.08864;-0.95883;-3.09255;-5.91379;-9.49212;-12.3424;-13.5608;-17.6832;-20.9239
+MU;1;  "Physical Risk";"Acute";Storm damage ;-15.241;-13.4236;-43.2957;-82.7929;-132.89;-172.793;-189.851;-247.564;-292.934
+MU;1;  "Physical Risk";"Chronic";Temperature extremes ;-21.7729;-19.1766;-61.851;-118.275;-189.842;-246.848;-271.216;-353.663;-418.478
+MU;1;  "Opportunity";"Resource Efficiency";Water Efficiency ;-3.91912;-3.45179;-11.1332;-21.2896;-34.1716;-44.4326;-48.8189;-63.6595;-75.3261
+IDA;2;  "Transition Risk";"Policy and Legal";Carbon pricing ;-5.4186;-34.2782;-43.6876;-43.8922;-62.8936;-62.8936;-90.3144;-126.471;-151.215
+IDA;2;  "Physical Risk";"Chronic";Coastal flooding ;0;0;0;0;0;0;0;0;0
+IDA;2;  "Physical Risk";"Chronic";Drought ;-643.5;0;-99;-774;-666;-756;-972;-954;-945
+IDA;2;  "Physical Risk";"Acute";Employee impacts ;0;0;-2.86405;-2.85583;-1.90103;-6.04317;-9.58176;-19.2113;-26.9352
+IDA;2;  "Opportunity";"Resource Efficiency";Energy Efficiency ;0;0;-7.63747;-7.61555;-5.06942;-16.1151;-25.5514;-51.2302;-71.8272
+IDA;2;  "Opportunity";"Resilience";Energy resilience ;0;0;-7.16013;-7.13958;-4.75258;-15.1079;-23.9543;-48.0283;-67.3379
+IDA;2;  "Transition Risk";"Policy and Legal";Litigation risk ;0;0;-3.81874;-3.80778;-2.53471;-8.05756;-12.7757;-25.6151;-35.9136
+IDA;2;  "Opportunity";"Resource Efficiency";Materials Efficiency ;0;0;-5.7281;-5.71166;-3.80207;-12.0863;-19.1635;-38.4227;-53.8704
+IDA;2;  "Transition Risk";"Reputation";Materials cost ;0;0;-4.77342;-4.75972;-3.16839;-10.072;-15.9696;-32.0189;-44.892
+IDA;2;  "Transition Risk";"Technology";New technology ;0;0;-3.34139;-3.3318;-2.21787;-7.05037;-11.1787;-22.4132;-31.4244
+IDA;2;  "Opportunity";"Energy Source";Renewable price stability ;0;0;-1.43203;-1.42792;-0.950517;-3.02158;-4.79088;-9.60567;-13.4676
+IDA;2;  "Transition Risk";"Market";Reputation damage ;0;0;-2.38671;-2.37986;-1.5842;-5.03598;-7.9848;-16.0094;-22.446
+IDA;2;  "Physical Risk";"Acute";Storm damage ;0;0;-33.4139;-33.318;-22.1787;-70.5036;-111.787;-224.132;-314.243
+IDA;2;  "Physical Risk";"Chronic";Temperature extremes ;0;0;-47.7342;-47.5972;-31.6839;-100.719;-159.696;-320.189;-448.92
+IDA;2;  "Opportunity";"Resource Efficiency";Water Efficiency ;0;0;-8.59216;-8.5675;-5.7031;-18.1295;-28.7453;-57.634;-80.8056
+HPQ;3;  "Transition Risk";"Policy and Legal";Carbon pricing ;-4.80285;-30.3829;-38.7231;-38.9045;-55.7466;-55.7466;-80.0514;-112.1;-134.031
+HPQ;3;  "Physical Risk";"Chronic";Coastal flooding ;-1.63256;-11.9065;-92.8003;-113.016;-153.636;-168;-168;-168;-168
+HPQ;3;  "Physical Risk";"Chronic";Drought ;-162;-148.5;-198;-198;-306;-400.5;-540;-423;-508.5
+HPQ;3;  "Physical Risk";"Acute";Employee impacts ;-1.21455;-3.52972;-8.0015;-12.3521;-14.5282;-21.4133;-26.9804;-35.1301;-40.0239
+HPQ;3;  "Opportunity";"Resource Efficiency";Energy Efficiency ;-3.2388;-9.41259;-21.3373;-32.9389;-38.7418;-57.102;-71.9476;-93.6804;-106.73
+HPQ;3;  "Opportunity";"Resilience";Energy resilience ;-3.03636;-8.82431;-20.0037;-30.8803;-36.3205;-53.5331;-67.4509;-87.8253;-100.06
+HPQ;3;  "Transition Risk";"Policy and Legal";Litigation risk ;-1.6194;-4.7063;-10.6687;-16.4694;-19.3709;-28.551;-35.9738;-46.8402;-53.3652
+HPQ;3;  "Opportunity";"Resource Efficiency";Materials Efficiency ;-2.4291;-7.05944;-16.003;-24.7042;-29.0564;-42.8265;-53.9607;-70.2603;-80.0477
+HPQ;3;  "Transition Risk";"Reputation";Materials cost ;-2.02425;-5.88287;-13.3358;-20.5868;-24.2137;-35.6888;-44.9672;-58.5502;-66.7064
+HPQ;3;  "Transition Risk";"Technology";New technology ;-1.41697;-4.11801;-9.33508;-14.4108;-16.9496;-24.9822;-31.4771;-40.9852;-46.6945
+HPQ;3;  "Opportunity";"Energy Source";Renewable price stability ;-0.607275;-1.76486;-4.00075;-6.17604;-7.2641;-10.7066;-13.4902;-17.5651;-20.0119
+HPQ;3;  "Transition Risk";"Market";Reputation damage ;-1.01212;-2.94144;-6.66791;-10.2934;-12.1068;-17.8444;-22.4836;-29.2752;-33.3532
+HPQ;3;  "Physical Risk";"Acute";Storm damage ;-14.1698;-41.1801;-93.3507;-144.108;-169.495;-249.822;-314.771;-409.852;-466.945
+HPQ;3;  "Physical Risk";"Chronic";Temperature extremes ;-20.2425;-58.8287;-133.358;-205.868;-242.137;-356.888;-449.673;-585.502;-667.064
+HPQ;3;  "Opportunity";"Resource Efficiency";Water Efficiency ;-3.64365;-10.5892;-24.0045;-37.0563;-43.5845;-64.2397;-80.941;-105.39;-120.072
+AXA;4;  "Transition Risk";"Policy and Legal";Carbon pricing ;-2.7093;-17.1391;-21.8438;-21.9461;-31.4468;-31.4468;-45.1572;-63.2357;-75.6074
+AXA;4;  "Physical Risk";"Chronic";Coastal flooding ;-4.78728;-25.0631;-80.586;-102.604;-128.442;-146.88;-169.319;-184;-184
+AXA;4;  "Physical Risk";"Chronic";Drought ;-9;-117;-157.5;-153;-157.5;-207;-261;-378;-297
+AXA;4;  "Physical Risk";"Acute";Employee impacts ;0;-0.071388;-0.392454;-1.95037;-3.35291;-6.54179;-8.84916;-13.4449;-18.1995
+AXA;4;  "Opportunity";"Resource Efficiency";Energy Efficiency ;0;-0.190368;-1.04654;-5.20099;-8.9411;-17.4448;-23.5977;-35.8531;-48.5321
+AXA;4;  "Opportunity";"Resilience";Energy resilience ;0;-0.17847;-0.981135;-4.87593;-8.38228;-16.3545;-22.1229;-33.6123;-45.4988
+AXA;4;  "Transition Risk";"Policy and Legal";Litigation risk ;0;-0.095184;-0.523272;-2.6005;-4.47055;-8.7224;-11.7989;-17.9266;-24.266
+AXA;4;  "Opportunity";"Resource Efficiency";Materials Efficiency ;0;-0.142776;-0.784908;-3.90074;-6.70583;-13.0836;-17.6983;-26.8899;-36.3991
+AXA;4;  "Transition Risk";"Reputation";Materials cost ;0;-0.11898;-0.65409;-3.25062;-5.58819;-10.903;-14.7486;-22.4082;-30.3325
+AXA;4;  "Transition Risk";"Technology";New technology ;0;-0.083286;-0.457863;-2.27543;-3.91173;-7.6321;-10.324;-15.6857;-21.2328
+AXA;4;  "Opportunity";"Energy Source";Renewable price stability ;0;-0.035694;-0.196227;-0.975186;-1.67646;-3.2709;-4.42458;-6.72246;-9.09976
+AXA;4;  "Transition Risk";"Market";Reputation damage ;0;-0.05949;-0.327045;-1.62531;-2.79409;-5.4515;-7.37429;-11.2041;-15.1663
+AXA;4;  "Physical Risk";"Acute";Storm damage ;0;-0.83286;-4.57863;-22.7543;-39.1173;-76.321;-103.24;-156.857;-212.328
+AXA;4;  "Physical Risk";"Chronic";Temperature extremes ;0;-1.1898;-6.5409;-32.5062;-55.8819;-109.03;-147.486;-224.082;-303.326
+AXA;4;  "Opportunity";"Resource Efficiency";Water Efficiency ;0;-0.214164;-1.17736;-5.85112;-10.0587;-19.6254;-26.5475;-40.3348;-54.5986

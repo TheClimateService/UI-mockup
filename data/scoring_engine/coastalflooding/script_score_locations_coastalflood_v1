@@ -73,6 +73,6 @@ cat temp13.hdr temp13 > temp14
 # Save results and clean up.
 #mv temp13 $locvalues.damages
 paste $locfile temp14 > $locfile.coastalflood.damages
-#rm temp*
+rm temp*
 
 

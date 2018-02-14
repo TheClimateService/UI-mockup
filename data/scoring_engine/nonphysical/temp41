@@ -1,0 +1,842 @@
+XXX
+1_Carbon pricing ;1;1;"Boise";  "Transition Risk";"Policy and Legal";Carbon pricing ;-0.9852;-6.2324;-7.9432;-7.9804;-11.4352;-11.4352;-16.4208;-22.9948;-27.4936
+1_Carbon pricing ;1;2;"Manassas";  "Transition Risk";"Policy and Legal";Carbon pricing ;-0.9852;-6.2324;-7.9432;-7.9804;-11.4352;-11.4352;-16.4208;-22.9948;-27.4936
+1_Carbon pricing ;1;3;"Singapore_Hqs";  "Transition Risk";"Policy and Legal";Carbon pricing ;-0.9852;-6.2324;-7.9432;-7.9804;-11.4352;-11.4352;-16.4208;-22.9948;-27.4936
+1_Carbon pricing ;1;4;"Singapore_300mm_DRAM";  "Transition Risk";"Policy and Legal";Carbon pricing ;-0.9852;-6.2324;-7.9432;-7.9804;-11.4352;-11.4352;-16.4208;-22.9948;-27.4936
+1_Carbon pricing ;1;5;"Singapore_300mm_NAND";  "Transition Risk";"Policy and Legal";Carbon pricing ;-0.9852;-6.2324;-7.9432;-7.9804;-11.4352;-11.4352;-16.4208;-22.9948;-27.4936
+1_Carbon pricing ;1;6;"Singapore_200mm_NOR";  "Transition Risk";"Policy and Legal";Carbon pricing ;-0.9852;-6.2324;-7.9432;-7.9804;-11.4352;-11.4352;-16.4208;-22.9948;-27.4936
+1_Carbon pricing ;1;7;"Catania";  "Transition Risk";"Policy and Legal";Carbon pricing ;-0.9852;-6.2324;-7.9432;-7.9804;-11.4352;-11.4352;-16.4208;-22.9948;-27.4936
+1_Carbon pricing ;1;8;"Bangalore";  "Transition Risk";"Policy and Legal";Carbon pricing ;-0.9852;-6.2324;-7.9432;-7.9804;-11.4352;-11.4352;-16.4208;-22.9948;-27.4936
+1_Coastal flooding ;1;1;"Boise";  "Physical Risk";"Chronic";Coastal flooding ;0;0;0;0;0;0;0;0;0
+1_Coastal flooding ;1;2;"Manassas";  "Physical Risk";"Chronic";Coastal flooding ;0;0;0;0;0;0;0;0;0
+1_Coastal flooding ;1;3;"Singapore_Hqs";  "Physical Risk";"Chronic";Coastal flooding ;0;0;0;0;0;0;0;0;0
+1_Coastal flooding ;1;4;"Singapore_300mm_DRAM";  "Physical Risk";"Chronic";Coastal flooding ;-0.27512;-0.69768;-1.57088;-3.43456;-7.68408;-25.3914;-65.3038;-72;-72
+1_Coastal flooding ;1;5;"Singapore_300mm_NAND";  "Physical Risk";"Chronic";Coastal flooding ;-0.27512;-0.69768;-1.57088;-3.43456;-7.68408;-25.3914;-65.3038;-72;-72
+1_Coastal flooding ;1;6;"Singapore_200mm_NOR";  "Physical Risk";"Chronic";Coastal flooding ;-0.27728;-0.704;-1.58808;-3.48088;-7.81688;-25.982;-67.005;-72;-72
+1_Coastal flooding ;1;7;"Catania";  "Physical Risk";"Chronic";Coastal flooding ;-1.48208;-5.42768;-28.1119;-40;-40;-40;-40;-40;-40
+1_Coastal flooding ;1;8;"Bangalore";  "Physical Risk";"Chronic";Coastal flooding ;0;0;0;0;0;0;0;0;0
+1_Drought ;1;1;"Boise";  "Physical Risk";"Chronic";Drought ;-45;-9;-18;-54;-45;-63;-72;-63;-54
+1_Drought ;1;2;"Manassas";  "Physical Risk";"Chronic";Drought ;0;0;-27;-18;-9;-9;-18;-36;-18
+1_Drought ;1;3;"Singapore_Hqs";  "Physical Risk";"Chronic";Drought ;0;0;0;0;0;0;0;0;0
+1_Drought ;1;4;"Singapore_300mm_DRAM";  "Physical Risk";"Chronic";Drought ;0;0;0;0;0;0;0;0;0
+1_Drought ;1;5;"Singapore_300mm_NAND";  "Physical Risk";"Chronic";Drought ;0;0;0;0;0;0;0;0;0
+1_Drought ;1;6;"Singapore_200mm_NOR";  "Physical Risk";"Chronic";Drought ;0;0;0;0;0;0;0;0;0
+1_Drought ;1;7;"Catania";  "Physical Risk";"Chronic";Drought ;-9;-9;0;-45;-36;-54;-63;-63;-63
+1_Drought ;1;8;"Bangalore";  "Physical Risk";"Chronic";Drought ;-9;0;-9;0;0;0;0;0;0
+1_Employee impacts ;1;1;"Boise";  "Physical Risk";"Acute";Employee impacts ;0;0;-0.077658;-0.071754;-0.04902;-0.203208;-0.361104;-0.635928;-0.994692
+1_Employee impacts ;1;2;"Manassas";  "Physical Risk";"Acute";Employee impacts ;-0.453354;-0.274104;-0.271086;-0.548196;-1.015;-1.29742;-1.79575;-1.87372;-2.14054
+1_Employee impacts ;1;3;"Singapore_Hqs";  "Physical Risk";"Acute";Employee impacts ;-0.203352;-0.182532;-0.700092;-1.28623;-2.02962;-2.43739;-2.46176;-3.34166;-3.95512
+1_Employee impacts ;1;4;"Singapore_300mm_DRAM";  "Physical Risk";"Acute";Employee impacts ;-0.203352;-0.182532;-0.700092;-1.28623;-2.02962;-2.43739;-2.46176;-3.34166;-3.95512
+1_Employee impacts ;1;5;"Singapore_300mm_NAND";  "Physical Risk";"Acute";Employee impacts ;-0.203352;-0.182532;-0.700092;-1.28623;-2.02962;-2.43739;-2.46176;-3.34166;-3.95512
+1_Employee impacts ;1;6;"Singapore_200mm_NOR";  "Physical Risk";"Acute";Employee impacts ;-0.203352;-0.182532;-0.700092;-1.28623;-2.02962;-2.43739;-2.46176;-3.34166;-3.95512
+1_Employee impacts ;1;7;"Catania";  "Physical Risk";"Acute";Employee impacts ;-0.01032;-0.146364;-0.404634;-0.370686;-1.11295;-1.53245;-2.11168;-2.63978;-3.32978
+1_Employee impacts ;1;8;"Bangalore";  "Physical Risk";"Acute";Employee impacts ;-0.029292;0;-0.157314;-0.96099;-1.0951;-2.02821;-2.1574;-2.70376;-2.82316
+1_Energy Efficiency ;1;1;"Boise";  "Opportunity";"Resource Efficiency";Energy Efficiency ;0;0;-0.207088;-0.191344;-0.13072;-0.541888;-0.962944;-1.69581;-2.65251
+1_Energy Efficiency ;1;2;"Manassas";  "Opportunity";"Resource Efficiency";Energy Efficiency ;-1.20894;-0.730944;-0.722896;-1.46186;-2.70666;-3.45979;-4.78866;-4.99658;-5.7081
+1_Energy Efficiency ;1;3;"Singapore_Hqs";  "Opportunity";"Resource Efficiency";Energy Efficiency ;-0.542272;-0.486752;-1.86691;-3.42994;-5.41232;-6.49971;-6.56469;-8.91109;-10.547
+1_Energy Efficiency ;1;4;"Singapore_300mm_DRAM";  "Opportunity";"Resource Efficiency";Energy Efficiency ;-0.542272;-0.486752;-1.86691;-3.42994;-5.41232;-6.49971;-6.56469;-8.91109;-10.547
+1_Energy Efficiency ;1;5;"Singapore_300mm_NAND";  "Opportunity";"Resource Efficiency";Energy Efficiency ;-0.542272;-0.486752;-1.86691;-3.42994;-5.41232;-6.49971;-6.56469;-8.91109;-10.547
+1_Energy Efficiency ;1;6;"Singapore_200mm_NOR";  "Opportunity";"Resource Efficiency";Energy Efficiency ;-0.542272;-0.486752;-1.86691;-3.42994;-5.41232;-6.49971;-6.56469;-8.91109;-10.547
+1_Energy Efficiency ;1;7;"Catania";  "Opportunity";"Resource Efficiency";Energy Efficiency ;-0.02752;-0.390304;-1.07902;-0.988496;-2.96787;-4.08653;-5.63115;-7.03941;-8.87942
+1_Energy Efficiency ;1;8;"Bangalore";  "Opportunity";"Resource Efficiency";Energy Efficiency ;-0.078112;0;-0.419504;-2.56264;-2.92026;-5.40856;-5.75306;-7.21002;-7.52842
+1_Energy resilience ;1;1;"Boise";  "Opportunity";"Resilience";Energy resilience ;0;0;-0.194145;-0.179385;-0.12255;-0.50802;-0.90276;-1.58982;-2.48673
+1_Energy resilience ;1;2;"Manassas";  "Opportunity";"Resilience";Energy resilience ;-1.13339;-0.68526;-0.677715;-1.37049;-2.53749;-3.24355;-4.48936;-4.68429;-5.35134
+1_Energy resilience ;1;3;"Singapore_Hqs";  "Opportunity";"Resilience";Energy resilience ;-0.50838;-0.45633;-1.75023;-3.21557;-5.07405;-6.09348;-6.1544;-8.35414;-9.88781
+1_Energy resilience ;1;4;"Singapore_300mm_DRAM";  "Opportunity";"Resilience";Energy resilience ;-0.50838;-0.45633;-1.75023;-3.21557;-5.07405;-6.09348;-6.1544;-8.35414;-9.88781
+1_Energy resilience ;1;5;"Singapore_300mm_NAND";  "Opportunity";"Resilience";Energy resilience ;-0.50838;-0.45633;-1.75023;-3.21557;-5.07405;-6.09348;-6.1544;-8.35414;-9.88781
+1_Energy resilience ;1;6;"Singapore_200mm_NOR";  "Opportunity";"Resilience";Energy resilience ;-0.50838;-0.45633;-1.75023;-3.21557;-5.07405;-6.09348;-6.1544;-8.35414;-9.88781
+1_Energy resilience ;1;7;"Catania";  "Opportunity";"Resilience";Energy resilience ;-0.0258;-0.36591;-1.01158;-0.926715;-2.78238;-3.83112;-5.2792;-6.59944;-8.32446
+1_Energy resilience ;1;8;"Bangalore";  "Opportunity";"Resilience";Energy resilience ;-0.07323;0;-0.393285;-2.40247;-2.73774;-5.07052;-5.39349;-6.75939;-7.05789
+1_Litigation risk ;1;1;"Boise";  "Transition Risk";"Policy and Legal";Litigation risk ;0;0;-0.103544;-0.095672;-0.06536;-0.270944;-0.481472;-0.847904;-1.32626
+1_Litigation risk ;1;2;"Manassas";  "Transition Risk";"Policy and Legal";Litigation risk ;-0.604472;-0.365472;-0.361448;-0.730928;-1.35333;-1.7299;-2.39433;-2.49829;-2.85405
+1_Litigation risk ;1;3;"Singapore_Hqs";  "Transition Risk";"Policy and Legal";Litigation risk ;-0.271136;-0.243376;-0.933456;-1.71497;-2.70616;-3.24986;-3.28234;-4.45554;-5.2735
+1_Litigation risk ;1;4;"Singapore_300mm_DRAM";  "Transition Risk";"Policy and Legal";Litigation risk ;-0.271136;-0.243376;-0.933456;-1.71497;-2.70616;-3.24986;-3.28234;-4.45554;-5.2735
+1_Litigation risk ;1;5;"Singapore_300mm_NAND";  "Transition Risk";"Policy and Legal";Litigation risk ;-0.271136;-0.243376;-0.933456;-1.71497;-2.70616;-3.24986;-3.28234;-4.45554;-5.2735
+1_Litigation risk ;1;6;"Singapore_200mm_NOR";  "Transition Risk";"Policy and Legal";Litigation risk ;-0.271136;-0.243376;-0.933456;-1.71497;-2.70616;-3.24986;-3.28234;-4.45554;-5.2735
+1_Litigation risk ;1;7;"Catania";  "Transition Risk";"Policy and Legal";Litigation risk ;-0.01376;-0.195152;-0.539512;-0.494248;-1.48394;-2.04326;-2.81558;-3.5197;-4.43971
+1_Litigation risk ;1;8;"Bangalore";  "Transition Risk";"Policy and Legal";Litigation risk ;-0.039056;0;-0.209752;-1.28132;-1.46013;-2.70428;-2.87653;-3.60501;-3.76421
+1_Materials Efficiency ;1;1;"Boise";  "Opportunity";"Resource Efficiency";Materials Efficiency ;0;0;-0.155316;-0.143508;-0.09804;-0.406416;-0.722208;-1.27186;-1.98938
+1_Materials Efficiency ;1;2;"Manassas";  "Opportunity";"Resource Efficiency";Materials Efficiency ;-0.906708;-0.548208;-0.542172;-1.09639;-2.02999;-2.59484;-3.59149;-3.74743;-4.28107
+1_Materials Efficiency ;1;3;"Singapore_Hqs";  "Opportunity";"Resource Efficiency";Materials Efficiency ;-0.406704;-0.365064;-1.40018;-2.57245;-4.05924;-4.87478;-4.92352;-6.68332;-7.91024
+1_Materials Efficiency ;1;4;"Singapore_300mm_DRAM";  "Opportunity";"Resource Efficiency";Materials Efficiency ;-0.406704;-0.365064;-1.40018;-2.57245;-4.05924;-4.87478;-4.92352;-6.68332;-7.91024
+1_Materials Efficiency ;1;5;"Singapore_300mm_NAND";  "Opportunity";"Resource Efficiency";Materials Efficiency ;-0.406704;-0.365064;-1.40018;-2.57245;-4.05924;-4.87478;-4.92352;-6.68332;-7.91024
+1_Materials Efficiency ;1;6;"Singapore_200mm_NOR";  "Opportunity";"Resource Efficiency";Materials Efficiency ;-0.406704;-0.365064;-1.40018;-2.57245;-4.05924;-4.87478;-4.92352;-6.68332;-7.91024
+1_Materials Efficiency ;1;7;"Catania";  "Opportunity";"Resource Efficiency";Materials Efficiency ;-0.02064;-0.292728;-0.809268;-0.741372;-2.2259;-3.0649;-4.22336;-5.27956;-6.65957
+1_Materials Efficiency ;1;8;"Bangalore";  "Opportunity";"Resource Efficiency";Materials Efficiency ;-0.058584;0;-0.314628;-1.92198;-2.19019;-4.05642;-4.31479;-5.40751;-5.64631
+1_Materials cost ;1;1;"Boise";  "Transition Risk";"Reputation";Materials cost ;0;0;-0.12943;-0.11959;-0.0817;-0.33868;-0.60184;-1.05988;-1.65782
+1_Materials cost ;1;2;"Manassas";  "Transition Risk";"Reputation";Materials cost ;-0.75559;-0.45684;-0.45181;-0.91366;-1.69166;-2.16237;-2.99291;-3.12286;-3.56756
+1_Materials cost ;1;3;"Singapore_Hqs";  "Transition Risk";"Reputation";Materials cost ;-0.33892;-0.30422;-1.16682;-2.14371;-3.3827;-4.06232;-4.10293;-5.56943;-6.59187
+1_Materials cost ;1;4;"Singapore_300mm_DRAM";  "Transition Risk";"Reputation";Materials cost ;-0.33892;-0.30422;-1.16682;-2.14371;-3.3827;-4.06232;-4.10293;-5.56943;-6.59187
+1_Materials cost ;1;5;"Singapore_300mm_NAND";  "Transition Risk";"Reputation";Materials cost ;-0.33892;-0.30422;-1.16682;-2.14371;-3.3827;-4.06232;-4.10293;-5.56943;-6.59187
+1_Materials cost ;1;6;"Singapore_200mm_NOR";  "Transition Risk";"Reputation";Materials cost ;-0.33892;-0.30422;-1.16682;-2.14371;-3.3827;-4.06232;-4.10293;-5.56943;-6.59187
+1_Materials cost ;1;7;"Catania";  "Transition Risk";"Reputation";Materials cost ;-0.0172;-0.24394;-0.67439;-0.61781;-1.85492;-2.55408;-3.51947;-4.39963;-5.54964
+1_Materials cost ;1;8;"Bangalore";  "Transition Risk";"Reputation";Materials cost ;-0.04882;0;-0.26219;-1.60165;-1.82516;-3.38035;-3.59566;-4.50626;-4.70526
+1_New technology ;1;1;"Boise";  "Transition Risk";"Technology";New technology ;0;0;-0.090601;-0.083713;-0.05719;-0.237076;-0.421288;-0.741916;-1.16047
+1_New technology ;1;2;"Manassas";  "Transition Risk";"Technology";New technology ;-0.528913;-0.319788;-0.316267;-0.639562;-1.18416;-1.51366;-2.09504;-2.186;-2.49729
+1_New technology ;1;3;"Singapore_Hqs";  "Transition Risk";"Technology";New technology ;-0.237244;-0.212954;-0.816774;-1.5006;-2.36789;-2.84362;-2.87205;-3.8986;-4.61431
+1_New technology ;1;4;"Singapore_300mm_DRAM";  "Transition Risk";"Technology";New technology ;-0.237244;-0.212954;-0.816774;-1.5006;-2.36789;-2.84362;-2.87205;-3.8986;-4.61431
+1_New technology ;1;5;"Singapore_300mm_NAND";  "Transition Risk";"Technology";New technology ;-0.237244;-0.212954;-0.816774;-1.5006;-2.36789;-2.84362;-2.87205;-3.8986;-4.61431
+1_New technology ;1;6;"Singapore_200mm_NOR";  "Transition Risk";"Technology";New technology ;-0.237244;-0.212954;-0.816774;-1.5006;-2.36789;-2.84362;-2.87205;-3.8986;-4.61431
+1_New technology ;1;7;"Catania";  "Transition Risk";"Technology";New technology ;-0.01204;-0.170758;-0.472073;-0.432467;-1.29844;-1.78786;-2.46363;-3.07974;-3.88475
+1_New technology ;1;8;"Bangalore";  "Transition Risk";"Technology";New technology ;-0.034174;0;-0.183533;-1.12116;-1.27761;-2.36625;-2.51696;-3.15438;-3.29368
+1_Renewable price stability ;1;1;"Boise";  "Opportunity";"Energy Source";Renewable price stability ;0;0;-0.038829;-0.035877;-0.02451;-0.101604;-0.180552;-0.317964;-0.497346
+1_Renewable price stability ;1;2;"Manassas";  "Opportunity";"Energy Source";Renewable price stability ;-0.226677;-0.137052;-0.135543;-0.274098;-0.507498;-0.648711;-0.897873;-0.936858;-1.07027
+1_Renewable price stability ;1;3;"Singapore_Hqs";  "Opportunity";"Energy Source";Renewable price stability ;-0.101676;-0.091266;-0.350046;-0.643113;-1.01481;-1.2187;-1.23088;-1.67083;-1.97756
+1_Renewable price stability ;1;4;"Singapore_300mm_DRAM";  "Opportunity";"Energy Source";Renewable price stability ;-0.101676;-0.091266;-0.350046;-0.643113;-1.01481;-1.2187;-1.23088;-1.67083;-1.97756
+1_Renewable price stability ;1;5;"Singapore_300mm_NAND";  "Opportunity";"Energy Source";Renewable price stability ;-0.101676;-0.091266;-0.350046;-0.643113;-1.01481;-1.2187;-1.23088;-1.67083;-1.97756
+1_Renewable price stability ;1;6;"Singapore_200mm_NOR";  "Opportunity";"Energy Source";Renewable price stability ;-0.101676;-0.091266;-0.350046;-0.643113;-1.01481;-1.2187;-1.23088;-1.67083;-1.97756
+1_Renewable price stability ;1;7;"Catania";  "Opportunity";"Energy Source";Renewable price stability ;-0.00516;-0.073182;-0.202317;-0.185343;-0.556476;-0.766224;-1.05584;-1.31989;-1.66489
+1_Renewable price stability ;1;8;"Bangalore";  "Opportunity";"Energy Source";Renewable price stability ;-0.014646;0;-0.078657;-0.480495;-0.547548;-1.01411;-1.0787;-1.35188;-1.41158
+1_Reputation damage ;1;1;"Boise";  "Transition Risk";"Market";Reputation damage ;0;0;-0.064715;-0.059795;-0.04085;-0.16934;-0.30092;-0.52994;-0.82891
+1_Reputation damage ;1;2;"Manassas";  "Transition Risk";"Market";Reputation damage ;-0.377795;-0.22842;-0.225905;-0.45683;-0.84583;-1.08119;-1.49646;-1.56143;-1.78378
+1_Reputation damage ;1;3;"Singapore_Hqs";  "Transition Risk";"Market";Reputation damage ;-0.16946;-0.15211;-0.58341;-1.07186;-1.69135;-2.03116;-2.05146;-2.78472;-3.29594
+1_Reputation damage ;1;4;"Singapore_300mm_DRAM";  "Transition Risk";"Market";Reputation damage ;-0.16946;-0.15211;-0.58341;-1.07186;-1.69135;-2.03116;-2.05146;-2.78472;-3.29594
+1_Reputation damage ;1;5;"Singapore_300mm_NAND";  "Transition Risk";"Market";Reputation damage ;-0.16946;-0.15211;-0.58341;-1.07186;-1.69135;-2.03116;-2.05146;-2.78472;-3.29594
+1_Reputation damage ;1;6;"Singapore_200mm_NOR";  "Transition Risk";"Market";Reputation damage ;-0.16946;-0.15211;-0.58341;-1.07186;-1.69135;-2.03116;-2.05146;-2.78472;-3.29594
+1_Reputation damage ;1;7;"Catania";  "Transition Risk";"Market";Reputation damage ;-0.0086;-0.12197;-0.337195;-0.308905;-0.92746;-1.27704;-1.75974;-2.19982;-2.77482
+1_Reputation damage ;1;8;"Bangalore";  "Transition Risk";"Market";Reputation damage ;-0.02441;0;-0.131095;-0.800825;-0.91258;-1.69017;-1.79783;-2.25313;-2.35263
+1_Storm damage ;1;1;"Boise";  "Physical Risk";"Acute";Storm damage ;0;0;-0.90601;-0.83713;-0.5719;-2.37076;-4.21288;-7.41916;-11.6047
+1_Storm damage ;1;2;"Manassas";  "Physical Risk";"Acute";Storm damage ;-5.28913;-3.19788;-3.16267;-6.39562;-11.8416;-15.1366;-20.9504;-21.86;-24.9729
+1_Storm damage ;1;3;"Singapore_Hqs";  "Physical Risk";"Acute";Storm damage ;-2.37244;-2.12954;-8.16774;-15.006;-23.6789;-28.4362;-28.7205;-38.986;-46.1431
+1_Storm damage ;1;4;"Singapore_300mm_DRAM";  "Physical Risk";"Acute";Storm damage ;-2.37244;-2.12954;-8.16774;-15.006;-23.6789;-28.4362;-28.7205;-38.986;-46.1431
+1_Storm damage ;1;5;"Singapore_300mm_NAND";  "Physical Risk";"Acute";Storm damage ;-2.37244;-2.12954;-8.16774;-15.006;-23.6789;-28.4362;-28.7205;-38.986;-46.1431
+1_Storm damage ;1;6;"Singapore_200mm_NOR";  "Physical Risk";"Acute";Storm damage ;-2.37244;-2.12954;-8.16774;-15.006;-23.6789;-28.4362;-28.7205;-38.986;-46.1431
+1_Storm damage ;1;7;"Catania";  "Physical Risk";"Acute";Storm damage ;-0.1204;-1.70758;-4.72073;-4.32467;-12.9844;-17.8786;-24.6363;-30.7974;-38.8475
+1_Storm damage ;1;8;"Bangalore";  "Physical Risk";"Acute";Storm damage ;-0.34174;0;-1.83533;-11.2115;-12.7761;-23.6624;-25.1696;-31.5438;-32.9368
+1_Temperature extremes ;1;1;"Boise";  "Physical Risk";"Chronic";Temperature extremes ;0;0;-1.2943;-1.1959;-0.817;-3.3868;-6.0184;-10.5988;-16.5782
+1_Temperature extremes ;1;2;"Manassas";  "Physical Risk";"Chronic";Temperature extremes ;-7.5559;-4.5684;-4.5181;-9.1366;-16.9166;-21.6237;-29.9291;-31.2286;-35.6756
+1_Temperature extremes ;1;3;"Singapore_Hqs";  "Physical Risk";"Chronic";Temperature extremes ;-3.3892;-3.0422;-11.6682;-21.4371;-33.827;-40.6232;-41.0293;-55.6943;-65.9187
+1_Temperature extremes ;1;4;"Singapore_300mm_DRAM";  "Physical Risk";"Chronic";Temperature extremes ;-3.3892;-3.0422;-11.6682;-21.4371;-33.827;-40.6232;-41.0293;-55.6943;-65.9187
+1_Temperature extremes ;1;5;"Singapore_300mm_NAND";  "Physical Risk";"Chronic";Temperature extremes ;-3.3892;-3.0422;-11.6682;-21.4371;-33.827;-40.6232;-41.0293;-55.6943;-65.9187
+1_Temperature extremes ;1;6;"Singapore_200mm_NOR";  "Physical Risk";"Chronic";Temperature extremes ;-3.3892;-3.0422;-11.6682;-21.4371;-33.827;-40.6232;-41.0293;-55.6943;-65.9187
+1_Temperature extremes ;1;7;"Catania";  "Physical Risk";"Chronic";Temperature extremes ;-0.172;-2.4394;-6.7439;-6.1781;-18.5492;-25.5408;-35.1947;-43.9963;-55.4964
+1_Temperature extremes ;1;8;"Bangalore";  "Physical Risk";"Chronic";Temperature extremes ;-0.4882;0;-2.6219;-16.0165;-18.2516;-33.8035;-35.9566;-45.0626;-47.0526
+1_Water Efficiency ;1;1;"Boise";  "Opportunity";"Resource Efficiency";Water Efficiency ;0;0;-0.232974;-0.215262;-0.14706;-0.609624;-1.08331;-1.90778;-2.98408
+1_Water Efficiency ;1;2;"Manassas";  "Opportunity";"Resource Efficiency";Water Efficiency ;-1.36006;-0.822312;-0.813258;-1.64459;-3.04499;-3.89227;-5.38724;-5.62115;-6.42161
+1_Water Efficiency ;1;3;"Singapore_Hqs";  "Opportunity";"Resource Efficiency";Water Efficiency ;-0.610056;-0.547596;-2.10028;-3.85868;-6.08886;-7.31218;-7.38527;-10.025;-11.8654
+1_Water Efficiency ;1;4;"Singapore_300mm_DRAM";  "Opportunity";"Resource Efficiency";Water Efficiency ;-0.610056;-0.547596;-2.10028;-3.85868;-6.08886;-7.31218;-7.38527;-10.025;-11.8654
+1_Water Efficiency ;1;5;"Singapore_300mm_NAND";  "Opportunity";"Resource Efficiency";Water Efficiency ;-0.610056;-0.547596;-2.10028;-3.85868;-6.08886;-7.31218;-7.38527;-10.025;-11.8654
+1_Water Efficiency ;1;6;"Singapore_200mm_NOR";  "Opportunity";"Resource Efficiency";Water Efficiency ;-0.610056;-0.547596;-2.10028;-3.85868;-6.08886;-7.31218;-7.38527;-10.025;-11.8654
+1_Water Efficiency ;1;7;"Catania";  "Opportunity";"Resource Efficiency";Water Efficiency ;-0.03096;-0.439092;-1.2139;-1.11206;-3.33886;-4.59734;-6.33505;-7.91933;-9.98935
+1_Water Efficiency ;1;8;"Bangalore";  "Opportunity";"Resource Efficiency";Water Efficiency ;-0.087876;0;-0.471942;-2.88297;-3.28529;-6.08463;-6.47219;-8.11127;-8.46947
+2_Carbon pricing ;2;10;"Bliss";  "Transition Risk";"Policy and Legal";Carbon pricing ;-0.2463;-1.5581;-1.9858;-1.9951;-2.8588;-2.8588;-4.1052;-5.7487;-6.8734
+2_Carbon pricing ;2;11;"Brownlee";  "Transition Risk";"Policy and Legal";Carbon pricing ;-0.2463;-1.5581;-1.9858;-1.9951;-2.8588;-2.8588;-4.1052;-5.7487;-6.8734
+2_Carbon pricing ;2;12;"C_J_Strike";  "Transition Risk";"Policy and Legal";Carbon pricing ;-0.2463;-1.5581;-1.9858;-1.9951;-2.8588;-2.8588;-4.1052;-5.7487;-6.8734
+2_Carbon pricing ;2;13;"Cascade_Dam";  "Transition Risk";"Policy and Legal";Carbon pricing ;-0.2463;-1.5581;-1.9858;-1.9951;-2.8588;-2.8588;-4.1052;-5.7487;-6.8734
+2_Carbon pricing ;2;14;"Clear_Lake";  "Transition Risk";"Policy and Legal";Carbon pricing ;-0.2463;-1.5581;-1.9858;-1.9951;-2.8588;-2.8588;-4.1052;-5.7487;-6.8734
+2_Carbon pricing ;2;15;"Lower_Malad";  "Transition Risk";"Policy and Legal";Carbon pricing ;-0.2463;-1.5581;-1.9858;-1.9951;-2.8588;-2.8588;-4.1052;-5.7487;-6.8734
+2_Carbon pricing ;2;16;"Lower_Salmon";  "Transition Risk";"Policy and Legal";Carbon pricing ;-0.2463;-1.5581;-1.9858;-1.9951;-2.8588;-2.8588;-4.1052;-5.7487;-6.8734
+2_Carbon pricing ;2;17;"Salmon_Diesel";  "Transition Risk";"Policy and Legal";Carbon pricing ;-0.2463;-1.5581;-1.9858;-1.9951;-2.8588;-2.8588;-4.1052;-5.7487;-6.8734
+2_Carbon pricing ;2;18;"Shoshone_Falls";  "Transition Risk";"Policy and Legal";Carbon pricing ;-0.2463;-1.5581;-1.9858;-1.9951;-2.8588;-2.8588;-4.1052;-5.7487;-6.8734
+2_Carbon pricing ;2;19;"Swan_Falls";  "Transition Risk";"Policy and Legal";Carbon pricing ;-0.2463;-1.5581;-1.9858;-1.9951;-2.8588;-2.8588;-4.1052;-5.7487;-6.8734
+2_Carbon pricing ;2;20;"Thousand_Springs";  "Transition Risk";"Policy and Legal";Carbon pricing ;-0.2463;-1.5581;-1.9858;-1.9951;-2.8588;-2.8588;-4.1052;-5.7487;-6.8734
+2_Carbon pricing ;2;21;"Twin_Falls_(ID)";  "Transition Risk";"Policy and Legal";Carbon pricing ;-0.2463;-1.5581;-1.9858;-1.9951;-2.8588;-2.8588;-4.1052;-5.7487;-6.8734
+2_Carbon pricing ;2;22;"Upper_Salmon_A";  "Transition Risk";"Policy and Legal";Carbon pricing ;-0.2463;-1.5581;-1.9858;-1.9951;-2.8588;-2.8588;-4.1052;-5.7487;-6.8734
+2_Carbon pricing ;2;23;"Upper_Malad";  "Transition Risk";"Policy and Legal";Carbon pricing ;-0.2463;-1.5581;-1.9858;-1.9951;-2.8588;-2.8588;-4.1052;-5.7487;-6.8734
+2_Carbon pricing ;2;24;"Hells_Canyon";  "Transition Risk";"Policy and Legal";Carbon pricing ;-0.2463;-1.5581;-1.9858;-1.9951;-2.8588;-2.8588;-4.1052;-5.7487;-6.8734
+2_Carbon pricing ;2;25;"Oxbow_(OR)";  "Transition Risk";"Policy and Legal";Carbon pricing ;-0.2463;-1.5581;-1.9858;-1.9951;-2.8588;-2.8588;-4.1052;-5.7487;-6.8734
+2_Carbon pricing ;2;26;"Upper_Salmon_B";  "Transition Risk";"Policy and Legal";Carbon pricing ;-0.2463;-1.5581;-1.9858;-1.9951;-2.8588;-2.8588;-4.1052;-5.7487;-6.8734
+2_Carbon pricing ;2;27;"Milner_Hydro";  "Transition Risk";"Policy and Legal";Carbon pricing ;-0.2463;-1.5581;-1.9858;-1.9951;-2.8588;-2.8588;-4.1052;-5.7487;-6.8734
+2_Carbon pricing ;2;28;"Evander_Andrews_Power_Complex";  "Transition Risk";"Policy and Legal";Carbon pricing ;-0.2463;-1.5581;-1.9858;-1.9951;-2.8588;-2.8588;-4.1052;-5.7487;-6.8734
+2_Carbon pricing ;2;29;"Bennett_Mountain";  "Transition Risk";"Policy and Legal";Carbon pricing ;-0.2463;-1.5581;-1.9858;-1.9951;-2.8588;-2.8588;-4.1052;-5.7487;-6.8734
+2_Carbon pricing ;2;30;"Langley_Gulch_Power_Plant";  "Transition Risk";"Policy and Legal";Carbon pricing ;-0.2463;-1.5581;-1.9858;-1.9951;-2.8588;-2.8588;-4.1052;-5.7487;-6.8734
+2_Carbon pricing ;2;9;"American_Falls";  "Transition Risk";"Policy and Legal";Carbon pricing ;-0.2463;-1.5581;-1.9858;-1.9951;-2.8588;-2.8588;-4.1052;-5.7487;-6.8734
+2_Coastal flooding ;2;10;"Bliss";  "Physical Risk";"Chronic";Coastal flooding ;0;0;0;0;0;0;0;0;0
+2_Coastal flooding ;2;11;"Brownlee";  "Physical Risk";"Chronic";Coastal flooding ;0;0;0;0;0;0;0;0;0
+2_Coastal flooding ;2;12;"C_J_Strike";  "Physical Risk";"Chronic";Coastal flooding ;0;0;0;0;0;0;0;0;0
+2_Coastal flooding ;2;13;"Cascade_Dam";  "Physical Risk";"Chronic";Coastal flooding ;0;0;0;0;0;0;0;0;0
+2_Coastal flooding ;2;14;"Clear_Lake";  "Physical Risk";"Chronic";Coastal flooding ;0;0;0;0;0;0;0;0;0
+2_Coastal flooding ;2;15;"Lower_Malad";  "Physical Risk";"Chronic";Coastal flooding ;0;0;0;0;0;0;0;0;0
+2_Coastal flooding ;2;16;"Lower_Salmon";  "Physical Risk";"Chronic";Coastal flooding ;0;0;0;0;0;0;0;0;0
+2_Coastal flooding ;2;17;"Salmon_Diesel";  "Physical Risk";"Chronic";Coastal flooding ;0;0;0;0;0;0;0;0;0
+2_Coastal flooding ;2;18;"Shoshone_Falls";  "Physical Risk";"Chronic";Coastal flooding ;0;0;0;0;0;0;0;0;0
+2_Coastal flooding ;2;19;"Swan_Falls";  "Physical Risk";"Chronic";Coastal flooding ;0;0;0;0;0;0;0;0;0
+2_Coastal flooding ;2;20;"Thousand_Springs";  "Physical Risk";"Chronic";Coastal flooding ;0;0;0;0;0;0;0;0;0
+2_Coastal flooding ;2;21;"Twin_Falls_(ID)";  "Physical Risk";"Chronic";Coastal flooding ;0;0;0;0;0;0;0;0;0
+2_Coastal flooding ;2;22;"Upper_Salmon_A";  "Physical Risk";"Chronic";Coastal flooding ;0;0;0;0;0;0;0;0;0
+2_Coastal flooding ;2;23;"Upper_Malad";  "Physical Risk";"Chronic";Coastal flooding ;0;0;0;0;0;0;0;0;0
+2_Coastal flooding ;2;24;"Hells_Canyon";  "Physical Risk";"Chronic";Coastal flooding ;0;0;0;0;0;0;0;0;0
+2_Coastal flooding ;2;25;"Oxbow_(OR)";  "Physical Risk";"Chronic";Coastal flooding ;0;0;0;0;0;0;0;0;0
+2_Coastal flooding ;2;26;"Upper_Salmon_B";  "Physical Risk";"Chronic";Coastal flooding ;0;0;0;0;0;0;0;0;0
+2_Coastal flooding ;2;27;"Milner_Hydro";  "Physical Risk";"Chronic";Coastal flooding ;0;0;0;0;0;0;0;0;0
+2_Coastal flooding ;2;28;"Evander_Andrews_Power_Complex";  "Physical Risk";"Chronic";Coastal flooding ;0;0;0;0;0;0;0;0;0
+2_Coastal flooding ;2;29;"Bennett_Mountain";  "Physical Risk";"Chronic";Coastal flooding ;0;0;0;0;0;0;0;0;0
+2_Coastal flooding ;2;30;"Langley_Gulch_Power_Plant";  "Physical Risk";"Chronic";Coastal flooding ;0;0;0;0;0;0;0;0;0
+2_Coastal flooding ;2;9;"American_Falls";  "Physical Risk";"Chronic";Coastal flooding ;0;0;0;0;0;0;0;0;0
+2_Drought ;2;10;"Bliss";  "Physical Risk";"Chronic";Drought ;-27;0;-4.5;-36;-27;-45;-54;-45;-36
+2_Drought ;2;11;"Brownlee";  "Physical Risk";"Chronic";Drought ;-27;0;-4.5;-36;-27;-45;-54;-45;-36
+2_Drought ;2;12;"C_J_Strike";  "Physical Risk";"Chronic";Drought ;-27;0;-4.5;-36;-27;-45;-54;-45;-36
+2_Drought ;2;13;"Cascade_Dam";  "Physical Risk";"Chronic";Drought ;-27;0;-4.5;-36;-27;-45;-54;-45;-36
+2_Drought ;2;14;"Clear_Lake";  "Physical Risk";"Chronic";Drought ;-36;0;-4.5;-36;-36;-27;-36;-45;-54
+2_Drought ;2;15;"Lower_Malad";  "Physical Risk";"Chronic";Drought ;-36;0;-4.5;-36;-36;-27;-36;-45;-54
+2_Drought ;2;16;"Lower_Salmon";  "Physical Risk";"Chronic";Drought ;-36;0;-4.5;-36;-36;-27;-36;-45;-54
+2_Drought ;2;17;"Salmon_Diesel";  "Physical Risk";"Chronic";Drought ;-4.5;0;-4.5;-36;-18;-36;-54;-45;-18
+2_Drought ;2;18;"Shoshone_Falls";  "Physical Risk";"Chronic";Drought ;-36;0;-4.5;-36;-36;-27;-36;-45;-54
+2_Drought ;2;19;"Swan_Falls";  "Physical Risk";"Chronic";Drought ;-27;0;-4.5;-36;-27;-45;-54;-45;-36
+2_Drought ;2;20;"Thousand_Springs";  "Physical Risk";"Chronic";Drought ;-36;0;-4.5;-36;-36;-27;-36;-45;-54
+2_Drought ;2;21;"Twin_Falls_(ID)";  "Physical Risk";"Chronic";Drought ;-36;0;-4.5;-36;-36;-27;-36;-45;-54
+2_Drought ;2;22;"Upper_Salmon_A";  "Physical Risk";"Chronic";Drought ;-36;0;-4.5;-36;-36;-27;-36;-45;-54
+2_Drought ;2;23;"Upper_Malad";  "Physical Risk";"Chronic";Drought ;-36;0;-4.5;-36;-36;-27;-36;-45;-54
+2_Drought ;2;24;"Hells_Canyon";  "Physical Risk";"Chronic";Drought ;0;0;-4.5;-18;-9;-18;-36;-9;-9
+2_Drought ;2;25;"Oxbow_(OR)";  "Physical Risk";"Chronic";Drought ;-27;0;-4.5;-36;-27;-45;-54;-45;-36
+2_Drought ;2;26;"Upper_Salmon_B";  "Physical Risk";"Chronic";Drought ;-36;0;-4.5;-36;-36;-27;-36;-45;-54
+2_Drought ;2;27;"Milner_Hydro";  "Physical Risk";"Chronic";Drought ;-36;0;-4.5;-36;-36;-27;-36;-45;-54
+2_Drought ;2;28;"Evander_Andrews_Power_Complex";  "Physical Risk";"Chronic";Drought ;-27;0;-4.5;-36;-27;-45;-54;-45;-36
+2_Drought ;2;29;"Bennett_Mountain";  "Physical Risk";"Chronic";Drought ;-27;0;-4.5;-36;-27;-45;-54;-45;-36
+2_Drought ;2;30;"Langley_Gulch_Power_Plant";  "Physical Risk";"Chronic";Drought ;-27;0;-4.5;-36;-27;-45;-54;-45;-36
+2_Drought ;2;9;"American_Falls";  "Physical Risk";"Chronic";Drought ;-36;0;-4.5;-36;-36;-27;-36;-45;-54
+2_Employee impacts ;2;10;"Bliss";  "Physical Risk";"Acute";Employee impacts ;0;0;-0.144186;-0.158814;-0.109794;-0.30099;-0.452262;-0.91512;-1.25601
+2_Employee impacts ;2;11;"Brownlee";  "Physical Risk";"Acute";Employee impacts ;0;0;-0.04155;-0.000306;-0.003;-0.170352;-0.287166;-0.550638;-0.835314
+2_Employee impacts ;2;12;"C_J_Strike";  "Physical Risk";"Acute";Employee impacts ;0;0;-0.114588;-0.102132;-0.0753;-0.254964;-0.42432;-0.816558;-1.2379
+2_Employee impacts ;2;13;"Cascade_Dam";  "Physical Risk";"Acute";Employee impacts ;0;0;-0.076878;-0.029862;-0.012876;-0.212256;-0.336432;-0.63918;-0.994734
+2_Employee impacts ;2;14;"Clear_Lake";  "Physical Risk";"Acute";Employee impacts ;0;0;-0.144186;-0.158814;-0.109794;-0.30099;-0.452262;-0.91512;-1.25601
+2_Employee impacts ;2;15;"Lower_Malad";  "Physical Risk";"Acute";Employee impacts ;0;0;-0.144186;-0.158814;-0.109794;-0.30099;-0.452262;-0.91512;-1.25601
+2_Employee impacts ;2;16;"Lower_Salmon";  "Physical Risk";"Acute";Employee impacts ;0;0;-0.144186;-0.158814;-0.109794;-0.30099;-0.452262;-0.91512;-1.25601
+2_Employee impacts ;2;17;"Salmon_Diesel";  "Physical Risk";"Acute";Employee impacts ;0;0;-0.12117;-0.080016;-0.016998;-0.23199;-0.45222;-0.803364;-1.16237
+2_Employee impacts ;2;18;"Shoshone_Falls";  "Physical Risk";"Acute";Employee impacts ;0;0;-0.183582;-0.208092;-0.122958;-0.306726;-0.525366;-1.06624;-1.49759
+2_Employee impacts ;2;19;"Swan_Falls";  "Physical Risk";"Acute";Employee impacts ;0;0;-0.114588;-0.102132;-0.0753;-0.254964;-0.42432;-0.816558;-1.2379
+2_Employee impacts ;2;20;"Thousand_Springs";  "Physical Risk";"Acute";Employee impacts ;0;0;-0.144186;-0.158814;-0.109794;-0.30099;-0.452262;-0.91512;-1.25601
+2_Employee impacts ;2;21;"Twin_Falls_(ID)";  "Physical Risk";"Acute";Employee impacts ;0;0;-0.202488;-0.243432;-0.167292;-0.343686;-0.560706;-1.19266;-1.58957
+2_Employee impacts ;2;22;"Upper_Salmon_A";  "Physical Risk";"Acute";Employee impacts ;0;0;-0.144186;-0.158814;-0.109794;-0.30099;-0.452262;-0.91512;-1.25601
+2_Employee impacts ;2;23;"Upper_Malad";  "Physical Risk";"Acute";Employee impacts ;0;0;-0.144186;-0.158814;-0.109794;-0.30099;-0.452262;-0.91512;-1.25601
+2_Employee impacts ;2;24;"Hells_Canyon";  "Physical Risk";"Acute";Employee impacts ;0;0;-0.074418;-0.000306;0;-0.20568;-0.326598;-0.644118;-0.948636
+2_Employee impacts ;2;25;"Oxbow_(OR)";  "Physical Risk";"Acute";Employee impacts ;0;0;-0.074418;-0.000306;0;-0.20568;-0.326598;-0.644118;-0.948636
+2_Employee impacts ;2;26;"Upper_Salmon_B";  "Physical Risk";"Acute";Employee impacts ;0;0;-0.144186;-0.158814;-0.109794;-0.30099;-0.452262;-0.91512;-1.25601
+2_Employee impacts ;2;27;"Milner_Hydro";  "Physical Risk";"Acute";Employee impacts ;0;0;-0.202488;-0.243432;-0.167292;-0.343686;-0.560706;-1.19266;-1.58957
+2_Employee impacts ;2;28;"Evander_Andrews_Power_Complex";  "Physical Risk";"Acute";Employee impacts ;0;0;-0.13101;-0.138276;-0.100764;-0.2796;-0.432546;-0.869106;-1.18536
+2_Employee impacts ;2;29;"Bennett_Mountain";  "Physical Risk";"Acute";Employee impacts ;0;0;-0.13101;-0.138276;-0.100764;-0.2796;-0.432546;-0.869106;-1.18536
+2_Employee impacts ;2;30;"Langley_Gulch_Power_Plant";  "Physical Risk";"Acute";Employee impacts ;0;0;-0.058764;-0.057792;-0.035052;-0.189234;-0.329058;-0.594984;-0.950352
+2_Employee impacts ;2;9;"American_Falls";  "Physical Risk";"Acute";Employee impacts ;0;0;-0.183612;-0.24096;-0.145086;-0.356832;-0.545082;-1.1911;-1.52381
+2_Energy Efficiency ;2;10;"Bliss";  "Opportunity";"Resource Efficiency";Energy Efficiency ;0;0;-0.384496;-0.423504;-0.292784;-0.80264;-1.20603;-2.44032;-3.34936
+2_Energy Efficiency ;2;11;"Brownlee";  "Opportunity";"Resource Efficiency";Energy Efficiency ;0;0;-0.1108;-0.000816;-0.008;-0.454272;-0.765776;-1.46837;-2.2275
+2_Energy Efficiency ;2;12;"C_J_Strike";  "Opportunity";"Resource Efficiency";Energy Efficiency ;0;0;-0.305568;-0.272352;-0.2008;-0.679904;-1.13152;-2.17749;-3.30106
+2_Energy Efficiency ;2;13;"Cascade_Dam";  "Opportunity";"Resource Efficiency";Energy Efficiency ;0;0;-0.205008;-0.079632;-0.034336;-0.566016;-0.897152;-1.70448;-2.65262
+2_Energy Efficiency ;2;14;"Clear_Lake";  "Opportunity";"Resource Efficiency";Energy Efficiency ;0;0;-0.384496;-0.423504;-0.292784;-0.80264;-1.20603;-2.44032;-3.34936
+2_Energy Efficiency ;2;15;"Lower_Malad";  "Opportunity";"Resource Efficiency";Energy Efficiency ;0;0;-0.384496;-0.423504;-0.292784;-0.80264;-1.20603;-2.44032;-3.34936
+2_Energy Efficiency ;2;16;"Lower_Salmon";  "Opportunity";"Resource Efficiency";Energy Efficiency ;0;0;-0.384496;-0.423504;-0.292784;-0.80264;-1.20603;-2.44032;-3.34936
+2_Energy Efficiency ;2;17;"Salmon_Diesel";  "Opportunity";"Resource Efficiency";Energy Efficiency ;0;0;-0.32312;-0.213376;-0.045328;-0.61864;-1.20592;-2.1423;-3.09966
+2_Energy Efficiency ;2;18;"Shoshone_Falls";  "Opportunity";"Resource Efficiency";Energy Efficiency ;0;0;-0.489552;-0.554912;-0.327888;-0.817936;-1.40098;-2.8433;-3.99358
+2_Energy Efficiency ;2;19;"Swan_Falls";  "Opportunity";"Resource Efficiency";Energy Efficiency ;0;0;-0.305568;-0.272352;-0.2008;-0.679904;-1.13152;-2.17749;-3.30106
+2_Energy Efficiency ;2;20;"Thousand_Springs";  "Opportunity";"Resource Efficiency";Energy Efficiency ;0;0;-0.384496;-0.423504;-0.292784;-0.80264;-1.20603;-2.44032;-3.34936
+2_Energy Efficiency ;2;21;"Twin_Falls_(ID)";  "Opportunity";"Resource Efficiency";Energy Efficiency ;0;0;-0.539968;-0.649152;-0.446112;-0.916496;-1.49522;-3.18042;-4.23886
+2_Energy Efficiency ;2;22;"Upper_Salmon_A";  "Opportunity";"Resource Efficiency";Energy Efficiency ;0;0;-0.384496;-0.423504;-0.292784;-0.80264;-1.20603;-2.44032;-3.34936
+2_Energy Efficiency ;2;23;"Upper_Malad";  "Opportunity";"Resource Efficiency";Energy Efficiency ;0;0;-0.384496;-0.423504;-0.292784;-0.80264;-1.20603;-2.44032;-3.34936
+2_Energy Efficiency ;2;24;"Hells_Canyon";  "Opportunity";"Resource Efficiency";Energy Efficiency ;0;0;-0.198448;-0.000816;0;-0.54848;-0.870928;-1.71765;-2.5297
+2_Energy Efficiency ;2;25;"Oxbow_(OR)";  "Opportunity";"Resource Efficiency";Energy Efficiency ;0;0;-0.198448;-0.000816;0;-0.54848;-0.870928;-1.71765;-2.5297
+2_Energy Efficiency ;2;26;"Upper_Salmon_B";  "Opportunity";"Resource Efficiency";Energy Efficiency ;0;0;-0.384496;-0.423504;-0.292784;-0.80264;-1.20603;-2.44032;-3.34936
+2_Energy Efficiency ;2;27;"Milner_Hydro";  "Opportunity";"Resource Efficiency";Energy Efficiency ;0;0;-0.539968;-0.649152;-0.446112;-0.916496;-1.49522;-3.18042;-4.23886
+2_Energy Efficiency ;2;28;"Evander_Andrews_Power_Complex";  "Opportunity";"Resource Efficiency";Energy Efficiency ;0;0;-0.34936;-0.368736;-0.268704;-0.7456;-1.15346;-2.31762;-3.16096
+2_Energy Efficiency ;2;29;"Bennett_Mountain";  "Opportunity";"Resource Efficiency";Energy Efficiency ;0;0;-0.34936;-0.368736;-0.268704;-0.7456;-1.15346;-2.31762;-3.16096
+2_Energy Efficiency ;2;30;"Langley_Gulch_Power_Plant";  "Opportunity";"Resource Efficiency";Energy Efficiency ;0;0;-0.156704;-0.154112;-0.093472;-0.504624;-0.877488;-1.58662;-2.53427
+2_Energy Efficiency ;2;9;"American_Falls";  "Opportunity";"Resource Efficiency";Energy Efficiency ;0;0;-0.489632;-0.64256;-0.386896;-0.951552;-1.45355;-3.17626;-4.06349
+2_Energy resilience ;2;10;"Bliss";  "Opportunity";"Resilience";Energy resilience ;0;0;-0.360465;-0.397035;-0.274485;-0.752475;-1.13065;-2.2878;-3.14002
+2_Energy resilience ;2;11;"Brownlee";  "Opportunity";"Resilience";Energy resilience ;0;0;-0.103875;-0.000765;-0.0075;-0.42588;-0.717915;-1.3766;-2.08828
+2_Energy resilience ;2;12;"C_J_Strike";  "Opportunity";"Resilience";Energy resilience ;0;0;-0.28647;-0.25533;-0.18825;-0.63741;-1.0608;-2.04139;-3.09474
+2_Energy resilience ;2;13;"Cascade_Dam";  "Opportunity";"Resilience";Energy resilience ;0;0;-0.192195;-0.074655;-0.03219;-0.53064;-0.84108;-1.59795;-2.48684
+2_Energy resilience ;2;14;"Clear_Lake";  "Opportunity";"Resilience";Energy resilience ;0;0;-0.360465;-0.397035;-0.274485;-0.752475;-1.13065;-2.2878;-3.14002
+2_Energy resilience ;2;15;"Lower_Malad";  "Opportunity";"Resilience";Energy resilience ;0;0;-0.360465;-0.397035;-0.274485;-0.752475;-1.13065;-2.2878;-3.14002
+2_Energy resilience ;2;16;"Lower_Salmon";  "Opportunity";"Resilience";Energy resilience ;0;0;-0.360465;-0.397035;-0.274485;-0.752475;-1.13065;-2.2878;-3.14002
+2_Energy resilience ;2;17;"Salmon_Diesel";  "Opportunity";"Resilience";Energy resilience ;0;0;-0.302925;-0.20004;-0.042495;-0.579975;-1.13055;-2.00841;-2.90593
+2_Energy resilience ;2;18;"Shoshone_Falls";  "Opportunity";"Resilience";Energy resilience ;0;0;-0.458955;-0.52023;-0.307395;-0.766815;-1.31341;-2.66559;-3.74398
+2_Energy resilience ;2;19;"Swan_Falls";  "Opportunity";"Resilience";Energy resilience ;0;0;-0.28647;-0.25533;-0.18825;-0.63741;-1.0608;-2.04139;-3.09474
+2_Energy resilience ;2;20;"Thousand_Springs";  "Opportunity";"Resilience";Energy resilience ;0;0;-0.360465;-0.397035;-0.274485;-0.752475;-1.13065;-2.2878;-3.14002
+2_Energy resilience ;2;21;"Twin_Falls_(ID)";  "Opportunity";"Resilience";Energy resilience ;0;0;-0.50622;-0.60858;-0.41823;-0.859215;-1.40176;-2.98164;-3.97393
+2_Energy resilience ;2;22;"Upper_Salmon_A";  "Opportunity";"Resilience";Energy resilience ;0;0;-0.360465;-0.397035;-0.274485;-0.752475;-1.13065;-2.2878;-3.14002
+2_Energy resilience ;2;23;"Upper_Malad";  "Opportunity";"Resilience";Energy resilience ;0;0;-0.360465;-0.397035;-0.274485;-0.752475;-1.13065;-2.2878;-3.14002
+2_Energy resilience ;2;24;"Hells_Canyon";  "Opportunity";"Resilience";Energy resilience ;0;0;-0.186045;-0.000765;0;-0.5142;-0.816495;-1.6103;-2.37159
+2_Energy resilience ;2;25;"Oxbow_(OR)";  "Opportunity";"Resilience";Energy resilience ;0;0;-0.186045;-0.000765;0;-0.5142;-0.816495;-1.6103;-2.37159
+2_Energy resilience ;2;26;"Upper_Salmon_B";  "Opportunity";"Resilience";Energy resilience ;0;0;-0.360465;-0.397035;-0.274485;-0.752475;-1.13065;-2.2878;-3.14002
+2_Energy resilience ;2;27;"Milner_Hydro";  "Opportunity";"Resilience";Energy resilience ;0;0;-0.50622;-0.60858;-0.41823;-0.859215;-1.40176;-2.98164;-3.97393
+2_Energy resilience ;2;28;"Evander_Andrews_Power_Complex";  "Opportunity";"Resilience";Energy resilience ;0;0;-0.327525;-0.34569;-0.25191;-0.699;-1.08136;-2.17276;-2.9634
+2_Energy resilience ;2;29;"Bennett_Mountain";  "Opportunity";"Resilience";Energy resilience ;0;0;-0.327525;-0.34569;-0.25191;-0.699;-1.08136;-2.17276;-2.9634
+2_Energy resilience ;2;30;"Langley_Gulch_Power_Plant";  "Opportunity";"Resilience";Energy resilience ;0;0;-0.14691;-0.14448;-0.08763;-0.473085;-0.822645;-1.48746;-2.37588
+2_Energy resilience ;2;9;"American_Falls";  "Opportunity";"Resilience";Energy resilience ;0;0;-0.45903;-0.6024;-0.362715;-0.89208;-1.3627;-2.97774;-3.80952
+2_Litigation risk ;2;10;"Bliss";  "Transition Risk";"Policy and Legal";Litigation risk ;0;0;-0.192248;-0.211752;-0.146392;-0.40132;-0.603016;-1.22016;-1.67468
+2_Litigation risk ;2;11;"Brownlee";  "Transition Risk";"Policy and Legal";Litigation risk ;0;0;-0.0554;-0.000408;-0.004;-0.227136;-0.382888;-0.734184;-1.11375
+2_Litigation risk ;2;12;"C_J_Strike";  "Transition Risk";"Policy and Legal";Litigation risk ;0;0;-0.152784;-0.136176;-0.1004;-0.339952;-0.56576;-1.08874;-1.65053
+2_Litigation risk ;2;13;"Cascade_Dam";  "Transition Risk";"Policy and Legal";Litigation risk ;0;0;-0.102504;-0.039816;-0.017168;-0.283008;-0.448576;-0.85224;-1.32631
+2_Litigation risk ;2;14;"Clear_Lake";  "Transition Risk";"Policy and Legal";Litigation risk ;0;0;-0.192248;-0.211752;-0.146392;-0.40132;-0.603016;-1.22016;-1.67468
+2_Litigation risk ;2;15;"Lower_Malad";  "Transition Risk";"Policy and Legal";Litigation risk ;0;0;-0.192248;-0.211752;-0.146392;-0.40132;-0.603016;-1.22016;-1.67468
+2_Litigation risk ;2;16;"Lower_Salmon";  "Transition Risk";"Policy and Legal";Litigation risk ;0;0;-0.192248;-0.211752;-0.146392;-0.40132;-0.603016;-1.22016;-1.67468
+2_Litigation risk ;2;17;"Salmon_Diesel";  "Transition Risk";"Policy and Legal";Litigation risk ;0;0;-0.16156;-0.106688;-0.022664;-0.30932;-0.60296;-1.07115;-1.54983
+2_Litigation risk ;2;18;"Shoshone_Falls";  "Transition Risk";"Policy and Legal";Litigation risk ;0;0;-0.244776;-0.277456;-0.163944;-0.408968;-0.700488;-1.42165;-1.99679
+2_Litigation risk ;2;19;"Swan_Falls";  "Transition Risk";"Policy and Legal";Litigation risk ;0;0;-0.152784;-0.136176;-0.1004;-0.339952;-0.56576;-1.08874;-1.65053
+2_Litigation risk ;2;20;"Thousand_Springs";  "Transition Risk";"Policy and Legal";Litigation risk ;0;0;-0.192248;-0.211752;-0.146392;-0.40132;-0.603016;-1.22016;-1.67468
+2_Litigation risk ;2;21;"Twin_Falls_(ID)";  "Transition Risk";"Policy and Legal";Litigation risk ;0;0;-0.269984;-0.324576;-0.223056;-0.458248;-0.747608;-1.59021;-2.11943
+2_Litigation risk ;2;22;"Upper_Salmon_A";  "Transition Risk";"Policy and Legal";Litigation risk ;0;0;-0.192248;-0.211752;-0.146392;-0.40132;-0.603016;-1.22016;-1.67468
+2_Litigation risk ;2;23;"Upper_Malad";  "Transition Risk";"Policy and Legal";Litigation risk ;0;0;-0.192248;-0.211752;-0.146392;-0.40132;-0.603016;-1.22016;-1.67468
+2_Litigation risk ;2;24;"Hells_Canyon";  "Transition Risk";"Policy and Legal";Litigation risk ;0;0;-0.099224;-0.000408;0;-0.27424;-0.435464;-0.858824;-1.26485
+2_Litigation risk ;2;25;"Oxbow_(OR)";  "Transition Risk";"Policy and Legal";Litigation risk ;0;0;-0.099224;-0.000408;0;-0.27424;-0.435464;-0.858824;-1.26485
+2_Litigation risk ;2;26;"Upper_Salmon_B";  "Transition Risk";"Policy and Legal";Litigation risk ;0;0;-0.192248;-0.211752;-0.146392;-0.40132;-0.603016;-1.22016;-1.67468
+2_Litigation risk ;2;27;"Milner_Hydro";  "Transition Risk";"Policy and Legal";Litigation risk ;0;0;-0.269984;-0.324576;-0.223056;-0.458248;-0.747608;-1.59021;-2.11943
+2_Litigation risk ;2;28;"Evander_Andrews_Power_Complex";  "Transition Risk";"Policy and Legal";Litigation risk ;0;0;-0.17468;-0.184368;-0.134352;-0.3728;-0.576728;-1.15881;-1.58048
+2_Litigation risk ;2;29;"Bennett_Mountain";  "Transition Risk";"Policy and Legal";Litigation risk ;0;0;-0.17468;-0.184368;-0.134352;-0.3728;-0.576728;-1.15881;-1.58048
+2_Litigation risk ;2;30;"Langley_Gulch_Power_Plant";  "Transition Risk";"Policy and Legal";Litigation risk ;0;0;-0.078352;-0.077056;-0.046736;-0.252312;-0.438744;-0.793312;-1.26714
+2_Litigation risk ;2;9;"American_Falls";  "Transition Risk";"Policy and Legal";Litigation risk ;0;0;-0.244816;-0.32128;-0.193448;-0.475776;-0.726776;-1.58813;-2.03174
+2_Materials Efficiency ;2;10;"Bliss";  "Opportunity";"Resource Efficiency";Materials Efficiency ;0;0;-0.288372;-0.317628;-0.219588;-0.60198;-0.904524;-1.83024;-2.51202
+2_Materials Efficiency ;2;11;"Brownlee";  "Opportunity";"Resource Efficiency";Materials Efficiency ;0;0;-0.0831;-0.000612;-0.006;-0.340704;-0.574332;-1.10128;-1.67063
+2_Materials Efficiency ;2;12;"C_J_Strike";  "Opportunity";"Resource Efficiency";Materials Efficiency ;0;0;-0.229176;-0.204264;-0.1506;-0.509928;-0.84864;-1.63312;-2.47579
+2_Materials Efficiency ;2;13;"Cascade_Dam";  "Opportunity";"Resource Efficiency";Materials Efficiency ;0;0;-0.153756;-0.059724;-0.025752;-0.424512;-0.672864;-1.27836;-1.98947
+2_Materials Efficiency ;2;14;"Clear_Lake";  "Opportunity";"Resource Efficiency";Materials Efficiency ;0;0;-0.288372;-0.317628;-0.219588;-0.60198;-0.904524;-1.83024;-2.51202
+2_Materials Efficiency ;2;15;"Lower_Malad";  "Opportunity";"Resource Efficiency";Materials Efficiency ;0;0;-0.288372;-0.317628;-0.219588;-0.60198;-0.904524;-1.83024;-2.51202
+2_Materials Efficiency ;2;16;"Lower_Salmon";  "Opportunity";"Resource Efficiency";Materials Efficiency ;0;0;-0.288372;-0.317628;-0.219588;-0.60198;-0.904524;-1.83024;-2.51202
+2_Materials Efficiency ;2;17;"Salmon_Diesel";  "Opportunity";"Resource Efficiency";Materials Efficiency ;0;0;-0.24234;-0.160032;-0.033996;-0.46398;-0.90444;-1.60673;-2.32475
+2_Materials Efficiency ;2;18;"Shoshone_Falls";  "Opportunity";"Resource Efficiency";Materials Efficiency ;0;0;-0.367164;-0.416184;-0.245916;-0.613452;-1.05073;-2.13247;-2.99519
+2_Materials Efficiency ;2;19;"Swan_Falls";  "Opportunity";"Resource Efficiency";Materials Efficiency ;0;0;-0.229176;-0.204264;-0.1506;-0.509928;-0.84864;-1.63312;-2.47579
+2_Materials Efficiency ;2;20;"Thousand_Springs";  "Opportunity";"Resource Efficiency";Materials Efficiency ;0;0;-0.288372;-0.317628;-0.219588;-0.60198;-0.904524;-1.83024;-2.51202
+2_Materials Efficiency ;2;21;"Twin_Falls_(ID)";  "Opportunity";"Resource Efficiency";Materials Efficiency ;0;0;-0.404976;-0.486864;-0.334584;-0.687372;-1.12141;-2.38531;-3.17915
+2_Materials Efficiency ;2;22;"Upper_Salmon_A";  "Opportunity";"Resource Efficiency";Materials Efficiency ;0;0;-0.288372;-0.317628;-0.219588;-0.60198;-0.904524;-1.83024;-2.51202
+2_Materials Efficiency ;2;23;"Upper_Malad";  "Opportunity";"Resource Efficiency";Materials Efficiency ;0;0;-0.288372;-0.317628;-0.219588;-0.60198;-0.904524;-1.83024;-2.51202
+2_Materials Efficiency ;2;24;"Hells_Canyon";  "Opportunity";"Resource Efficiency";Materials Efficiency ;0;0;-0.148836;-0.000612;0;-0.41136;-0.653196;-1.28824;-1.89727
+2_Materials Efficiency ;2;25;"Oxbow_(OR)";  "Opportunity";"Resource Efficiency";Materials Efficiency ;0;0;-0.148836;-0.000612;0;-0.41136;-0.653196;-1.28824;-1.89727
+2_Materials Efficiency ;2;26;"Upper_Salmon_B";  "Opportunity";"Resource Efficiency";Materials Efficiency ;0;0;-0.288372;-0.317628;-0.219588;-0.60198;-0.904524;-1.83024;-2.51202
+2_Materials Efficiency ;2;27;"Milner_Hydro";  "Opportunity";"Resource Efficiency";Materials Efficiency ;0;0;-0.404976;-0.486864;-0.334584;-0.687372;-1.12141;-2.38531;-3.17915
+2_Materials Efficiency ;2;28;"Evander_Andrews_Power_Complex";  "Opportunity";"Resource Efficiency";Materials Efficiency ;0;0;-0.26202;-0.276552;-0.201528;-0.5592;-0.865092;-1.73821;-2.37072
+2_Materials Efficiency ;2;29;"Bennett_Mountain";  "Opportunity";"Resource Efficiency";Materials Efficiency ;0;0;-0.26202;-0.276552;-0.201528;-0.5592;-0.865092;-1.73821;-2.37072
+2_Materials Efficiency ;2;30;"Langley_Gulch_Power_Plant";  "Opportunity";"Resource Efficiency";Materials Efficiency ;0;0;-0.117528;-0.115584;-0.070104;-0.378468;-0.658116;-1.18997;-1.9007
+2_Materials Efficiency ;2;9;"American_Falls";  "Opportunity";"Resource Efficiency";Materials Efficiency ;0;0;-0.367224;-0.48192;-0.290172;-0.713664;-1.09016;-2.38219;-3.04762
+2_Materials cost ;2;10;"Bliss";  "Transition Risk";"Reputation";Materials cost ;0;0;-0.24031;-0.26469;-0.18299;-0.50165;-0.75377;-1.5252;-2.09335
+2_Materials cost ;2;11;"Brownlee";  "Transition Risk";"Reputation";Materials cost ;0;0;-0.06925;-0.00051;-0.005;-0.28392;-0.47861;-0.91773;-1.39219
+2_Materials cost ;2;12;"C_J_Strike";  "Transition Risk";"Reputation";Materials cost ;0;0;-0.19098;-0.17022;-0.1255;-0.42494;-0.7072;-1.36093;-2.06316
+2_Materials cost ;2;13;"Cascade_Dam";  "Transition Risk";"Reputation";Materials cost ;0;0;-0.12813;-0.04977;-0.02146;-0.35376;-0.56072;-1.0653;-1.65789
+2_Materials cost ;2;14;"Clear_Lake";  "Transition Risk";"Reputation";Materials cost ;0;0;-0.24031;-0.26469;-0.18299;-0.50165;-0.75377;-1.5252;-2.09335
+2_Materials cost ;2;15;"Lower_Malad";  "Transition Risk";"Reputation";Materials cost ;0;0;-0.24031;-0.26469;-0.18299;-0.50165;-0.75377;-1.5252;-2.09335
+2_Materials cost ;2;16;"Lower_Salmon";  "Transition Risk";"Reputation";Materials cost ;0;0;-0.24031;-0.26469;-0.18299;-0.50165;-0.75377;-1.5252;-2.09335
+2_Materials cost ;2;17;"Salmon_Diesel";  "Transition Risk";"Reputation";Materials cost ;0;0;-0.20195;-0.13336;-0.02833;-0.38665;-0.7537;-1.33894;-1.93729
+2_Materials cost ;2;18;"Shoshone_Falls";  "Transition Risk";"Reputation";Materials cost ;0;0;-0.30597;-0.34682;-0.20493;-0.51121;-0.87561;-1.77706;-2.49599
+2_Materials cost ;2;19;"Swan_Falls";  "Transition Risk";"Reputation";Materials cost ;0;0;-0.19098;-0.17022;-0.1255;-0.42494;-0.7072;-1.36093;-2.06316
+2_Materials cost ;2;20;"Thousand_Springs";  "Transition Risk";"Reputation";Materials cost ;0;0;-0.24031;-0.26469;-0.18299;-0.50165;-0.75377;-1.5252;-2.09335
+2_Materials cost ;2;21;"Twin_Falls_(ID)";  "Transition Risk";"Reputation";Materials cost ;0;0;-0.33748;-0.40572;-0.27882;-0.57281;-0.93451;-1.98776;-2.64929
+2_Materials cost ;2;22;"Upper_Salmon_A";  "Transition Risk";"Reputation";Materials cost ;0;0;-0.24031;-0.26469;-0.18299;-0.50165;-0.75377;-1.5252;-2.09335
+2_Materials cost ;2;23;"Upper_Malad";  "Transition Risk";"Reputation";Materials cost ;0;0;-0.24031;-0.26469;-0.18299;-0.50165;-0.75377;-1.5252;-2.09335
+2_Materials cost ;2;24;"Hells_Canyon";  "Transition Risk";"Reputation";Materials cost ;0;0;-0.12403;-0.00051;0;-0.3428;-0.54433;-1.07353;-1.58106
+2_Materials cost ;2;25;"Oxbow_(OR)";  "Transition Risk";"Reputation";Materials cost ;0;0;-0.12403;-0.00051;0;-0.3428;-0.54433;-1.07353;-1.58106
+2_Materials cost ;2;26;"Upper_Salmon_B";  "Transition Risk";"Reputation";Materials cost ;0;0;-0.24031;-0.26469;-0.18299;-0.50165;-0.75377;-1.5252;-2.09335
+2_Materials cost ;2;27;"Milner_Hydro";  "Transition Risk";"Reputation";Materials cost ;0;0;-0.33748;-0.40572;-0.27882;-0.57281;-0.93451;-1.98776;-2.64929
+2_Materials cost ;2;28;"Evander_Andrews_Power_Complex";  "Transition Risk";"Reputation";Materials cost ;0;0;-0.21835;-0.23046;-0.16794;-0.466;-0.72091;-1.44851;-1.9756
+2_Materials cost ;2;29;"Bennett_Mountain";  "Transition Risk";"Reputation";Materials cost ;0;0;-0.21835;-0.23046;-0.16794;-0.466;-0.72091;-1.44851;-1.9756
+2_Materials cost ;2;30;"Langley_Gulch_Power_Plant";  "Transition Risk";"Reputation";Materials cost ;0;0;-0.09794;-0.09632;-0.05842;-0.31539;-0.54843;-0.99164;-1.58392
+2_Materials cost ;2;9;"American_Falls";  "Transition Risk";"Reputation";Materials cost ;0;0;-0.30602;-0.4016;-0.24181;-0.59472;-0.90847;-1.98516;-2.53968
+2_New technology ;2;10;"Bliss";  "Transition Risk";"Technology";New technology ;0;0;-0.168217;-0.185283;-0.128093;-0.351155;-0.527639;-1.06764;-1.46535
+2_New technology ;2;11;"Brownlee";  "Transition Risk";"Technology";New technology ;0;0;-0.048475;-0.000357;-0.0035;-0.198744;-0.335027;-0.642411;-0.974533
+2_New technology ;2;12;"C_J_Strike";  "Transition Risk";"Technology";New technology ;0;0;-0.133686;-0.119154;-0.08785;-0.297458;-0.49504;-0.952651;-1.44421
+2_New technology ;2;13;"Cascade_Dam";  "Transition Risk";"Technology";New technology ;0;0;-0.089691;-0.034839;-0.015022;-0.247632;-0.392504;-0.74571;-1.16052
+2_New technology ;2;14;"Clear_Lake";  "Transition Risk";"Technology";New technology ;0;0;-0.168217;-0.185283;-0.128093;-0.351155;-0.527639;-1.06764;-1.46535
+2_New technology ;2;15;"Lower_Malad";  "Transition Risk";"Technology";New technology ;0;0;-0.168217;-0.185283;-0.128093;-0.351155;-0.527639;-1.06764;-1.46535
+2_New technology ;2;16;"Lower_Salmon";  "Transition Risk";"Technology";New technology ;0;0;-0.168217;-0.185283;-0.128093;-0.351155;-0.527639;-1.06764;-1.46535
+2_New technology ;2;17;"Salmon_Diesel";  "Transition Risk";"Technology";New technology ;0;0;-0.141365;-0.093352;-0.019831;-0.270655;-0.52759;-0.937258;-1.3561
+2_New technology ;2;18;"Shoshone_Falls";  "Transition Risk";"Technology";New technology ;0;0;-0.214179;-0.242774;-0.143451;-0.357847;-0.612927;-1.24394;-1.74719
+2_New technology ;2;19;"Swan_Falls";  "Transition Risk";"Technology";New technology ;0;0;-0.133686;-0.119154;-0.08785;-0.297458;-0.49504;-0.952651;-1.44421
+2_New technology ;2;20;"Thousand_Springs";  "Transition Risk";"Technology";New technology ;0;0;-0.168217;-0.185283;-0.128093;-0.351155;-0.527639;-1.06764;-1.46535
+2_New technology ;2;21;"Twin_Falls_(ID)";  "Transition Risk";"Technology";New technology ;0;0;-0.236236;-0.284004;-0.195174;-0.400967;-0.654157;-1.39143;-1.8545
+2_New technology ;2;22;"Upper_Salmon_A";  "Transition Risk";"Technology";New technology ;0;0;-0.168217;-0.185283;-0.128093;-0.351155;-0.527639;-1.06764;-1.46535
+2_New technology ;2;23;"Upper_Malad";  "Transition Risk";"Technology";New technology ;0;0;-0.168217;-0.185283;-0.128093;-0.351155;-0.527639;-1.06764;-1.46535
+2_New technology ;2;24;"Hells_Canyon";  "Transition Risk";"Technology";New technology ;0;0;-0.086821;-0.000357;0;-0.23996;-0.381031;-0.751471;-1.10674
+2_New technology ;2;25;"Oxbow_(OR)";  "Transition Risk";"Technology";New technology ;0;0;-0.086821;-0.000357;0;-0.23996;-0.381031;-0.751471;-1.10674
+2_New technology ;2;26;"Upper_Salmon_B";  "Transition Risk";"Technology";New technology ;0;0;-0.168217;-0.185283;-0.128093;-0.351155;-0.527639;-1.06764;-1.46535
+2_New technology ;2;27;"Milner_Hydro";  "Transition Risk";"Technology";New technology ;0;0;-0.236236;-0.284004;-0.195174;-0.400967;-0.654157;-1.39143;-1.8545
+2_New technology ;2;28;"Evander_Andrews_Power_Complex";  "Transition Risk";"Technology";New technology ;0;0;-0.152845;-0.161322;-0.117558;-0.3262;-0.504637;-1.01396;-1.38292
+2_New technology ;2;29;"Bennett_Mountain";  "Transition Risk";"Technology";New technology ;0;0;-0.152845;-0.161322;-0.117558;-0.3262;-0.504637;-1.01396;-1.38292
+2_New technology ;2;30;"Langley_Gulch_Power_Plant";  "Transition Risk";"Technology";New technology ;0;0;-0.068558;-0.067424;-0.040894;-0.220773;-0.383901;-0.694148;-1.10874
+2_New technology ;2;9;"American_Falls";  "Transition Risk";"Technology";New technology ;0;0;-0.214214;-0.28112;-0.169267;-0.416304;-0.635929;-1.38961;-1.77778
+2_Renewable price stability ;2;10;"Bliss";  "Opportunity";"Energy Source";Renewable price stability ;0;0;-0.072093;-0.079407;-0.054897;-0.150495;-0.226131;-0.45756;-0.628005
+2_Renewable price stability ;2;11;"Brownlee";  "Opportunity";"Energy Source";Renewable price stability ;0;0;-0.020775;-0.000153;-0.0015;-0.085176;-0.143583;-0.275319;-0.417657
+2_Renewable price stability ;2;12;"C_J_Strike";  "Opportunity";"Energy Source";Renewable price stability ;0;0;-0.057294;-0.051066;-0.03765;-0.127482;-0.21216;-0.408279;-0.618948
+2_Renewable price stability ;2;13;"Cascade_Dam";  "Opportunity";"Energy Source";Renewable price stability ;0;0;-0.038439;-0.014931;-0.006438;-0.106128;-0.168216;-0.31959;-0.497367
+2_Renewable price stability ;2;14;"Clear_Lake";  "Opportunity";"Energy Source";Renewable price stability ;0;0;-0.072093;-0.079407;-0.054897;-0.150495;-0.226131;-0.45756;-0.628005
+2_Renewable price stability ;2;15;"Lower_Malad";  "Opportunity";"Energy Source";Renewable price stability ;0;0;-0.072093;-0.079407;-0.054897;-0.150495;-0.226131;-0.45756;-0.628005
+2_Renewable price stability ;2;16;"Lower_Salmon";  "Opportunity";"Energy Source";Renewable price stability ;0;0;-0.072093;-0.079407;-0.054897;-0.150495;-0.226131;-0.45756;-0.628005
+2_Renewable price stability ;2;17;"Salmon_Diesel";  "Opportunity";"Energy Source";Renewable price stability ;0;0;-0.060585;-0.040008;-0.008499;-0.115995;-0.22611;-0.401682;-0.581187
+2_Renewable price stability ;2;18;"Shoshone_Falls";  "Opportunity";"Energy Source";Renewable price stability ;0;0;-0.091791;-0.104046;-0.061479;-0.153363;-0.262683;-0.533118;-0.748797
+2_Renewable price stability ;2;19;"Swan_Falls";  "Opportunity";"Energy Source";Renewable price stability ;0;0;-0.057294;-0.051066;-0.03765;-0.127482;-0.21216;-0.408279;-0.618948
+2_Renewable price stability ;2;20;"Thousand_Springs";  "Opportunity";"Energy Source";Renewable price stability ;0;0;-0.072093;-0.079407;-0.054897;-0.150495;-0.226131;-0.45756;-0.628005
+2_Renewable price stability ;2;21;"Twin_Falls_(ID)";  "Opportunity";"Energy Source";Renewable price stability ;0;0;-0.101244;-0.121716;-0.083646;-0.171843;-0.280353;-0.596328;-0.794787
+2_Renewable price stability ;2;22;"Upper_Salmon_A";  "Opportunity";"Energy Source";Renewable price stability ;0;0;-0.072093;-0.079407;-0.054897;-0.150495;-0.226131;-0.45756;-0.628005
+2_Renewable price stability ;2;23;"Upper_Malad";  "Opportunity";"Energy Source";Renewable price stability ;0;0;-0.072093;-0.079407;-0.054897;-0.150495;-0.226131;-0.45756;-0.628005
+2_Renewable price stability ;2;24;"Hells_Canyon";  "Opportunity";"Energy Source";Renewable price stability ;0;0;-0.037209;-0.000153;0;-0.10284;-0.163299;-0.322059;-0.474318
+2_Renewable price stability ;2;25;"Oxbow_(OR)";  "Opportunity";"Energy Source";Renewable price stability ;0;0;-0.037209;-0.000153;0;-0.10284;-0.163299;-0.322059;-0.474318
+2_Renewable price stability ;2;26;"Upper_Salmon_B";  "Opportunity";"Energy Source";Renewable price stability ;0;0;-0.072093;-0.079407;-0.054897;-0.150495;-0.226131;-0.45756;-0.628005
+2_Renewable price stability ;2;27;"Milner_Hydro";  "Opportunity";"Energy Source";Renewable price stability ;0;0;-0.101244;-0.121716;-0.083646;-0.171843;-0.280353;-0.596328;-0.794787
+2_Renewable price stability ;2;28;"Evander_Andrews_Power_Complex";  "Opportunity";"Energy Source";Renewable price stability ;0;0;-0.065505;-0.069138;-0.050382;-0.1398;-0.216273;-0.434553;-0.59268
+2_Renewable price stability ;2;29;"Bennett_Mountain";  "Opportunity";"Energy Source";Renewable price stability ;0;0;-0.065505;-0.069138;-0.050382;-0.1398;-0.216273;-0.434553;-0.59268
+2_Renewable price stability ;2;30;"Langley_Gulch_Power_Plant";  "Opportunity";"Energy Source";Renewable price stability ;0;0;-0.029382;-0.028896;-0.017526;-0.094617;-0.164529;-0.297492;-0.475176
+2_Renewable price stability ;2;9;"American_Falls";  "Opportunity";"Energy Source";Renewable price stability ;0;0;-0.091806;-0.12048;-0.072543;-0.178416;-0.272541;-0.595548;-0.761904
+2_Reputation damage ;2;10;"Bliss";  "Transition Risk";"Market";Reputation damage ;0;0;-0.120155;-0.132345;-0.091495;-0.250825;-0.376885;-0.7626;-1.04668
+2_Reputation damage ;2;11;"Brownlee";  "Transition Risk";"Market";Reputation damage ;0;0;-0.034625;-0.000255;-0.0025;-0.14196;-0.239305;-0.458865;-0.696095
+2_Reputation damage ;2;12;"C_J_Strike";  "Transition Risk";"Market";Reputation damage ;0;0;-0.09549;-0.08511;-0.06275;-0.21247;-0.3536;-0.680465;-1.03158
+2_Reputation damage ;2;13;"Cascade_Dam";  "Transition Risk";"Market";Reputation damage ;0;0;-0.064065;-0.024885;-0.01073;-0.17688;-0.28036;-0.53265;-0.828945
+2_Reputation damage ;2;14;"Clear_Lake";  "Transition Risk";"Market";Reputation damage ;0;0;-0.120155;-0.132345;-0.091495;-0.250825;-0.376885;-0.7626;-1.04668
+2_Reputation damage ;2;15;"Lower_Malad";  "Transition Risk";"Market";Reputation damage ;0;0;-0.120155;-0.132345;-0.091495;-0.250825;-0.376885;-0.7626;-1.04668
+2_Reputation damage ;2;16;"Lower_Salmon";  "Transition Risk";"Market";Reputation damage ;0;0;-0.120155;-0.132345;-0.091495;-0.250825;-0.376885;-0.7626;-1.04668
+2_Reputation damage ;2;17;"Salmon_Diesel";  "Transition Risk";"Market";Reputation damage ;0;0;-0.100975;-0.06668;-0.014165;-0.193325;-0.37685;-0.66947;-0.968645
+2_Reputation damage ;2;18;"Shoshone_Falls";  "Transition Risk";"Market";Reputation damage ;0;0;-0.152985;-0.17341;-0.102465;-0.255605;-0.437805;-0.88853;-1.248
+2_Reputation damage ;2;19;"Swan_Falls";  "Transition Risk";"Market";Reputation damage ;0;0;-0.09549;-0.08511;-0.06275;-0.21247;-0.3536;-0.680465;-1.03158
+2_Reputation damage ;2;20;"Thousand_Springs";  "Transition Risk";"Market";Reputation damage ;0;0;-0.120155;-0.132345;-0.091495;-0.250825;-0.376885;-0.7626;-1.04668
+2_Reputation damage ;2;21;"Twin_Falls_(ID)";  "Transition Risk";"Market";Reputation damage ;0;0;-0.16874;-0.20286;-0.13941;-0.286405;-0.467255;-0.99388;-1.32465
+2_Reputation damage ;2;22;"Upper_Salmon_A";  "Transition Risk";"Market";Reputation damage ;0;0;-0.120155;-0.132345;-0.091495;-0.250825;-0.376885;-0.7626;-1.04668
+2_Reputation damage ;2;23;"Upper_Malad";  "Transition Risk";"Market";Reputation damage ;0;0;-0.120155;-0.132345;-0.091495;-0.250825;-0.376885;-0.7626;-1.04668
+2_Reputation damage ;2;24;"Hells_Canyon";  "Transition Risk";"Market";Reputation damage ;0;0;-0.062015;-0.000255;0;-0.1714;-0.272165;-0.536765;-0.79053
+2_Reputation damage ;2;25;"Oxbow_(OR)";  "Transition Risk";"Market";Reputation damage ;0;0;-0.062015;-0.000255;0;-0.1714;-0.272165;-0.536765;-0.79053
+2_Reputation damage ;2;26;"Upper_Salmon_B";  "Transition Risk";"Market";Reputation damage ;0;0;-0.120155;-0.132345;-0.091495;-0.250825;-0.376885;-0.7626;-1.04668
+2_Reputation damage ;2;27;"Milner_Hydro";  "Transition Risk";"Market";Reputation damage ;0;0;-0.16874;-0.20286;-0.13941;-0.286405;-0.467255;-0.99388;-1.32465
+2_Reputation damage ;2;28;"Evander_Andrews_Power_Complex";  "Transition Risk";"Market";Reputation damage ;0;0;-0.109175;-0.11523;-0.08397;-0.233;-0.360455;-0.724255;-0.9878
+2_Reputation damage ;2;29;"Bennett_Mountain";  "Transition Risk";"Market";Reputation damage ;0;0;-0.109175;-0.11523;-0.08397;-0.233;-0.360455;-0.724255;-0.9878
+2_Reputation damage ;2;30;"Langley_Gulch_Power_Plant";  "Transition Risk";"Market";Reputation damage ;0;0;-0.04897;-0.04816;-0.02921;-0.157695;-0.274215;-0.49582;-0.79196
+2_Reputation damage ;2;9;"American_Falls";  "Transition Risk";"Market";Reputation damage ;0;0;-0.15301;-0.2008;-0.120905;-0.29736;-0.454235;-0.99258;-1.26984
+2_Storm damage ;2;10;"Bliss";  "Physical Risk";"Acute";Storm damage ;0;0;-1.68217;-1.85283;-1.28093;-3.51155;-5.27639;-10.6764;-14.6534
+2_Storm damage ;2;11;"Brownlee";  "Physical Risk";"Acute";Storm damage ;0;0;-0.48475;-0.00357;-0.035;-1.98744;-3.35027;-6.42411;-9.74533
+2_Storm damage ;2;12;"C_J_Strike";  "Physical Risk";"Acute";Storm damage ;0;0;-1.33686;-1.19154;-0.8785;-2.97458;-4.9504;-9.52651;-14.4421
+2_Storm damage ;2;13;"Cascade_Dam";  "Physical Risk";"Acute";Storm damage ;0;0;-0.89691;-0.34839;-0.15022;-2.47632;-3.92504;-7.4571;-11.6052
+2_Storm damage ;2;14;"Clear_Lake";  "Physical Risk";"Acute";Storm damage ;0;0;-1.68217;-1.85283;-1.28093;-3.51155;-5.27639;-10.6764;-14.6534
+2_Storm damage ;2;15;"Lower_Malad";  "Physical Risk";"Acute";Storm damage ;0;0;-1.68217;-1.85283;-1.28093;-3.51155;-5.27639;-10.6764;-14.6534
+2_Storm damage ;2;16;"Lower_Salmon";  "Physical Risk";"Acute";Storm damage ;0;0;-1.68217;-1.85283;-1.28093;-3.51155;-5.27639;-10.6764;-14.6534
+2_Storm damage ;2;17;"Salmon_Diesel";  "Physical Risk";"Acute";Storm damage ;0;0;-1.41365;-0.93352;-0.19831;-2.70655;-5.2759;-9.37258;-13.561
+2_Storm damage ;2;18;"Shoshone_Falls";  "Physical Risk";"Acute";Storm damage ;0;0;-2.14179;-2.42774;-1.43451;-3.57847;-6.12927;-12.4394;-17.4719
+2_Storm damage ;2;19;"Swan_Falls";  "Physical Risk";"Acute";Storm damage ;0;0;-1.33686;-1.19154;-0.8785;-2.97458;-4.9504;-9.52651;-14.4421
+2_Storm damage ;2;20;"Thousand_Springs";  "Physical Risk";"Acute";Storm damage ;0;0;-1.68217;-1.85283;-1.28093;-3.51155;-5.27639;-10.6764;-14.6534
+2_Storm damage ;2;21;"Twin_Falls_(ID)";  "Physical Risk";"Acute";Storm damage ;0;0;-2.36236;-2.84004;-1.95174;-4.00967;-6.54157;-13.9143;-18.545
+2_Storm damage ;2;22;"Upper_Salmon_A";  "Physical Risk";"Acute";Storm damage ;0;0;-1.68217;-1.85283;-1.28093;-3.51155;-5.27639;-10.6764;-14.6534
+2_Storm damage ;2;23;"Upper_Malad";  "Physical Risk";"Acute";Storm damage ;0;0;-1.68217;-1.85283;-1.28093;-3.51155;-5.27639;-10.6764;-14.6534
+2_Storm damage ;2;24;"Hells_Canyon";  "Physical Risk";"Acute";Storm damage ;0;0;-0.86821;-0.00357;0;-2.3996;-3.81031;-7.51471;-11.0674
+2_Storm damage ;2;25;"Oxbow_(OR)";  "Physical Risk";"Acute";Storm damage ;0;0;-0.86821;-0.00357;0;-2.3996;-3.81031;-7.51471;-11.0674
+2_Storm damage ;2;26;"Upper_Salmon_B";  "Physical Risk";"Acute";Storm damage ;0;0;-1.68217;-1.85283;-1.28093;-3.51155;-5.27639;-10.6764;-14.6534
+2_Storm damage ;2;27;"Milner_Hydro";  "Physical Risk";"Acute";Storm damage ;0;0;-2.36236;-2.84004;-1.95174;-4.00967;-6.54157;-13.9143;-18.545
+2_Storm damage ;2;28;"Evander_Andrews_Power_Complex";  "Physical Risk";"Acute";Storm damage ;0;0;-1.52845;-1.61322;-1.17558;-3.262;-5.04637;-10.1396;-13.8292
+2_Storm damage ;2;29;"Bennett_Mountain";  "Physical Risk";"Acute";Storm damage ;0;0;-1.52845;-1.61322;-1.17558;-3.262;-5.04637;-10.1396;-13.8292
+2_Storm damage ;2;30;"Langley_Gulch_Power_Plant";  "Physical Risk";"Acute";Storm damage ;0;0;-0.68558;-0.67424;-0.40894;-2.20773;-3.83901;-6.94148;-11.0874
+2_Storm damage ;2;9;"American_Falls";  "Physical Risk";"Acute";Storm damage ;0;0;-2.14214;-2.8112;-1.69267;-4.16304;-6.35929;-13.8961;-17.7778
+2_Temperature extremes ;2;10;"Bliss";  "Physical Risk";"Chronic";Temperature extremes ;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2_Temperature extremes ;2;11;"Brownlee";  "Physical Risk";"Chronic";Temperature extremes ;0;0;-0.6925;-0.0051;-0.05;-2.8392;-4.7861;-9.1773;-13.9219
+2_Temperature extremes ;2;12;"C_J_Strike";  "Physical Risk";"Chronic";Temperature extremes ;0;0;-1.9098;-1.7022;-1.255;-4.2494;-7.072;-13.6093;-20.6316
+2_Temperature extremes ;2;13;"Cascade_Dam";  "Physical Risk";"Chronic";Temperature extremes ;0;0;-1.2813;-0.4977;-0.2146;-3.5376;-5.6072;-10.653;-16.5789
+2_Temperature extremes ;2;14;"Clear_Lake";  "Physical Risk";"Chronic";Temperature extremes ;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2_Temperature extremes ;2;15;"Lower_Malad";  "Physical Risk";"Chronic";Temperature extremes ;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2_Temperature extremes ;2;16;"Lower_Salmon";  "Physical Risk";"Chronic";Temperature extremes ;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2_Temperature extremes ;2;17;"Salmon_Diesel";  "Physical Risk";"Chronic";Temperature extremes ;0;0;-2.0195;-1.3336;-0.2833;-3.8665;-7.537;-13.3894;-19.3729
+2_Temperature extremes ;2;18;"Shoshone_Falls";  "Physical Risk";"Chronic";Temperature extremes ;0;0;-3.0597;-3.4682;-2.0493;-5.1121;-8.7561;-17.7706;-24.9599
+2_Temperature extremes ;2;19;"Swan_Falls";  "Physical Risk";"Chronic";Temperature extremes ;0;0;-1.9098;-1.7022;-1.255;-4.2494;-7.072;-13.6093;-20.6316
+2_Temperature extremes ;2;20;"Thousand_Springs";  "Physical Risk";"Chronic";Temperature extremes ;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2_Temperature extremes ;2;21;"Twin_Falls_(ID)";  "Physical Risk";"Chronic";Temperature extremes ;0;0;-3.3748;-4.0572;-2.7882;-5.7281;-9.3451;-19.8776;-26.4929
+2_Temperature extremes ;2;22;"Upper_Salmon_A";  "Physical Risk";"Chronic";Temperature extremes ;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2_Temperature extremes ;2;23;"Upper_Malad";  "Physical Risk";"Chronic";Temperature extremes ;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2_Temperature extremes ;2;24;"Hells_Canyon";  "Physical Risk";"Chronic";Temperature extremes ;0;0;-1.2403;-0.0051;0;-3.428;-5.4433;-10.7353;-15.8106
+2_Temperature extremes ;2;25;"Oxbow_(OR)";  "Physical Risk";"Chronic";Temperature extremes ;0;0;-1.2403;-0.0051;0;-3.428;-5.4433;-10.7353;-15.8106
+2_Temperature extremes ;2;26;"Upper_Salmon_B";  "Physical Risk";"Chronic";Temperature extremes ;0;0;-2.4031;-2.6469;-1.8299;-5.0165;-7.5377;-15.252;-20.9335
+2_Temperature extremes ;2;27;"Milner_Hydro";  "Physical Risk";"Chronic";Temperature extremes ;0;0;-3.3748;-4.0572;-2.7882;-5.7281;-9.3451;-19.8776;-26.4929
+2_Temperature extremes ;2;28;"Evander_Andrews_Power_Complex";  "Physical Risk";"Chronic";Temperature extremes ;0;0;-2.1835;-2.3046;-1.6794;-4.66;-7.2091;-14.4851;-19.756
+2_Temperature extremes ;2;29;"Bennett_Mountain";  "Physical Risk";"Chronic";Temperature extremes ;0;0;-2.1835;-2.3046;-1.6794;-4.66;-7.2091;-14.4851;-19.756
+2_Temperature extremes ;2;30;"Langley_Gulch_Power_Plant";  "Physical Risk";"Chronic";Temperature extremes ;0;0;-0.9794;-0.9632;-0.5842;-3.1539;-5.4843;-9.9164;-15.8392
+2_Temperature extremes ;2;9;"American_Falls";  "Physical Risk";"Chronic";Temperature extremes ;0;0;-3.0602;-4.016;-2.4181;-5.9472;-9.0847;-19.8516;-25.3968
+2_Water Efficiency ;2;10;"Bliss";  "Opportunity";"Resource Efficiency";Water Efficiency ;0;0;-0.432558;-0.476442;-0.329382;-0.90297;-1.35679;-2.74536;-3.76803
+2_Water Efficiency ;2;11;"Brownlee";  "Opportunity";"Resource Efficiency";Water Efficiency ;0;0;-0.12465;-0.000918;-0.009;-0.511056;-0.861498;-1.65191;-2.50594
+2_Water Efficiency ;2;12;"C_J_Strike";  "Opportunity";"Resource Efficiency";Water Efficiency ;0;0;-0.343764;-0.306396;-0.2259;-0.764892;-1.27296;-2.44967;-3.71369
+2_Water Efficiency ;2;13;"Cascade_Dam";  "Opportunity";"Resource Efficiency";Water Efficiency ;0;0;-0.230634;-0.089586;-0.038628;-0.636768;-1.0093;-1.91754;-2.9842
+2_Water Efficiency ;2;14;"Clear_Lake";  "Opportunity";"Resource Efficiency";Water Efficiency ;0;0;-0.432558;-0.476442;-0.329382;-0.90297;-1.35679;-2.74536;-3.76803
+2_Water Efficiency ;2;15;"Lower_Malad";  "Opportunity";"Resource Efficiency";Water Efficiency ;0;0;-0.432558;-0.476442;-0.329382;-0.90297;-1.35679;-2.74536;-3.76803
+2_Water Efficiency ;2;16;"Lower_Salmon";  "Opportunity";"Resource Efficiency";Water Efficiency ;0;0;-0.432558;-0.476442;-0.329382;-0.90297;-1.35679;-2.74536;-3.76803
+2_Water Efficiency ;2;17;"Salmon_Diesel";  "Opportunity";"Resource Efficiency";Water Efficiency ;0;0;-0.36351;-0.240048;-0.050994;-0.69597;-1.35666;-2.41009;-3.48712
+2_Water Efficiency ;2;18;"Shoshone_Falls";  "Opportunity";"Resource Efficiency";Water Efficiency ;0;0;-0.550746;-0.624276;-0.368874;-0.920178;-1.5761;-3.19871;-4.49278
+2_Water Efficiency ;2;19;"Swan_Falls";  "Opportunity";"Resource Efficiency";Water Efficiency ;0;0;-0.343764;-0.306396;-0.2259;-0.764892;-1.27296;-2.44967;-3.71369
+2_Water Efficiency ;2;20;"Thousand_Springs";  "Opportunity";"Resource Efficiency";Water Efficiency ;0;0;-0.432558;-0.476442;-0.329382;-0.90297;-1.35679;-2.74536;-3.76803
+2_Water Efficiency ;2;21;"Twin_Falls_(ID)";  "Opportunity";"Resource Efficiency";Water Efficiency ;0;0;-0.607464;-0.730296;-0.501876;-1.03106;-1.68212;-3.57797;-4.76872
+2_Water Efficiency ;2;22;"Upper_Salmon_A";  "Opportunity";"Resource Efficiency";Water Efficiency ;0;0;-0.432558;-0.476442;-0.329382;-0.90297;-1.35679;-2.74536;-3.76803
+2_Water Efficiency ;2;23;"Upper_Malad";  "Opportunity";"Resource Efficiency";Water Efficiency ;0;0;-0.432558;-0.476442;-0.329382;-0.90297;-1.35679;-2.74536;-3.76803
+2_Water Efficiency ;2;24;"Hells_Canyon";  "Opportunity";"Resource Efficiency";Water Efficiency ;0;0;-0.223254;-0.000918;0;-0.61704;-0.979794;-1.93235;-2.84591
+2_Water Efficiency ;2;25;"Oxbow_(OR)";  "Opportunity";"Resource Efficiency";Water Efficiency ;0;0;-0.223254;-0.000918;0;-0.61704;-0.979794;-1.93235;-2.84591
+2_Water Efficiency ;2;26;"Upper_Salmon_B";  "Opportunity";"Resource Efficiency";Water Efficiency ;0;0;-0.432558;-0.476442;-0.329382;-0.90297;-1.35679;-2.74536;-3.76803
+2_Water Efficiency ;2;27;"Milner_Hydro";  "Opportunity";"Resource Efficiency";Water Efficiency ;0;0;-0.607464;-0.730296;-0.501876;-1.03106;-1.68212;-3.57797;-4.76872
+2_Water Efficiency ;2;28;"Evander_Andrews_Power_Complex";  "Opportunity";"Resource Efficiency";Water Efficiency ;0;0;-0.39303;-0.414828;-0.302292;-0.8388;-1.29764;-2.60732;-3.55608
+2_Water Efficiency ;2;29;"Bennett_Mountain";  "Opportunity";"Resource Efficiency";Water Efficiency ;0;0;-0.39303;-0.414828;-0.302292;-0.8388;-1.29764;-2.60732;-3.55608
+2_Water Efficiency ;2;30;"Langley_Gulch_Power_Plant";  "Opportunity";"Resource Efficiency";Water Efficiency ;0;0;-0.176292;-0.173376;-0.105156;-0.567702;-0.987174;-1.78495;-2.85106
+2_Water Efficiency ;2;9;"American_Falls";  "Opportunity";"Resource Efficiency";Water Efficiency ;0;0;-0.550836;-0.72288;-0.435258;-1.0705;-1.63525;-3.57329;-4.57142
+3_Carbon pricing ;3;31;"Boise";  "Transition Risk";"Policy and Legal";Carbon pricing ;-0.32019;-2.02553;-2.58154;-2.59363;-3.71644;-3.71644;-5.33676;-7.47331;-8.93542
+3_Carbon pricing ;3;32;"Colorado_Springs";  "Transition Risk";"Policy and Legal";Carbon pricing ;-0.32019;-2.02553;-2.58154;-2.59363;-3.71644;-3.71644;-5.33676;-7.47331;-8.93542
+3_Carbon pricing ;3;33;"Corvallis";  "Transition Risk";"Policy and Legal";Carbon pricing ;-0.32019;-2.02553;-2.58154;-2.59363;-3.71644;-3.71644;-5.33676;-7.47331;-8.93542
+3_Carbon pricing ;3;34;"Cupertino";  "Transition Risk";"Policy and Legal";Carbon pricing ;-0.32019;-2.02553;-2.58154;-2.59363;-3.71644;-3.71644;-5.33676;-7.47331;-8.93542
+3_Carbon pricing ;3;35;"Houston";  "Transition Risk";"Policy and Legal";Carbon pricing ;-0.32019;-2.02553;-2.58154;-2.59363;-3.71644;-3.71644;-5.33676;-7.47331;-8.93542
+3_Carbon pricing ;3;36;"Palo_Alto";  "Transition Risk";"Policy and Legal";Carbon pricing ;-0.32019;-2.02553;-2.58154;-2.59363;-3.71644;-3.71644;-5.33676;-7.47331;-8.93542
+3_Carbon pricing ;3;37;"Plano";  "Transition Risk";"Policy and Legal";Carbon pricing ;-0.32019;-2.02553;-2.58154;-2.59363;-3.71644;-3.71644;-5.33676;-7.47331;-8.93542
+3_Carbon pricing ;3;38;"Roseville";  "Transition Risk";"Policy and Legal";Carbon pricing ;-0.32019;-2.02553;-2.58154;-2.59363;-3.71644;-3.71644;-5.33676;-7.47331;-8.93542
+3_Carbon pricing ;3;39;"San_Bernadino";  "Transition Risk";"Policy and Legal";Carbon pricing ;-0.32019;-2.02553;-2.58154;-2.59363;-3.71644;-3.71644;-5.33676;-7.47331;-8.93542
+3_Carbon pricing ;3;40;"Dublin";  "Transition Risk";"Policy and Legal";Carbon pricing ;-0.32019;-2.02553;-2.58154;-2.59363;-3.71644;-3.71644;-5.33676;-7.47331;-8.93542
+3_Carbon pricing ;3;41;"Puerto_Rico";  "Transition Risk";"Policy and Legal";Carbon pricing ;-0.32019;-2.02553;-2.58154;-2.59363;-3.71644;-3.71644;-5.33676;-7.47331;-8.93542
+3_Carbon pricing ;3;42;"Barcelona_Sant_Cugat";  "Transition Risk";"Policy and Legal";Carbon pricing ;-0.32019;-2.02553;-2.58154;-2.59363;-3.71644;-3.71644;-5.33676;-7.47331;-8.93542
+3_Carbon pricing ;3;43;"Rehovot";  "Transition Risk";"Policy and Legal";Carbon pricing ;-0.32019;-2.02553;-2.58154;-2.59363;-3.71644;-3.71644;-5.33676;-7.47331;-8.93542
+3_Carbon pricing ;3;44;"Singapore_DRD";  "Transition Risk";"Policy and Legal";Carbon pricing ;-0.32019;-2.02553;-2.58154;-2.59363;-3.71644;-3.71644;-5.33676;-7.47331;-8.93542
+3_Carbon pricing ;3;45;"San_Diego";  "Transition Risk";"Policy and Legal";Carbon pricing ;-0.32019;-2.02553;-2.58154;-2.59363;-3.71644;-3.71644;-5.33676;-7.47331;-8.93542
+3_Coastal flooding ;3;31;"Boise";  "Physical Risk";"Chronic";Coastal flooding ;0;0;0;0;0;0;0;0;0
+3_Coastal flooding ;3;32;"Colorado_Springs";  "Physical Risk";"Chronic";Coastal flooding ;0;0;0;0;0;0;0;0;0
+3_Coastal flooding ;3;33;"Corvallis";  "Physical Risk";"Chronic";Coastal flooding ;0;0;0;0;0;0;0;0;0
+3_Coastal flooding ;3;34;"Cupertino";  "Physical Risk";"Chronic";Coastal flooding ;0;0;0;0;0;0;0;0;0
+3_Coastal flooding ;3;35;"Houston";  "Physical Risk";"Chronic";Coastal flooding ;0;0;0;0;0;0;0;0;0
+3_Coastal flooding ;3;36;"Palo_Alto";  "Physical Risk";"Chronic";Coastal flooding ;-0.16984;-1.33904;-4.40296;-17.0157;-57.6361;-72;-72;-72;-72
+3_Coastal flooding ;3;37;"Plano";  "Physical Risk";"Chronic";Coastal flooding ;0;0;0;0;0;0;0;0;0
+3_Coastal flooding ;3;38;"Roseville";  "Physical Risk";"Chronic";Coastal flooding ;0;0;0;0;0;0;0;0;0
+3_Coastal flooding ;3;39;"San_Bernadino";  "Physical Risk";"Chronic";Coastal flooding ;0;0;0;0;0;0;0;0;0
+3_Coastal flooding ;3;40;"Dublin";  "Physical Risk";"Chronic";Coastal flooding ;0;0;0;0;0;0;0;0;0
+3_Coastal flooding ;3;41;"Puerto_Rico";  "Physical Risk";"Chronic";Coastal flooding ;0;0;0;0;0;0;0;0;0
+3_Coastal flooding ;3;42;"Barcelona_Sant_Cugat";  "Physical Risk";"Chronic";Coastal flooding ;0;0;0;0;0;0;0;0;0
+3_Coastal flooding ;3;43;"Rehovot";  "Physical Risk";"Chronic";Coastal flooding ;-0.45072;-6.4592;-68.9775;-72;-72;-72;-72;-72;-72
+3_Coastal flooding ;3;44;"Singapore_DRD";  "Physical Risk";"Chronic";Coastal flooding ;0;0;0;0;0;0;0;0;0
+3_Coastal flooding ;3;45;"San_Diego";  "Physical Risk";"Chronic";Coastal flooding ;-1.012;-4.10824;-19.4198;-24;-24;-24;-24;-24;-24
+3_Drought ;3;31;"Boise";  "Physical Risk";"Chronic";Drought ;-45;-9;-18;-54;-45;-63;-72;-63;-54
+3_Drought ;3;32;"Colorado_Springs";  "Physical Risk";"Chronic";Drought ;0;-4.5;-18;-4.5;-27;-27;-36;-9;-45
+3_Drought ;3;33;"Corvallis";  "Physical Risk";"Chronic";Drought ;-18;-27;-9;-36;-36;-63;-63;-54;-36
+3_Drought ;3;34;"Cupertino";  "Physical Risk";"Chronic";Drought ;-4.5;-4.5;0;0;0;-9;-9;-4.5;-27
+3_Drought ;3;35;"Houston";  "Physical Risk";"Chronic";Drought ;-4.5;-9;-27;-18;-18;-9;-27;-36;-45
+3_Drought ;3;36;"Palo_Alto";  "Physical Risk";"Chronic";Drought ;-4.5;-4.5;0;0;0;-9;-9;-4.5;-27
+3_Drought ;3;37;"Plano";  "Physical Risk";"Chronic";Drought ;-18;-9;-27;-4.5;-27;0;-27;-9;-27
+3_Drought ;3;38;"Roseville";  "Physical Risk";"Chronic";Drought ;0;0;-4.5;-4.5;-4.5;-36;-36;-9;-27
+3_Drought ;3;39;"San_Bernadino";  "Physical Risk";"Chronic";Drought ;-9;-4.5;0;0;0;-9;-27;-18;-18
+3_Drought ;3;40;"Dublin";  "Physical Risk";"Chronic";Drought ;0;-4.5;-4.5;0;-4.5;-4.5;-36;-27;-4.5
+3_Drought ;3;41;"Puerto_Rico";  "Physical Risk";"Chronic";Drought ;-4.5;-18;-27;-4.5;-45;-45;-45;-54;-54
+3_Drought ;3;42;"Barcelona_Sant_Cugat";  "Physical Risk";"Chronic";Drought ;-45;-45;-36;-63;-63;-63;-63;-63;-63
+3_Drought ;3;43;"Rehovot";  "Physical Risk";"Chronic";Drought ;0;-4.5;-27;-9;-36;-54;-63;-54;-63
+3_Drought ;3;44;"Singapore_DRD";  "Physical Risk";"Chronic";Drought ;0;0;0;0;0;0;0;0;0
+3_Drought ;3;45;"San_Diego";  "Physical Risk";"Chronic";Drought ;-9;-4.5;0;0;0;-9;-27;-18;-18
+3_Employee impacts ;3;31;"Boise";  "Physical Risk";"Acute";Employee impacts ;0;0;-0.077658;-0.071754;-0.04902;-0.203208;-0.361104;-0.635928;-0.994692
+3_Employee impacts ;3;32;"Colorado_Springs";  "Physical Risk";"Acute";Employee impacts ;0;-0.015138;-0.459546;-0.580182;-0.479424;-0.706578;-1.15061;-2.15033;-2.51943
+3_Employee impacts ;3;33;"Corvallis";  "Physical Risk";"Acute";Employee impacts ;0;0;0;0;0;0;-0.040722;-0.212178;-0.325008
+3_Employee impacts ;3;34;"Cupertino";  "Physical Risk";"Acute";Employee impacts ;0;0;-0.316836;-0.433956;-0.265146;-1.08065;-1.64883;-2.38031;-2.79841
+3_Employee impacts ;3;35;"Houston";  "Physical Risk";"Acute";Employee impacts ;0;-0.211548;-0.435798;-0.957474;-0.89913;-1.53572;-2.10695;-2.50177;-2.86272
+3_Employee impacts ;3;36;"Palo_Alto";  "Physical Risk";"Acute";Employee impacts ;0;0;-0.431034;-0.67203;-0.405672;-1.59799;-2.19913;-2.87456;-3.61909
+3_Employee impacts ;3;37;"Plano";  "Physical Risk";"Acute";Employee impacts ;0;0;-0.156468;-0.400176;-0.315894;-0.475644;-1.0272;-1.79896;-2.22049
+3_Employee impacts ;3;38;"Roseville";  "Physical Risk";"Acute";Employee impacts ;0;0;-0.002064;-0.027408;-0.046632;-0.14241;-0.381618;-0.63084;-0.841932
+3_Employee impacts ;3;39;"San_Bernadino";  "Physical Risk";"Acute";Employee impacts ;0;0;-0.49167;-0.837738;-0.510828;-1.32046;-1.87394;-2.61191;-2.95794
+3_Employee impacts ;3;40;"Dublin";  "Physical Risk";"Acute";Employee impacts ;-0.030918;-0.244326;-0.182832;-0.244194;-0.695574;-1.05797;-1.32298;-1.68377;-1.48765
+3_Employee impacts ;3;41;"Puerto_Rico";  "Physical Risk";"Acute";Employee impacts ;-0.481158;-1.68865;-2.76919;-4.58879;-5.50725;-5.68485;-5.76205;-5.79301;-5.82
+3_Employee impacts ;3;42;"Barcelona_Sant_Cugat";  "Physical Risk";"Acute";Employee impacts ;-0.499122;-1.18753;-1.57455;-1.54544;-2.74121;-3.75098;-4.52675;-5.19493;-5.54206
+3_Employee impacts ;3;43;"Rehovot";  "Physical Risk";"Acute";Employee impacts ;0;0;0;-0.064452;-0.16812;-0.384654;-0.57297;-1.04155;-1.3645
+3_Employee impacts ;3;44;"Singapore_DRD";  "Physical Risk";"Acute";Employee impacts ;-0.203352;-0.182532;-0.700092;-1.28623;-2.02962;-2.43739;-2.46176;-3.34166;-3.95512
+3_Employee impacts ;3;45;"San_Diego";  "Physical Risk";"Acute";Employee impacts ;0;0;-0.403758;-0.64227;-0.414672;-1.03477;-1.54375;-2.27843;-2.71482
+3_Energy Efficiency ;3;31;"Boise";  "Opportunity";"Resource Efficiency";Energy Efficiency ;0;0;-0.207088;-0.191344;-0.13072;-0.541888;-0.962944;-1.69581;-2.65251
+3_Energy Efficiency ;3;32;"Colorado_Springs";  "Opportunity";"Resource Efficiency";Energy Efficiency ;0;-0.040368;-1.22546;-1.54715;-1.27846;-1.88421;-3.06829;-5.73421;-6.71848
+3_Energy Efficiency ;3;33;"Corvallis";  "Opportunity";"Resource Efficiency";Energy Efficiency ;0;0;0;0;0;0;-0.108592;-0.565808;-0.866688
+3_Energy Efficiency ;3;34;"Cupertino";  "Opportunity";"Resource Efficiency";Energy Efficiency ;0;0;-0.844896;-1.15722;-0.707056;-2.88173;-4.39688;-6.3475;-7.46243
+3_Energy Efficiency ;3;35;"Houston";  "Opportunity";"Resource Efficiency";Energy Efficiency ;0;-0.564128;-1.16213;-2.55326;-2.39768;-4.09526;-5.61853;-6.67138;-7.63392
+3_Energy Efficiency ;3;36;"Palo_Alto";  "Opportunity";"Resource Efficiency";Energy Efficiency ;0;0;-1.14942;-1.79208;-1.08179;-4.2613;-5.86435;-7.66549;-9.6509
+3_Energy Efficiency ;3;37;"Plano";  "Opportunity";"Resource Efficiency";Energy Efficiency ;0;0;-0.417248;-1.06714;-0.842384;-1.26838;-2.7392;-4.79723;-5.92131
+3_Energy Efficiency ;3;38;"Roseville";  "Opportunity";"Resource Efficiency";Energy Efficiency ;0;0;-0.005504;-0.073088;-0.124352;-0.37976;-1.01765;-1.68224;-2.24515
+3_Energy Efficiency ;3;39;"San_Bernadino";  "Opportunity";"Resource Efficiency";Energy Efficiency ;0;0;-1.31112;-2.23397;-1.36221;-3.52122;-4.99718;-6.96509;-7.88784
+3_Energy Efficiency ;3;40;"Dublin";  "Opportunity";"Resource Efficiency";Energy Efficiency ;-0.082448;-0.651536;-0.487552;-0.651184;-1.85486;-2.82126;-3.52794;-4.49006;-3.96707
+3_Energy Efficiency ;3;41;"Puerto_Rico";  "Opportunity";"Resource Efficiency";Energy Efficiency ;-1.28309;-4.50307;-7.38451;-12.2368;-14.686;-15.1596;-15.3655;-15.448;-15.52
+3_Energy Efficiency ;3;42;"Barcelona_Sant_Cugat";  "Opportunity";"Resource Efficiency";Energy Efficiency ;-1.33099;-3.16674;-4.1988;-4.12117;-7.3099;-10.0026;-12.0713;-13.8532;-14.7788
+3_Energy Efficiency ;3;43;"Rehovot";  "Opportunity";"Resource Efficiency";Energy Efficiency ;0;0;0;-0.171872;-0.44832;-1.02574;-1.52792;-2.77746;-3.63866
+3_Energy Efficiency ;3;44;"Singapore_DRD";  "Opportunity";"Resource Efficiency";Energy Efficiency ;-0.542272;-0.486752;-1.86691;-3.42994;-5.41232;-6.49971;-6.56469;-8.91109;-10.547
+3_Energy Efficiency ;3;45;"San_Diego";  "Opportunity";"Resource Efficiency";Energy Efficiency ;0;0;-1.07669;-1.71272;-1.10579;-2.75938;-4.11666;-6.07582;-7.23952
+3_Energy resilience ;3;31;"Boise";  "Opportunity";"Resilience";Energy resilience ;0;0;-0.194145;-0.179385;-0.12255;-0.50802;-0.90276;-1.58982;-2.48673
+3_Energy resilience ;3;32;"Colorado_Springs";  "Opportunity";"Resilience";Energy resilience ;0;-0.037845;-1.14886;-1.45046;-1.19856;-1.76645;-2.87652;-5.37582;-6.29857
+3_Energy resilience ;3;33;"Corvallis";  "Opportunity";"Resilience";Energy resilience ;0;0;0;0;0;0;-0.101805;-0.530445;-0.81252
+3_Energy resilience ;3;34;"Cupertino";  "Opportunity";"Resilience";Energy resilience ;0;0;-0.79209;-1.08489;-0.662865;-2.70162;-4.12207;-5.95078;-6.99603
+3_Energy resilience ;3;35;"Houston";  "Opportunity";"Resilience";Energy resilience ;0;-0.52887;-1.08949;-2.39369;-2.24782;-3.83931;-5.26737;-6.25441;-7.1568
+3_Energy resilience ;3;36;"Palo_Alto";  "Opportunity";"Resilience";Energy resilience ;0;0;-1.07759;-1.68007;-1.01418;-3.99496;-5.49783;-7.1864;-9.04772
+3_Energy resilience ;3;37;"Plano";  "Opportunity";"Resilience";Energy resilience ;0;0;-0.39117;-1.00044;-0.789735;-1.18911;-2.568;-4.4974;-5.55123
+3_Energy resilience ;3;38;"Roseville";  "Opportunity";"Resilience";Energy resilience ;0;0;-0.00516;-0.06852;-0.11658;-0.356025;-0.954045;-1.5771;-2.10483
+3_Energy resilience ;3;39;"San_Bernadino";  "Opportunity";"Resilience";Energy resilience ;0;0;-1.22917;-2.09435;-1.27707;-3.30114;-4.68486;-6.52977;-7.39485
+3_Energy resilience ;3;40;"Dublin";  "Opportunity";"Resilience";Energy resilience ;-0.077295;-0.610815;-0.45708;-0.610485;-1.73893;-2.64493;-3.30744;-4.20944;-3.71913
+3_Energy resilience ;3;41;"Puerto_Rico";  "Opportunity";"Resilience";Energy resilience ;-1.20289;-4.22163;-6.92298;-11.472;-13.7681;-14.2121;-14.4051;-14.4825;-14.55
+3_Energy resilience ;3;42;"Barcelona_Sant_Cugat";  "Opportunity";"Resilience";Energy resilience ;-1.2478;-2.96882;-3.93637;-3.8636;-6.85304;-9.37744;-11.3169;-12.9873;-13.8552
+3_Energy resilience ;3;43;"Rehovot";  "Opportunity";"Resilience";Energy resilience ;0;0;0;-0.16113;-0.4203;-0.961635;-1.43243;-2.60387;-3.41124
+3_Energy resilience ;3;44;"Singapore_DRD";  "Opportunity";"Resilience";Energy resilience ;-0.50838;-0.45633;-1.75023;-3.21557;-5.07405;-6.09348;-6.1544;-8.35414;-9.88781
+3_Energy resilience ;3;45;"San_Diego";  "Opportunity";"Resilience";Energy resilience ;0;0;-1.0094;-1.60567;-1.03668;-2.58691;-3.85936;-5.69609;-6.78705
+3_Litigation risk ;3;31;"Boise";  "Transition Risk";"Policy and Legal";Litigation risk ;0;0;-0.103544;-0.095672;-0.06536;-0.270944;-0.481472;-0.847904;-1.32626
+3_Litigation risk ;3;32;"Colorado_Springs";  "Transition Risk";"Policy and Legal";Litigation risk ;0;-0.020184;-0.612728;-0.773576;-0.639232;-0.942104;-1.53414;-2.8671;-3.35924
+3_Litigation risk ;3;33;"Corvallis";  "Transition Risk";"Policy and Legal";Litigation risk ;0;0;0;0;0;0;-0.054296;-0.282904;-0.433344
+3_Litigation risk ;3;34;"Cupertino";  "Transition Risk";"Policy and Legal";Litigation risk ;0;0;-0.422448;-0.578608;-0.353528;-1.44086;-2.19844;-3.17375;-3.73122
+3_Litigation risk ;3;35;"Houston";  "Transition Risk";"Policy and Legal";Litigation risk ;0;-0.282064;-0.581064;-1.27663;-1.19884;-2.04763;-2.80926;-3.33569;-3.81696
+3_Litigation risk ;3;36;"Palo_Alto";  "Transition Risk";"Policy and Legal";Litigation risk ;0;0;-0.574712;-0.89604;-0.540896;-2.13065;-2.93218;-3.83274;-4.82545
+3_Litigation risk ;3;37;"Plano";  "Transition Risk";"Policy and Legal";Litigation risk ;0;0;-0.208624;-0.533568;-0.421192;-0.634192;-1.3696;-2.39862;-2.96066
+3_Litigation risk ;3;38;"Roseville";  "Transition Risk";"Policy and Legal";Litigation risk ;0;0;-0.002752;-0.036544;-0.062176;-0.18988;-0.508824;-0.84112;-1.12258
+3_Litigation risk ;3;39;"San_Bernadino";  "Transition Risk";"Policy and Legal";Litigation risk ;0;0;-0.65556;-1.11698;-0.681104;-1.76061;-2.49859;-3.48254;-3.94392
+3_Litigation risk ;3;40;"Dublin";  "Transition Risk";"Policy and Legal";Litigation risk ;-0.041224;-0.325768;-0.243776;-0.325592;-0.927432;-1.41063;-1.76397;-2.24503;-1.98354
+3_Litigation risk ;3;41;"Puerto_Rico";  "Transition Risk";"Policy and Legal";Litigation risk ;-0.641544;-2.25154;-3.69226;-6.11838;-7.343;-7.5798;-7.68273;-7.72402;-7.76
+3_Litigation risk ;3;42;"Barcelona_Sant_Cugat";  "Transition Risk";"Policy and Legal";Litigation risk ;-0.665496;-1.58337;-2.0994;-2.06058;-3.65495;-5.0013;-6.03566;-6.92658;-7.38942
+3_Litigation risk ;3;43;"Rehovot";  "Transition Risk";"Policy and Legal";Litigation risk ;0;0;0;-0.085936;-0.22416;-0.512872;-0.76396;-1.38873;-1.81933
+3_Litigation risk ;3;44;"Singapore_DRD";  "Transition Risk";"Policy and Legal";Litigation risk ;-0.271136;-0.243376;-0.933456;-1.71497;-2.70616;-3.24986;-3.28234;-4.45554;-5.2735
+3_Litigation risk ;3;45;"San_Diego";  "Transition Risk";"Policy and Legal";Litigation risk ;0;0;-0.538344;-0.85636;-0.552896;-1.37969;-2.05833;-3.03791;-3.61976
+3_Materials Efficiency ;3;31;"Boise";  "Opportunity";"Resource Efficiency";Materials Efficiency ;0;0;-0.155316;-0.143508;-0.09804;-0.406416;-0.722208;-1.27186;-1.98938
+3_Materials Efficiency ;3;32;"Colorado_Springs";  "Opportunity";"Resource Efficiency";Materials Efficiency ;0;-0.030276;-0.919092;-1.16036;-0.958848;-1.41316;-2.30122;-4.30066;-5.03886
+3_Materials Efficiency ;3;33;"Corvallis";  "Opportunity";"Resource Efficiency";Materials Efficiency ;0;0;0;0;0;0;-0.081444;-0.424356;-0.650016
+3_Materials Efficiency ;3;34;"Cupertino";  "Opportunity";"Resource Efficiency";Materials Efficiency ;0;0;-0.633672;-0.867912;-0.530292;-2.1613;-3.29766;-4.76063;-5.59682
+3_Materials Efficiency ;3;35;"Houston";  "Opportunity";"Resource Efficiency";Materials Efficiency ;0;-0.423096;-0.871596;-1.91495;-1.79826;-3.07145;-4.2139;-5.00353;-5.72544
+3_Materials Efficiency ;3;36;"Palo_Alto";  "Opportunity";"Resource Efficiency";Materials Efficiency ;0;0;-0.862068;-1.34406;-0.811344;-3.19597;-4.39826;-5.74912;-7.23817
+3_Materials Efficiency ;3;37;"Plano";  "Opportunity";"Resource Efficiency";Materials Efficiency ;0;0;-0.312936;-0.800352;-0.631788;-0.951288;-2.0544;-3.59792;-4.44098
+3_Materials Efficiency ;3;38;"Roseville";  "Opportunity";"Resource Efficiency";Materials Efficiency ;0;0;-0.004128;-0.054816;-0.093264;-0.28482;-0.763236;-1.26168;-1.68386
+3_Materials Efficiency ;3;39;"San_Bernadino";  "Opportunity";"Resource Efficiency";Materials Efficiency ;0;0;-0.98334;-1.67548;-1.02166;-2.64091;-3.74789;-5.22382;-5.91588
+3_Materials Efficiency ;3;40;"Dublin";  "Opportunity";"Resource Efficiency";Materials Efficiency ;-0.061836;-0.488652;-0.365664;-0.488388;-1.39115;-2.11595;-2.64595;-3.36755;-2.9753
+3_Materials Efficiency ;3;41;"Puerto_Rico";  "Opportunity";"Resource Efficiency";Materials Efficiency ;-0.962316;-3.3773;-5.53838;-9.17758;-11.0145;-11.3697;-11.5241;-11.586;-11.64
+3_Materials Efficiency ;3;42;"Barcelona_Sant_Cugat";  "Opportunity";"Resource Efficiency";Materials Efficiency ;-0.998244;-2.37505;-3.1491;-3.09088;-5.48243;-7.50196;-9.0535;-10.3899;-11.0841
+3_Materials Efficiency ;3;43;"Rehovot";  "Opportunity";"Resource Efficiency";Materials Efficiency ;0;0;0;-0.128904;-0.33624;-0.769308;-1.14594;-2.08309;-2.72899
+3_Materials Efficiency ;3;44;"Singapore_DRD";  "Opportunity";"Resource Efficiency";Materials Efficiency ;-0.406704;-0.365064;-1.40018;-2.57245;-4.05924;-4.87478;-4.92352;-6.68332;-7.91024
+3_Materials Efficiency ;3;45;"San_Diego";  "Opportunity";"Resource Efficiency";Materials Efficiency ;0;0;-0.807516;-1.28454;-0.829344;-2.06953;-3.08749;-4.55687;-5.42964
+3_Materials cost ;3;31;"Boise";  "Transition Risk";"Reputation";Materials cost ;0;0;-0.12943;-0.11959;-0.0817;-0.33868;-0.60184;-1.05988;-1.65782
+3_Materials cost ;3;32;"Colorado_Springs";  "Transition Risk";"Reputation";Materials cost ;0;-0.02523;-0.76591;-0.96697;-0.79904;-1.17763;-1.91768;-3.58388;-4.19905
+3_Materials cost ;3;33;"Corvallis";  "Transition Risk";"Reputation";Materials cost ;0;0;0;0;0;0;-0.06787;-0.35363;-0.54168
+3_Materials cost ;3;34;"Cupertino";  "Transition Risk";"Reputation";Materials cost ;0;0;-0.52806;-0.72326;-0.44191;-1.80108;-2.74805;-3.96719;-4.66402
+3_Materials cost ;3;35;"Houston";  "Transition Risk";"Reputation";Materials cost ;0;-0.35258;-0.72633;-1.59579;-1.49855;-2.55954;-3.51158;-4.16961;-4.7712
+3_Materials cost ;3;36;"Palo_Alto";  "Transition Risk";"Reputation";Materials cost ;0;0;-0.71839;-1.12005;-0.67612;-2.66331;-3.66522;-4.79093;-6.03181
+3_Materials cost ;3;37;"Plano";  "Transition Risk";"Reputation";Materials cost ;0;0;-0.26078;-0.66696;-0.52649;-0.79274;-1.712;-2.99827;-3.70082
+3_Materials cost ;3;38;"Roseville";  "Transition Risk";"Reputation";Materials cost ;0;0;-0.00344;-0.04568;-0.07772;-0.23735;-0.63603;-1.0514;-1.40322
+3_Materials cost ;3;39;"San_Bernadino";  "Transition Risk";"Reputation";Materials cost ;0;0;-0.81945;-1.39623;-0.85138;-2.20076;-3.12324;-4.35318;-4.9299
+3_Materials cost ;3;40;"Dublin";  "Transition Risk";"Reputation";Materials cost ;-0.05153;-0.40721;-0.30472;-0.40699;-1.15929;-1.76329;-2.20496;-2.80629;-2.47942
+3_Materials cost ;3;41;"Puerto_Rico";  "Transition Risk";"Reputation";Materials cost ;-0.80193;-2.81442;-4.61532;-7.64798;-9.17875;-9.47475;-9.60341;-9.65502;-9.7
+3_Materials cost ;3;42;"Barcelona_Sant_Cugat";  "Transition Risk";"Reputation";Materials cost ;-0.83187;-1.97921;-2.62425;-2.57573;-4.56869;-6.25163;-7.54458;-8.65822;-9.23677
+3_Materials cost ;3;43;"Rehovot";  "Transition Risk";"Reputation";Materials cost ;0;0;0;-0.10742;-0.2802;-0.64109;-0.95495;-1.73591;-2.27416
+3_Materials cost ;3;44;"Singapore_DRD";  "Transition Risk";"Reputation";Materials cost ;-0.33892;-0.30422;-1.16682;-2.14371;-3.3827;-4.06232;-4.10293;-5.56943;-6.59187
+3_Materials cost ;3;45;"San_Diego";  "Transition Risk";"Reputation";Materials cost ;0;0;-0.67293;-1.07045;-0.69112;-1.72461;-2.57291;-3.79739;-4.5247
+3_New technology ;3;31;"Boise";  "Transition Risk";"Technology";New technology ;0;0;-0.090601;-0.083713;-0.05719;-0.237076;-0.421288;-0.741916;-1.16047
+3_New technology ;3;32;"Colorado_Springs";  "Transition Risk";"Technology";New technology ;0;-0.017661;-0.536137;-0.676879;-0.559328;-0.824341;-1.34238;-2.50872;-2.93934
+3_New technology ;3;33;"Corvallis";  "Transition Risk";"Technology";New technology ;0;0;0;0;0;0;-0.047509;-0.247541;-0.379176
+3_New technology ;3;34;"Cupertino";  "Transition Risk";"Technology";New technology ;0;0;-0.369642;-0.506282;-0.309337;-1.26076;-1.92364;-2.77703;-3.26481
+3_New technology ;3;35;"Houston";  "Transition Risk";"Technology";New technology ;0;-0.246806;-0.508431;-1.11705;-1.04899;-1.79168;-2.45811;-2.91873;-3.33984
+3_New technology ;3;36;"Palo_Alto";  "Transition Risk";"Technology";New technology ;0;0;-0.502873;-0.784035;-0.473284;-1.86432;-2.56565;-3.35365;-4.22227
+3_New technology ;3;37;"Plano";  "Transition Risk";"Technology";New technology ;0;0;-0.182546;-0.466872;-0.368543;-0.554918;-1.1984;-2.09879;-2.59057
+3_New technology ;3;38;"Roseville";  "Transition Risk";"Technology";New technology ;0;0;-0.002408;-0.031976;-0.054404;-0.166145;-0.445221;-0.73598;-0.982254
+3_New technology ;3;39;"San_Bernadino";  "Transition Risk";"Technology";New technology ;0;0;-0.573615;-0.977361;-0.595966;-1.54053;-2.18627;-3.04723;-3.45093
+3_New technology ;3;40;"Dublin";  "Transition Risk";"Technology";New technology ;-0.036071;-0.285047;-0.213304;-0.284893;-0.811503;-1.2343;-1.54347;-1.9644;-1.73559
+3_New technology ;3;41;"Puerto_Rico";  "Transition Risk";"Technology";New technology ;-0.561351;-1.97009;-3.23072;-5.35359;-6.42513;-6.63233;-6.72239;-6.75851;-6.79
+3_New technology ;3;42;"Barcelona_Sant_Cugat";  "Transition Risk";"Technology";New technology ;-0.582309;-1.38545;-1.83698;-1.80301;-3.19808;-4.37614;-5.28121;-6.06075;-6.46574
+3_New technology ;3;43;"Rehovot";  "Transition Risk";"Technology";New technology ;0;0;0;-0.075194;-0.19614;-0.448763;-0.668465;-1.21514;-1.59191
+3_New technology ;3;44;"Singapore_DRD";  "Transition Risk";"Technology";New technology ;-0.237244;-0.212954;-0.816774;-1.5006;-2.36789;-2.84362;-2.87205;-3.8986;-4.61431
+3_New technology ;3;45;"San_Diego";  "Transition Risk";"Technology";New technology ;0;0;-0.471051;-0.749315;-0.483784;-1.20723;-1.80104;-2.65817;-3.16729
+3_Renewable price stability ;3;31;"Boise";  "Opportunity";"Energy Source";Renewable price stability ;0;0;-0.038829;-0.035877;-0.02451;-0.101604;-0.180552;-0.317964;-0.497346
+3_Renewable price stability ;3;32;"Colorado_Springs";  "Opportunity";"Energy Source";Renewable price stability ;0;-0.007569;-0.229773;-0.290091;-0.239712;-0.353289;-0.575304;-1.07516;-1.25971
+3_Renewable price stability ;3;33;"Corvallis";  "Opportunity";"Energy Source";Renewable price stability ;0;0;0;0;0;0;-0.020361;-0.106089;-0.162504
+3_Renewable price stability ;3;34;"Cupertino";  "Opportunity";"Energy Source";Renewable price stability ;0;0;-0.158418;-0.216978;-0.132573;-0.540324;-0.824415;-1.19016;-1.39921
+3_Renewable price stability ;3;35;"Houston";  "Opportunity";"Energy Source";Renewable price stability ;0;-0.105774;-0.217899;-0.478737;-0.449565;-0.767862;-1.05347;-1.25088;-1.43136
+3_Renewable price stability ;3;36;"Palo_Alto";  "Opportunity";"Energy Source";Renewable price stability ;0;0;-0.215517;-0.336015;-0.202836;-0.798993;-1.09957;-1.43728;-1.80954
+3_Renewable price stability ;3;37;"Plano";  "Opportunity";"Energy Source";Renewable price stability ;0;0;-0.078234;-0.200088;-0.157947;-0.237822;-0.5136;-0.899481;-1.11025
+3_Renewable price stability ;3;38;"Roseville";  "Opportunity";"Energy Source";Renewable price stability ;0;0;-0.001032;-0.013704;-0.023316;-0.071205;-0.190809;-0.31542;-0.420966
+3_Renewable price stability ;3;39;"San_Bernadino";  "Opportunity";"Energy Source";Renewable price stability ;0;0;-0.245835;-0.418869;-0.255414;-0.660228;-0.936972;-1.30595;-1.47897
+3_Renewable price stability ;3;40;"Dublin";  "Opportunity";"Energy Source";Renewable price stability ;-0.015459;-0.122163;-0.091416;-0.122097;-0.347787;-0.528987;-0.661488;-0.841887;-0.743826
+3_Renewable price stability ;3;41;"Puerto_Rico";  "Opportunity";"Energy Source";Renewable price stability ;-0.240579;-0.844326;-1.3846;-2.29439;-2.75362;-2.84242;-2.88102;-2.89651;-2.91
+3_Renewable price stability ;3;42;"Barcelona_Sant_Cugat";  "Opportunity";"Energy Source";Renewable price stability ;-0.249561;-0.593763;-0.787275;-0.772719;-1.37061;-1.87549;-2.26337;-2.59747;-2.77103
+3_Renewable price stability ;3;43;"Rehovot";  "Opportunity";"Energy Source";Renewable price stability ;0;0;0;-0.032226;-0.08406;-0.192327;-0.286485;-0.520773;-0.682248
+3_Renewable price stability ;3;44;"Singapore_DRD";  "Opportunity";"Energy Source";Renewable price stability ;-0.101676;-0.091266;-0.350046;-0.643113;-1.01481;-1.2187;-1.23088;-1.67083;-1.97756
+3_Renewable price stability ;3;45;"San_Diego";  "Opportunity";"Energy Source";Renewable price stability ;0;0;-0.201879;-0.321135;-0.207336;-0.517383;-0.771873;-1.13922;-1.35741
+3_Reputation damage ;3;31;"Boise";  "Transition Risk";"Market";Reputation damage ;0;0;-0.064715;-0.059795;-0.04085;-0.16934;-0.30092;-0.52994;-0.82891
+3_Reputation damage ;3;32;"Colorado_Springs";  "Transition Risk";"Market";Reputation damage ;0;-0.012615;-0.382955;-0.483485;-0.39952;-0.588815;-0.95884;-1.79194;-2.09952
+3_Reputation damage ;3;33;"Corvallis";  "Transition Risk";"Market";Reputation damage ;0;0;0;0;0;0;-0.033935;-0.176815;-0.27084
+3_Reputation damage ;3;34;"Cupertino";  "Transition Risk";"Market";Reputation damage ;0;0;-0.26403;-0.36163;-0.220955;-0.90054;-1.37403;-1.9836;-2.33201
+3_Reputation damage ;3;35;"Houston";  "Transition Risk";"Market";Reputation damage ;0;-0.17629;-0.363165;-0.797895;-0.749275;-1.27977;-1.75579;-2.08481;-2.3856
+3_Reputation damage ;3;36;"Palo_Alto";  "Transition Risk";"Market";Reputation damage ;0;0;-0.359195;-0.560025;-0.33806;-1.33166;-1.83261;-2.39547;-3.01591
+3_Reputation damage ;3;37;"Plano";  "Transition Risk";"Market";Reputation damage ;0;0;-0.13039;-0.33348;-0.263245;-0.39637;-0.856;-1.49914;-1.85041
+3_Reputation damage ;3;38;"Roseville";  "Transition Risk";"Market";Reputation damage ;0;0;-0.00172;-0.02284;-0.03886;-0.118675;-0.318015;-0.5257;-0.70161
+3_Reputation damage ;3;39;"San_Bernadino";  "Transition Risk";"Market";Reputation damage ;0;0;-0.409725;-0.698115;-0.42569;-1.10038;-1.56162;-2.17659;-2.46495
+3_Reputation damage ;3;40;"Dublin";  "Transition Risk";"Market";Reputation damage ;-0.025765;-0.203605;-0.15236;-0.203495;-0.579645;-0.881645;-1.10248;-1.40315;-1.23971
+3_Reputation damage ;3;41;"Puerto_Rico";  "Transition Risk";"Market";Reputation damage ;-0.400965;-1.40721;-2.30766;-3.82399;-4.58937;-4.73738;-4.80171;-4.82751;-4.85
+3_Reputation damage ;3;42;"Barcelona_Sant_Cugat";  "Transition Risk";"Market";Reputation damage ;-0.415935;-0.989605;-1.31212;-1.28787;-2.28435;-3.12582;-3.77229;-4.32911;-4.61838
+3_Reputation damage ;3;43;"Rehovot";  "Transition Risk";"Market";Reputation damage ;0;0;0;-0.05371;-0.1401;-0.320545;-0.477475;-0.867955;-1.13708
+3_Reputation damage ;3;44;"Singapore_DRD";  "Transition Risk";"Market";Reputation damage ;-0.16946;-0.15211;-0.58341;-1.07186;-1.69135;-2.03116;-2.05146;-2.78472;-3.29594
+3_Reputation damage ;3;45;"San_Diego";  "Transition Risk";"Market";Reputation damage ;0;0;-0.336465;-0.535225;-0.34556;-0.862305;-1.28646;-1.8987;-2.26235
+3_Storm damage ;3;31;"Boise";  "Physical Risk";"Acute";Storm damage ;0;0;-0.90601;-0.83713;-0.5719;-2.37076;-4.21288;-7.41916;-11.6047
+3_Storm damage ;3;32;"Colorado_Springs";  "Physical Risk";"Acute";Storm damage ;0;-0.17661;-5.36137;-6.76879;-5.59328;-8.24341;-13.4238;-25.0872;-29.3933
+3_Storm damage ;3;33;"Corvallis";  "Physical Risk";"Acute";Storm damage ;0;0;0;0;0;0;-0.47509;-2.47541;-3.79176
+3_Storm damage ;3;34;"Cupertino";  "Physical Risk";"Acute";Storm damage ;0;0;-3.69642;-5.06282;-3.09337;-12.6076;-19.2363;-27.7703;-32.6481
+3_Storm damage ;3;35;"Houston";  "Physical Risk";"Acute";Storm damage ;0;-2.46806;-5.08431;-11.1705;-10.4898;-17.9168;-24.5811;-29.1873;-33.3984
+3_Storm damage ;3;36;"Palo_Alto";  "Physical Risk";"Acute";Storm damage ;0;0;-5.02873;-7.84035;-4.73284;-18.6432;-25.6565;-33.5365;-42.2227
+3_Storm damage ;3;37;"Plano";  "Physical Risk";"Acute";Storm damage ;0;0;-1.82546;-4.66872;-3.68543;-5.54918;-11.984;-20.9879;-25.9057
+3_Storm damage ;3;38;"Roseville";  "Physical Risk";"Acute";Storm damage ;0;0;-0.02408;-0.31976;-0.54404;-1.66145;-4.45221;-7.3598;-9.82254
+3_Storm damage ;3;39;"San_Bernadino";  "Physical Risk";"Acute";Storm damage ;0;0;-5.73615;-9.77361;-5.95966;-15.4053;-21.8627;-30.4723;-34.5093
+3_Storm damage ;3;40;"Dublin";  "Physical Risk";"Acute";Storm damage ;-0.36071;-2.85047;-2.13304;-2.84893;-8.11503;-12.343;-15.4347;-19.644;-17.3559
+3_Storm damage ;3;41;"Puerto_Rico";  "Physical Risk";"Acute";Storm damage ;-5.61351;-19.7009;-32.3072;-53.5359;-64.2512;-66.3233;-67.2239;-67.5851;-67.9
+3_Storm damage ;3;42;"Barcelona_Sant_Cugat";  "Physical Risk";"Acute";Storm damage ;-5.82309;-13.8545;-18.3697;-18.0301;-31.9808;-43.7614;-52.8121;-60.6075;-64.6574
+3_Storm damage ;3;43;"Rehovot";  "Physical Risk";"Acute";Storm damage ;0;0;0;-0.75194;-1.9614;-4.48763;-6.68465;-12.1514;-15.9191
+3_Storm damage ;3;44;"Singapore_DRD";  "Physical Risk";"Acute";Storm damage ;-2.37244;-2.12954;-8.16774;-15.006;-23.6789;-28.4362;-28.7205;-38.986;-46.1431
+3_Storm damage ;3;45;"San_Diego";  "Physical Risk";"Acute";Storm damage ;0;0;-4.71051;-7.49315;-4.83784;-12.0723;-18.0104;-26.5817;-31.6729
+3_Temperature extremes ;3;31;"Boise";  "Physical Risk";"Chronic";Temperature extremes ;0;0;-1.2943;-1.1959;-0.817;-3.3868;-6.0184;-10.5988;-16.5782
+3_Temperature extremes ;3;32;"Colorado_Springs";  "Physical Risk";"Chronic";Temperature extremes ;0;-0.2523;-7.6591;-9.6697;-7.9904;-11.7763;-19.1768;-35.8388;-41.9905
+3_Temperature extremes ;3;33;"Corvallis";  "Physical Risk";"Chronic";Temperature extremes ;0;0;0;0;0;0;-0.6787;-3.5363;-5.4168
+3_Temperature extremes ;3;34;"Cupertino";  "Physical Risk";"Chronic";Temperature extremes ;0;0;-5.2806;-7.2326;-4.4191;-18.0108;-27.4805;-39.6719;-46.6402
+3_Temperature extremes ;3;35;"Houston";  "Physical Risk";"Chronic";Temperature extremes ;0;-3.5258;-7.2633;-15.9579;-14.9855;-25.5954;-35.1158;-41.6961;-47.712
+3_Temperature extremes ;3;36;"Palo_Alto";  "Physical Risk";"Chronic";Temperature extremes ;0;0;-7.1839;-11.2005;-6.7612;-26.6331;-36.6522;-47.9093;-60.3181
+3_Temperature extremes ;3;37;"Plano";  "Physical Risk";"Chronic";Temperature extremes ;0;0;-2.6078;-6.6696;-5.2649;-7.9274;-17.12;-29.9827;-37.0082
+3_Temperature extremes ;3;38;"Roseville";  "Physical Risk";"Chronic";Temperature extremes ;0;0;-0.0344;-0.4568;-0.7772;-2.3735;-6.3603;-10.514;-14.0322
+3_Temperature extremes ;3;39;"San_Bernadino";  "Physical Risk";"Chronic";Temperature extremes ;0;0;-8.1945;-13.9623;-8.5138;-22.0076;-31.2324;-43.5318;-49.299
+3_Temperature extremes ;3;40;"Dublin";  "Physical Risk";"Chronic";Temperature extremes ;-0.5153;-4.0721;-3.0472;-4.0699;-11.5929;-17.6329;-22.0496;-28.0629;-24.7942
+3_Temperature extremes ;3;41;"Puerto_Rico";  "Physical Risk";"Chronic";Temperature extremes ;-8.0193;-28.1442;-46.1532;-76.4798;-91.7875;-94.7475;-96.0341;-96.5502;-97
+3_Temperature extremes ;3;42;"Barcelona_Sant_Cugat";  "Physical Risk";"Chronic";Temperature extremes ;-8.3187;-19.7921;-26.2425;-25.7573;-45.6869;-62.5163;-75.4458;-86.5822;-92.3677
+3_Temperature extremes ;3;43;"Rehovot";  "Physical Risk";"Chronic";Temperature extremes ;0;0;0;-1.0742;-2.802;-6.4109;-9.5495;-17.3591;-22.7416
+3_Temperature extremes ;3;44;"Singapore_DRD";  "Physical Risk";"Chronic";Temperature extremes ;-3.3892;-3.0422;-11.6682;-21.4371;-33.827;-40.6232;-41.0293;-55.6943;-65.9187
+3_Temperature extremes ;3;45;"San_Diego";  "Physical Risk";"Chronic";Temperature extremes ;0;0;-6.7293;-10.7045;-6.9112;-17.2461;-25.7291;-37.9739;-45.247
+3_Water Efficiency ;3;31;"Boise";  "Opportunity";"Resource Efficiency";Water Efficiency ;0;0;-0.232974;-0.215262;-0.14706;-0.609624;-1.08331;-1.90778;-2.98408
+3_Water Efficiency ;3;32;"Colorado_Springs";  "Opportunity";"Resource Efficiency";Water Efficiency ;0;-0.045414;-1.37864;-1.74055;-1.43827;-2.11973;-3.45182;-6.45098;-7.55829
+3_Water Efficiency ;3;33;"Corvallis";  "Opportunity";"Resource Efficiency";Water Efficiency ;0;0;0;0;0;0;-0.122166;-0.636534;-0.975024
+3_Water Efficiency ;3;34;"Cupertino";  "Opportunity";"Resource Efficiency";Water Efficiency ;0;0;-0.950508;-1.30187;-0.795438;-3.24194;-4.94649;-7.14094;-8.39524
+3_Water Efficiency ;3;35;"Houston";  "Opportunity";"Resource Efficiency";Water Efficiency ;0;-0.634644;-1.30739;-2.87242;-2.69739;-4.60717;-6.32084;-7.5053;-8.58816
+3_Water Efficiency ;3;36;"Palo_Alto";  "Opportunity";"Resource Efficiency";Water Efficiency ;0;0;-1.2931;-2.01609;-1.21702;-4.79396;-6.5974;-8.62367;-10.8573
+3_Water Efficiency ;3;37;"Plano";  "Opportunity";"Resource Efficiency";Water Efficiency ;0;0;-0.469404;-1.20053;-0.947682;-1.42693;-3.0816;-5.39689;-6.66148
+3_Water Efficiency ;3;38;"Roseville";  "Opportunity";"Resource Efficiency";Water Efficiency ;0;0;-0.006192;-0.082224;-0.139896;-0.42723;-1.14485;-1.89252;-2.5258
+3_Water Efficiency ;3;39;"San_Bernadino";  "Opportunity";"Resource Efficiency";Water Efficiency ;0;0;-1.47501;-2.51321;-1.53248;-3.96137;-5.62183;-7.83572;-8.87382
+3_Water Efficiency ;3;40;"Dublin";  "Opportunity";"Resource Efficiency";Water Efficiency ;-0.092754;-0.732978;-0.548496;-0.732582;-2.08672;-3.17392;-3.96893;-5.05132;-4.46296
+3_Water Efficiency ;3;41;"Puerto_Rico";  "Opportunity";"Resource Efficiency";Water Efficiency ;-1.44347;-5.06596;-8.30758;-13.7664;-16.5217;-17.0545;-17.2861;-17.379;-17.46
+3_Water Efficiency ;3;42;"Barcelona_Sant_Cugat";  "Opportunity";"Resource Efficiency";Water Efficiency ;-1.49737;-3.56258;-4.72365;-4.63631;-8.22364;-11.2529;-13.5802;-15.5848;-16.6262
+3_Water Efficiency ;3;43;"Rehovot";  "Opportunity";"Resource Efficiency";Water Efficiency ;0;0;0;-0.193356;-0.50436;-1.15396;-1.71891;-3.12464;-4.09349
+3_Water Efficiency ;3;44;"Singapore_DRD";  "Opportunity";"Resource Efficiency";Water Efficiency ;-0.610056;-0.547596;-2.10028;-3.85868;-6.08886;-7.31218;-7.38527;-10.025;-11.8654
+3_Water Efficiency ;3;45;"San_Diego";  "Opportunity";"Resource Efficiency";Water Efficiency ;0;0;-1.21127;-1.92681;-1.24402;-3.1043;-4.63124;-6.8353;-8.14446
+4_Carbon pricing ;4;46;"Indooroopilly_Shopping_Centre";  "Transition Risk";"Policy and Legal";Carbon pricing ;-0.2463;-1.5581;-1.9858;-1.9951;-2.8588;-2.8588;-4.1052;-5.7487;-6.8734
+4_Carbon pricing ;4;47;"Pacific_Fair";  "Transition Risk";"Policy and Legal";Carbon pricing ;-0.2463;-1.5581;-1.9858;-1.9951;-2.8588;-2.8588;-4.1052;-5.7487;-6.8734
+4_Carbon pricing ;4;48;"Stanley_Plaza";  "Transition Risk";"Policy and Legal";Carbon pricing ;-0.2463;-1.5581;-1.9858;-1.9951;-2.8588;-2.8588;-4.1052;-5.7487;-6.8734
+4_Carbon pricing ;4;49;"Coronation_Drive_Office_Park";  "Transition Risk";"Policy and Legal";Carbon pricing ;-0.2463;-1.5581;-1.9858;-1.9951;-2.8588;-2.8588;-4.1052;-5.7487;-6.8734
+4_Carbon pricing ;4;50;"Macquarie_Centre";  "Transition Risk";"Policy and Legal";Carbon pricing ;-0.2463;-1.5581;-1.9858;-1.9951;-2.8588;-2.8588;-4.1052;-5.7487;-6.8734
+4_Carbon pricing ;4;51;"AMP_Building";  "Transition Risk";"Policy and Legal";Carbon pricing ;-0.2463;-1.5581;-1.9858;-1.9951;-2.8588;-2.8588;-4.1052;-5.7487;-6.8734
+4_Carbon pricing ;4;52;"NAB_Headquarters";  "Transition Risk";"Policy and Legal";Carbon pricing ;-0.2463;-1.5581;-1.9858;-1.9951;-2.8588;-2.8588;-4.1052;-5.7487;-6.8734
+4_Carbon pricing ;4;53;"Malvern_Central";  "Transition Risk";"Policy and Legal";Carbon pricing ;-0.2463;-1.5581;-1.9858;-1.9951;-2.8588;-2.8588;-4.1052;-5.7487;-6.8734
+4_Carbon pricing ;4;54;"Exchange_Tower";  "Transition Risk";"Policy and Legal";Carbon pricing ;-0.2463;-1.5581;-1.9858;-1.9951;-2.8588;-2.8588;-4.1052;-5.7487;-6.8734
+4_Carbon pricing ;4;55;"Garden_City";  "Transition Risk";"Policy and Legal";Carbon pricing ;-0.2463;-1.5581;-1.9858;-1.9951;-2.8588;-2.8588;-4.1052;-5.7487;-6.8734
+4_Carbon pricing ;4;56;"The_Palms_NZ";  "Transition Risk";"Policy and Legal";Carbon pricing ;-0.2463;-1.5581;-1.9858;-1.9951;-2.8588;-2.8588;-4.1052;-5.7487;-6.8734
+4_Coastal flooding ;4;46;"Indooroopilly_Shopping_Centre";  "Physical Risk";"Chronic";Coastal flooding ;0;0;0;0;0;0;0;0;0
+4_Coastal flooding ;4;47;"Pacific_Fair";  "Physical Risk";"Chronic";Coastal flooding ;-2.3412;-18.7686;-66.1998;-72;-72;-72;-72;-72;-72
+4_Coastal flooding ;4;48;"Stanley_Plaza";  "Physical Risk";"Chronic";Coastal flooding ;0;0;0;0;0;0;0;0;0
+4_Coastal flooding ;4;49;"Coronation_Drive_Office_Park";  "Physical Risk";"Chronic";Coastal flooding ;0;0;0;0;0;0;0;0;0
+4_Coastal flooding ;4;50;"Macquarie_Centre";  "Physical Risk";"Chronic";Coastal flooding ;0;0;0;0;0;0;0;0;0
+4_Coastal flooding ;4;51;"AMP_Building";  "Physical Risk";"Chronic";Coastal flooding ;0;0;0;0;0;0;0;0;0
+4_Coastal flooding ;4;52;"NAB_Headquarters";  "Physical Risk";"Chronic";Coastal flooding ;-2.18728;-5.47264;-12.5652;-26.9429;-49.2434;-56;-56;-56;-56
+4_Coastal flooding ;4;53;"Malvern_Central";  "Physical Risk";"Chronic";Coastal flooding ;0;0;0;0;0;0;0;0;0
+4_Coastal flooding ;4;54;"Exchange_Tower";  "Physical Risk";"Chronic";Coastal flooding ;0;0;0;0;0;0;0;0;0
+4_Coastal flooding ;4;55;"Garden_City";  "Physical Risk";"Chronic";Coastal flooding ;0;0;0;0;0;0;0;0;0
+4_Coastal flooding ;4;56;"The_Palms_NZ";  "Physical Risk";"Chronic";Coastal flooding ;-0.2588;-0.82184;-1.82096;-3.66104;-7.19816;-18.8801;-41.3191;-56;-56
+4_Drought ;4;46;"Indooroopilly_Shopping_Centre";  "Physical Risk";"Chronic";Drought ;0;0;0;-4.5;0;0;-18;-27;-9
+4_Drought ;4;47;"Pacific_Fair";  "Physical Risk";"Chronic";Drought ;0;-18;0;-18;0;-9;-27;-45;-27
+4_Drought ;4;48;"Stanley_Plaza";  "Physical Risk";"Chronic";Drought ;0;0;0;-4.5;0;0;-18;-27;-9
+4_Drought ;4;49;"Coronation_Drive_Office_Park";  "Physical Risk";"Chronic";Drought ;0;0;0;-4.5;0;0;-18;-27;-9
+4_Drought ;4;50;"Macquarie_Centre";  "Physical Risk";"Chronic";Drought ;0;0;0;0;0;0;-4.5;-18;0
+4_Drought ;4;51;"AMP_Building";  "Physical Risk";"Chronic";Drought ;0;0;0;0;0;0;-4.5;-18;0
+4_Drought ;4;52;"NAB_Headquarters";  "Physical Risk";"Chronic";Drought ;0;-27;-36;-4.5;-4.5;-27;-27;-36;-36
+4_Drought ;4;53;"Malvern_Central";  "Physical Risk";"Chronic";Drought ;0;0;-4.5;0;0;-18;-18;-45;-45
+4_Drought ;4;54;"Exchange_Tower";  "Physical Risk";"Chronic";Drought ;-4.5;-36;-54;-54;-63;-63;-54;-63;-63
+4_Drought ;4;55;"Garden_City";  "Physical Risk";"Chronic";Drought ;-4.5;-36;-54;-54;-63;-63;-54;-63;-63
+4_Drought ;4;56;"The_Palms_NZ";  "Physical Risk";"Chronic";Drought ;0;0;-9;-9;-27;-27;-18;-9;-36
+4_Employee impacts ;4;46;"Indooroopilly_Shopping_Centre";  "Physical Risk";"Acute";Employee impacts ;0;0;0;-0.22617;-0.235284;-0.488178;-0.541914;-0.954492;-1.52217
+4_Employee impacts ;4;47;"Pacific_Fair";  "Physical Risk";"Acute";Employee impacts ;0;0;0;-0.366606;-0.559788;-1.31733;-1.64352;-2.26868;-2.78044
+4_Employee impacts ;4;48;"Stanley_Plaza";  "Physical Risk";"Acute";Employee impacts ;0;0;0;-0.22617;-0.235284;-0.488178;-0.541914;-0.954492;-1.52217
+4_Employee impacts ;4;49;"Coronation_Drive_Office_Park";  "Physical Risk";"Acute";Employee impacts ;0;0;0;-0.22617;-0.235284;-0.488178;-0.541914;-0.954492;-1.52217
+4_Employee impacts ;4;50;"Macquarie_Centre";  "Physical Risk";"Acute";Employee impacts ;0;0;0;-0.09732;-0.021006;-0.283626;-0.38817;-0.488106;-0.746598
+4_Employee impacts ;4;51;"AMP_Building";  "Physical Risk";"Acute";Employee impacts ;0;0;-0.076092;-0.291156;-0.352824;-0.877122;-1.12102;-1.6281;-2.18079
+4_Employee impacts ;4;52;"NAB_Headquarters";  "Physical Risk";"Acute";Employee impacts ;0;0;0;0;0;-0.13911;-0.302844;-0.310794;-0.52209
+4_Employee impacts ;4;53;"Malvern_Central";  "Physical Risk";"Acute";Employee impacts ;0;0;0;0;0;-0.13911;-0.302844;-0.310794;-0.52209
+4_Employee impacts ;4;54;"Exchange_Tower";  "Physical Risk";"Acute";Employee impacts ;0;-0.035694;-0.095052;-0.180186;-0.407892;-0.617646;-1.0142;-1.61132;-2.05274
+4_Employee impacts ;4;55;"Garden_City";  "Physical Risk";"Acute";Employee impacts ;0;-0.035694;-0.095052;-0.180186;-0.407892;-0.617646;-1.0142;-1.61132;-2.05274
+4_Employee impacts ;4;56;"The_Palms_NZ";  "Physical Risk";"Acute";Employee impacts ;0;0;-0.126258;-0.156408;-0.89766;-1.08567;-1.43662;-2.35234;-2.77552
+4_Energy Efficiency ;4;46;"Indooroopilly_Shopping_Centre";  "Opportunity";"Resource Efficiency";Energy Efficiency ;0;0;0;-0.60312;-0.627424;-1.30181;-1.4451;-2.54531;-4.05912
+4_Energy Efficiency ;4;47;"Pacific_Fair";  "Opportunity";"Resource Efficiency";Energy Efficiency ;0;0;0;-0.977616;-1.49277;-3.51288;-4.38272;-6.04982;-7.41451
+4_Energy Efficiency ;4;48;"Stanley_Plaza";  "Opportunity";"Resource Efficiency";Energy Efficiency ;0;0;0;-0.60312;-0.627424;-1.30181;-1.4451;-2.54531;-4.05912
+4_Energy Efficiency ;4;49;"Coronation_Drive_Office_Park";  "Opportunity";"Resource Efficiency";Energy Efficiency ;0;0;0;-0.60312;-0.627424;-1.30181;-1.4451;-2.54531;-4.05912
+4_Energy Efficiency ;4;50;"Macquarie_Centre";  "Opportunity";"Resource Efficiency";Energy Efficiency ;0;0;0;-0.25952;-0.056016;-0.756336;-1.03512;-1.30162;-1.99093
+4_Energy Efficiency ;4;51;"AMP_Building";  "Opportunity";"Resource Efficiency";Energy Efficiency ;0;0;-0.202912;-0.776416;-0.940864;-2.33899;-2.98938;-4.3416;-5.81544
+4_Energy Efficiency ;4;52;"NAB_Headquarters";  "Opportunity";"Resource Efficiency";Energy Efficiency ;0;0;0;0;0;-0.37096;-0.807584;-0.828784;-1.39224
+4_Energy Efficiency ;4;53;"Malvern_Central";  "Opportunity";"Resource Efficiency";Energy Efficiency ;0;0;0;0;0;-0.37096;-0.807584;-0.828784;-1.39224
+4_Energy Efficiency ;4;54;"Exchange_Tower";  "Opportunity";"Resource Efficiency";Energy Efficiency ;0;-0.095184;-0.253472;-0.480496;-1.08771;-1.64706;-2.70453;-4.29685;-5.47398
+4_Energy Efficiency ;4;55;"Garden_City";  "Opportunity";"Resource Efficiency";Energy Efficiency ;0;-0.095184;-0.253472;-0.480496;-1.08771;-1.64706;-2.70453;-4.29685;-5.47398
+4_Energy Efficiency ;4;56;"The_Palms_NZ";  "Opportunity";"Resource Efficiency";Energy Efficiency ;0;0;-0.336688;-0.417088;-2.39376;-2.89512;-3.83099;-6.27291;-7.40139
+4_Energy resilience ;4;46;"Indooroopilly_Shopping_Centre";  "Opportunity";"Resilience";Energy resilience ;0;0;0;-0.565425;-0.58821;-1.22045;-1.35478;-2.38623;-3.80542
+4_Energy resilience ;4;47;"Pacific_Fair";  "Opportunity";"Resilience";Energy resilience ;0;0;0;-0.916515;-1.39947;-3.29332;-4.1088;-5.67171;-6.9511
+4_Energy resilience ;4;48;"Stanley_Plaza";  "Opportunity";"Resilience";Energy resilience ;0;0;0;-0.565425;-0.58821;-1.22045;-1.35478;-2.38623;-3.80542
+4_Energy resilience ;4;49;"Coronation_Drive_Office_Park";  "Opportunity";"Resilience";Energy resilience ;0;0;0;-0.565425;-0.58821;-1.22045;-1.35478;-2.38623;-3.80542
+4_Energy resilience ;4;50;"Macquarie_Centre";  "Opportunity";"Resilience";Energy resilience ;0;0;0;-0.2433;-0.052515;-0.709065;-0.970425;-1.22026;-1.8665
+4_Energy resilience ;4;51;"AMP_Building";  "Opportunity";"Resilience";Energy resilience ;0;0;-0.19023;-0.72789;-0.88206;-2.1928;-2.80254;-4.07025;-5.45198
+4_Energy resilience ;4;52;"NAB_Headquarters";  "Opportunity";"Resilience";Energy resilience ;0;0;0;0;0;-0.347775;-0.75711;-0.776985;-1.30522
+4_Energy resilience ;4;53;"Malvern_Central";  "Opportunity";"Resilience";Energy resilience ;0;0;0;0;0;-0.347775;-0.75711;-0.776985;-1.30522
+4_Energy resilience ;4;54;"Exchange_Tower";  "Opportunity";"Resilience";Energy resilience ;0;-0.089235;-0.23763;-0.450465;-1.01973;-1.54411;-2.5355;-4.02829;-5.13186
+4_Energy resilience ;4;55;"Garden_City";  "Opportunity";"Resilience";Energy resilience ;0;-0.089235;-0.23763;-0.450465;-1.01973;-1.54411;-2.5355;-4.02829;-5.13186
+4_Energy resilience ;4;56;"The_Palms_NZ";  "Opportunity";"Resilience";Energy resilience ;0;0;-0.315645;-0.39102;-2.24415;-2.71418;-3.59156;-5.88085;-6.9388
+4_Litigation risk ;4;46;"Indooroopilly_Shopping_Centre";  "Transition Risk";"Policy and Legal";Litigation risk ;0;0;0;-0.30156;-0.313712;-0.650904;-0.722552;-1.27266;-2.02956
+4_Litigation risk ;4;47;"Pacific_Fair";  "Transition Risk";"Policy and Legal";Litigation risk ;0;0;0;-0.488808;-0.746384;-1.75644;-2.19136;-3.02491;-3.70726
+4_Litigation risk ;4;48;"Stanley_Plaza";  "Transition Risk";"Policy and Legal";Litigation risk ;0;0;0;-0.30156;-0.313712;-0.650904;-0.722552;-1.27266;-2.02956
+4_Litigation risk ;4;49;"Coronation_Drive_Office_Park";  "Transition Risk";"Policy and Legal";Litigation risk ;0;0;0;-0.30156;-0.313712;-0.650904;-0.722552;-1.27266;-2.02956
+4_Litigation risk ;4;50;"Macquarie_Centre";  "Transition Risk";"Policy and Legal";Litigation risk ;0;0;0;-0.12976;-0.028008;-0.378168;-0.51756;-0.650808;-0.995464
+4_Litigation risk ;4;51;"AMP_Building";  "Transition Risk";"Policy and Legal";Litigation risk ;0;0;-0.101456;-0.388208;-0.470432;-1.1695;-1.49469;-2.1708;-2.90772
+4_Litigation risk ;4;52;"NAB_Headquarters";  "Transition Risk";"Policy and Legal";Litigation risk ;0;0;0;0;0;-0.18548;-0.403792;-0.414392;-0.69612
+4_Litigation risk ;4;53;"Malvern_Central";  "Transition Risk";"Policy and Legal";Litigation risk ;0;0;0;0;0;-0.18548;-0.403792;-0.414392;-0.69612
+4_Litigation risk ;4;54;"Exchange_Tower";  "Transition Risk";"Policy and Legal";Litigation risk ;0;-0.047592;-0.126736;-0.240248;-0.543856;-0.823528;-1.35226;-2.14842;-2.73699
+4_Litigation risk ;4;55;"Garden_City";  "Transition Risk";"Policy and Legal";Litigation risk ;0;-0.047592;-0.126736;-0.240248;-0.543856;-0.823528;-1.35226;-2.14842;-2.73699
+4_Litigation risk ;4;56;"The_Palms_NZ";  "Transition Risk";"Policy and Legal";Litigation risk ;0;0;-0.168344;-0.208544;-1.19688;-1.44756;-1.9155;-3.13646;-3.7007
+4_Materials Efficiency ;4;46;"Indooroopilly_Shopping_Centre";  "Opportunity";"Resource Efficiency";Materials Efficiency ;0;0;0;-0.45234;-0.470568;-0.976356;-1.08383;-1.90898;-3.04434
+4_Materials Efficiency ;4;47;"Pacific_Fair";  "Opportunity";"Resource Efficiency";Materials Efficiency ;0;0;0;-0.733212;-1.11958;-2.63466;-3.28704;-4.53737;-5.56088
+4_Materials Efficiency ;4;48;"Stanley_Plaza";  "Opportunity";"Resource Efficiency";Materials Efficiency ;0;0;0;-0.45234;-0.470568;-0.976356;-1.08383;-1.90898;-3.04434
+4_Materials Efficiency ;4;49;"Coronation_Drive_Office_Park";  "Opportunity";"Resource Efficiency";Materials Efficiency ;0;0;0;-0.45234;-0.470568;-0.976356;-1.08383;-1.90898;-3.04434
+4_Materials Efficiency ;4;50;"Macquarie_Centre";  "Opportunity";"Resource Efficiency";Materials Efficiency ;0;0;0;-0.19464;-0.042012;-0.567252;-0.77634;-0.976212;-1.4932
+4_Materials Efficiency ;4;51;"AMP_Building";  "Opportunity";"Resource Efficiency";Materials Efficiency ;0;0;-0.152184;-0.582312;-0.705648;-1.75424;-2.24203;-3.2562;-4.36158
+4_Materials Efficiency ;4;52;"NAB_Headquarters";  "Opportunity";"Resource Efficiency";Materials Efficiency ;0;0;0;0;0;-0.27822;-0.605688;-0.621588;-1.04418
+4_Materials Efficiency ;4;53;"Malvern_Central";  "Opportunity";"Resource Efficiency";Materials Efficiency ;0;0;0;0;0;-0.27822;-0.605688;-0.621588;-1.04418
+4_Materials Efficiency ;4;54;"Exchange_Tower";  "Opportunity";"Resource Efficiency";Materials Efficiency ;0;-0.071388;-0.190104;-0.360372;-0.815784;-1.23529;-2.0284;-3.22264;-4.10549
+4_Materials Efficiency ;4;55;"Garden_City";  "Opportunity";"Resource Efficiency";Materials Efficiency ;0;-0.071388;-0.190104;-0.360372;-0.815784;-1.23529;-2.0284;-3.22264;-4.10549
+4_Materials Efficiency ;4;56;"The_Palms_NZ";  "Opportunity";"Resource Efficiency";Materials Efficiency ;0;0;-0.252516;-0.312816;-1.79532;-2.17134;-2.87324;-4.70468;-5.55104
+4_Materials cost ;4;46;"Indooroopilly_Shopping_Centre";  "Transition Risk";"Reputation";Materials cost ;0;0;0;-0.37695;-0.39214;-0.81363;-0.90319;-1.59082;-2.53695
+4_Materials cost ;4;47;"Pacific_Fair";  "Transition Risk";"Reputation";Materials cost ;0;0;0;-0.61101;-0.93298;-2.19555;-2.7392;-3.78114;-4.63407
+4_Materials cost ;4;48;"Stanley_Plaza";  "Transition Risk";"Reputation";Materials cost ;0;0;0;-0.37695;-0.39214;-0.81363;-0.90319;-1.59082;-2.53695
+4_Materials cost ;4;49;"Coronation_Drive_Office_Park";  "Transition Risk";"Reputation";Materials cost ;0;0;0;-0.37695;-0.39214;-0.81363;-0.90319;-1.59082;-2.53695
+4_Materials cost ;4;50;"Macquarie_Centre";  "Transition Risk";"Reputation";Materials cost ;0;0;0;-0.1622;-0.03501;-0.47271;-0.64695;-0.81351;-1.24433
+4_Materials cost ;4;51;"AMP_Building";  "Transition Risk";"Reputation";Materials cost ;0;0;-0.12682;-0.48526;-0.58804;-1.46187;-1.86836;-2.7135;-3.63465
+4_Materials cost ;4;52;"NAB_Headquarters";  "Transition Risk";"Reputation";Materials cost ;0;0;0;0;0;-0.23185;-0.50474;-0.51799;-0.87015
+4_Materials cost ;4;53;"Malvern_Central";  "Transition Risk";"Reputation";Materials cost ;0;0;0;0;0;-0.23185;-0.50474;-0.51799;-0.87015
+4_Materials cost ;4;54;"Exchange_Tower";  "Transition Risk";"Reputation";Materials cost ;0;-0.05949;-0.15842;-0.30031;-0.67982;-1.02941;-1.69033;-2.68553;-3.42124
+4_Materials cost ;4;55;"Garden_City";  "Transition Risk";"Reputation";Materials cost ;0;-0.05949;-0.15842;-0.30031;-0.67982;-1.02941;-1.69033;-2.68553;-3.42124
+4_Materials cost ;4;56;"The_Palms_NZ";  "Transition Risk";"Reputation";Materials cost ;0;0;-0.21043;-0.26068;-1.4961;-1.80945;-2.39437;-3.92057;-4.62587
+4_New technology ;4;46;"Indooroopilly_Shopping_Centre";  "Transition Risk";"Technology";New technology ;0;0;0;-0.263865;-0.274498;-0.569541;-0.632233;-1.11357;-1.77587
+4_New technology ;4;47;"Pacific_Fair";  "Transition Risk";"Technology";New technology ;0;0;0;-0.427707;-0.653086;-1.53689;-1.91744;-2.6468;-3.24385
+4_New technology ;4;48;"Stanley_Plaza";  "Transition Risk";"Technology";New technology ;0;0;0;-0.263865;-0.274498;-0.569541;-0.632233;-1.11357;-1.77587
+4_New technology ;4;49;"Coronation_Drive_Office_Park";  "Transition Risk";"Technology";New technology ;0;0;0;-0.263865;-0.274498;-0.569541;-0.632233;-1.11357;-1.77587
+4_New technology ;4;50;"Macquarie_Centre";  "Transition Risk";"Technology";New technology ;0;0;0;-0.11354;-0.024507;-0.330897;-0.452865;-0.569457;-0.871031
+4_New technology ;4;51;"AMP_Building";  "Transition Risk";"Technology";New technology ;0;0;-0.088774;-0.339682;-0.411628;-1.02331;-1.30785;-1.89945;-2.54426
+4_New technology ;4;52;"NAB_Headquarters";  "Transition Risk";"Technology";New technology ;0;0;0;0;0;-0.162295;-0.353318;-0.362593;-0.609105
+4_New technology ;4;53;"Malvern_Central";  "Transition Risk";"Technology";New technology ;0;0;0;0;0;-0.162295;-0.353318;-0.362593;-0.609105
+4_New technology ;4;54;"Exchange_Tower";  "Transition Risk";"Technology";New technology ;0;-0.041643;-0.110894;-0.210217;-0.475874;-0.720587;-1.18323;-1.87987;-2.39487
+4_New technology ;4;55;"Garden_City";  "Transition Risk";"Technology";New technology ;0;-0.041643;-0.110894;-0.210217;-0.475874;-0.720587;-1.18323;-1.87987;-2.39487
+4_New technology ;4;56;"The_Palms_NZ";  "Transition Risk";"Technology";New technology ;0;0;-0.147301;-0.182476;-1.04727;-1.26662;-1.67606;-2.7444;-3.23811
+4_Renewable price stability ;4;46;"Indooroopilly_Shopping_Centre";  "Opportunity";"Energy Source";Renewable price stability ;0;0;0;-0.113085;-0.117642;-0.244089;-0.270957;-0.477246;-0.761085
+4_Renewable price stability ;4;47;"Pacific_Fair";  "Opportunity";"Energy Source";Renewable price stability ;0;0;0;-0.183303;-0.279894;-0.658665;-0.82176;-1.13434;-1.39022
+4_Renewable price stability ;4;48;"Stanley_Plaza";  "Opportunity";"Energy Source";Renewable price stability ;0;0;0;-0.113085;-0.117642;-0.244089;-0.270957;-0.477246;-0.761085
+4_Renewable price stability ;4;49;"Coronation_Drive_Office_Park";  "Opportunity";"Energy Source";Renewable price stability ;0;0;0;-0.113085;-0.117642;-0.244089;-0.270957;-0.477246;-0.761085
+4_Renewable price stability ;4;50;"Macquarie_Centre";  "Opportunity";"Energy Source";Renewable price stability ;0;0;0;-0.04866;-0.010503;-0.141813;-0.194085;-0.244053;-0.373299
+4_Renewable price stability ;4;51;"AMP_Building";  "Opportunity";"Energy Source";Renewable price stability ;0;0;-0.038046;-0.145578;-0.176412;-0.438561;-0.560508;-0.81405;-1.0904
+4_Renewable price stability ;4;52;"NAB_Headquarters";  "Opportunity";"Energy Source";Renewable price stability ;0;0;0;0;0;-0.069555;-0.151422;-0.155397;-0.261045
+4_Renewable price stability ;4;53;"Malvern_Central";  "Opportunity";"Energy Source";Renewable price stability ;0;0;0;0;0;-0.069555;-0.151422;-0.155397;-0.261045
+4_Renewable price stability ;4;54;"Exchange_Tower";  "Opportunity";"Energy Source";Renewable price stability ;0;-0.017847;-0.047526;-0.090093;-0.203946;-0.308823;-0.507099;-0.805659;-1.02637
+4_Renewable price stability ;4;55;"Garden_City";  "Opportunity";"Energy Source";Renewable price stability ;0;-0.017847;-0.047526;-0.090093;-0.203946;-0.308823;-0.507099;-0.805659;-1.02637
+4_Renewable price stability ;4;56;"The_Palms_NZ";  "Opportunity";"Energy Source";Renewable price stability ;0;0;-0.063129;-0.078204;-0.44883;-0.542835;-0.718311;-1.17617;-1.38776
+4_Reputation damage ;4;46;"Indooroopilly_Shopping_Centre";  "Transition Risk";"Market";Reputation damage ;0;0;0;-0.188475;-0.19607;-0.406815;-0.451595;-0.79541;-1.26848
+4_Reputation damage ;4;47;"Pacific_Fair";  "Transition Risk";"Market";Reputation damage ;0;0;0;-0.305505;-0.46649;-1.09778;-1.3696;-1.89057;-2.31704
+4_Reputation damage ;4;48;"Stanley_Plaza";  "Transition Risk";"Market";Reputation damage ;0;0;0;-0.188475;-0.19607;-0.406815;-0.451595;-0.79541;-1.26848
+4_Reputation damage ;4;49;"Coronation_Drive_Office_Park";  "Transition Risk";"Market";Reputation damage ;0;0;0;-0.188475;-0.19607;-0.406815;-0.451595;-0.79541;-1.26848
+4_Reputation damage ;4;50;"Macquarie_Centre";  "Transition Risk";"Market";Reputation damage ;0;0;0;-0.0811;-0.017505;-0.236355;-0.323475;-0.406755;-0.622165
+4_Reputation damage ;4;51;"AMP_Building";  "Transition Risk";"Market";Reputation damage ;0;0;-0.06341;-0.24263;-0.29402;-0.730935;-0.93418;-1.35675;-1.81733
+4_Reputation damage ;4;52;"NAB_Headquarters";  "Transition Risk";"Market";Reputation damage ;0;0;0;0;0;-0.115925;-0.25237;-0.258995;-0.435075
+4_Reputation damage ;4;53;"Malvern_Central";  "Transition Risk";"Market";Reputation damage ;0;0;0;0;0;-0.115925;-0.25237;-0.258995;-0.435075
+4_Reputation damage ;4;54;"Exchange_Tower";  "Transition Risk";"Market";Reputation damage ;0;-0.029745;-0.07921;-0.150155;-0.33991;-0.514705;-0.845165;-1.34276;-1.71062
+4_Reputation damage ;4;55;"Garden_City";  "Transition Risk";"Market";Reputation damage ;0;-0.029745;-0.07921;-0.150155;-0.33991;-0.514705;-0.845165;-1.34276;-1.71062
+4_Reputation damage ;4;56;"The_Palms_NZ";  "Transition Risk";"Market";Reputation damage ;0;0;-0.105215;-0.13034;-0.74805;-0.904725;-1.19718;-1.96029;-2.31293
+4_Storm damage ;4;46;"Indooroopilly_Shopping_Centre";  "Physical Risk";"Acute";Storm damage ;0;0;0;-2.63865;-2.74498;-5.69541;-6.32233;-11.1357;-17.7586
+4_Storm damage ;4;47;"Pacific_Fair";  "Physical Risk";"Acute";Storm damage ;0;0;0;-4.27707;-6.53086;-15.3689;-19.1744;-26.468;-32.4385
+4_Storm damage ;4;48;"Stanley_Plaza";  "Physical Risk";"Acute";Storm damage ;0;0;0;-2.63865;-2.74498;-5.69541;-6.32233;-11.1357;-17.7586
+4_Storm damage ;4;49;"Coronation_Drive_Office_Park";  "Physical Risk";"Acute";Storm damage ;0;0;0;-2.63865;-2.74498;-5.69541;-6.32233;-11.1357;-17.7586
+4_Storm damage ;4;50;"Macquarie_Centre";  "Physical Risk";"Acute";Storm damage ;0;0;0;-1.1354;-0.24507;-3.30897;-4.52865;-5.69457;-8.71031
+4_Storm damage ;4;51;"AMP_Building";  "Physical Risk";"Acute";Storm damage ;0;0;-0.88774;-3.39682;-4.11628;-10.2331;-13.0785;-18.9945;-25.4425
+4_Storm damage ;4;52;"NAB_Headquarters";  "Physical Risk";"Acute";Storm damage ;0;0;0;0;0;-1.62295;-3.53318;-3.62593;-6.09105
+4_Storm damage ;4;53;"Malvern_Central";  "Physical Risk";"Acute";Storm damage ;0;0;0;0;0;-1.62295;-3.53318;-3.62593;-6.09105
+4_Storm damage ;4;54;"Exchange_Tower";  "Physical Risk";"Acute";Storm damage ;0;-0.41643;-1.10894;-2.10217;-4.75874;-7.20587;-11.8323;-18.7987;-23.9487
+4_Storm damage ;4;55;"Garden_City";  "Physical Risk";"Acute";Storm damage ;0;-0.41643;-1.10894;-2.10217;-4.75874;-7.20587;-11.8323;-18.7987;-23.9487
+4_Storm damage ;4;56;"The_Palms_NZ";  "Physical Risk";"Acute";Storm damage ;0;0;-1.47301;-1.82476;-10.4727;-12.6662;-16.7606;-27.444;-32.3811
+4_Temperature extremes ;4;46;"Indooroopilly_Shopping_Centre";  "Physical Risk";"Chronic";Temperature extremes ;0;0;0;-3.7695;-3.9214;-8.1363;-9.0319;-15.9082;-25.3695
+4_Temperature extremes ;4;47;"Pacific_Fair";  "Physical Risk";"Chronic";Temperature extremes ;0;0;0;-6.1101;-9.3298;-21.9555;-27.392;-37.8114;-46.3407
+4_Temperature extremes ;4;48;"Stanley_Plaza";  "Physical Risk";"Chronic";Temperature extremes ;0;0;0;-3.7695;-3.9214;-8.1363;-9.0319;-15.9082;-25.3695
+4_Temperature extremes ;4;49;"Coronation_Drive_Office_Park";  "Physical Risk";"Chronic";Temperature extremes ;0;0;0;-3.7695;-3.9214;-8.1363;-9.0319;-15.9082;-25.3695
+4_Temperature extremes ;4;50;"Macquarie_Centre";  "Physical Risk";"Chronic";Temperature extremes ;0;0;0;-1.622;-0.3501;-4.7271;-6.4695;-8.1351;-12.4433
+4_Temperature extremes ;4;51;"AMP_Building";  "Physical Risk";"Chronic";Temperature extremes ;0;0;-1.2682;-4.8526;-5.8804;-14.6187;-18.6836;-27.135;-36.3465
+4_Temperature extremes ;4;52;"NAB_Headquarters";  "Physical Risk";"Chronic";Temperature extremes ;0;0;0;0;0;-2.3185;-5.0474;-5.1799;-8.7015
+4_Temperature extremes ;4;53;"Malvern_Central";  "Physical Risk";"Chronic";Temperature extremes ;0;0;0;0;0;-2.3185;-5.0474;-5.1799;-8.7015
+4_Temperature extremes ;4;54;"Exchange_Tower";  "Physical Risk";"Chronic";Temperature extremes ;0;-0.5949;-1.5842;-3.0031;-6.7982;-10.2941;-16.9033;-26.8553;-34.2124
+4_Temperature extremes ;4;55;"Garden_City";  "Physical Risk";"Chronic";Temperature extremes ;0;-0.5949;-1.5842;-3.0031;-6.7982;-10.2941;-16.9033;-26.8553;-34.2124
+4_Temperature extremes ;4;56;"The_Palms_NZ";  "Physical Risk";"Chronic";Temperature extremes ;0;0;-2.1043;-2.6068;-14.961;-18.0945;-23.9437;-39.2057;-46.2587
+4_Water Efficiency ;4;46;"Indooroopilly_Shopping_Centre";  "Opportunity";"Resource Efficiency";Water Efficiency ;0;0;0;-0.67851;-0.705852;-1.46453;-1.62574;-2.86348;-4.56651
+4_Water Efficiency ;4;47;"Pacific_Fair";  "Opportunity";"Resource Efficiency";Water Efficiency ;0;0;0;-1.09982;-1.67936;-3.95199;-4.93056;-6.80605;-8.34133
+4_Water Efficiency ;4;48;"Stanley_Plaza";  "Opportunity";"Resource Efficiency";Water Efficiency ;0;0;0;-0.67851;-0.705852;-1.46453;-1.62574;-2.86348;-4.56651
+4_Water Efficiency ;4;49;"Coronation_Drive_Office_Park";  "Opportunity";"Resource Efficiency";Water Efficiency ;0;0;0;-0.67851;-0.705852;-1.46453;-1.62574;-2.86348;-4.56651
+4_Water Efficiency ;4;50;"Macquarie_Centre";  "Opportunity";"Resource Efficiency";Water Efficiency ;0;0;0;-0.29196;-0.063018;-0.850878;-1.16451;-1.46432;-2.23979
+4_Water Efficiency ;4;51;"AMP_Building";  "Opportunity";"Resource Efficiency";Water Efficiency ;0;0;-0.228276;-0.873468;-1.05847;-2.63137;-3.36305;-4.8843;-6.54237
+4_Water Efficiency ;4;52;"NAB_Headquarters";  "Opportunity";"Resource Efficiency";Water Efficiency ;0;0;0;0;0;-0.41733;-0.908532;-0.932382;-1.56627
+4_Water Efficiency ;4;53;"Malvern_Central";  "Opportunity";"Resource Efficiency";Water Efficiency ;0;0;0;0;0;-0.41733;-0.908532;-0.932382;-1.56627
+4_Water Efficiency ;4;54;"Exchange_Tower";  "Opportunity";"Resource Efficiency";Water Efficiency ;0;-0.107082;-0.285156;-0.540558;-1.22368;-1.85294;-3.04259;-4.83395;-6.15823
+4_Water Efficiency ;4;55;"Garden_City";  "Opportunity";"Resource Efficiency";Water Efficiency ;0;-0.107082;-0.285156;-0.540558;-1.22368;-1.85294;-3.04259;-4.83395;-6.15823
+4_Water Efficiency ;4;56;"The_Palms_NZ";  "Opportunity";"Resource Efficiency";Water Efficiency ;0;0;-0.378774;-0.469224;-2.69298;-3.25701;-4.30987;-7.05703;-8.32657
+XXX_;XXX
