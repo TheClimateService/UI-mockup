@@ -44,6 +44,9 @@ source("./data/TCSDB/load_tcsdb.r")
 source("./data/sealevel_us/load_sealevel_data_us.r")
 source("./data/sealevel_us/function_annual_probability_withslr.r")
 
+# World SLR projections and historical extreme water levels.  Variables created are "world_slr" and "world_ewl".
+source("./data/sealevel_world/load_sealevel_data_world.r")
+
 # Drought data.  Variable created is "d".
 source("./data/drought/load_drought_data.r")
 
@@ -285,9 +288,13 @@ ui <- dashboardPage(title="The Climate Service",
 		#plotOutput("impactplot_building_flood_copy", height = 300)),
 		plotOutput("plot_selectDamageFunction", height = 300)),
           box(width=4,title="Risk","Loss curve  of VaR","Probability of financial damage, with expected value", plotOutput("losscurve",height=300)),
-	  box(width=4,textOutput("methodologyTracebackHazard")),
-	  box(width=4,textOutput("methodologyTracebackVuln"))
-        )#fluidrow graphs
+	  box(width=4,verbatimTextOutput("methodologyTracebackHazard")),
+	  box(width=4,verbatimTextOutput("methodologyTracebackVuln"))
+        ), #fluidrow graphs
+
+        fluidRow(
+         actionButton("button_runSE","RUN SCORING", icon = icon("cog"))
+        )#fluidRow
       ),#tabItem methodology
 
 # --------------------------------------
@@ -502,18 +509,18 @@ ui <- dashboardPage(title="The Climate Service",
         ) #fluidrow
 	),  #tabPanel
 
-        tabPanel(title = "SEA LEVEL",
+        tabPanel(title = "SEA LEVEL (NoAm)",
 	icon = icon("bath"),
 
         fluidRow(
-	  column(6,
+	  column(3,
           selectInput("sealevelProjectionLocation","Select Location for Sea Level Projections",
 	     noaa_slr_locations,  # [from source("./data/sealevel_us/load_sealevel_data_us.r") ]
              selected = "This is a dummy value that gets the list to load the first data value since there are multiple rows for each location covering the different GMSL scenarios"
                     )
 		),
 	  
-	  column(6,
+	  column(3,
           selectInput("extremewaterLocation","Select Location for Extreme Water Levels",
              # list(`East Coast` = c("NY", "NJ", "CT"),
              #      `West Coast` = c("WA", "OR", "CA"),
@@ -526,8 +533,8 @@ ui <- dashboardPage(title="The Climate Service",
         ), #fluidrow
 
         fluidRow(
-	  column(4,
-          selectInput("slrScenario","Select Sea Level Rise Scenario (GMSL 2100)",
+	  column(3,
+          selectInput("slrScenario","Select SLR Scenario (GMSL 2100)",
 	     c("0.3 meter","0.5 meter","1.0 meter","1.5 meters","2.0 meters", "2.5 meters"),
              selected = "0.5 meter"
                     )
@@ -549,14 +556,15 @@ ui <- dashboardPage(title="The Climate Service",
                     )
 		)
 
-	  #column(3,
-          #box(title="Probability of Exceeding Selected Level", background = "red", solidHeader = TRUE, textOutput("returnlevel_probability"))
-	#	)
         ), #fluidrow
 
         fluidRow(
-          box(title="Probability of Exceeding Selected Level - Historical and Selected Period", background = "red", solidHeader = TRUE, textOutput("returnlevel_probability")),
-          box(title="Probability of Exceeding Selected Level - All Periods", background = "red", solidHeader = TRUE, plotOutput("sealevel_ewl_probabilities", height=300))
+          box(title="Annual Probability of Exceeding Selected Level - Historical and Selected Scenario/Period",width=6, verbatimTextOutput("returnlevel_probability"))
+        ), #fluidrow
+
+        fluidRow(
+          #box(title="Probability of Exceeding Selected Level - Historical and Selected Period", background = "red", solidHeader = TRUE, textOutput("returnlevel_probability")),
+          box(title="Annual Probability of Exceeding Selected Level - All Scenarios and Periods", background = "red", solidHeader = TRUE, plotOutput("sealevel_ewl_probabilities", height=300))
         ), #fluidrow
 
         fluidRow(
@@ -565,6 +573,46 @@ ui <- dashboardPage(title="The Climate Service",
         ) #fluidrow
 
 	),  #tabPanel
+
+        tabPanel(title = "SEA LEVEL (World)",
+	icon = icon("bath"),
+
+        fluidRow(
+	  column(3,
+          selectInput("sealevelProjectionLocation2","Select Location for Sea Level Projections",
+	     world_slr_locations,  # [from source("./data/sealevel_world/load_sealevel_data_world.r") ]
+             selected = "This is a dummy value that gets the list to load the first data value since there are multiple rows for each location covering the different GMSL scenarios"
+                    )
+		),
+	  
+	  column(3,
+          selectInput("extremewaterLocation2","Select Location for Extreme Water Levels",
+             # list(`East Coast` = c("NY", "NJ", "CT"),
+             #      `West Coast` = c("WA", "OR", "CA"),
+             #      `Midwest` = c("MN", "WI", "IA"))
+             # c("Boise","Singapore","Malaysia","Scotland"),
+	     world_extremes_locations, # [ from source("./data/sealevel_world/load_sealevel_data_world.r") ]
+                    )
+		),
+
+	  column(3,
+          selectInput("extremewaterLocation2_with_slr_station","Select Location for EWL with SLR",
+	     world_extremes_locations_with_slr_stations, # [ from source("./data/sealevel_world/load_sealevel_data_world.r") ]
+                    )
+		),
+
+	  column(3,
+          selectInput("world_slr_scenario","Select Scenario", c("RCP8.5", "RCP4.5", "RCP2.6") )
+		)
+        ), #fluidrow
+
+        fluidRow(
+          box(width=3, title="Local Sea-level Rise Projections at Selected Location", background = "red", solidHeader = TRUE, plotOutput("sealevel_projections_plot2", height = 300, width=250)),
+          box(width=3, title="Historical Extreme Water Levels at Selected Location", background = "red", solidHeader = TRUE, plotOutput("sealevel_extremes_plot2", height = 300, width=250)),
+          box(width=6, title="Future Extreme Water Levels at Selected Location", background = "red", solidHeader = TRUE, plotOutput("sealevel_extremes_plot3", height = 300, width=400))
+        ) #fluidrow
+
+        ),  # end tabPanel(title = "SEA LEVEL (World)",
 
         tabPanel(title = "DROUGHT",
 	icon = icon("sun-o"),

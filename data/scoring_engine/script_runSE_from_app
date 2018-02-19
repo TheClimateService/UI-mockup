@@ -1,0 +1,17 @@
+
+# SCRIPT TO RUN THE SCORING ENGINE FROM THE APPLICATION BUTTON "RUN SCORING"
+# TT - February 2018
+
+# Set up for AWS ubuntu server.
+sudo su rstudio
+cd /srv/shiny-server/TCS/app_tcs_22/data/scoring_engine/
+
+# Execution
+pwd
+cd ./data/scoring_engine
+pwd
+echo "**** Starting scoring engine..."
+./script_runall TCSDB_structure
+echo "**** Completed scoring engine run."
+cd ../../
+pwd

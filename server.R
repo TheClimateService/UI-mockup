@@ -312,13 +312,25 @@ server <- function(input, output, session) {
   output$losscurve <- renderImage({list(src = "./images/Mandel-121514-graph.png", height="230px", alt = paste("loss curve"))
   }, deleteFile = FALSE)
   
+# Note use of "sep" below to get line break via verbatimTextOutput in ui.R.
   output$methodologyTracebackHazard <- renderText({
-paste("Drought90p location - ",input$drought_facility)
+        p1 = paste("Drought location - ","Boise, Idaho")
+        p2 = paste("Drought-90p location - ",input$drought_facility)
+        p3 = paste("Sea-level projection location - ",input$sealevelProjectionLocation)
+        p4 = paste("Extreme water-level location - ",input$extremewaterLocation)
+        p5 = paste("Temperature location - ","South Sudan")
+        p6 = paste("Tmax-90p location - ","Boise, Idaho")
+	paste(p1,p2,p3,p4,p5,p6,sep="\n")
         })
 
   output$methodologyTracebackVuln <- renderText({
-paste("Damage function - ",input$selectDamageFunction)
+	p1= paste("Damage function - ",input$selectDamageFunction)
+	paste(p1,sep="\n")
         })
+
+  observeEvent(input$button_runSE, {
+        system("./data/scoring_engine/script_runSE_from_app")
+      })
 
 # ----------------------------
 #         PORTFOLIO - ANALYZE
@@ -826,6 +838,41 @@ paste("Damage function - ",input$selectDamageFunction)
 #    legend("topright", inset=.05, title="Periods", labels, lwd=3, lty=ltypes, col=colors)
   })
 
+  output$sealevel_extremes_plot2 <- renderPlot({
+	rtnlevels_m_hist = filter(world_ewl,CLSFID_LONGI_LATI==input$extremewaterLocation2) %>% select(7:15)
+	z = t(rtnlevels_m_hist)
+	plot(z, type="l",lwd=3,col="black", xlab="Return Period (years)", ylab="Return Level (m)", xaxt="n")
+	#lines(z2, lwd=3, col="yellow")
+	#lines(z3, lwd=3, col="green")
+	axis(1, at=c(1:9), labels=c("2","5","10","25","50","100","250","500","1000"))
+     	#legend("topleft", inset=.05, title="Scenarios",legend=c("RCP 8.5","RCP 4.5","RCP 2.6"), lwd=3, col=c("red","yellow","green"))
+  })
+
+  output$sealevel_extremes_plot3 <- renderPlot({
+	rtnlevels_m_hist = filter(world_ewl_with_slr_stations,CLSFID_LONGI_LATI_station==input$extremewaterLocation2_with_slr_station) %>% select(7:15)
+	slr_cm_rcp85 = t( filter(world_ewl_with_slr_stations,CLSFID_LONGI_LATI_station==input$extremewaterLocation2_with_slr_station) %>% select(26:28) )
+	slr_cm_rcp45 = t( filter(world_ewl_with_slr_stations,CLSFID_LONGI_LATI_station==input$extremewaterLocation2_with_slr_station) %>% select(29:31) )
+	slr_cm_rcp26 = t( filter(world_ewl_with_slr_stations,CLSFID_LONGI_LATI_station==input$extremewaterLocation2_with_slr_station) %>% select(32:34) )
+	if(input$world_slr_scenario=="RCP8.5") {inc1=0.01*as.numeric(slr_cm_rcp85[1]); inc2=0.01*as.numeric(slr_cm_rcp85[2]); inc3=0.01*as.numeric(slr_cm_rcp85[3]) }
+	if(input$world_slr_scenario=="RCP4.5") {inc1=0.01*as.numeric(slr_cm_rcp45[1]); inc2=0.01*as.numeric(slr_cm_rcp45[2]); inc3=0.01*as.numeric(slr_cm_rcp45[3]) }
+	if(input$world_slr_scenario=="RCP2.6") {inc1=0.01*as.numeric(slr_cm_rcp26[1]); inc2=0.01*as.numeric(slr_cm_rcp26[2]); inc3=0.01*as.numeric(slr_cm_rcp26[3]) }
+	rtnlevels_m_rcp85_2030 = rtnlevels_m_hist + inc1
+	rtnlevels_m_rcp85_2050 = rtnlevels_m_hist + inc2
+	rtnlevels_m_rcp85_2100 = rtnlevels_m_hist + inc3
+	z = t(rtnlevels_m_hist)
+	z2 = t(rtnlevels_m_rcp85_2030)
+	z3 = t(rtnlevels_m_rcp85_2050)
+	z4 = t(rtnlevels_m_rcp85_2100)
+	y1 = min(z,z2,z3,z4)
+	y2 = max(z,z2,z3,z4)
+	plot(z, type="l",lwd=3,col="black", xlab="Return Period (years)", ylab="Return Level (m)", xaxt="n",ylim=c(y1,y2))
+	lines(z2, lwd=3, col="yellow")
+	lines(z3, lwd=3, col="orange")
+	lines(z4, lwd=3, col="red")
+	axis(1, at=c(1:9), labels=c("2","5","10","25","50","100","250","500","1000"))
+     	legend("topleft", inset=.05, title="Periods",legend=c("Historical","2030","2050","2100"), lwd=3, col=c("black","yellow","orange","red"))
+  })
+
   output$sealevel_projections_plot1 <- renderPlot({
 	profile1 = filter(proj,Site==input$sealevelProjectionLocation) %>% filter(Scenario=="0.3_-_MED") %>% select(7:17)
 	z = t(profile1)
@@ -847,6 +894,20 @@ paste("Damage function - ",input$selectDamageFunction)
 	lines(z6, lwd=3, col="red")
 	axis(1, at=c(1:11), labels=c("2000","2010","2020","2030","2040","2050","2060","2070","2080","2090","2100"))
      	legend("topleft", inset=.05, title="Scenarios (GMSL 2100)",legend=c("0.3m","0.5m","1.0m","1.5m","2.0m","2.5m"), lwd=3, col=c("black","blue","green","yellow","orange","red"))
+  })
+
+  output$sealevel_projections_plot2 <- renderPlot({
+	profile1 = filter(world_slr,Site==input$sealevelProjectionLocation2) %>% select(8:10)
+	z = t(profile1)
+	profile2 = filter(world_slr,Site==input$sealevelProjectionLocation2) %>% select(11:13)
+	z2 = t(profile2)
+	profile3 = filter(world_slr,Site==input$sealevelProjectionLocation2) %>% select(14:16)
+	z3 = t(profile3)
+	plot(z, type="l",lwd=3,col="red", xlab="Year", ylab="Relative Local Sea Level Rise (cm)", xaxt="n")
+	lines(z2, lwd=3, col="yellow")
+	lines(z3, lwd=3, col="green")
+	axis(1, at=c(1:3), labels=c("2030","2050","2100"))
+     	legend("topleft", inset=.05, title="Scenarios",legend=c("RCP 8.5","RCP 4.5","RCP 2.6"), lwd=3, col=c("red","yellow","green"))
   })
 
   output$returnlevel_probability <- renderText({
@@ -907,7 +968,10 @@ paste("Damage function - ",input$selectDamageFunction)
 	annual_probability_withslr = round(100*1/return_period_withslr, digits=2)
 	#paste(input$slrScenario, input$slrYear, slr_scenario_year, "cm", loc,sc,sh,a,return_period,return_period_withslr,annual_probability,"%",annual_probability_withslr,"%")
 	#paste("Historical:",annual_probability,"%","Future:",min(annual_probability_withslr,100),"%")
-	paste("Historical: ",annual_probability,"% -- ",input$slrYear,":",min(annual_probability_withslr,100),"%")
+	#paste("Historical: ",annual_probability,"% -- ",input$slrYear,":",min(annual_probability_withslr,100),"%")
+	p1 = paste("Historical - ",annual_probability,"%")
+	p2 = paste(input$slrYear,"-       ",min(annual_probability_withslr,100),"%")
+	paste(p1,p2,sep="\n")
 	})
 
   output$sealevel_ewl_probabilities <- renderPlot({
