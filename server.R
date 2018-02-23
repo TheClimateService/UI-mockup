@@ -41,21 +41,45 @@ server <- function(input, output, session) {
 # ----------------------------
 #         CONFIGURE
 # ----------------------------
-   #UI Inputs
+   # UI Inputs
+
+   # Read in James's locations csv (based on Terry's)
+   # corpLocations <- readr::read_csv("data/TCSDB/locations.csv")
+
+   # TCSDB in excel format is read in ui.R via:  source("./data/TCSDB/load_tcsdb.r")
+   # The locations sheet is currently sheet 3.
+   corpLocations = dbsheet3
+   businessTypes = dbsheet13
+   userdata = read.csv("./data/TCSDB/user_data.csv.latest.csv", sep=";", header=TRUE)
+
    output$rbLocations <- renderUI({
      locs = pull(unique(subset(corpLocations, ParentCorpID == USER$ParentCorpID, select = LocationName)))
      # radioButtons('rbLocations',label = 'Select a location to configure',c('All locations',unique(as.character(corpTable$Location))))
      radioButtons('rbLocations',label='Select a location to configure', c('All locations',locs))
+     #selectInput('rbLocations',label='Select a location to configure', c('All locations',locs))
+   })
+
+   output$businessTypes <- renderUI({
+    btypes = pull(unique(subset(businessTypes, select = BusinessType)))
+    entry = userdata %>% filter(USER.ParentCorpID==USER$ParentCorpID) %>% filter(input.rbLocations=='All locations')
+    btype_from_userdata = as.character(entry$input.cbGroupBizType)
+    selectInput('industry_sector',"Industry Sector",c(btypes),selected=btype_from_userdata,selectize = TRUE)
+   })
+
+   output$numEmployees <- renderUI({
+    entry = userdata %>% filter(USER.ParentCorpID==USER$ParentCorpID) %>% filter(input.rbLocations==input$rbLocations)
+    n_from_userdata = entry$input.txtNumEmployees
+    textInput('numEmployees',"Number of employees",width = "100px", value=n_from_userdata)
+   })
+
+   output$assetValue <- renderUI({
+    entry = userdata %>% filter(USER.ParentCorpID==USER$ParentCorpID) %>% filter(input.rbLocations==input$rbLocations)
+    n_from_userdata = entry$input.txtAssetValue
+    textInput('assetValue',"Value of assets at this location ($M)",width = "100px", value=n_from_userdata)
    })
 
    #Maps
 
-   #Read in James's locations csv (based on Terry's)
-   #corpLocations <- readr::read_csv("data/TCSDB/locations.csv")
-   # TCSDB in excel format is read in ui.R via:  source("./data/TCSDB/load_tcsdb.r")
-   # The locations sheet is currently sheet 3.
-   corpLocations = dbsheet3
-   
    output$facility_location_map <- renderLeaflet({
      leaflet(data = subset(corpLocations, ParentCorpID == USER$ParentCorpID, select = LocationID:lat)) %>%
        addTiles() %>%
@@ -73,6 +97,11 @@ server <- function(input, output, session) {
    observeEvent(input$btnConfig, {
      updateTabItems(session, 'sidebar', 'analyze')})
    
+   observeEvent(input$button_save_data_corp, {
+        source("./data/TCSDB/save_user_data.r", local=TRUE)
+        system("./data/TCSDB/script_apply_userdata4SE ./data/TCSDB/user_data.csv ./data/scoring_engine/nonphysical/locationvalues4SE.csv")
+      })
+
 # ----------------------------
 #         CORP ANALYZE
 # ----------------------------  
@@ -330,6 +359,18 @@ server <- function(input, output, session) {
 
   observeEvent(input$button_runSE, {
         system("./data/scoring_engine/script_runSE_from_app")
+  # Following reloads the tables for Corporate and Portfolio Analysis.
+  # XXX This is not working.  It looks like the system reads these tables upon initiation.
+  corpTable <- readr::read_csv("./data/scoring_engine/nonphysical/TCSDB_structure.locations.csv.damages.allDFs.withvalues.with.nonphysical.byparentcorp.csv")
+  corpTable2 <- readr::read_csv("./data/scoring_engine/nonphysical/TCSDB_structure.locations.csv.damages.allDFs.withvalues.with.nonphysical.byparentcorp.csv")
+      })
+
+  observeEvent(input$button_runSE_with_userdata, {
+        system("./data/scoring_engine/script_runSE_from_app_with_userdata")
+  # Following reloads the tables for Corporate and Portfolio Analysis.
+  # XXX This is not working.  It looks like the system reads these tables upon initiation.
+  corpTable <- readr::read_csv("./data/scoring_engine/nonphysical/TCSDB_structure.locations.csv.damages.allDFs.withvalues.with.nonphysical.byparentcorp.csv")
+  corpTable2 <- readr::read_csv("./data/scoring_engine/nonphysical/TCSDB_structure.locations.csv.damages.allDFs.withvalues.with.nonphysical.byparentcorp.csv")
       })
 
 # ----------------------------

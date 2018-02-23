@@ -67,5 +67,5 @@ sed 's/_/ /' temp14a > temp14b
 # Save results and clean up.
 mv temp13 $locfile.damages.allDFs
 mv temp14b $locfile.damages.allDFs.facilities.only.4r
-#rm temp*
+rm temp*
 

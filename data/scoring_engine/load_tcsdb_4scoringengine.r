@@ -7,13 +7,14 @@ library(readxl)
 library(tidyverse)
 
 # Specify source.
+#setwd("./data/scoring_engine/")
 db="../TCSDB/TCSDB_structure.xlsx"
 #db="./data/TCSDB/TCSDB_structure_v3.xlsx"
 #db="./data/scoring_engine/nonphysical/TCSDB_structure.xlsx"
 #db="./data/scoring_engine/nonphysical/TCSDB_structure_TT.xlsx"
 
 # Read each sheet.  
-# Current sheet names:  CorpRiskTable, ValueAtRisk, Location, ParentCorp, TCDFCategory, TCFDSubCat, RiskFactor, Scenarios, CorpRiskTable_withSEoutputs, users, LocationValues, and DamageFunctions.
+# Current sheet names:  CorpRiskTable, ValueAtRisk, Location, ParentCorp, TCDFCategory, TCFDSubCat, RiskFactor, Scenarios, CorpRiskTable_withSEoutputs, users, LocationValues, DamageFunctions, BusinessTypes.
 dbsheet1 = read_excel(db,1)
 dbsheet2 = read_excel(db,2)
 dbsheet3 = read_excel(db,3)
@@ -26,6 +27,7 @@ dbsheet9 = read_excel(db,9)
 dbsheet10 = read_excel(db,10)
 dbsheet11 = read_excel(db,11)
 dbsheet12 = read_excel(db,12)
+dbsheet13 = read_excel(db,13)
 
 locall = dbsheet3
 loc= dbsheet3 %>% select(ParentCorpID, LocationID, LocationName)
@@ -45,4 +47,7 @@ write.table(subcat,"./nonphysical/subcat.csv", sep=";")
 write.table(cat,"./nonphysical/cat.csv", sep=";")
 write.table(corp,"./nonphysical/corp.csv", sep=";")
 write.table(damagefunc,"./df.csv", sep=",", row.names=FALSE)
+
+# Return to original working directory.
+#setwd("../../")
 

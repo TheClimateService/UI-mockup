@@ -34,11 +34,13 @@ library(extRemes)
 library(shinyjs)
 library(plotly)
 library(readxl)
+library(writexl)
 library(data.table)
 
 # Data
 
 source("./data/TCSDB/load_tcsdb.r")
+#source("./data/scoring_engine/load_tcsdb_4scoringengine.r")
 
 # US SLR projections and historical extreme water levels.  Variables created are "proj" and "ewl".
 source("./data/sealevel_us/load_sealevel_data_us.r")
@@ -175,22 +177,26 @@ ui <- dashboardPage(title="The Climate Service",
          box(width=8,
              conditionalPanel(condition = "input.rbLocations == 'All locations'",
                 leafletOutput("facility_location_map"),
-                selectInput("cbGroupBizType","Industry Sector",
-                  c("Beverage","Agriculture","Packaged Foods/Meats","Paper & forest","Manufacturing","Metals & mining", "Chemicals", "Real Estate Management/Development","Transportation","Oil & gas","Electric Utilities"),
-                  selected = c("Manufacturing")
-                )
+                #selectInput("cbGroupBizType","Industry Sector",
+                #  c("Beverage","Agriculture","Packaged Foods/Meats","Paper & forest","Manufacturing","Metals & mining", "Chemicals", "Real Estate Management/Development","Transportation","Oil & gas","Electric Utilities"),
+                #  selected = c("Manufacturing")  )
+		uiOutput("businessTypes")
              ),
              conditionalPanel(condition = "input.rbLocations != 'All locations'",
                 leafletOutput("individual_location_map"),
-                textInput("txtNumEmployees",label = "Number of employees", width = "100px", value = "250"),
-                textInput("txtAssetValue", label = "Value of assets at this location ($M)", width = "100px", value = "100"), br(),
+                #textInput("txtNumEmployees",label = "Number of employees", width = "100px", value = "250"),
+		uiOutput("numEmployees"),
+                #textInput("txtAssetValue", label = "Value of assets at this location ($M)", width = "100px", value = "100"), 
+		uiOutput("assetValue"),
+		br(),
                 checkboxGroupInput("cbBusinessFunctions","Business functions performed at this location",
                          c("Clean Room Manufacturing","Shipping","Inventory Management","R&D","HR","Legal","Marketing/Sales","Corporate Governance"),
                          selected = c("Clean Room Manufacturing","R&D")
                 )#checkboxGroup
               )#contitionalPanel
          ),#box
-         actionButton("btnConfig","Analyze")
+         actionButton("btnConfig","Analyze"),
+         actionButton("button_save_data_corp","SAVE DATA")
         )#fluidRow
     ),#tabItem
 
@@ -293,7 +299,11 @@ ui <- dashboardPage(title="The Climate Service",
         ), #fluidrow graphs
 
         fluidRow(
-         actionButton("button_runSE","RUN SCORING", icon = icon("cog"))
+         actionButton("button_runSE_with_userdata","RUN SCORING INCLUDING USER DATA", icon = icon("cog"))
+        ), #fluidRow
+
+        fluidRow(
+         actionButton("button_runSE","RUN SCORING WITHOUT USER DATA", icon = icon("cog"))
         )#fluidRow
       ),#tabItem methodology
 

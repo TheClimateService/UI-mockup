@@ -11,7 +11,8 @@ tcsdbfile=$1
 
 # Get the needed files from tabs in the TCSDB xlsx file.
 # This generates locations.csv, locations4SE, riskfactors.csv, subcat.csv, cat.csv, corp.csv, and df.csv .
-Rscript ./load_tcsdb_4scoringengine.r
+# This is now included in script_runSE_from_app.  If running the SE outside the app, uncomment this.
+# Rscript ./load_tcsdb_4scoringengine.r
 
 # Move and rename the location information.
 cp ./nonphysical/locations4SE.csv temp1

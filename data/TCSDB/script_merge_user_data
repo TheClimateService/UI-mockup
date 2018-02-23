@@ -1,0 +1,41 @@
+
+# SCRIPT TO MERGE OLD USER DATA WITH NEW INITIATOR OF USER DATA.
+# TT - February 2018
+
+# Execution:  ./script_merge_user_data <saved version of user_data.csv.latest.csv> <newly initiatied version of user_data.csv.latest.csv>
+# Example:    ./script_merge_user_data user_data.csv.latest.csv.sav user_data.csv.latest.csv
+
+
+# load_tcsdb.r now creates an initiator for user_data.csv that will be used by script_apply_userdata4SE to create the first user_data.csv.latest.csv file.  When this initiator is copied to user_data.csv (the historical record of all user data saves), this effectively removes all memory of past user actions.  To preserve this memory, this script merges a saved user_data.csv.latest.csv file with one made from a newly-initiated user_data.csv.
+
+# Format of the user_data.csv.latest.csv file:
+#"USER.ParentCorpID";"input.rbLocations";"input.cbGroupBizType";"input.txtNumEmployees";"input.txtAssetValue";"cbBusinessFunctions";"Date"
+#4;Stanley_Plaza;-;250;;Clean Room Manufacturing, R&D;Wed_Feb_21_17:03:32_EST_2018
+#4;Pacific_Fair;-;999;100;Clean Room Manufacturing, R&D;Wed_Feb_21_17:07:43_EST_2018
+#4;Indooroopilly_Shopping_Centre;-;999;;Clean Room Manufacturing, R&D;Wed_Feb_21_17:01:57_EST_2018
+#4;All locations;Real Estate;-;-;-;Wed_Feb_21_15:45:52_EST_2018
+
+# Get input.
+userdata_latest_saved=$1
+userdata_latest_new=$2
+
+# Drop the dates.
+# XXX Note that the end column of the cut below (6) will change if there are more fields added to the saved user data.
+cut -d ";" -f 1-6 $userdata_latest_saved > temp1
+cut -d ";" -f 1-6 $userdata_latest_new > temp2
+
+# Sort using key that will enable data from user_data.csv.latest.csv.sav to take precedence.
+awk '{FS=";"; print $1"_"$2"_B",$0}' temp1 > temp1b
+awk '{FS=";"; print $1"_"$2"_A",$0}' temp2 > temp2b
+cat temp1b temp2b | sed 's/All locations/All_locations/' | sort -k 1 > temp3
+echo LASTLINE >> temp3
+awk '{thisone=substr($1,1,length($1)-1);  \
+      if(NR>1 && thisone!=lastone) print laststring; lastone=thisone; laststring=$0}' temp3 > temp4
+
+# Drop sorting key and add current date.
+cut -d " " -f 2-999 temp4 > temp5
+awk -v date="$(date | sed 's/ /_/g')" '{if(NR==1) print $0";Date"; else print $0";"date}' temp5 > temp6
+
+# Save results and clean up.
+mv temp6 $userdata_latest_saved.merged
+rm temp* 
