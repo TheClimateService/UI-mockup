@@ -46,15 +46,15 @@ echo FIRSTLINE > temp3b.hdr
 cat temp3b.hdr temp3b temp3b.ftr > temp3c
 awk -v locvalues=$locvalues '{FS=";";  \
       # Following 2 lines simply mark matching records with "XXX".
-      # if(NR==2 && $1!="LASTLINE") print "awk SSS{FS=DDD;DDD; if($2=="$1" && substr($3,2,length($3)-2)==DDD"$2"DDD) print $0,DDDXXXDDD; else print $0}SSS "locvalues" > temp99."NR;  \
-      # if(NR>2 && $1!="LASTLINE") print "awk SSS{FS=DDD;DDD; if($2=="$1" && substr($3,2,length($3)-2)==DDD"$2"DDD) print $0,DDDXXXDDD; else print $0}SSS temp99."(NR-1)" > temp99."NR;  \
+      # if(NR==2 && $1!="LASTLINE") print "awk SSSquote{FS=DDDquote;DDDquote; if($2=="$1" && substr($3,2,length($3)-2)==DDDquote"$2"DDDquote) print $0,DDDquoteXXXDDDquote; else print $0}SSSquote "locvalues" > temp99."NR;  \
+      # if(NR>2 && $1!="LASTLINE") print "awk SSSquote{FS=DDDquote;DDDquote; if($2=="$1" && substr($3,2,length($3)-2)==DDDquote"$2"DDDquote) print $0,DDDquoteXXXDDDquote; else print $0}SSSquote temp99."(NR-1)" > temp99."NR;  \
       # XXX Following 2 lines replace facility value for the 3 current physical DFs.  These will need to be modified if the number of physical DFs changes or if they are reordered.
-      if(NR==2 && $1!="LASTLINE") print "awk SSS{FS=DDD;DDD; if($2=="$1" && substr($3,2,length($3)-2)==DDD"$2"DDD) print $1;;;$2;;;$3;;;DDD"$5";"$5";"$5";DDD$7;;;$8;;;$9; else print $0}SSS "locvalues" > temp99."NR;  \
-      if(NR>2 && $1!="LASTLINE") print "awk SSS{FS=DDD;DDD; if($2=="$1" && substr($3,2,length($3)-2)==DDD"$2"DDD) print $1;;;$2;;;$3;;;DDD"$5";"$5";"$5";DDD$7;;;$8;;;$9; else print $0}SSS temp99."(NR-1)" > temp99."NR;  \
+      if(NR==2 && $1!="LASTLINE") print "awk SSSquote{FS=DDDquote;DDDquote; if($2=="$1" && substr($3,2,length($3)-2)==DDDquote"$2"DDDquote) print $1;;;$2;;;$3;;;DDDquote"$5";"$5";"$5";DDDquote$7;;;$8;;;$9; else print $0}SSSquote "locvalues" > temp99."NR;  \
+      if(NR>2 && $1!="LASTLINE") print "awk SSSquote{FS=DDDquote;DDDquote; if($2=="$1" && substr($3,2,length($3)-2)==DDDquote"$2"DDDquote) print $1;;;$2;;;$3;;;DDDquote"$5";"$5";"$5";DDDquote$7;;;$8;;;$9; else print $0}SSSquote temp99."(NR-1)" > temp99."NR;  \
       if($1=="LASTLINE") print "mv temp99."(NR-1)" temp100"  \
      }' temp3c > temp4
-sed "s/SSS/'/g" temp4 > temp5
-sed 's/DDD/"/g' temp5 > temp6
+sed "s/SSSquote/'/g" temp4 > temp5
+sed 's/DDDquote/"/g' temp5 > temp6
 sed 's/;;;/";"/g' temp6 > temp7
 chmod a+x temp7
 ./temp7
@@ -65,6 +65,7 @@ sed 's/ //g' temp100 > temp101
 # Save results and clean up.
 cut -d " " -f 2-999 temp1.hdr | sed 's/ /;/g' > temp3.hdr
 cat temp3.hdr temp3b > $userdata.latest.csv
+#mv temp101 ./locationvalues4SE_with_userdata_mods
 mv temp101 ./data/TCSDB/locationvalues4SE_with_userdata_mods
 rm temp*
 

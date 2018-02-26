@@ -50,8 +50,8 @@
 2;Bennett_Mountain;-;250;100;Clean Room Manufacturing, R&D;Thu_Feb_22_12:04:22_EST_2018
 2;American_Falls;-;250;100;Clean Room Manufacturing, R&D;Thu_Feb_22_12:04:22_EST_2018
 2;All locations;Manufacturing;-;-;-;Thu_Feb_22_12:04:22_EST_2018
-1;Singapore_Hqs;-;250;100;Clean Room Manufacturing, R&D;Thu_Feb_22_12:04:22_EST_2018
-1;Singapore_300mm_NAND;-;250;100;Clean Room Manufacturing, R&D;Thu_Feb_22_12:04:22_EST_2018
+1;Singapore_Hqs;-;250;999;Clean Room Manufacturing, R&D;Mon_Feb_26_12:01:51_EST_2018
+1;Singapore_300mm_NAND;-;250;9999;Clean Room Manufacturing, R&D;Mon_Feb_26_12:53:50_EST_2018
 1;Singapore_300mm_DRAM;-;250;100;Clean Room Manufacturing, R&D;Thu_Feb_22_12:04:22_EST_2018
 1;Singapore_200mm_NOR;-;250;100;Clean Room Manufacturing, R&D;Thu_Feb_22_12:04:22_EST_2018
 1;Manassas;-;250;999;Clean Room Manufacturing, R&D;Fri_Feb_23_11:27:12_EST_2018
