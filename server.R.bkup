@@ -50,9 +50,7 @@ server <- function(input, output, session) {
    # The locations sheet is currently sheet 3.
    corpLocations = dbsheet3
    businessTypes = dbsheet13
-   businessFunctions = dbsheet14
-   # userdata now read below in each data type in order to have user see saved data without reinitiation of session.  XXX This may be inefficient when userdata gets very large.
-   # userdata = read.csv("./data/TCSDB/user_data.csv.latest.csv", sep=";", header=TRUE)
+   userdata = read.csv("./data/TCSDB/user_data.csv.latest.csv", sep=";", header=TRUE)
 
    output$rbLocations <- renderUI({
      locs = pull(unique(subset(corpLocations, ParentCorpID == USER$ParentCorpID, select = LocationName)))
@@ -62,7 +60,6 @@ server <- function(input, output, session) {
    })
 
    output$businessTypes <- renderUI({
-    userdata = read.csv("./data/TCSDB/user_data.csv.latest.csv", sep=";", header=TRUE)
     btypes = pull(unique(subset(businessTypes, select = BusinessType)))
     entry = userdata %>% filter(USER.ParentCorpID==USER$ParentCorpID) %>% filter(input.rbLocations=='All locations')
     btype_from_userdata = as.character(entry$input.cbGroupBizType)
@@ -70,31 +67,15 @@ server <- function(input, output, session) {
    })
 
    output$numEmployees <- renderUI({
-    userdata = read.csv("./data/TCSDB/user_data.csv.latest.csv", sep=";", header=TRUE)
     entry = userdata %>% filter(USER.ParentCorpID==USER$ParentCorpID) %>% filter(input.rbLocations==input$rbLocations)
     n_from_userdata = entry$input.txtNumEmployees
     textInput('numEmployees',"Number of employees",width = "100px", value=n_from_userdata)
    })
 
    output$assetValue <- renderUI({
-    userdata = read.csv("./data/TCSDB/user_data.csv.latest.csv", sep=";", header=TRUE)
     entry = userdata %>% filter(USER.ParentCorpID==USER$ParentCorpID) %>% filter(input.rbLocations==input$rbLocations)
     n_from_userdata = entry$input.txtAssetValue
     textInput('assetValue',"Value of assets at this location ($M)",width = "100px", value=n_from_userdata)
-   })
-
-   output$businessFunctions <- renderUI({
-    userdata = read.csv("./data/TCSDB/user_data.csv.latest.csv", sep=";", header=TRUE)
-    bfunctions = pull(unique(subset(businessFunctions, select = BusinessFunction)))
-    entry = userdata %>% filter(USER.ParentCorpID==USER$ParentCorpID) %>% filter(input.rbLocations==input$rbLocations)
-    bfunctions_from_userdata = as.character(entry$cbBusinessFunctions)
-    dbfu = data.frame(bfunctions_from_userdata)
-    bfunctions_from_userdata_list = do.call(rbind, str_split(dbfu$bfunctions_from_userdata, ', '))
-    #a = dbfu2[1,1]
-    #for(i in 1:length(dbfu2)) a = c(a,",",dbfu2[1,i])
-    #for(i in 1:1) a = c(a,",",dbfu2[1,i])
-    #bfunctions_from_userdata = paste("c(", as.character(entry$cbBusinessFunctions[1]), ")" )
-    checkboxGroupInput('cbBusinessFunctions',"Business functions performed at this location",c(bfunctions),selected=bfunctions_from_userdata_list[1,])
    })
 
    #Maps
@@ -119,7 +100,6 @@ server <- function(input, output, session) {
    observeEvent(input$button_save_data_corp, {
         source("./data/TCSDB/save_user_data.r", local=TRUE)
         system("./data/TCSDB/script_apply_userdata4SE ./data/TCSDB/user_data.csv ./data/scoring_engine/nonphysical/locationvalues4SE.csv")
-        #userdata = read.csv("./data/TCSDB/user_data.csv.latest.csv", sep=";", header=TRUE)
       })
 
 # ----------------------------
@@ -140,7 +120,6 @@ server <- function(input, output, session) {
   })
   
   output$selectInput_scenario <- renderUI({
-    # XXX If corpTable is set to type reactiveValues and controlled with button_test_reset_data, the following is not initialized properly and does not get updated by the reset button.
     selectInput('inputScenarios',"Scenario",c(unique(as.character(corpTable$ScenarioName))),selected='RCP8.5',selectize = TRUE)
   })
   
@@ -162,7 +141,6 @@ server <- function(input, output, session) {
   
   #barByLocation
   output$barByLocation <- renderPlotly({
-      corpTable <- readr::read_csv("./data/scoring_engine/nonphysical/TCSDB_structure.locations.csv.damages.allDFs.withvalues.with.nonphysical.csv")
     if (input$inputLocations != 'All locations') {
       corpTable <- corpTable[which(corpTable$ParentCorpID == USER$ParentCorpID & corpTable$Location == input$inputLocations & corpTable$RiskYear == input$sliderInputYear),]
     }
@@ -176,7 +154,6 @@ server <- function(input, output, session) {
   
   #stacked area by Time
   output$areaByTime <- renderPlotly({
-      corpTable <- readr::read_csv("./data/scoring_engine/nonphysical/TCSDB_structure.locations.csv.damages.allDFs.withvalues.with.nonphysical.csv")
     if (input$inputLocations != 'All locations') {
       corpTable <- corpTable[which(corpTable$ParentCorpID == USER$ParentCorpID & corpTable$Location == input$inputLocations),]
     }
@@ -229,7 +206,6 @@ server <- function(input, output, session) {
   
   # TCFD stacked bar chart
   output$stackedCorpFinImpactsPlot <- renderPlotly({
-      corpTable <- readr::read_csv("./data/scoring_engine/nonphysical/TCSDB_structure.locations.csv.damages.allDFs.withvalues.with.nonphysical.csv")
     if (input$inputLocations != 'All locations') {
       corpTable <- corpTable[which(corpTable$ParentCorpID == USER$ParentCorpID & corpTable$Location == input$inputLocations & corpTable$RiskYear == input$sliderInputYear),]
     }
@@ -249,7 +225,6 @@ server <- function(input, output, session) {
   #Data table
   output$corpFinImpacts <- DT::renderDataTable({
      #colnames(corpTable) = c('Location','TCFD Category','Subcategory','Risk Factor','Scenario','Year','Value at Risk ($M)') #someday figure this out
-      corpTable <- readr::read_csv("./data/scoring_engine/nonphysical/TCSDB_structure.locations.csv.damages.allDFs.withvalues.with.nonphysical.csv")
       if (input$inputLocations != 'All locations') {
         corpTable <- corpTable[which(corpTable$ParentCorpID == USER$ParentCorpID & corpTable$Location == input$inputLocations & corpTable$RiskYear == input$sliderInputYear),]
       }
@@ -383,19 +358,29 @@ server <- function(input, output, session) {
 	paste(p1,sep="\n")
         })
 
-  # Should be reactiveValue.  See pattern 3 at http://shiny.rstudio.com/articles/action-buttons.html
-  corpTableNew <- reactiveValues()
   observeEvent(input$button_test_data_refresh, {
-       corpTableNew <- readr::read_csv("./data/scoring_engine/nonphysical/TCSDB_structure.locations.csv.damages.allDFs.withvalues.with.nonphysical.csv")
-       #write.table(corpTableNew, "./junk")
+        #system("./data/scoring_engine/script_runSE_from_app")
+  # Following reloads the tables for Corporate and Portfolio Analysis.
+  # XXX This is not working.  It looks like the system reads these tables upon initiation.
+  corpTableNew <- readr::read_csv("./data/scoring_engine/nonphysical/TCSDB_structure.locations.csv.damages.allDFs.withvalues.with.nonphysical.csv")
+  write.table(corpTableNew, "./junk")
+  #corpTable2 <- readr::read_csv("./data/scoring_engine/nonphysical/TCSDB_structure.locations.csv.damages.allDFs.withvalues.with.nonphysical.byparentcorp.csv")
       })
 
   observeEvent(input$button_runSE, {
         system("./data/scoring_engine/script_runSE_from_app")
+  # Following reloads the tables for Corporate and Portfolio Analysis.
+  # XXX This is not working.  It looks like the system reads these tables upon initiation.
+  corpTable <- readr::read_csv("./data/scoring_engine/nonphysical/TCSDB_structure.locations.csv.damages.allDFs.withvalues.with.nonphysical.csv")
+  corpTable2 <- readr::read_csv("./data/scoring_engine/nonphysical/TCSDB_structure.locations.csv.damages.allDFs.withvalues.with.nonphysical.byparentcorp.csv")
       })
 
   observeEvent(input$button_runSE_with_userdata, {
         system("./data/scoring_engine/script_runSE_from_app_with_userdata")
+  # Following reloads the tables for Corporate and Portfolio Analysis.
+  # XXX This is not working.  It looks like the system reads these tables upon initiation.
+  corpTable <- readr::read_csv("./data/scoring_engine/nonphysical/TCSDB_structure.locations.csv.damages.allDFs.withvalues.with.nonphysical.csv")
+  corpTable2 <- readr::read_csv("./data/scoring_engine/nonphysical/TCSDB_structure.locations.csv.damages.allDFs.withvalues.with.nonphysical.byparentcorp.csv")
       })
 
 # ----------------------------
@@ -423,8 +408,6 @@ server <- function(input, output, session) {
   
   #barByRiskFactor
   output$barByRiskFactorPort <- renderPlotly({
-    corpTable2 <- readr::read_csv("./data/scoring_engine/nonphysical/TCSDB_structure.locations.csv.damages.allDFs.withvalues.with.nonphysical.byparentcorp.csv")
-    parentCorp = dbsheet4
     if (input$inputLocationsPort != 'Entire portfolio') {
       #corpTable2 <- corpTable2[which(corpTable2$ParentCorpID == USER$ParentCorpID & corpTable2$Location == input$inputLocationsPort & corpTable2$RiskYear == input$sliderInputYearPort),]
       corpTable2 <- corpTable2[which(corpTable2$Location == input$inputLocationsPort & corpTable2$RiskYear == input$sliderInputYearPort),]
@@ -439,8 +422,6 @@ server <- function(input, output, session) {
   
   #barByLocation
   output$barByLocationPort <- renderPlotly({
-    corpTable2 <- readr::read_csv("./data/scoring_engine/nonphysical/TCSDB_structure.locations.csv.damages.allDFs.withvalues.with.nonphysical.byparentcorp.csv")
-    parentCorp = dbsheet4
     if (input$inputLocationsPort != 'Entire portfolio') {
       #corpTable2 <- corpTable2[which(corpTable2$ParentCorpID == USER$ParentCorpID & corpTable2$Location == input$inputLocationsPort & corpTable2$RiskYear == input$sliderInputYearPort),]
       corpTable2 <- corpTable2[which(corpTable2$Location == input$inputLocationsPort & corpTable2$RiskYear == input$sliderInputYearPort),]
@@ -456,8 +437,6 @@ server <- function(input, output, session) {
   
   #stacked area by Time
   output$areaByTimePort <- renderPlotly({
-    corpTable2 <- readr::read_csv("./data/scoring_engine/nonphysical/TCSDB_structure.locations.csv.damages.allDFs.withvalues.with.nonphysical.byparentcorp.csv")
-    parentCorp = dbsheet4
     if (input$inputLocationsPort != 'Entire portfolio') {
       #corpTable2 <- corpTable2[which(corpTable2$ParentCorpID == USER$ParentCorpID & corpTable2$Location == input$inputLocationsPort),]
       corpTable2 <- corpTable2[which(corpTable2$Location == input$inputLocationsPort),]
@@ -508,8 +487,6 @@ server <- function(input, output, session) {
   
   # TCFD stacked bar chart
   output$stackedCorpFinImpactsPlotPort <- renderPlotly({
-    corpTable2 <- readr::read_csv("./data/scoring_engine/nonphysical/TCSDB_structure.locations.csv.damages.allDFs.withvalues.with.nonphysical.byparentcorp.csv")
-    parentCorp = dbsheet4
     if (input$inputLocationsPort != 'Entire portfolio') {
       #corpTable2 <- corpTable2[which(corpTable2$ParentCorpID == USER$ParentCorpID & corpTable2$Location == input$inputLocationsPort & corpTable2$RiskYear == input$sliderInputYearPort),]
       corpTable2 <- corpTable2[which(corpTable2$Location == input$inputLocationsPort & corpTable2$RiskYear == input$sliderInputYearPort),]
@@ -526,8 +503,6 @@ server <- function(input, output, session) {
   #Data table
   output$corpFinImpactsPort <- DT::renderDataTable({
      #colnames(corpTable2) = c('Location','TCFD Category','Subcategory','Risk Factor','Scenario','Year','Value at Risk ($M)') #someday figure this out
-    corpTable2 <- readr::read_csv("./data/scoring_engine/nonphysical/TCSDB_structure.locations.csv.damages.allDFs.withvalues.with.nonphysical.byparentcorp.csv")
-    parentCorp = dbsheet4
       if (input$inputLocationsPort != 'Entire portfolio') {
         #corpTable2 <- corpTable2[which(corpTable2$ParentCorpID == USER$ParentCorpID & corpTable2$Location == input$inputLocationsPort & corpTable2$RiskYear == input$sliderInputYearPort),]
         corpTable2 <- corpTable2[which(corpTable2$Location == input$inputLocationsPort & corpTable2$RiskYear == input$sliderInputYearPort),]

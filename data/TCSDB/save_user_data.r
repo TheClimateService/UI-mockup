@@ -39,6 +39,8 @@ if(input$rbLocations!="All locations") {
 	# Note that the business functions are returned as multiple rows and must be collapsed to a single string.  
 	# Also note that the separator is "," and the business functions should not contain semicolons.
 	f = toString( as.character(input$cbBusinessFunctions) )
+	#f = toString( as.character(input$BusinessFunctions) )
+	#f = as.character(input$BusinessFunctions)
 }
 
 USER_ENTRY = paste(a,";",b,";",c,";",d,";",e,";",f,";",date)

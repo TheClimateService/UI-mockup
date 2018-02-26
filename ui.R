@@ -177,23 +177,29 @@ ui <- dashboardPage(title="The Climate Service",
          box(width=8,
              conditionalPanel(condition = "input.rbLocations == 'All locations'",
                 leafletOutput("facility_location_map"),
+
                 #selectInput("cbGroupBizType","Industry Sector",
                 #  c("Beverage","Agriculture","Packaged Foods/Meats","Paper & forest","Manufacturing","Metals & mining", "Chemicals", "Real Estate Management/Development","Transportation","Oil & gas","Electric Utilities"),
                 #  selected = c("Manufacturing")  )
 		uiOutput("businessTypes")
              ),
+
              conditionalPanel(condition = "input.rbLocations != 'All locations'",
                 leafletOutput("individual_location_map"),
+
                 #textInput("txtNumEmployees",label = "Number of employees", width = "100px", value = "250"),
 		uiOutput("numEmployees"),
                 #textInput("txtAssetValue", label = "Value of assets at this location ($M)", width = "100px", value = "100"), 
 		uiOutput("assetValue"),
 		br(),
-                checkboxGroupInput("cbBusinessFunctions","Business functions performed at this location",
-                         c("Clean Room Manufacturing","Shipping","Inventory Management","R&D","HR","Legal","Marketing/Sales","Corporate Governance"),
-                         selected = c("Clean Room Manufacturing","R&D")
-                )#checkboxGroup
-              )#contitionalPanel
+
+                #checkboxGroupInput("cbBusinessFunctions","Business functions performed at this location",
+                #         c("Clean Room Manufacturing","Shipping","Inventory Management","R&D","HR","Legal","Marketing/Sales","Corporate Governance"),
+                #         selected = c("Clean Room Manufacturing","R&D")
+                #), #checkboxGroup
+		uiOutput("businessFunctions")
+
+              )#conditionalPanel
          ),#box
          actionButton("btnConfig","Analyze"),
          actionButton("button_save_data_corp","SAVE DATA")
@@ -219,6 +225,7 @@ ui <- dashboardPage(title="The Climate Service",
         br(),
         tabsetPanel(
           tabPanel(title = 'By Risk Factor',
+	      #actionButton("button_show", "Show"),
               plotlyOutput("barByRiskFactor")
           ),
           tabPanel(title = 'By Location',
@@ -297,6 +304,10 @@ ui <- dashboardPage(title="The Climate Service",
 	  box(width=4,verbatimTextOutput("methodologyTracebackHazard")),
 	  box(width=4,verbatimTextOutput("methodologyTracebackVuln"))
         ), #fluidrow graphs
+
+        fluidRow(
+         actionButton("button_test_data_refresh","TEST DATA REFRESH", icon = icon("cog"))
+        ), #fluidRow
 
         fluidRow(
          actionButton("button_runSE_with_userdata","RUN SCORING INCLUDING USER DATA", icon = icon("cog"))

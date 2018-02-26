@@ -6,7 +6,7 @@ db="./data/TCSDB/TCSDB_structure.xlsx"
 #db="./data/TCSDB/TCSDB_structure_v3.xlsx"
 
 # Read each sheet.  
-# Current sheet names:  CorpRiskTable, ValueAtRisk, Location, ParentCorp, TCDFCategory, TCFDSubCat, RiskFactor, Scenarios, CorpRiskTable_withSEoutputs, users, LocationValues, DamageFunctions, BusinessTypes.
+# Current sheet names:  CorpRiskTable, ValueAtRisk, Location, ParentCorp, TCDFCategory, TCFDSubCat, RiskFactor, Scenarios, CorpRiskTable_withSEoutputs, users, LocationValues, DamageFunctions, BusinessTypes, BusinessFunctions.
 dbsheet1 = read_excel(db,1)
 dbsheet2 = read_excel(db,2)
 dbsheet3 = read_excel(db,3)
@@ -20,6 +20,7 @@ dbsheet10 = read_excel(db,10)
 dbsheet11 = read_excel(db,11)
 dbsheet12 = read_excel(db,12)
 dbsheet13 = read_excel(db,13)
+dbsheet14 = read_excel(db,14)
 
 # Create initiator for user_data.csv that will be used by script_apply_userdata4SE to create the first user_data.csv.latest.csv file.  When this initiator is copied to user_data.csv (the historical record of all user data saves), this effectively removes all memory of past user actions.  To preserve this memory, concatenate the initatior file and the current user_data.csv.latest.csv (with pre-pended date_seconds later than the dates in the initiator file). 
 # Format of the user_data.csv file:
@@ -38,6 +39,7 @@ init$input.cbGroupBizType <- "-"
 init$input.txtNumEmployees <- "250"
 init$input.txtAssetValue <- "100"
 init$cbBusinessFunctions <- "Clean Room Manufacturing, R&D"
+#init$cbBusinessFunctions <- c("Clean Room Manufacturing", "R&D")
 init$Date <- as.character(date)
 init$Date_seconds <- date_seconds
 init <- init %>% select(Date_seconds, everything())

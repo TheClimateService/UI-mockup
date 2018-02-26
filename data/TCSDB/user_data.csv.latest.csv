@@ -1,16 +1,16 @@
 "USER.ParentCorpID";"input.rbLocations";"input.cbGroupBizType";"input.txtNumEmployees";"input.txtAssetValue";"cbBusinessFunctions";"Date"
 4;The_Palms_NZ;-;250;100;Clean Room Manufacturing, R&D;Thu_Feb_22_12:04:22_EST_2018
 4;Stanley_Plaza;-;250;999;Clean Room Manufacturing, R&D;Thu_Feb_22_15:45:42_EST_2018
-4;Pacific_Fair;-;999;999;Clean Room Manufacturing, R&D;Fri_Feb_23_09:10:07_EST_2018
+4;Pacific_Fair;-;999;999;Clean Room Manufacturing, Shipping, R&D;Mon_Feb_26_09:25:58_EST_2018
 4;NAB_Headquarters;-;250;100;Clean Room Manufacturing, R&D;Thu_Feb_22_12:04:22_EST_2018
 4;Malvern_Central;-;250;100;Clean Room Manufacturing, R&D;Thu_Feb_22_12:04:22_EST_2018
-4;Macquarie_Centre;-;250;100;Clean Room Manufacturing, R&D;Thu_Feb_22_12:04:22_EST_2018
-4;Indooroopilly_Shopping_Centre;-;999;998;Clean Room Manufacturing, R&D;Thu_Feb_22_16:02:59_EST_2018
+4;Macquarie_Centre;-;999;999;Clean Room Manufacturing, R&D;Fri_Feb_23_14:07:31_EST_2018
+4;Indooroopilly_Shopping_Centre;-;999;9999;Clean Room Manufacturing, Shipping, Inventory Management;Sun_Feb_25_15:08:22_EST_2018
 4;Garden_City;-;250;100;Clean Room Manufacturing, R&D;Thu_Feb_22_12:04:22_EST_2018
 4;Exchange_Tower;-;250;100;Clean Room Manufacturing, R&D;Thu_Feb_22_12:04:22_EST_2018
-4;Coronation_Drive_Office_Park;-;250;100;Clean Room Manufacturing, R&D;Thu_Feb_22_12:04:22_EST_2018
+4;Coronation_Drive_Office_Park;-;999;999;Clean Room Manufacturing, R&D;Fri_Feb_23_13:52:58_EST_2018
 4;All locations;Real Estate;-;-;-;Fri_Feb_23_09:54:16_EST_2018
-4;AMP_Building;-;250;100;Clean Room Manufacturing, R&D;Thu_Feb_22_12:04:22_EST_2018
+4;AMP_Building;-;250;100;Clean Room Manufacturing, Shipping, R&D;Sun_Feb_25_11:59:43_EST_2018
 3;Singapore_DRD;-;250;100;Clean Room Manufacturing, R&D;Thu_Feb_22_12:04:22_EST_2018
 3;San_Diego;-;250;100;Clean Room Manufacturing, R&D;Thu_Feb_22_12:04:22_EST_2018
 3;San_Bernadino;-;250;100;Clean Room Manufacturing, R&D;Thu_Feb_22_12:04:22_EST_2018
@@ -54,8 +54,8 @@
 1;Singapore_300mm_NAND;-;250;100;Clean Room Manufacturing, R&D;Thu_Feb_22_12:04:22_EST_2018
 1;Singapore_300mm_DRAM;-;250;100;Clean Room Manufacturing, R&D;Thu_Feb_22_12:04:22_EST_2018
 1;Singapore_200mm_NOR;-;250;100;Clean Room Manufacturing, R&D;Thu_Feb_22_12:04:22_EST_2018
-1;Manassas;-;250;100;Clean Room Manufacturing, R&D;Thu_Feb_22_12:04:22_EST_2018
+1;Manassas;-;250;999;Clean Room Manufacturing, R&D;Fri_Feb_23_11:27:12_EST_2018
 1;Catania;-;250;100;Clean Room Manufacturing, R&D;Thu_Feb_22_12:04:22_EST_2018
-1;Boise;-;250;100;Clean Room Manufacturing, R&D;Thu_Feb_22_12:04:22_EST_2018
+1;Boise;-;250;1000;Clean Room Manufacturing, R&D;Fri_Feb_23_10:44:24_EST_2018
 1;Bangalore;-;250;100;Clean Room Manufacturing, R&D;Thu_Feb_22_12:04:22_EST_2018
 1;All locations;Manufacturing;-;-;-;Thu_Feb_22_12:04:22_EST_2018
