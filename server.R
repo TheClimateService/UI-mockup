@@ -118,6 +118,7 @@ server <- function(input, output, session) {
    
    observeEvent(input$button_save_data_corp, {
         source("./data/TCSDB/save_user_data.r", local=TRUE)
+	# Below is now also part of the runSE_with_userdata button.  However, it is also needed to update ./data/TCSDB/locationvalues4SE.csv .
         system("./data/TCSDB/script_apply_userdata4SE ./data/TCSDB/user_data.csv ./data/scoring_engine/nonphysical/locationvalues4SE.csv")
         #userdata = read.csv("./data/TCSDB/user_data.csv.latest.csv", sep=";", header=TRUE)
       })
@@ -395,6 +396,7 @@ server <- function(input, output, session) {
       })
 
   observeEvent(input$button_runSE_with_userdata, {
+        system("./data/TCSDB/script_apply_userdata4SE ./data/TCSDB/user_data.csv ./data/scoring_engine/nonphysical/locationvalues4SE.csv")
         system("./data/scoring_engine/script_runSE_from_app_with_userdata")
       })
 

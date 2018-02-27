@@ -10,7 +10,7 @@ cd /srv/shiny-server/TCS/app_tcs_22/data/scoring_engine/
 pwd
 cd ./data/scoring_engine
 pwd
-#Rscript ./load_tcsdb_4scoringengine.r
+Rscript ./load_tcsdb_4scoringengine.r
 echo "**** Including user-specified location values..."
 cp ../TCSDB/locationvalues4SE_with_userdata_mods ./nonphysical/locationvalues4SE.csv
 echo "**** Starting scoring engine..."

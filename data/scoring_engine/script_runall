@@ -20,6 +20,7 @@ sed 's/;/ /g' temp1 > temp2
 sed 's/ /_/' temp2 > temp3
 sed 's/ /_/' temp3 > temp4
 sed 's/"//g' temp4 > temp5
+cp temp5 junk.trace
 mv temp5 $tcsdbfile.locations.csv
 
 # Clean up the damage-function data and discard the last (11th) column containing notes.

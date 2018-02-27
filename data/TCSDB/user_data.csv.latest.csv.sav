@@ -1,7 +1,0 @@
-"USER.ParentCorpID";"input.rbLocations";"input.cbGroupBizType";"input.txtNumEmployees";"input.txtAssetValue";"cbBusinessFunctions";"Date"
-4;Stanley_Plaza;-;250;;Clean Room Manufacturing, R&D;Wed_Feb_21_17:03:32_EST_2018
-4;Pacific_Fair;-;999;100;Clean Room Manufacturing, R&D;Wed_Feb_21_17:07:43_EST_2018
-4;Indooroopilly_Shopping_Centre;-;999;;Clean Room Manufacturing, R&D;Wed_Feb_21_17:01:57_EST_2018
-4;All locations;Real Estate;-;-;-;Wed_Feb_21_15:45:52_EST_2018
-1;Boise;-;250;999;Clean Room Manufacturing, R&D;Tue_Feb_20_12:19:26_EST_2018
-1;All locations;Manufacturing;-;-;-;Tue_Feb_20_11:35:38_EST_2018
