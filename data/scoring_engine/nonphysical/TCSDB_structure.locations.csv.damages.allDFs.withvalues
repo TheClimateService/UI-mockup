@@ -228,11 +228,11 @@
  46_3_SUP_Celestica_Malaysia 103.5973 1.6446 SUP_Celestica_Malaysia tx90p-1 pdsisc-2 coastalflood-1 carbonprice-1 - - - pdsisc-2  0 -10 -10 -10 -10 -10 0 0 0
  46_3_SUP_Celestica_Malaysia 103.5973 1.6446 SUP_Celestica_Malaysia tx90p-1 pdsisc-2 coastalflood-1 carbonprice-1 - - - tx90p-1  -4.2806 -6.9855 -24.9239 -43.6643 -61.868 -82.0747 -86.8959 -93.7847 -96.55
  46_3_SUP_Celestica_Malaysia 103.5973 1.6446 SUP_Celestica_Malaysia tx90p-1 pdsisc-2 coastalflood-1 carbonprice-1 - - - z--allDFs--z  -4.60079 -19.011 -37.5054 -56.2579 -75.5844 -95.7911 -92.2327 -101.258 -105.485
- 47_3_SUP_Flex_Brazil -38.6 -7.516667 SUP_Flex_Brazil tx90p-1 pdsisc-2 coastalflood-1 carbonprice-1 - - - carbonprice-1  -0.32019 -2.02553 -2.58154 -2.59363 -3.71644 -3.71644 -5.33676 -7.47331 -8.93542
- 47_3_SUP_Flex_Brazil -38.6 -7.516667 SUP_Flex_Brazil tx90p-1 pdsisc-2 coastalflood-1 carbonprice-1 - - - coastalflood-1  NA NA NA NA NA NA NA NA NA
- 47_3_SUP_Flex_Brazil -38.6 -7.516667 SUP_Flex_Brazil tx90p-1 pdsisc-2 coastalflood-1 carbonprice-1 - - - pdsisc-2  0 0 -40 -20 -20 -30 -10 -30 -50
- 47_3_SUP_Flex_Brazil -38.6 -7.516667 SUP_Flex_Brazil tx90p-1 pdsisc-2 coastalflood-1 carbonprice-1 - - - tx90p-1  -8.2193 -5.8933 -9.6996 -31.7586 -41.3868 -49.0582 -65.9156 -67.597 -71.0008
- 47_3_SUP_Flex_Brazil -38.6 -7.516667 SUP_Flex_Brazil tx90p-1 pdsisc-2 coastalflood-1 carbonprice-1 - - - z--allDFs--z  -8.53949 -7.91883 -52.2811 -54.3522 -65.1032 -82.7746 -81.2524 -105.07 -129.936
+ 47_3_SUP_Flex_Brazil -47.368455 -23.427205 SUP_Flex_Brazil tx90p-1 pdsisc-2 coastalflood-1 carbonprice-1 - - - carbonprice-1  -0.32019 -2.02553 -2.58154 -2.59363 -3.71644 -3.71644 -5.33676 -7.47331 -8.93542
+ 47_3_SUP_Flex_Brazil -47.368455 -23.427205 SUP_Flex_Brazil tx90p-1 pdsisc-2 coastalflood-1 carbonprice-1 - - - coastalflood-1  NA NA NA NA NA NA NA NA NA
+ 47_3_SUP_Flex_Brazil -47.368455 -23.427205 SUP_Flex_Brazil tx90p-1 pdsisc-2 coastalflood-1 carbonprice-1 - - - pdsisc-2  -10 -20 0 0 0 -20 -40 -40 -40
+ 47_3_SUP_Flex_Brazil -47.368455 -23.427205 SUP_Flex_Brazil tx90p-1 pdsisc-2 coastalflood-1 carbonprice-1 - - - tx90p-1  0 -0.6752 -0.0897 -1.4981 -6.1567 -8.0956 -11.155 -19.4929 -15.26
+ 47_3_SUP_Flex_Brazil -47.368455 -23.427205 SUP_Flex_Brazil tx90p-1 pdsisc-2 coastalflood-1 carbonprice-1 - - - z--allDFs--z  -10.3202 -22.7007 -2.67124 -4.09173 -9.87314 -31.812 -56.4918 -66.9662 -64.1954
  48_3_SUP_Flex_Malaysia 103.6439 1.5014 SUP_Flex_Malaysia tx90p-1 pdsisc-2 coastalflood-1 carbonprice-1 - - - carbonprice-1  -0.32019 -2.02553 -2.58154 -2.59363 -3.71644 -3.71644 -5.33676 -7.47331 -8.93542
  48_3_SUP_Flex_Malaysia 103.6439 1.5014 SUP_Flex_Malaysia tx90p-1 pdsisc-2 coastalflood-1 carbonprice-1 - - - coastalflood-1  NA NA NA NA NA NA NA NA NA
  48_3_SUP_Flex_Malaysia 103.6439 1.5014 SUP_Flex_Malaysia tx90p-1 pdsisc-2 coastalflood-1 carbonprice-1 - - - pdsisc-2  0 -10 -10 -10 -10 -10 0 0 0

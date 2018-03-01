@@ -148,6 +148,8 @@ server <- function(input, output, session) {
   #barByRiskFactor
   output$barByRiskFactor <- renderPlotly({
       corpTable <- readr::read_csv("./data/scoring_engine/nonphysical/TCSDB_structure.locations.csv.damages.allDFs.withvalues.with.nonphysical.csv")
+      if(input$riskfactor_subset=="Chronic physical + Carbon price") corpTable <- filter(corpTable, RiskFactorName=="Temperature extremes" | RiskFactorName=="Drought" | RiskFactorName=="Coastal flooding" | RiskFactorName=="Carbon pricing")
+      #if(input$riskfactor_subset_portfolio=="Chronic physical + Carbon price") corpTable2 <- filter(corpTable2, TCFDSubCatName=="Chronic" | RiskFactorName=="Carbon pricing")
     if (input$inputLocations != 'All locations') {
       corpTable <- corpTable[which(corpTable$ParentCorpID == USER$ParentCorpID & corpTable$Location == input$inputLocations & corpTable$RiskYear == input$sliderInputYear),]
     }
@@ -164,6 +166,8 @@ server <- function(input, output, session) {
   #barByLocation
   output$barByLocation <- renderPlotly({
       corpTable <- readr::read_csv("./data/scoring_engine/nonphysical/TCSDB_structure.locations.csv.damages.allDFs.withvalues.with.nonphysical.csv")
+      if(input$riskfactor_subset=="Chronic physical + Carbon price") corpTable <- filter(corpTable, RiskFactorName=="Temperature extremes" | RiskFactorName=="Drought" | RiskFactorName=="Coastal flooding" | RiskFactorName=="Carbon pricing")
+      #if(input$riskfactor_subset_portfolio=="Chronic physical + Carbon price") corpTable2 <- filter(corpTable2, TCFDSubCatName=="Chronic" | RiskFactorName=="Carbon pricing")
     if (input$inputLocations != 'All locations') {
       corpTable <- corpTable[which(corpTable$ParentCorpID == USER$ParentCorpID & corpTable$Location == input$inputLocations & corpTable$RiskYear == input$sliderInputYear),]
     }
@@ -202,8 +206,9 @@ server <- function(input, output, session) {
     time_series$s7 <- corpTable %>% filter(TCFDSubCatName=='Resource Efficiency') %>% group_by(RiskYear) %>% summarise(s7=sum(ValueAtRisk)) %>% select(s7) %>% pull()
     time_series$s8 <- corpTable %>% filter(TCFDSubCatName=='Energy Source') %>% group_by(RiskYear) %>% summarise(s8=sum(ValueAtRisk)) %>% select(s8) %>% pull()
     time_series$s9 <- corpTable %>% filter(TCFDSubCatName=='Resilience') %>% group_by(RiskYear) %>% summarise(s9=sum(ValueAtRisk)) %>% select(s9) %>% pull()
-    
+
     # hack the stacking (plotly doesn't actually do stacking - it's a documented problem.)
+  if(input$riskfactor_subset=="All") { 
     time_series$stack1 <- time_series$s1
     time_series$stack2 <- time_series$stack1 + time_series$s2
     time_series$stack3 <- time_series$stack2 + time_series$s3
@@ -213,9 +218,23 @@ server <- function(input, output, session) {
     time_series$stack7 <- time_series$stack6 + time_series$s7
     time_series$stack8 <- time_series$stack7 + time_series$s8
     time_series$stack9 <- time_series$stack8 + time_series$s9
+    } # endif
     
 # Draw the graph
-    plot_ly(time_series, x = ~RiskYear, y = ~stack1, name='Policy & Legal', type='scatter', mode = 'none', fill = 'tonexty') %>% 
+
+  # Note that the plot is saved as object tplot under each conditional; this is needed to avoid the following:
+  #    Error in UseMethod: no applicable method for 'ggplotly' applied to an object of class "NULL".
+
+  if(input$riskfactor_subset=="Chronic physical + Carbon price") { 
+    time_series$stack1 <- time_series$s1
+    time_series$stack2 <- time_series$stack1 + time_series$s6
+    tplot <- plot_ly(time_series, x = ~RiskYear, y = ~stack1, name='Policy & Legal - Carbon Price', type='scatter', mode = 'none', fill = 'tonexty') %>% 
+      add_trace(y = ~stack2, name = 'Chronic', fill = 'tonexty') %>%
+      layout(yaxis = list(title = 'Impact ($M)', showgrid = TRUE), xaxis = list(showgrid = TRUE), margin = list(l=80,b=100))
+    } # endif
+
+  if(input$riskfactor_subset=="All") { 
+    tplot <- plot_ly(time_series, x = ~RiskYear, y = ~stack1, name='Policy & Legal', type='scatter', mode = 'none', fill = 'tonexty') %>% 
       add_trace(y = ~stack2, name = 'Technology', fill = 'tonexty') %>%
       add_trace(y = ~stack3, name = 'Market', fill = 'tonexty') %>%
       add_trace(y = ~stack4, name = 'Reputation', fill = 'tonexty') %>%
@@ -224,13 +243,18 @@ server <- function(input, output, session) {
       add_trace(y = ~stack7, name = 'Resource Efficiency', fill = 'tonexty') %>%
       add_trace(y = ~stack8, name = 'Energy Source', fill = 'tonexty') %>%
       add_trace(y = ~stack9, name = 'Resilience', fill = 'tonexty') %>%
-      
       layout(yaxis = list(title = 'Impact ($M)', showgrid = TRUE), xaxis = list(showgrid = TRUE), margin = list(l=80,b=100))
+    } # endif
+
+  tplot
+
   }) 
   
   # TCFD stacked bar chart
   output$stackedCorpFinImpactsPlot <- renderPlotly({
       corpTable <- readr::read_csv("./data/scoring_engine/nonphysical/TCSDB_structure.locations.csv.damages.allDFs.withvalues.with.nonphysical.csv")
+      if(input$riskfactor_subset=="Chronic physical + Carbon price") corpTable <- filter(corpTable, RiskFactorName=="Temperature extremes" | RiskFactorName=="Drought" | RiskFactorName=="Coastal flooding" | RiskFactorName=="Carbon pricing")
+      #if(input$riskfactor_subset_portfolio=="Chronic physical + Carbon price") corpTable2 <- filter(corpTable2, TCFDSubCatName=="Chronic" | RiskFactorName=="Carbon pricing")
     if (input$inputLocations != 'All locations') {
       corpTable <- corpTable[which(corpTable$ParentCorpID == USER$ParentCorpID & corpTable$Location == input$inputLocations & corpTable$RiskYear == input$sliderInputYear),]
     }
@@ -251,6 +275,8 @@ server <- function(input, output, session) {
   output$corpFinImpacts <- DT::renderDataTable({
      #colnames(corpTable) = c('Location','TCFD Category','Subcategory','Risk Factor','Scenario','Year','Value at Risk ($M)') #someday figure this out
       corpTable <- readr::read_csv("./data/scoring_engine/nonphysical/TCSDB_structure.locations.csv.damages.allDFs.withvalues.with.nonphysical.csv")
+      if(input$riskfactor_subset=="Chronic physical + Carbon price") corpTable <- filter(corpTable, RiskFactorName=="Temperature extremes" | RiskFactorName=="Drought" | RiskFactorName=="Coastal flooding" | RiskFactorName=="Carbon pricing")
+      #if(input$riskfactor_subset_portfolio=="Chronic physical + Carbon price") corpTable2 <- filter(corpTable2, TCFDSubCatName=="Chronic" | RiskFactorName=="Carbon pricing")
       if (input$inputLocations != 'All locations') {
         corpTable <- corpTable[which(corpTable$ParentCorpID == USER$ParentCorpID & corpTable$Location == input$inputLocations & corpTable$RiskYear == input$sliderInputYear),]
       }
@@ -426,6 +452,8 @@ server <- function(input, output, session) {
   #barByRiskFactor
   output$barByRiskFactorPort <- renderPlotly({
     corpTable2 <- readr::read_csv("./data/scoring_engine/nonphysical/TCSDB_structure.locations.csv.damages.allDFs.withvalues.with.nonphysical.byparentcorp.csv")
+    #if(input$riskfactor_subset_portfolio=="Chronic physical + Carbon price") corpTable2 <- filter(corpTable2, RiskFactorName=="Temperature extremes" | RiskFactorName=="Drought" | RiskFactorName=="Coastal flooding" | RiskFactorName=="Carbon pricing")
+    if(input$riskfactor_subset_portfolio=="Chronic physical + Carbon price") corpTable2 <- filter(corpTable2, TCFDSubCatName=="Chronic" | RiskFactorName=="Carbon pricing")
     parentCorp = dbsheet4
     if (input$inputLocationsPort != 'Entire portfolio') {
       #corpTable2 <- corpTable2[which(corpTable2$ParentCorpID == USER$ParentCorpID & corpTable2$Location == input$inputLocationsPort & corpTable2$RiskYear == input$sliderInputYearPort),]
@@ -442,6 +470,7 @@ server <- function(input, output, session) {
   #barByLocation
   output$barByLocationPort <- renderPlotly({
     corpTable2 <- readr::read_csv("./data/scoring_engine/nonphysical/TCSDB_structure.locations.csv.damages.allDFs.withvalues.with.nonphysical.byparentcorp.csv")
+    if(input$riskfactor_subset_portfolio=="Chronic physical + Carbon price") corpTable2 <- filter(corpTable2, TCFDSubCatName=="Chronic" | RiskFactorName=="Carbon pricing")
     parentCorp = dbsheet4
     if (input$inputLocationsPort != 'Entire portfolio') {
       #corpTable2 <- corpTable2[which(corpTable2$ParentCorpID == USER$ParentCorpID & corpTable2$Location == input$inputLocationsPort & corpTable2$RiskYear == input$sliderInputYearPort),]
@@ -495,7 +524,20 @@ server <- function(input, output, session) {
     time_series$stack9 <- time_series$stack8 + time_series$s9
     
 # Draw the graph
-    plot_ly(time_series, x = ~RiskYear, y = ~stack1, name='Policy & Legal', type='scatter', mode = 'none', fill = 'tonexty') %>% 
+
+  # Note that the plot is saved as object tplot under each conditional; this is needed to avoid the following:
+  #    Error in UseMethod: no applicable method for 'ggplotly' applied to an object of class "NULL".
+
+  if(input$riskfactor_subset_portfolio=="Chronic physical + Carbon price") { 
+    time_series$stack1 <- corpTable2 %>% filter(RiskFactorName=='Carbon pricing') %>% group_by(RiskYear) %>% summarise(s1=sum(ValueAtRisk)) %>% select(s1) %>% pull()
+    time_series$stack2 <- time_series$stack1 + time_series$s6
+    tplot <- plot_ly(time_series, x = ~RiskYear, y = ~stack1, name='Policy & Legal - Carbon Price', type='scatter', mode = 'none', fill = 'tonexty') %>% 
+      add_trace(y = ~stack2, name = 'Chronic', fill = 'tonexty') %>%
+      layout(yaxis = list(title = 'Impact ($M)', showgrid = TRUE), xaxis = list(showgrid = TRUE), margin = list(l=80,b=100))
+    } # endif
+
+  if(input$riskfactor_subset_portfolio=="All") { 
+    tplot <- plot_ly(time_series, x = ~RiskYear, y = ~stack1, name='Policy & Legal', type='scatter', mode = 'none', fill = 'tonexty') %>% 
       add_trace(y = ~stack2, name = 'Technology', fill = 'tonexty') %>%
       add_trace(y = ~stack3, name = 'Market', fill = 'tonexty') %>%
       add_trace(y = ~stack4, name = 'Reputation', fill = 'tonexty') %>%
@@ -504,13 +546,17 @@ server <- function(input, output, session) {
       add_trace(y = ~stack7, name = 'Resource Efficiency', fill = 'tonexty') %>%
       add_trace(y = ~stack8, name = 'Energy Source', fill = 'tonexty') %>%
       add_trace(y = ~stack9, name = 'Resilience', fill = 'tonexty') %>%
-      
       layout(yaxis = list(title = 'Impact ($M)', showgrid = FALSE), xaxis = list(showgrid = FALSE), margin = list(l=80,b=100))
+    } # endif
+
+   tplot
+
   }) 
   
   # TCFD stacked bar chart
   output$stackedCorpFinImpactsPlotPort <- renderPlotly({
     corpTable2 <- readr::read_csv("./data/scoring_engine/nonphysical/TCSDB_structure.locations.csv.damages.allDFs.withvalues.with.nonphysical.byparentcorp.csv")
+    if(input$riskfactor_subset_portfolio=="Chronic physical + Carbon price") corpTable2 <- filter(corpTable2, TCFDSubCatName=="Chronic" | RiskFactorName=="Carbon pricing")
     parentCorp = dbsheet4
     if (input$inputLocationsPort != 'Entire portfolio') {
       #corpTable2 <- corpTable2[which(corpTable2$ParentCorpID == USER$ParentCorpID & corpTable2$Location == input$inputLocationsPort & corpTable2$RiskYear == input$sliderInputYearPort),]
@@ -529,6 +575,7 @@ server <- function(input, output, session) {
   output$corpFinImpactsPort <- DT::renderDataTable({
      #colnames(corpTable2) = c('Location','TCFD Category','Subcategory','Risk Factor','Scenario','Year','Value at Risk ($M)') #someday figure this out
     corpTable2 <- readr::read_csv("./data/scoring_engine/nonphysical/TCSDB_structure.locations.csv.damages.allDFs.withvalues.with.nonphysical.byparentcorp.csv")
+    if(input$riskfactor_subset_portfolio=="Chronic physical + Carbon price") corpTable2 <- filter(corpTable2, TCFDSubCatName=="Chronic" | RiskFactorName=="Carbon pricing")
     parentCorp = dbsheet4
       if (input$inputLocationsPort != 'Entire portfolio') {
         #corpTable2 <- corpTable2[which(corpTable2$ParentCorpID == USER$ParentCorpID & corpTable2$Location == input$inputLocationsPort & corpTable2$RiskYear == input$sliderInputYearPort),]

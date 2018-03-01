@@ -212,14 +212,19 @@ ui <- dashboardPage(title="The Climate Service",
       tabItem(tabName = "analyze",
         h2("2) Analyze your corporate risk"),
         fluidRow(
-                column(4,
+                column(3,
                   uiOutput("selectInput_location")
                 ),
-                column(4,
+                column(3,
                   sliderInput("sliderInputYear","Decade", min = 2010, max = 2090, value = 2020, sep = "", animate = TRUE, step=10)
                 ),
-                column(4,
+                column(3,
                   uiOutput("selectInput_scenario")
+                ),
+                column(3,
+                  selectInput("riskfactor_subset","Select Risk Factors", 
+                   c("All", "Chronic physical + Carbon price"), 
+                   selected = "All")
                 )
               ),#fluidRow
         br(),
@@ -341,19 +346,24 @@ ui <- dashboardPage(title="The Climate Service",
       tabItem(tabName = "portAnalyze",
         h2("2) Analyze the climate risks in your portfolio"),
         fluidRow(
-          column(4,
+          column(3,
                  #selectInput("siPortfolioCompany","Company",c("All companies","Apple","Coca-Cola","Happy Family","HP","Intel","Micron"),selectize = TRUE)
                  #selectInput("siPortfolioCompany","Portfolio",c("All companies","Chip Manufacturers"),selectize = TRUE)
                   uiOutput("selectInput_locationPort")
           ),
-          column(4,
+          column(3,
                  #sliderInput("siPortfolioYear","Decade", min = 2020, max = 2050, value = 2020, sep = "", animate = TRUE, step=1)
                   sliderInput("sliderInputYearPort","Decade", min = 2010, max = 2090, value = 2020, sep = "", animate = TRUE, step=10)
           ),
-          column(4,
+          column(3,
                  #selectInput("siPortfolioScenario","Scenario",c("Business as usual","Moderate action","2 degrees","1.5 degrees"))
                   uiOutput("selectInput_scenarioPort")
-          )
+          ),
+                column(3,
+                  selectInput("riskfactor_subset_portfolio","Select Risk Factors", 
+                   c("All", "Chronic physical + Carbon price"), 
+                   selected = "All")
+                )
         ),#fluidRow
         br(),
         tabsetPanel(
