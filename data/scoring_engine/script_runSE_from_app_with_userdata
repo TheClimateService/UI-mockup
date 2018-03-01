@@ -12,6 +12,7 @@ cd ./data/scoring_engine
 pwd
 Rscript ./load_tcsdb_4scoringengine.r
 echo "**** Including user-specified location values..."
+# Note that the following line will improperly overwrite a locationvalues4SE.csv that contains an updated number of facilities.  When starting the system for the first time after facilities have been added/deleted from TCSDB_structure.xlsx, always run the SE WITHOUT user data first.
 cp ../TCSDB/locationvalues4SE_with_userdata_mods ./nonphysical/locationvalues4SE.csv
 echo "**** Starting scoring engine..."
 ./script_runall TCSDB_structure

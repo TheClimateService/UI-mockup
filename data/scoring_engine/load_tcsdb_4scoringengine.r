@@ -43,6 +43,7 @@ damagefunc = dbsheet12
 write.table(loc,"./nonphysical/locations.csv", sep=";")
 write.table(locall,"./nonphysical/locations4SE.csv", sep=";", row.names=FALSE)
 write.table(locvalues,"./nonphysical/locationvalues4SE.csv", sep=";", row.names=FALSE)
+#write.table(locvalues,"./nonphysical/junk.csv", sep=";", row.names=FALSE)
 write.table(riskfac,"./nonphysical/riskfactors.csv", sep=";")
 write.table(subcat,"./nonphysical/subcat.csv", sep=";")
 write.table(cat,"./nonphysical/cat.csv", sep=";")
