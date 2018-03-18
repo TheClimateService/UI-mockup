@@ -36,6 +36,7 @@ library(plotly)
 library(readxl)
 library(writexl)
 library(data.table)
+# library(shinycssloaders)  # enables withSpinner
 
 # Data
 
@@ -71,17 +72,21 @@ ui <- dashboardPage(title="The Climate Service",
 	width=280,
 	useShinyjs(),
 	sidebarMenu(id = "sidebar",
-    	menuItem("Log In", tabName = "login", icon = icon("lock")),
+
+      menuItem("Log In", tabName = "login", icon = icon("lock")),
+
       menuItem("Corporate Risk Analyzer", tabName = "corporate", icon = icon("building-o"),
           menuSubItem("1) Setup",tabName = "config"),
           menuSubItem("2) Analyze",tabName = "analyze"),
           menuSubItem("3) Report",tabName = "report"),
           menuSubItem("Methodology", tabName = "methodology", icon = icon("cog"))),
+
       menuItem("Portfolio Analyzer", tabName = "portfolios", icon = icon("briefcase"),
           menuSubItem("1) Setup",tabName = "portConfig"),
           menuSubItem("2) Analyze",tabName = "portAnalyze"),
           menuSubItem("3) Report",tabName = "portReport")
       ),
+
       menuItem("Technical Details", tabName = "overview", icon = icon("podcast"),
       	  menuSubItem("LOCALIZED CLIMATE PROBABILITIES", tabName = "localclimate", icon = icon("cubes")),
       	  menuSubItem("SECTOR IMPACT FUNCTIONS", tabName = "impactfunctions", icon = icon("cloud-download", lib = "glyphicon")),
@@ -92,14 +97,21 @@ ui <- dashboardPage(title="The Climate Service",
       	  menuSubItem("OVERALL CLIMATE SCORE", tabName = "climatescore", icon = icon("certificate", lib = "glyphicon"))),
       	  # menuSubItem("DATABASE", tabName = "database", icon = icon("database")),
       	  # menuSubItem("Links", tabName = "links", icon = icon("external-link"))),
+
+        menuItem("System Control", tabName = "system_control", icon = icon("cog", lib = "glyphicon")),
+
         menuItem("FAQ's", tabName = "faqs", icon = icon("question"))
+
     	) #sidebarMenu
   ), #dashboardSidebar
 
   ## Body content
   dashboardBody(
     tabItems(
+
+# --------------------------------------
       # Login tab content
+# --------------------------------------
       tabItem(tabName = "login",
               fluidRow(
                 tabBox(
@@ -289,38 +301,78 @@ ui <- dashboardPage(title="The Climate Service",
 # --------------------------------------
 #              CORP METHODOLOGY
 # --------------------------------------
+
       tabItem(tabName = "methodology",
         h2("Understand the details of your climate risk with the Cx Methodology"),
+
+        tabsetPanel(
+
+        tabPanel(title = 'OVERALL',
+
+
+        fluidRow(
+                column(4, uiOutput("selectInput_location_overall") ),
+                column(4,selectInput("selectscenario_overall","Select Scenario",c("RCP8.5", "RCP4.5"), selected = c("RCP8.5")) )
+        ), #fluidrow select location and scenario
+
         fluidRow(
                 #column(4,uiOutput("selectCausalVariable")),
                 #column(4,uiOutput("selectDamageFunction")),
                 #column(4,uiOutput("selectPeriod"))
-          column(4,selectInput("selectCausalVariable","Causal Variable (Hazard)",c("Temperature","Coastal Flooding", "Drought", "Drought (90th percentile)"),selected = c("Temperature"))),
-          column(4,selectInput("selectDamageFunction","Damage Function",c("Cooling","Building Damage","Corn Yield"),selected = c("Cooling"))),
-          column(4,selectInput("selectPeriod","Time Period",choices = c("1980","1990","2000","2010","2020","2030","2040","2050","2060","2070","2080","2090","2100")))
-        ),#fluidrow select inputs
+          column(4,selectInput("selectCausalVariable","Causal Variable (Hazard)",
+		c("Temperature",
+		"Drought Severity",
+		"Coastal Flooding" 
+		),
+		selected = c("Temperature"))),
+          column(4,selectInput("selectDamageFunction","Damage Function",c("Cooling","Corn Yield","Building Damage"),selected = c("Cooling"))),
+          column(4,selectInput("selectPeriod","Time Period",choices = c("1981-2000","2011-2030", "2041-2060", "2071-2090", "1980","1990","2000","2010","2020","2030","2040","2050","2060","2070","2080","2090","2100"), selected="1981-2000"))
+        ), #fluidrow select inputs
 
         fluidRow(
-          box(width=4,title="Hazard","Probability of a damage-producing event",plotOutput("climplot5copy",height = 300)),
+          box(width=4,title="Hazard","Probability of a damage-producing event",plotOutput("plot_selectHazard",height = 300)),
           box(width=4,title="Vulnerability","Mechanism and severity of damage for a given event",
-		#plotOutput("impactplot_building_flood_copy", height = 300)),
 		plotOutput("plot_selectDamageFunction", height = 300)),
-          box(width=4,title="Risk","Loss curve  of VaR","Probability of financial damage, with expected value", plotOutput("losscurve",height=300)),
-	  box(width=4,verbatimTextOutput("methodologyTracebackHazard")),
-	  box(width=4,verbatimTextOutput("methodologyTracebackVuln"))
-        ), #fluidrow graphs
+          box(width=4,title="Risk","Loss curve:  probability of financial damage, with expected value", plotOutput("plot_losscurve2",height=300)),
+          #box(width=4,title="Risk","Loss curve:  probability of financial damage, with expected value", plotOutput("plot_losscurve_drought_cornyield",height=300)),
+	  box(width=4,verbatimTextOutput("tracebackHazard")),
+	  box(width=4,verbatimTextOutput("tracebackVuln")),
+          box(width=4,title="Risk","Loss curve  of VaR","Probability of financial damage, with expected value", plotOutput("losscurve",height=300))
+        )  #fluidrow graphs
+        ), # end tabPanel
+
+        tabPanel(title = 'DRILLDOWN',
 
         fluidRow(
-         actionButton("button_test_data_refresh","TEST DATA REFRESH", icon = icon("cog"))
-        ), #fluidRow
+                column(4, uiOutput("selectInput_location_drilldown") ),
+                column(4,selectInput("selectscenario_drilldown","Select Scenario",c("RCP8.5", "RCP4.5"), selected = c("RCP8.5")) )
+        ), #fluidrow select location and scenario
 
         fluidRow(
-         actionButton("button_runSE_with_userdata","RUN SCORING INCLUDING USER DATA", icon = icon("cog"))
-        ), #fluidRow
+          column(4,selectInput("selectCausalVariable_drilldown","Causal Variable (Hazard)",
+		c("Temperature (daily maximum 90th percentile)",
+		"Drought Severity (90th percentile)", 
+		"Coastal Flooding (return period 100yr level)",
+		"Carbon Price"
+		)
+		)),
+          column(4,selectInput("selectDamageFunction_drilldown","Damage Function",c("Selected Location and Hazard") )),
+          column(4,selectInput("selectPeriod_drilldown","Time Period",choices = c("All Periods")))
+        ), #fluidrow select inputs
 
         fluidRow(
-         actionButton("button_runSE","RUN SCORING WITHOUT USER DATA", icon = icon("cog"))
-        )#fluidRow
+          box(width=4,title="Hazard","Probability of a damage-producing event",plotOutput("plot_selectHazard_drilldown",height = 300)),
+          box(width=4,title="Vulnerability","Mechanism and severity of damage for a given event",
+		plotOutput("plot_selectDamageFunction_drilldown", height = 300)),
+          box(width=4,title="Risk","Expected VaR for selected location and hazard",
+		plotlyOutput("plot_expectedDamage", height = 300)),
+	  box(width=4,verbatimTextOutput("tracebackHazard_drilldown")),
+	  box(width=4,verbatimTextOutput("tracebackVuln_drilldown"))
+        ) #fluidrow traceback
+        ) # end tabPanel drilldown
+
+       ) #tabsetPanel
+
       ),#tabItem methodology
 
 # --------------------------------------
@@ -511,6 +563,9 @@ ui <- dashboardPage(title="The Climate Service",
       ), #tabItem
 
  
+# --------------------------------------
+# LINKS
+# --------------------------------------
       tabItem(tabName = "links", 
 	#uiOutput("googlelink"),
 	h2( uiOutput("ndgain_countries") ),
@@ -518,6 +573,9 @@ ui <- dashboardPage(title="The Climate Service",
 	h2( uiOutput("worldbank_development_indicators") )
       ), #tabItem
 
+# --------------------------------------
+# LOCAL CLIMATE
+# --------------------------------------
       tabItem(tabName = "localclimate",
         h2("Localized probability distributions from historical and projected daily data"),
         
@@ -525,14 +583,25 @@ ui <- dashboardPage(title="The Climate Service",
 
         tabPanel(title = "TEMPERATURE",
 	icon = icon("thermometer-three-quarters"),
+
+        fluidRow(
+	  column(4,
+          selectInput("temperatureProjectionLocation","Select Location for Temperature Projections",
+		c("Western Equatoria, South Sudan", "Queens, NY", "Phoenix, AZ"),
+		selected="Western Equatoria, South Sudan"
+                    )
+		)
+        ), #fluidrow
+	  
+
         fluidRow(
 	# More information on cascading style sheets at: http://shiny.rstudio.com/articles/css.html.
 	#includeCSS("./www/darkly.css"),
-          box(plotOutput("climplot1", height = 200)),
-          box(plotOutput("climplot2", height = 200)),
-          box(plotOutput("climplot3", height = 200)),
-          box(plotOutput("climplot4", height = 200)),
-          box(title="Ensemble Distributions Evolve Through Time", background = "red", solidHeader = TRUE, plotOutput("climplot5", height = 300)),
+          box(plotOutput("temp_climplot1", height = 200)),
+          box(plotOutput("temp_climplot2", height = 200)),
+          box(plotOutput("temp_climplot3", height = 200)),
+          box(plotOutput("temp_climplot4", height = 200)),
+          box(title="Ensemble Distributions Evolve Through Time", background = "red", solidHeader = TRUE, plotOutput("temp_climplot5", height = 300)),
           box(
             title = "Climate Data Controls",
             sliderInput("bins", "Number of bins:", 10, 100, 50, step=10, animate=TRUE)
@@ -1005,6 +1074,36 @@ ui <- dashboardPage(title="The Climate Service",
       ), #end database tabItem
 
 # --------------------------------------
+# SYSTEM CONTROL
+# --------------------------------------
+      tabItem(tabName = "system_control",
+        h2("System Management Actions - TCS STAFF ONLY"),
+	br(),
+
+        fluidRow(
+         actionButton("button_test_data_refresh","TEST DATA REFRESH", icon = icon("cog"), 
+		style = "color: white; background-color: blue")
+        ), #fluidRow
+	br(),
+
+        fluidRow(
+         actionButton("button_runSE_with_userdata","RUN SCORING INCLUDING USER DATA", icon = icon("cog"), 
+		style = "color: white; background-color: blue")
+        ), #fluidRow
+	br(),
+
+        fluidRow(
+         actionButton("button_runSE","RUN SCORING WITHOUT USER DATA", icon = icon("cog"),
+		style = "color: white; background-color: blue")
+	 # XXX Need to add ui_elment below that withSpinner references.  Also enable library(shinycssloaders) above.
+         #withSpinner(
+	
+	 #) # end withSpinner
+        ) #fluidRow
+
+      ), #tabItem
+
+# --------------------------------------
 #                 FAQ's
 # --------------------------------------
       tabItem(tabName = "faqs",
@@ -1016,7 +1115,11 @@ ui <- dashboardPage(title="The Climate Service",
               )#fluidRow
       )#tabItem
 
-    ),#tabItems
+    ),# end tabItems
+
+# --------------------------------------
+#                 FOOTER
+# --------------------------------------
   hr(),
   tags$footer("Copyright 2017-18 The Climate Service, Inc. | 828.713.7392", align = "left", style = "
                 position:absolute;

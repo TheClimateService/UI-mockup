@@ -15,7 +15,7 @@ awk '{if(NR==1) print $1,$2,$3,"annPhistorical"; else print $1,$2,$3,"0.01"}' $l
 paste temp0 $futannpfile > temp0b
 awk '{if(NR>1) print $0}' temp0b > temp0c
 
-# Convert the rp values to annual probabilities since these are used in the damage functions.
+# Convert the rp values to annual probabilities since these are used in the damage functions.  This is done within script_estimate_future_rp_v1.r and is reflected in the futannnpfile input above.
 
 # Get damage-function values specific to each location.
 # Note that the damage-function csv file is assumed to be comma-separated and the field corresponding to the coastalflood df in the locfile is field 7.

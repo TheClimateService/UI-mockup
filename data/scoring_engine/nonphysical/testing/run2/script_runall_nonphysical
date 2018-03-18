@@ -1,0 +1,26 @@
+
+# SCRIPT TO RUN MAJOR STEPS IN GENERATION OF NON-PHYSICAL RISKS.
+# TT - January 2017
+
+# Execution:  	./script_runall_nonphysical <physical damages file>
+# Example:	./script_runall_nonphysical TCSDB_structure_locations.csv.damages.allDFs
+
+# Get input.
+alldamages=$1
+
+# Get the needed files from tabs in the TCSDB xlsx file.
+# This generates locations.csv, locations4SE.csv, locationvalues4SE.csv, riskfactors.csv, subcat.csv, cat.csv, and corp.csv
+# This is now done from script_runall in the scoring_engine directory.  The above files are put in the non-physical directory.
+# disabled for local testing:  cd ../../..
+#Rscript ./data/scoring_engine/nonphysical/load_tcsdb_4scoringengine.r 
+
+# Run the non-physical scoring.  
+# This assumes that the physical scoring has already been run in ./data/scoring_engine generating the alldamages input file called above.
+# It also assumes that this file is present in the scoring_engine directory.
+# script_locationvalues_v1 applies the location values associated with each damage function and produces $alldamages.withvalues
+# disabled for local testing:  cd ./data/scoring_engine/nonphysical/
+# disabled for local testing:  cp ../$alldamages ./
+./script_locationvalues_v1 locationvalues4SE.csv $alldamages
+./script_build_nonphysical_v1 locations.csv riskfactors.csv subcat.csv cat.csv $alldamages.withvalues corp.csv
+
+

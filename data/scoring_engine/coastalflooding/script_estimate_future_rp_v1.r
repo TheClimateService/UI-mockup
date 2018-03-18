@@ -69,9 +69,12 @@ slryrs = c(2030,2050,2100)
 
 for(i in 1:nlocations) {  
     x = select(data[i,], RLm2yr:RLm1000yr)
-    x2 = as.numeric(t(x))
     slr = select(data[i,], rcp85_2030cm:rcp85_2100cm)
+    # Use of as.numeric in next two lines causes "NA" to be supplied for values associated with locations beyond the coastal distance threshold.
+    x2 = as.numeric(t(x))
     slr2 = as.numeric(t(slr))
+
+    # Calculate local slr for each time period, 2010-2090.
     if(toString(x2[1])!="NA") {
 	model <- lm(slr2 ~ poly(slryrs,2,raw=TRUE))
     	f4slr = function(t) {summary(model)$coefficients[1,1] + summary(model)$coefficients[2,1]*t + summary(model)$coefficients[3,1]*t^2  }
@@ -81,16 +84,32 @@ for(i in 1:nlocations) {
        } #endif
 
     for(k in 1:length(change_local_slr_meters)) {
+
+     # Calculate elements of rlfutloc2 for all j return periods for ith location and kth time period.
+     # x2 contains the historical return levels for the ith location.
      for(j in 1:nrtnperiods) {
        if(toString(x2[j])=="NA") {rlfutloc2[i,j,k]=x2[j]} 
          else {rlfutloc2[i,j,k]=x2[j]+change_local_slr_meters[k] }
-       } #endfor on j
+       } #endfor on j return periods
+
+     # Calculate elements of rpfutloc2 for ith location, all j return periods, and kth time period.
+     # rpmodel (formerly called h) is a fit to the future return levels and the return periods 2,5,10,25,50,100,250,500, and 1000 years.
+     # The function approxfun returns a function performing (linear or constant) interpolation of the given data points.  The default behaviour of approxfun returns "NA" when outside the range of the return-level values used to define the function.  This behaviour can be changed to return the value of the nearest extreme of the range using options yleft, yright, and rule.
+     # Use of the above is limiting projection of future return periods for the historical 100-year return level, since this will be outside the range of RL values in some cases.  There is no particular need to limit the projection of these future RPs, so a more general model is now used.  See lm below.  
+     # However, since we are not checking the goodness of the lm fit being performed for each location and time period, we could limit the future value of the return period for the historical 100-year RL in case the extremely small values (<<1) returned are not defensible.  This is implemented as a lower limit of 1 year the max statement below, looping over all j values.
+     # Note that the above limit has been disabled in order to see all of the RP values as calculated, without a lower limit.
+
      if(toString(x2[1])!="NA") { 
-       h = approxfun(rlfutloc2[i,,k],log(rphist,10))
-       #rpfutloc2[i,,k] = 10^h(rlhist)
-       if(toString(x2[1])!="NA") rpfutloc2[i,,k] = 10^h(x2) else rpfutloc2[i,,k] = "NA"
+       #rpmodel = approxfun(rlfutloc2[i,,k],log(rphist,10))
+       #rpfutloc2[i,,k] = 10^rpmodel(x2)
+       rpmodel <- lm(log(rphist,10) ~ poly(rlfutloc2[i,,k],2,raw=TRUE))
+       f4rpmodel = function(t) {summary(rpmodel)$coefficients[1,1] + summary(rpmodel)$coefficients[2,1]*t + summary(rpmodel)$coefficients[3,1]*t^2  }
+       rpfutloc2[i,,k] = 10^f4rpmodel(x2)
+       # Apply rp value lower limit via the following loop on each value of j, for the current i and k values.
+       for(j in 1:nrtnperiods) {rpfutloc2[i,j,k] <- max(rpfutloc2[i,j,k], 1.0) }
        } #endif
-     } #endfor on k
+
+     } #endfor on k time periods
     
 #    if(toString(x2[1])!="NA") { 
 #       h = approxfun(rlfutloc2[i,,1],log(rphist,10))
@@ -98,12 +117,12 @@ for(i in 1:nlocations) {
 #       rpfutloc[i,] = 10^h(rlhist)
 #       } #endif
 
-    } #endfor on i
+    } #endfor on i (locations)
 
 # Save results for selected original return period (e.g., 100yr) in local directory as both rp values and annual probabilities.
 # Original return periods are defined above as rphist.  100yr rp corresponds to index j=6.
 # When rp values written out are all zeros, this means that the location was too far from the coastal segment, depending on the threshold set for this in script_get_nearest_segment_v1.
-# When rp values written out are "NA", this means that the future rp is less than 2 years (i.e., the lowest rp in rphist).
+# When rp values written out are "NA", this means that the future rp is less than 2 years (i.e., the lowest rp in rphist).  This no longer occurs due to the revision of the rpmodel above.  A number is always returned for locations within the distance threshold of the coastal segment.  This number may be limited, as discussed above regarding the calculation of rpfutloc2.
 
 write.table(rpfutloc2[,6,],"./future_rp_fromR", sep=" ", row.names=FALSE, 
    col.names=c("RPhist100_rcp85_2010","RPhist100_rcp85_2020","RPhist100_rcp85_2030","RPhist100_rcp85_2040","RPhist100_rcp85_2050","RPhist100_rcp85_2060","RPhist100_rcp85_2070","RPhist100_rcp85_2080","RPhist100_rcp85_2090") )

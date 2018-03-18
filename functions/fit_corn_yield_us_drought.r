@@ -18,6 +18,8 @@ f4yield_reduction_pct = function(t) {summary(model)$coefficients[1,1] + summary(
 # Plot function and original points.
 curve(f4yield_reduction_pct, 0.004, 2, log="x", xaxt="n", col="red", main="Yield Reduction as Function\n of Drought Return Period", xlab="Return Period (years)", ylab="Yield Reduction (percent)")
 axis(1, at=log10(return_period_yrs), labels=floor(return_period_yrs))
+# The following adds a line below the xaxis label.
+# mtext("wang_crop_productivity_climate_midwestUS_2016", side=1, line=4)
 #par(new=TRUE)
 #points(log10(return_period_yrs), yield_reduction_pct, col="black")
 

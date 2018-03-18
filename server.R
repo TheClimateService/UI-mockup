@@ -150,15 +150,18 @@ server <- function(input, output, session) {
       corpTable <- readr::read_csv("./data/scoring_engine/nonphysical/TCSDB_structure.locations.csv.damages.allDFs.withvalues.with.nonphysical.csv")
       if(input$riskfactor_subset=="Chronic physical + Carbon price") corpTable <- filter(corpTable, RiskFactorName=="Temperature extremes" | RiskFactorName=="Drought" | RiskFactorName=="Coastal flooding" | RiskFactorName=="Carbon pricing")
       #if(input$riskfactor_subset_portfolio=="Chronic physical + Carbon price") corpTable2 <- filter(corpTable2, TCFDSubCatName=="Chronic" | RiskFactorName=="Carbon pricing")
+
     if (input$inputLocations != 'All locations') {
       corpTable <- corpTable[which(corpTable$ParentCorpID == USER$ParentCorpID & corpTable$Location == input$inputLocations & corpTable$RiskYear == input$sliderInputYear),]
     }
+
     if (input$inputLocations == 'All locations') {
       corpTable <- corpTable[which(corpTable$ParentCorpID == USER$ParentCorpID & corpTable$RiskYear == input$sliderInputYear),]
       corpTable = select(corpTable, RiskFactorName, ValueAtRisk)
       corpTable = as.data.table(corpTable)
       corpTable = corpTable[,lapply(.SD,sum),by="RiskFactorName"]
     }
+
     plot_ly(x=corpTable$ValueAtRisk, y=corpTable$RiskFactorName, type = 'bar', orientation = 'h') %>% layout(margin = list(l=180, b=100)) %>%
       layout(xaxis = list(title = 'Impact ($M)'))
   }) 
@@ -290,84 +293,204 @@ server <- function(input, output, session) {
 #              CORP METHODOLOGY
 # --------------------------------------
 
-  output$selectCausalVariable<- renderUI({
-    selectInput("selectCausalVariable","Causal Variable (Hazard)",c("Temperature","Coastal Flooding","Drought"),selected = c("Coastal Flooding"), selectize=TRUE)
-  })
+#  output$selectCausalVariable<- renderUI({
+#    selectInput("selectCausalVariable","Causal Variable (Hazard)",c("Temperature","Coastal Flooding","Drought"),selected = c("Coastal Flooding"), selectize=TRUE)
+#  })
 
-  output$selectDamageFunction<- renderUI({
-    selectInput("selectDamageFunction","Damage Function",c("Building Damage","Cooling","Corn Yield"),selected = c("Building Damage"), selectize=TRUE)
-  })
+#  output$selectDamageFunction<- renderUI({
+#    selectInput("selectDamageFunction","Damage Function",c("Building Damage","Cooling","Corn Yield"),selected = c("Building Damage"), selectize=TRUE)
+#  })
 
-  output$selectPeriod<- renderUI({
-    selectInput("selectPeriod","Time Period",choices = c("1980","1990","2000","2010","2020","2030","2040","2050","2060","2070","2080","2090","2100"), selected=c("2010"), selectize=TRUE)
-  })
+#  output$selectPeriod<- renderUI({
+#    selectInput("selectPeriod","Time Period",choices = c("1980","1990","2000","2010","2020","2030","2040","2050","2060","2070","2080","2090","2100"), selected=c("2010"), selectize=TRUE)
+#  })
 
- #### These are examples for the methodology tab.
-  output$climplot5copy <- renderPlot({
+  # UI Input selectors for Corporate/Methodology/Overall, based on the database values  
+  output$selectInput_location_overall <- renderUI({
+    selectInput('inputLocations_overall',"Select Location",c(unique(subset(corpLocations, ParentCorpID == USER$ParentCorpID, select = LocationName))), selectize = TRUE)
+  })
+  
+  output$plot_selectHazard <- renderPlot({
 
    if(input$selectCausalVariable=="Temperature") {
-    shapes <- c(81.8730, 93.0240, 88.9460, 84.7620, 95.8550, 90.0690, 86.1060, 90.3700, 91.5810)
-    scales <- c(292.0320, 293.0880, 293.0820, 293.3870, 293.7670, 293.9150, 294.5310, 295.7390, 295.7960)
-    #colors <- brewer.pal(length(shapes), "Spectral")
-    colors <- brewer.pal(length(shapes), "Paired")
-    ltypes <- c(1:length(shapes))
-    labels <- c("1976-2005", "2016-25", "2026-35", "2036-45", "2046-55", "2056-65", "2066-75", "2076-85", "2086-95")
-    x <- seq(275,315,0.1)
-    plot(x,dweibull(x,shapes[1],scales[1]), type="l", lwd=3, lty=1, col=colors[1], xlim=c(275,315), ylim=c(0,0.12), xlab="Daily Maximum Surface Temperature (degK)", ylab="Probability Density")
-    for(i in 2:length(shapes) ) {
-      lines( x, dweibull(x,shapes[i],scales[i]), lwd=2, lty=i, col=colors[i] )
-    }
-    # legend("topright", inset=.05, title="Periods", labels, lwd=3, lty=ltypes, col=colors)
-   }
 
-   if(input$selectCausalVariable=="Coastal Flooding") {
-	source("./data/sealevel_us/annual_probability_withslr.r", local=TRUE)
-	position="topleft"
-	if(input$returnLevel==1) position="topright"
-	level = as.character(input$returnLevel)
-    # slrYears are defined in annual_probability_withslr.r.
-    # xaxt="n" in plot below turns off xaxis tickmarks.  These are added explicitly with axis.
-    plot(annual_probability_withslr[1,], type="l", lwd=3, lty=1, col="black", ylim=c(0,100), xlab="Year", ylab=paste("Ann. Prob. Exceed Flood Level",level,"m (%)"), xaxt="n")
-	lines(annual_probability_withslr[2,], col="blue")
-	lines(annual_probability_withslr[3,], col="green")
-	lines(annual_probability_withslr[4,], col="yellow")
-	lines(annual_probability_withslr[5,], col="orange")
-	lines(annual_probability_withslr[6,], col="red")
-	axis(1, at=c(1:length(slrYears)), labels=slrYears)
-     	legend(position, inset=.05, title="Scenarios (GMSL 2100)",legend=c("0.3m","0.5m","1.0m","1.5m","2.0m","2.5m"), lwd=3, col=c("black","blue","green","yellow","orange","red"))
-   }
+	# Using LOCA data from 32 models at 4 locations near Phoenix, AZ, airport.
+	# Compiled fit data for 1981-2000, 2011-2030, 2041-2060, 2071-2090.
+	# Visual inspection of plots for all distributions showed that the WEIBULL distribution was best.
+	# "1" "Weibull 16.7809908064543 41.1370130351604" "1" "Weibull 16.5311810167565 42.4277739861075" "1" "Weibull 16.6090200453762 44.2031463365842" "1" "Weibull 15.705047999892 46.3894333282642"
+	# Fits were done in units of degC.
+	shapes = c(16.7809908064543, 16.5311810167565, 16.6090200453762, 15.705047999892)
+	scales = c(41.1370130351604, 42.4277739861075, 44.2031463365842, 46.3894333282642)
+    	#colors <- brewer.pal(length(shapes), "Paired")
+    	colors <- c("green", "blue", "orange", "red")
+    	ltypes <- c(1:length(shapes))
+    	labels <- c("1981-2000", "2011-2030", "2041-2060", "2071-2090")
+       
+      x <- seq(20,55,0.5)
+      plot(x,dweibull(x,shapes[1],scales[1]), type="l", lwd=3, lty=1, col=colors[1], 
+	#xlim=xrange, 
+	#ylim=c(0,0.12), 
+	main = "Summer (JJA) Temperature Distributions",
+	xlab="Daily Maximum Surface Temperature (degC)", ylab="Probability Density", 
+	#xaxt="n"
+	)
+      for(i in 2:length(shapes) ) {
+        lines( x, dweibull(x,shapes[i],scales[i]), lwd=2, lty=i, col=colors[i] )
+      }
+      legend("topleft", inset=.01, title="Periods", labels, lwd=3, lty=ltypes, col=colors)
 
-   if(input$selectCausalVariable=="Drought") {
+  } # endif
+
+   if(input$selectCausalVariable=="Drought Severity") {
 	source("./data/drought/script_pdsisc_pdfs.r")
    }
 
-   if(input$selectCausalVariable=="Drought (90th percentile)") {
-	# Processed drought data is read into dataframe d by ./data/drought/load_drought_data.r, which is sourced at the beginning of server.R.
-	#fac_selected = facility_locations %>% filter(facility==input$drought_facility)
-	fac_selected = facility_locations %>% filter(LocationID_ParentCorpID_LocationName==input$drought_facility)
-	lon=as.numeric(fac_selected[1,2])
-	lat=as.numeric(fac_selected[1,3])
+   if(input$selectCausalVariable=="Coastal Flooding") {
 
-	#source("./data/drought/process_drought_data.r", local=TRUE)
-	#paste(input$droughtlon,input$droughtlat,upperlon,lowerlon,upperlat,lowerlat)
-	#paste(as.numeric(d4[3,]), as.numeric(d4[4,]) )
-	#plot(as.numeric(d4[3,]), as.numeric(d4[4,]) )
-	#values = select(d3, V3:V11)
-	#tvalues = 100*as.numeric( t(values) )
+#	source("./data/sealevel_us/annual_probability_withslr.r", local=TRUE)
+#	position="topleft"
+#	if(input$returnLevel==1) position="topright"
+#	level = as.character(input$returnLevel)
+#    # slrYears are defined in annual_probability_withslr.r.
+#    # xaxt="n" in plot below turns off xaxis tickmarks.  These are added explicitly with axis.
+#    plot(annual_probability_withslr[1,], type="l", lwd=3, lty=1, col="black", ylim=c(0,100), xlab="Year", ylab=paste("Ann. Prob. Exceed Flood Level",level,"m (%)"), xaxt="n")
+#	lines(annual_probability_withslr[2,], col="blue")
+#	lines(annual_probability_withslr[3,], col="green")
+#	lines(annual_probability_withslr[4,], col="yellow")
+#	lines(annual_probability_withslr[5,], col="orange")
+#	lines(annual_probability_withslr[6,], col="red")
+#	axis(1, at=c(1:length(slrYears)), labels=slrYears)
+#     	legend(position, inset=.05, title="Scenarios (GMSL 2100)",legend=c("0.3m","0.5m","1.0m","1.5m","2.0m","2.5m"), lwd=3, col=c("black","blue","green","yellow","orange","red"))
 
-	nd = read.table("./data/scoring_engine/drought/TCSDB_structure.locations.csv.pdsisc", header=FALSE)
-	values = nd %>% filter(nd$V1==input$drought_facility) %>% select(V8:V17)
-	tvalues = 100*as.numeric( t(values) )
+        locID <- corpLocations %>% filter(ParentCorpID==USER$ParentCorpID & LocationName==input$inputLocations_overall) %>% select(LocationID)
+	key <- paste(locID,USER$ParentCorpID,input$inputLocations_overall)
+	key <- gsub(" ","_",key)
+	nd = read.table("./data/scoring_engine/coastalflooding/TCSDB_structure.locations.csv.nearest.gtsr.segment", header=TRUE)
+	# V17 (RLm2yr) is the first historical return level in the nd table; if the location is outside the coastal distance threshold in the SE, this value will be a string (e.g., "TooFarFromCoast_threshold_10km") rather than a number.
+	# Force the elements of RLM2yr that are not numbers to be "NA".
+	  nd$RLm2yr <- as.numeric(as.character(nd$RLm2yr))
+	#ele = nd %>% filter(nd$V1==key) %>% select(V14:V17, V27)
+	ele = nd %>% filter(nd$LocationID_ParentCorpID_LocationName==key) %>% select(mindistid2, nearestseglon, nearestseglat, RLm2yr, station)
 
-	plot(tvalues, type="l", lwd=3, lty=1, col="black", ylim=c(0,100), xlab="Period", ylab="Ann. Prob. of 90th-pctile Drought (%)", xaxt="n")
-	axis(1, at=c(1:length(droughtPeriods)), labels=droughtPeriods)
-     	legend("topleft", inset=.05, title="Scenarios",legend=c("RCP4.5","RCP8.5"), lwd=3, col=c("black","blue","green","yellow","orange","red"))
-     	if(values$V8=="No_data") legend("center", title="NO DATA AVAILABLE AT THIS LOCATION", legend=" ", bg="red", text.col="white", text.font=2)
+	#if(is.numeric(ele$RLm2yr)==TRUE) {
+	if(toString(ele$RLm2yr)!="NA") {
+	   # key2 is the string that identifies the element in world_ewl_with_slr_stations (created by /data/sealevel_world/load_sealevel_world.r) that has been associated with the current corporate facility.  It consists of of the id of the nearest coastal segment, the segment's lon/lat, and the name of the EWL station associated with that segement.  An example is 3873_-79.472_8.999_BALBOA.
+	   #key2 <- paste(ele$V14, ele$V15, ele$V16, ele$V27)
+	   key2 <- paste(ele$mindistid2, ele$nearestseglon, ele$nearestseglat, ele$station)
+	   key2 <- gsub(" ","_",key2)
+	   #loc <- input$extremewaterLocation2_with_slr_station
+	   loc <- key2
+	   # The following sets the scenario from the backend, not Corporate/Analyze
+	   # scenario <- input$world_slr_scenario
+	   # The following sets the scenario from Corporate/Analyze, using uiOutput("selectInput_scenario") in ui.R and its definition in server.R.
+	   scenario <- input$selectscenario_overall
+	   source("./data/sealevel_world/plot_sealevel_data_world_ewl_slr.r", local=TRUE)
+	}
+
+	#if(is.numeric(ele$RLm2yr)==FALSE) {
+	if(toString(ele$RLm2yr)=="NA") {
+	   # This is not returning the text properly because it is in a renderPlot output statement (see start of section).
+	   #paste("Location beyond distance threshold.")
+	   source("./data/sealevel_world/plot_sealevel_data_world_ewl_slr_null_data.r", local=TRUE)
+	}
    }
 
+  }) # end output$plot_selectHazard
+  
+  # UI Input selectors for Corporate/Methodology/Drilldown, based on the database values  
+  output$selectInput_location_drilldown <- renderUI({
+    selectInput('inputLocations_drilldown',"Select Location",c(unique(subset(corpLocations, ParentCorpID == USER$ParentCorpID, select = LocationName))), selectize = TRUE)
   })
   
-  #This is an example for the methodology screen. Delete when replaced with real code.
+  output$plot_selectHazard_drilldown <- renderPlot({
+
+   #if(input$selectCausalVariable_drilldown=="Drought Severity (90th percentile)" | input$selectCausalVariable_drilldown=="Temperature (daily maximum 90th percentile)" | input$selectCausalVariable_drilldown=="Coastal Flooding (return period 100yr level)") {
+
+	# Processed drought data is read into dataframe d by ./data/drought/load_drought_data.r, which is sourced at the beginning of server.R.
+	# facility_locations list is defined by ./data/financial/load_financial_data.r
+	# The most up-to-date locations list is created by the last run of the SE and is located at ./data/scoring_engine/TCSDB_structure.locations.csv.  This is accessed by load_financial_data.r.
+	# input$drought_facility is set from TechnicalDetails/LocalizedClimateProbabilities/Drought and consists of concatenated LocationID_ParentCorpID_LocationName generated by script_build_nonphysical within the SE.
+	# input$inputLocations_drilldown is set from Corporate/Methodology/Drilldown/selectInput_location_drilldown and consists of just the LocationName.
+
+	# The following sets up the graph based on location selected in TechnicalDetails/LocalClimate/Drought.
+	#fac_selected = facility_locations %>% filter(facility==input$drought_facility)
+	#fac_selected = facility_locations %>% filter(LocationID_ParentCorpID_LocationName==input$drought_facility)
+
+	# The following sets up the graph based on location selected in Corporate/Analyze.
+        locID <- corpLocations %>% filter(ParentCorpID==USER$ParentCorpID & LocationName==input$inputLocations_drilldown) %>% select(LocationID)
+	key <- paste(locID,USER$ParentCorpID,input$inputLocations_drilldown)
+	key <- gsub(" ","_",key)
+
+	if(input$selectCausalVariable_drilldown=="Drought Severity (90th percentile)") {
+	  nd = read.table("./data/scoring_engine/drought/TCSDB_structure.locations.csv.pdsisc", header=FALSE)
+	  # The following sets up the graph based on location selected in TechnicalDetails/LocalClimate/Drought.
+	  # values = nd %>% filter(nd$V1==input$drought_facility) %>% select(V8:V17)
+	  # The following sets up the graph based on location selected in Corporate/Analyze.
+	  # The SE is run on drought data with one historical period (1950-99) and 9 future periods.  See script_runall_physical.
+	  values = nd %>% filter(nd$V1==key) %>% select(V8:V17)
+	  firstfield = values$V8
+	  periods = c("1950-99","2006-15","2016-25","2026-35","2036-45","2046-55","2056-65","2066-75","2076-85","2086-95")
+	  tvalues = 100*as.numeric( t(values) )
+	  ylabel = "Ann. Prob. of 90th-pctile Drought (%)"
+	  legend_nodata="No data available at this location."
+	}
+
+	if(input$selectCausalVariable_drilldown=="Temperature (daily maximum 90th percentile)") {
+	  nd = read.table("./data/scoring_engine/tmax90pct/TCSDB_structure.locations.csv.tx90p", header=FALSE)
+	  # The SE is run on tmax90p data with one historical period (1970-99) and 9 future periods.  See script_runall_physical.  
+	  # Note that there are 5 historical periods in the data, but the last one (1970-99) is used as the baseline for scoring of tmax90p impacts.
+	  values = nd %>% filter(nd$V1==key) %>% select(V12,V17:V25)
+	  firstfield = values$V12
+	  periods = c("1970-99","2006-15","2016-25","2026-35","2036-45","2046-55","2056-65","2066-75","2076-85","2086-95")
+	  tvalues = as.numeric( t(values) )
+	  ylabel = "Percent of Days Above 90th Percentile"
+	  legend_nodata="No data available at this location."
+	}
+
+	if(input$selectCausalVariable_drilldown=="Carbon Price") {
+	  nd = read.table("./data/scoring_engine/carbonprice/TCSDB_structure.locations.csv.carbonprice", header=FALSE)
+	  # The SE is run on carbonprice data with one historical period and 9 future periods.  See script_runall_physical.  
+	  values = nd %>% filter(nd$V1==key) %>% select(V8:V17)
+	  firstfield = values$V8
+	  periods = c("Hist","2006-15","2016-25","2026-35","2036-45","2046-55","2056-65","2066-75","2076-85","2086-95")
+	  tvalues = as.numeric( t(values) )
+	  ylabel = "Carbon Price (US$2005/t CO2)"
+	  legend_nodata="No data available at this location."
+	}
+
+	if(input$selectCausalVariable_drilldown=="Coastal Flooding (return period 100yr level)") {
+	  # The SE is run on coastal-flood data and finds the annual probability of the historical 100-year flood level for 9 future periods.  See script_runall_physical.  
+	  data = read.table("./data/scoring_engine/coastalflooding/input4r.nearest.gtsr.segment", header=TRUE)
+	  data2 = read.table("./data/scoring_engine/coastalflooding/future_annprob_fromR", header=TRUE)
+	  locs <- select(data, LocationID_ParentCorpID_LocationName)
+	  annPhist100_historical <- matrix(0.01, nrow=151)
+	  histvalues <- data.frame(annPhist100_historical)
+	  nd <- cbind(locs, histvalues, data2)
+	  values = nd %>% filter(nd$LocationID_ParentCorpID_LocationName==key) %>% select(annPhist100_historical:annPhist100_rcp85_2090)
+	  firstfield = values$annPhist100_rcp85_2010
+	  #nd = read.table("./data/scoring_engine/tmax90pct/TCSDB_structure.locations.csv.tx90p", header=FALSE)
+	  #values = nd %>% filter(nd$V1==key) %>% select(V12,V17:V25)
+	  #firstfield = values$V12
+	  periods = c("Hist","2006-15","2016-25","2026-35","2036-45","2046-55","2056-65","2066-75","2076-85","2086-95")
+	  tvalues = 100*as.numeric( t(values) )
+	  ylabel = "Annual Probability of 100-year Flood Level (%)"
+	  legend_nodata="Does not apply; location not close to coast."
+	} # endif on coastal flooding
+
+	plot(tvalues, type="l", lwd=3, lty=1, col="black", ylim=c(0,200), xlab="Period", ylab=ylabel, xaxt="n")
+	axis(1, at=c(1:length(periods)), labels=periods)
+	# For coastal flooding, the following line corresponds to the lower limit on the future value of the return period of the historical 100-year return level.  This is applied in ./data/scoring_engine/coastal_flooding/script_estimate_future_rp_v1.r.  This is currently set to 1.0, so the annual probability has an upper limit of 100%.
+	if(input$selectCausalVariable_drilldown=="Coastal Flooding (return period 100yr level)") {
+	   abline(h=100, col = "red", lty=2)  }
+     	if(firstfield=="No_data" | firstfield=="Inf") { 
+	   legend("center", legend=legend_nodata)
+	   #legend("center", legend=legend_nodata, bg="red", text.col="white", text.font=2)
+	  } else {
+     	   legend("topleft", inset=.05, title="Scenarios",legend=c("RCP4.5","RCP8.5"), lwd=3, col=c("black","blue","green","yellow","orange","red"))
+	}
+
+  }) # end output$plot_selectHazard_drilldown
+  
   output$plot_selectDamageFunction <- renderPlot({
 
    if(input$selectDamageFunction=="Building Damage") {
@@ -389,26 +512,329 @@ server <- function(input, output, session) {
     source("./functions/fit_elec_load_v1.r", local=TRUE)
    }
 
-  })
-  
+  }) # end output$plot_selectDamageFunction
+
+  output$plot_selectDamageFunction_drilldown <- renderPlot({
+
+   if(input$selectDamageFunction_drilldown=="Selected Location and Hazard") {
+
+   #if(input$selectCausalVariable_drilldown=="Drought Severity (90th percentile)" | input$selectCausalVariable_drilldown=="Temperature (daily maximum 90th percentile)" | input$selectCausalVariable_drilldown=="Coastal Flooding (return period 100yr level)") {
+
+	dfdata = read.table("./data/scoring_engine/df.csv.cln", sep=",", header=TRUE)
+
+	if(input$selectCausalVariable_drilldown=="Drought Severity (90th percentile)") {
+          loc_df <- corpLocations %>% filter(ParentCorpID==USER$ParentCorpID & LocationName==input$inputLocations_drilldown) %>% select(df_pdsisc)
+	}
+
+	if(input$selectCausalVariable_drilldown=="Temperature (daily maximum 90th percentile)") {
+          loc_df <- corpLocations %>% filter(ParentCorpID==USER$ParentCorpID & LocationName==input$inputLocations_drilldown) %>% select(df_tx90p)
+	}
+
+	if(input$selectCausalVariable_drilldown=="Coastal Flooding (return period 100yr level)") {
+          loc_df <- corpLocations %>% filter(ParentCorpID==USER$ParentCorpID & LocationName==input$inputLocations_drilldown) %>% select(df_coastalflood)
+	}
+	
+	if(input$selectCausalVariable_drilldown=="Carbon Price") {
+          loc_df <- corpLocations %>% filter(ParentCorpID==USER$ParentCorpID & LocationName==input$inputLocations_drilldown) %>% select(df_carbonprice)
+	}
+	
+	  loc_df <- as.character(loc_df[1,])  # converts to character string for use in filter below.
+	  xvalues <- dfdata %>% filter(dfdata$id==loc_df) %>% select(list_xvalues)
+	  x2 <- strsplit(as.character(xvalues[1,]), ";", fixed=TRUE)
+	  x3 <- as.numeric( unlist(x2) )
+	  yvalues <- dfdata %>% filter(dfdata$id==loc_df) %>% select(list_yvalues)
+	  y2 <- strsplit(as.character(yvalues[1,]), ";", fixed=TRUE)
+	  y3 <- as.numeric( unlist(y2) )
+
+	  xrange = c(min(x3), max(x3))
+	  if(input$selectCausalVariable_drilldown=="Coastal Flooding (return period 100yr level)") {xrange = c(min(x3), 1.1) }
+
+	  xvariable <- dfdata %>% filter(dfdata$id==loc_df) %>% select(xvariable)
+	  xvariable <- as.character(xvariable[1,])
+	  yvariable <- dfdata %>% filter(dfdata$id==loc_df) %>% select(yvariable)
+	  yvariable <- as.character(yvariable[1,])
+
+	  xunits <- dfdata %>% filter(dfdata$id==loc_df) %>% select(xunits)
+	  xunits <- as.character(xunits[1,])
+	  yunits <- dfdata %>% filter(dfdata$id==loc_df) %>% select(yunits)
+	  yunits <- as.character(yunits[1,])
+	  
+	plot(x3, y3, type="l", lwd=3, lty=1, col="black", xlab=paste(xvariable,",",xunits), ylab=paste(yvariable,",",yunits), xlim=xrange )
+	legend("topright", title="Damage Function", legend=loc_df)
+
+   #} 
+	#else {
+	# This is plotted if none of the 3 physical hazards are selected.
+	# source("./functions/fit_corn_yield_us_drought.r", local=TRUE) }
+
+   } # end if(input$selectDamageFunction_drilldown=="Selected Location and Hazard")
+
+  }) # end output$plot_selectDamageFunction_drilldown
+ 
   output$losscurve <- renderImage({list(src = "./images/Mandel-121514-graph.png", height="230px", alt = paste("loss curve"))
   }, deleteFile = FALSE)
+
+  output$plot_losscurve2 <- renderPlot({
+
+   if(input$selectCausalVariable=="Temperature" & input$selectDamageFunction=="Cooling") {
+
+	# The following creates functions f4avgload(t) and f4peakload(t).
+        source("./functions/fit_elec_load_v1.r.noplot", local=TRUE)
+
+	# Using LOCA data from 32 models at 4 locations near Phoenix, AZ, airport.
+	# Compiled fit data for 1981-2000, 2011-2030, 2041-2060, 2071-2090.
+	# Visual inspection of plots for all distributions showed that the WEIBULL distribution was best.
+	# "1" "Weibull 16.7809908064543 41.1370130351604" "1" "Weibull 16.5311810167565 42.4277739861075" "1" "Weibull 16.6090200453762 44.2031463365842" "1" "Weibull 15.705047999892 46.3894333282642"
+	# Fits were done in units of degC.
+	shapes = c(16.7809908064543, 16.5311810167565, 16.6090200453762, 15.705047999892)
+	scales = c(41.1370130351604, 42.4277739861075, 44.2031463365842, 46.3894333282642)
+	tdist <- function(x) {dweibull(x, shape=shapes[1], scale=scales[1]) }
+	if(input$selectPeriod=="2011-2030") {tdist <- function(x) {dweibull(x, shape=shapes[2], scale=scales[2]) } }
+	if(input$selectPeriod=="2041-2060") {tdist <- function(x) {dweibull(x, shape=shapes[3], scale=scales[3]) } }
+	if(input$selectPeriod=="2071-2090") {tdist <- function(x) {dweibull(x, shape=shapes[4], scale=scales[4]) } }
+	tmin <- 20
+	tmax <- 55
+	t <- seq(tmin, tmax)
+	tlen <- length(t)
+
+	# Get the damage values and the probability values across the range of temperatures.
+	damvals <- matrix(0, nrow=1, ncol=tlen)
+	probvals <- matrix(0, nrow=1, ncol=tlen)
+	for(i in 1:tlen) damvals[1,i] = f4avgload(i+tmin-1)
+	for(i in 1:tlen) probvals[1,i] = tdist(i+tmin-1)
+
+	# Get the expected value of the damage.
+	eval <- sum(probvals * damvals)
+
+	# Plot the product of the temperature distribution and the damage function.
+	#fproduct <- function(t) { tdist(t) * f4avgload(t) }
+	#plot(fproduct, xlim = c(min(t), max(t)) )
+
+	# Plot the loss curve as probability versus damage values.
+	plot(damvals, probvals, type="l", lwd=3, col="blue",
+		main="Average Load Probability Distribution",
+		xlab="Load (Mw) Relative to 15-18 degC",
+		ylab="Probability")
+	abline(v=eval, col = "blue", lty=2)
+	#abline(h=0.01, col = "red", lty=2)
+    	legend("topleft", inset=.01, "Expected Value", lwd=2, lty=2, col="blue")
+	grid(col="lightgray")
+	
+     } # endif on temperature and cooling
+
+   if(input$selectCausalVariable=="Drought Severity" & input$selectDamageFunction=="Corn Yield") {
+
+	# The normal fits for 4 periods described by para2, para3, etc., were created by ./data/drought/script_pdsisc_pdfs.r .
+	ntimeperiods <- 4
+	function1 <- function(x) { dnorm(x, para2[1], para2[2]) }
+	function2 <- function(x) { dnorm(x, para3[1], para3[2]) }
+	function3 <- function(x) { dnorm(x, para4[1], para4[2]) }
+	function4 <- function(x) { dnorm(x, para5[1], para5[2]) }
+
+	# Set up return periods and calculate corresponding quantile values.  qnorm(1/rp) gives the value of the variable in the normal distribution that has cumulative probability <= 1/rp.  For example qnorm(0.2)=-.84, where the distribution has default values mean=0 and sd=1.
+	# The following corresponds to return periods of 2, 5, 10, 20, 50, and 100 years.
+	rp <- c(2, 5, 10, 20, 50, 100)
+	#rp <- c(1, 2, 5, 10, 20, 50, 100)
+	rp <- c(1, 1.5, 2, 3, 4, 5, 10, 15, 20, 30, 40, 50, 100, 200, 500, 1000, 2000, 5000)
+	#rp <- seq(1,500, by=0.5)
+	qnorm_values <- qnorm(1/rp)
+	#qnorm_values = c(qnorm(0.5), qnorm(0.2),qnorm(0.1),qnorm(0.05),qnorm(0.02),qnorm(0.01) )
+
+	nvals <- length(rp)
+
+	# Calculate values of the drought index corresponding to each return period.
+	# The index-value formula is based on adjusting the qnorm values above that use mean=0, sd=1.  For example, qnorm(0.2, mean=m, sd=s)=qnorm(0.2)*s + m.
+        index_values <- matrix(0, nrow=ntimeperiods, ncol=nvals)
+	# index_values[1,] contains the drought-index values for the historical return periods.
+	index_values[1,] <- qnorm_values * as.numeric(para2[2]) + as.numeric(para2[1])
+	# The following are drought index values associated with the standard return periods in the future.  They are not used futher in this calculation.  See below.
+	index_values[2,] <- qnorm_values * as.numeric(para3[2]) + as.numeric(para3[1])
+	index_values[3,] <- qnorm_values * as.numeric(para4[2]) + as.numeric(para4[1])
+	index_values[4,] <- qnorm_values * as.numeric(para5[2]) + as.numeric(para5[1])
+
+	# This creates the DF f4yield_reduction_pct; note that the x variable is log10(drought return period in years).
+    	source("./functions/fit_corn_yield_us_drought.r", local=TRUE)
+	
+	# Get the damage values and the probability values across the range of temperatures.
+	damvals <- matrix(0, nrow=1, ncol=nvals)
+	probvals <- matrix(0, nrow=ntimeperiods, ncol=nvals)
+	for(i in 1:nvals) damvals[1,i] = f4yield_reduction_pct( log(rp[i],10) )
+	# Note that only the historical index_values[1,i] are used since these are the values of the drought index that correspond to the damages associated with the historical return periods.  The probabilities of these drought-index values change throught time.
+	for(i in 1:nvals) probvals[1,i] = function1(index_values[1,i])
+	for(i in 1:nvals) probvals[2,i] = function2(index_values[1,i])
+	for(i in 1:nvals) probvals[3,i] = function3(index_values[1,i])
+	for(i in 1:nvals) probvals[4,i] = function4(index_values[1,i])
+
+	# Get the expected value of the damage for each time period.
+	evals <- matrix(0, nrow=1, ncol=ntimeperiods)
+	for(i in 1:ntimeperiods) evals[i] <- sum(probvals[i,] * damvals)/sum(probvals[i,])
+	# XXX should the widths of the damvals intervals be used?
+	#damvals_widths <- damvals
+	#for(i in 2:nvals) damvals_widths[,i] <- damvals[,i] - damvals[,i-1]
+	#for(i in 1:ntimeperiods) evals[i] <- sum(probvals[i,] * damvals_widths)
+
+	#fproduct <- function(rp) { index_historical(rp) * f4yield_reduction_pct(rp) }
+	
+	#curve(dnorm(x, para2[1], para2[2]), from=-5, to=5, col = 3, ylim=c(0,0.5), ylab="Probability", xlab="Drought Severity Index (lower value = worse drought)")
+
+	prob2plot <- probvals[1,]/sum(probvals[1,])
+	eval2plot <- evals[1]
+	if(input$selectPeriod=="2011-2030") {prob2plot <- probvals[2,]/sum(probvals[2,]); eval2plot <- evals[2]}
+	if(input$selectPeriod=="2041-2060") {prob2plot <- probvals[3,]/sum(probvals[3,]); eval2plot <- evals[3]}
+	if(input$selectPeriod=="2071-2090") {prob2plot <- probvals[4,]/sum(probvals[4,]); eval2plot <- evals[4]}
+
+	# Plot the loss curve as probability versus damage values.
+	plot(damvals, prob2plot, type="l", lwd=3, col="blue",
+		main="Yield Reduction Probability Distribution",
+		xlab="Yield Reduction (%)", xlim=c(0,100),
+		ylab="Probability")
+	abline(v=eval2plot, col = "blue", lty=2)
+	#abline(h=0.01, col = "red", lty=2)
+    	legend("topright", inset=.01, "Expected Value", lwd=2, lty=2, col="blue")
+	grid(col="lightgray")
+
+     } # endif on drought severity and corn yield
+
+  }) # end output$plot_losscurve2
+
+  output$plot_expectedDamage <- renderPlotly({
+
+   if(input$selectDamageFunction_drilldown=="Selected Location and Hazard" & input$selectPeriod_drilldown=="All Periods") { 
+	#source("./functions/plot_area_by_time_single_hazards.r", local=TRUE)
+
+    corpTable <- readr::read_csv("./data/scoring_engine/nonphysical/TCSDB_structure.locations.csv.damages.allDFs.withvalues.with.nonphysical.csv")
+
+    if (input$inputLocations_drilldown != 'All locations') {
+      corpTable <- corpTable[which(corpTable$ParentCorpID == USER$ParentCorpID & corpTable$Location == input$inputLocations_drilldown),]
+    }
+    if (input$inputLocations_drilldown == 'All locations') {
+      corpTable <- corpTable[which(corpTable$ParentCorpID == USER$ParentCorpID),]
+    }
+
+    nriskyears = length(corpTable %>% group_by(RiskYear) %>% summarise(svar=sum(ValueAtRisk)) %>% select(RiskYear) %>% pull())
+    time_series = as.data.frame( matrix(0, nrow = nriskyears, ncol = 10, dimnames = list(c(1:nriskyears), c("RiskYear", "s1", "s2", "s3", "s4", "s5", "s6", "s7", "s8", "s9"))) )
+
+    time_series$RiskYear <- corpTable %>% group_by(RiskYear) %>% summarise(svar=sum(ValueAtRisk)) %>% select(RiskYear) %>% pull()
+    time_series$s1 <- corpTable %>% filter(RiskFactorName=='Temperature extremes') %>% group_by(RiskYear) %>% summarise(s1=sum(ValueAtRisk)) %>% select(s1) %>% pull()
+    time_series$s2 <- corpTable %>% filter(RiskFactorName=='Drought') %>% group_by(RiskYear) %>% summarise(s2=sum(ValueAtRisk)) %>% select(s2) %>% pull()
+    time_series$s3 <- corpTable %>% filter(RiskFactorName=='Coastal flooding') %>% group_by(RiskYear) %>% summarise(s3=sum(ValueAtRisk)) %>% select(s3) %>% pull()
+    time_series$s4 <- corpTable %>% filter(RiskFactorName=='Carbon pricing') %>% group_by(RiskYear) %>% summarise(s4=sum(ValueAtRisk)) %>% select(s4) %>% pull()
+
+  if(input$selectCausalVariable_drilldown=="Temperature (daily maximum 90th percentile)") {
+    tplot <- plot_ly(time_series, x = ~RiskYear, y = ~s1, name='Temperature (daily maximum 90th percentile)', type='scatter', mode = 'none', fill = 'tonexty')
+    } # endif
+
+  if(input$selectCausalVariable_drilldown=="Drought Severity (90th percentile)") {
+    tplot <- plot_ly(time_series, x = ~RiskYear, y = ~s2, name='Drought Severity (90th percentile)', type='scatter', mode = 'none', fill = 'tonexty')
+    } # endif
+
+  if(input$selectCausalVariable_drilldown=="Coastal Flooding (return period 100yr level)") {
+    tplot <- plot_ly(time_series, x = ~RiskYear, y = ~s3, name='Coastal Flooding (return period 100yr level)', type='scatter', mode = 'none', fill = 'tonexty')
+    } # endif
+
+  if(input$selectCausalVariable_drilldown=="Carbon Price") {
+    tplot <- plot_ly(time_series, x = ~RiskYear, y = ~s4, name='Carbon Price', type='scatter', mode = 'none', fill = 'tonexty')
+    } # endif
+
+   tplot %>%
+       layout(yaxis = list(title = 'Impact ($M)', showgrid = TRUE), xaxis = list(showgrid = TRUE), margin = list(l=80,b=100))
+
+  } # endif on input$selectDamageFunction & input$selectPeriod
+
+  }) # end output$plot_expectedDamage
+
+# --------------------------------------
+# TRACEBACK/DRILLDOWN
+# --------------------------------------
   
 # Note use of "sep" below to get line break via verbatimTextOutput in ui.R.
-  output$methodologyTracebackHazard <- renderText({
-        p1 = paste("Drought location - ","Boise, Idaho")
-        p2 = paste("Drought-90p location - ",input$drought_facility)
-        p3 = paste("Sea-level projection location - ",input$sealevelProjectionLocation)
-        p4 = paste("Extreme water-level location - ",input$extremewaterLocation)
-        p5 = paste("Temperature location - ","South Sudan")
-        p6 = paste("Tmax-90p location - ","Boise, Idaho")
-	paste(p1,p2,p3,p4,p5,p6,sep="\n")
+
+  output$tracebackHazard <- renderText({
+
+  # XXX This structure does not return "Select a location" when input$inputLocations != 'All locations'
+
+    if (input$inputLocations_overall == 'All locations') {
+        p5=paste("Select a location.")
+	p1=" "
+	p3=" " 
+    }
+
+    if (input$inputLocations_overall != 'All locations') {
+	# The following is the location (with locationID and ParentCorpID) selected in Corporate/Analyze.
+        locID <- corpLocations %>% filter(ParentCorpID==USER$ParentCorpID & LocationName==input$inputLocations_overall) %>% select(LocationID)
+	key <- paste(locID,USER$ParentCorpID,input$inputLocations_overall)
+	key <- gsub(" ","_",key)
+
+        p1 = paste("Drought severity (all values) - ","Boise, Idaho")
+
+        #p3 = paste("Sea-level projection - ",input$sealevelProjectionLocation)
+        p3 = paste("Coastal Flooding (all EWLs with SLR) - ",as.character(key))
+
+        p5 = paste("Temperature (all values) - ","Phoenix, AZ; 32 models; LOCA downscaling to 7-km resolution") 
+    } 
+
+	paste(p5," ",p1," ",p3,sep="\n")
+  })
+
+  output$tracebackHazard_drilldown <- renderText({
+	# The following is the location (with locationID and ParentCorpID) selected in Corporate/Analyze.
+        locID <- corpLocations %>% filter(ParentCorpID==USER$ParentCorpID & LocationName==input$inputLocations_drilldown) %>% select(LocationID)
+	key <- paste(locID,USER$ParentCorpID,input$inputLocations_drilldown)
+	key <- gsub(" ","_",key)
+
+	# The following is the location selected in TechnicalDetails/LocalClimate/Drought.
+        #p2 = paste("Drought severity (90th percentile) - ",input$drought_facility)
+        p2 = paste(locID,USER$ParentCorpID,input$inputLocations_drilldown)
+        p2 = gsub(" ","_",p2)
+        p2 = paste("Drought severity (90th percentile) - ",p2)
+        p2b = paste("Drought severity (90th percentile) - ",input$inputLocations_drilldown)
+
+        #p4 = paste("Extreme water-level - ",input$extremewaterLocation)
+        p4 = paste("Coastal Flooding (return period 100yr level) - ",as.character(key))
+
+        p6 = paste("Daily max temperature (90th percentile) - ",input$inputLocations_drilldown)
+
+	paste(p6," ",p2b," ",p4,sep="\n")
         })
 
-  output$methodologyTracebackVuln <- renderText({
-	p1= paste("Damage function - ",input$selectDamageFunction)
-	paste(p1,sep="\n")
+  output$tracebackVuln <- renderText({
+	# The following is the location (with locationID and ParentCorpID) selected in Corporate/Analyze.
+        locID <- corpLocations %>% filter(ParentCorpID==USER$ParentCorpID & LocationName==input$inputLocations_overall) %>% select(LocationID)
+	key <- paste(locID,USER$ParentCorpID,input$inputLocations_overall)
+	key <- gsub(" ","_",key)
+
+	p1 = paste("Cooling - auffhammer_peak_demand_electricity_2017")
+	p2 = paste("Corn Yield - wang_crop_productivity_climate_midwestUS_2016")
+
+	p3 = paste("Building Damage - HAZUS", as.character(input$hazus_damage_function_id))
+
+	paste(p1," ",p2," ",p3,sep="\n")
         })
+
+  output$tracebackVuln_drilldown <- renderText({
+	# The following is the location (with locationID and ParentCorpID) selected in Corporate/Analyze.
+        locID <- corpLocations %>% filter(ParentCorpID==USER$ParentCorpID & LocationName==input$inputLocations_drilldown) %>% select(LocationID)
+	key <- paste(locID,USER$ParentCorpID,input$inputLocations_drilldown)
+	key <- gsub(" ","_",key)
+
+	locvaluesSE <- read.table("./data/scoring_engine/nonphysical/locationvalues4SE.csv", header=TRUE, sep=";")
+        locvalue_tx90p <- locvaluesSE %>% filter(ParentCorpID==USER$ParentCorpID & LocationName==input$inputLocations_drilldown) %>% select(df_tx90p)
+        locvalue_pdsisc <- locvaluesSE %>% filter(ParentCorpID==USER$ParentCorpID & LocationName==input$inputLocations_drilldown) %>% select(df_pdsisc)
+        locvalue_coastalflood <- locvaluesSE %>% filter(ParentCorpID==USER$ParentCorpID & LocationName==input$inputLocations_drilldown) %>% select(df_coastalflood)
+        locvalue_carbonprice <- locvaluesSE %>% filter(ParentCorpID==USER$ParentCorpID & LocationName==input$inputLocations_drilldown) %>% select(df_carbonprice)
+	#p1 = paste("Damage function - ",input$selectDamageFunction_drilldown)
+	p1 = paste("Asset value at selected location for each damage function:")
+	p2 = paste("Temperature (daily max 90th pctile)", as.character(locvalue_tx90p), "$M")
+	p3 = paste("Drought Severity (90th percentile) ", as.character(locvalue_pdsisc), "$M")
+	p4 = paste("Coastal Flooding (rtn pd 100yr lvl)", as.character(locvalue_coastalflood), "$M")
+	p5 = paste("Carbon Price                       ", as.character(locvalue_carbonprice), "$M")
+
+	paste(p1," ",p2," ",p3," ",p4," ",p5,sep="\n")
+        })
+
+# --------------------------------------
+# SYSTEM CONTROL
+# -------t------------------------------
 
   # Should be reactiveValue.  See pattern 3 at http://shiny.rstudio.com/articles/action-buttons.html
   corpTableNew <- reactiveValues()
@@ -418,6 +844,13 @@ server <- function(input, output, session) {
       })
 
   observeEvent(input$button_runSE, {
+	 withProgress(message = 'Calculation in progress',
+                 detail = 'This may take a while...', value = 0, {
+      for (i in 1:15) {
+        incProgress(1/15)
+        Sys.sleep(0.25)
+      }
+      })
         system("./data/scoring_engine/script_runSE_from_app")
       })
 
@@ -868,77 +1301,228 @@ server <- function(input, output, session) {
 # -----------
 # Climate variables
 # -----------
-  output$climplot1 <- renderPlot({
-     #test.hist = read.table("./data/tasmax_day_BCSD_historical_r1i1p1_inmcm4_1950-2005.interpolated.merged.aggregated", header=TRUE)
+
+  output$temp_climplot1 <- renderPlot({
+
+   if(input$temperatureProjectionLocation=="Western Equatoria, South Sudan") {
      # The original data set contains 159650 daily tasmax values:  10 years, 31 days covering June, 5 models, 103 NEX-GDDP grid centers in Western Equatoria region of South Sudan.  This has been downselected to fewer points to reduce loading speed.
+     #test.hist = read.table("./data/tasmax_day_BCSD_historical_r1i1p1_inmcm4_1950-2005.interpolated.merged.aggregated", header=TRUE)
      test.hist = read.table("./data/temperature/nex_gddp_western_equatoria_103pts_5models/tasmax.1970-1979.allmodels.westernequatoria.jun.csv.10pts", header=FALSE)
      test.hist[,1] <- NULL
-     test.hist[,1] <- NULL
      x = ts(test.hist[1,])
-    bins <- seq(min(x), max(x), length.out = input$bins + 1)
-    #hist(x, breaks = bins, col = 'skyblue', border = 'white', main="1950-2005, inmcm4", xlab="Degrees K")
-    hist(x, breaks = bins, col = 'skyblue', border = 'white', main="June 1970-1979, 5 models, Western Equatoria", xlab="Degrees K")
-  })
+     x <- x - 273.15
+     bins <- seq(min(x), max(x), length.out = input$bins + 1)
+     #hist(x, breaks = bins, col = 'skyblue', border = 'white', main="1950-2005, inmcm4", xlab="Degrees K")
+     hist(x, breaks = bins, col = 'skyblue', border = 'white', main="June 1970-1979, 5 models, Western Equatoria", xlab="Daily Maximum Temperature (degC)")
+  } # endif
 
-  output$climplot2 <- renderPlot({
+   if(input$temperatureProjectionLocation=="Queens, NY") {
+	d <- read.table("./data/temperature/loca/lga/tasmax_day_input4r.lga.2locs.32models.1981-2000.annual", header=FALSE)
+	d <- d - 273.15
+	d <- d %>% select(V152:243)  # summer JJA
+	dt <- t(d)
+        bins <- seq(min(dt), max(dt), length.out = input$bins + 1)
+	hist(dt, breaks=bins, col = 'skyblue', border = 'white', main="Queens, NY, 32 models, JJA 1981-2000", xlab="Daily Maximum Temperature (degC)", xlim=c(15,45) )
+  } # endif
+
+   if(input$temperatureProjectionLocation=="Phoenix, AZ") {
+	d <- read.table("./data/temperature/loca/phx/tasmax_day_input4r.phx.4locs.32models.1981-2000.annual", header=FALSE)
+	d <- d - 273.15
+	d <- d %>% select(V152:243)  # summer JJA
+	dt <- t(d)
+        bins <- seq(min(dt), max(dt), length.out = input$bins + 1)
+	hist(dt, breaks=bins, col = 'skyblue', border = 'white', main="Phoenix, AZ, 32 models, JJA 1981-2000", xlab="Daily Maximum Temperature (degC)", xlim=c(30,55) )
+  } # endif
+
+  }) # end plot
+
+  output$temp_climplot2 <- renderPlot({
+
+   if(input$temperatureProjectionLocation=="Western Equatoria, South Sudan") {
      #test.hist = read.table("./data/tasmax_day_BCSD_rcp85_r1i1p1_inmcm4_2006-2100.interpolated.merged.aggregated", header=TRUE)
      # The original data set contains 159650 daily tasmax values:  10 years, 31 days covering June, 5 models, 103 NEX-GDDP grid centers in Western Equatoria region of South Sudan.  This has been downselected to fewer points to reduce loading speed.
      test.hist = read.table("./data/temperature/nex_gddp_western_equatoria_103pts_5models/tasmax.2020-2029.allmodels.westernequatoria.jun.csv.10pts", header=FALSE)
      test.hist[,1] <- NULL
-     test.hist[,1] <- NULL
      x = ts(test.hist[1,])
-    bins <- seq(min(x), max(x), length.out = input$bins + 1)
-    #hist(x, breaks = bins, col = 'yellow', border = 'white', main="2006-2100, RCP8.5, inmcm4", xlab="Degrees K")
-    hist(x, breaks = bins, col = 'skyblue', border = 'white', main="June 2020-2029, 5 models, Western Equatoria", xlab="Degrees K")
-  })
+     x <- x - 273.15
+     bins <- seq(min(x), max(x), length.out = input$bins + 1)
+     #hist(x, breaks = bins, col = 'yellow', border = 'white', main="2006-2100, RCP8.5, inmcm4", xlab="Degrees K")
+     hist(x, breaks = bins, col = 'skyblue', border = 'white', main="June 2020-2029, 5 models, Western Equatoria", xlab="Daily Maximum Temperature (degC)")
+  } # endif
 
-  output$climplot3 <- renderPlot({
+   if(input$temperatureProjectionLocation=="Queens, NY") {
+	d <- read.table("./data/temperature/loca/lga/tasmax_day_input4r.lga.2locs.32models.2011-2030.annual", header=FALSE)
+	d <- d - 273.15
+	d <- d %>% select(V152:243)  # summer JJA
+	dt <- t(d)
+        bins <- seq(min(dt), max(dt), length.out = input$bins + 1)
+	hist(dt, breaks=bins, col = 'skyblue', border = 'white', main="Queens, NY, 32 models, JJA 2011-2030", xlab="Daily Maximum Temperature (degC)", xlim=c(15,45) )
+  } # endif
+
+   if(input$temperatureProjectionLocation=="Phoenix, AZ") {
+	d <- read.table("./data/temperature/loca/phx/tasmax_day_input4r.phx.4locs.32models.2011-2030.annual", header=FALSE)
+	d <- d - 273.15
+	d <- d %>% select(V152:243)  # summer JJA
+	dt <- t(d)
+        bins <- seq(min(dt), max(dt), length.out = input$bins + 1)
+	hist(dt, breaks=bins, col = 'skyblue', border = 'white', main="Phoenix, AZ, 32 models, JJA 2011-2030", xlab="Daily Maximum Temperature (degC)", xlim=c(30,55) )
+  } # endif
+
+  }) # end plot
+
+  output$temp_climplot3 <- renderPlot({
+
+   if(input$temperatureProjectionLocation=="Western Equatoria, South Sudan") {
      #test.hist = read.table("./data/tasmax_day_BCSD_historical_r1i1p1_CNRM-CM5_1950-2005.interpolated.merged.aggregated", header=TRUE)
      # The original data set contains 159650 daily tasmax values:  10 years, 31 days covering June, 5 models, 103 NEX-GDDP grid centers in Western Equatoria region of South Sudan.  This has been downselected to fewer points to reduce loading speed.
      test.hist = read.table("./data/temperature/nex_gddp_western_equatoria_103pts_5models/tasmax.2050-2059.allmodels.westernequatoria.jun.csv.10pts", header=FALSE)
      test.hist[,1] <- NULL
-     test.hist[,1] <- NULL
      x = ts(test.hist[1,])
+     x <- x - 273.15
     bins <- seq(min(x), max(x), length.out = input$bins + 1)
     #hist(x, breaks = bins, col = 'skyblue', border = 'white', main="1950-2005, CNRM-CM5", xlab="Degrees K")
-    hist(x, breaks = bins, col = 'skyblue', border = 'white', main="June 2050-2059, 5 models, Western Equatoria", xlab="Degrees K")
-  })
+    hist(x, breaks = bins, col = 'skyblue', border = 'white', main="June 2050-2059, 5 models, Western Equatoria", xlab="Daily Maximum Temperature (degC)")
+  } # endif
 
-  output$climplot4 <- renderPlot({
+   if(input$temperatureProjectionLocation=="Queens, NY") {
+	d <- read.table("./data/temperature/loca/lga/tasmax_day_input4r.lga.2locs.32models.2041-2060.annual", header=FALSE)
+	d <- d - 273.15
+	d <- d %>% select(V152:243)  # summer JJA
+	dt <- t(d)
+        bins <- seq(min(dt), max(dt), length.out = input$bins + 1)
+	hist(dt, breaks=bins, col = 'skyblue', border = 'white', main="Queens, NY, 32 models, JJA 2041-2060", xlab="Daily Maximum Temperature (degC)", xlim=c(15,45) )
+  } # endif
+
+   if(input$temperatureProjectionLocation=="Phoenix, AZ") {
+	d <- read.table("./data/temperature/loca/phx/tasmax_day_input4r.phx.4locs.32models.2041-2060.annual", header=FALSE)
+	d <- d - 273.15
+	d <- d %>% select(V152:243)  # summer JJA
+	dt <- t(d)
+        bins <- seq(min(dt), max(dt), length.out = input$bins + 1)
+	hist(dt, breaks=bins, col = 'skyblue', border = 'white', main="Phoenix, AZ, 32 models, JJA 2041-2060", xlab="Daily Maximum Temperature (degC)", xlim=c(30,55) )
+  } # endif
+
+  }) # end plot
+
+  output$temp_climplot4 <- renderPlot({
+
+   if(input$temperatureProjectionLocation=="Western Equatoria, South Sudan") {
      #test.hist = read.table("./data/tasmax_day_BCSD_rcp85_r1i1p1_CNRM-CM5_2006-2100.interpolated.merged.aggregated", header=TRUE)
      # The original data set contains 159650 daily tasmax values:  10 years, 31 days covering June, 5 models, 103 NEX-GDDP grid centers in Western Equatoria region of South Sudan.  This has been downselected to fewer points to reduce loading speed.
      test.hist = read.table("./data/temperature/nex_gddp_western_equatoria_103pts_5models/tasmax.2090-2099.allmodels.westernequatoria.jun.csv.10pts", header=FALSE)
      test.hist[,1] <- NULL
-     test.hist[,1] <- NULL
      x = ts(test.hist[1,])
+     x <- x - 273.15
     bins <- seq(min(x), max(x), length.out = input$bins + 1)
     #hist(x, breaks = bins, col = 'yellow', border = 'white', main="2006-2100, RCP8.5, CNRM-CM5", xlab="Degrees K")
-    hist(x, breaks = bins, col = 'skyblue', border = 'white', main="June 2090-2099, 5 models, Western Equatoria", xlab="Degrees K")
-  })
+    hist(x, breaks = bins, col = 'skyblue', border = 'white', main="June 2090-2099, 5 models, Western Equatoria", xlab="Daily Maximum Temperature (degC)")
+  } # endif
 
-  output$climplot5 <- renderPlot({
+   if(input$temperatureProjectionLocation=="Queens, NY") {
+	d <- read.table("./data/temperature/loca/lga/tasmax_day_input4r.lga.2locs.32models.2071-2090.annual", header=FALSE)
+	d <- d - 273.15
+	d <- d %>% select(V152:243)  # summer JJA
+	dt <- t(d)
+        bins <- seq(min(dt), max(dt), length.out = input$bins + 1)
+	hist(dt, breaks=bins, col = 'skyblue', border = 'white', main="Queens, NY, 32 models, JJA 2071-2090", xlab="Daily Maximum Temperature (degC)", xlim=c(15,45) )
+  } # endif
+
+   if(input$temperatureProjectionLocation=="Phoenix, AZ") {
+	d <- read.table("./data/temperature/loca/phx/tasmax_day_input4r.phx.4locs.32models.2071-2090.annual", header=FALSE)
+	d <- d - 273.15
+	d <- d %>% select(V152:243)  # summer JJA
+	dt <- t(d)
+        bins <- seq(min(dt), max(dt), length.out = input$bins + 1)
+	hist(dt, breaks=bins, col = 'skyblue', border = 'white', main="Phoenix, AZ, 32 models, JJA 2071-2090", xlab="Daily Maximum Temperature (degC)", xlim=c(30,55) )
+  } # endif
+
+  }) # end plot
+
+  output$temp_climplot5 <- renderPlot({
+
+   if(input$temperatureProjectionLocation=="Western Equatoria, South Sudan") {
     shapes <- c(81.8730, 93.0240, 88.9460, 84.7620, 95.8550, 90.0690, 86.1060, 90.3700, 91.5810)
     scales <- c(292.0320, 293.0880, 293.0820, 293.3870, 293.7670, 293.9150, 294.5310, 295.7390, 295.7960)
+    #scales <- scales - 273.15
     #colors <- brewer.pal(length(shapes), "Spectral")
     colors <- brewer.pal(length(shapes), "Paired")
     ltypes <- c(1:length(shapes))
     labels <- c("1976-2005", "2016-25", "2026-35", "2036-45", "2046-55", "2056-65", "2066-75", "2076-85", "2086-95")
-    x <- seq(275,315,0.1)
-    plot(x,dweibull(x,shapes[1],scales[1]), type="l", lwd=3, lty=1, col=colors[1], xlim=c(275,315), ylim=c(0,0.12), xlab="Daily Maximum Surface Temperature (degK)", ylab="Probability Density")
+    x <- seq(275.15,315.15,1.0)
+    xrange <- c(275.15,315.15)
+    xcentigrade <- x - 273.15
+    # xaxt="n" in plot below turns off xaxis tickmarks.  These are added explicitly with axis.
+    plot(x,dweibull(x,shapes[1],scales[1]), type="l", lwd=3, lty=1, col=colors[1], 
+	xlim=xrange, 
+	ylim=c(0,0.12), 
+	main = "Temperature Distributions for Entire Year",
+	xlab="Daily Maximum Surface Temperature (degC)", ylab="Probability Density", 
+	xaxt="n"
+	)
     for(i in 2:length(shapes) ) {
       lines( x, dweibull(x,shapes[i],scales[i]), lwd=2, lty=i, col=colors[i] )
-    }
+      }
+    #axis(1, at=x, labels=x)
+    axis(1, at=x, labels=xcentigrade)
     legend("topright", inset=.05, title="Periods", labels, lwd=3, lty=ltypes, col=colors)
-  })
+  } # endif
+
+   if(input$temperatureProjectionLocation=="Queens, NY") {
+	# Compiled fit data for 1981-2000, 2011-2030, 2041-2060, 2071-2090.
+	# Visual inspection of plots for all distributions showed that the NORMAL distribution was best.
+	# "1" "Normal 28.3077153023098 3.82693158121976"  "1" "Normal 29.6137309527853 3.97273119036855"  "1" "Normal 31.3714733780571 4.07573105989084"  "1" "Normal 33.3634844514267 4.25056671686859"
+	# Fits were done in units of degC.
+	shapes = c(28.3077153023098, 29.6137309527853, 31.3714733780571, 33.3634844514267)
+	scales = c( 3.82693158121976, 3.97273119036855, 4.07573105989084, 4.25056671686859)
+    	#colors <- brewer.pal(length(shapes), "Paired")
+    	colors <- c("green", "blue", "orange", "red")
+    	ltypes <- c(1:length(shapes))
+    	labels <- c("1981-2000", "2011-2030", "2041-2060", "2071-2090")
+       
+      x <- seq(15,45,0.5)
+      plot(x,dnorm(x,shapes[1],scales[1]), type="l", lwd=3, lty=1, col=colors[1], 
+	#xlim=xrange, 
+	#ylim=c(0,0.12), 
+	main = "Summer (JJA) Temperature Distributions",
+	xlab="Daily Maximum Surface Temperature (degC)", ylab="Probability Density", 
+	#xaxt="n"
+	)
+      for(i in 2:length(shapes) ) {
+        lines( x, dnorm(x,shapes[i],scales[i]), lwd=2, lty=i, col=colors[i] )
+      }
+      legend("topright", inset=.01, title="Periods", labels, lwd=3, lty=ltypes, col=colors)
+  } # endif
+
+   if(input$temperatureProjectionLocation=="Phoenix, AZ") {
+	# Compiled fit data for 1981-2000, 2011-2030, 2041-2060, 2071-2090.
+	# Visual inspection of plots for all distributions showed that the WEIBULL distribution was best.
+	# "1" "Weibull 16.7809908064543 41.1370130351604" "1" "Weibull 16.5311810167565 42.4277739861075" "1" "Weibull 16.6090200453762 44.2031463365842" "1" "Weibull 15.705047999892 46.3894333282642"
+	# Fits were done in units of degC.
+	shapes = c(16.7809908064543, 16.5311810167565, 16.6090200453762, 15.705047999892)
+	scales = c(41.1370130351604, 42.4277739861075, 44.2031463365842, 46.3894333282642)
+    	#colors <- brewer.pal(length(shapes), "Paired")
+    	colors <- c("green", "blue", "orange", "red")
+    	ltypes <- c(1:length(shapes))
+    	labels <- c("1981-2000", "2011-2030", "2041-2060", "2071-2090")
+       
+      x <- seq(30,55,0.5)
+      plot(x,dweibull(x,shapes[1],scales[1]), type="l", lwd=3, lty=1, col=colors[1], 
+	#xlim=xrange, 
+	#ylim=c(0,0.12), 
+	main = "Summer (JJA) Temperature Distributions",
+	xlab="Daily Maximum Surface Temperature (degC)", ylab="Probability Density", 
+	#xaxt="n"
+	)
+      for(i in 2:length(shapes) ) {
+        lines( x, dweibull(x,shapes[i],scales[i]), lwd=2, lty=i, col=colors[i] )
+      }
+      legend("topright", inset=.01, title="Periods", labels, lwd=3, lty=ltypes, col=colors)
+
+  } # endif
+
+  }) # end plot
 
   output$sealevel_extremes_plot1 <- renderPlot({
-    shapes <- c(81.8730, 93.0240, 88.9460, 84.7620, 95.8550, 90.0690, 86.1060, 90.3700, 91.5810)
-    scales <- c(292.0320, 293.0880, 293.0820, 293.3870, 293.7670, 293.9150, 294.5310, 295.7390, 295.7960)
-    #colors <- brewer.pal(length(shapes), "Spectral")
-    colors <- brewer.pal(length(shapes), "Paired")
-    ltypes <- c(1:length(shapes))
-    labels <- c("1976-2005", "2016-25", "2026-35", "2036-45", "2046-55", "2056-65", "2066-75", "2076-85", "2086-95")
-    x <- seq(275,315,0.1)
 	location_parameters = filter(ewl,name==input$extremewaterLocation) %>% select(3:8)
       # z contains the location, scale, and shape parameters in rows 1, 3, and 5 of column 1.
       # z contains the +/-95% confidence interval of these parameters in rows 2, 4, and 6 of column 1.
@@ -956,11 +1540,6 @@ server <- function(input, output, session) {
 	#grid(NULL, NULL, lwd=2)
 	abline(v=return_periods, h=return_levels, col="gray", lty=3, lwd=2)
 #axis(1, at=c(1:6), labels=c("location","location_range","scale","scale_range","shape","shape_param"))
-#    plot(x,dweibull(x,shapes[1],scales[1]), type="l", lwd=3, lty=1, col=colors[1], xlim=c(275,315), ylim=c(0,0.12), xlab="Daily Maximum Surface Temperature (degK)", ylab="Probability Density")
-#    for(i in 2:length(shapes) ) {
-#      lines( x, dweibull(x,shapes[i],scales[i]), lwd=2, lty=i, col=colors[i] )
-#    }
-#    legend("topright", inset=.05, title="Periods", labels, lwd=3, lty=ltypes, col=colors)
   })
 
   output$sealevel_extremes_plot2 <- renderPlot({
@@ -974,28 +1553,9 @@ server <- function(input, output, session) {
   })
 
   output$sealevel_extremes_plot3 <- renderPlot({
-	rtnlevels_m_hist = filter(world_ewl_with_slr_stations,CLSFID_LONGI_LATI_station==input$extremewaterLocation2_with_slr_station) %>% select(7:15)
-	slr_cm_rcp85 = t( filter(world_ewl_with_slr_stations,CLSFID_LONGI_LATI_station==input$extremewaterLocation2_with_slr_station) %>% select(26:28) )
-	slr_cm_rcp45 = t( filter(world_ewl_with_slr_stations,CLSFID_LONGI_LATI_station==input$extremewaterLocation2_with_slr_station) %>% select(29:31) )
-	slr_cm_rcp26 = t( filter(world_ewl_with_slr_stations,CLSFID_LONGI_LATI_station==input$extremewaterLocation2_with_slr_station) %>% select(32:34) )
-	if(input$world_slr_scenario=="RCP8.5") {inc1=0.01*as.numeric(slr_cm_rcp85[1]); inc2=0.01*as.numeric(slr_cm_rcp85[2]); inc3=0.01*as.numeric(slr_cm_rcp85[3]) }
-	if(input$world_slr_scenario=="RCP4.5") {inc1=0.01*as.numeric(slr_cm_rcp45[1]); inc2=0.01*as.numeric(slr_cm_rcp45[2]); inc3=0.01*as.numeric(slr_cm_rcp45[3]) }
-	if(input$world_slr_scenario=="RCP2.6") {inc1=0.01*as.numeric(slr_cm_rcp26[1]); inc2=0.01*as.numeric(slr_cm_rcp26[2]); inc3=0.01*as.numeric(slr_cm_rcp26[3]) }
-	rtnlevels_m_rcp85_2030 = rtnlevels_m_hist + inc1
-	rtnlevels_m_rcp85_2050 = rtnlevels_m_hist + inc2
-	rtnlevels_m_rcp85_2100 = rtnlevels_m_hist + inc3
-	z = t(rtnlevels_m_hist)
-	z2 = t(rtnlevels_m_rcp85_2030)
-	z3 = t(rtnlevels_m_rcp85_2050)
-	z4 = t(rtnlevels_m_rcp85_2100)
-	y1 = min(z,z2,z3,z4)
-	y2 = max(z,z2,z3,z4)
-	plot(z, type="l",lwd=3,col="black", xlab="Return Period (years)", ylab="Return Level (m)", xaxt="n",ylim=c(y1,y2))
-	lines(z2, lwd=3, col="yellow")
-	lines(z3, lwd=3, col="orange")
-	lines(z4, lwd=3, col="red")
-	axis(1, at=c(1:9), labels=c("2","5","10","25","50","100","250","500","1000"))
-     	legend("topleft", inset=.05, title="Periods",legend=c("Historical","2030","2050","2100"), lwd=3, col=c("black","yellow","orange","red"))
+	loc <- input$extremewaterLocation2_with_slr_station
+	scenario <- input$world_slr_scenario
+	source("./data/sealevel_world/plot_sealevel_data_world_ewl_slr.r", local=TRUE)
   })
 
   output$sealevel_projections_plot1 <- renderPlot({
@@ -1116,7 +1676,7 @@ server <- function(input, output, session) {
 	})
 
 output$drought_frequencies_lonlat <- renderPlot({
-	# Processed drought data is read into dataframe d by load_drought_data.r, which is sourced at the beginning of server.R.
+	# Processed drought data is read into dataframe d by /data/drought/load_drought_data.r, which is sourced at the beginning of server.R.
 	lon=as.numeric(input$droughtlon)
 	lat=as.numeric(input$droughtlat)
 	source("./data/drought/process_drought_data.r", local=TRUE)

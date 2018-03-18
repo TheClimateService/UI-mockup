@@ -1,1 +1,0 @@
-awk SSS{print $1,$5,$4,$3,$2,$6,$7 }SSS temp4 > temp4b
