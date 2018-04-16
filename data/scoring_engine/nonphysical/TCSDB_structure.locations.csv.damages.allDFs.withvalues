@@ -1,43 +1,43 @@
- 1_1_Boise -116.149136 43.529396 Boise_Idaho tx90p-1 pdsisc-2 coastalflood-1 carbonprice-1 - - - carbonprice-1  -0.9852 -6.2324 -7.9432 -7.9804 -11.4352 -11.4352 -16.4208 -22.9948 -27.4936
+ 1_1_Boise -116.149136 43.529396 Boise_Idaho tx90p-1 pdsisc-2 coastalflood-1 carbonprice-1 - - - carbonprice-1  -0.29556 -1.86972 -2.38296 -2.39412 -3.43056 -3.43056 -4.92624 -6.89844 -8.24808
  1_1_Boise -116.149136 43.529396 Boise_Idaho tx90p-1 pdsisc-2 coastalflood-1 carbonprice-1 - - - coastalflood-1  NA NA NA NA NA NA NA NA NA
  1_1_Boise -116.149136 43.529396 Boise_Idaho tx90p-1 pdsisc-2 coastalflood-1 carbonprice-1 - - - pdsisc-2  -45 -9 -18 -54 -45 -63 -72 -63 -54
  1_1_Boise -116.149136 43.529396 Boise_Idaho tx90p-1 pdsisc-2 coastalflood-1 carbonprice-1 - - - tx90p-1  0 0 -1.2943 -1.1959 -0.817 -3.3868 -6.0184 -10.5988 -16.5782
- 1_1_Boise -116.149136 43.529396 Boise_Idaho tx90p-1 pdsisc-2 coastalflood-1 carbonprice-1 - - - z--allDFs--z  -45.9852 -15.2324 -27.2375 -63.1763 -57.2522 -77.822 -94.4392 -96.5936 -98.0718
- 2_1_Manassas -77.503845 38.750829 Manassas_Virginia tx90p-2 pdsisc-2 coastalflood-2 carbonprice-1 - - - carbonprice-1  -0.9852 -6.2324 -7.9432 -7.9804 -11.4352 -11.4352 -16.4208 -22.9948 -27.4936
+ 1_1_Boise -116.149136 43.529396 Boise_Idaho tx90p-1 pdsisc-2 coastalflood-1 carbonprice-1 - - - z--allDFs--z  -45.2956 -10.8697 -21.6773 -57.59 -49.2476 -69.8174 -82.9446 -80.4972 -78.8263
+ 2_1_Manassas -77.503845 38.750829 Manassas_Virginia tx90p-2 pdsisc-2 coastalflood-2 carbonprice-1 - - - carbonprice-1  -0.29556 -1.86972 -2.38296 -2.39412 -3.43056 -3.43056 -4.92624 -6.89844 -8.24808
  2_1_Manassas -77.503845 38.750829 Manassas_Virginia tx90p-2 pdsisc-2 coastalflood-2 carbonprice-1 - - - coastalflood-2  NA NA NA NA NA NA NA NA NA
  2_1_Manassas -77.503845 38.750829 Manassas_Virginia tx90p-2 pdsisc-2 coastalflood-2 carbonprice-1 - - - pdsisc-2  0 0 -27 -18 -9 -9 -18 -36 -18
  2_1_Manassas -77.503845 38.750829 Manassas_Virginia tx90p-2 pdsisc-2 coastalflood-2 carbonprice-1 - - - tx90p-2  -7.5559 -4.5684 -4.5181 -9.1366 -16.9166 -21.6237 -29.9291 -31.2286 -35.6756
- 2_1_Manassas -77.503845 38.750829 Manassas_Virginia tx90p-2 pdsisc-2 coastalflood-2 carbonprice-1 - - - z--allDFs--z  -8.5411 -10.8008 -39.4613 -35.117 -37.3518 -42.0589 -64.3499 -90.2234 -81.1692
- 3_1_Singapore_Hqs 103.864621 1.31839 Singapore tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - - carbonprice-1  -0.9852 -6.2324 -7.9432 -7.9804 -11.4352 -11.4352 -16.4208 -22.9948 -27.4936
+ 2_1_Manassas -77.503845 38.750829 Manassas_Virginia tx90p-2 pdsisc-2 coastalflood-2 carbonprice-1 - - - z--allDFs--z  -7.85146 -6.43812 -33.9011 -29.5307 -29.3472 -34.0543 -52.8553 -74.127 -61.9237
+ 3_1_Singapore_Hqs 103.864621 1.31839 Singapore tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - - carbonprice-1  -0.29556 -1.86972 -2.38296 -2.39412 -3.43056 -3.43056 -4.92624 -6.89844 -8.24808
  3_1_Singapore_Hqs 103.864621 1.31839 Singapore tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - - coastalflood-1  NA NA NA NA NA NA NA NA NA
  3_1_Singapore_Hqs 103.864621 1.31839 Singapore tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - - pdsisc-1  0 0 0 0 0 0 0 0 0
  3_1_Singapore_Hqs 103.864621 1.31839 Singapore tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - - tx90p-1  -3.3892 -3.0422 -11.6682 -21.4371 -33.827 -40.6232 -41.0293 -55.6943 -65.9187
- 3_1_Singapore_Hqs 103.864621 1.31839 Singapore tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - - z--allDFs--z  -4.3744 -9.2746 -19.6114 -29.4175 -45.2622 -52.0584 -57.4501 -78.6891 -93.4123
- 4_1_Singapore_300mm_DRAM 103.767569 1.432186 Singapore tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - - carbonprice-1  -0.9852 -6.2324 -7.9432 -7.9804 -11.4352 -11.4352 -16.4208 -22.9948 -27.4936
+ 3_1_Singapore_Hqs 103.864621 1.31839 Singapore tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - - z--allDFs--z  -3.68476 -4.91192 -14.0512 -23.8312 -37.2576 -44.0538 -45.9555 -62.5927 -74.1668
+ 4_1_Singapore_300mm_DRAM 103.767569 1.432186 Singapore tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - - carbonprice-1  -0.29556 -1.86972 -2.38296 -2.39412 -3.43056 -3.43056 -4.92624 -6.89844 -8.24808
  4_1_Singapore_300mm_DRAM 103.767569 1.432186 Singapore tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - - coastalflood-1  -0.30328 -0.7276 -1.59256 -3.40208 -7.41472 -24.1078 -67.8376 -80 -80
  4_1_Singapore_300mm_DRAM 103.767569 1.432186 Singapore tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - - pdsisc-1  0 0 0 0 0 0 0 0 0
  4_1_Singapore_300mm_DRAM 103.767569 1.432186 Singapore tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - - tx90p-1  -3.3892 -3.0422 -11.6682 -21.4371 -33.827 -40.6232 -41.0293 -55.6943 -65.9187
- 4_1_Singapore_300mm_DRAM 103.767569 1.432186 Singapore tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - - z--allDFs--z  -4.67768 -10.0022 -21.204 -32.8196 -52.6769 -76.1662 -125.288 -158.689 -173.412
- 5_1_Singapore_300mm_NAND 103.793645 1.454831 Singapore tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - - carbonprice-1  -0.9852 -6.2324 -7.9432 -7.9804 -11.4352 -11.4352 -16.4208 -22.9948 -27.4936
+ 4_1_Singapore_300mm_DRAM 103.767569 1.432186 Singapore tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - - z--allDFs--z  -3.98804 -5.63952 -15.6437 -27.2333 -44.6723 -68.1616 -113.793 -142.593 -154.167
+ 5_1_Singapore_300mm_NAND 103.793645 1.454831 Singapore tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - - carbonprice-1  -0.29556 -1.86972 -2.38296 -2.39412 -3.43056 -3.43056 -4.92624 -6.89844 -8.24808
  5_1_Singapore_300mm_NAND 103.793645 1.454831 Singapore tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - - coastalflood-1  -0.30328 -0.7276 -1.59256 -3.40208 -7.41472 -24.1078 -67.8376 -80 -80
  5_1_Singapore_300mm_NAND 103.793645 1.454831 Singapore tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - - pdsisc-1  0 0 0 0 0 0 0 0 0
  5_1_Singapore_300mm_NAND 103.793645 1.454831 Singapore tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - - tx90p-1  -3.3892 -3.0422 -11.6682 -21.4371 -33.827 -40.6232 -41.0293 -55.6943 -65.9187
- 5_1_Singapore_300mm_NAND 103.793645 1.454831 Singapore tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - - z--allDFs--z  -4.67768 -10.0022 -21.204 -32.8196 -52.6769 -76.1662 -125.288 -158.689 -173.412
- 6_1_Singapore_200mm_NOR 103.866405 1.37479 Singapore tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - - carbonprice-1  -0.9852 -6.2324 -7.9432 -7.9804 -11.4352 -11.4352 -16.4208 -22.9948 -27.4936
+ 5_1_Singapore_300mm_NAND 103.793645 1.454831 Singapore tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - - z--allDFs--z  -3.98804 -5.63952 -15.6437 -27.2333 -44.6723 -68.1616 -113.793 -142.593 -154.167
+ 6_1_Singapore_200mm_NOR 103.866405 1.37479 Singapore tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - - carbonprice-1  -0.29556 -1.86972 -2.38296 -2.39412 -3.43056 -3.43056 -4.92624 -6.89844 -8.24808
  6_1_Singapore_200mm_NOR 103.866405 1.37479 Singapore tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - - coastalflood-1  -0.30544 -0.73384 -1.60944 -3.44688 -7.53728 -24.7387 -69.7317 -80 -80
  6_1_Singapore_200mm_NOR 103.866405 1.37479 Singapore tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - - pdsisc-1  0 0 0 0 0 0 0 0 0
  6_1_Singapore_200mm_NOR 103.866405 1.37479 Singapore tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - - tx90p-1  -3.3892 -3.0422 -11.6682 -21.4371 -33.827 -40.6232 -41.0293 -55.6943 -65.9187
- 6_1_Singapore_200mm_NOR 103.866405 1.37479 Singapore tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - - z--allDFs--z  -4.67984 -10.0084 -21.2208 -32.8644 -52.7995 -76.7971 -127.182 -158.689 -173.412
- 7_1_Catania 14.99 37.421801 Catania_Italy tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - XXX_original_lon=15.056097_moved_west_4landpoint carbonprice-1  -0.9852 -6.2324 -7.9432 -7.9804 -11.4352 -11.4352 -16.4208 -22.9948 -27.4936
+ 6_1_Singapore_200mm_NOR 103.866405 1.37479 Singapore tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - - z--allDFs--z  -3.9902 -5.64576 -15.6606 -27.2781 -44.7948 -68.7925 -115.687 -142.593 -154.167
+ 7_1_Catania 14.99 37.421801 Catania_Italy tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - XXX_original_lon=15.056097_moved_west_4landpoint carbonprice-1  -0.29556 -1.86972 -2.38296 -2.39412 -3.43056 -3.43056 -4.92624 -6.89844 -8.24808
  7_1_Catania 14.99 37.421801 Catania_Italy tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - XXX_original_lon=15.056097_moved_west_4landpoint coastalflood-1  -1.50528 -5.30712 -27.0205 -80 -80 -80 -80 -80 -80
  7_1_Catania 14.99 37.421801 Catania_Italy tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - XXX_original_lon=15.056097_moved_west_4landpoint pdsisc-1  -9 -9 0 -45 -36 -54 -63 -63 -63
  7_1_Catania 14.99 37.421801 Catania_Italy tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - XXX_original_lon=15.056097_moved_west_4landpoint tx90p-1  -0.172 -2.4394 -6.7439 -6.1781 -18.5492 -25.5408 -35.1947 -43.9963 -55.4964
- 7_1_Catania 14.99 37.421801 Catania_Italy tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - XXX_original_lon=15.056097_moved_west_4landpoint z--allDFs--z  -11.6625 -22.9789 -41.7076 -139.159 -145.984 -170.976 -194.615 -209.991 -225.99
- 8_1_Bangalore 77.623906 12.982352 Bangalore_India tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - - carbonprice-1  -0.9852 -6.2324 -7.9432 -7.9804 -11.4352 -11.4352 -16.4208 -22.9948 -27.4936
+ 7_1_Catania 14.99 37.421801 Catania_Italy tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - XXX_original_lon=15.056097_moved_west_4landpoint z--allDFs--z  -10.9728 -18.6162 -36.1474 -133.572 -137.98 -162.971 -183.121 -193.895 -206.744
+ 8_1_Bangalore 77.623906 12.982352 Bangalore_India tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - - carbonprice-1  -0.29556 -1.86972 -2.38296 -2.39412 -3.43056 -3.43056 -4.92624 -6.89844 -8.24808
  8_1_Bangalore 77.623906 12.982352 Bangalore_India tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - - coastalflood-1  NA NA NA NA NA NA NA NA NA
  8_1_Bangalore 77.623906 12.982352 Bangalore_India tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - - pdsisc-1  -9 0 -9 0 0 0 0 0 0
  8_1_Bangalore 77.623906 12.982352 Bangalore_India tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - - tx90p-1  -0.4882 0 -2.6219 -16.0165 -18.2516 -33.8035 -35.9566 -45.0626 -47.0526
- 8_1_Bangalore 77.623906 12.982352 Bangalore_India tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - - z--allDFs--z  -10.4734 -6.2324 -19.5651 -23.9969 -29.6868 -45.2387 -52.3774 -68.0574 -74.5462
+ 8_1_Bangalore 77.623906 12.982352 Bangalore_India tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - - z--allDFs--z  -9.78376 -1.86972 -14.0049 -18.4106 -21.6822 -37.2341 -40.8828 -51.961 -55.3007
  10_2_Bliss -115.070986 42.913786 Bliss_ID tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - - carbonprice-1  -0.2463 -1.5581 -1.9858 -1.9951 -2.8588 -2.8588 -4.1052 -5.7487 -6.8734
  10_2_Bliss -115.070986 42.913786 Bliss_ID tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - - coastalflood-1  NA NA NA NA NA NA NA NA NA
  10_2_Bliss -115.070986 42.913786 Bliss_ID tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - - pdsisc-1  -27 0 -4.5 -36 -27 -45 -54 -45 -36

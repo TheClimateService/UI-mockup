@@ -23,7 +23,6 @@ locvalues=$2
 sed 's/; /;/g' $userdata | sed 's/ ;/;/g' > temp0
 
 # Sort by date_seconds and save latest entry for given facility.
-# Note that header file must change when fields are added to the user data.  This is now handled in load_tcsdb.r (for user_data_initiator.csv.header) and save_user_data.r (for user_data.csv.header) .
 #sort -r --field-separator=';' $userdata > temp1
 awk '{if(NR==1) print $0}' $userdata.header > temp1.hdr
 #cat temp1.hdr $userdata > temp1
@@ -50,12 +49,8 @@ awk -v locvalues=$locvalues '{FS=";";  \
       # if(NR==2 && $1!="LASTLINE") print "awk SSSquote{FS=DDDquote;DDDquote; if($2=="$1" && substr($3,2,length($3)-2)==DDDquote"$2"DDDquote) print $0,DDDquoteXXXDDDquote; else print $0}SSSquote "locvalues" > temp99."NR;  \
       # if(NR>2 && $1!="LASTLINE") print "awk SSSquote{FS=DDDquote;DDDquote; if($2=="$1" && substr($3,2,length($3)-2)==DDDquote"$2"DDDquote) print $0,DDDquoteXXXDDDquote; else print $0}SSSquote temp99."(NR-1)" > temp99."NR;  \
       # XXX Following 2 lines replace facility value for the 3 current physical DFs.  These will need to be modified if the number of physical DFs changes or if they are reordered.
-      # $5 in temp3c is the single facility value originally used in the user-data panel. $6 is the ghgEmissions input from that panel.
-      # BEFORE ghgEmissions from user panel:  if(NR==2 && $1!="LASTLINE") print "awk SSSquote{FS=DDDquote;DDDquote; if($2=="$1" && substr($3,2,length($3)-2)==DDDquote"$2"DDDquote) print $1;;;$2;;;$3;;;DDDquote"$5";"$5";"$5";DDDquote$7;;;$8;;;$9; else print $0}SSSquote "locvalues" > temp99."NR;  \
-      # BEFORE ghgEmissions from user panel:  if(NR>2 && $1!="LASTLINE") print "awk SSSquote{FS=DDDquote;DDDquote; if($2=="$1" && substr($3,2,length($3)-2)==DDDquote"$2"DDDquote) print $1;;;$2;;;$3;;;DDDquote"$5";"$5";"$5";DDDquote$7;;;$8;;;$9; else print $0}SSSquote temp99."(NR-1)" > temp99."NR;  \
-      # After inclusion of df_pdsisc and df_coastalflood, there are 3 facility values in fields 5-7, and ghgEmissions in field 8.
-      if(NR==2 && $1!="LASTLINE") print "awk SSSquote{FS=DDDquote;DDDquote; if($2=="$1" && substr($3,2,length($3)-2)==DDDquote"$2"DDDquote) print $1;;;$2;;;$3;;;DDDquote"$5";"$6";"$7";"$8";DDDquote$9;;;$10; else print $0}SSSquote "locvalues" > temp99."NR;  \
-      if(NR>2 && $1!="LASTLINE") print "awk SSSquote{FS=DDDquote;DDDquote; if($2=="$1" && substr($3,2,length($3)-2)==DDDquote"$2"DDDquote) print $1;;;$2;;;$3;;;DDDquote"$5";"$6";"$7";"$8";DDDquote$9;;;$10; else print $0}SSSquote temp99."(NR-1)" > temp99."NR;  \
+      if(NR==2 && $1!="LASTLINE") print "awk SSSquote{FS=DDDquote;DDDquote; if($2=="$1" && substr($3,2,length($3)-2)==DDDquote"$2"DDDquote) print $1;;;$2;;;$3;;;DDDquote"$5";"$5";"$5";DDDquote$7;;;$8;;;$9; else print $0}SSSquote "locvalues" > temp99."NR;  \
+      if(NR>2 && $1!="LASTLINE") print "awk SSSquote{FS=DDDquote;DDDquote; if($2=="$1" && substr($3,2,length($3)-2)==DDDquote"$2"DDDquote) print $1;;;$2;;;$3;;;DDDquote"$5";"$5";"$5";DDDquote$7;;;$8;;;$9; else print $0}SSSquote temp99."(NR-1)" > temp99."NR;  \
       if($1=="LASTLINE") print "mv temp99."(NR-1)" temp100"  \
      }' temp3c > temp4
 sed "s/SSSquote/'/g" temp4 > temp5
@@ -73,5 +68,4 @@ cat temp3.hdr temp3b > $userdata.latest.csv
 #mv temp101 ./locationvalues4SE_with_userdata_mods
 mv temp101 ./data/TCSDB/locationvalues4SE_with_userdata_mods
 rm temp*
-echo "**** User data applied (script_apply_userdata4SE)"
 

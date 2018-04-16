@@ -37,6 +37,7 @@ library(readxl)
 library(writexl)
 library(data.table)
 # library(shinycssloaders)  # enables withSpinner
+library(webshot)
 
 # Data
 
@@ -200,9 +201,18 @@ ui <- dashboardPage(title="The Climate Service",
                 leafletOutput("individual_location_map"),
 
                 #textInput("txtNumEmployees",label = "Number of employees", width = "100px", value = "250"),
-		uiOutput("numEmployees"),
                 #textInput("txtAssetValue", label = "Value of assets at this location ($M)", width = "100px", value = "100"), 
-		uiOutput("assetValue"),
+		column(4,
+		uiOutput("assetValue_tx90p") ),
+		column(4,
+		uiOutput("assetValue_pdsisc") ),
+		column(4,
+		uiOutput("assetValue_coastalflood") ),
+		br(),
+
+		uiOutput("ghgEmissions"),
+		uiOutput("numEmployees"),
+
 		br(),
 
                 #checkboxGroupInput("cbBusinessFunctions","Business functions performed at this location",
@@ -257,7 +267,14 @@ ui <- dashboardPage(title="The Climate Service",
           tabPanel(title = 'All Data',
               DT::dataTableOutput("corpFinImpacts")
           )
-        )#tabsetPanel
+        ), #tabsetPanel
+
+        fluidRow(
+	 column(3,
+	  checkboxInput("checkbox_plots4report", label = "Capture each viewed plot for report", value = FALSE)
+         )
+	) # end fluidrow
+
         ),#tabItem analyze
               
 # --------------------------------------
@@ -309,7 +326,6 @@ ui <- dashboardPage(title="The Climate Service",
 
         tabPanel(title = 'OVERALL',
 
-
         fluidRow(
                 column(4, uiOutput("selectInput_location_overall") ),
                 column(4,selectInput("selectscenario_overall","Select Scenario",c("RCP8.5", "RCP4.5"), selected = c("RCP8.5")) )
@@ -333,12 +349,21 @@ ui <- dashboardPage(title="The Climate Service",
           box(width=4,title="Hazard","Probability of a damage-producing event",plotOutput("plot_selectHazard",height = 300)),
           box(width=4,title="Vulnerability","Mechanism and severity of damage for a given event",
 		plotOutput("plot_selectDamageFunction", height = 300)),
-          box(width=4,title="Risk","Loss curve:  probability of financial damage, with expected value", plotOutput("plot_losscurve2",height=300)),
-          #box(width=4,title="Risk","Loss curve:  probability of financial damage, with expected value", plotOutput("plot_losscurve_drought_cornyield",height=300)),
+          box(width=4,title="Risk","Loss curve:  probability of financial damage, with expected value", plotOutput("plot_losscurve2",height=300))
+        ),  #fluidrow graphs
+
+        fluidRow(
+	 column(3,
+	  checkboxInput("checkbox_showRLvRP", label = "Show coastal-flood data as RL versus RP", value = FALSE)
+         )
+        ),  #fluidrow
+
+        fluidRow(
 	  box(width=4,verbatimTextOutput("tracebackHazard")),
 	  box(width=4,verbatimTextOutput("tracebackVuln")),
           box(width=4,title="Risk","Loss curve  of VaR","Probability of financial damage, with expected value", plotOutput("losscurve",height=300))
-        )  #fluidrow graphs
+        )  #fluidrow
+
         ), # end tabPanel
 
         tabPanel(title = 'DRILLDOWN',
@@ -361,15 +386,56 @@ ui <- dashboardPage(title="The Climate Service",
         ), #fluidrow select inputs
 
         fluidRow(
-          box(width=4,title="Hazard","Probability of a damage-producing event",plotOutput("plot_selectHazard_drilldown",height = 300)),
+          box(width=4,title="Hazard","Probability of a damage-producing event",plotlyOutput("plot_selectHazard_drilldown",height = 300)),
           box(width=4,title="Vulnerability","Mechanism and severity of damage for a given event",
-		plotOutput("plot_selectDamageFunction_drilldown", height = 300)),
+		plotlyOutput("plot_selectDamageFunction_drilldown", height = 300)),
           box(width=4,title="Risk","Expected VaR for selected location and hazard",
-		plotlyOutput("plot_expectedDamage", height = 300)),
+		plotlyOutput("plot_expectedDamage", height = 300))
+        ), #fluidrow plots
+
+        fluidRow(
+	 column(3,
+	  checkboxInput("checkbox_plots4report_drilldown", label = "Capture each viewed plot for report", value = FALSE) )
+	), # end fluidrow
+
+        fluidRow(
 	  box(width=4,verbatimTextOutput("tracebackHazard_drilldown")),
 	  box(width=4,verbatimTextOutput("tracebackVuln_drilldown"))
-        ) #fluidrow traceback
-        ) # end tabPanel drilldown
+        ) #fluidrow traceback text
+
+        ), # end tabPanel drilldown
+
+        tabPanel(title = 'SCREENING DAMAGE FUNCTIONS',
+	  h4("Damage Functions Available for Screening Analysis (see note below)"),
+	  # dbsheet12 contains the TCSDB damage functions and created by load_tcsdb.r above.
+
+	fluidRow(
+	  column(4, selectInput("TCSDB_damage_function_id_1","Select Damage Function A", dbsheet12$id, selected="tx90p-1") ),
+	  column(4, selectInput("TCSDB_damage_function_id_2","Select Damage Function B", dbsheet12$id, selected="coastalflood-1") ),
+	  column(4, selectInput("TCSDB_damage_function_id_family","Select Damage Function Family", c("tx90p", "pdsisc", "coastalflood") ) )
+	), #fluidrow
+
+	fluidRow(
+	  column(4, imageOutput("impactplot_screeningDFs_1", height = 360, width=360) ),
+	  column(4, imageOutput("impactplot_screeningDFs_2", height = 360, width=360) ),
+	  column(4, imageOutput("impactplot_screeningDFs_family", height = 360, width=360) )
+	), #fluidrow
+
+	h5(" "),
+
+	fluidRow(
+	  column(4, selectInput("TCSDB_damage_function_id_3","Select Damage Function C", dbsheet12$id, selected="pdsisc-1") ),
+	  column(4, selectInput("TCSDB_damage_function_id_4","Select Damage Function D", dbsheet12$id, selected="carbonprice-1") )
+	), #fluidrow
+
+	fluidRow(
+	  column(4, imageOutput("impactplot_screeningDFs_3", height = 360, width=360) ),
+	  column(4, imageOutput("impactplot_screeningDFs_4", height = 360, width=360) )
+	), #fluidrow
+
+	  h5("Note:  climate hazards currently applied in screening analysis are tmax90p, pdsi90p, and annual probability of 100-year coastal flooding.  Damage functions for these and other hazards are viewable on this page.")
+
+        ) # end tabPanel screeningDFs
 
        ) #tabsetPanel
 
@@ -587,8 +653,8 @@ ui <- dashboardPage(title="The Climate Service",
         fluidRow(
 	  column(4,
           selectInput("temperatureProjectionLocation","Select Location for Temperature Projections",
-		c("Western Equatoria, South Sudan", "Queens, NY", "Phoenix, AZ"),
-		selected="Western Equatoria, South Sudan"
+		c("Phoenix, AZ", "Queens, NY", "Western Equatoria, South Sudan"),
+		selected="Phoenix, AZ"
                     )
 		)
         ), #fluidrow
@@ -1087,18 +1153,17 @@ ui <- dashboardPage(title="The Climate Service",
 	br(),
 
         fluidRow(
-         actionButton("button_runSE_with_userdata","RUN SCORING INCLUDING USER DATA", icon = icon("cog"), 
-		style = "color: white; background-color: blue")
+         actionButton("button_runSE","RUN SCORING WITHOUT USER DATA", icon = icon("cog"),
+		style = "color: white; background-color: green")
+	 # XXX Need to add ui_elment below that withSpinner references.  Also enable library(shinycssloaders) above.
+         #withSpinner(
+		 #) # end withSpinner
         ), #fluidRow
 	br(),
 
         fluidRow(
-         actionButton("button_runSE","RUN SCORING WITHOUT USER DATA", icon = icon("cog"),
-		style = "color: white; background-color: blue")
-	 # XXX Need to add ui_elment below that withSpinner references.  Also enable library(shinycssloaders) above.
-         #withSpinner(
-	
-	 #) # end withSpinner
+         actionButton("button_runSE_with_userdata","RUN SCORING INCLUDING USER DATA", icon = icon("cog"), 
+		style = "color: white; background-color: orange")
         ) #fluidRow
 
       ), #tabItem

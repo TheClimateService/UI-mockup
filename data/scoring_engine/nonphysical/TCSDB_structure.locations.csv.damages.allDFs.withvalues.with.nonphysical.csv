@@ -1,13 +1,13 @@
 Location,TCFDCategoryName,TCFDSubCatName,RiskFactorName,ScenarioName,RiskYear,ValueAtRisk,ParentCorpID,LocationID
-Boise,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2010,0.9852,1,1
-Boise,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2020,6.2324,1,1
-Boise,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2030,7.9432,1,1
-Boise,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2040,7.9804,1,1
-Boise,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2050,11.4352,1,1
-Boise,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2060,11.4352,1,1
-Boise,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2070,16.4208,1,1
-Boise,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2080,22.9948,1,1
-Boise,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2090,27.4936,1,1
+Boise,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2010,0.29556,1,1
+Boise,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2020,1.86972,1,1
+Boise,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2030,2.38296,1,1
+Boise,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2040,2.39412,1,1
+Boise,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2050,3.43056,1,1
+Boise,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2060,3.43056,1,1
+Boise,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2070,4.92624,1,1
+Boise,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2080,6.89844,1,1
+Boise,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2090,8.24808,1,1
 Boise,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2010,0,1,1
 Boise,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2020,0,1,1
 Boise,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2030,0.103544,1,1
@@ -134,15 +134,15 @@ Boise,  Physical Risk,Chronic,Drought ,RCP8.5,2060,63,1,1
 Boise,  Physical Risk,Chronic,Drought ,RCP8.5,2070,72,1,1
 Boise,  Physical Risk,Chronic,Drought ,RCP8.5,2080,63,1,1
 Boise,  Physical Risk,Chronic,Drought ,RCP8.5,2090,54,1,1
-Manassas,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2010,0.9852,1,2
-Manassas,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2020,6.2324,1,2
-Manassas,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2030,7.9432,1,2
-Manassas,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2040,7.9804,1,2
-Manassas,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2050,11.4352,1,2
-Manassas,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2060,11.4352,1,2
-Manassas,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2070,16.4208,1,2
-Manassas,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2080,22.9948,1,2
-Manassas,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2090,27.4936,1,2
+Manassas,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2010,0.29556,1,2
+Manassas,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2020,1.86972,1,2
+Manassas,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2030,2.38296,1,2
+Manassas,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2040,2.39412,1,2
+Manassas,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2050,3.43056,1,2
+Manassas,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2060,3.43056,1,2
+Manassas,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2070,4.92624,1,2
+Manassas,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2080,6.89844,1,2
+Manassas,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2090,8.24808,1,2
 Manassas,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2010,0.604472,1,2
 Manassas,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2020,0.365472,1,2
 Manassas,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2030,0.361448,1,2
@@ -269,15 +269,15 @@ Manassas,  Physical Risk,Chronic,Drought ,RCP8.5,2060,9,1,2
 Manassas,  Physical Risk,Chronic,Drought ,RCP8.5,2070,18,1,2
 Manassas,  Physical Risk,Chronic,Drought ,RCP8.5,2080,36,1,2
 Manassas,  Physical Risk,Chronic,Drought ,RCP8.5,2090,18,1,2
-Singapore_Hqs,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2010,0.9852,1,3
-Singapore_Hqs,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2020,6.2324,1,3
-Singapore_Hqs,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2030,7.9432,1,3
-Singapore_Hqs,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2040,7.9804,1,3
-Singapore_Hqs,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2050,11.4352,1,3
-Singapore_Hqs,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2060,11.4352,1,3
-Singapore_Hqs,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2070,16.4208,1,3
-Singapore_Hqs,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2080,22.9948,1,3
-Singapore_Hqs,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2090,27.4936,1,3
+Singapore_Hqs,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2010,0.29556,1,3
+Singapore_Hqs,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2020,1.86972,1,3
+Singapore_Hqs,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2030,2.38296,1,3
+Singapore_Hqs,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2040,2.39412,1,3
+Singapore_Hqs,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2050,3.43056,1,3
+Singapore_Hqs,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2060,3.43056,1,3
+Singapore_Hqs,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2070,4.92624,1,3
+Singapore_Hqs,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2080,6.89844,1,3
+Singapore_Hqs,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2090,8.24808,1,3
 Singapore_Hqs,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2010,0.271136,1,3
 Singapore_Hqs,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2020,0.243376,1,3
 Singapore_Hqs,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2030,0.933456,1,3
@@ -404,15 +404,15 @@ Singapore_Hqs,  Physical Risk,Chronic,Drought ,RCP8.5,2060,0,1,3
 Singapore_Hqs,  Physical Risk,Chronic,Drought ,RCP8.5,2070,0,1,3
 Singapore_Hqs,  Physical Risk,Chronic,Drought ,RCP8.5,2080,0,1,3
 Singapore_Hqs,  Physical Risk,Chronic,Drought ,RCP8.5,2090,0,1,3
-Singapore_300mm_DRAM,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2010,0.9852,1,4
-Singapore_300mm_DRAM,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2020,6.2324,1,4
-Singapore_300mm_DRAM,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2030,7.9432,1,4
-Singapore_300mm_DRAM,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2040,7.9804,1,4
-Singapore_300mm_DRAM,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2050,11.4352,1,4
-Singapore_300mm_DRAM,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2060,11.4352,1,4
-Singapore_300mm_DRAM,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2070,16.4208,1,4
-Singapore_300mm_DRAM,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2080,22.9948,1,4
-Singapore_300mm_DRAM,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2090,27.4936,1,4
+Singapore_300mm_DRAM,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2010,0.29556,1,4
+Singapore_300mm_DRAM,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2020,1.86972,1,4
+Singapore_300mm_DRAM,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2030,2.38296,1,4
+Singapore_300mm_DRAM,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2040,2.39412,1,4
+Singapore_300mm_DRAM,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2050,3.43056,1,4
+Singapore_300mm_DRAM,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2060,3.43056,1,4
+Singapore_300mm_DRAM,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2070,4.92624,1,4
+Singapore_300mm_DRAM,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2080,6.89844,1,4
+Singapore_300mm_DRAM,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2090,8.24808,1,4
 Singapore_300mm_DRAM,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2010,0.271136,1,4
 Singapore_300mm_DRAM,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2020,0.243376,1,4
 Singapore_300mm_DRAM,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2030,0.933456,1,4
@@ -539,15 +539,15 @@ Singapore_300mm_DRAM,  Physical Risk,Chronic,Drought ,RCP8.5,2060,0,1,4
 Singapore_300mm_DRAM,  Physical Risk,Chronic,Drought ,RCP8.5,2070,0,1,4
 Singapore_300mm_DRAM,  Physical Risk,Chronic,Drought ,RCP8.5,2080,0,1,4
 Singapore_300mm_DRAM,  Physical Risk,Chronic,Drought ,RCP8.5,2090,0,1,4
-Singapore_300mm_NAND,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2010,0.9852,1,5
-Singapore_300mm_NAND,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2020,6.2324,1,5
-Singapore_300mm_NAND,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2030,7.9432,1,5
-Singapore_300mm_NAND,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2040,7.9804,1,5
-Singapore_300mm_NAND,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2050,11.4352,1,5
-Singapore_300mm_NAND,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2060,11.4352,1,5
-Singapore_300mm_NAND,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2070,16.4208,1,5
-Singapore_300mm_NAND,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2080,22.9948,1,5
-Singapore_300mm_NAND,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2090,27.4936,1,5
+Singapore_300mm_NAND,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2010,0.29556,1,5
+Singapore_300mm_NAND,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2020,1.86972,1,5
+Singapore_300mm_NAND,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2030,2.38296,1,5
+Singapore_300mm_NAND,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2040,2.39412,1,5
+Singapore_300mm_NAND,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2050,3.43056,1,5
+Singapore_300mm_NAND,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2060,3.43056,1,5
+Singapore_300mm_NAND,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2070,4.92624,1,5
+Singapore_300mm_NAND,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2080,6.89844,1,5
+Singapore_300mm_NAND,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2090,8.24808,1,5
 Singapore_300mm_NAND,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2010,0.271136,1,5
 Singapore_300mm_NAND,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2020,0.243376,1,5
 Singapore_300mm_NAND,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2030,0.933456,1,5
@@ -674,15 +674,15 @@ Singapore_300mm_NAND,  Physical Risk,Chronic,Drought ,RCP8.5,2060,0,1,5
 Singapore_300mm_NAND,  Physical Risk,Chronic,Drought ,RCP8.5,2070,0,1,5
 Singapore_300mm_NAND,  Physical Risk,Chronic,Drought ,RCP8.5,2080,0,1,5
 Singapore_300mm_NAND,  Physical Risk,Chronic,Drought ,RCP8.5,2090,0,1,5
-Singapore_200mm_NOR,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2010,0.9852,1,6
-Singapore_200mm_NOR,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2020,6.2324,1,6
-Singapore_200mm_NOR,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2030,7.9432,1,6
-Singapore_200mm_NOR,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2040,7.9804,1,6
-Singapore_200mm_NOR,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2050,11.4352,1,6
-Singapore_200mm_NOR,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2060,11.4352,1,6
-Singapore_200mm_NOR,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2070,16.4208,1,6
-Singapore_200mm_NOR,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2080,22.9948,1,6
-Singapore_200mm_NOR,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2090,27.4936,1,6
+Singapore_200mm_NOR,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2010,0.29556,1,6
+Singapore_200mm_NOR,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2020,1.86972,1,6
+Singapore_200mm_NOR,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2030,2.38296,1,6
+Singapore_200mm_NOR,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2040,2.39412,1,6
+Singapore_200mm_NOR,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2050,3.43056,1,6
+Singapore_200mm_NOR,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2060,3.43056,1,6
+Singapore_200mm_NOR,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2070,4.92624,1,6
+Singapore_200mm_NOR,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2080,6.89844,1,6
+Singapore_200mm_NOR,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2090,8.24808,1,6
 Singapore_200mm_NOR,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2010,0.271136,1,6
 Singapore_200mm_NOR,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2020,0.243376,1,6
 Singapore_200mm_NOR,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2030,0.933456,1,6
@@ -809,15 +809,15 @@ Singapore_200mm_NOR,  Physical Risk,Chronic,Drought ,RCP8.5,2060,0,1,6
 Singapore_200mm_NOR,  Physical Risk,Chronic,Drought ,RCP8.5,2070,0,1,6
 Singapore_200mm_NOR,  Physical Risk,Chronic,Drought ,RCP8.5,2080,0,1,6
 Singapore_200mm_NOR,  Physical Risk,Chronic,Drought ,RCP8.5,2090,0,1,6
-Catania,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2010,0.9852,1,7
-Catania,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2020,6.2324,1,7
-Catania,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2030,7.9432,1,7
-Catania,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2040,7.9804,1,7
-Catania,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2050,11.4352,1,7
-Catania,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2060,11.4352,1,7
-Catania,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2070,16.4208,1,7
-Catania,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2080,22.9948,1,7
-Catania,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2090,27.4936,1,7
+Catania,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2010,0.29556,1,7
+Catania,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2020,1.86972,1,7
+Catania,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2030,2.38296,1,7
+Catania,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2040,2.39412,1,7
+Catania,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2050,3.43056,1,7
+Catania,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2060,3.43056,1,7
+Catania,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2070,4.92624,1,7
+Catania,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2080,6.89844,1,7
+Catania,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2090,8.24808,1,7
 Catania,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2010,0.01376,1,7
 Catania,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2020,0.195152,1,7
 Catania,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2030,0.539512,1,7
@@ -944,15 +944,15 @@ Catania,  Physical Risk,Chronic,Drought ,RCP8.5,2060,54,1,7
 Catania,  Physical Risk,Chronic,Drought ,RCP8.5,2070,63,1,7
 Catania,  Physical Risk,Chronic,Drought ,RCP8.5,2080,63,1,7
 Catania,  Physical Risk,Chronic,Drought ,RCP8.5,2090,63,1,7
-Bangalore,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2010,0.9852,1,8
-Bangalore,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2020,6.2324,1,8
-Bangalore,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2030,7.9432,1,8
-Bangalore,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2040,7.9804,1,8
-Bangalore,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2050,11.4352,1,8
-Bangalore,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2060,11.4352,1,8
-Bangalore,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2070,16.4208,1,8
-Bangalore,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2080,22.9948,1,8
-Bangalore,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2090,27.4936,1,8
+Bangalore,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2010,0.29556,1,8
+Bangalore,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2020,1.86972,1,8
+Bangalore,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2030,2.38296,1,8
+Bangalore,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2040,2.39412,1,8
+Bangalore,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2050,3.43056,1,8
+Bangalore,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2060,3.43056,1,8
+Bangalore,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2070,4.92624,1,8
+Bangalore,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2080,6.89844,1,8
+Bangalore,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2090,8.24808,1,8
 Bangalore,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2010,0.039056,1,8
 Bangalore,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2020,0,1,8
 Bangalore,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2030,0.209752,1,8

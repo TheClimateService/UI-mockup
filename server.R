@@ -1,4 +1,4 @@
-## app.R ##
+# app.R ##
 # Reference:  	https://rstudio.github.io/shinydashboard/
 # Icons:	http://fontawesome.io/icons/
 #		http://getbootstrap.com/components/#glyphicons
@@ -69,18 +69,42 @@ server <- function(input, output, session) {
     selectInput('industry_sector',"Industry Sector",c(btypes),selected=btype_from_userdata,selectize = TRUE)
    })
 
+
    output$numEmployees <- renderUI({
     userdata = read.csv("./data/TCSDB/user_data.csv.latest.csv", sep=";", header=TRUE)
     entry = userdata %>% filter(USER.ParentCorpID==USER$ParentCorpID) %>% filter(input.rbLocations==input$rbLocations)
     n_from_userdata = entry$input.txtNumEmployees
     textInput('numEmployees',"Number of employees",width = "100px", value=n_from_userdata)
+    #textInputRow('numEmployees',"Number of employees", value=n_from_userdata)
+    #textInputRow('numEmployees2',"Number of employees2", value=n_from_userdata)
    })
 
-   output$assetValue <- renderUI({
+   output$assetValue_tx90p <- renderUI({
     userdata = read.csv("./data/TCSDB/user_data.csv.latest.csv", sep=";", header=TRUE)
     entry = userdata %>% filter(USER.ParentCorpID==USER$ParentCorpID) %>% filter(input.rbLocations==input$rbLocations)
-    n_from_userdata = entry$input.txtAssetValue
-    textInput('assetValue',"Value of assets at this location ($M)",width = "100px", value=n_from_userdata)
+    n_from_userdata = entry$input.txtAssetValue_tx90p
+    textInput('assetValue_tx90p',"Value of assets sensitive to high temperatures ($M)",width = "250px", value=n_from_userdata)
+   })
+
+   output$assetValue_pdsisc <- renderUI({
+    userdata = read.csv("./data/TCSDB/user_data.csv.latest.csv", sep=";", header=TRUE)
+    entry = userdata %>% filter(USER.ParentCorpID==USER$ParentCorpID) %>% filter(input.rbLocations==input$rbLocations)
+    n_from_userdata = entry$input.txtAssetValue_pdsisc
+    textInput('assetValue_pdsisc',"Value of assets sensitive to drought ($M)",width = "250px", value=n_from_userdata)
+   })
+
+   output$assetValue_coastalflood <- renderUI({
+    userdata = read.csv("./data/TCSDB/user_data.csv.latest.csv", sep=";", header=TRUE)
+    entry = userdata %>% filter(USER.ParentCorpID==USER$ParentCorpID) %>% filter(input.rbLocations==input$rbLocations)
+    n_from_userdata = entry$input.txtAssetValue_coastalflood
+    textInput('assetValue_coastalflood',"Value of assets sensitive to coastal flooding ($M)",width = "250px", value=n_from_userdata)
+   })
+
+   output$ghgEmissions <- renderUI({
+    userdata = read.csv("./data/TCSDB/user_data.csv.latest.csv", sep=";", header=TRUE)
+    entry = userdata %>% filter(USER.ParentCorpID==USER$ParentCorpID) %>% filter(input.rbLocations==input$rbLocations)
+    n_from_userdata = entry$input.txtghgEmissions
+    textInput('ghgEmissions',"GHG emissions at this location (Mtonnes/year))",width = "200px", value=n_from_userdata)
    })
 
    output$businessFunctions <- renderUI({
@@ -118,7 +142,7 @@ server <- function(input, output, session) {
    
    observeEvent(input$button_save_data_corp, {
         source("./data/TCSDB/save_user_data.r", local=TRUE)
-	# Below is now also part of the runSE_with_userdata button.  However, it is also needed to update ./data/TCSDB/locationvalues4SE.csv .
+	# Below is now also part of the runSE_with_userdata button.  However, it is also needed to update ./data/TCSDB/locationvalues4SE.csv and ./data/TCSDB/user_data.csv.latest.csv .
         system("./data/TCSDB/script_apply_userdata4SE ./data/TCSDB/user_data.csv ./data/scoring_engine/nonphysical/locationvalues4SE.csv")
         #userdata = read.csv("./data/TCSDB/user_data.csv.latest.csv", sep=";", header=TRUE)
       })
@@ -162,8 +186,19 @@ server <- function(input, output, session) {
       corpTable = corpTable[,lapply(.SD,sum),by="RiskFactorName"]
     }
 
-    plot_ly(x=corpTable$ValueAtRisk, y=corpTable$RiskFactorName, type = 'bar', orientation = 'h') %>% layout(margin = list(l=180, b=100)) %>%
-      layout(xaxis = list(title = 'Impact ($M)'))
+    barByRiskFactor <- plot_ly(x=corpTable$ValueAtRisk, y=corpTable$RiskFactorName, type = 'bar', orientation = 'h') %>% layout(margin = list(l=180, b=100)) %>% layout(xaxis = list(title = 'Impact ($M)'))
+
+    if(input$checkbox_plots4report=="TRUE") {
+      dirname <- paste("./report/",USER$ParentCorpName,"/")
+      dirname <- gsub(" ", "", dirname)
+      system( paste("mkdir",dirname) )
+      plotfile <- paste(dirname, USER$ParentCorpName, "-", input$inputLocations, "-barByRiskFactor(", input$sliderInputYear,")-", Sys.Date(), ".png", sep="")
+      #plotfile <- paste(dirname, USER$ParentCorpName, "-barByRiskFactor","-", input$inputLocations,"-", input$sliderInputYear, "-", Sys.Date(), ".png", sep="")
+      plotfile <- gsub(" ", "", plotfile)
+      export(barByRiskFactor, plotfile)
+      } #endif
+
+    barByRiskFactor
   }) 
   
   #barByLocation
@@ -178,9 +213,21 @@ server <- function(input, output, session) {
       corpTable <- corpTable[which(corpTable$ParentCorpID == USER$ParentCorpID & corpTable$RiskYear == input$sliderInputYear),]
     }
     ncorp <- pull(count(corpTable))
-    plot_ly(corpTable, x = ~Location, y = ~ValueAtRisk, type='bar', text=corpTable$RiskFactorName, marker = list(color = colorRampPalette(brewer.pal(11,"Spectral"))(ncorp))) %>%
-      layout(yaxis = list(title = 'Impact ($M)'), barmode = 'stack', margin = list(l=80,b=100))
-  }) 
+
+    barByLocation <- plot_ly(corpTable, x = ~Location, y = ~ValueAtRisk, type='bar', text=corpTable$RiskFactorName, marker = list(color = colorRampPalette(brewer.pal(11,"Spectral"))(ncorp))) %>% layout(yaxis = list(title = 'Impact ($M)'), barmode = 'stack', margin = list(l=80,b=100))
+
+    if(input$checkbox_plots4report=="TRUE") {
+      dirname <- paste("./report/",USER$ParentCorpName,"/")
+      dirname <- gsub(" ", "", dirname)
+      system( paste("mkdir",dirname) )
+      plotfile <- paste(dirname, USER$ParentCorpName, "-", input$inputLocations, "-barByLocation(", input$sliderInputYear,")-", Sys.Date(), ".png", sep="")
+      #plotfile <- paste(dirname, USER$ParentCorpName, "-barByLocation","-", input$inputLocations,"-", input$sliderInputYear, "-", Sys.Date(), ".png", sep="")
+      plotfile <- gsub(" ", "", plotfile)
+      export(barByLocation, plotfile)
+      } #endif
+    
+    barByLocation
+  }) # end barByLocation 
   
   #stacked area by Time
   output$areaByTime <- renderPlotly({
@@ -249,9 +296,21 @@ server <- function(input, output, session) {
       layout(yaxis = list(title = 'Impact ($M)', showgrid = TRUE), xaxis = list(showgrid = TRUE), margin = list(l=80,b=100))
     } # endif
 
-  tplot
+    areaByTime <- tplot
 
-  }) 
+    if(input$checkbox_plots4report=="TRUE") {
+      dirname <- paste("./report/",USER$ParentCorpName,"/")
+      dirname <- gsub(" ", "", dirname)
+      system( paste("mkdir",dirname) )
+      plotfile <- paste(dirname, USER$ParentCorpName, "-", input$inputLocations, "-areaByTime(", input$sliderInputYear,")-", Sys.Date(), ".png", sep="")
+      #plotfile <- paste(dirname, USER$ParentCorpName, "-areaByTime","-", input$inputLocations,"-", Sys.Date(), ".png", sep="")
+      plotfile <- gsub(" ", "", plotfile)
+      export(areaByTime, plotfile)
+      } #endif
+    
+    areaByTime
+
+  }) # end areaByTime
   
   # TCFD stacked bar chart
   output$stackedCorpFinImpactsPlot <- renderPlotly({
@@ -268,11 +327,23 @@ server <- function(input, output, session) {
       #corpTable = corpTable[,lapply(.SD,sum),by="TCFDCategoryName"]
     }
     ncorp <- pull(count(corpTable))
-    plot_ly(corpTable, x = ~TCFDCategoryName, y = ~ValueAtRisk, type='bar', text=corpTable$RiskFactorName, marker = list(color = colorRampPalette(brewer.pal(11,"Spectral"))(ncorp))) %>%
-      layout(yaxis = list(title = 'Impact ($M)'), barmode = 'stack', margin = list(l=80,b=100))
+    stackedCorpFinImpactsPlot <- plot_ly(corpTable, x = ~TCFDCategoryName, y = ~ValueAtRisk, type='bar', text=corpTable$RiskFactorName, marker = list(color = colorRampPalette(brewer.pal(11,"Spectral"))(ncorp))) %>% layout(yaxis = list(title = 'Impact ($M)'), barmode = 'stack', margin = list(l=80,b=100))
     #plot_ly(corpTable, x = list("Opportunity","Physical Risk","Transition Risk"), y = ~ValueAtRisk, type='bar', text=corpTable$RiskFactorName, marker = list(color = colorRampPalette(brewer.pal(11,"Spectral"))(ncorp))) %>%
       #layout(yaxis = list(title = 'Impact ($M)'), barmode = 'stack', margin = list(l=80,b=100), showlegend=TRUE)
-  })
+
+    if(input$checkbox_plots4report=="TRUE") {
+      dirname <- paste("./report/",USER$ParentCorpName,"/")
+      dirname <- gsub(" ", "", dirname)
+      system( paste("mkdir",dirname) )
+      plotfile <- paste(dirname, USER$ParentCorpName, "-", input$inputLocations, "-financialImpacts(", input$sliderInputYear,")-", Sys.Date(), ".png", sep="")
+      #plotfile <- paste(dirname, USER$ParentCorpName, "-stackedCorpFinImpactsPlot","-", input$inputLocations,"-", input$sliderInputYear, "-", Sys.Date(), ".png", sep="")
+      plotfile <- gsub(" ", "", plotfile)
+      export(stackedCorpFinImpactsPlot, plotfile)
+      } #endif
+
+    stackedCorpFinImpactsPlot
+
+  }) # end stackedCorpFinImpactsPlot
   
   #Data table
   output$corpFinImpacts <- DT::renderDataTable({
@@ -347,50 +418,14 @@ server <- function(input, output, session) {
 
    if(input$selectCausalVariable=="Coastal Flooding") {
 
-#	source("./data/sealevel_us/annual_probability_withslr.r", local=TRUE)
-#	position="topleft"
-#	if(input$returnLevel==1) position="topright"
-#	level = as.character(input$returnLevel)
-#    # slrYears are defined in annual_probability_withslr.r.
-#    # xaxt="n" in plot below turns off xaxis tickmarks.  These are added explicitly with axis.
-#    plot(annual_probability_withslr[1,], type="l", lwd=3, lty=1, col="black", ylim=c(0,100), xlab="Year", ylab=paste("Ann. Prob. Exceed Flood Level",level,"m (%)"), xaxt="n")
-#	lines(annual_probability_withslr[2,], col="blue")
-#	lines(annual_probability_withslr[3,], col="green")
-#	lines(annual_probability_withslr[4,], col="yellow")
-#	lines(annual_probability_withslr[5,], col="orange")
-#	lines(annual_probability_withslr[6,], col="red")
-#	axis(1, at=c(1:length(slrYears)), labels=slrYears)
-#     	legend(position, inset=.05, title="Scenarios (GMSL 2100)",legend=c("0.3m","0.5m","1.0m","1.5m","2.0m","2.5m"), lwd=3, col=c("black","blue","green","yellow","orange","red"))
+	source("./data/sealevel_world/input4_plot_sealevel_data_world_ewl_slr.r", local=TRUE)
 
-        locID <- corpLocations %>% filter(ParentCorpID==USER$ParentCorpID & LocationName==input$inputLocations_overall) %>% select(LocationID)
-	key <- paste(locID,USER$ParentCorpID,input$inputLocations_overall)
-	key <- gsub(" ","_",key)
-	nd = read.table("./data/scoring_engine/coastalflooding/TCSDB_structure.locations.csv.nearest.gtsr.segment", header=TRUE)
-	# V17 (RLm2yr) is the first historical return level in the nd table; if the location is outside the coastal distance threshold in the SE, this value will be a string (e.g., "TooFarFromCoast_threshold_10km") rather than a number.
-	# Force the elements of RLM2yr that are not numbers to be "NA".
-	  nd$RLm2yr <- as.numeric(as.character(nd$RLm2yr))
-	#ele = nd %>% filter(nd$V1==key) %>% select(V14:V17, V27)
-	ele = nd %>% filter(nd$LocationID_ParentCorpID_LocationName==key) %>% select(mindistid2, nearestseglon, nearestseglat, RLm2yr, station)
-
-	#if(is.numeric(ele$RLm2yr)==TRUE) {
 	if(toString(ele$RLm2yr)!="NA") {
-	   # key2 is the string that identifies the element in world_ewl_with_slr_stations (created by /data/sealevel_world/load_sealevel_world.r) that has been associated with the current corporate facility.  It consists of of the id of the nearest coastal segment, the segment's lon/lat, and the name of the EWL station associated with that segement.  An example is 3873_-79.472_8.999_BALBOA.
-	   #key2 <- paste(ele$V14, ele$V15, ele$V16, ele$V27)
-	   key2 <- paste(ele$mindistid2, ele$nearestseglon, ele$nearestseglat, ele$station)
-	   key2 <- gsub(" ","_",key2)
-	   #loc <- input$extremewaterLocation2_with_slr_station
-	   loc <- key2
-	   # The following sets the scenario from the backend, not Corporate/Analyze
-	   # scenario <- input$world_slr_scenario
-	   # The following sets the scenario from Corporate/Analyze, using uiOutput("selectInput_scenario") in ui.R and its definition in server.R.
-	   scenario <- input$selectscenario_overall
+	   show_sealevel_world_plots <- "TRUE"
 	   source("./data/sealevel_world/plot_sealevel_data_world_ewl_slr.r", local=TRUE)
 	}
 
-	#if(is.numeric(ele$RLm2yr)==FALSE) {
 	if(toString(ele$RLm2yr)=="NA") {
-	   # This is not returning the text properly because it is in a renderPlot output statement (see start of section).
-	   #paste("Location beyond distance threshold.")
 	   source("./data/sealevel_world/plot_sealevel_data_world_ewl_slr_null_data.r", local=TRUE)
 	}
    }
@@ -401,8 +436,11 @@ server <- function(input, output, session) {
   output$selectInput_location_drilldown <- renderUI({
     selectInput('inputLocations_drilldown',"Select Location",c(unique(subset(corpLocations, ParentCorpID == USER$ParentCorpID, select = LocationName))), selectize = TRUE)
   })
-  
-  output$plot_selectHazard_drilldown <- renderPlot({
+ 
+ 
+  #output$plot_selectHazard_drilldown <- renderPlot({
+  #output$plot_selectHazard_drilldown <- renderImage({
+  output$plot_selectHazard_drilldown <- renderPlotly({
 
    #if(input$selectCausalVariable_drilldown=="Drought Severity (90th percentile)" | input$selectCausalVariable_drilldown=="Temperature (daily maximum 90th percentile)" | input$selectCausalVariable_drilldown=="Coastal Flooding (return period 100yr level)") {
 
@@ -432,6 +470,7 @@ server <- function(input, output, session) {
 	  periods = c("1950-99","2006-15","2016-25","2026-35","2036-45","2046-55","2056-65","2066-75","2076-85","2086-95")
 	  tvalues = 100*as.numeric( t(values) )
 	  ylabel = "Ann. Prob. of 90th-pctile Drought (%)"
+    	  yrange <- c(0,200)
 	  legend_nodata="No data available at this location."
 	}
 
@@ -444,6 +483,7 @@ server <- function(input, output, session) {
 	  periods = c("1970-99","2006-15","2016-25","2026-35","2036-45","2046-55","2056-65","2066-75","2076-85","2086-95")
 	  tvalues = as.numeric( t(values) )
 	  ylabel = "Percent of Days Above 90th Percentile"
+    	  yrange <- c(0,100)
 	  legend_nodata="No data available at this location."
 	}
 
@@ -455,6 +495,7 @@ server <- function(input, output, session) {
 	  periods = c("Hist","2006-15","2016-25","2026-35","2036-45","2046-55","2056-65","2066-75","2076-85","2086-95")
 	  tvalues = as.numeric( t(values) )
 	  ylabel = "Carbon Price (US$2005/t CO2)"
+    	  yrange <- c(0,150)
 	  legend_nodata="No data available at this location."
 	}
 
@@ -474,9 +515,11 @@ server <- function(input, output, session) {
 	  periods = c("Hist","2006-15","2016-25","2026-35","2036-45","2046-55","2056-65","2066-75","2076-85","2086-95")
 	  tvalues = 100*as.numeric( t(values) )
 	  ylabel = "Annual Probability of 100-year Flood Level (%)"
+    	  yrange <- c(0,200)
 	  legend_nodata="Does not apply; location not close to coast."
 	} # endif on coastal flooding
 
+       p <- function() { 
 	plot(tvalues, type="l", lwd=3, lty=1, col="black", ylim=c(0,200), xlab="Period", ylab=ylabel, xaxt="n")
 	axis(1, at=c(1:length(periods)), labels=periods)
 	# For coastal flooding, the following line corresponds to the lower limit on the future value of the return period of the historical 100-year return level.  This is applied in ./data/scoring_engine/coastal_flooding/script_estimate_future_rp_v1.r.  This is currently set to 1.0, so the annual probability has an upper limit of 100%.
@@ -488,12 +531,80 @@ server <- function(input, output, session) {
 	  } else {
      	   legend("topleft", inset=.05, title="Scenarios",legend=c("RCP4.5","RCP8.5"), lwd=3, col=c("black","blue","green","yellow","orange","red"))
 	}
+       } # end p function
 
-  }) # end output$plot_selectHazard_drilldown
+       # Set up data for plotting by ggplot or plot_ly.
+       df2 <- data.frame(grp = factor(periods), val = tvalues, row.names=NULL)
+
+       # fct_inorder orders the groups according to how they are constructed, rather than alphabetically.  See library(forcats).
+       pgg <- function() { 
+	ggplot(df2, aes(x=fct_inorder(grp), y=val, group=1)) +
+	  geom_line()
+       } # end pgg function
+
+      # Set directory and plotfile names.
+      #dirname <- paste("./report/",key,"/")
+      dirname <- paste("./report/",USER$ParentCorpName,"/")
+      dirname <- gsub(" ", "", dirname)
+      system( paste("mkdir",dirname) )
+      plotfile <- paste(dirname, USER$ParentCorpName, "-", input$inputLocations_drilldown, "-hazard-", input$selectCausalVariable_drilldown,"-", Sys.Date(), sep="")
+      #plotfile <- paste(dirname, USER$ParentCorpName, "-", input$inputLocations_drilldown, "-hazard-", input$selectCausalVariable_drilldown,"-", Sys.Date(), sep="")
+      #plotfile <- paste(dirname, input$inputLocations_drilldown, "-hazard", "-", input$selectCausalVariable_drilldown,"-", Sys.Date(), sep="")
+      #plotfile <- paste(dirname, key, "-hazard", "-", locID,"-", Sys.Date(), ".png", sep="")
+      #plotfile <- paste(dirname, key, "-hazard", "-", locID,"-", Sys.Date(), sep="")
+      #plotfile <- paste(dirname, key, "-hazard", "-", input$selectCausalVariable_drilldown, "-", locID,"-", Sys.Date(), ".ps", sep="")
+      plotfile <- gsub(" ", "", plotfile)
+      plotfile_ps <- paste(plotfile, ".ps", sep="")
+      plotfile_png <- paste(plotfile, ".png", sep="")
+
+      # Optional ps and png images for use in renderImage
+      # png and postscript call a plotting function, not a plot.  p above is now a function.
+      # Create .ps image.
+     	# setEPS()
+      	# postscript(plotfile_ps,width=6,height=4)
+      	# p()
+      	# dev.off()
+      # Create .png since renderImage (on Safari, at least) is not showing the .ps image.
+      	# png(plotfile_png)
+      	# Note that print for the ggplot version is required below.
+      	# print( pgg() ) 
+      	# dev.off()
+
+      # When using renderImage, show the .png version in the shiny app.
+      # list(src = plotfile_png, height="300px", alt = paste("hazard plot"))
+      #plotPNG(func=p(), plotfile)
+      #	p()
+
+      # Use ggplot form, if desired.
+      # ggplotly( pgg() )
+
+    # Version for plot_ly.
+    # Enforce the order of the categories as given in periods, otherwise they are plotted alphabetically.
+    xform <- list(title="Period", categoryorder="array", categoryarray=periods)
+    yform <- list(title=ylabel, range=yrange)
+    marform <- list(l = 50, r = 50, b = 80, t = 40, pad = 4)
+    if(firstfield=="No_data" | firstfield=="Inf") { message=legend_nodata } else { message="" }
+    # Reference for annotations:  https://plot.ly/r/reference/#layout-annotations
+    ply <- plot_ly(df2, x=~grp, y=~val, type='scatter', mode='lines', fill='tonexty', color=I("green") ) %>% 
+           layout(xaxis = xform, yaxis = yform, margin=marform, title=paste("Hazard:",ylabel), 
+		titlefont=list(family = "sans serif", size = 14, color = 'black'),
+		  annotations=list(text=message, showarrow=FALSE, xref="paper" , yref="paper", x=0.5, y=0.5) )
+
+    # Export for report.
+    if(input$checkbox_plots4report_drilldown=="TRUE") {
+      system( paste("mkdir",dirname) )
+      export(ply, plotfile_png)
+      } #endif
+
+    ply
+
+    #}, deleteFile=FALSE) # end output$plot_selectHazard_drilldown as renderImage
+  }) # end output$plot_selectHazard_drilldown as renderPlot or renderPlotly
   
   output$plot_selectDamageFunction <- renderPlot({
 
    if(input$selectDamageFunction=="Building Damage") {
+    # Select hazus DF from the SectorImpactFunctions/Fitted page.
     damage_function_name = as.character(input$hazus_damage_function_id)
     s = unlist( strsplit(damage_function_name, "_") )
     # Given a list structure x, unlist simplifies it to produce a vector which contains all the atomic components which occur in x.
@@ -514,7 +625,9 @@ server <- function(input, output, session) {
 
   }) # end output$plot_selectDamageFunction
 
-  output$plot_selectDamageFunction_drilldown <- renderPlot({
+
+  #output$plot_selectDamageFunction_drilldown <- renderPlot({
+  output$plot_selectDamageFunction_drilldown <- renderPlotly({
 
    if(input$selectDamageFunction_drilldown=="Selected Location and Hazard") {
 
@@ -559,13 +672,40 @@ server <- function(input, output, session) {
 	  yunits <- dfdata %>% filter(dfdata$id==loc_df) %>% select(yunits)
 	  yunits <- as.character(yunits[1,])
 	  
+       p <- function() { 
 	plot(x3, y3, type="l", lwd=3, lty=1, col="black", xlab=paste(xvariable,",",xunits), ylab=paste(yvariable,",",yunits), xlim=xrange )
 	legend("topright", title="Damage Function", legend=loc_df)
+	} 
 
-   #} 
-	#else {
-	# This is plotted if none of the 3 physical hazards are selected.
-	# source("./functions/fit_corn_yield_us_drought.r", local=TRUE) }
+    # Set up data for plotting by ggplot or plot_ly.
+    df2 <- data.frame(grp = x3, val = y3, row.names=NULL)
+
+    # Version for plot_ly.
+    # Enforce the order of the categories as given in periods, otherwise they are plotted alphabetically.
+    xform <- list(title=paste(xvariable,",",xunits), range=xrange)
+    yform <- list(title=paste(yvariable,",",yunits))
+    marform <- list(l = 50, r = 50, b = 80, t = 40, pad = 4)
+    ply <- plot_ly(df2, x=~grp, y=~val, type='scatter', mode='lines', fill='tonexty', color=I("blue") ) %>% 
+           layout(xaxis = xform, yaxis = yform, margin=marform, title=paste("Damage Function:",loc_df),
+		titlefont=list(family = "sans serif", size = 14, color = 'black') )
+
+    # Export for report.
+    if(input$checkbox_plots4report_drilldown=="TRUE") {
+      # Set directory and plotfile names.
+      dirname <- paste("./report/",USER$ParentCorpName,"/")
+      dirname <- gsub(" ", "", dirname)
+      plotfile <- paste(dirname, USER$ParentCorpName, "-", input$inputLocations_drilldown, "-vulnerability-", input$selectCausalVariable_drilldown,"-", Sys.Date(), sep="")
+      #plotfile <- paste(dirname, input$inputLocations_drilldown, "-df", "-", loc_df,"-", Sys.Date(), sep="")
+      plotfile <- gsub(" ", "", plotfile)
+      plotfile_png <- paste(plotfile, ".png", sep="")
+
+      system( paste("mkdir",dirname) )
+      export(ply, plotfile_png)
+      } #endif
+
+    ply
+    # Version for plot
+    # p()
 
    } # end if(input$selectDamageFunction_drilldown=="Selected Location and Hazard")
 
@@ -575,6 +715,8 @@ server <- function(input, output, session) {
   }, deleteFile = FALSE)
 
   output$plot_losscurve2 <- renderPlot({
+
+	ntimeperiods <- 4
 
    if(input$selectCausalVariable=="Temperature" & input$selectDamageFunction=="Cooling") {
 
@@ -625,7 +767,7 @@ server <- function(input, output, session) {
    if(input$selectCausalVariable=="Drought Severity" & input$selectDamageFunction=="Corn Yield") {
 
 	# The normal fits for 4 periods described by para2, para3, etc., were created by ./data/drought/script_pdsisc_pdfs.r .
-	ntimeperiods <- 4
+	# defined above:  ntimeperiods <- 4
 	function1 <- function(x) { dnorm(x, para2[1], para2[2]) }
 	function2 <- function(x) { dnorm(x, para3[1], para3[2]) }
 	function3 <- function(x) { dnorm(x, para4[1], para4[2]) }
@@ -695,6 +837,75 @@ server <- function(input, output, session) {
 
      } # endif on drought severity and corn yield
 
+   if(input$selectCausalVariable=="Coastal Flooding" & input$selectDamageFunction=="Building Damage") {
+	# The function for the rl distribution (prob versus rl) is defined in ./data/sealevel_world/plot_sealevel_data_world_ewl_slr.r .
+
+	source("./data/sealevel_world/input4_plot_sealevel_data_world_ewl_slr.r", local=TRUE)
+
+	if(toString(ele$RLm2yr)!="NA") {
+
+	  show_sealevel_world_plots <- "FALSE"
+	  source("./data/sealevel_world/plot_sealevel_data_world_ewl_slr.r", local=TRUE)
+
+	  # rlvals are the calculated return levels for the current location, as determined in the script above.
+	  #curve(f4rldistmodel, min(rlvals), max(rlvals))
+
+    	# Select hazus DF from the SectorImpactFunctions/Fitted page.
+    	damage_function_name = as.character(input$hazus_damage_function_id)
+    	s = unlist( strsplit(damage_function_name, "_") )
+    	damage_function_id = as.numeric(s[1])
+        source("./data/hazus/function_extract_hazus_flood_depth_damage_return_damage_at_depth.r", local=TRUE)
+
+	# Get the damage values and the probability values across the range of return levels.
+	# There are 4 timeperiods, as defined above.
+	nvals <- length(rlvals)
+	damvals <- matrix(0, nrow=ntimeperiods, ncol=nvals)
+	probvals <- matrix(0, nrow=ntimeperiods, ncol=nvals)
+
+	# Drive damage values with a flood depth, rather than a return level.  RL can be used for local flood depth only if they are both referenced to the same local datum.  This means we need a local definition of flood level/severity.  See report from Sweet, et al, on local flood levels.
+	# z[1] is the historical 2-year return level, in meters.  Use this as the base for determining flood depth. 
+	depth_hist <- rlvals - z[1]
+	depth_rcp85_2030 <- rlvals2 - z[1]
+	depth_rcp85_2050 <- rlvals3 - z[1]
+	depth_rcp85_2100 <- rlvals4 - z[1]
+	for(i in 1:nvals) damvals[1,i] = get_hazus_damage_function_return_damage_at_depth(damage_function_id, depth_hist[i])
+	for(i in 1:nvals) damvals[2,i] = get_hazus_damage_function_return_damage_at_depth(damage_function_id, depth_rcp85_2030[i])
+	for(i in 1:nvals) damvals[3,i] = get_hazus_damage_function_return_damage_at_depth(damage_function_id, depth_rcp85_2050[i])
+	for(i in 1:nvals) damvals[4,i] = get_hazus_damage_function_return_damage_at_depth(damage_function_id, depth_rcp85_2100[i])
+
+	# Get the probability-distribution values from f4rldistmodels defined in ./data/sealevel_world/plot_sealevel_data_world_ewl_slr.r .  There is one model for each time period
+	for(i in 1:nvals) probvals[1,i] = f4rldistmodel(rlvals[i])
+	for(i in 1:nvals) probvals[2,i] = f4rldistmodel2(rlvals2[i])
+	for(i in 1:nvals) probvals[3,i] = f4rldistmodel3(rlvals3[i])
+	for(i in 1:nvals) probvals[4,i] = f4rldistmodel4(rlvals4[i])
+
+	# Get the expected value of the damage for each of the time periods.
+	evals <- matrix(0, nrow=1, ncol=ntimeperiods)
+	for(i in 1:ntimeperiods) evals[i] <- sum(probvals[i,] * damvals[i,])/sum(probvals[i,])
+
+	prob2plot <- probvals[1,]/sum(probvals[1,])
+	dam2plot <- damvals[1,]
+	eval2plot <- evals[1]
+	if(input$selectPeriod=="2011-2030") {prob2plot <- probvals[2,]/sum(probvals[2,]); dam2plot <- damvals[2,]; eval2plot <- evals[2]}
+	if(input$selectPeriod=="2041-2060") {prob2plot <- probvals[3,]/sum(probvals[3,]); dam2plot <- damvals[3,]; eval2plot <- evals[3]}
+	if(input$selectPeriod=="2071-2090") {prob2plot <- probvals[4,]/sum(probvals[4,]); dam2plot <- damvals[4,]; eval2plot <- evals[4]}
+
+	# Plot the loss curve for the selected time period as probability versus damage values.
+	# See note above on assumed flood level.
+	plot(dam2plot, prob2plot, type="l", lwd=3, col="blue",
+		main="Building Damage Probability Distribution",
+		sub="(flood depth zero point = extreme water level with 2-year return period)",
+		xlab="Building Damage (%)", xlim=c(0.0, max(dam2plot)),
+		ylab="Probability", ylim=c(0.0, max(prob2plot))  )
+	abline(v=eval2plot, col = "blue", lty=2)
+	#abline(h=0.01, col = "red", lty=2)
+    	legend("topleft", inset=.01, "Expected Value", lwd=2, lty=2, col="blue")
+	grid(col="lightgray")
+
+        } # endif on ele$RLm2yr
+
+     } # endif on coastal flooding and building damage
+
   }) # end output$plot_losscurve2
 
   output$plot_expectedDamage <- renderPlotly({
@@ -721,23 +932,41 @@ server <- function(input, output, session) {
     time_series$s4 <- corpTable %>% filter(RiskFactorName=='Carbon pricing') %>% group_by(RiskYear) %>% summarise(s4=sum(ValueAtRisk)) %>% select(s4) %>% pull()
 
   if(input$selectCausalVariable_drilldown=="Temperature (daily maximum 90th percentile)") {
-    tplot <- plot_ly(time_series, x = ~RiskYear, y = ~s1, name='Temperature (daily maximum 90th percentile)', type='scatter', mode = 'none', fill = 'tonexty')
+    tplot <- plot_ly(time_series, x = ~RiskYear, y = ~s1, name='Temperature (daily maximum 90th percentile)', type='scatter', mode = 'lines', fill = 'tonexty', color=I("red") )
     } # endif
 
   if(input$selectCausalVariable_drilldown=="Drought Severity (90th percentile)") {
-    tplot <- plot_ly(time_series, x = ~RiskYear, y = ~s2, name='Drought Severity (90th percentile)', type='scatter', mode = 'none', fill = 'tonexty')
+    tplot <- plot_ly(time_series, x = ~RiskYear, y = ~s2, name='Drought Severity (90th percentile)', type='scatter', mode = 'lines', fill = 'tonexty', color=I("red") )
     } # endif
 
   if(input$selectCausalVariable_drilldown=="Coastal Flooding (return period 100yr level)") {
-    tplot <- plot_ly(time_series, x = ~RiskYear, y = ~s3, name='Coastal Flooding (return period 100yr level)', type='scatter', mode = 'none', fill = 'tonexty')
+    tplot <- plot_ly(time_series, x = ~RiskYear, y = ~s3, name='Coastal Flooding (return period 100yr level)', type='scatter', mode = 'lines', fill = 'tonexty', color=I("red") )
     } # endif
 
   if(input$selectCausalVariable_drilldown=="Carbon Price") {
-    tplot <- plot_ly(time_series, x = ~RiskYear, y = ~s4, name='Carbon Price', type='scatter', mode = 'none', fill = 'tonexty')
+    tplot <- plot_ly(time_series, x = ~RiskYear, y = ~s4, name='Carbon Price', type='scatter', mode = 'lines', fill = 'tonexty', color=I("red") )
     } # endif
 
-   tplot %>%
-       layout(yaxis = list(title = 'Impact ($M)', showgrid = TRUE), xaxis = list(showgrid = TRUE), margin = list(l=80,b=100))
+   marform <- list(l = 50, r = 50, b = 80, t = 40, pad = 4)
+   tplot <- tplot %>%
+       layout(yaxis = list(title = 'Impact ($M)', showgrid = TRUE), xaxis = list(title = 'Period',showgrid = TRUE), margin = marform, title=paste("Risk:",input$selectCausalVariable_drilldown), 
+	titlefont=list(family = "sans serif", size = 14, color = 'black') )
+
+    # Export for report.
+    if(input$checkbox_plots4report_drilldown=="TRUE") {
+      # Set directory and plotfile names.
+      dirname <- paste("./report/",USER$ParentCorpName,"/")
+      dirname <- gsub(" ", "", dirname)
+      plotfile <- paste(dirname, USER$ParentCorpName, "-", input$inputLocations_drilldown, "-risk-", input$selectCausalVariable_drilldown,"-", Sys.Date(), sep="")
+      #plotfile <- paste(dirname, input$inputLocations_drilldown, "-damage", "-", input$selectCausalVariable_drilldown,"-", Sys.Date(), sep="")
+      plotfile <- gsub(" ", "", plotfile)
+      plotfile_png <- paste(plotfile, ".png", sep="")
+
+      system( paste("mkdir",dirname) )
+      export(tplot, plotfile_png)
+      } #endif
+
+    tplot
 
   } # endif on input$selectDamageFunction & input$selectPeriod
 
@@ -760,17 +989,20 @@ server <- function(input, output, session) {
     }
 
     if (input$inputLocations_overall != 'All locations') {
-	# The following is the location (with locationID and ParentCorpID) selected in Corporate/Analyze.
-        locID <- corpLocations %>% filter(ParentCorpID==USER$ParentCorpID & LocationName==input$inputLocations_overall) %>% select(LocationID)
-	key <- paste(locID,USER$ParentCorpID,input$inputLocations_overall)
-	key <- gsub(" ","_",key)
-
+        p5 = paste("Temperature (all values) - ","Phoenix, AZ; 32 models; LOCA downscaling to 7-km resolution") 
         p1 = paste("Drought severity (all values) - ","Boise, Idaho")
 
-        #p3 = paste("Sea-level projection - ",input$sealevelProjectionLocation)
-        p3 = paste("Coastal Flooding (all EWLs with SLR) - ",as.character(key))
+	# locID is the location (with locationID and ParentCorpID) selected in Corporate/Analyze.
+        #locID <- corpLocations %>% filter(ParentCorpID==USER$ParentCorpID & LocationName==input$inputLocations_overall) %>% select(LocationID)
+	#key <- paste(locID,USER$ParentCorpID,input$inputLocations_overall)
+	#key <- gsub(" ","_",key)
 
-        p5 = paste("Temperature (all values) - ","Phoenix, AZ; 32 models; LOCA downscaling to 7-km resolution") 
+	# Get locID, key, and key2 from the input for sealevel plots.
+	source("./data/sealevel_world/input4_plot_sealevel_data_world_ewl_slr.r", local=TRUE)
+
+        #p3 = paste("Sea-level projection - ",input$sealevelProjectionLocation)
+        p3 = paste("Coastal Flooding (all EWLs with SLR) - ",as.character(key),"(",as.character(key2),")" )
+
     } 
 
 	paste(p5," ",p1," ",p3,sep="\n")
@@ -784,6 +1016,7 @@ server <- function(input, output, session) {
 
 	# The following is the location selected in TechnicalDetails/LocalClimate/Drought.
         #p2 = paste("Drought severity (90th percentile) - ",input$drought_facility)
+
         p2 = paste(locID,USER$ParentCorpID,input$inputLocations_drilldown)
         p2 = gsub(" ","_",p2)
         p2 = paste("Drought severity (90th percentile) - ",p2)
@@ -832,9 +1065,111 @@ server <- function(input, output, session) {
 	paste(p1," ",p2," ",p3," ",p4," ",p5,sep="\n")
         })
 
+  output$impactplot_screeningDFs_1 <- renderPlot({
+    # dbsheet12 contains the TCSDB damage functions and created by load_tcsdb.r in ui.R.
+    data <- dbsheet12 %>% filter(id==input$TCSDB_damage_function_id_1)
+    xvalues <- data$list_xvalues
+    yvalues <- data$list_yvalues
+    # Handle the df data in the spreadsheet.  It is always entered as a string like "0;20;40;60;80;100".
+    xvalues <- as.numeric( unlist( strsplit(xvalues, ";") ) )
+    yvalues <- as.numeric( unlist( strsplit(yvalues, ";") ) )
+    # Set up function.
+    f2 = approxfun(xvalues, yvalues)
+    # Set up plot.
+    xlabel <- paste(data$xvariable," (",data$xunits,")", sep="")
+    ylabel <- paste(data$yvariable," (",data$yunits,")", sep="")
+    curve(f2, min(xvalues), max(xvalues), lwd=3, col="blue", main=data$description, xlab=xlabel, ylab=ylabel)
+    #legend("topright", data$description)
+  }) # end renderPlot
+
+  output$impactplot_screeningDFs_2 <- renderPlot({
+    # dbsheet12 contains the TCSDB damage functions and created by load_tcsdb.r in ui.R.
+    data <- dbsheet12 %>% filter(id==input$TCSDB_damage_function_id_2)
+    xvalues <- data$list_xvalues
+    yvalues <- data$list_yvalues
+    # Handle the df data in the spreadsheet.  It is always entered as a string like "0;20;40;60;80;100".
+    xvalues <- as.numeric( unlist( strsplit(xvalues, ";") ) )
+    yvalues <- as.numeric( unlist( strsplit(yvalues, ";") ) )
+    # Set up function.
+    f2 = approxfun(xvalues, yvalues)
+    # Set up plot.
+    xlabel <- paste(data$xvariable," (",data$xunits,")", sep="")
+    ylabel <- paste(data$yvariable," (",data$yunits,")", sep="")
+    curve(f2, min(xvalues), max(xvalues), lwd=3, col="red", main=data$description, xlab=xlabel, ylab=ylabel)
+    #legend("topright", data$description)
+  }) # end renderPlot
+
+  output$impactplot_screeningDFs_3 <- renderPlot({
+    # dbsheet12 contains the TCSDB damage functions and created by load_tcsdb.r in ui.R.
+    data <- dbsheet12 %>% filter(id==input$TCSDB_damage_function_id_3)
+    xvalues <- data$list_xvalues
+    yvalues <- data$list_yvalues
+    # Handle the df data in the spreadsheet.  It is always entered as a string like "0;20;40;60;80;100".
+    xvalues <- as.numeric( unlist( strsplit(xvalues, ";") ) )
+    yvalues <- as.numeric( unlist( strsplit(yvalues, ";") ) )
+    # Set up function.
+    f2 = approxfun(xvalues, yvalues)
+    # Set up plot.
+    xlabel <- paste(data$xvariable," (",data$xunits,")", sep="")
+    ylabel <- paste(data$yvariable," (",data$yunits,")", sep="")
+    curve(f2, min(xvalues), max(xvalues), lwd=3, col="green", main=data$description, xlab=xlabel, ylab=ylabel)
+    #legend("topright", data$description)
+  }) # end renderPlot
+
+  output$impactplot_screeningDFs_4 <- renderPlot({
+    # dbsheet12 contains the TCSDB damage functions and created by load_tcsdb.r in ui.R.
+    data <- dbsheet12 %>% filter(id==input$TCSDB_damage_function_id_4)
+    xvalues <- data$list_xvalues
+    yvalues <- data$list_yvalues
+    # Handle the df data in the spreadsheet.  It is always entered as a string like "0;20;40;60;80;100".
+    xvalues <- as.numeric( unlist( strsplit(xvalues, ";") ) )
+    yvalues <- as.numeric( unlist( strsplit(yvalues, ";") ) )
+    # Set up function.
+    f2 = approxfun(xvalues, yvalues)
+    # Set up plot.
+    xlabel <- paste(data$xvariable," (",data$xunits,")", sep="")
+    ylabel <- paste(data$yvariable," (",data$yunits,")", sep="")
+    curve(f2, min(xvalues), max(xvalues), lwd=3, col="orange", main=data$description, xlab=xlabel, ylab=ylabel)
+    #legend("topright", data$description)
+  }) # end renderPlot
+
+  output$impactplot_screeningDFs_family <- renderPlot({
+    # dbsheet12 contains the TCSDB damage functions and created by load_tcsdb.r in ui.R.
+    data <- subset(dbsheet12, grepl(input$TCSDB_damage_function_id_family, dbsheet12$id))
+    xvalues <- data$list_xvalues
+    yvalues <- data$list_yvalues
+    # Handle the df data in the spreadsheet.  It is always entered as a string like "0;20;40;60;80;100".
+    xvalues2plot <- as.numeric( unlist( strsplit(xvalues[1], ";") ) )
+    yvalues2plot <- as.numeric( unlist( strsplit(yvalues[1], ";") ) )
+    # Set up function.
+    # f2 = approxfun(xvalues, yvalues)
+    # Set up plot.
+    xlabel <- paste(data$xvariable," (",data$xunits,")", sep="")
+    ylabel <- paste(data$yvariable," (",data$yunits,")", sep="")
+    titlename <- paste(input$TCSDB_damage_function_id_family,"damage functions") 
+    colorlist <- c("blue","red","green","orange","black","cyan","magenta","yellow","gray")
+    #p <- plot(xvalues2plot, yvalues2plot, lwd=3, col="orange", main=data$description, xlab=xlabel, ylab=ylabel, type="b")
+    p <- plot(xvalues2plot, yvalues2plot, lwd=3, col=colorlist[1], main=data$description, xlab="", ylab="", ann=FALSE, type="b")
+    for(i in 2:length(xvalues)) {
+        xvalues2plot <- as.numeric( unlist( strsplit(xvalues[i], ";") ) )
+        yvalues2plot <- as.numeric( unlist( strsplit(yvalues[i], ";") ) )
+	imodulo_color <- i %% length(colorlist)
+	if(imodulo_color==0) col2use <- length(colorlist) else col2use <- imodulo_color
+        p <- p + lines(xvalues2plot, yvalues2plot, lwd=3, col=colorlist[col2use], xlab="", ylab="", type="b", ann=FALSE)}
+    #legend("topright", data$description)
+    # Axes and xlab/ylab turned off above.  Add them in explicitly after the plot has been formed.  See https://nicercode.github.io/intro/plotting.html.  Title can be handled in the same way.
+    axis(1)
+    axis(2)
+    mtext(xlabel, side = 1, line = 3)
+    mtext(ylabel, side = 2, line = 3)
+    title(titlename)
+# ggplot has built-in grouping to do multiple lines, but the data must be treated with "melt".  See https://stackoverflow.com/questions/14704742/use-for-loop-to-plot-multiple-lines-in-single-plot-with-ggplot2.
+
+  }) # end renderPlot
+
 # --------------------------------------
 # SYSTEM CONTROL
-# -------t------------------------------
+# --------------------------------------
 
   # Should be reactiveValue.  See pattern 3 at http://shiny.rstudio.com/articles/action-buttons.html
   corpTableNew <- reactiveValues()
@@ -844,20 +1179,24 @@ server <- function(input, output, session) {
       })
 
   observeEvent(input$button_runSE, {
-	 withProgress(message = 'Calculation in progress',
-                 detail = 'This may take a while...', value = 0, {
-      for (i in 1:15) {
-        incProgress(1/15)
-        Sys.sleep(0.25)
-      }
-      })
+      withProgress(message = 'Calculation in progress',
+        detail = 'This may take a while...', value = 0, {
+        #for (i in 1:15) {incProgress(1/15); Sys.sleep(0.25) }
+	incProgress(1/3)
         system("./data/scoring_engine/script_runSE_from_app")
-      })
+        }) # end withProgress
+
+      #system("./data/scoring_engine/script_runSE_from_app")
+      }) # end observeEvent
 
   observeEvent(input$button_runSE_with_userdata, {
+      withProgress(message = 'Calculation in progress',
+        detail = 'This may take a while...', value = 0, {
+	incProgress(1/3)
         system("./data/TCSDB/script_apply_userdata4SE ./data/TCSDB/user_data.csv ./data/scoring_engine/nonphysical/locationvalues4SE.csv")
         system("./data/scoring_engine/script_runSE_from_app_with_userdata")
-      })
+        }) # end withProgress
+      }) # end observeEvent
 
 # ----------------------------
 #         PORTFOLIO - ANALYZE
@@ -1026,13 +1365,20 @@ server <- function(input, output, session) {
   # ----------------------------  
   
   output$report <- downloadHandler(
-    filename = "report.docx",
+
+    filename = function() {
+      paste("TCS-report-", USER$ParentCorpName, "-", Sys.Date(), ".docx", sep="")
+    },
+
     content = function(file) {
       # Copy the report file to a temporary directory before processing it, in
       # case we don't have write permissions to the current working dir (which
       # can happen when deployed).
-      tempReport <- file.path(tempdir(), "report.Rmd")
-      file.copy("report.Rmd", tempReport, overwrite = TRUE)
+      # TT - note that knit and pandoc cannot find the images in the report directory unless they are also copied.  Hence disable the tempReport filepath for now.
+      # tempReport <- file.path(tempdir(), "report.Rmd")
+      # file.copy("report.Rmd", tempReport, overwrite = TRUE)
+      
+      file.copy("report.Rmd", "report_temp.Rmd", overwrite = TRUE)
       
       # Set up parameters to pass to Rmd document
       tempparams <- list(pParentCorpName = USER$ParentCorpName,
@@ -1042,38 +1388,38 @@ server <- function(input, output, session) {
 
       # Subset a table to pass to "knittr::kable in the RMD"
       corpKable = subset(corpTable,(ParentCorpID == USER$ParentCorpID & RiskYear == 2030), select = Location:ValueAtRisk)
-      corpKableBoise = subset(corpKable,Location == "Boise", select = Location:ValueAtRisk)
+      #corpKableBoise = subset(corpKable,Location == "Boise", select = Location:ValueAtRisk)
+
+      # Make a portion of the final Rmd to handle the captured graphics.
+        dirname <- gsub(" ", "",USER$ParentCorpName)
+        command <- paste("ls ./report/",dirname,"/*png", sep="")
+	glist <- system(command, intern=TRUE)
+	#filenames <- noquote(glist)
+	#write.table(filenames, "filenames.csv", col.names=FALSE, row.names=FALSE, quote=FALSE)
+	#rmd_images <- paste("![plot](", noquote(glist), ")", sep="")
+	#rmd_images <- gsub("SLASH", "\\\\", rmd_images)
+	#rmd_images <- cat(rmd_images)
+	#rmd_images <- paste("![plot \label{figurelabel}](", noquote(glist), ")", sep="")
+	#rmd_images <- paste("![picture](", noquote(glist), ")", sep="")
+	rmd_images <- paste(":", noquote(glist), "](", noquote(glist), "){ width=50% }", sep="")
+	#rmd_images <- paste("![picture SLASHlabel{fig1}](", noquote(glist), ")", sep="")
+	rmd_images <- noquote(rmd_images)
+	write.table(rmd_images, "report_images.Rmd", col.names=FALSE, row.names=FALSE, quote=FALSE)
+	system("./report_images_script_postprocess")
+	system("cat report_temp.Rmd report_images.Rmd report_data_appendix.Rmd > report_final.Rmd")
+
       # Knit the document, passing in the `params` list, and eval it in a
       # child of the global environment (this isolates the code in the document
       # from the code in this app).
-      rmarkdown::render(tempReport, output_file = file,
+      # rmarkdown::render(tempReport, output_file = file,
+      rmarkdown::render("report_final.Rmd", output_file = file,
                         params = tempparams
                         # envir = new.env(parent = globalenv())
       )
-    }
-  )
-  
-  
-  
-#I think this is all old & can be deleted soon.  
-  # output$map_micron_boise <- renderUI({
-  #   input$Member
-  #   # iframe finds its target source in the www directory.
-  #   thismap <- tags$iframe(src="map.html", height=300, width=300)
-  #   thismap
-  # })
-  # 
-  # output$map_micron_singapore <- renderUI({
-  #   # iframe finds its target source in the www directory.
-  #   thismap <- tags$iframe(src="map_singapore.html", height=300, width=300)
-  #   thismap
-  # })
-  # 
-  # output$plot1 <- renderPlot({
-  #   data <- histdata[seq_len(input$slider)]
-  #   hist(data)
-  # })
 
+    } # end content
+  ) # end downloadHandler
+  
 
 # Terry -----------------------------------------------------------
 

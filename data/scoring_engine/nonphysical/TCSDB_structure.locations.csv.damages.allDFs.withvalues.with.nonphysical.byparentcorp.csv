@@ -1,13 +1,13 @@
 Location,TCFDCategoryName,TCFDSubCatName,RiskFactorName,ScenarioName,RiskYear,ValueAtRisk,ParentCorpID,LocationID
-MU,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2010,7.8816,1
-MU,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2020,49.8592,1
-MU,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2030,63.5456,1
-MU,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2040,63.8432,1
-MU,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2050,91.4816,1
-MU,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2060,91.4816,1
-MU,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2070,131.366,1
-MU,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2080,183.958,1
-MU,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2090,219.949,1
+MU,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2010,2.36448,1
+MU,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2020,14.9578,1
+MU,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2030,19.0637,1
+MU,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2040,19.153,1
+MU,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2050,27.4445,1
+MU,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2060,27.4445,1
+MU,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2070,39.4099,1
+MU,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2080,55.1875,1
+MU,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2090,65.9846,1
 MU,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2010,2.41728,1
 MU,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2020,7.49616,1
 MU,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2030,31.8151,1

@@ -1,4 +1,6 @@
 
+# This code is the same as plot_sealevel_data_world_ewl_slr.r, but with the plots removed.
+
 # This prepares the plot of EWL with SLR for each scenario using worldwide data and also converts this to probabilities.  The type of plot depends on input$checkbox_showRLvRP (see ui.R).
 
 # Return periods from the EWL data in muis_global_storm_surge_reanalysis.
@@ -23,7 +25,6 @@
 	y2 = max(z,z2,z3,z4)
 
 	# Prepare data for plot of probability versus return level for each time period, as defined for z RL values above.
-	# rlmodel gives the relationship between rl and rp.
 	rlmodel <- lm(z ~ poly(log(rphist,10),2,raw=TRUE))
 	rlmodel2 <- lm(z2 ~ poly(log(rphist,10),2,raw=TRUE))
 	rlmodel3 <- lm(z3 ~ poly(log(rphist,10),2,raw=TRUE))
@@ -33,7 +34,6 @@
 	f4rlmodel3 = function(t) {summary(rlmodel3)$coefficients[1,1] + summary(rlmodel3)$coefficients[2,1]*t + summary(rlmodel3)$coefficients[3,1]*t^2  }
 	f4rlmodel4 = function(t) {summary(rlmodel4)$coefficients[1,1] + summary(rlmodel4)$coefficients[2,1]*t + summary(rlmodel4)$coefficients[3,1]*t^2  }
 
-	# prob defines a sequence of probabilities and the corresponding rp values.
 	prob = seq(0.995, 0.001, -0.02)
 	#p2 <- seq(2,0.2,-0.1)
 	#p3 <- seq(0.19, 0.0001, -0.001)
@@ -41,8 +41,6 @@
 	#prob = seq(2, 0.0001, -0.001)
 	rp = 1/prob
 	oneminusprob = 1-prob
-
-	# rlvals contains the rl values corresponding to the sequence of rp values.  There are 4 time periods.
 	rlvals = f4rlmodel(log(rp,10))
 	rlvals2 = f4rlmodel2(log(rp,10))
 	rlvals3 = f4rlmodel3(log(rp,10))
@@ -62,14 +60,11 @@
 	for(i in 1:ndeltas) rlvalsdelta4[1,i] = rlvals4[i+1] - rlvals4[i]
 
 	for(i in 1:ndeltas) oneminusprobdelta[1,i] = oneminusprob[i+1] - oneminusprob[i]
-
-	# gradients give the rate of change of the probability with rl values.
 	gradients = oneminusprobdelta/rlvalsdelta
 	gradients2 = oneminusprobdelta/rlvalsdelta2
 	gradients3 = oneminusprobdelta/rlvalsdelta3
 	gradients4 = oneminusprobdelta/rlvalsdelta4
 
-	# Shifted rl values discard the first rl value since there is one less interval than rl values.  The interval is used to estimate the probability function below.
 	shift_rlvals <- rlvalsdelta
 	shift_rlvals2 <- rlvalsdelta
 	shift_rlvals3 <- rlvalsdelta
@@ -79,31 +74,17 @@
 	for(i in 1:ndeltas) shift_rlvals3[1,i] = rlvals3[i+1]
 	for(i in 1:ndeltas) shift_rlvals4[1,i] = rlvals4[i+1]
 
-	# Fit functions to the probability versus rl values for each time period.
-	# This is not plotted below, but is used in the loss-curve calculation in server.R.
+	# Fit a function to the probability versus rl data.
+	# This is not plotted here, but is used in the loss-curve calculation in server.R.
 	# Note use of transpose below.
 	p <- t(gradients/sum(gradients))
 	rldistmodel <- lm(p ~ poly(t(shift_rlvals), 4, raw=TRUE))
 	f4rldistmodel = function(t) {summary(rldistmodel)$coefficients[1,1] + summary(rldistmodel)$coefficients[2,1]*t + summary(rldistmodel)$coefficients[3,1]*t^2 + summary(rldistmodel)$coefficients[4,1]*t^3 + summary(rldistmodel)$coefficients[5,1]*t^4 }
 
-	p <- t(gradients2/sum(gradients2))
-	rldistmodel <- lm(p ~ poly(t(shift_rlvals2), 4, raw=TRUE))
-	f4rldistmodel2 = function(t) {summary(rldistmodel)$coefficients[1,1] + summary(rldistmodel)$coefficients[2,1]*t + summary(rldistmodel)$coefficients[3,1]*t^2 + summary(rldistmodel)$coefficients[4,1]*t^3 + summary(rldistmodel)$coefficients[5,1]*t^4 }
-
-	p <- t(gradients3/sum(gradients3))
-	rldistmodel <- lm(p ~ poly(t(shift_rlvals3), 4, raw=TRUE))
-	f4rldistmodel3 = function(t) {summary(rldistmodel)$coefficients[1,1] + summary(rldistmodel)$coefficients[2,1]*t + summary(rldistmodel)$coefficients[3,1]*t^2 + summary(rldistmodel)$coefficients[4,1]*t^3 + summary(rldistmodel)$coefficients[5,1]*t^4 }
-
-	p <- t(gradients4/sum(gradients4))
-	rldistmodel <- lm(p ~ poly(t(shift_rlvals4), 4, raw=TRUE))
-	f4rldistmodel4 = function(t) {summary(rldistmodel)$coefficients[1,1] + summary(rldistmodel)$coefficients[2,1]*t + summary(rldistmodel)$coefficients[3,1]*t^2 + summary(rldistmodel)$coefficients[4,1]*t^3 + summary(rldistmodel)$coefficients[5,1]*t^4 }
 
       # Use the following two lines for testing outside the app.
       # plot_rl_rp <- "yes"
       # if(plot_rl_rp=="yes") {
-
-    # The following variable is set in server.R to control when plots are generated, or when only the code above is needed for losscurve2 calculations.
-    if(show_sealevel_world_plots=="TRUE") {
 
       if(input$checkbox_showRLvRP=="TRUE") {
 	# Plot return levels versus return periods for each time period.
@@ -115,14 +96,13 @@
      	legend("topleft", inset=.05, title="Periods",legend=c("Historical","2030","2050","2100"), lwd=3, col=c("black","yellow","orange","red"))
       } else {
 
-	# Alternatively, plot probability versus return level for each time period, as defined for z RL values above.
-	xmin <- min(rlvals, rlvals2, rlvals3, rlvals4)
-	xmax <- max(rlvals, rlvals2, rlvals3, rlvals4)
-	plot(shift_rlvals, gradients/sum(gradients), type="l", lwd=3,col="black", xlab="Return Level (m)", ylab="Probability", xlim=c(xmin,xmax))
+	# Plot probability versus return level for each time period, as defined for z RL values above.
+	# y1 and y2 are the lower and upper values of the return levels, defined above.
+	plot(shift_rlvals, gradients/sum(gradients), type="l", lwd=3,col="black", xlab="Return Level (m)", ylab="Probability", xlim=c(y1,y2))
 	lines(shift_rlvals2, gradients2/sum(gradients2), lwd=3, col="yellow")
 	lines(shift_rlvals3, gradients3/sum(gradients3), lwd=3, col="orange")
 	lines(shift_rlvals4, gradients4/sum(gradients4), lwd=3, col="red")
      	legend("topright", inset=.05, title="Periods",legend=c("Historical","2030","2050","2100"), lwd=3, col=c("black","yellow","orange","red"))
      } # endif on plot_rl_rp or input$checkbox_showRLvRP
 
-    } #end if(show_sealevel_world_plots=="TRUE")
+

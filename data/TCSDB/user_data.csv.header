@@ -1,2 +1,2 @@
-"Date_seconds" "USER.ParentCorpID" "input.rbLocations" "input.cbGroupBizType" "input.txtNumEmployees" "input.txtAssetValue" "cbBusinessFunctions" "Date"
-"1" 1519841239 1 "Boise" "-" "250" "100" "Clean Room Manufacturing, R&D" "Wed_Feb_28_13:07:19_EST_2018"
+"Date_seconds" "USER.ParentCorpID" "input.rbLocations" "input.cbGroupBizType" "input.txtNumEmployees" "input.txtAssetValue_tx90p" "input.txtAssetValue_pdsisc" "input.txtAssetValue_coastalflood" "input.txtghgEmissions" "cbBusinessFunctions" "Date"
+"1" 1522173608 1 "Boise" "-" "250" "100" "90" "80" "0.12" "Clean Room Manufacturing, R&D" "Tue_Mar_27_14:00:08_EDT_2018"

@@ -23,8 +23,6 @@ dbsheet13 = read_excel(db,13)
 dbsheet14 = read_excel(db,14)
 
 # Create initiator for user_data.csv that will be used by script_apply_userdata4SE to create the first user_data.csv.latest.csv file.  When this initiator is copied to user_data.csv (the historical record of all user data saves), this effectively removes all memory of past user actions.  To preserve this memory, concatenate the initatior file and the current user_data.csv.latest.csv (with pre-pended date_seconds later than the dates in the initiator file). 
-# Note that the data being put into the initiator file is NOT the data in the TCSDB_structure.xlsx file.  It should be possible to do this, but we meed to flesh out the how we want user-input data the TCSDB data to be related.  For example, are they to be kept independent?  Should the default values appearing in the user-input panel be populated with TCSDB values?
-
 # Format of the user_data.csv file:
 # 1519139219;4 ; All locations ; Agriculture ; - ; - ; - ; Tue_Feb_20_10:06:59_EST_2018
 # 1519139225;4 ; Indooroopilly_Shopping_Centre ; - ; 250 ; 100 ; Clean Room Manufacturing, R&D ; Tue_Feb_20_10:07:05_EST_2018
@@ -39,22 +37,9 @@ init$ParentCorpID = as.integer(init$ParentCorpID)
 names(init) = c("USER.ParentCorpID", "input.rbLocations")
 init$input.cbGroupBizType <- "-"
 init$input.txtNumEmployees <- "250"
-
-#init$input.txtAssetValue <- "100"
-# The following sets the user-data initiator values to what is in the LocationValues sheet in TCSDB_structure.xlsx.
-val_tx90p = dbsheet11 %>% select(df_tx90p)
-init$input.txtAssetValue_tx90p <- unlist(val_tx90p)
-val_pdsisc = dbsheet11 %>% select(df_pdsisc)
-init$input.txtAssetValue_pdsisc <- unlist(val_pdsisc)
-val_coastalflood = dbsheet11 %>% select(df_coastalflood)
-init$input.txtAssetValue_coastalflood <- unlist(val_coastalflood)
-
-#init$input.txtghgEmissions <- "0.1"
-# The following sets the user-data initiator values to what is in the LocationValues sheet in TCSDB_structure.xlsx.
-ghg = dbsheet11 %>% select(df_carbonprice)
-init$input.txtghgEmissions <- unlist(ghg)
-
+init$input.txtAssetValue <- "100"
 init$cbBusinessFunctions <- "Clean Room Manufacturing, R&D"
+#init$cbBusinessFunctions <- c("Clean Room Manufacturing", "R&D")
 init$Date <- as.character(date)
 init$Date_seconds <- date_seconds
 init <- init %>% select(Date_seconds, everything())
@@ -65,10 +50,7 @@ names(init2) = c("USER.ParentCorpID")
 init2$input.rbLocations <- "All locations"
 init2$input.cbGroupBizType <- "Manufacturing"
 init2$input.txtNumEmployees <- "-"
-init2$input.txtAssetValue_tx90p <- "-"
-init2$input.txtAssetValue_pdsisc <- "-"
-init2$input.txtAssetValue_coastalflood <- "-"
-init2$input.txtghgEmissions <- "-"
+init2$input.txtAssetValue <- "-"
 init2$cbBusinessFunctions <- "-"
 init2$Date <- date
 init2$Date_seconds <- date_seconds
@@ -77,5 +59,4 @@ init2 <- init2 %>% select(Date_seconds, everything())
 # Concatenate the two sets and write as table:
 init3 <- rbind(init, init2)
 write.table(init3,"./data/TCSDB/user_data_initiator.csv", sep=";", row.names=FALSE, quote=FALSE, col.names=FALSE)
-write.table(init3,"./data/TCSDB/user_data_initiator.csv.header", sep=" ", row.names=FALSE, quote=TRUE, col.names=TRUE)
 
