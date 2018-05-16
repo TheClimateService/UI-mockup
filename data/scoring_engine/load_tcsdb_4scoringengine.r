@@ -32,6 +32,7 @@ dbsheet14 = read_excel(db,14)
 
 locall = dbsheet3
 loc= dbsheet3 %>% select(ParentCorpID, LocationID, LocationName)
+# Done by load_tcsdb.r:  loc_lonlat= dbsheet3 %>% select(lon, lat, ParentCorpID, LocationID, LocationName)
 corp = dbsheet4
 cat = dbsheet5
 subcat = dbsheet6 %>% select(TCFDSubCatID, TCFDCategoryID, TCFDSubCatName)
@@ -42,6 +43,7 @@ damagefunc = dbsheet12
 # Create tables of locations,risks, values, and DFs. 
 write.table(loc,"./nonphysical/locations.csv", sep=";")
 write.table(locall,"./nonphysical/locations4SE.csv", sep=";", row.names=FALSE)
+# Done by load_tcsdb.r:  write.table(loc_lonlat,"./nonphysical/locations4cmipdata.csv", sep=" ", row.names=FALSE)
 write.table(locvalues,"./nonphysical/locationvalues4SE.csv", sep=";", row.names=FALSE)
 #write.table(locvalues,"./nonphysical/junk.csv", sep=";", row.names=FALSE)
 write.table(riskfac,"./nonphysical/riskfactors.csv", sep=";")

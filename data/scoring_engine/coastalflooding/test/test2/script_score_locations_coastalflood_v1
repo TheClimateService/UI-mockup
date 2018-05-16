@@ -65,7 +65,8 @@ awk '{nfutperiods=9; yhist=$(NF-nfutperiods);  \
           if(value=="NA") score[i]=value; else score[i]=$(NF-nfutperiods+i)-yhist;  \
           scoreall=scoreall" "score[i]};  \
       print $1,scoreall; scoreall=""}' temp12 > temp13
-   # (used when including trace information for debugging) print $4,$5,$6,$7,$8,$9,$10,scoreall; scoreall=""}' temp12 > temp13
+   # (used when including trace information for debugging) 
+   # print $4,$5,$6,$7,$8,$9,$10,scoreall; scoreall=""}' temp12 > temp13
 
 echo "df_used dperiod1 dperiod2 dperiod3 dperiod4 dperiod5 dperiod6 dperiod7 dperiod8 dperiod9" > temp13.hdr
 cat temp13.hdr temp13 > temp14

@@ -1,0 +1,24 @@
+
+awk '{xhist=$(NF-9); startxrcp=NF-8; yrcpall=""; xrcpindall="";  \
+      for(i=startxrcp; i<=NF; i++) {xrcp[i]=$i; xrcpindex[i]=999; yrcp[i]=999};  \
+      split($2,xarray,";"); xlen=length(xarray);  \
+      split($3,yarray,";"); ylen=length(yarray);  \
+      for(i=2; i<=xlen; i++) if(xhist>=xarray[i-1] && xhist<xarray[i]) xindex=i-1;  \
+      yhist= yarray[xindex] + (xhist-xarray[xindex])*(yarray[xindex+1] - yarray[xindex]) / (xarray[xindex+1] - xarray[xindex]);  \
+      for(i=startxrcp; i<=NF; i++) {  \
+        yrcp[i]=1;  \
+        if(xrcp[i]=="Inf") yrcp[i]="NA";  \
+        if(xrcp[i]!="Inf" && xrcp[i]!="NA") {  \
+          for(j=2; j<=xlen; j++) if(xrcp[i]>=xarray[j-1] && xrcp[i]<xarray[j]) {xrcpindex[i]=j-1; lastxrcpindex=j-1};  \
+          deltay = yarray[xrcpindex[i]+1] - yarray[xrcpindex[i]];  \
+          deltax = xarray[xrcpindex[i]+1] - xarray[xrcpindex[i]];  \
+	  yrcp[i] = deltax; \
+          #if(deltax>0) yrcp[i]=yarray[xrcpindex[i]] + (xrcp[i]-xarray[xrcpindex[i]])*(deltay / deltax);  \
+          #      else {if(xrcpindex[i]!=999) yrcp[i]=yarray[xrcpindex[i]]; else yrcp[i]=yarray[ylen] };  \
+          };  \
+        if(xrcp[i]=="NA") yrcp[i]=yarray[lastxrcpindex + 1]
+        yrcpall=yrcpall" "yrcp[i]; xrcpindall=xrcpindall" "xrcpindex[i]  \
+       };  \
+      print $0,yhist,yrcpall,xrcpindall}' temp11 > temp12test
+
+

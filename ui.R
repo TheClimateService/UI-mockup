@@ -39,7 +39,9 @@ library(data.table)
 # library(shinycssloaders)  # enables withSpinner
 library(webshot)
 
+# --------------------------------------
 # Data
+# --------------------------------------
 
 source("./data/TCSDB/load_tcsdb.r")
 #source("./data/scoring_engine/load_tcsdb_4scoringengine.r")
@@ -60,6 +62,8 @@ source("./data/financial/load_financial_data.r")
 fl_dept <- extract_hazus_functions()
 hazus_building_flood_damage_function_names = read.table("./data/hazus/hazus_flood_depth_damage.csv.bldg.list", header=TRUE)
 
+# --------------------------------------
+# --------------------------------------
 ui <- dashboardPage(title="The Climate Service",
 	skin="black",
   #includeScript("www/message-handler.js"),
@@ -68,7 +72,9 @@ ui <- dashboardPage(title="The Climate Service",
   	title = img(src="logo-TCS-small.png", alt = "TCS", height = 50, align = "left")
   ),
 
+# --------------------------------------
   ## Sidebar content
+# --------------------------------------
   dashboardSidebar(
 	width=280,
 	useShinyjs(),
@@ -106,7 +112,10 @@ ui <- dashboardPage(title="The Climate Service",
     	) #sidebarMenu
   ), #dashboardSidebar
 
+
+# --------------------------------------
   ## Body content
+# --------------------------------------
   dashboardBody(
     tabItems(
 
@@ -223,8 +232,11 @@ ui <- dashboardPage(title="The Climate Service",
 
               )#conditionalPanel
          ),#box
+
          actionButton("btnConfig","Analyze"),
-         actionButton("button_save_data_corp","SAVE DATA")
+         actionButton("button_save_data_corp","SAVE DATA"),
+	 checkboxInput("checkbox_plots4report_maps", label = "Capture each viewed map for report", value = FALSE)
+        
         )#fluidRow
     ),#tabItem
 
@@ -647,18 +659,17 @@ ui <- dashboardPage(title="The Climate Service",
         
 	tabBox(width=12,
 
-        tabPanel(title = "TEMPERATURE",
+        tabPanel(title = "TEMPERATURE (Regions)",
 	icon = icon("thermometer-three-quarters"),
 
         fluidRow(
 	  column(4,
-          selectInput("temperatureProjectionLocation","Select Location for Temperature Projections",
+          selectInput("temperatureProjectionLocation","Select Region for Temperature Projections",
 		c("Phoenix, AZ", "Queens, NY", "Western Equatoria, South Sudan"),
 		selected="Phoenix, AZ"
                     )
 		)
         ), #fluidrow
-	  
 
         fluidRow(
 	# More information on cascading style sheets at: http://shiny.rstudio.com/articles/css.html.
@@ -673,6 +684,149 @@ ui <- dashboardPage(title="The Climate Service",
             sliderInput("bins", "Number of bins:", 10, 100, 50, step=10, animate=TRUE)
           )
         ) #fluidrow
+	),  #tabPanel
+
+        tabPanel(title = "TEMPERATURE (Facilities)",
+	icon = icon("thermometer-three-quarters"),
+
+        fluidRow(
+	  column(4,
+            # [from source("./data/financial/load_financial_data.r") ]
+          selectInput("temperature_facility","Search Company Facilities (locID, corpID, location)", width=400, facility_locations$LocationID_ParentCorpID_LocationName)
+	  ), # column
+
+	  column(4, offset=2,
+            # [from source("./data/financial/load_financial_data.r") ]
+          selectInput("temperature_facility2","Search Company Facilities (locID, corpID, location)", width=400, facility_locations$LocationID_ParentCorpID_LocationName)
+	  ) # column
+        ), #fluidrow
+
+        fluidRow(
+	  column(2,
+ 	  selectInput("temperature_facility_scenario", "Select Scenario", c("Historical","RCP8.5","RCP4.5"), width=300) 
+	  ), # column
+
+	  column(2,
+ 	  selectInput("temperature_facility_period", "Select Period", c("1980s","1990s","2020s","2030s","2040s","2050s","2060s","2070s","2080s","2090s"), width=300) 
+	  ), # column
+
+	  column(2,
+ 	  selectInput("temperature_facility_season", "Select Season", c("Entire Year", "DJF", "MAM", "JJA", "SON"), width=300) 
+	  ), # column
+
+	  column(2,
+ 	  selectInput("temperature_facility_scenario2", "Select Scenario", c("Historical","RCP8.5","RCP4.5"), width=300) 
+	  ), # column
+
+	  column(2,
+ 	  selectInput("temperature_facility_period2", "Select Period", c("1980s","1990s","2020s","2030s","2040s","2050s","2060s","2070s","2080s","2090s"), width=300) 
+	  ), # column
+
+	  column(2,
+ 	  selectInput("temperature_facility_season2", "Select Season", c("Entire Year", "DJF", "MAM", "JJA", "SON"), width=300) 
+	  ) # column
+
+        ), #fluidrow
+
+        fluidRow(
+          box(plotOutput("temp_facilities1", height = 200)),
+          box(plotOutput("temp_facilities2", height = 200))
+        ), #fluidrow
+
+        fluidRow(
+	  column(2,
+	  # XXX input below should come from a header file created when the derived-variable generator is run.  Read the header once at the beginning of ui.R.  ./functions/setup_climate_derived_variable_histogram.r will also need to be modified to select the correct derived variable depending on this input field.
+ 	  selectInput("temperature_facility_derived_variable", "Select Derived Variable", c("Maximum","Minimum","Days Above 25C","Days Above 30C","Days Above 35C"), width=300) 
+	  ), # column
+
+	  column(2, offset=4,
+ 	  selectInput("temperature_facility_derived_variable2", "Select Derived Variable", c("Maximum","Minimum","Days Above 25C","Days Above 30C","Days Above 35C"), width=300) 
+	  ) # column
+
+        ), #fluidrow
+
+        fluidRow(
+          box(plotOutput("temp_facilities3", height = 200)),
+          box(plotOutput("temp_facilities4", height = 200)),
+          box(title="Ensemble Distributions Evolve Through Time", background = "red", solidHeader = TRUE, plotOutput("temp_facilities5", height = 300)),
+          box(
+            title = "Climate Data Controls",
+            sliderInput("bins_temp_facilities", "Number of bins:", 10, 100, 50, step=10, animate=TRUE)
+          )
+        ) #fluidrow
+
+	),  #tabPanel
+
+        tabPanel(title = "PRECIPITATION (Facilities)",
+	icon = icon("thermometer-three-quarters"),
+
+        fluidRow(
+	  column(4,
+            # [from source("./data/financial/load_financial_data.r") ]
+          selectInput("precip_facility","Search Company Facilities (locID, corpID, location)", width=400,
+                      facility_locations$LocationID_ParentCorpID_LocationName)
+	  ), # column
+
+	  column(4, offset=2,
+            # [from source("./data/financial/load_financial_data.r") ]
+          selectInput("precip_facility2","Search Company Facilities (locID, corpID, location)", width=400,
+                      facility_locations$LocationID_ParentCorpID_LocationName)
+	  ) # column
+        ), #fluidrow
+
+        fluidRow(
+	  column(2,
+ 	  selectInput("precip_facility_scenario", "Select Scenario", c("Historical","RCP8.5","RCP4.5"), width=300) 
+	  ), # column
+
+	  column(2,
+ 	  selectInput("precip_facility_period", "Select Period", c("1980s","1990s","2020s","2030s","2040s","2050s","2060s","2070s","2080s","2090s"), width=300) 
+	  ), # column
+
+	  column(2,
+ 	  selectInput("precip_facility_season", "Select Season", c("Entire Year", "DJF", "MAM", "JJA", "SON"), width=300) 
+	  ), # column
+
+	  column(2,
+ 	  selectInput("precip_facility_scenario2", "Select Scenario", c("Historical","RCP8.5","RCP4.5"), width=300) 
+	  ), # column
+
+	  column(2,
+ 	  selectInput("precip_facility_period2", "Select Period", c("1980s","1990s","2020s","2030s","2040s","2050s","2060s","2070s","2080s","2090s"), width=300) 
+	  ), # column
+
+	  column(2,
+ 	  selectInput("precip_facility_season2", "Select Season", c("Entire Year", "DJF", "MAM", "JJA", "SON"), width=300) 
+	  ) # column
+
+        ), #fluidrow
+
+        fluidRow(
+          box(plotOutput("precip_facilities1", height = 200)),
+          box(plotOutput("precip_facilities2", height = 200))
+        ), #fluidrow
+
+        fluidRow(
+	  column(2,
+ 	  selectInput("precip_facility_derived_variable", "Select Derived Variable", c("Maximum","Minimum","Days Above"), width=300) 
+	  ), # column
+
+	  column(2,
+ 	  selectInput("precip_facility_derived_variable2", "Select Derived Variable", c("Maximum","Minimum","Days Above"), width=300) 
+	  ) # column
+
+        ), #fluidrow
+
+        fluidRow(
+          box(plotOutput("precip_facilities3", height = 200)),
+          box(plotOutput("precip_facilities4", height = 200)),
+          box(title="Ensemble Distributions Evolve Through Time", background = "red", solidHeader = TRUE, plotOutput("precip_facilities5", height = 300)),
+          box(
+            title = "Climate Data Controls",
+            sliderInput("bins_precip_facilities", "Number of bins:", 50, 400, 200, step=50, animate=TRUE)
+          )
+        ) #fluidrow
+
 	),  #tabPanel
 
         tabPanel(title = "SEA LEVEL (NoAm)",
@@ -809,44 +963,39 @@ ui <- dashboardPage(title="The Climate Service",
         h2("Sector-specific impact functions quantify impacts on infrastructure, workforce, revenue..."),
         tabBox(width=12,
  
-        tabPanel(title = "FUNCTION BUILDER",
-		 icon = icon("wrench"), 
-	fluidRow(
-          box(title="Impact Function - Tailored", background = "red", solidHeader = TRUE, plotOutput("impactplot3", height = 200)),
-          box(
-            title = "Weight of Sigmoidal and Quadratic Contributions",
-            sliderInput("impactfunctionweight", "Sigmoid weight (quadratic weight is the remainder):", 0, 1, 0.5, step=0.1, animate=TRUE)
-          )
-	),
-        
-	fluidRow(
-          box(title="Sigmoidal Contribution", background = "blue", solidHeader = TRUE, plotOutput("impactplot1", height = 200)),
-          box(title="Quadratic Contribution", background = "blue", solidHeader = TRUE, plotOutput("impactplot2", height = 200)),
-          box(
-            title = "Impact Function Controls - Sigmoidal",
-            sliderInput("sigmoidlimit", "Sigmoid limit:", -100, 100, -75, step=10, animate=TRUE),
-            sliderInput("sigmoidsteepness", "Sigmoid steepness:", 0.1, 10, 2, step=0.5, animate=TRUE),
-            sliderInput("sigmoidmidpoint", "Sigmoid midpoint:", 270, 320, 295, step=1, animate=TRUE)
-          ),
-          box(
-            title = "Impact Function Controls - Quadratic",
-            sliderInput("quadraticlimit", "Quadratic limit:", 10, 100, 50, step=10, animate=TRUE),
-            sliderInput("quadraticshape", "Quadratic shape:", -20, 20, -4, step=2, animate=TRUE),
-            sliderInput("quadraticmidpoint", "Quadratic midpoint:", 270, 320, 295, step=1, animate=TRUE)
-          )
-        )
-	), #tabPanel
-
 	tabPanel(title = "FITTED", 
 		 icon = icon("line-chart"), 
                  #helpText("Fitted functions linked to climate variables"),
+
 	fluidRow(
-	  column(3,
-	  h4("Electricity Load Vs. Daily Average Temperature"),
-          imageOutput("impactplot_elecload", height = 500, width=500)
+	  column(6,
+	  h4("Energy Expenditures Vs. Global Temperature"),
+          imageOutput("energy_expenditure_temperature", height = 500, width=500)
 	  ),
 
-	  column(6, offset=3,
+	  column(6,
+	  h4("Electricity Load Vs. Daily Average Temperature"),
+          imageOutput("impactplot_elecload", height = 500, width=500)
+	  )
+	), #fluidrow
+
+	fluidRow(
+	  column(6,
+	  h4("Labor Productivity Vs. Global Temperature"),
+          imageOutput("labor_productivity_temperature", height = 500, width=500)
+	  ),
+
+	  column(6,
+	  h4("GDP Reduction Vs. Global Temperature"),
+          imageOutput("gdp_reduction_temperature", height = 500, width=500)
+	  ),
+
+	  column(6,
+	  h4("Mortality Vs. Global Temperature"),
+          imageOutput("mortality_temperature", height = 500, width=500)
+	  ),
+
+	  column(6,
 	  h4("Building Damage Vs. Flood Depth"),
           #selectInput("hazus_damage_function_id","Damage Function Number",c(1:657)),
           selectInput("hazus_damage_function_id","Select Damage Function", hazus_building_flood_damage_function_names),
@@ -856,14 +1005,26 @@ ui <- dashboardPage(title="The Climate Service",
 	), #fluidrow
 
 	fluidRow(
-	  column(3, offset=0,
+	  column(6, offset=0,
+	  h4("Crop Yields Vs. Global Temperature"),
+          imageOutput("crop_yields_temperature", height = 500, width=500)
+	  ),
+
+	  column(6, offset=0,
 	  h4("Corn Yield Vs. Drought Return Period"),
           imageOutput("impactplot_corn_drought_return_period", height = 500, width=500)
 	  ),
 
-	  column(3, offset=3,
+	  column(6, offset=0,
 	  h4("Agricultural Income in Brazil Vs. Rainfall"),
           imageOutput("impactplot_agriculture_brazil", height = 500, width=500)
+	  )
+	), #fluidrow
+
+	fluidRow(
+	  column(6, offset=0,
+	  h4("Crime Vs. Global Temperature"),
+          imageOutput("crime_temperature", height = 500, width=500)
 	  )
 	), #fluidrow
 
@@ -950,7 +1111,36 @@ ui <- dashboardPage(title="The Climate Service",
 	  )
 
 	)
-      ) #tabPanel  
+      ), #tabPanel
+
+        tabPanel(title = "FUNCTION BUILDER",
+		 icon = icon("wrench"), 
+	fluidRow(
+          box(title="Impact Function - Tailored", background = "red", solidHeader = TRUE, plotOutput("impactplot3", height = 200)),
+          box(
+            title = "Weight of Sigmoidal and Quadratic Contributions",
+            sliderInput("impactfunctionweight", "Sigmoid weight (quadratic weight is the remainder):", 0, 1, 0.5, step=0.1, animate=TRUE)
+          )
+	),
+        
+	fluidRow(
+          box(title="Sigmoidal Contribution", background = "blue", solidHeader = TRUE, plotOutput("impactplot1", height = 200)),
+          box(title="Quadratic Contribution", background = "blue", solidHeader = TRUE, plotOutput("impactplot2", height = 200)),
+          box(
+            title = "Impact Function Controls - Sigmoidal",
+            sliderInput("sigmoidlimit", "Sigmoid limit:", -100, 100, -75, step=10, animate=TRUE),
+            sliderInput("sigmoidsteepness", "Sigmoid steepness:", 0.1, 10, 2, step=0.5, animate=TRUE),
+            sliderInput("sigmoidmidpoint", "Sigmoid midpoint:", 270, 320, 295, step=1, animate=TRUE)
+          ),
+          box(
+            title = "Impact Function Controls - Quadratic",
+            sliderInput("quadraticlimit", "Quadratic limit:", 10, 100, 50, step=10, animate=TRUE),
+            sliderInput("quadraticshape", "Quadratic shape:", -20, 20, -4, step=2, animate=TRUE),
+            sliderInput("quadraticmidpoint", "Quadratic midpoint:", 270, 320, 295, step=1, animate=TRUE)
+          )
+        )
+	) #tabPanel
+
       ) #tabBox
       ),
 
@@ -1164,6 +1354,12 @@ ui <- dashboardPage(title="The Climate Service",
         fluidRow(
          actionButton("button_runSE_with_userdata","RUN SCORING INCLUDING USER DATA", icon = icon("cog"), 
 		style = "color: white; background-color: orange")
+        ), #fluidRow
+	br(),
+
+        fluidRow(
+         actionButton("button_remove_report_graphics","RESET REPORT CONTENTS - REMOVE ALL REPORT GRAPHICS FOR CURRENT USER", icon = icon("cog"), 
+		style = "color: white; background-color: red")
         ) #fluidRow
 
       ), #tabItem

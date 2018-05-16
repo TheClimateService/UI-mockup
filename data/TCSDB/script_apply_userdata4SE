@@ -9,6 +9,8 @@
 # 1519139219;4 ; All locations ; Agriculture ; - ; - ; - ; Tue_Feb_20_10:06:59_EST_2018
 # 1519139225;4 ; Indooroopilly_Shopping_Centre ; - ; 250 ; 100 ; Clean Room Manufacturing, R&D ; Tue_Feb_20_10:07:05_EST_2018
 # The columns above are:  "Date_seconds" "USER.ParentCorpID" "input.rbLocations" "input.cbGroupBizType" "input.txtNumEmployees" "input.txtAssetValue" "cbBusinessFunctions" "Date"
+# 1525795539;1;Boise;-;250;100;90;80;0.12;Clean Room Manufacturing, R&D;Tue_May__8_12:05:39_EDT_2018
+# 1525795539;1;All locations;Manufacturing;-;-;-;-;-;-;Tue_May__8_12:05:39_EDT_2018
 
 # Format of the locationvalues4SE.csv file:
 # "LocationID";"ParentCorpID";"LocationName";"df_tx90p";"df_pdsisc";"df_coastalflood";"df_carbonprice";"df_tbd2";"df_tbd3"

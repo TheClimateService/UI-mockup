@@ -124,17 +124,49 @@ server <- function(input, output, session) {
    #Maps
 
    output$facility_location_map <- renderLeaflet({
+    map <- (
      leaflet(data = subset(corpLocations, ParentCorpID == USER$ParentCorpID, select = LocationID:lat)) %>%
-       addTiles() %>%
+       # addTiles() %>%
+       # export below does not capture map tiles if addTiles() is used.
+       # see https://www.rdocumentation.org/packages/leaflet/versions/1.1.0/topics/addProviderTiles and links therein to see specific providers.
+       addProviderTiles("OpenStreetMap.Mapnik") %>%
        addScaleBar() %>%
        addMarkers(~lon, ~lat, popup = ~as.character(LocationName))
+     )
+
+    if(input$checkbox_plots4report_maps=="TRUE") {
+      dirname <- paste("./report/",USER$ParentCorpName,"/")
+      dirname <- gsub(" ", "", dirname)
+      system( paste("mkdir",dirname) )
+      plotfile <- paste(dirname, USER$ParentCorpName, "-", input$rbLocations, "-map-", Sys.Date(), ".png", sep="")
+      plotfile <- gsub(" ", "", plotfile)
+      export(map, plotfile)
+      } #endif
+
+    map
    })
 
    output$individual_location_map <- renderLeaflet({
+    map <- (
      leaflet(data = subset(corpLocations, ParentCorpID == USER$ParentCorpID & LocationName == input$rbLocations, select = LocationID:lat)) %>%
-       addTiles() %>%
+       # addTiles() %>%
+       # export below does not capture map tiles if addTiles() is used.
+       # see https://www.rdocumentation.org/packages/leaflet/versions/1.1.0/topics/addProviderTiles and links therein to see specific providers.
+       addProviderTiles("OpenStreetMap.Mapnik") %>%
        addScaleBar() %>%
        addMarkers(~lon, ~lat, popup = ~as.character(LocationName))
+     )
+
+    if(input$checkbox_plots4report_maps=="TRUE") {
+      dirname <- paste("./report/",USER$ParentCorpName,"/")
+      dirname <- gsub(" ", "", dirname)
+      system( paste("mkdir",dirname) )
+      plotfile <- paste(dirname, USER$ParentCorpName, "-", input$rbLocations, "-map-", Sys.Date(), ".png", sep="")
+      plotfile <- gsub(" ", "", plotfile)
+      export(map, plotfile)
+      } #endif
+
+    map
    })
    
    observeEvent(input$btnConfig, {
@@ -504,7 +536,7 @@ server <- function(input, output, session) {
 	  data = read.table("./data/scoring_engine/coastalflooding/input4r.nearest.gtsr.segment", header=TRUE)
 	  data2 = read.table("./data/scoring_engine/coastalflooding/future_annprob_fromR", header=TRUE)
 	  locs <- select(data, LocationID_ParentCorpID_LocationName)
-	  annPhist100_historical <- matrix(0.01, nrow=151)
+	  annPhist100_historical <- matrix(0.01, nrow=length(locs))
 	  histvalues <- data.frame(annPhist100_historical)
 	  nd <- cbind(locs, histvalues, data2)
 	  values = nd %>% filter(nd$LocationID_ParentCorpID_LocationName==key) %>% select(annPhist100_historical:annPhist100_rcp85_2090)
@@ -1149,7 +1181,7 @@ server <- function(input, output, session) {
     titlename <- paste(input$TCSDB_damage_function_id_family,"damage functions") 
     colorlist <- c("blue","red","green","orange","black","cyan","magenta","yellow","gray")
     #p <- plot(xvalues2plot, yvalues2plot, lwd=3, col="orange", main=data$description, xlab=xlabel, ylab=ylabel, type="b")
-    p <- plot(xvalues2plot, yvalues2plot, lwd=3, col=colorlist[1], main=data$description, xlab="", ylab="", ann=FALSE, type="b")
+    p <- plot(xvalues2plot, yvalues2plot, ylim=c(0,100), lwd=3, col=colorlist[1], main=data$description, xlab="", ylab="", ann=FALSE, type="b")
     for(i in 2:length(xvalues)) {
         xvalues2plot <- as.numeric( unlist( strsplit(xvalues[i], ";") ) )
         yvalues2plot <- as.numeric( unlist( strsplit(yvalues[i], ";") ) )
@@ -1196,6 +1228,13 @@ server <- function(input, output, session) {
         system("./data/TCSDB/script_apply_userdata4SE ./data/TCSDB/user_data.csv ./data/scoring_engine/nonphysical/locationvalues4SE.csv")
         system("./data/scoring_engine/script_runSE_from_app_with_userdata")
         }) # end withProgress
+      }) # end observeEvent
+
+  observeEvent(input$button_remove_report_graphics, {
+      #dirname <- paste("./report/",USER$ParentCorpName,"/*map*png")
+      dirname <- paste("./report/",USER$ParentCorpName,"/*png")
+      dirname <- gsub(" ", "", dirname)
+      system( paste("rm",dirname) )
       }) # end observeEvent
 
 # ----------------------------
@@ -1672,6 +1711,7 @@ server <- function(input, output, session) {
   } # endif
 
    if(input$temperatureProjectionLocation=="Phoenix, AZ") {
+	# Each row in the loca data below consists of 365 values for a single year at a given location from a single model.  The histogram includes values from all rows.
 	d <- read.table("./data/temperature/loca/phx/tasmax_day_input4r.phx.4locs.32models.1981-2000.annual", header=FALSE)
 	d <- d - 273.15
 	d <- d %>% select(V152:243)  # summer JJA
@@ -1868,6 +1908,88 @@ server <- function(input, output, session) {
 
   }) # end plot
 
+  output$temp_facilities1 <- renderPlot({
+	datadir <- "./data/temperature/nex-gddp/facilities/tasmax"
+	input_facility <- input$temperature_facility
+	input_scenario <- input$temperature_facility_scenario
+	input_period <- input$temperature_facility_period
+	input_season <- input$temperature_facility_season
+	input_bins <- input$bins_temp_facilities
+
+	source("./functions/setup_climate_variable_histogram.r", local=TRUE)
+	d <- d - 273.15
+	dt <- t(d)
+	bins <- seq(min(dt), max(dt), length.out = input_bins + 1)
+	hist(dt, breaks=bins, col = 'skyblue', border = 'white', main=paste(filename,"(21 models, NEX-GDDP)"), xlab="Daily Maximum Temperature (degC)", xlim=c(floor(min(dt)), ceiling(max(dt)) ) )
+
+  }) # end plot
+
+  output$temp_facilities2 <- renderPlot({
+	datadir <- "./data/temperature/nex-gddp/facilities/tasmax"
+	input_facility <- input$temperature_facility2
+	input_scenario <- input$temperature_facility_scenario2
+	input_period <- input$temperature_facility_period2
+	input_season <- input$temperature_facility_season2
+	input_bins <- input$bins_temp_facilities
+
+	source("./functions/setup_climate_variable_histogram.r", local=TRUE)
+	d <- d - 273.15
+	dt <- t(d)
+	bins <- seq(min(dt), max(dt), length.out = input_bins + 1)
+	hist(dt, breaks=bins, col = 'skyblue', border = 'white', main=paste(filename,"(21 models, NEX-GDDP)"), xlab="Daily Maximum Temperature (degC)", xlim=c(floor(min(dt)), ceiling(max(dt)) ) )
+
+  }) # end plot
+
+  output$temp_facilities3 <- renderPlot({
+	datadir <- "./data/temperature/nex-gddp/facilities/tasmax"
+	input_facility <- input$temperature_facility
+	input_scenario <- input$temperature_facility_scenario
+	input_period <- input$temperature_facility_period
+	input_derived_variable <- input$temperature_facility_derived_variable
+	input_bins <- input$bins_temp_facilities
+
+	source("./functions/setup_climate_derived_variable_histogram.r", local=TRUE)
+	# d <- d - 273.15  # derived variable max/min is in degC
+	dt <- t(d)
+	bins <- seq(min(dt), max(dt), length.out = input_bins + 1)
+	label <- "Annual Number of Days Above Specified Temperature"
+	if(input_derived_variable=="Maximum" || input_derived_variable=="Minimum") label <- "Daily Maximum Temperature (degC)"
+	hist(dt, breaks=bins, col = 'skyblue', border = 'white', main=paste(filename,"(21 models, NEX-GDDP)"), xlab=label, xlim=c(floor(min(dt)), ceiling(max(dt)) ) )
+
+  }) # end plot
+
+  output$precip_facilities1 <- renderPlot({
+	datadir <- "./data/precipitation/nex-gddp/facilities/pr"
+	input_facility <- input$precip_facility
+	input_scenario <- input$precip_facility_scenario
+	input_period <- input$precip_facility_period
+	input_season <- input$precip_facility_season
+	input_bins <- input$bins_precip_facilities
+
+	source("./functions/setup_climate_variable_histogram.r", local=TRUE)
+	d <- d*24*60*60
+	dt <- t(d)
+        bins <- seq(min(dt), max(dt), length.out = input$bins_precip_facilities + 1)
+	hist(dt, breaks=bins, col = 'skyblue', border = 'white', main=paste(filename,"(21 models, NEX-GDDP)"), sub=paste("Maximum value =", max(dt), "(mm)"), xlab="Daily Precipitation (mm)", xlim=c(floor(min(dt)), ceiling(max(dt)/10) ) )
+
+  }) # end plot
+
+  output$precip_facilities2 <- renderPlot({
+	datadir <- "./data/precipitation/nex-gddp/facilities/pr"
+	input_facility <- input$precip_facility2
+	input_scenario <- input$precip_facility_scenario2
+	input_period <- input$precip_facility_period2
+	input_season <- input$precip_facility_season2
+	input_bins <- input$bins_precip_facilities
+
+	source("./functions/setup_climate_variable_histogram.r", local=TRUE)
+	d <- d*24*60*60
+	dt <- t(d)
+        bins <- seq(min(dt), max(dt), length.out = input$bins_precip_facilities + 1)
+	hist(dt, breaks=bins, col = 'skyblue', border = 'white', main=paste(filename,"(21 models, NEX-GDDP)"), sub=paste("Maximum value =", max(dt), "(mm)"), xlab="Daily Precipitation (mm)", xlim=c(floor(min(dt)), ceiling(max(dt)/10) ) )
+
+  }) # end plot
+
   output$sealevel_extremes_plot1 <- renderPlot({
 	location_parameters = filter(ewl,name==input$extremewaterLocation) %>% select(3:8)
       # z contains the location, scale, and shape parameters in rows 1, 3, and 5 of column 1.
@@ -1901,6 +2023,7 @@ server <- function(input, output, session) {
   output$sealevel_extremes_plot3 <- renderPlot({
 	loc <- input$extremewaterLocation2_with_slr_station
 	scenario <- input$world_slr_scenario
+	show_sealevel_world_plots <- "TRUE"
 	source("./data/sealevel_world/plot_sealevel_data_world_ewl_slr.r", local=TRUE)
   })
 
@@ -2083,6 +2206,30 @@ output$drought_frequencies_facility <- renderPlot({
     wt1 = input$impactfunctionweight
     wt2 = 1 - wt1
     plot(x,wt1*sigmoid(x,input$sigmoidlimit,input$sigmoidsteepness,input$sigmoidmidpoint) + wt2*quadratic(x,input$quadraticlimit,input$quadraticshape,input$quadraticmidpoint), type="l", lwd=3, lty=1, col="red", xlim=c(270,320), ylim=c(-100,100), xlab="Daily Maximum Surface Temperature (degK)", ylab="Relative Impact")
+  })
+
+  output$energy_expenditure_temperature <- renderPlot({
+    source("./functions/energy_expenditure_temperature.r", local=TRUE)
+  })
+
+  output$labor_productivity_temperature <- renderPlot({
+    source("./functions/labor_productivity_temperature.r", local=TRUE)
+  })
+
+  output$gdp_reduction_temperature <- renderPlot({
+    source("./functions/gdp_reduction_temperature.r", local=TRUE)
+  })
+
+  output$mortality_temperature <- renderPlot({
+    source("./functions/mortality_temperature.r", local=TRUE)
+  })
+
+  output$crop_yields_temperature <- renderPlot({
+    source("./functions/crop_yields_temperature.r", local=TRUE)
+  })
+
+  output$crime_temperature <- renderPlot({
+    source("./functions/crime_temperature.r", local=TRUE)
   })
 
   output$impactplot_elecload <- renderPlot({

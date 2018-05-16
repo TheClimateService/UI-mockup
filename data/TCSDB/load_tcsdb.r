@@ -22,6 +22,10 @@ dbsheet12 = read_excel(db,12)
 dbsheet13 = read_excel(db,13)
 dbsheet14 = read_excel(db,14)
 
+# Create file of lon/lat locations for CMIP data extraction.
+loc_lonlat= dbsheet3 %>% select(lon, lat, ParentCorpID, LocationID, LocationName)
+write.table(loc_lonlat,"./data/TCSDB/locations4cmipdata.csv", sep=" ", row.names=FALSE, col.names=FALSE)
+
 # Create initiator for user_data.csv that will be used by script_apply_userdata4SE to create the first user_data.csv.latest.csv file.  When this initiator is copied to user_data.csv (the historical record of all user data saves), this effectively removes all memory of past user actions.  To preserve this memory, concatenate the initatior file and the current user_data.csv.latest.csv (with pre-pended date_seconds later than the dates in the initiator file). 
 # Note that the data being put into the initiator file is NOT the data in the TCSDB_structure.xlsx file.  It should be possible to do this, but we meed to flesh out the how we want user-input data the TCSDB data to be related.  For example, are they to be kept independent?  Should the default values appearing in the user-input panel be populated with TCSDB values?
 
