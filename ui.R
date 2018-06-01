@@ -736,11 +736,12 @@ ui <- dashboardPage(title="The Climate Service",
         fluidRow(
 	  column(2,
 	  # XXX input below should come from a header file created when the derived-variable generator is run.  Read the header once at the beginning of ui.R.  ./functions/setup_climate_derived_variable_histogram.r will also need to be modified to select the correct derived variable depending on this input field.
- 	  selectInput("temperature_facility_derived_variable", "Select Derived Variable", c("Maximum","Minimum","Days Above 25C","Days Above 30C","Days Above 35C"), width=300) 
+ 	  #selectInput("temperature_facility_derived_variable", "Select Derived Variable", c("Maximum","Minimum","Days Above 25C","Days Above 30C","Days Above 35C"), width=300) 
+ 	  selectInput("temperature_facility_derived_variable", "Select Derived Variable", c("Maximum","Minimum","Days Above 25C","Days Above 30C","Days Above 35C","Average-Jan","Average-Feb","Average-Mar","Average-Apr","Average-May","Average-Jun","Average-Jul","Average-Aug","Average-Sep","Average-Oct","Average-Nov","Average-Dec"), width=300) 
 	  ), # column
 
 	  column(2, offset=4,
- 	  selectInput("temperature_facility_derived_variable2", "Select Derived Variable", c("Maximum","Minimum","Days Above 25C","Days Above 30C","Days Above 35C"), width=300) 
+ 	  selectInput("temperature_facility_derived_variable2", "Select Derived Variable", c("Maximum","Minimum","Days Above 25C","Days Above 30C","Days Above 35C","Average-Jan","Average-Feb","Average-Mar","Average-Apr","Average-May","Average-Jun","Average-Jul","Average-Aug","Average-Sep","Average-Oct","Average-Nov","Average-Dec"), width=300) 
 	  ) # column
 
         ), #fluidrow
@@ -808,11 +809,11 @@ ui <- dashboardPage(title="The Climate Service",
 
         fluidRow(
 	  column(2,
- 	  selectInput("precip_facility_derived_variable", "Select Derived Variable", c("Maximum","Minimum","Days Above"), width=300) 
+ 	  selectInput("precip_facility_derived_variable", "Select Derived Variable", c("Maximum","Minimum","Days Above 5mm","Days Above 10mm","Days Above 15mm","Days Below 0.1mm","Total-Year","Total-Jan","Total-Feb","Total-Mar","Total-Apr","Total-May","Total-Jun","Total-Jul","Total-Aug","Total-Sep","Total-Oct","Total-Nov","Total-Dec"), width=300) 
 	  ), # column
 
-	  column(2,
- 	  selectInput("precip_facility_derived_variable2", "Select Derived Variable", c("Maximum","Minimum","Days Above"), width=300) 
+	  column(2, offset=4,
+ 	  selectInput("precip_facility_derived_variable2", "Select Derived Variable", c("Maximum","Minimum","Days Above 5mm","Days Above 10mm","Days Above 15mm","Days Below 0.1mm","Total-Year","Total-Jan","Total-Feb","Total-Mar","Total-Apr","Total-May","Total-Jun","Total-Jul","Total-Aug","Total-Sep","Total-Oct","Total-Nov","Total-Dec"), width=300) 
 	  ) # column
 
         ), #fluidrow
@@ -868,12 +869,8 @@ ui <- dashboardPage(title="The Climate Service",
 		),
 	  
 	  column(3,
-          selectInput("returnLevel","Select Return Level of Concern (m)",
-	     c(0.5,1.0,1.5,2.0,2.5,3.0,4.0,4.5,5.0,5.5,6.0,6.5,7.0,7.5,8.0,8.5,9.0,9.5,10.0),
-	     #c("1","2","3","4", "5", "6", "7", "8", "9", "10"),
-	     #c(1:10),
-             selected = "1"
-                    )
+          selectInput("returnLevel","Select Return Level of Concern (m)",seq(0.2,10.0,by=0.1),selected = "1")
+	  #textInput("returnLevel","Input Return Level of Concern (m)",value="1.0")
 		)
 
         ), #fluidrow

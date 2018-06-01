@@ -162,3 +162,6 @@ LocationID_ParentCorpID_LocationName lon lat location df_tx90p df_pdsisc df_coas
 161_8_Bangalore_india 77.682396 12.924847 Bangalore_india tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	carbonprice-1  -2.463 -15.581 -19.858 -19.951 -28.588 -28.588 -41.052 -57.487 -68.734
 162_8_Los_Angeles_USA -118.140261 34.008067 Los_Angeles_USA tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	carbonprice-1  -2.463 -15.581 -19.858 -19.951 -28.588 -28.588 -41.052 -57.487 -68.734
 163_8_Pontevedra_Spain -8.625368 42.133887 Pontevedra_Spain tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	carbonprice-1  -2.463 -15.581 -19.858 -19.951 -28.588 -28.588 -41.052 -57.487 -68.734
+164_9_801_Brickell_Miami_USA -80.1921546 25.7657679 Miami_FL_USA tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	carbonprice-1  -2.463 -15.581 -19.858 -19.951 -28.588 -28.588 -41.052 -57.487 -68.734
+165_9_Xanadu_Centre_Madrid_Spain -3.9283784 40.2997836 Madrid_Spain tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	carbonprice-1  -2.463 -15.581 -19.858 -19.951 -28.588 -28.588 -41.052 -57.487 -68.734
+166_9_Ginza_1_Chome_Tokyo_Japan 139.7675366 35.6739389 Tokyo_Japan tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	carbonprice-1  -2.463 -15.581 -19.858 -19.951 -28.588 -28.588 -41.052 -57.487 -68.734

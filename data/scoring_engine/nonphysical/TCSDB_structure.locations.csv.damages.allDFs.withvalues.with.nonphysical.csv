@@ -22004,3 +22004,408 @@ Pontevedra_Spain,  Physical Risk,Chronic,Drought ,RCP8.5,2060,63,8,163
 Pontevedra_Spain,  Physical Risk,Chronic,Drought ,RCP8.5,2070,63,8,163
 Pontevedra_Spain,  Physical Risk,Chronic,Drought ,RCP8.5,2080,63,8,163
 Pontevedra_Spain,  Physical Risk,Chronic,Drought ,RCP8.5,2090,63,8,163
+801_Brickell_Miami_USA,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2010,0.083742,9,164
+801_Brickell_Miami_USA,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2020,0.529754,9,164
+801_Brickell_Miami_USA,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2030,0.675172,9,164
+801_Brickell_Miami_USA,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2040,0.678334,9,164
+801_Brickell_Miami_USA,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2050,0.971992,9,164
+801_Brickell_Miami_USA,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2060,0.971992,9,164
+801_Brickell_Miami_USA,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2070,1.39577,9,164
+801_Brickell_Miami_USA,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2080,1.95456,9,164
+801_Brickell_Miami_USA,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2090,2.33696,9,164
+801_Brickell_Miami_USA,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2010,0.314984,9,164
+801_Brickell_Miami_USA,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2020,0.770112,9,164
+801_Brickell_Miami_USA,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2030,1.86962,9,164
+801_Brickell_Miami_USA,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2040,3.57428,9,164
+801_Brickell_Miami_USA,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2050,4.43413,9,164
+801_Brickell_Miami_USA,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2060,5.01779,9,164
+801_Brickell_Miami_USA,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2070,5.75787,9,164
+801_Brickell_Miami_USA,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2080,6.34468,9,164
+801_Brickell_Miami_USA,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2090,6.86952,9,164
+801_Brickell_Miami_USA,  Transition Risk,Technology,New technology ,RCP8.5,2010,0.275611,9,164
+801_Brickell_Miami_USA,  Transition Risk,Technology,New technology ,RCP8.5,2020,0.673848,9,164
+801_Brickell_Miami_USA,  Transition Risk,Technology,New technology ,RCP8.5,2030,1.63592,9,164
+801_Brickell_Miami_USA,  Transition Risk,Technology,New technology ,RCP8.5,2040,3.1275,9,164
+801_Brickell_Miami_USA,  Transition Risk,Technology,New technology ,RCP8.5,2050,3.87986,9,164
+801_Brickell_Miami_USA,  Transition Risk,Technology,New technology ,RCP8.5,2060,4.39057,9,164
+801_Brickell_Miami_USA,  Transition Risk,Technology,New technology ,RCP8.5,2070,5.03814,9,164
+801_Brickell_Miami_USA,  Transition Risk,Technology,New technology ,RCP8.5,2080,5.55159,9,164
+801_Brickell_Miami_USA,  Transition Risk,Technology,New technology ,RCP8.5,2090,6.01083,9,164
+801_Brickell_Miami_USA,  Transition Risk,Market,Reputation damage ,RCP8.5,2010,0.196865,9,164
+801_Brickell_Miami_USA,  Transition Risk,Market,Reputation damage ,RCP8.5,2020,0.48132,9,164
+801_Brickell_Miami_USA,  Transition Risk,Market,Reputation damage ,RCP8.5,2030,1.16851,9,164
+801_Brickell_Miami_USA,  Transition Risk,Market,Reputation damage ,RCP8.5,2040,2.23393,9,164
+801_Brickell_Miami_USA,  Transition Risk,Market,Reputation damage ,RCP8.5,2050,2.77133,9,164
+801_Brickell_Miami_USA,  Transition Risk,Market,Reputation damage ,RCP8.5,2060,3.13612,9,164
+801_Brickell_Miami_USA,  Transition Risk,Market,Reputation damage ,RCP8.5,2070,3.59867,9,164
+801_Brickell_Miami_USA,  Transition Risk,Market,Reputation damage ,RCP8.5,2080,3.96542,9,164
+801_Brickell_Miami_USA,  Transition Risk,Market,Reputation damage ,RCP8.5,2090,4.29345,9,164
+801_Brickell_Miami_USA,  Transition Risk,Reputation,Materials cost ,RCP8.5,2010,0.39373,9,164
+801_Brickell_Miami_USA,  Transition Risk,Reputation,Materials cost ,RCP8.5,2020,0.96264,9,164
+801_Brickell_Miami_USA,  Transition Risk,Reputation,Materials cost ,RCP8.5,2030,2.33703,9,164
+801_Brickell_Miami_USA,  Transition Risk,Reputation,Materials cost ,RCP8.5,2040,4.46785,9,164
+801_Brickell_Miami_USA,  Transition Risk,Reputation,Materials cost ,RCP8.5,2050,5.54266,9,164
+801_Brickell_Miami_USA,  Transition Risk,Reputation,Materials cost ,RCP8.5,2060,6.27224,9,164
+801_Brickell_Miami_USA,  Transition Risk,Reputation,Materials cost ,RCP8.5,2070,7.19734,9,164
+801_Brickell_Miami_USA,  Transition Risk,Reputation,Materials cost ,RCP8.5,2080,7.93085,9,164
+801_Brickell_Miami_USA,  Transition Risk,Reputation,Materials cost ,RCP8.5,2090,8.5869,9,164
+801_Brickell_Miami_USA,  Physical Risk,Acute,Storm damage ,RCP8.5,2010,2.75611,9,164
+801_Brickell_Miami_USA,  Physical Risk,Acute,Storm damage ,RCP8.5,2020,6.73848,9,164
+801_Brickell_Miami_USA,  Physical Risk,Acute,Storm damage ,RCP8.5,2030,16.3592,9,164
+801_Brickell_Miami_USA,  Physical Risk,Acute,Storm damage ,RCP8.5,2040,31.2749,9,164
+801_Brickell_Miami_USA,  Physical Risk,Acute,Storm damage ,RCP8.5,2050,38.7986,9,164
+801_Brickell_Miami_USA,  Physical Risk,Acute,Storm damage ,RCP8.5,2060,43.9057,9,164
+801_Brickell_Miami_USA,  Physical Risk,Acute,Storm damage ,RCP8.5,2070,50.3814,9,164
+801_Brickell_Miami_USA,  Physical Risk,Acute,Storm damage ,RCP8.5,2080,55.5159,9,164
+801_Brickell_Miami_USA,  Physical Risk,Acute,Storm damage ,RCP8.5,2090,60.1083,9,164
+801_Brickell_Miami_USA,  Physical Risk,Acute,Employee impacts ,RCP8.5,2010,0.236238,9,164
+801_Brickell_Miami_USA,  Physical Risk,Acute,Employee impacts ,RCP8.5,2020,0.577584,9,164
+801_Brickell_Miami_USA,  Physical Risk,Acute,Employee impacts ,RCP8.5,2030,1.40222,9,164
+801_Brickell_Miami_USA,  Physical Risk,Acute,Employee impacts ,RCP8.5,2040,2.68071,9,164
+801_Brickell_Miami_USA,  Physical Risk,Acute,Employee impacts ,RCP8.5,2050,3.3256,9,164
+801_Brickell_Miami_USA,  Physical Risk,Acute,Employee impacts ,RCP8.5,2060,3.76334,9,164
+801_Brickell_Miami_USA,  Physical Risk,Acute,Employee impacts ,RCP8.5,2070,4.3184,9,164
+801_Brickell_Miami_USA,  Physical Risk,Acute,Employee impacts ,RCP8.5,2080,4.75851,9,164
+801_Brickell_Miami_USA,  Physical Risk,Acute,Employee impacts ,RCP8.5,2090,5.15214,9,164
+801_Brickell_Miami_USA,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2010,3.9373,9,164
+801_Brickell_Miami_USA,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2020,9.6264,9,164
+801_Brickell_Miami_USA,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2030,23.3703,9,164
+801_Brickell_Miami_USA,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2040,44.6785,9,164
+801_Brickell_Miami_USA,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2050,55.4266,9,164
+801_Brickell_Miami_USA,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2060,62.7224,9,164
+801_Brickell_Miami_USA,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2070,71.9734,9,164
+801_Brickell_Miami_USA,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2080,79.3085,9,164
+801_Brickell_Miami_USA,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2090,85.869,9,164
+801_Brickell_Miami_USA,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2010,2.052,9,164
+801_Brickell_Miami_USA,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2020,32.4183,9,164
+801_Brickell_Miami_USA,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2030,80,9,164
+801_Brickell_Miami_USA,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2040,80,9,164
+801_Brickell_Miami_USA,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2050,80,9,164
+801_Brickell_Miami_USA,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2060,80,9,164
+801_Brickell_Miami_USA,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2070,80,9,164
+801_Brickell_Miami_USA,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2080,80,9,164
+801_Brickell_Miami_USA,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2090,80,9,164
+801_Brickell_Miami_USA,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2010,0.629968,9,164
+801_Brickell_Miami_USA,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2020,1.54022,9,164
+801_Brickell_Miami_USA,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2030,3.73925,9,164
+801_Brickell_Miami_USA,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2040,7.14856,9,164
+801_Brickell_Miami_USA,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2050,8.86826,9,164
+801_Brickell_Miami_USA,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2060,10.0356,9,164
+801_Brickell_Miami_USA,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2070,11.5157,9,164
+801_Brickell_Miami_USA,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2080,12.6894,9,164
+801_Brickell_Miami_USA,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2090,13.739,9,164
+801_Brickell_Miami_USA,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2010,0.708714,9,164
+801_Brickell_Miami_USA,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2020,1.73275,9,164
+801_Brickell_Miami_USA,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2030,4.20665,9,164
+801_Brickell_Miami_USA,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2040,8.04213,9,164
+801_Brickell_Miami_USA,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2050,9.97679,9,164
+801_Brickell_Miami_USA,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2060,11.29,9,164
+801_Brickell_Miami_USA,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2070,12.9552,9,164
+801_Brickell_Miami_USA,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2080,14.2755,9,164
+801_Brickell_Miami_USA,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2090,15.4564,9,164
+801_Brickell_Miami_USA,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2010,0.472476,9,164
+801_Brickell_Miami_USA,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2020,1.15517,9,164
+801_Brickell_Miami_USA,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2030,2.80444,9,164
+801_Brickell_Miami_USA,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2040,5.36142,9,164
+801_Brickell_Miami_USA,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2050,6.65119,9,164
+801_Brickell_Miami_USA,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2060,7.52669,9,164
+801_Brickell_Miami_USA,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2070,8.63681,9,164
+801_Brickell_Miami_USA,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2080,9.51702,9,164
+801_Brickell_Miami_USA,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2090,10.3043,9,164
+801_Brickell_Miami_USA,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2010,0.118119,9,164
+801_Brickell_Miami_USA,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2020,0.288792,9,164
+801_Brickell_Miami_USA,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2030,0.701109,9,164
+801_Brickell_Miami_USA,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2040,1.34035,9,164
+801_Brickell_Miami_USA,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2050,1.6628,9,164
+801_Brickell_Miami_USA,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2060,1.88167,9,164
+801_Brickell_Miami_USA,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2070,2.1592,9,164
+801_Brickell_Miami_USA,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2080,2.37925,9,164
+801_Brickell_Miami_USA,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2090,2.57607,9,164
+801_Brickell_Miami_USA,  Opportunity,Resilience,Energy resilience ,RCP8.5,2010,0.590595,9,164
+801_Brickell_Miami_USA,  Opportunity,Resilience,Energy resilience ,RCP8.5,2020,1.44396,9,164
+801_Brickell_Miami_USA,  Opportunity,Resilience,Energy resilience ,RCP8.5,2030,3.50555,9,164
+801_Brickell_Miami_USA,  Opportunity,Resilience,Energy resilience ,RCP8.5,2040,6.70177,9,164
+801_Brickell_Miami_USA,  Opportunity,Resilience,Energy resilience ,RCP8.5,2050,8.31399,9,164
+801_Brickell_Miami_USA,  Opportunity,Resilience,Energy resilience ,RCP8.5,2060,9.40836,9,164
+801_Brickell_Miami_USA,  Opportunity,Resilience,Energy resilience ,RCP8.5,2070,10.796,9,164
+801_Brickell_Miami_USA,  Opportunity,Resilience,Energy resilience ,RCP8.5,2080,11.8963,9,164
+801_Brickell_Miami_USA,  Opportunity,Resilience,Energy resilience ,RCP8.5,2090,12.8803,9,164
+801_Brickell_Miami_USA,  Physical Risk,Chronic,Drought ,RCP8.5,2010,0,9,164
+801_Brickell_Miami_USA,  Physical Risk,Chronic,Drought ,RCP8.5,2020,0,9,164
+801_Brickell_Miami_USA,  Physical Risk,Chronic,Drought ,RCP8.5,2030,0,9,164
+801_Brickell_Miami_USA,  Physical Risk,Chronic,Drought ,RCP8.5,2040,0,9,164
+801_Brickell_Miami_USA,  Physical Risk,Chronic,Drought ,RCP8.5,2050,0,9,164
+801_Brickell_Miami_USA,  Physical Risk,Chronic,Drought ,RCP8.5,2060,0,9,164
+801_Brickell_Miami_USA,  Physical Risk,Chronic,Drought ,RCP8.5,2070,0,9,164
+801_Brickell_Miami_USA,  Physical Risk,Chronic,Drought ,RCP8.5,2080,0,9,164
+801_Brickell_Miami_USA,  Physical Risk,Chronic,Drought ,RCP8.5,2090,0,9,164
+Xanadu_Centre_Madrid_Spain,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2010,0.083742,9,165
+Xanadu_Centre_Madrid_Spain,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2020,0.529754,9,165
+Xanadu_Centre_Madrid_Spain,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2030,0.675172,9,165
+Xanadu_Centre_Madrid_Spain,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2040,0.678334,9,165
+Xanadu_Centre_Madrid_Spain,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2050,0.971992,9,165
+Xanadu_Centre_Madrid_Spain,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2060,0.971992,9,165
+Xanadu_Centre_Madrid_Spain,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2070,1.39577,9,165
+Xanadu_Centre_Madrid_Spain,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2080,1.95456,9,165
+Xanadu_Centre_Madrid_Spain,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2090,2.33696,9,165
+Xanadu_Centre_Madrid_Spain,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2010,0.058608,9,165
+Xanadu_Centre_Madrid_Spain,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2020,0.163472,9,165
+Xanadu_Centre_Madrid_Spain,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2030,0.413576,9,165
+Xanadu_Centre_Madrid_Spain,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2040,0.328712,9,165
+Xanadu_Centre_Madrid_Spain,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2050,0.809208,9,165
+Xanadu_Centre_Madrid_Spain,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2060,1.51318,9,165
+Xanadu_Centre_Madrid_Spain,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2070,2.3492,9,165
+Xanadu_Centre_Madrid_Spain,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2080,2.72661,9,165
+Xanadu_Centre_Madrid_Spain,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2090,3.36114,9,165
+Xanadu_Centre_Madrid_Spain,  Transition Risk,Technology,New technology ,RCP8.5,2010,0.051282,9,165
+Xanadu_Centre_Madrid_Spain,  Transition Risk,Technology,New technology ,RCP8.5,2020,0.143038,9,165
+Xanadu_Centre_Madrid_Spain,  Transition Risk,Technology,New technology ,RCP8.5,2030,0.361879,9,165
+Xanadu_Centre_Madrid_Spain,  Transition Risk,Technology,New technology ,RCP8.5,2040,0.287623,9,165
+Xanadu_Centre_Madrid_Spain,  Transition Risk,Technology,New technology ,RCP8.5,2050,0.708057,9,165
+Xanadu_Centre_Madrid_Spain,  Transition Risk,Technology,New technology ,RCP8.5,2060,1.32403,9,165
+Xanadu_Centre_Madrid_Spain,  Transition Risk,Technology,New technology ,RCP8.5,2070,2.05555,9,165
+Xanadu_Centre_Madrid_Spain,  Transition Risk,Technology,New technology ,RCP8.5,2080,2.38578,9,165
+Xanadu_Centre_Madrid_Spain,  Transition Risk,Technology,New technology ,RCP8.5,2090,2.94099,9,165
+Xanadu_Centre_Madrid_Spain,  Transition Risk,Market,Reputation damage ,RCP8.5,2010,0.03663,9,165
+Xanadu_Centre_Madrid_Spain,  Transition Risk,Market,Reputation damage ,RCP8.5,2020,0.10217,9,165
+Xanadu_Centre_Madrid_Spain,  Transition Risk,Market,Reputation damage ,RCP8.5,2030,0.258485,9,165
+Xanadu_Centre_Madrid_Spain,  Transition Risk,Market,Reputation damage ,RCP8.5,2040,0.205445,9,165
+Xanadu_Centre_Madrid_Spain,  Transition Risk,Market,Reputation damage ,RCP8.5,2050,0.505755,9,165
+Xanadu_Centre_Madrid_Spain,  Transition Risk,Market,Reputation damage ,RCP8.5,2060,0.945735,9,165
+Xanadu_Centre_Madrid_Spain,  Transition Risk,Market,Reputation damage ,RCP8.5,2070,1.46825,9,165
+Xanadu_Centre_Madrid_Spain,  Transition Risk,Market,Reputation damage ,RCP8.5,2080,1.70413,9,165
+Xanadu_Centre_Madrid_Spain,  Transition Risk,Market,Reputation damage ,RCP8.5,2090,2.10071,9,165
+Xanadu_Centre_Madrid_Spain,  Transition Risk,Reputation,Materials cost ,RCP8.5,2010,0.07326,9,165
+Xanadu_Centre_Madrid_Spain,  Transition Risk,Reputation,Materials cost ,RCP8.5,2020,0.20434,9,165
+Xanadu_Centre_Madrid_Spain,  Transition Risk,Reputation,Materials cost ,RCP8.5,2030,0.51697,9,165
+Xanadu_Centre_Madrid_Spain,  Transition Risk,Reputation,Materials cost ,RCP8.5,2040,0.41089,9,165
+Xanadu_Centre_Madrid_Spain,  Transition Risk,Reputation,Materials cost ,RCP8.5,2050,1.01151,9,165
+Xanadu_Centre_Madrid_Spain,  Transition Risk,Reputation,Materials cost ,RCP8.5,2060,1.89147,9,165
+Xanadu_Centre_Madrid_Spain,  Transition Risk,Reputation,Materials cost ,RCP8.5,2070,2.9365,9,165
+Xanadu_Centre_Madrid_Spain,  Transition Risk,Reputation,Materials cost ,RCP8.5,2080,3.40826,9,165
+Xanadu_Centre_Madrid_Spain,  Transition Risk,Reputation,Materials cost ,RCP8.5,2090,4.20142,9,165
+Xanadu_Centre_Madrid_Spain,  Physical Risk,Acute,Storm damage ,RCP8.5,2010,0.51282,9,165
+Xanadu_Centre_Madrid_Spain,  Physical Risk,Acute,Storm damage ,RCP8.5,2020,1.43038,9,165
+Xanadu_Centre_Madrid_Spain,  Physical Risk,Acute,Storm damage ,RCP8.5,2030,3.61879,9,165
+Xanadu_Centre_Madrid_Spain,  Physical Risk,Acute,Storm damage ,RCP8.5,2040,2.87623,9,165
+Xanadu_Centre_Madrid_Spain,  Physical Risk,Acute,Storm damage ,RCP8.5,2050,7.08057,9,165
+Xanadu_Centre_Madrid_Spain,  Physical Risk,Acute,Storm damage ,RCP8.5,2060,13.2403,9,165
+Xanadu_Centre_Madrid_Spain,  Physical Risk,Acute,Storm damage ,RCP8.5,2070,20.5555,9,165
+Xanadu_Centre_Madrid_Spain,  Physical Risk,Acute,Storm damage ,RCP8.5,2080,23.8578,9,165
+Xanadu_Centre_Madrid_Spain,  Physical Risk,Acute,Storm damage ,RCP8.5,2090,29.4099,9,165
+Xanadu_Centre_Madrid_Spain,  Physical Risk,Acute,Employee impacts ,RCP8.5,2010,0.043956,9,165
+Xanadu_Centre_Madrid_Spain,  Physical Risk,Acute,Employee impacts ,RCP8.5,2020,0.122604,9,165
+Xanadu_Centre_Madrid_Spain,  Physical Risk,Acute,Employee impacts ,RCP8.5,2030,0.310182,9,165
+Xanadu_Centre_Madrid_Spain,  Physical Risk,Acute,Employee impacts ,RCP8.5,2040,0.246534,9,165
+Xanadu_Centre_Madrid_Spain,  Physical Risk,Acute,Employee impacts ,RCP8.5,2050,0.606906,9,165
+Xanadu_Centre_Madrid_Spain,  Physical Risk,Acute,Employee impacts ,RCP8.5,2060,1.13488,9,165
+Xanadu_Centre_Madrid_Spain,  Physical Risk,Acute,Employee impacts ,RCP8.5,2070,1.7619,9,165
+Xanadu_Centre_Madrid_Spain,  Physical Risk,Acute,Employee impacts ,RCP8.5,2080,2.04496,9,165
+Xanadu_Centre_Madrid_Spain,  Physical Risk,Acute,Employee impacts ,RCP8.5,2090,2.52085,9,165
+Xanadu_Centre_Madrid_Spain,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2010,0.7326,9,165
+Xanadu_Centre_Madrid_Spain,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2020,2.0434,9,165
+Xanadu_Centre_Madrid_Spain,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2030,5.1697,9,165
+Xanadu_Centre_Madrid_Spain,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2040,4.1089,9,165
+Xanadu_Centre_Madrid_Spain,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2050,10.1151,9,165
+Xanadu_Centre_Madrid_Spain,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2060,18.9147,9,165
+Xanadu_Centre_Madrid_Spain,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2070,29.365,9,165
+Xanadu_Centre_Madrid_Spain,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2080,34.0826,9,165
+Xanadu_Centre_Madrid_Spain,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2090,42.0142,9,165
+Xanadu_Centre_Madrid_Spain,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2010,0,9,165
+Xanadu_Centre_Madrid_Spain,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2020,0,9,165
+Xanadu_Centre_Madrid_Spain,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2030,0,9,165
+Xanadu_Centre_Madrid_Spain,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2040,0,9,165
+Xanadu_Centre_Madrid_Spain,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2050,0,9,165
+Xanadu_Centre_Madrid_Spain,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2060,0,9,165
+Xanadu_Centre_Madrid_Spain,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2070,0,9,165
+Xanadu_Centre_Madrid_Spain,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2080,0,9,165
+Xanadu_Centre_Madrid_Spain,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2090,0,9,165
+Xanadu_Centre_Madrid_Spain,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2010,0.117216,9,165
+Xanadu_Centre_Madrid_Spain,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2020,0.326944,9,165
+Xanadu_Centre_Madrid_Spain,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2030,0.827152,9,165
+Xanadu_Centre_Madrid_Spain,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2040,0.657424,9,165
+Xanadu_Centre_Madrid_Spain,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2050,1.61842,9,165
+Xanadu_Centre_Madrid_Spain,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2060,3.02635,9,165
+Xanadu_Centre_Madrid_Spain,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2070,4.6984,9,165
+Xanadu_Centre_Madrid_Spain,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2080,5.45322,9,165
+Xanadu_Centre_Madrid_Spain,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2090,6.72227,9,165
+Xanadu_Centre_Madrid_Spain,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2010,0.131868,9,165
+Xanadu_Centre_Madrid_Spain,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2020,0.367812,9,165
+Xanadu_Centre_Madrid_Spain,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2030,0.930546,9,165
+Xanadu_Centre_Madrid_Spain,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2040,0.739602,9,165
+Xanadu_Centre_Madrid_Spain,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2050,1.82072,9,165
+Xanadu_Centre_Madrid_Spain,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2060,3.40465,9,165
+Xanadu_Centre_Madrid_Spain,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2070,5.2857,9,165
+Xanadu_Centre_Madrid_Spain,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2080,6.13487,9,165
+Xanadu_Centre_Madrid_Spain,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2090,7.56256,9,165
+Xanadu_Centre_Madrid_Spain,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2010,0.087912,9,165
+Xanadu_Centre_Madrid_Spain,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2020,0.245208,9,165
+Xanadu_Centre_Madrid_Spain,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2030,0.620364,9,165
+Xanadu_Centre_Madrid_Spain,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2040,0.493068,9,165
+Xanadu_Centre_Madrid_Spain,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2050,1.21381,9,165
+Xanadu_Centre_Madrid_Spain,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2060,2.26976,9,165
+Xanadu_Centre_Madrid_Spain,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2070,3.5238,9,165
+Xanadu_Centre_Madrid_Spain,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2080,4.08991,9,165
+Xanadu_Centre_Madrid_Spain,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2090,5.0417,9,165
+Xanadu_Centre_Madrid_Spain,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2010,0.021978,9,165
+Xanadu_Centre_Madrid_Spain,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2020,0.061302,9,165
+Xanadu_Centre_Madrid_Spain,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2030,0.155091,9,165
+Xanadu_Centre_Madrid_Spain,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2040,0.123267,9,165
+Xanadu_Centre_Madrid_Spain,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2050,0.303453,9,165
+Xanadu_Centre_Madrid_Spain,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2060,0.567441,9,165
+Xanadu_Centre_Madrid_Spain,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2070,0.88095,9,165
+Xanadu_Centre_Madrid_Spain,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2080,1.02248,9,165
+Xanadu_Centre_Madrid_Spain,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2090,1.26043,9,165
+Xanadu_Centre_Madrid_Spain,  Opportunity,Resilience,Energy resilience ,RCP8.5,2010,0.10989,9,165
+Xanadu_Centre_Madrid_Spain,  Opportunity,Resilience,Energy resilience ,RCP8.5,2020,0.30651,9,165
+Xanadu_Centre_Madrid_Spain,  Opportunity,Resilience,Energy resilience ,RCP8.5,2030,0.775455,9,165
+Xanadu_Centre_Madrid_Spain,  Opportunity,Resilience,Energy resilience ,RCP8.5,2040,0.616335,9,165
+Xanadu_Centre_Madrid_Spain,  Opportunity,Resilience,Energy resilience ,RCP8.5,2050,1.51726,9,165
+Xanadu_Centre_Madrid_Spain,  Opportunity,Resilience,Energy resilience ,RCP8.5,2060,2.8372,9,165
+Xanadu_Centre_Madrid_Spain,  Opportunity,Resilience,Energy resilience ,RCP8.5,2070,4.40475,9,165
+Xanadu_Centre_Madrid_Spain,  Opportunity,Resilience,Energy resilience ,RCP8.5,2080,5.11239,9,165
+Xanadu_Centre_Madrid_Spain,  Opportunity,Resilience,Energy resilience ,RCP8.5,2090,6.30213,9,165
+Xanadu_Centre_Madrid_Spain,  Physical Risk,Chronic,Drought ,RCP8.5,2010,36,9,165
+Xanadu_Centre_Madrid_Spain,  Physical Risk,Chronic,Drought ,RCP8.5,2020,63,9,165
+Xanadu_Centre_Madrid_Spain,  Physical Risk,Chronic,Drought ,RCP8.5,2030,63,9,165
+Xanadu_Centre_Madrid_Spain,  Physical Risk,Chronic,Drought ,RCP8.5,2040,63,9,165
+Xanadu_Centre_Madrid_Spain,  Physical Risk,Chronic,Drought ,RCP8.5,2050,63,9,165
+Xanadu_Centre_Madrid_Spain,  Physical Risk,Chronic,Drought ,RCP8.5,2060,63,9,165
+Xanadu_Centre_Madrid_Spain,  Physical Risk,Chronic,Drought ,RCP8.5,2070,63,9,165
+Xanadu_Centre_Madrid_Spain,  Physical Risk,Chronic,Drought ,RCP8.5,2080,63,9,165
+Xanadu_Centre_Madrid_Spain,  Physical Risk,Chronic,Drought ,RCP8.5,2090,63,9,165
+Ginza_1_Chome_Tokyo_Japan,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2010,0.083742,9,166
+Ginza_1_Chome_Tokyo_Japan,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2020,0.529754,9,166
+Ginza_1_Chome_Tokyo_Japan,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2030,0.675172,9,166
+Ginza_1_Chome_Tokyo_Japan,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2040,0.678334,9,166
+Ginza_1_Chome_Tokyo_Japan,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2050,0.971992,9,166
+Ginza_1_Chome_Tokyo_Japan,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2060,0.971992,9,166
+Ginza_1_Chome_Tokyo_Japan,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2070,1.39577,9,166
+Ginza_1_Chome_Tokyo_Japan,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2080,1.95456,9,166
+Ginza_1_Chome_Tokyo_Japan,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2090,2.33696,9,166
+Ginza_1_Chome_Tokyo_Japan,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2010,0.067504,9,166
+Ginza_1_Chome_Tokyo_Japan,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2020,0.198576,9,166
+Ginza_1_Chome_Tokyo_Japan,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2030,0.535192,9,166
+Ginza_1_Chome_Tokyo_Japan,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2040,0.928648,9,166
+Ginza_1_Chome_Tokyo_Japan,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2050,1.46866,9,166
+Ginza_1_Chome_Tokyo_Japan,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2060,2.07866,9,166
+Ginza_1_Chome_Tokyo_Japan,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2070,2.38456,9,166
+Ginza_1_Chome_Tokyo_Japan,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2080,2.95642,9,166
+Ginza_1_Chome_Tokyo_Japan,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2090,3.60011,9,166
+Ginza_1_Chome_Tokyo_Japan,  Transition Risk,Technology,New technology ,RCP8.5,2010,0.059066,9,166
+Ginza_1_Chome_Tokyo_Japan,  Transition Risk,Technology,New technology ,RCP8.5,2020,0.173754,9,166
+Ginza_1_Chome_Tokyo_Japan,  Transition Risk,Technology,New technology ,RCP8.5,2030,0.468293,9,166
+Ginza_1_Chome_Tokyo_Japan,  Transition Risk,Technology,New technology ,RCP8.5,2040,0.812567,9,166
+Ginza_1_Chome_Tokyo_Japan,  Transition Risk,Technology,New technology ,RCP8.5,2050,1.28508,9,166
+Ginza_1_Chome_Tokyo_Japan,  Transition Risk,Technology,New technology ,RCP8.5,2060,1.81882,9,166
+Ginza_1_Chome_Tokyo_Japan,  Transition Risk,Technology,New technology ,RCP8.5,2070,2.08649,9,166
+Ginza_1_Chome_Tokyo_Japan,  Transition Risk,Technology,New technology ,RCP8.5,2080,2.58686,9,166
+Ginza_1_Chome_Tokyo_Japan,  Transition Risk,Technology,New technology ,RCP8.5,2090,3.1501,9,166
+Ginza_1_Chome_Tokyo_Japan,  Transition Risk,Market,Reputation damage ,RCP8.5,2010,0.04219,9,166
+Ginza_1_Chome_Tokyo_Japan,  Transition Risk,Market,Reputation damage ,RCP8.5,2020,0.12411,9,166
+Ginza_1_Chome_Tokyo_Japan,  Transition Risk,Market,Reputation damage ,RCP8.5,2030,0.334495,9,166
+Ginza_1_Chome_Tokyo_Japan,  Transition Risk,Market,Reputation damage ,RCP8.5,2040,0.580405,9,166
+Ginza_1_Chome_Tokyo_Japan,  Transition Risk,Market,Reputation damage ,RCP8.5,2050,0.917915,9,166
+Ginza_1_Chome_Tokyo_Japan,  Transition Risk,Market,Reputation damage ,RCP8.5,2060,1.29916,9,166
+Ginza_1_Chome_Tokyo_Japan,  Transition Risk,Market,Reputation damage ,RCP8.5,2070,1.49035,9,166
+Ginza_1_Chome_Tokyo_Japan,  Transition Risk,Market,Reputation damage ,RCP8.5,2080,1.84776,9,166
+Ginza_1_Chome_Tokyo_Japan,  Transition Risk,Market,Reputation damage ,RCP8.5,2090,2.25007,9,166
+Ginza_1_Chome_Tokyo_Japan,  Transition Risk,Reputation,Materials cost ,RCP8.5,2010,0.08438,9,166
+Ginza_1_Chome_Tokyo_Japan,  Transition Risk,Reputation,Materials cost ,RCP8.5,2020,0.24822,9,166
+Ginza_1_Chome_Tokyo_Japan,  Transition Risk,Reputation,Materials cost ,RCP8.5,2030,0.66899,9,166
+Ginza_1_Chome_Tokyo_Japan,  Transition Risk,Reputation,Materials cost ,RCP8.5,2040,1.16081,9,166
+Ginza_1_Chome_Tokyo_Japan,  Transition Risk,Reputation,Materials cost ,RCP8.5,2050,1.83583,9,166
+Ginza_1_Chome_Tokyo_Japan,  Transition Risk,Reputation,Materials cost ,RCP8.5,2060,2.59832,9,166
+Ginza_1_Chome_Tokyo_Japan,  Transition Risk,Reputation,Materials cost ,RCP8.5,2070,2.9807,9,166
+Ginza_1_Chome_Tokyo_Japan,  Transition Risk,Reputation,Materials cost ,RCP8.5,2080,3.69552,9,166
+Ginza_1_Chome_Tokyo_Japan,  Transition Risk,Reputation,Materials cost ,RCP8.5,2090,4.50014,9,166
+Ginza_1_Chome_Tokyo_Japan,  Physical Risk,Acute,Storm damage ,RCP8.5,2010,0.59066,9,166
+Ginza_1_Chome_Tokyo_Japan,  Physical Risk,Acute,Storm damage ,RCP8.5,2020,1.73754,9,166
+Ginza_1_Chome_Tokyo_Japan,  Physical Risk,Acute,Storm damage ,RCP8.5,2030,4.68293,9,166
+Ginza_1_Chome_Tokyo_Japan,  Physical Risk,Acute,Storm damage ,RCP8.5,2040,8.12567,9,166
+Ginza_1_Chome_Tokyo_Japan,  Physical Risk,Acute,Storm damage ,RCP8.5,2050,12.8508,9,166
+Ginza_1_Chome_Tokyo_Japan,  Physical Risk,Acute,Storm damage ,RCP8.5,2060,18.1882,9,166
+Ginza_1_Chome_Tokyo_Japan,  Physical Risk,Acute,Storm damage ,RCP8.5,2070,20.8649,9,166
+Ginza_1_Chome_Tokyo_Japan,  Physical Risk,Acute,Storm damage ,RCP8.5,2080,25.8686,9,166
+Ginza_1_Chome_Tokyo_Japan,  Physical Risk,Acute,Storm damage ,RCP8.5,2090,31.501,9,166
+Ginza_1_Chome_Tokyo_Japan,  Physical Risk,Acute,Employee impacts ,RCP8.5,2010,0.050628,9,166
+Ginza_1_Chome_Tokyo_Japan,  Physical Risk,Acute,Employee impacts ,RCP8.5,2020,0.148932,9,166
+Ginza_1_Chome_Tokyo_Japan,  Physical Risk,Acute,Employee impacts ,RCP8.5,2030,0.401394,9,166
+Ginza_1_Chome_Tokyo_Japan,  Physical Risk,Acute,Employee impacts ,RCP8.5,2040,0.696486,9,166
+Ginza_1_Chome_Tokyo_Japan,  Physical Risk,Acute,Employee impacts ,RCP8.5,2050,1.1015,9,166
+Ginza_1_Chome_Tokyo_Japan,  Physical Risk,Acute,Employee impacts ,RCP8.5,2060,1.55899,9,166
+Ginza_1_Chome_Tokyo_Japan,  Physical Risk,Acute,Employee impacts ,RCP8.5,2070,1.78842,9,166
+Ginza_1_Chome_Tokyo_Japan,  Physical Risk,Acute,Employee impacts ,RCP8.5,2080,2.21731,9,166
+Ginza_1_Chome_Tokyo_Japan,  Physical Risk,Acute,Employee impacts ,RCP8.5,2090,2.70008,9,166
+Ginza_1_Chome_Tokyo_Japan,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2010,0.8438,9,166
+Ginza_1_Chome_Tokyo_Japan,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2020,2.4822,9,166
+Ginza_1_Chome_Tokyo_Japan,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2030,6.6899,9,166
+Ginza_1_Chome_Tokyo_Japan,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2040,11.6081,9,166
+Ginza_1_Chome_Tokyo_Japan,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2050,18.3583,9,166
+Ginza_1_Chome_Tokyo_Japan,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2060,25.9832,9,166
+Ginza_1_Chome_Tokyo_Japan,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2070,29.807,9,166
+Ginza_1_Chome_Tokyo_Japan,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2080,36.9552,9,166
+Ginza_1_Chome_Tokyo_Japan,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2090,45.0014,9,166
+Ginza_1_Chome_Tokyo_Japan,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2010,0,9,166
+Ginza_1_Chome_Tokyo_Japan,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2020,0,9,166
+Ginza_1_Chome_Tokyo_Japan,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2030,0,9,166
+Ginza_1_Chome_Tokyo_Japan,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2040,0,9,166
+Ginza_1_Chome_Tokyo_Japan,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2050,0,9,166
+Ginza_1_Chome_Tokyo_Japan,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2060,0,9,166
+Ginza_1_Chome_Tokyo_Japan,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2070,0,9,166
+Ginza_1_Chome_Tokyo_Japan,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2080,0,9,166
+Ginza_1_Chome_Tokyo_Japan,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2090,0,9,166
+Ginza_1_Chome_Tokyo_Japan,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2010,0.135008,9,166
+Ginza_1_Chome_Tokyo_Japan,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2020,0.397152,9,166
+Ginza_1_Chome_Tokyo_Japan,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2030,1.07038,9,166
+Ginza_1_Chome_Tokyo_Japan,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2040,1.8573,9,166
+Ginza_1_Chome_Tokyo_Japan,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2050,2.93733,9,166
+Ginza_1_Chome_Tokyo_Japan,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2060,4.15731,9,166
+Ginza_1_Chome_Tokyo_Japan,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2070,4.76912,9,166
+Ginza_1_Chome_Tokyo_Japan,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2080,5.91283,9,166
+Ginza_1_Chome_Tokyo_Japan,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2090,7.20022,9,166
+Ginza_1_Chome_Tokyo_Japan,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2010,0.151884,9,166
+Ginza_1_Chome_Tokyo_Japan,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2020,0.446796,9,166
+Ginza_1_Chome_Tokyo_Japan,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2030,1.20418,9,166
+Ginza_1_Chome_Tokyo_Japan,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2040,2.08946,9,166
+Ginza_1_Chome_Tokyo_Japan,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2050,3.30449,9,166
+Ginza_1_Chome_Tokyo_Japan,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2060,4.67698,9,166
+Ginza_1_Chome_Tokyo_Japan,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2070,5.36526,9,166
+Ginza_1_Chome_Tokyo_Japan,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2080,6.65194,9,166
+Ginza_1_Chome_Tokyo_Japan,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2090,8.10025,9,166
+Ginza_1_Chome_Tokyo_Japan,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2010,0.101256,9,166
+Ginza_1_Chome_Tokyo_Japan,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2020,0.297864,9,166
+Ginza_1_Chome_Tokyo_Japan,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2030,0.802788,9,166
+Ginza_1_Chome_Tokyo_Japan,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2040,1.39297,9,166
+Ginza_1_Chome_Tokyo_Japan,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2050,2.203,9,166
+Ginza_1_Chome_Tokyo_Japan,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2060,3.11798,9,166
+Ginza_1_Chome_Tokyo_Japan,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2070,3.57684,9,166
+Ginza_1_Chome_Tokyo_Japan,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2080,4.43462,9,166
+Ginza_1_Chome_Tokyo_Japan,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2090,5.40017,9,166
+Ginza_1_Chome_Tokyo_Japan,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2010,0.025314,9,166
+Ginza_1_Chome_Tokyo_Japan,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2020,0.074466,9,166
+Ginza_1_Chome_Tokyo_Japan,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2030,0.200697,9,166
+Ginza_1_Chome_Tokyo_Japan,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2040,0.348243,9,166
+Ginza_1_Chome_Tokyo_Japan,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2050,0.550749,9,166
+Ginza_1_Chome_Tokyo_Japan,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2060,0.779496,9,166
+Ginza_1_Chome_Tokyo_Japan,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2070,0.89421,9,166
+Ginza_1_Chome_Tokyo_Japan,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2080,1.10866,9,166
+Ginza_1_Chome_Tokyo_Japan,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2090,1.35004,9,166
+Ginza_1_Chome_Tokyo_Japan,  Opportunity,Resilience,Energy resilience ,RCP8.5,2010,0.12657,9,166
+Ginza_1_Chome_Tokyo_Japan,  Opportunity,Resilience,Energy resilience ,RCP8.5,2020,0.37233,9,166
+Ginza_1_Chome_Tokyo_Japan,  Opportunity,Resilience,Energy resilience ,RCP8.5,2030,1.00348,9,166
+Ginza_1_Chome_Tokyo_Japan,  Opportunity,Resilience,Energy resilience ,RCP8.5,2040,1.74121,9,166
+Ginza_1_Chome_Tokyo_Japan,  Opportunity,Resilience,Energy resilience ,RCP8.5,2050,2.75374,9,166
+Ginza_1_Chome_Tokyo_Japan,  Opportunity,Resilience,Energy resilience ,RCP8.5,2060,3.89748,9,166
+Ginza_1_Chome_Tokyo_Japan,  Opportunity,Resilience,Energy resilience ,RCP8.5,2070,4.47105,9,166
+Ginza_1_Chome_Tokyo_Japan,  Opportunity,Resilience,Energy resilience ,RCP8.5,2080,5.54328,9,166
+Ginza_1_Chome_Tokyo_Japan,  Opportunity,Resilience,Energy resilience ,RCP8.5,2090,6.75021,9,166
+Ginza_1_Chome_Tokyo_Japan,  Physical Risk,Chronic,Drought ,RCP8.5,2010,0,9,166
+Ginza_1_Chome_Tokyo_Japan,  Physical Risk,Chronic,Drought ,RCP8.5,2020,4.5,9,166
+Ginza_1_Chome_Tokyo_Japan,  Physical Risk,Chronic,Drought ,RCP8.5,2030,4.5,9,166
+Ginza_1_Chome_Tokyo_Japan,  Physical Risk,Chronic,Drought ,RCP8.5,2040,27,9,166
+Ginza_1_Chome_Tokyo_Japan,  Physical Risk,Chronic,Drought ,RCP8.5,2050,36,9,166
+Ginza_1_Chome_Tokyo_Japan,  Physical Risk,Chronic,Drought ,RCP8.5,2060,0,9,166
+Ginza_1_Chome_Tokyo_Japan,  Physical Risk,Chronic,Drought ,RCP8.5,2070,9,9,166
+Ginza_1_Chome_Tokyo_Japan,  Physical Risk,Chronic,Drought ,RCP8.5,2080,9,9,166
+Ginza_1_Chome_Tokyo_Japan,  Physical Risk,Chronic,Drought ,RCP8.5,2090,9,9,166

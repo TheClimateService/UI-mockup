@@ -2,6 +2,10 @@
 # SCRIPT TO MERGE OLD USER DATA WITH NEW INITIATOR OF USER DATA.
 # TT - February 2018
 
+# Execution:  ./script_merge_user_data <saved version of user_data.csv.latest.csv> <newly initiatied version of user_data.csv.latest.csv>
+# Example:    ./script_merge_user_data user_data.csv.latest.csv.sav user_data.csv.latest.csv
+
+# Notes:   -----------------------------------------------------------
 # load_tcsdb.r now creates an initiator file, user_data_initiator.csv, containing entries for each facility and parent corp.
 # This will be used by script_apply_userdata4SE to create a new user_data.csv.latest.csv file.  
 # When user_data_initiator.csv is copied to user_data.csv (the historical record of all user data saves), this effectively removes all memory of past user actions.
@@ -9,20 +13,36 @@
 # This merged file is then copied to user_data.csv.latest.csv to give the system knowledge of both the updated TCSDB data and previously-entered user data.
 
 # Steps before/after execution:
-#    run system with new TCSDB_structure.xlsx to create new initiator file, user_data_initiator.csv
-#    copy current user_data.csv.latest.csv to user_data.csv.latest.csv.sav
-#    copy new initiator to user_data.csv and new initiator.header file to user_data.csv.header  (Note that this must also be done when new fields are added to the user-data input panel.)
-#    Run the following from the app directory to update user_data.csv.latest.csv and locationvalues4SE_with_userdata_mods (this is now done from the system control page via button_runSE_with_userdata):
+
+#    1.  Start system with new TCSDB_structure.xlsx to create new initiator file, user_data_initiator.csv
+
+#    2.  Copy current user_data.csv.latest.csv to user_data.csv.latest.csv.sav
+#	cp user_data.csv.latest.csv user_data.csv.latest.csv.sav
+
+#    3.  Copy new initiator to user_data.csv and new initiator.header file to user_data.csv.header  (Note that this must also be done when new fields are added to the user-data input panel.)
+#	cp user_data_initiator.csv user_data.csv
+#	cp user_data_initiator.csv.header user_data.csv.header
+
+#    (OLD) Run the following from the app directory to update user_data.csv.latest.csv and locationvalues4SE_with_userdata_mods (this is now done from the system control page via button_runSE_with_userdata):
 #       ./data/TCSDB/script_apply_userdata4SE ./data/TCSDB/user_data.csv ./data/scoring_engine/nonphysical/locationvalues4SE.csv 
 
-#    XXX It should be possible to get things aligned without actually running the SE.  First locationvalues4SE.csv needs to be created without user data by /scoring_engine/load_tcsdb_4scoringengine.r, and then /TCSDB/locationvalues4SE_with_userdata_mods needs to be created by /TCSDB/script_apply_userdata4SE.
-#    If locations have been added/changed, run SE WITHOUT userdata since locationvalues4SE.csv will still have the old number of locations if script_runall has not been run.  Also save user data in order to update locationvalues4SE_with_userdata_mods (via script_apply_userdata4SE).  One cannot run with userdata first since locationvalues4SE.csv will be overwritten by script_runSE_from_app_with_userdata when it copies locationvalues4SE_with_userdata_mods to /nonphysical/locationvalues4SE.csv prior to running the SE.
-#    run SE with userdata to create new user_data.csv.latest.csv file
-#    run this script to merge user_data.csv.latest.csv.sav and user_data.csv.latest.csv
-#    copy merged file to user_data.csv.latest.csv
+#    (XXX FUTURE WORK) It should be possible to get things aligned without actually running the SE.  First locationvalues4SE.csv needs to be created without user data by /scoring_engine/load_tcsdb_4scoringengine.r, and then /TCSDB/locationvalues4SE_with_userdata_mods needs to be created by /TCSDB/script_apply_userdata4SE.
 
-# Execution:  ./script_merge_user_data <saved version of user_data.csv.latest.csv> <newly initiatied version of user_data.csv.latest.csv>
-# Example:    ./script_merge_user_data user_data.csv.latest.csv.sav user_data.csv.latest.csv
+#    4.  If locations have been added/changed, run SE WITHOUT userdata since ./data/scoring_engine/nonphysical/locationvalues4SE.csv will still have the old number of locations if script_runall has not been run.  
+
+#    5.  In the app, save user data in order to update ./data/TCSDB/locationvalues4SE_with_userdata_mods (via script_apply_userdata4SE).  One cannot run with userdata first since locationvalues4SE.csv will be overwritten by script_runSE_from_app_with_userdata when it copies locationvalues4SE_with_userdata_mods to /nonphysical/locationvalues4SE.csv prior to running the SE.
+
+#    6.  Run SE with userdata to create new user_data.csv.latest.csv file
+
+#    7.  Run this script (from ./data/TCSDB) to merge user_data.csv.latest.csv.sav and user_data.csv.latest.csv
+#	./script_merge_user_data user_data.csv.latest.csv.sav user_data.csv.latest.csv
+
+#    8.  Copy merged file to user_data.csv.latest.csv
+#	cp user_data.csv.latest.csv.sav.merged user_data.csv.latest.csv
+
+#    9.  Restart the system.
+
+# --------------------------------------------------------------------
 
 # Format of the user_data.csv.latest.csv file:
 #"USER.ParentCorpID";"input.rbLocations";"input.cbGroupBizType";"input.txtNumEmployees";"input.txtAssetValue";"cbBusinessFunctions";"Date"

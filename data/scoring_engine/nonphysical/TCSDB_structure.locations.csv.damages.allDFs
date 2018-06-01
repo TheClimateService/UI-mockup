@@ -9,6 +9,7 @@ ParentCorpID_allfacilities - - - - - - - df_used dperiod1 dperiod2 dperiod3 dper
 6_all_28_facilities - - - - - - - z--allthisco--z  -14.8483 -35.1092 -48.1339 -60.2536 -82.523 -95.3249 -121.332 -142.765 -155.157
 7_all_58_facilities - - - - - - - z--allthisco--z  -18.208 -42.0514 -63.2678 -76.584 -96.5574 -115.978 -138.414 -164.259 -182.887
 8_all_12_facilities - - - - - - - z--allthisco--z  -14.518 -37.3617 -51.0366 -74.5042 -101.289 -114.606 -141.731 -166.925 -178.813
+9_all_3_facilities - - - - - - - z--allthisco--z  -18.4892 -58.806 -89.9345 -106.75 -126.555 -121.128 -144.767 -167.603 -186.362
 ----------------------------------------------------------------------
 LocationID_ParentCorpID_LocationName lon lat location df_tx90p df_pdsisc df_coastalflood df_carbonprice df_tbd2 df_tbd3 notes	df_used dperiod1 dperiod2 dperiod3 dperiod4 dperiod5 dperiod6 dperiod7 dperiod8 dperiod9
 ----------------------------------------------------------------------
@@ -827,3 +828,18 @@ LocationID_ParentCorpID_LocationName lon lat location df_tx90p df_pdsisc df_coas
 163_8_Pontevedra_Spain -8.625368 42.133887 Pontevedra_Spain tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	pdsisc-1  -5 -20 -60 -70 -60 -70 -70 -70 -70
 163_8_Pontevedra_Spain -8.625368 42.133887 Pontevedra_Spain tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	tx90p-1  -2.3633 -8.0126 -10.634 -6.3671 -21.0365 -24.3604 -33.4428 -39.8337 -43.8235
 163_8_Pontevedra_Spain -8.625368 42.133887 Pontevedra_Spain tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	z--allDFs--z  -9.8263 -43.5936 -90.492 -96.3181 -109.624 -122.948 -144.495 -167.321 -182.557
+164_9_801_Brickell_Miami_USA -80.1921546 25.7657679 Miami_FL_USA tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	carbonprice-1  -2.463 -15.581 -19.858 -19.951 -28.588 -28.588 -41.052 -57.487 -68.734
+164_9_801_Brickell_Miami_USA -80.1921546 25.7657679 Miami_FL_USA tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	coastalflood-1  -2.565 -40.5229 -100 -100 -100 -100 -100 -100 -100
+164_9_801_Brickell_Miami_USA -80.1921546 25.7657679 Miami_FL_USA tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	pdsisc-1  0 0 0 0 0 0 0 0 0
+164_9_801_Brickell_Miami_USA -80.1921546 25.7657679 Miami_FL_USA tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	tx90p-1  -3.9373 -9.6264 -23.3703 -44.6785 -55.4266 -62.7224 -71.9734 -79.3085 -85.869
+164_9_801_Brickell_Miami_USA -80.1921546 25.7657679 Miami_FL_USA tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	z--allDFs--z  -8.9653 -65.7303 -143.228 -164.63 -184.015 -191.31 -213.025 -236.796 -254.603
+165_9_Xanadu_Centre_Madrid_Spain -3.9283784 40.2997836 Madrid_Spain tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	carbonprice-1  -2.463 -15.581 -19.858 -19.951 -28.588 -28.588 -41.052 -57.487 -68.734
+165_9_Xanadu_Centre_Madrid_Spain -3.9283784 40.2997836 Madrid_Spain tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	coastalflood-1  NA NA NA NA NA NA NA NA NA
+165_9_Xanadu_Centre_Madrid_Spain -3.9283784 40.2997836 Madrid_Spain tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	pdsisc-1  -40 -70 -70 -70 -70 -70 -70 -70 -70
+165_9_Xanadu_Centre_Madrid_Spain -3.9283784 40.2997836 Madrid_Spain tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	tx90p-1  -0.7326 -2.0434 -5.1697 -4.1089 -10.1151 -18.9147 -29.365 -34.0826 -42.0142
+165_9_Xanadu_Centre_Madrid_Spain -3.9283784 40.2997836 Madrid_Spain tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	z--allDFs--z  -43.1956 -87.6244 -95.0277 -94.0599 -108.703 -117.503 -140.417 -161.57 -180.748
+166_9_Ginza_1_Chome_Tokyo_Japan 139.7675366 35.6739389 Tokyo_Japan tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	carbonprice-1  -2.463 -15.581 -19.858 -19.951 -28.588 -28.588 -41.052 -57.487 -68.734
+166_9_Ginza_1_Chome_Tokyo_Japan 139.7675366 35.6739389 Tokyo_Japan tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	coastalflood-1  NA NA NA NA NA NA NA NA NA
+166_9_Ginza_1_Chome_Tokyo_Japan 139.7675366 35.6739389 Tokyo_Japan tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	pdsisc-1  0 -5 -5 -30 -40 0 -10 -10 -10
+166_9_Ginza_1_Chome_Tokyo_Japan 139.7675366 35.6739389 Tokyo_Japan tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	tx90p-1  -0.8438 -2.4822 -6.6899 -11.6081 -18.3583 -25.9832 -29.807 -36.9552 -45.0014
+166_9_Ginza_1_Chome_Tokyo_Japan 139.7675366 35.6739389 Tokyo_Japan tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -	z--allDFs--z  -3.3068 -23.0632 -31.5479 -61.5591 -86.9463 -54.5712 -80.859 -104.442 -123.735

@@ -1936,7 +1936,7 @@ server <- function(input, output, session) {
 	d <- d - 273.15
 	dt <- t(d)
 	bins <- seq(min(dt), max(dt), length.out = input_bins + 1)
-	hist(dt, breaks=bins, col = 'skyblue', border = 'white', main=paste(filename,"(21 models, NEX-GDDP)"), xlab="Daily Maximum Temperature (degC)", xlim=c(floor(min(dt)), ceiling(max(dt)) ) )
+	hist(dt, breaks=bins, col = 'red', border = 'white', main=paste(filename,"(21 models, NEX-GDDP)"), xlab="Daily Maximum Temperature (degC)", xlim=c(floor(min(dt)), ceiling(max(dt)) ) )
 
   }) # end plot
 
@@ -1948,13 +1948,78 @@ server <- function(input, output, session) {
 	input_derived_variable <- input$temperature_facility_derived_variable
 	input_bins <- input$bins_temp_facilities
 
+	climvar <- "temperature"
 	source("./functions/setup_climate_derived_variable_histogram.r", local=TRUE)
 	# d <- d - 273.15  # derived variable max/min is in degC
 	dt <- t(d)
 	bins <- seq(min(dt), max(dt), length.out = input_bins + 1)
+	bins <- unique(bins)
 	label <- "Annual Number of Days Above Specified Temperature"
-	if(input_derived_variable=="Maximum" || input_derived_variable=="Minimum") label <- "Daily Maximum Temperature (degC)"
-	hist(dt, breaks=bins, col = 'skyblue', border = 'white', main=paste(filename,"(21 models, NEX-GDDP)"), xlab=label, xlim=c(floor(min(dt)), ceiling(max(dt)) ) )
+	if(input_derived_variable=="Maximum") label <- "Annual Maximum of Daily Maximum Temperature (degC)"
+	if(input_derived_variable=="Minimum") label <- "Annual Minimum of Daily Maximum Temperature (degC)"
+	if(substr(input_derived_variable,1,7)=="Average") label <- "Monthly Average of Daily Maximum Temperature (degC)"
+	hist(dt, breaks=bins, col = 'skyblue', border = 'white', main=paste(filename,"(21 models, NEX-GDDP)\nMean =",format(mean(dt),digits=2) ), xlab=label, xlim=c(floor(min(dt)), ceiling(max(dt)) ) )
+
+  }) # end plot
+
+  output$temp_facilities4 <- renderPlot({
+	datadir <- "./data/temperature/nex-gddp/facilities/tasmax"
+	input_facility <- input$temperature_facility2
+	input_scenario <- input$temperature_facility_scenario2
+	input_period <- input$temperature_facility_period2
+	input_derived_variable <- input$temperature_facility_derived_variable2
+	input_bins <- input$bins_temp_facilities
+
+	climvar <- "temperature"
+	source("./functions/setup_climate_derived_variable_histogram.r", local=TRUE)
+	# d <- d - 273.15  # derived variable max/min is in degC
+	dt <- t(d)
+	bins <- seq(min(dt), max(dt), length.out = input_bins + 1)
+	bins <- unique(bins)
+	label <- "Annual Number of Days Above Specified Temperature"
+	if(input_derived_variable=="Maximum") label <- "Annual Maximum of Daily Maximum Temperature (degC)"
+	if(input_derived_variable=="Minimum") label <- "Annual Minimum of Daily Maximum Temperature (degC)"
+	if(substr(input_derived_variable,1,7)=="Average") label <- "Monthly Average of Daily Maximum Temperature (degC)"
+	hist(dt, breaks=bins, col = 'red', border = 'white', main=paste(filename,"(21 models, NEX-GDDP)\nMean =",format(mean(dt),digits=2) ), xlab=label, xlim=c(floor(min(dt)), ceiling(max(dt)) ) )
+
+  }) # end plot
+
+  output$temp_facilities5 <- renderPlot({
+	datadir <- "./data/temperature/nex-gddp/facilities/tasmax"
+	input_facility <- input$temperature_facility
+	input_scenario <- input$temperature_facility_scenario
+	input_period <- input$temperature_facility_period
+	input_season <- input$temperature_facility_season
+	input_bins <- input$bins_temp_facilities
+
+	source("./functions/setup_climate_variable_distribution.r", local=TRUE)
+	# The above returns the best fit row for the specified loc/scen/period.
+	# XXX NEXT:  specify additional periods for the same location.
+
+	# Compiled fit data for 1981-2000, 2011-2030, 2041-2060, 2071-2090.
+	# Visual inspection of plots for all distributions showed that the WEIBULL distribution was best.
+	# "1" "Weibull 16.7809908064543 41.1370130351604" "1" "Weibull 16.5311810167565 42.4277739861075" "1" "Weibull 16.6090200453762 44.2031463365842" "1" "Weibull 15.705047999892 46.3894333282642"
+	# Fits were done in units of degC.
+	shapes = c(16.7809908064543, 16.5311810167565, 16.6090200453762, 15.705047999892)
+	scales = c(41.1370130351604, 42.4277739861075, 44.2031463365842, 46.3894333282642)
+    	#colors <- brewer.pal(length(shapes), "Paired")
+    	colors <- c("green", "blue", "orange", "red")
+    	ltypes <- c(1:length(shapes))
+    	labels <- c("1981-2000", "2011-2030", "2041-2060", "2071-2090")
+       
+      x <- seq(30,55,0.5)
+      plot(x,dweibull(x,shapes[1],scales[1]), type="l", lwd=3, lty=1, col=colors[1], 
+	#xlim=xrange, 
+	#ylim=c(0,0.12), 
+	main = "Summer (JJA) Temperature Distributions",
+	sub = paste("best fit", as.character(bestfit$type)),
+	xlab="Daily Maximum Surface Temperature (degC)", ylab="Probability Density", 
+	#xaxt="n"
+	)
+      for(i in 2:length(shapes) ) {
+        lines( x, dweibull(x,shapes[i],scales[i]), lwd=2, lty=i, col=colors[i] )
+      }
+      legend("topright", inset=.01, title="Periods", labels, lwd=3, lty=ltypes, col=colors)
 
   }) # end plot
 
@@ -1986,7 +2051,49 @@ server <- function(input, output, session) {
 	d <- d*24*60*60
 	dt <- t(d)
         bins <- seq(min(dt), max(dt), length.out = input$bins_precip_facilities + 1)
-	hist(dt, breaks=bins, col = 'skyblue', border = 'white', main=paste(filename,"(21 models, NEX-GDDP)"), sub=paste("Maximum value =", max(dt), "(mm)"), xlab="Daily Precipitation (mm)", xlim=c(floor(min(dt)), ceiling(max(dt)/10) ) )
+	hist(dt, breaks=bins, col = 'red', border = 'white', main=paste(filename,"(21 models, NEX-GDDP)"), sub=paste("Maximum value =", max(dt), "(mm)"), xlab="Daily Precipitation (mm)", xlim=c(floor(min(dt)), ceiling(max(dt)/10) ) )
+
+  }) # end plot
+
+  output$precip_facilities3 <- renderPlot({
+	datadir <- "./data/precipitation/nex-gddp/facilities/pr"
+	input_facility <- input$precip_facility
+	input_scenario <- input$precip_facility_scenario
+	input_period <- input$precip_facility_period
+	input_derived_variable <- input$precip_facility_derived_variable
+	input_bins <- input$bins_precip_facilities
+
+	climvar <- "precipitation"
+	source("./functions/setup_climate_derived_variable_histogram.r", local=TRUE)
+	dt <- t(d)
+	bins <- seq(min(dt), max(dt), length.out = input_bins + 1)
+	bins <- unique(bins)
+	label <- "Annual Number of Days Above/Below Specified Precipitation Level"
+	if(input_derived_variable=="Maximum") label <- "Annual Maximum of Daily Precipitation (mm)"
+	if(input_derived_variable=="Minimum") label <- "Annual Minimum of Daily Precipitation (mm)"
+	if(substr(input_derived_variable,1,5)=="Total") label <- "Total Precipitation (mm)"
+	hist(dt, breaks=bins, col = 'skyblue', border = 'white', main=paste(filename,"(21 models, NEX-GDDP)\nMean =",format(mean(dt),digits=2) ), xlab=label, xlim=c(floor(min(dt)), ceiling(max(dt)) ) )
+
+  }) # end plot
+
+  output$precip_facilities4 <- renderPlot({
+	datadir <- "./data/precipitation/nex-gddp/facilities/pr"
+	input_facility <- input$precip_facility2
+	input_scenario <- input$precip_facility_scenario2
+	input_period <- input$precip_facility_period2
+	input_derived_variable <- input$precip_facility_derived_variable2
+	input_bins <- input$bins_precip_facilities
+
+	climvar <- "precipitation"
+	source("./functions/setup_climate_derived_variable_histogram.r", local=TRUE)
+	dt <- t(d)
+	bins <- seq(min(dt), max(dt), length.out = input_bins + 1)
+	bins <- unique(bins)
+	label <- "Annual Number of Days Above/Below Specified Precipitation Level"
+	if(input_derived_variable=="Maximum") label <- "Annual Maximum of Daily Precipitation (mm)"
+	if(input_derived_variable=="Minimum") label <- "Annual Minimum of Daily Precipitation (mm)"
+	if(substr(input_derived_variable,1,5)=="Total") label <- "Total Precipitation (mm)"
+	hist(dt, breaks=bins, col = 'red', border = 'white', main=paste(filename,"(21 models, NEX-GDDP)\nMean =",format(mean(dt),digits=2) ), xlab=label, xlim=c(floor(min(dt)), ceiling(max(dt)) ) )
 
   }) # end plot
 
