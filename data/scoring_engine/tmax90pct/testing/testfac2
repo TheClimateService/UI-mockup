@@ -1,0 +1,5 @@
+LocationID_ParentCorpID_LocationName lon lat location df_tx90p df_pdsisc df_coastalflood df_carbonprice df_tbd2 df_tbd3 notes
+202_13_Viborg_Denmark 9.570882 56.482218 Viborg_Denmark tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -
+203_13_Aabenraa_Denmark 9.163523 55.036608 Aabenraa_Denmark tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -
+204_13_Ulanqab_China 113.169205 41.016269 Ulanqab_China tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -
+205_13_Guizhou_China 106.66086 26.422518 Guizhou_China tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -

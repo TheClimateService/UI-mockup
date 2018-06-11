@@ -16,10 +16,10 @@
 
 #    1.  Start system with new TCSDB_structure.xlsx to create new initiator file, user_data_initiator.csv
 
-#    2.  Copy current user_data.csv.latest.csv to user_data.csv.latest.csv.sav
+#    2.  In ./data/TCSDB, copy current user_data.csv.latest.csv to user_data.csv.latest.csv.sav
 #	cp user_data.csv.latest.csv user_data.csv.latest.csv.sav
 
-#    3.  Copy new initiator to user_data.csv and new initiator.header file to user_data.csv.header  (Note that this must also be done when new fields are added to the user-data input panel.)
+#    3.  In ./data/TCSDB, copy new initiator to user_data.csv and new initiator.header file to user_data.csv.header  (Note that this must also be done when new fields are added to the user-data input panel.)
 #	cp user_data_initiator.csv user_data.csv
 #	cp user_data_initiator.csv.header user_data.csv.header
 
@@ -30,7 +30,7 @@
 
 #    4.  If locations have been added/changed, run SE WITHOUT userdata since ./data/scoring_engine/nonphysical/locationvalues4SE.csv will still have the old number of locations if script_runall has not been run.  
 
-#    5.  In the app, save user data in order to update ./data/TCSDB/locationvalues4SE_with_userdata_mods (via script_apply_userdata4SE).  One cannot run with userdata first since locationvalues4SE.csv will be overwritten by script_runSE_from_app_with_userdata when it copies locationvalues4SE_with_userdata_mods to /nonphysical/locationvalues4SE.csv prior to running the SE.
+#    5.  In the app, save user data in order to update ./data/TCSDB/locationvalues4SE_with_userdata_mods and user_data.csv.latest.csv (via script_apply_userdata4SE).  One cannot run with userdata first since locationvalues4SE.csv will be overwritten by script_runSE_from_app_with_userdata when it copies locationvalues4SE_with_userdata_mods to /nonphysical/locationvalues4SE.csv prior to running the SE.
 
 #    6.  Run SE with userdata to create new user_data.csv.latest.csv file
 
@@ -40,7 +40,9 @@
 #    8.  Copy merged file to user_data.csv.latest.csv
 #	cp user_data.csv.latest.csv.sav.merged user_data.csv.latest.csv
 
-#    9.  Restart the system.
+#    9.  Check the format of the user_data.csv.latest.csv file.  On the AWS ubuntu instance, the header is not in the right location and some of the "All locations" entries lack a real date.  XXX - This probably due to how the "date" function works under ubuntu.  For the present, copy the mac version of user_data.csv.latest.csv to the ubuntu instance.
+
+#    10.  Restart the system.
 
 # --------------------------------------------------------------------
 
@@ -56,9 +58,9 @@ userdata_latest_saved=$1
 userdata_latest_new=$2
 
 # Drop the dates.
-# XXX Note that the end column of the cut below (6) will change if there are more fields added to the saved user data.
-cut -d ";" -f 1-6 $userdata_latest_saved > temp1
-cut -d ";" -f 1-6 $userdata_latest_new > temp2
+# XXX Note that the end column of the cut below (7) will change if there are more fields added to the saved user data.
+cut -d ";" -f 1-7 $userdata_latest_saved > temp1
+cut -d ";" -f 1-7 $userdata_latest_new > temp2
 
 # Sort using key that will enable data from user_data.csv.latest.csv.sav to take precedence.
 awk '{FS=";"; print $1"_"$2"_B",$0}' temp1 > temp1b
@@ -74,4 +76,4 @@ awk -v date="$(date | sed 's/ /_/g')" '{if(NR==1) print $0";Date"; else print $0
 
 # Save results and clean up.
 mv temp6 $userdata_latest_saved.merged
-rm temp* 
+#rm temp* 

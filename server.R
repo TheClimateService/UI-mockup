@@ -1253,7 +1253,11 @@ server <- function(input, output, session) {
   # UI Input selectors for the corporate finance page, based on the database values  
   output$selectInput_locationPort <- renderUI({
     #selectInput('inputLocationsPort',"Locations",c('All locations', unique(subset(corpLocations, ParentCorpID == USER$ParentCorpID, select = LocationName))),selected='All locations',selectize = TRUE)
-    selectInput('inputLocationsPort',"Portfolios",c('Entire portfolio', unique(subset(parentCorp, select = TickerSymbol))),selected='All locations',selectize = TRUE)
+    #selectInput('inputLocationsPort',"Portfolios",c('Entire portfolio', "HMC", unique(subset(parentCorp, select = TickerSymbol))),selected='All locations',selectize = TRUE)
+    # Portfolios are defined in sheet 15 of TCSDB_structure.xlsx
+    ncols <- length(names(dbsheet15))
+    portfolios <- names(dbsheet15)[5:ncols]
+    selectInput('inputLocationsPort',"Portfolios",c('Entire portfolio', portfolios, unique(subset(parentCorp, select = TickerSymbol))),selectize = TRUE)
   })
   
   output$selectInput_scenarioPort <- renderUI({
@@ -1266,14 +1270,26 @@ server <- function(input, output, session) {
     #if(input$riskfactor_subset_portfolio=="Chronic physical + Carbon price") corpTable2 <- filter(corpTable2, RiskFactorName=="Temperature extremes" | RiskFactorName=="Drought" | RiskFactorName=="Coastal flooding" | RiskFactorName=="Carbon pricing")
     if(input$riskfactor_subset_portfolio=="Chronic physical + Carbon price") corpTable2 <- filter(corpTable2, TCFDSubCatName=="Chronic" | RiskFactorName=="Carbon pricing")
     parentCorp = dbsheet4
-    if (input$inputLocationsPort != 'Entire portfolio') {
-      #corpTable2 <- corpTable2[which(corpTable2$ParentCorpID == USER$ParentCorpID & corpTable2$Location == input$inputLocationsPort & corpTable2$RiskYear == input$sliderInputYearPort),]
+    portfolioSheet <- dbsheet15
+    ncols <- length(names(portfolioSheet))
+    portfolios <- names(portfolioSheet)[5:ncols]
+
+    if (input$inputLocationsPort != 'Entire portfolio' & (input$inputLocationsPort %in% portfolios)=="FALSE") {
       corpTable2 <- corpTable2[which(corpTable2$Location == input$inputLocationsPort & corpTable2$RiskYear == input$sliderInputYearPort),]
     }
+
     if (input$inputLocationsPort == 'Entire portfolio') {
       #corpTable2 <- corpTable2[which(corpTable2$ParentCorpID == USER$ParentCorpID & corpTable2$RiskYear == input$sliderInputYearPort),]
       corpTable2 <- corpTable2[which(corpTable2$RiskYear == input$sliderInputYearPort),]
     }
+
+    if (input$inputLocationsPort != 'Entire portfolio' & (input$inputLocationsPort %in% portfolios)=="TRUE") {
+      portfolio <- input$inputLocationsPort
+      portfolio_members <- portfolioSheet %>% filter(portfolioSheet[[portfolio]]==1)
+      corpTable2 <- subset(corpTable2, Location %in% portfolio_members$TickerSymbol)
+      corpTable2 <- corpTable2[which(corpTable2$RiskYear == input$sliderInputYearPort),]
+    }
+
     plot_ly(x=corpTable2$ValueAtRisk, y=corpTable2$RiskFactorName, type = 'bar', orientation = 'h') %>% layout(margin = list(l=180, b=100)) %>%
       layout(xaxis = list(title = 'Impact ($M)'))
   }) 
@@ -1283,14 +1299,27 @@ server <- function(input, output, session) {
     corpTable2 <- readr::read_csv("./data/scoring_engine/nonphysical/TCSDB_structure.locations.csv.damages.allDFs.withvalues.with.nonphysical.byparentcorp.csv")
     if(input$riskfactor_subset_portfolio=="Chronic physical + Carbon price") corpTable2 <- filter(corpTable2, TCFDSubCatName=="Chronic" | RiskFactorName=="Carbon pricing")
     parentCorp = dbsheet4
-    if (input$inputLocationsPort != 'Entire portfolio') {
+    portfolioSheet <- dbsheet15
+    ncols <- length(names(portfolioSheet))
+    portfolios <- names(portfolioSheet)[5:ncols]
+
+    if (input$inputLocationsPort != 'Entire portfolio' & (input$inputLocationsPort %in% portfolios)=="FALSE") {
       #corpTable2 <- corpTable2[which(corpTable2$ParentCorpID == USER$ParentCorpID & corpTable2$Location == input$inputLocationsPort & corpTable2$RiskYear == input$sliderInputYearPort),]
       corpTable2 <- corpTable2[which(corpTable2$Location == input$inputLocationsPort & corpTable2$RiskYear == input$sliderInputYearPort),]
     }
+
     if (input$inputLocationsPort == 'Entire portfolio') {
       #corpTable2 <- corpTable2[which(corpTable2$ParentCorpID == USER$ParentCorpID & corpTable2$RiskYear == input$sliderInputYearPort),]
       corpTable2 <- corpTable2[which(corpTable2$RiskYear == input$sliderInputYearPort),]
     }
+
+    if (input$inputLocationsPort != 'Entire portfolio' & (input$inputLocationsPort %in% portfolios)=="TRUE") {
+      portfolio <- input$inputLocationsPort
+      portfolio_members <- portfolioSheet %>% filter(portfolioSheet[[portfolio]]==1)
+      corpTable2 <- subset(corpTable2, Location %in% portfolio_members$TickerSymbol)
+      corpTable2 <- corpTable2[which(corpTable2$RiskYear == input$sliderInputYearPort),]
+    }
+
     ncorp <- pull(count(corpTable2))
     plot_ly(corpTable2, x = ~Location, y = ~ValueAtRisk, type='bar', text=corpTable2$RiskFactorName, marker = list(color = colorRampPalette(brewer.pal(11,"Spectral"))(ncorp))) %>%
       layout(yaxis = list(title = 'Impact ($M)'), barmode = 'stack', margin = list(l=80,b=100))
@@ -1300,14 +1329,21 @@ server <- function(input, output, session) {
   output$areaByTimePort <- renderPlotly({
     corpTable2 <- readr::read_csv("./data/scoring_engine/nonphysical/TCSDB_structure.locations.csv.damages.allDFs.withvalues.with.nonphysical.byparentcorp.csv")
     parentCorp = dbsheet4
-    if (input$inputLocationsPort != 'Entire portfolio') {
+    portfolioSheet <- dbsheet15
+    ncols <- length(names(portfolioSheet))
+    portfolios <- names(portfolioSheet)[5:ncols]
+
+    if (input$inputLocationsPort != 'Entire portfolio' & (input$inputLocationsPort %in% portfolios)=="FALSE") {
       #corpTable2 <- corpTable2[which(corpTable2$ParentCorpID == USER$ParentCorpID & corpTable2$Location == input$inputLocationsPort),]
       corpTable2 <- corpTable2[which(corpTable2$Location == input$inputLocationsPort),]
     }
-    #if (input$inputLocationsPort == 'Entire portfolio') {
-    #  corpTable2 <- corpTable2[which(corpTable2$ParentCorpID == USER$ParentCorpID),]
-    #}
-    
+
+    if (input$inputLocationsPort != 'Entire portfolio' & (input$inputLocationsPort %in% portfolios)=="TRUE") {
+      portfolio <- input$inputLocationsPort
+      portfolio_members <- portfolioSheet %>% filter(portfolioSheet[[portfolio]]==1)
+      corpTable2 <- subset(corpTable2, Location %in% portfolio_members$TickerSymbol)
+    }
+
     # to chart a time series, need to build a new datafame with additive traces. I'm sure there's a better way to do this.
     nriskyears = length(corpTable2 %>% group_by(RiskYear) %>% summarise(svar=sum(ValueAtRisk)) %>% select(RiskYear) %>% pull())
     time_series = as.data.frame( matrix(0, nrow = nriskyears, ncol = 10, dimnames = list(c(1:nriskyears), c("RiskYear", "s1", "s2", "s3", "s4", "s5", "s6", "s7", "s8", "s9"))) )
@@ -1369,14 +1405,27 @@ server <- function(input, output, session) {
     corpTable2 <- readr::read_csv("./data/scoring_engine/nonphysical/TCSDB_structure.locations.csv.damages.allDFs.withvalues.with.nonphysical.byparentcorp.csv")
     if(input$riskfactor_subset_portfolio=="Chronic physical + Carbon price") corpTable2 <- filter(corpTable2, TCFDSubCatName=="Chronic" | RiskFactorName=="Carbon pricing")
     parentCorp = dbsheet4
-    if (input$inputLocationsPort != 'Entire portfolio') {
+    portfolioSheet <- dbsheet15
+    ncols <- length(names(portfolioSheet))
+    portfolios <- names(portfolioSheet)[5:ncols]
+
+    if (input$inputLocationsPort != 'Entire portfolio' & (input$inputLocationsPort %in% portfolios)=="FALSE") {
       #corpTable2 <- corpTable2[which(corpTable2$ParentCorpID == USER$ParentCorpID & corpTable2$Location == input$inputLocationsPort & corpTable2$RiskYear == input$sliderInputYearPort),]
       corpTable2 <- corpTable2[which(corpTable2$Location == input$inputLocationsPort & corpTable2$RiskYear == input$sliderInputYearPort),]
     }
+
     if (input$inputLocationsPort == 'Entire portfolio') {
       #corpTable2 <- corpTable2[which(corpTable2$ParentCorpID == USER$ParentCorpID & corpTable2$RiskYear == input$sliderInputYearPort),]
       corpTable2 <- corpTable2[which(corpTable2$RiskYear == input$sliderInputYearPort),]
     }
+
+    if (input$inputLocationsPort != 'Entire portfolio' & (input$inputLocationsPort %in% portfolios)=="TRUE") {
+      portfolio <- input$inputLocationsPort
+      portfolio_members <- portfolioSheet %>% filter(portfolioSheet[[portfolio]]==1)
+      corpTable2 <- subset(corpTable2, Location %in% portfolio_members$TickerSymbol)
+      corpTable2 <- corpTable2[which(corpTable2$RiskYear == input$sliderInputYearPort),]
+    }
+
     ncorp <- pull(count(corpTable2))
     plot_ly(corpTable2, x = ~TCFDCategoryName, y = ~ValueAtRisk, type='bar', text=corpTable2$RiskFactorName, marker = list(color = colorRampPalette(brewer.pal(11,"Spectral"))(ncorp))) %>%
       layout(yaxis = list(title = 'Impact ($M)'), barmode = 'stack', margin = list(l=80,b=100))
@@ -1388,14 +1437,27 @@ server <- function(input, output, session) {
     corpTable2 <- readr::read_csv("./data/scoring_engine/nonphysical/TCSDB_structure.locations.csv.damages.allDFs.withvalues.with.nonphysical.byparentcorp.csv")
     if(input$riskfactor_subset_portfolio=="Chronic physical + Carbon price") corpTable2 <- filter(corpTable2, TCFDSubCatName=="Chronic" | RiskFactorName=="Carbon pricing")
     parentCorp = dbsheet4
-      if (input$inputLocationsPort != 'Entire portfolio') {
+    portfolioSheet <- dbsheet15
+    ncols <- length(names(portfolioSheet))
+    portfolios <- names(portfolioSheet)[5:ncols]
+
+    if (input$inputLocationsPort != 'Entire portfolio' & (input$inputLocationsPort %in% portfolios)=="FALSE") {
         #corpTable2 <- corpTable2[which(corpTable2$ParentCorpID == USER$ParentCorpID & corpTable2$Location == input$inputLocationsPort & corpTable2$RiskYear == input$sliderInputYearPort),]
         corpTable2 <- corpTable2[which(corpTable2$Location == input$inputLocationsPort & corpTable2$RiskYear == input$sliderInputYearPort),]
       }
+
       if (input$inputLocationsPort == 'Entire portfolio') {
         #corpTable2 <- corpTable2[which(corpTable2$ParentCorpID == USER$ParentCorpID & corpTable2$RiskYear == input$sliderInputYearPort),]
         corpTable2 <- corpTable2[which(corpTable2$RiskYear == input$sliderInputYearPort),]
       }
+
+    if (input$inputLocationsPort != 'Entire portfolio' & (input$inputLocationsPort %in% portfolios)=="TRUE") {
+      portfolio <- input$inputLocationsPort
+      portfolio_members <- portfolioSheet %>% filter(portfolioSheet[[portfolio]]==1)
+      corpTable2 <- subset(corpTable2, Location %in% portfolio_members$TickerSymbol)
+      corpTable2 <- corpTable2[which(corpTable2$RiskYear == input$sliderInputYearPort),]
+    }
+
       corpTable2[1:7]
   })
 

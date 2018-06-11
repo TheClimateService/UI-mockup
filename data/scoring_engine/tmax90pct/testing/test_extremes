@@ -1,0 +1,3 @@
+LocationID_ParentCorpID_LocationName lon lat location df_tx90p df_pdsisc df_coastalflood df_carbonprice df_tbd2 df_tbd3 notes
+999_99_TESTnorth -0.018951 89.9 TESTnorth tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -
+9999_99_TESTsouth -0.018951 -89.9 TESTsouth tx90p-1 pdsisc-1 coastalflood-1 carbonprice-1 - - -

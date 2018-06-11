@@ -21,10 +21,19 @@ lat=$2
 infile=$3
 
 # Calculate CMCC-CM idlon and idlat.
+# The lon range is 0.0 to 359.25, with indices 1-480.  The lat range is -89.427084 to 89.427084, with indices 1-240
 echo XXX > temp1
-awk -v lon=$lon -v lat=$lat '{idlon=1+int(lon/0.75);  \
-	idlat=120+int(lat/0.7484);  \
-	if(lon%0.75 > 0.75/2) idlon=idlon+1;  \
+awk -v lon=$lon -v lat=$lat '{  \
+	idlonmax=480; idlatmax=240;  \
+	deltalon=0.75; deltalat=0.7484;  \
+	idlatzero=120;  \
+	idlon=1+int(lon/deltalon);  \
+	if(lon%deltalon > deltalon/2) idlon=idlon+1;  \
+	if(idlon>idlonmax) idlon=idlon-idlonmax;  \
+	idlat=idlatzero+int(lat/deltalat);  \
+	if(lat%deltalat > deltalat/2) idlat=idlat+1;  \
+	if(idlat>idlatmax) idlat=idlat-idlatmax;  \
+	if(idlat<1) idlat=1;  \
 	print idlon,idlat}' temp1 > temp2
 
 # Get the data for this lon/lat from the infile.
