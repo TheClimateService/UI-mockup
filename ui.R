@@ -231,13 +231,18 @@ ui <- dashboardPage(title="The Climate Service",
 		uiOutput("businessFunctions")
 
               )#conditionalPanel
-         ),#box
+         ) #box
+        ), #fluidRow
 
+	# Put these buttons in individual fluidRow to avoid problems with long lists of radioButtons that cannot be activated when lying below these actionButtons.
+        fluidRow(
+         box(width=4,
          actionButton("btnConfig","Analyze"),
          actionButton("button_save_data_corp","SAVE DATA"),
 	 checkboxInput("checkbox_plots4report_maps", label = "Capture each viewed map for report", value = FALSE)
-        
-        )#fluidRow
+         ) #box
+        ) #fluidRow
+
     ),#tabItem
 
 # --------------------------------------

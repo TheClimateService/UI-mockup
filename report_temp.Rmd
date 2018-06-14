@@ -1,0 +1,48 @@
+---
+title: "Climate-related Financial Disclosures Report"
+output: 
+  word_document:
+    fig_width: 6
+    fig_height: 4
+    fig_caption: yes
+params:
+  pParentCorpName: "whatever"
+  pTCFDGova: "whatever"
+  pTCFDGovb: "whatever"
+---
+
+## Summary
+Climate affects `r params$pParentCorpName` in many ways...
+
+"One of the most significant, and perhaps most misunderstood, risks that organizations face today relates to climate change. While it is widely recognized that continued emission of greenhouse gases will cause further warming of the planet and this warming could lead to damaging economic and social consequences, the exact timing and severity of physical effects are difficult to estimate. The large-scale and long-term nature of the problem makes it uniquely challenging, especially in the context of economic decision making. Accordingly, many organizations incorrectly perceive the implications of climate change to be long term and, therefore, not necessarily relevant to decisions made today."
+
+"One of the essential functions of financial markets is to price risk to support informed, efficient capital-allocation decisions. Accurate and timely disclosure of current and past operating and financial results is fundamental to this function, but it is increasingly important to understand the governance and risk management context in which financial results are achieved. The financial crisis of 2007-2008 was an important reminder of the repercussions that weak corporate governance and risk management practices can have on asset values. This has resulted in increased demand for transparency from organizations on their governance structures, strategies, and risk management practices. Without the right information, investors and others may incorrectly price or value assets, leading to a misallocation of capital."
+
+`r params$pParentCorpName` is committed to the assessment and disclosure of material financial risks related to climate change. Following is a report that outlines the major risks and opportunities the company faces.
+
+## Governance
+"Disclose the organization’s governance around climate-related risks and opportunities."
+
+### Board oversight
+*Describe the board’s oversight of climate-related risks and opportunities.*
+
+`r params$pTCFDGova`
+
+### Management oversight
+*Describe management’s role in assessing and managing climate-related risks and opportunities.*
+
+`r params$pTCFDGovb`
+
+## Strategy
+The following figures show risk factors for `r params$pParentCorpName` across locations.
+
+
+
+```{r echo=FALSE}
+require(grDevices)
+y <- table(corpKable$ValueAtRisk)
+#barplot(corpKable$ValueAtRisk, main="Value at Risk", horiz=TRUE, xlab="$M value at risk", ylab="Risk Factor", col = heat.colors(6), names.arg = corpKable$RiskFactorName, cex.names = 0.5)
+#barplot(corpKableBoise$ValueAtRisk, main="Value at Risk", horiz=TRUE, xlab="$M value at risk", ylab="Risk Factor", col = heat.colors(6), names.arg = corpKableBoise$RiskFactorName, cex.names = 0.5)
+```
+
+

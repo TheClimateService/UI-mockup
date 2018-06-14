@@ -1,0 +1,342 @@
+<div style="width:150px; height:100px">
+
+![Figure 1: KerryGroup/KerryGroup-Alllocations-areaByTime(2040)-2018-05-07.png](./report/KerryGroup/KerryGroup-Alllocations-areaByTime(2040)-2018-05-07.png){ width=50% }
+
+</div>
+
+<div style="width:150px; height:100px">
+
+![Figure 2: KerryGroup/KerryGroup-Alllocations-barByLocation(2020)-2018-05-07.png](./report/KerryGroup/KerryGroup-Alllocations-barByLocation(2020)-2018-05-07.png){ width=50% }
+
+</div>
+
+<div style="width:150px; height:100px">
+
+![Figure 3: KerryGroup/KerryGroup-Alllocations-barByLocation(2030)-2018-05-07.png](./report/KerryGroup/KerryGroup-Alllocations-barByLocation(2030)-2018-05-07.png){ width=50% }
+
+</div>
+
+<div style="width:150px; height:100px">
+
+![Figure 4: KerryGroup/KerryGroup-Alllocations-barByLocation(2040)-2018-05-07.png](./report/KerryGroup/KerryGroup-Alllocations-barByLocation(2040)-2018-05-07.png){ width=50% }
+
+</div>
+
+<div style="width:150px; height:100px">
+
+![Figure 5: KerryGroup/KerryGroup-Alllocations-barByRiskFactor(2020)-2018-05-07.png](./report/KerryGroup/KerryGroup-Alllocations-barByRiskFactor(2020)-2018-05-07.png){ width=50% }
+
+</div>
+
+<div style="width:150px; height:100px">
+
+![Figure 6: KerryGroup/KerryGroup-Alllocations-barByRiskFactor(2030)-2018-05-07.png](./report/KerryGroup/KerryGroup-Alllocations-barByRiskFactor(2030)-2018-05-07.png){ width=50% }
+
+</div>
+
+<div style="width:150px; height:100px">
+
+![Figure 7: KerryGroup/KerryGroup-Alllocations-barByRiskFactor(2040)-2018-05-07.png](./report/KerryGroup/KerryGroup-Alllocations-barByRiskFactor(2040)-2018-05-07.png){ width=50% }
+
+</div>
+
+<div style="width:150px; height:100px">
+
+![Figure 8: KerryGroup/KerryGroup-Alllocations-map-2018-05-08.png](./report/KerryGroup/KerryGroup-Alllocations-map-2018-05-08.png){ width=50% }
+
+</div>
+
+<div style="width:150px; height:100px">
+
+![Figure 9: KerryGroup/KerryGroup-Grasse_France-barByRiskFactor(2020)-2018-05-07.png](./report/KerryGroup/KerryGroup-Grasse_France-barByRiskFactor(2020)-2018-05-07.png){ width=50% }
+
+</div>
+
+<div style="width:150px; height:100px">
+
+![Figure 10: KerryGroup/KerryGroup-Grasse_France-barByRiskFactor(2030)-2018-05-07.png](./report/KerryGroup/KerryGroup-Grasse_France-barByRiskFactor(2030)-2018-05-07.png){ width=50% }
+
+</div>
+
+<div style="width:150px; height:100px">
+
+![Figure 11: KerryGroup/KerryGroup-Grasse_France-barByRiskFactor(2040)-2018-05-07.png](./report/KerryGroup/KerryGroup-Grasse_France-barByRiskFactor(2040)-2018-05-07.png){ width=50% }
+
+</div>
+
+<div style="width:150px; height:100px">
+
+![Figure 12: KerryGroup/KerryGroup-Grasse_France-hazard-DroughtSeverity(90thpercentile)-2018-05-07.png](./report/KerryGroup/KerryGroup-Grasse_France-hazard-DroughtSeverity(90thpercentile)-2018-05-07.png){ width=50% }
+
+</div>
+
+<div style="width:150px; height:100px">
+
+![Figure 13: KerryGroup/KerryGroup-Grasse_France-hazard-Temperature(dailymaximum90thpercentile)-2018-05-07.png](./report/KerryGroup/KerryGroup-Grasse_France-hazard-Temperature(dailymaximum90thpercentile)-2018-05-07.png){ width=50% }
+
+</div>
+
+<div style="width:150px; height:100px">
+
+![Figure 14: KerryGroup/KerryGroup-Grasse_France-risk-DroughtSeverity(90thpercentile)-2018-05-07.png](./report/KerryGroup/KerryGroup-Grasse_France-risk-DroughtSeverity(90thpercentile)-2018-05-07.png){ width=50% }
+
+</div>
+
+<div style="width:150px; height:100px">
+
+![Figure 15: KerryGroup/KerryGroup-Grasse_France-risk-Temperature(dailymaximum90thpercentile)-2018-05-07.png](./report/KerryGroup/KerryGroup-Grasse_France-risk-Temperature(dailymaximum90thpercentile)-2018-05-07.png){ width=50% }
+
+</div>
+
+<div style="width:150px; height:100px">
+
+![Figure 16: KerryGroup/KerryGroup-Grasse_France-vulnerability-DroughtSeverity(90thpercentile)-2018-05-07.png](./report/KerryGroup/KerryGroup-Grasse_France-vulnerability-DroughtSeverity(90thpercentile)-2018-05-07.png){ width=50% }
+
+</div>
+
+<div style="width:150px; height:100px">
+
+![Figure 17: KerryGroup/KerryGroup-Grasse_France-vulnerability-Temperature(dailymaximum90thpercentile)-2018-05-07.png](./report/KerryGroup/KerryGroup-Grasse_France-vulnerability-Temperature(dailymaximum90thpercentile)-2018-05-07.png){ width=50% }
+
+</div>
+
+<div style="width:150px; height:100px">
+
+![Figure 18: KerryGroup/KerryGroup-Guanajuato_Mexico-barByRiskFactor(2020)-2018-05-07.png](./report/KerryGroup/KerryGroup-Guanajuato_Mexico-barByRiskFactor(2020)-2018-05-07.png){ width=50% }
+
+</div>
+
+<div style="width:150px; height:100px">
+
+![Figure 19: KerryGroup/KerryGroup-Guanajuato_Mexico-barByRiskFactor(2030)-2018-05-07.png](./report/KerryGroup/KerryGroup-Guanajuato_Mexico-barByRiskFactor(2030)-2018-05-07.png){ width=50% }
+
+</div>
+
+<div style="width:150px; height:100px">
+
+![Figure 20: KerryGroup/KerryGroup-Guanajuato_Mexico-barByRiskFactor(2040)-2018-05-07.png](./report/KerryGroup/KerryGroup-Guanajuato_Mexico-barByRiskFactor(2040)-2018-05-07.png){ width=50% }
+
+</div>
+
+<div style="width:150px; height:100px">
+
+![Figure 21: KerryGroup/KerryGroup-Guanajuato_Mexico-hazard-DroughtSeverity(90thpercentile)-2018-05-07.png](./report/KerryGroup/KerryGroup-Guanajuato_Mexico-hazard-DroughtSeverity(90thpercentile)-2018-05-07.png){ width=50% }
+
+</div>
+
+<div style="width:150px; height:100px">
+
+![Figure 22: KerryGroup/KerryGroup-Guanajuato_Mexico-hazard-Temperature(dailymaximum90thpercentile)-2018-05-07.png](./report/KerryGroup/KerryGroup-Guanajuato_Mexico-hazard-Temperature(dailymaximum90thpercentile)-2018-05-07.png){ width=50% }
+
+</div>
+
+<div style="width:150px; height:100px">
+
+![Figure 23: KerryGroup/KerryGroup-Guanajuato_Mexico-risk-DroughtSeverity(90thpercentile)-2018-05-07.png](./report/KerryGroup/KerryGroup-Guanajuato_Mexico-risk-DroughtSeverity(90thpercentile)-2018-05-07.png){ width=50% }
+
+</div>
+
+<div style="width:150px; height:100px">
+
+![Figure 24: KerryGroup/KerryGroup-Guanajuato_Mexico-risk-Temperature(dailymaximum90thpercentile)-2018-05-07.png](./report/KerryGroup/KerryGroup-Guanajuato_Mexico-risk-Temperature(dailymaximum90thpercentile)-2018-05-07.png){ width=50% }
+
+</div>
+
+<div style="width:150px; height:100px">
+
+![Figure 25: KerryGroup/KerryGroup-Guanajuato_Mexico-vulnerability-DroughtSeverity(90thpercentile)-2018-05-07.png](./report/KerryGroup/KerryGroup-Guanajuato_Mexico-vulnerability-DroughtSeverity(90thpercentile)-2018-05-07.png){ width=50% }
+
+</div>
+
+<div style="width:150px; height:100px">
+
+![Figure 26: KerryGroup/KerryGroup-Guanajuato_Mexico-vulnerability-Temperature(dailymaximum90thpercentile)-2018-05-07.png](./report/KerryGroup/KerryGroup-Guanajuato_Mexico-vulnerability-Temperature(dailymaximum90thpercentile)-2018-05-07.png){ width=50% }
+
+</div>
+
+<div style="width:150px; height:100px">
+
+![Figure 27: KerryGroup/KerryGroup-Kerry_Ireland-barByRiskFactor(2020)-2018-05-07.png](./report/KerryGroup/KerryGroup-Kerry_Ireland-barByRiskFactor(2020)-2018-05-07.png){ width=50% }
+
+</div>
+
+<div style="width:150px; height:100px">
+
+![Figure 28: KerryGroup/KerryGroup-Kerry_Ireland-barByRiskFactor(2030)-2018-05-07.png](./report/KerryGroup/KerryGroup-Kerry_Ireland-barByRiskFactor(2030)-2018-05-07.png){ width=50% }
+
+</div>
+
+<div style="width:150px; height:100px">
+
+![Figure 29: KerryGroup/KerryGroup-Kerry_Ireland-barByRiskFactor(2040)-2018-05-07.png](./report/KerryGroup/KerryGroup-Kerry_Ireland-barByRiskFactor(2040)-2018-05-07.png){ width=50% }
+
+</div>
+
+<div style="width:150px; height:100px">
+
+![Figure 30: KerryGroup/KerryGroup-Kerry_Ireland-hazard-DroughtSeverity(90thpercentile)-2018-05-07.png](./report/KerryGroup/KerryGroup-Kerry_Ireland-hazard-DroughtSeverity(90thpercentile)-2018-05-07.png){ width=50% }
+
+</div>
+
+<div style="width:150px; height:100px">
+
+![Figure 31: KerryGroup/KerryGroup-Kerry_Ireland-hazard-Temperature(dailymaximum90thpercentile)-2018-05-07.png](./report/KerryGroup/KerryGroup-Kerry_Ireland-hazard-Temperature(dailymaximum90thpercentile)-2018-05-07.png){ width=50% }
+
+</div>
+
+<div style="width:150px; height:100px">
+
+![Figure 32: KerryGroup/KerryGroup-Kerry_Ireland-map-2018-05-08.png](./report/KerryGroup/KerryGroup-Kerry_Ireland-map-2018-05-08.png){ width=50% }
+
+</div>
+
+<div style="width:150px; height:100px">
+
+![Figure 33: KerryGroup/KerryGroup-Kerry_Ireland-risk-DroughtSeverity(90thpercentile)-2018-05-07.png](./report/KerryGroup/KerryGroup-Kerry_Ireland-risk-DroughtSeverity(90thpercentile)-2018-05-07.png){ width=50% }
+
+</div>
+
+<div style="width:150px; height:100px">
+
+![Figure 34: KerryGroup/KerryGroup-Kerry_Ireland-risk-Temperature(dailymaximum90thpercentile)-2018-05-07.png](./report/KerryGroup/KerryGroup-Kerry_Ireland-risk-Temperature(dailymaximum90thpercentile)-2018-05-07.png){ width=50% }
+
+</div>
+
+<div style="width:150px; height:100px">
+
+![Figure 35: KerryGroup/KerryGroup-Kerry_Ireland-vulnerability-DroughtSeverity(90thpercentile)-2018-05-07.png](./report/KerryGroup/KerryGroup-Kerry_Ireland-vulnerability-DroughtSeverity(90thpercentile)-2018-05-07.png){ width=50% }
+
+</div>
+
+<div style="width:150px; height:100px">
+
+![Figure 36: KerryGroup/KerryGroup-Kerry_Ireland-vulnerability-Temperature(dailymaximum90thpercentile)-2018-05-07.png](./report/KerryGroup/KerryGroup-Kerry_Ireland-vulnerability-Temperature(dailymaximum90thpercentile)-2018-05-07.png){ width=50% }
+
+</div>
+
+<div style="width:150px; height:100px">
+
+![Figure 37: KerryGroup/KerryGroup-LapulapuCity_Cebu_Philipines-barByRiskFactor(2020)-2018-05-07.png](./report/KerryGroup/KerryGroup-LapulapuCity_Cebu_Philipines-barByRiskFactor(2020)-2018-05-07.png){ width=50% }
+
+</div>
+
+<div style="width:150px; height:100px">
+
+![Figure 38: KerryGroup/KerryGroup-LapulapuCity_Cebu_Philipines-barByRiskFactor(2030)-2018-05-07.png](./report/KerryGroup/KerryGroup-LapulapuCity_Cebu_Philipines-barByRiskFactor(2030)-2018-05-07.png){ width=50% }
+
+</div>
+
+<div style="width:150px; height:100px">
+
+![Figure 39: KerryGroup/KerryGroup-LapulapuCity_Cebu_Philipines-barByRiskFactor(2040)-2018-05-07.png](./report/KerryGroup/KerryGroup-LapulapuCity_Cebu_Philipines-barByRiskFactor(2040)-2018-05-07.png){ width=50% }
+
+</div>
+
+<div style="width:150px; height:100px">
+
+![Figure 40: KerryGroup/KerryGroup-LapulapuCity_Cebu_Philipines-hazard-CoastalFlooding(returnperiod100yrlevel)-2018-05-07.png](./report/KerryGroup/KerryGroup-LapulapuCity_Cebu_Philipines-hazard-CoastalFlooding(returnperiod100yrlevel)-2018-05-07.png){ width=50% }
+
+</div>
+
+<div style="width:150px; height:100px">
+
+![Figure 41: KerryGroup/KerryGroup-LapulapuCity_Cebu_Philipines-hazard-Temperature(dailymaximum90thpercentile)-2018-05-07.png](./report/KerryGroup/KerryGroup-LapulapuCity_Cebu_Philipines-hazard-Temperature(dailymaximum90thpercentile)-2018-05-07.png){ width=50% }
+
+</div>
+
+<div style="width:150px; height:100px">
+
+![Figure 42: KerryGroup/KerryGroup-LapulapuCity_Cebu_Philipines-risk-CoastalFlooding(returnperiod100yrlevel)-2018-05-07.png](./report/KerryGroup/KerryGroup-LapulapuCity_Cebu_Philipines-risk-CoastalFlooding(returnperiod100yrlevel)-2018-05-07.png){ width=50% }
+
+</div>
+
+<div style="width:150px; height:100px">
+
+![Figure 43: KerryGroup/KerryGroup-LapulapuCity_Cebu_Philipines-risk-Temperature(dailymaximum90thpercentile)-2018-05-07.png](./report/KerryGroup/KerryGroup-LapulapuCity_Cebu_Philipines-risk-Temperature(dailymaximum90thpercentile)-2018-05-07.png){ width=50% }
+
+</div>
+
+<div style="width:150px; height:100px">
+
+![Figure 44: KerryGroup/KerryGroup-LapulapuCity_Cebu_Philipines-vulnerability-CoastalFlooding(returnperiod100yrlevel)-2018-05-07.png](./report/KerryGroup/KerryGroup-LapulapuCity_Cebu_Philipines-vulnerability-CoastalFlooding(returnperiod100yrlevel)-2018-05-07.png){ width=50% }
+
+</div>
+
+<div style="width:150px; height:100px">
+
+![Figure 45: KerryGroup/KerryGroup-LapulapuCity_Cebu_Philipines-vulnerability-Temperature(dailymaximum90thpercentile)-2018-05-07.png](./report/KerryGroup/KerryGroup-LapulapuCity_Cebu_Philipines-vulnerability-Temperature(dailymaximum90thpercentile)-2018-05-07.png){ width=50% }
+
+</div>
+
+<div style="width:150px; height:100px">
+
+![Figure 46: KerryGroup/KerryGroup-Pontevedra_Spain-barByRiskFactor(2020)-2018-05-07.png](./report/KerryGroup/KerryGroup-Pontevedra_Spain-barByRiskFactor(2020)-2018-05-07.png){ width=50% }
+
+</div>
+
+<div style="width:150px; height:100px">
+
+![Figure 47: KerryGroup/KerryGroup-Pontevedra_Spain-barByRiskFactor(2030)-2018-05-07.png](./report/KerryGroup/KerryGroup-Pontevedra_Spain-barByRiskFactor(2030)-2018-05-07.png){ width=50% }
+
+</div>
+
+<div style="width:150px; height:100px">
+
+![Figure 48: KerryGroup/KerryGroup-Pontevedra_Spain-barByRiskFactor(2040)-2018-05-07.png](./report/KerryGroup/KerryGroup-Pontevedra_Spain-barByRiskFactor(2040)-2018-05-07.png){ width=50% }
+
+</div>
+
+<div style="width:150px; height:100px">
+
+![Figure 49: KerryGroup/KerryGroup-Pontevedra_Spain-hazard-DroughtSeverity(90thpercentile)-2018-05-07.png](./report/KerryGroup/KerryGroup-Pontevedra_Spain-hazard-DroughtSeverity(90thpercentile)-2018-05-07.png){ width=50% }
+
+</div>
+
+<div style="width:150px; height:100px">
+
+![Figure 50: KerryGroup/KerryGroup-Pontevedra_Spain-hazard-Temperature(dailymaximum90thpercentile)-2018-05-07.png](./report/KerryGroup/KerryGroup-Pontevedra_Spain-hazard-Temperature(dailymaximum90thpercentile)-2018-05-07.png){ width=50% }
+
+</div>
+
+<div style="width:150px; height:100px">
+
+![Figure 51: KerryGroup/KerryGroup-Pontevedra_Spain-risk-DroughtSeverity(90thpercentile)-2018-05-07.png](./report/KerryGroup/KerryGroup-Pontevedra_Spain-risk-DroughtSeverity(90thpercentile)-2018-05-07.png){ width=50% }
+
+</div>
+
+<div style="width:150px; height:100px">
+
+![Figure 52: KerryGroup/KerryGroup-Pontevedra_Spain-risk-Temperature(dailymaximum90thpercentile)-2018-05-07.png](./report/KerryGroup/KerryGroup-Pontevedra_Spain-risk-Temperature(dailymaximum90thpercentile)-2018-05-07.png){ width=50% }
+
+</div>
+
+<div style="width:150px; height:100px">
+
+![Figure 53: KerryGroup/KerryGroup-Pontevedra_Spain-vulnerability-DroughtSeverity(90thpercentile)-2018-05-07.png](./report/KerryGroup/KerryGroup-Pontevedra_Spain-vulnerability-DroughtSeverity(90thpercentile)-2018-05-07.png){ width=50% }
+
+</div>
+
+<div style="width:150px; height:100px">
+
+![Figure 54: KerryGroup/KerryGroup-Pontevedra_Spain-vulnerability-Temperature(dailymaximum90thpercentile)-2018-05-07.png](./report/KerryGroup/KerryGroup-Pontevedra_Spain-vulnerability-Temperature(dailymaximum90thpercentile)-2018-05-07.png){ width=50% }
+
+</div>
+
+<div style="width:150px; height:100px">
+
+![Figure 55: KerryGroup/KerryGroup-Western_Cape_South_Africa-barByRiskFactor(2020)-2018-05-07.png](./report/KerryGroup/KerryGroup-Western_Cape_South_Africa-barByRiskFactor(2020)-2018-05-07.png){ width=50% }
+
+</div>
+
+<div style="width:150px; height:100px">
+
+![Figure 56: KerryGroup/KerryGroup-Western_Cape_South_Africa-barByRiskFactor(2030)-2018-05-07.png](./report/KerryGroup/KerryGroup-Western_Cape_South_Africa-barByRiskFactor(2030)-2018-05-07.png){ width=50% }
+
+</div>
+
+<div style="width:150px; height:100px">
+
+![Figure 57: KerryGroup/KerryGroup-Western_Cape_South_Africa-barByRiskFactor(2040)-2018-05-07.png](./report/KerryGroup/KerryGroup-Western_Cape_South_Africa-barByRiskFactor(2040)-2018-05-07.png){ width=50% }
+
+</div>
+

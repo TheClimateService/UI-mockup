@@ -1,0 +1,10 @@
+
+
+***
+# Appendix 1: Data
+
+```{r echo=FALSE}
+library(knitr)
+kable(corpKable, caption = "Impacts Table")
+```
+

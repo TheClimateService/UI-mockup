@@ -944,6 +944,141 @@ BAC,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2060,3.56788,15
 BAC,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2070,7.19609,15
 BAC,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2080,11.4543,15
 BAC,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2090,14.148,15
+SAF,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2010,16.0095,16
+SAF,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2020,101.277,16
+SAF,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2030,129.077,16
+SAF,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2040,129.682,16
+SAF,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2050,185.822,16
+SAF,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2060,185.822,16
+SAF,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2070,266.838,16
+SAF,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2080,373.666,16
+SAF,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2090,446.771,16
+SAF,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2010,1.28896,16
+SAF,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2020,4.86488,16
+SAF,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2030,11.7328,16
+SAF,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2040,25.6696,16
+SAF,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2050,66.1998,16
+SAF,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2060,187.466,16
+SAF,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2070,354.211,16
+SAF,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2080,416.583,16
+SAF,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2090,429.101,16
+SAF,  Physical Risk,Chronic,Drought ,RCP8.5,2010,850.5,16
+SAF,  Physical Risk,Chronic,Drought ,RCP8.5,2020,981,16
+SAF,  Physical Risk,Chronic,Drought ,RCP8.5,2030,1057.5,16
+SAF,  Physical Risk,Chronic,Drought ,RCP8.5,2040,1588.5,16
+SAF,  Physical Risk,Chronic,Drought ,RCP8.5,2050,1795.5,16
+SAF,  Physical Risk,Chronic,Drought ,RCP8.5,2060,1854,16
+SAF,  Physical Risk,Chronic,Drought ,RCP8.5,2070,1984.5,16
+SAF,  Physical Risk,Chronic,Drought ,RCP8.5,2080,1962,16
+SAF,  Physical Risk,Chronic,Drought ,RCP8.5,2090,1768.5,16
+SAF,  Physical Risk,Acute,Employee impacts ,RCP8.5,2010,2.243,16
+SAF,  Physical Risk,Acute,Employee impacts ,RCP8.5,2020,4.57501,16
+SAF,  Physical Risk,Acute,Employee impacts ,RCP8.5,2030,10.3877,16
+SAF,  Physical Risk,Acute,Employee impacts ,RCP8.5,2040,18.174,16
+SAF,  Physical Risk,Acute,Employee impacts ,RCP8.5,2050,32.2476,16
+SAF,  Physical Risk,Acute,Employee impacts ,RCP8.5,2060,45.266,16
+SAF,  Physical Risk,Acute,Employee impacts ,RCP8.5,2070,63.4184,16
+SAF,  Physical Risk,Acute,Employee impacts ,RCP8.5,2080,80.2986,16
+SAF,  Physical Risk,Acute,Employee impacts ,RCP8.5,2090,91.4408,16
+SAF,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2010,5.98132,16
+SAF,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2020,12.2,16
+SAF,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2030,27.7005,16
+SAF,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2040,48.4641,16
+SAF,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2050,85.9936,16
+SAF,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2060,120.709,16
+SAF,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2070,169.116,16
+SAF,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2080,214.129,16
+SAF,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2090,243.842,16
+SAF,  Opportunity,Resilience,Energy resilience ,RCP8.5,2010,5.6075,16
+SAF,  Opportunity,Resilience,Energy resilience ,RCP8.5,2020,11.4375,16
+SAF,  Opportunity,Resilience,Energy resilience ,RCP8.5,2030,25.9691,16
+SAF,  Opportunity,Resilience,Energy resilience ,RCP8.5,2040,45.4351,16
+SAF,  Opportunity,Resilience,Energy resilience ,RCP8.5,2050,80.6189,16
+SAF,  Opportunity,Resilience,Energy resilience ,RCP8.5,2060,113.165,16
+SAF,  Opportunity,Resilience,Energy resilience ,RCP8.5,2070,158.546,16
+SAF,  Opportunity,Resilience,Energy resilience ,RCP8.5,2080,200.746,16
+SAF,  Opportunity,Resilience,Energy resilience ,RCP8.5,2090,228.602,16
+SAF,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2010,2.99066,16
+SAF,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2020,6.10002,16
+SAF,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2030,13.8502,16
+SAF,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2040,24.232,16
+SAF,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2050,42.9968,16
+SAF,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2060,60.3547,16
+SAF,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2070,84.5579,16
+SAF,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2080,107.065,16
+SAF,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2090,121.921,16
+SAF,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2010,4.486,16
+SAF,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2020,9.15002,16
+SAF,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2030,20.7753,16
+SAF,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2040,36.3481,16
+SAF,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2050,64.4951,16
+SAF,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2060,90.532,16
+SAF,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2070,126.837,16
+SAF,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2080,160.597,16
+SAF,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2090,182.882,16
+SAF,  Transition Risk,Reputation,Materials cost ,RCP8.5,2010,3.73833,16
+SAF,  Transition Risk,Reputation,Materials cost ,RCP8.5,2020,7.62502,16
+SAF,  Transition Risk,Reputation,Materials cost ,RCP8.5,2030,17.3128,16
+SAF,  Transition Risk,Reputation,Materials cost ,RCP8.5,2040,30.29,16
+SAF,  Transition Risk,Reputation,Materials cost ,RCP8.5,2050,53.746,16
+SAF,  Transition Risk,Reputation,Materials cost ,RCP8.5,2060,75.4433,16
+SAF,  Transition Risk,Reputation,Materials cost ,RCP8.5,2070,105.697,16
+SAF,  Transition Risk,Reputation,Materials cost ,RCP8.5,2080,133.831,16
+SAF,  Transition Risk,Reputation,Materials cost ,RCP8.5,2090,152.401,16
+SAF,  Transition Risk,Technology,New technology ,RCP8.5,2010,2.61683,16
+SAF,  Transition Risk,Technology,New technology ,RCP8.5,2020,5.33752,16
+SAF,  Transition Risk,Technology,New technology ,RCP8.5,2030,12.1189,16
+SAF,  Transition Risk,Technology,New technology ,RCP8.5,2040,21.203,16
+SAF,  Transition Risk,Technology,New technology ,RCP8.5,2050,37.6222,16
+SAF,  Transition Risk,Technology,New technology ,RCP8.5,2060,52.8103,16
+SAF,  Transition Risk,Technology,New technology ,RCP8.5,2070,73.9882,16
+SAF,  Transition Risk,Technology,New technology ,RCP8.5,2080,93.6817,16
+SAF,  Transition Risk,Technology,New technology ,RCP8.5,2090,106.681,16
+SAF,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2010,1.1215,16
+SAF,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2020,2.28751,16
+SAF,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2030,5.19383,16
+SAF,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2040,9.08701,16
+SAF,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2050,16.1238,16
+SAF,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2060,22.633,16
+SAF,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2070,31.7092,16
+SAF,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2080,40.1493,16
+SAF,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2090,45.7204,16
+SAF,  Transition Risk,Market,Reputation damage ,RCP8.5,2010,1.86917,16
+SAF,  Transition Risk,Market,Reputation damage ,RCP8.5,2020,3.81251,16
+SAF,  Transition Risk,Market,Reputation damage ,RCP8.5,2030,8.6564,16
+SAF,  Transition Risk,Market,Reputation damage ,RCP8.5,2040,15.145,16
+SAF,  Transition Risk,Market,Reputation damage ,RCP8.5,2050,26.873,16
+SAF,  Transition Risk,Market,Reputation damage ,RCP8.5,2060,37.7217,16
+SAF,  Transition Risk,Market,Reputation damage ,RCP8.5,2070,52.8487,16
+SAF,  Transition Risk,Market,Reputation damage ,RCP8.5,2080,66.9155,16
+SAF,  Transition Risk,Market,Reputation damage ,RCP8.5,2090,76.2007,16
+SAF,  Physical Risk,Acute,Storm damage ,RCP8.5,2010,26.1683,16
+SAF,  Physical Risk,Acute,Storm damage ,RCP8.5,2020,53.3752,16
+SAF,  Physical Risk,Acute,Storm damage ,RCP8.5,2030,121.189,16
+SAF,  Physical Risk,Acute,Storm damage ,RCP8.5,2040,212.03,16
+SAF,  Physical Risk,Acute,Storm damage ,RCP8.5,2050,376.222,16
+SAF,  Physical Risk,Acute,Storm damage ,RCP8.5,2060,528.103,16
+SAF,  Physical Risk,Acute,Storm damage ,RCP8.5,2070,739.882,16
+SAF,  Physical Risk,Acute,Storm damage ,RCP8.5,2080,936.816,16
+SAF,  Physical Risk,Acute,Storm damage ,RCP8.5,2090,1066.81,16
+SAF,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2010,37.3833,16
+SAF,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2020,76.2502,16
+SAF,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2030,173.128,16
+SAF,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2040,302.9,16
+SAF,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2050,537.459,16
+SAF,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2060,754.433,16
+SAF,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2070,1056.97,16
+SAF,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2080,1338.31,16
+SAF,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2090,1524.01,16
+SAF,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2010,6.72899,16
+SAF,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2020,13.725,16
+SAF,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2030,31.163,16
+SAF,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2040,54.5221,16
+SAF,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2050,96.7427,16
+SAF,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2060,135.798,16
+SAF,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2070,190.255,16
+SAF,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2080,240.896,16
+SAF,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2090,274.323,16
 IDA,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2010,5.4186,2
 IDA,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2020,34.2782,2
 IDA,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2030,43.6876,2

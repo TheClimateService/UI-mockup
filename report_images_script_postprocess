@@ -1,0 +1,21 @@
+
+# Handle backslashes that may be present if figure references are inserted.
+sed 's/SLASH/\\/g' ./report_images.Rmd > ./temp1
+
+# Handle the figure titles.  This assumes that the graphics are all in ./report/ under the appropriate corporate name folder.
+awk '{print "![Figure", NR, $0}' temp1 > temp1a
+sed 's/\.\/report\///' temp1a > temp1b
+sed 's/ :/: /' temp1b > temp1c
+
+# Insert blank lines between each image command so that the captions will appear.
+awk '{print $0; print ""}' temp1c > temp2
+
+# Insert start/stop centering or div commands, with blank lines in between.
+# The centering and div commands don't seem to be working, but we keep them here for future improvement.
+#awk '{if(length($0)> 1) {print "<center>"; print ""; print $0; print ""; print "</center>"} else print $0}' temp2 > temp3
+awk '{if(length($0)> 1) {print "<div style=DOUBLEQUOTEwidth:150px; height:100pxDOUBLEQUOTE>"; print ""; print $0; print ""; print "</div>"} else print $0}' temp2 > temp3
+sed 's/DOUBLEQUOTE/"/g' temp3 > temp4
+
+# Save results and clean up.
+mv ./temp4 ./report_images.Rmd
+rm temp*
