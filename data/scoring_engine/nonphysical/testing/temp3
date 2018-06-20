@@ -1,280 +1,280 @@
 LocationID_ParentCorpID LocationName df_tx90p df_pdsisc df_coastalflood df_carbonprice df_tbd2 df_tbd3
-1_1 Boise 100 90 80 0.12 - -
-2_1 Manassas 100 90 80 0.12 - -
-3_1 Singapore_Hqs 100 90 80 0.12 - -
-4_1 Singapore_300mm_DRAM 100 90 80 0.12 - -
-5_1 Singapore_300mm_NAND 100 90 80 0.12 - -
-6_1 Singapore_200mm_NOR 100 90 80 0.12 - -
-7_1 Catania 100 90 80 0.12 - -
-8_1 Bangalore 100 90 80 0.12 - -
-9_2 American_Falls 100 90 80 0.1 - -
-10_2 Bliss 100 90 80 0.1 - -
-11_2 Brownlee 100 90 80 0.1 - -
-12_2 C_J_Strike 100 90 80 0.1 - -
-13_2 Cascade_Dam 100 90 80 0.1 - -
-14_2 Clear_Lake 100 90 80 0.1 - -
-15_2 Lower_Malad 100 90 80 0.1 - -
-16_2 Lower_Salmon 100 90 80 0.1 - -
-17_2 Salmon_Diesel 100 90 80 0.1 - -
-18_2 Shoshone_Falls 100 90 80 0.1 - -
-19_2 Swan_Falls 100 90 80 0.1 - -
-20_2 Thousand_Springs 100 90 80 0.1 - -
-21_2 Twin_Falls_(ID) 100 90 80 0.1 - -
-22_2 Upper_Salmon_A 100 90 80 0.1 - -
-23_2 Upper_Malad 100 90 80 0.1 - -
-24_2 Hells_Canyon 100 90 80 0.1 - -
-25_2 Oxbow_(OR) 100 90 80 0.1 - -
-26_2 Upper_Salmon_B 100 90 80 0.1 - -
-27_2 Milner_Hydro 100 90 80 0.1 - -
-28_2 Evander_Andrews_Power_Complex 100 90 80 0.1 - -
-29_2 Bennett_Mountain 100 90 80 0.1 - -
-30_2 Langley_Gulch_Power_Plant 100 90 80 0.1 - -
-31_3 Boise 100 90 80 0.13 - -
-32_3 Colorado_Springs 100 90 80 0.13 - -
-33_3 Corvallis 100 90 80 0.13 - -
-34_3 Cupertino 100 90 80 0.13 - -
-35_3 Houston 100 90 80 0.13 - -
-36_3 Palo_Alto 100 90 80 0.13 - -
-37_3 Plano 100 90 80 0.13 - -
-38_3 Roseville 100 90 80 0.13 - -
-39_3 San_Bernadino 100 90 80 0.13 - -
-40_3 Dublin 100 90 80 0.13 - -
-41_3 Puerto_Rico 100 90 80 0.13 - -
-42_3 Barcelona_Sant_Cugat 100 90 80 0.13 - -
-43_3 Rehovot 100 90 80 0.13 - -
-44_3 Singapore_DRD 100 90 80 0.13 - -
-45_3 San_Diego 100 90 80 0.13 - -
-46_3 SUP_Celestica_Malaysia 100 90 80 0.13 - -
-47_3 SUP_Flex_Brazil 100 90 80 0.13 - -
-48_3 SUP_Flex_Malaysia 100 90 80 0.13 - -
-49_3 SUP_Jabil_Circuit_NL 100 90 80 0.13 - -
-50_3 SUP_Venture_Malaysia 100 90 80 0.13 - -
-51_4 Indooroopilly_Shopping_Centre 100 90 80 0.1 - -
-52_4 Pacific_Fair 100 90 80 0.1 - -
-53_4 Stanley_Plaza 100 90 80 0.1 - -
-54_4 Coronation_Drive_Office_Park 100 90 80 0.1 - -
-55_4 Macquarie_Centre 100 90 80 0.1 - -
-56_4 AMP_Building 100 90 80 0.1 - -
-57_4 NAB_Headquarters 100 90 80 0.1 - -
-58_4 Malvern_Central 100 90 80 0.1 - -
-59_4 Exchange_Tower 100 90 80 0.1 - -
-60_4 Garden_City 100 90 80 0.1 - -
-61_4 The_Palms_NZ 100 90 80 0.1 - -
-62_5 Gridley_IL 100 90 80 0.1 - -
-63_5 Blue_Earth_MN 100 90 80 0.1 - -
-64_5 Bakersfield_CA 100 90 80 0.1 - -
-65_5 Foley_MN 100 90 80 0.1 - -
-66_6 Mobile_AL_USA 100 90 80 0.1 - -
-67_6 Columbus_MS_USA 100 90 80 0.1 - -
-68_6 Grand_Prairie_TX_USA 100 90 80 0.1 - -
-69_6 Atlanta_GA_USA 100 90 80 0.1 - -
-70_6 Miami_FL_USA 100 90 80 0.1 - -
-71_6 Ashburn_VA_USA 100 90 80 0.1 - -
-72_6 Hamburg_Germany 100 90 80 0.1 - -
-73_6 Tianjin_China 100 90 80 0.1 - -
-74_6 Toulouse_France 100 90 80 0.1 - -
-75_6 Queretaro_Mexico 100 90 80 0.1 - -
-76_6 Itajuba_Minas_Gerais_Brazil 100 90 80 0.1 - -
-77_6 Sao_Paulo_Brazil 100 90 80 0.1 - -
-78_6 Rio_de_Janeiro_Brazil 100 90 80 0.1 - -
-79_6 Brasilia_Brazil 100 90 80 0.1 - -
-80_6 Broughton_UK 100 90 80 0.1 - -
-81_6 Bristol_UK 100 90 80 0.1 - -
-82_6 Stade_Germany 100 90 80 0.1 - -
-83_6 Bremen_Germany 100 90 80 0.1 - -
-84_6 Donauworth_Germany 100 90 80 0.1 - -
-85_6 Nantes_France 100 90 80 0.1 - -
-86_6 Marignane_France 100 90 80 0.1 - -
-87_6 Madrid_Spain 100 90 80 0.1 - -
-88_6 Sevilla_Spain 100 90 80 0.1 - -
-89_6 Casablanca_Morocco 100 90 80 0.1 - -
-90_6 Blenheim_New_Zealand 100 90 80 0.1 - -
-91_6 Brisbane_Australia 100 90 80 0.1 - -
-92_6 Riyadh_Saudi_Arabia 100 90 80 0.1 - -
-93_6 Jubail_Saudi_Arabia 100 90 80 0.1 - -
-94_7 Campo_Grande_Brazil 100 90 80 0.034 - -
-95_7 Belo_Horizonte_Brazil 100 90 80 0.034 - -
-96_7 Porto_Real_Brazil 100 90 80 0.034 - -
-97_7 Mogi_das_Cruzes_Brazil 100 90 80 0.034 - -
-98_7 Jundiai_Brazil 100 90 80 0.034 - -
-99_7 Sao_Paulo_Brazil 100 90 80 0.034 - -
-100_7 Curitiba_Brazil 100 90 80 0.034 - -
-101_7 Maringa_Brazil 100 90 80 0.034 - -
-102_7 Marilia_Brazil 100 90 80 0.034 - -
-103_7 Bauru_Brazil 100 90 80 0.034 - -
-104_7 San_Cristobal_de_las_Casas_Mexico 100 90 80 0.034 - -
-105_7 Tabasco_Mexico 100 90 80 0.034 - -
-106_7 Coatepec_Mexico 100 90 80 0.034 - -
-107_7 Poza_Rica_Mexico 100 90 80 0.034 - -
-108_7 Apizaco_Mexico 100 90 80 0.034 - -
-109_7 Leon_Mexico 100 90 80 0.034 - -
-110_7 Santiago_deA_Queretaro_Mexico 100 90 80 0.034 - -
-111_7 Zinacantepec_Mexico 100 90 80 0.034 - -
-112_7 Pinotepa_Nacional_Mexico 100 90 80 0.034 - -
-113_7 Cuernavaca_Mexico 100 90 80 0.034 - -
-114_7 Los_Reyes_Acaquilpan_Mexico 100 90 80 0.034 - -
-115_7 Cuautitlan_Izcalli_Mexico 100 90 80 0.034 - -
-116_7 Tepotzotlan_Mexico 100 90 80 0.034 - -
-117_7 Altamira_Mexico 100 90 80 0.034 - -
-118_7 Morelia_Mexico 100 90 80 0.034 - -
-119_7 Cuajimalpa_de_Morelos_Mexico 100 90 80 0.034 - -
-120_7 Toluca_Mexico 100 90 80 0.034 - -
-121_7 Tocancipa_Colombia 100 90 80 0.034 - -
-122_7 Manantial_Colombia 100 90 80 0.034 - -
-123_7 Barranquilla_Colombia 100 90 80 0.034 - -
-124_7 Bucaramanga_Colombia 100 90 80 0.034 - -
-125_7 Medellin_Colombia 100 90 80 0.034 - -
-126_7 Santiago_de_Cali_Colombia 100 90 80 0.034 - -
-127_7 Bogota_Colombia 100 90 80 0.034 - -
-128_7 Ilocos_Philippines 100 90 80 0.034 - -
-129_7 Ilagan_Philippines 100 90 80 0.034 - -
-130_7 San_Fernando_Philippines 100 90 80 0.034 - -
-131_7 Meycauayan_Philippines 100 90 80 0.034 - -
-132_7 Naga_Philippines 100 90 80 0.034 - -
-133_7 Tacloban_Philippines 100 90 80 0.034 - -
-134_7 Mandaue_Philippines 100 90 80 0.034 - -
-135_7 Bacolod_Philippines 100 90 80 0.034 - -
-136_7 Iloilo_Philippines 100 90 80 0.034 - -
-137_7 Tagbilaran_Philippines 100 90 80 0.034 - -
-138_7 Misasmis_Oriental_Philippines 100 90 80 0.034 - -
-139_7 Davao_Philippines 100 90 80 0.034 - -
-140_7 Zamboanga_Philippines 100 90 80 0.034 - -
-141_7 Imus_Philippines 100 90 80 0.034 - -
-142_7 Santa_Rosa_Philippines 100 90 80 0.034 - -
-143_7 Calamba_Philippines 100 90 80 0.034 - -
-144_7 Monte_Grande_Argentina 100 90 80 0.034 - -
-145_7 Maracaibo_Venezuela 100 90 80 0.034 - -
-146_7 Valencia_Venezuela 100 90 80 0.034 - -
-147_7 Antimano_Venezuela 100 90 80 0.034 - -
-148_7 Barcelona_Venezuela 100 90 80 0.034 - -
-149_7 San_Jose_Costa_Rica 100 90 80 0.034 - -
-150_7 Coronado_Costa_Rica 100 90 80 0.034 - -
-151_7 Panama_City_Panama 100 90 80 0.034 - -
-152_8 Kerry_Ireland 100 90 80 0.034 - -
-153_8 Grasse_France 100 90 80 0.034 - -
-154_8 Guanajuato_Mexico 100 90 80 0.034 - -
-155_8 LapulapuCity_Cebu_Philipines 100 90 80 0.034 - -
-156_8 Singapore 100 90 80 0.034 - -
-157_8 Lake_Zuirich_Illinois_USA 100 90 80 0.034 - -
-158_8 Manaus_Brazil 100 90 80 0.034 - -
-159_8 Western_Cape_South_Africa 100 90 80 0.034 - -
-160_8 Sydney_Australia 100 90 80 0.034 - -
-161_8 Bangalore_india 100 90 80 0.034 - -
-162_8 Los_Angeles_USA 100 90 80 0.034 - -
-163_8 Pontevedra_Spain 100 90 80 0.034 - -
-164_9 801_Brickell_Miami_USA 100 90 80 0.034 - -
-165_9 Xanadu_Centre_Madrid_Spain 100 90 80 0.034 - -
-166_9 Ginza_1_Chome_Tokyo_Japan 100 90 80 0.034 - -
-167_10 Berkeley_County_SC 100 90 80 0.13 - -
-168_10 Council_Bluffs_Iowa 100 90 80 0.13 - -
-169_10 Douglas_County_Georgia 100 90 80 0.13 - -
-170_10 Jackson_County_Alabama 100 90 80 0.13 - -
-171_10 Lenoir_NC 100 90 80 0.13 - -
-172_10 Mayes_County_Oklahoma 100 90 80 0.13 - -
-173_10 Montgomery_County_TN 100 90 80 0.13 - -
-174_10 The_Dalles_Oregon 100 90 80 0.13 - -
-175_10 Quilicura_Chile 100 90 80 0.13 - -
-176_10 Dublin_Ireland 100 90 80 0.13 - -
-177_10 Eemshaven_Netherlands 100 90 80 0.13 - -
-178_10 Hamina_Finland 100 90 80 0.13 - -
-179_10 St_Ghislain_Belgium 100 90 80 0.13 - -
-180_10 Changhua_County_Taiwan 100 90 80 0.13 - -
-181_10 Singapore 100 90 80 0.13 - -
-182_11 Ashburn_VA 100 90 80 0.13 - -
-183_11 Highlands_Ranch_CO 100 90 80 0.13 - -
-184_11 London_UK 100 90 80 0.13 - -
-185_11 Singapore 100 90 80 0.13 - -
-186_12 Singapore 100 90 80 0.13 - -
-187_12 Hong_Kong 100 90 80 0.13 - -
-188_12 Melbourne_Australia 100 90 80 0.13 - -
-189_12 Sydney_Australia 100 90 80 0.13 - -
-190_12 Sao_Paulo_Brazil 100 90 80 0.13 - -
-191_12 Saitama_Japan 100 90 80 0.13 - -
-192_12 Osaka_Japan 100 90 80 0.13 - -
-193_12 Dublin_Ireland 100 90 80 0.13 - -
-194_12 Ashburn_Virginia 100 90 80 0.13 - -
-195_12 Chicago_Illinois 100 90 80 0.13 - -
-196_13 Prineville_Oregon 100 90 80 0.13 - -
-197_13 Reno_NV 100 90 80 0.13 - -
-198_13 Maiden_NC 100 90 80 0.13 - -
-199_13 Santa_Clara_CA 100 90 80 0.13 - -
-200_13 Mesa_AZ 100 90 80 0.13 - -
-201_13 Waukee_Iowa 100 90 80 0.13 - -
-202_13 Viborg_Denmark 100 90 80 0.13 - -
-203_13 Aabenraa_Denmark 100 90 80 0.13 - -
-204_13 Ulanqab_China 100 90 80 0.13 - -
-205_13 Guizhou_China 100 90 80 0.13 - -
-206_14 Puebla_Mexico 100 90 80 0.13 - -
-207_14 Uitenhage_South_Africa 100 90 80 0.13 - -
-208_14 Chattanooga_TN 100 90 80 0.13 - -
-209_14 Pamela_Portugal 100 90 80 0.13 - -
-210_14 Chakan_India 100 90 80 0.13 - -
-211_14 Taubate_Brazil 100 90 80 0.13 - -
-212_14 Sao_Bernardo_Brazil 100 90 80 0.13 - -
-213_14 Sao_Jose_dos_Pinhais_Brazil 100 90 80 0.13 - -
-214_14 Sao_Carlos_Brazil 100 90 80 0.13 - -
-215_14 Cordoba_Argentina 100 90 80 0.13 - -
-216_14 Pacheco_Argentina 100 90 80 0.13 - -
-217_14 Braunschweig_Germany 100 90 80 0.13 - -
-218_14 Chemnitz_Germany 100 90 80 0.13 - -
-219_14 Dresden_Germany 100 90 80 0.13 - -
-220_14 Emden_Germany 100 90 80 0.13 - -
-221_14 Hannover_Germany 100 90 80 0.13 - -
-222_14 Kassel_Germany 100 90 80 0.13 - -
-223_14 Osnabruck_Germany 100 90 80 0.13 - -
-224_14 Salzgitter_Germany 100 90 80 0.13 - -
-225_14 Wolfsburg_Germany 100 90 80 0.13 - -
-226_14 Zwickau_Germany 100 90 80 0.13 - -
-227_15 Los_Angeles_CA 100 90 80 0.13 - -
-228_15 Richmond_VA 100 90 80 0.13 - -
-229_15 Richardson_TX 100 90 80 0.13 - -
-230_16 GrandPrairie_TX 100 90 80 0.13 - -
-231_16 CostaMesa_CA 100 90 80 0.13 - -
-232_16 Everett_WA 100 90 80 0.13 - -
-233_16 Walton_KY 100 90 80 0.13 - -
-234_16 Ashburn_VA 100 90 80 0.13 - -
-235_16 Toronto_Canada 100 90 80 0.13 - -
-236_16 Bedford_NH 100 90 80 0.13 - -
-237_16 Rochester_NH 100 90 80 0.13 - -
-238_16 Queretaro_Mexico 100 90 80 0.13 - -
-239_16 Chihuahua_Mexico 100 90 80 0.13 - -
-240_16 Xerem_Brazil 100 90 80 0.13 - -
-241_16 SaoJose_dosCampos_Brazil 100 90 80 0.13 - -
-242_16 Bankstown_Australia 100 90 80 0.13 - -
-243_16 Singapore_LandingSystems 100 90 80 0.13 - -
-244_16 Singapore_HeloEngines 100 90 80 0.13 - -
-245_16 Negeri_Sembilan_ Malaysia 100 90 80 0.13 - -
-246_16 Komsomolsk_Russia 100 90 80 0.13 - -
-247_16 Beijing_China 100 90 80 0.13 - -
-248_16 Guizhou_China 100 90 80 0.13 - -
-249_16 Suzhou_China_LandingSystems 100 90 80 0.13 - -
-250_16 Suzhou_China_AircraftEngines 100 90 80 0.13 - -
-251_16 Temara_Morocco 100 90 80 0.13 - -
-252_16 Casablanca_Morocco 100 90 80 0.13 - -
-253_16 Burnley_UK 100 90 80 0.13 - -
-254_16 Gloucester_UK 100 90 80 0.13 - -
-255_16 Pitstone_Green_UK 100 90 80 0.13 - -
-256_16 Fareham_UK 100 90 80 0.13 - -
-257_16 Hamburg_Germany_HeloEngines 100 90 80 0.13 - -
-258_16 Hamburg_Germany_Nacelles 100 90 80 0.13 - -
-259_16 Herstal_Belgium 100 90 80 0.13 - -
-260_16 Commercy_France 100 90 80 0.13 - -
-261_16 Florange_France 100 90 80 0.13 - -
-262_16 Molsheim_France 100 90 80 0.13 - -
-263_16 Vernon_France 100 90 80 0.13 - -
-264_16 Buchelay_France 100 90 80 0.13 - -
-265_16 Mantes_La_Ville_France 100 90 80 0.13 - -
-266_16 Eragny_France 100 90 80 0.13 - -
-267_16 Gennevilliers_France 100 90 80 0.13 - -
-268_16 Saint_Quentin_France 100 90 80 0.13 - -
-269_16 Massy_France 100 90 80 0.13 - -
-270_16 Fougeres_France 100 90 80 0.13 - -
-271_16 Montflucon_France 100 90 80 0.13 - -
-272_16 Chatellerault_France 100 90 80 0.13 - -
-273_16 Poitiers_France 100 90 80 0.13 - -
-274_16 Villeurbanne_France 100 90 80 0.13 - -
-275_16 Valence_France 100 90 80 0.13 - -
-276_16 Istres_France 100 90 80 0.13 - -
-277_16 Colomiers_France 100 90 80 0.13 - -
-278_16 Tarnos_France 100 90 80 0.13 - -
-279_16 Bidos_France 100 90 80 0.13 - -
+1_1 Boise 100 90 80 0.12 - 
+2_1 Manassas 100 90 80 0.12 - 
+3_1 Singapore_Hqs 100 90 80 0.12 - 
+4_1 Singapore_300mm_DRAM 100 90 80 0.12 - 
+5_1 Singapore_300mm_NAND 100 90 80 0.12 - 
+6_1 Singapore_200mm_NOR 100 90 80 0.12 - 
+7_1 Catania 100 90 80 0.12 - 
+8_1 Bangalore 100 90 80 0.12 - 
+9_2 American_Falls 100 90 80 0.1 - 
+10_2 Bliss 100 90 80 0.1 - 
+11_2 Brownlee 100 90 80 0.1 - 
+12_2 C_J_Strike 100 90 80 0.1 - 
+13_2 Cascade_Dam 100 90 80 0.1 - 
+14_2 Clear_Lake 100 90 80 0.1 - 
+15_2 Lower_Malad 100 90 80 0.1 - 
+16_2 Lower_Salmon 100 90 80 0.1 - 
+17_2 Salmon_Diesel 100 90 80 0.1 - 
+18_2 Shoshone_Falls 100 90 80 0.1 - 
+19_2 Swan_Falls 100 90 80 0.1 - 
+20_2 Thousand_Springs 100 90 80 0.1 - 
+21_2 Twin_Falls_(ID) 100 90 80 0.1 - 
+22_2 Upper_Salmon_A 100 90 80 0.1 - 
+23_2 Upper_Malad 100 90 80 0.1 - 
+24_2 Hells_Canyon 100 90 80 0.1 - 
+25_2 Oxbow_(OR) 100 90 80 0.1 - 
+26_2 Upper_Salmon_B 100 90 80 0.1 - 
+27_2 Milner_Hydro 100 90 80 0.1 - 
+28_2 Evander_Andrews_Power_Complex 100 90 80 0.1 - 
+29_2 Bennett_Mountain 100 90 80 0.1 - 
+30_2 Langley_Gulch_Power_Plant 100 90 80 0.1 - 
+31_3 Boise 100 90 80 0.13 - 
+32_3 Colorado_Springs 100 90 80 0.13 - 
+33_3 Corvallis 100 90 80 0.13 - 
+34_3 Cupertino 100 90 80 0.13 - 
+35_3 Houston 100 90 80 0.13 - 
+36_3 Palo_Alto 100 90 80 0.13 - 
+37_3 Plano 100 90 80 0.13 - 
+38_3 Roseville 100 90 80 0.13 - 
+39_3 San_Bernadino 100 90 80 0.13 - 
+40_3 Dublin 100 90 80 0.13 - 
+41_3 Puerto_Rico 100 90 80 0.13 - 
+42_3 Barcelona_Sant_Cugat 100 90 80 0.13 - 
+43_3 Rehovot 100 90 80 0.13 - 
+44_3 Singapore_DRD 100 90 80 0.13 - 
+45_3 San_Diego 100 90 80 0.13 - 
+46_3 SUP_Celestica_Malaysia 100 90 80 0.13 - 
+47_3 SUP_Flex_Brazil 100 90 80 0.13 - 
+48_3 SUP_Flex_Malaysia 100 90 80 0.13 - 
+49_3 SUP_Jabil_Circuit_NL 100 90 80 0.13 - 
+50_3 SUP_Venture_Malaysia 100 90 80 0.13 - 
+51_4 Indooroopilly_Shopping_Centre 100 90 80 0.1 - 
+52_4 Pacific_Fair 100 90 80 0.1 - 
+53_4 Stanley_Plaza 100 90 80 0.1 - 
+54_4 Coronation_Drive_Office_Park 100 90 80 0.1 - 
+55_4 Macquarie_Centre 100 90 80 0.1 - 
+56_4 AMP_Building 100 90 80 0.1 - 
+57_4 NAB_Headquarters 100 90 80 0.1 - 
+58_4 Malvern_Central 100 90 80 0.1 - 
+59_4 Exchange_Tower 100 90 80 0.1 - 
+60_4 Garden_City 100 90 80 0.1 - 
+61_4 The_Palms_NZ 100 90 80 0.1 - 
+62_5 Gridley_IL 100 90 80 0.1 - 
+63_5 Blue_Earth_MN 100 90 80 0.1 - 
+64_5 Bakersfield_CA 100 90 80 0.1 - 
+65_5 Foley_MN 100 90 80 0.1 - 
+66_6 Mobile_AL_USA 100 90 80 0.1 - 
+67_6 Columbus_MS_USA 100 90 80 0.1 - 
+68_6 Grand_Prairie_TX_USA 100 90 80 0.1 - 
+69_6 Atlanta_GA_USA 100 90 80 0.1 - 
+70_6 Miami_FL_USA 100 90 80 0.1 - 
+71_6 Ashburn_VA_USA 100 90 80 0.1 - 
+72_6 Hamburg_Germany 100 90 80 0.1 - 
+73_6 Tianjin_China 100 90 80 0.1 - 
+74_6 Toulouse_France 100 90 80 0.1 - 
+75_6 Queretaro_Mexico 100 90 80 0.1 - 
+76_6 Itajuba_Minas_Gerais_Brazil 100 90 80 0.1 - 
+77_6 Sao_Paulo_Brazil 100 90 80 0.1 - 
+78_6 Rio_de_Janeiro_Brazil 100 90 80 0.1 - 
+79_6 Brasilia_Brazil 100 90 80 0.1 - 
+80_6 Broughton_UK 100 90 80 0.1 - 
+81_6 Bristol_UK 100 90 80 0.1 - 
+82_6 Stade_Germany 100 90 80 0.1 - 
+83_6 Bremen_Germany 100 90 80 0.1 - 
+84_6 Donauworth_Germany 100 90 80 0.1 - 
+85_6 Nantes_France 100 90 80 0.1 - 
+86_6 Marignane_France 100 90 80 0.1 - 
+87_6 Madrid_Spain 100 90 80 0.1 - 
+88_6 Sevilla_Spain 100 90 80 0.1 - 
+89_6 Casablanca_Morocco 100 90 80 0.1 - 
+90_6 Blenheim_New_Zealand 100 90 80 0.1 - 
+91_6 Brisbane_Australia 100 90 80 0.1 - 
+92_6 Riyadh_Saudi_Arabia 100 90 80 0.1 - 
+93_6 Jubail_Saudi_Arabia 100 90 80 0.1 - 
+94_7 Campo_Grande_Brazil 100 90 80 0.034 - 
+95_7 Belo_Horizonte_Brazil 100 90 80 0.034 - 
+96_7 Porto_Real_Brazil 100 90 80 0.034 - 
+97_7 Mogi_das_Cruzes_Brazil 100 90 80 0.034 - 
+98_7 Jundiai_Brazil 100 90 80 0.034 - 
+99_7 Sao_Paulo_Brazil 100 90 80 0.034 - 
+100_7 Curitiba_Brazil 100 90 80 0.034 - 
+101_7 Maringa_Brazil 100 90 80 0.034 - 
+102_7 Marilia_Brazil 100 90 80 0.034 - 
+103_7 Bauru_Brazil 100 90 80 0.034 - 
+104_7 San_Cristobal_de_las_Casas_Mexico 100 90 80 0.034 - 
+105_7 Tabasco_Mexico 100 90 80 0.034 - 
+106_7 Coatepec_Mexico 100 90 80 0.034 - 
+107_7 Poza_Rica_Mexico 100 90 80 0.034 - 
+108_7 Apizaco_Mexico 100 90 80 0.034 - 
+109_7 Leon_Mexico 100 90 80 0.034 - 
+110_7 Santiago_deA_Queretaro_Mexico 100 90 80 0.034 - 
+111_7 Zinacantepec_Mexico 100 90 80 0.034 - 
+112_7 Pinotepa_Nacional_Mexico 100 90 80 0.034 - 
+113_7 Cuernavaca_Mexico 100 90 80 0.034 - 
+114_7 Los_Reyes_Acaquilpan_Mexico 100 90 80 0.034 - 
+115_7 Cuautitlan_Izcalli_Mexico 100 90 80 0.034 - 
+116_7 Tepotzotlan_Mexico 100 90 80 0.034 - 
+117_7 Altamira_Mexico 100 90 80 0.034 - 
+118_7 Morelia_Mexico 100 90 80 0.034 - 
+119_7 Cuajimalpa_de_Morelos_Mexico 100 90 80 0.034 - 
+120_7 Toluca_Mexico 100 90 80 0.034 - 
+121_7 Tocancipa_Colombia 100 90 80 0.034 - 
+122_7 Manantial_Colombia 100 90 80 0.034 - 
+123_7 Barranquilla_Colombia 100 90 80 0.034 - 
+124_7 Bucaramanga_Colombia 100 90 80 0.034 - 
+125_7 Medellin_Colombia 100 90 80 0.034 - 
+126_7 Santiago_de_Cali_Colombia 100 90 80 0.034 - 
+127_7 Bogota_Colombia 100 90 80 0.034 - 
+128_7 Ilocos_Philippines 100 90 80 0.034 - 
+129_7 Ilagan_Philippines 100 90 80 0.034 - 
+130_7 San_Fernando_Philippines 100 90 80 0.034 - 
+131_7 Meycauayan_Philippines 100 90 80 0.034 - 
+132_7 Naga_Philippines 100 90 80 0.034 - 
+133_7 Tacloban_Philippines 100 90 80 0.034 - 
+134_7 Mandaue_Philippines 100 90 80 0.034 - 
+135_7 Bacolod_Philippines 100 90 80 0.034 - 
+136_7 Iloilo_Philippines 100 90 80 0.034 - 
+137_7 Tagbilaran_Philippines 100 90 80 0.034 - 
+138_7 Misasmis_Oriental_Philippines 100 90 80 0.034 - 
+139_7 Davao_Philippines 100 90 80 0.034 - 
+140_7 Zamboanga_Philippines 100 90 80 0.034 - 
+141_7 Imus_Philippines 100 90 80 0.034 - 
+142_7 Santa_Rosa_Philippines 100 90 80 0.034 - 
+143_7 Calamba_Philippines 100 90 80 0.034 - 
+144_7 Monte_Grande_Argentina 100 90 80 0.034 - 
+145_7 Maracaibo_Venezuela 100 90 80 0.034 - 
+146_7 Valencia_Venezuela 100 90 80 0.034 - 
+147_7 Antimano_Venezuela 100 90 80 0.034 - 
+148_7 Barcelona_Venezuela 100 90 80 0.034 - 
+149_7 San_Jose_Costa_Rica 100 90 80 0.034 - 
+150_7 Coronado_Costa_Rica 100 90 80 0.034 - 
+151_7 Panama_City_Panama 100 90 80 0.034 - 
+152_8 Kerry_Ireland 100 90 80 0.034 - 
+153_8 Grasse_France 100 90 80 0.034 - 
+154_8 Guanajuato_Mexico 100 90 80 0.034 - 
+155_8 LapulapuCity_Cebu_Philipines 100 90 80 0.034 - 
+156_8 Singapore 100 90 80 0.034 - 
+157_8 Lake_Zuirich_Illinois_USA 100 90 80 0.034 - 
+158_8 Manaus_Brazil 100 90 80 0.034 - 
+159_8 Western_Cape_South_Africa 100 90 80 0.034 - 
+160_8 Sydney_Australia 100 90 80 0.034 - 
+161_8 Bangalore_india 100 90 80 0.034 - 
+162_8 Los_Angeles_USA 100 90 80 0.034 - 
+163_8 Pontevedra_Spain 100 90 80 0.034 - 
+164_9 801_Brickell_Miami_USA 100 90 80 0.034 - 
+165_9 Xanadu_Centre_Madrid_Spain 100 90 80 0.034 - 
+166_9 Ginza_1_Chome_Tokyo_Japan 100 90 80 0.034 - 
+167_10 Berkeley_County_SC 100 90 80 0.13 - 
+168_10 Council_Bluffs_Iowa 100 90 80 0.13 - 
+169_10 Douglas_County_Georgia 100 90 80 0.13 - 
+170_10 Jackson_County_Alabama 100 90 80 0.13 - 
+171_10 Lenoir_NC 100 90 80 0.13 - 
+172_10 Mayes_County_Oklahoma 100 90 80 0.13 - 
+173_10 Montgomery_County_TN 100 90 80 0.13 - 
+174_10 The_Dalles_Oregon 100 90 80 0.13 - 
+175_10 Quilicura_Chile 100 90 80 0.13 - 
+176_10 Dublin_Ireland 100 90 80 0.13 - 
+177_10 Eemshaven_Netherlands 100 90 80 0.13 - 
+178_10 Hamina_Finland 100 90 80 0.13 - 
+179_10 St_Ghislain_Belgium 100 90 80 0.13 - 
+180_10 Changhua_County_Taiwan 100 90 80 0.13 - 
+181_10 Singapore 100 90 80 0.13 - 
+182_11 Ashburn_VA 100 90 80 0.13 - 
+183_11 Highlands_Ranch_CO 100 90 80 0.13 - 
+184_11 London_UK 100 90 80 0.13 - 
+185_11 Singapore 100 90 80 0.13 - 
+186_12 Singapore 100 90 80 0.13 - 
+187_12 Hong_Kong 100 90 80 0.13 - 
+188_12 Melbourne_Australia 100 90 80 0.13 - 
+189_12 Sydney_Australia 100 90 80 0.13 - 
+190_12 Sao_Paulo_Brazil 100 90 80 0.13 - 
+191_12 Saitama_Japan 100 90 80 0.13 - 
+192_12 Osaka_Japan 100 90 80 0.13 - 
+193_12 Dublin_Ireland 100 90 80 0.13 - 
+194_12 Ashburn_Virginia 100 90 80 0.13 - 
+195_12 Chicago_Illinois 100 90 80 0.13 - 
+196_13 Prineville_Oregon 100 90 80 0.13 - 
+197_13 Reno_NV 100 90 80 0.13 - 
+198_13 Maiden_NC 100 90 80 0.13 - 
+199_13 Santa_Clara_CA 100 90 80 0.13 - 
+200_13 Mesa_AZ 100 90 80 0.13 - 
+201_13 Waukee_Iowa 100 90 80 0.13 - 
+202_13 Viborg_Denmark 100 90 80 0.13 - 
+203_13 Aabenraa_Denmark 100 90 80 0.13 - 
+204_13 Ulanqab_China 100 90 80 0.13 - 
+205_13 Guizhou_China 100 90 80 0.13 - 
+206_14 Puebla_Mexico 100 90 80 0.13 - 
+207_14 Uitenhage_South_Africa 100 90 80 0.13 - 
+208_14 Chattanooga_TN 100 90 80 0.13 - 
+209_14 Pamela_Portugal 100 90 80 0.13 - 
+210_14 Chakan_India 100 90 80 0.13 - 
+211_14 Taubate_Brazil 100 90 80 0.13 - 
+212_14 Sao_Bernardo_Brazil 100 90 80 0.13 - 
+213_14 Sao_Jose_dos_Pinhais_Brazil 100 90 80 0.13 - 
+214_14 Sao_Carlos_Brazil 100 90 80 0.13 - 
+215_14 Cordoba_Argentina 100 90 80 0.13 - 
+216_14 Pacheco_Argentina 100 90 80 0.13 - 
+217_14 Braunschweig_Germany 100 90 80 0.13 - 
+218_14 Chemnitz_Germany 100 90 80 0.13 - 
+219_14 Dresden_Germany 100 90 80 0.13 - 
+220_14 Emden_Germany 100 90 80 0.13 - 
+221_14 Hannover_Germany 100 90 80 0.13 - 
+222_14 Kassel_Germany 100 90 80 0.13 - 
+223_14 Osnabruck_Germany 100 90 80 0.13 - 
+224_14 Salzgitter_Germany 100 90 80 0.13 - 
+225_14 Wolfsburg_Germany 100 90 80 0.13 - 
+226_14 Zwickau_Germany 100 90 80 0.13 - 
+227_15 Los_Angeles_CA 100 90 80 0.13 - 
+228_15 Richmond_VA 100 90 80 0.13 - 
+229_15 Richardson_TX 100 90 80 0.13 - 
+230_16 GrandPrairie_TX 100 90 80 0.13 - 
+231_16 CostaMesa_CA 100 90 80 0.13 - 
+232_16 Everett_WA 100 90 80 0.13 - 
+233_16 Walton_KY 100 90 80 0.13 - 
+234_16 Ashburn_VA 100 90 80 0.13 - 
+235_16 Toronto_Canada 100 90 80 0.13 - 
+236_16 Bedford_NH 100 90 80 0.13 - 
+237_16 Rochester_NH 100 90 80 0.13 - 
+238_16 Queretaro_Mexico 100 90 80 0.13 - 
+239_16 Chihuahua_Mexico 100 90 80 0.13 - 
+240_16 Xerem_Brazil 100 90 80 0.13 - 
+241_16 SaoJose_dosCampos_Brazil 100 90 80 0.13 - 
+242_16 Bankstown_Australia 100 90 80 0.13 - 
+243_16 Singapore_LandingSystems 100 90 80 0.13 - 
+244_16 Singapore_HeloEngines 100 90 80 0.13 - 
+245_16 Negeri_Sembilan_Malaysia 100 90 80 0.13 - 
+246_16 Komsomolsk_Russia 100 90 80 0.13 - 
+247_16 Beijing_China 100 90 80 0.13 - 
+248_16 Guizhou_China 100 90 80 0.13 - 
+249_16 Suzhou_China_LandingSystems 100 90 80 0.13 - 
+250_16 Suzhou_China_AircraftEngines 100 90 80 0.13 - 
+251_16 Temara_Morocco 100 90 80 0.13 - 
+252_16 Casablanca_Morocco 100 90 80 0.13 - 
+253_16 Burnley_UK 100 90 80 0.13 - 
+254_16 Gloucester_UK 100 90 80 0.13 - 
+255_16 Pitstone_Green_UK 100 90 80 0.13 - 
+256_16 Fareham_UK 100 90 80 0.13 - 
+257_16 Hamburg_Germany_HeloEngines 100 90 80 0.13 - 
+258_16 Hamburg_Germany_Nacelles 100 90 80 0.13 - 
+259_16 Herstal_Belgium 100 90 80 0.13 - 
+260_16 Commercy_France 100 90 80 0.13 - 
+261_16 Florange_France 100 90 80 0.13 - 
+262_16 Molsheim_France 100 90 80 0.13 - 
+263_16 Vernon_France 100 90 80 0.13 - 
+264_16 Buchelay_France 100 90 80 0.13 - 
+265_16 Mantes_La_Ville_France 100 90 80 0.13 - 
+266_16 Eragny_France 100 90 80 0.13 - 
+267_16 Gennevilliers_France 100 90 80 0.13 - 
+268_16 Saint_Quentin_France 100 90 80 0.13 - 
+269_16 Massy_France 100 90 80 0.13 - 
+270_16 Fougeres_France 100 90 80 0.13 - 
+271_16 Montflucon_France 100 90 80 0.13 - 
+272_16 Chatellerault_France 100 90 80 0.13 - 
+273_16 Poitiers_France 100 90 80 0.13 - 
+274_16 Villeurbanne_France 100 90 80 0.13 - 
+275_16 Valence_France 100 90 80 0.13 - 
+276_16 Istres_France 100 90 80 0.13 - 
+277_16 Colomiers_France 100 90 80 0.13 - 
+278_16 Tarnos_France 100 90 80 0.13 - 
+279_16 Bidos_France 100 90 80 0.13 - 
