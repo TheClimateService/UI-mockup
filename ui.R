@@ -498,6 +498,11 @@ ui <- dashboardPage(title="The Climate Service",
                   selectInput("riskfactor_subset_portfolio","Select Risk Factors", 
                    c("All", "Chronic physical + Carbon price"), 
                    selected = "All")
+                ),
+                column(3,
+                  selectInput("riskmetric_portfolio","Select Risk Metric", 
+                   c("Total value", "Percent normalized value"), 
+                   selected = "All")
                 )
         ),#fluidRow
         br(),

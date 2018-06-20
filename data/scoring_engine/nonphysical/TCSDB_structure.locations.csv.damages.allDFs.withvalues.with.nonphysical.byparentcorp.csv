@@ -17,15 +17,15 @@ MU,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2060,152.954,1
 MU,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2070,285.407,1
 MU,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2080,320,1
 MU,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2090,320,1
-MU,  Physical Risk,Chronic,Drought ,RCP8.5,2010,63,1
-MU,  Physical Risk,Chronic,Drought ,RCP8.5,2020,18,1
-MU,  Physical Risk,Chronic,Drought ,RCP8.5,2030,54,1
-MU,  Physical Risk,Chronic,Drought ,RCP8.5,2040,117,1
-MU,  Physical Risk,Chronic,Drought ,RCP8.5,2050,90,1
-MU,  Physical Risk,Chronic,Drought ,RCP8.5,2060,126,1
-MU,  Physical Risk,Chronic,Drought ,RCP8.5,2070,153,1
-MU,  Physical Risk,Chronic,Drought ,RCP8.5,2080,162,1
-MU,  Physical Risk,Chronic,Drought ,RCP8.5,2090,135,1
+MU,  Physical Risk,Chronic,Drought ,RCP8.5,2010,9,1
+MU,  Physical Risk,Chronic,Drought ,RCP8.5,2020,0,1
+MU,  Physical Risk,Chronic,Drought ,RCP8.5,2030,0,1
+MU,  Physical Risk,Chronic,Drought ,RCP8.5,2040,31.5,1
+MU,  Physical Risk,Chronic,Drought ,RCP8.5,2050,22.5,1
+MU,  Physical Risk,Chronic,Drought ,RCP8.5,2060,40.5,1
+MU,  Physical Risk,Chronic,Drought ,RCP8.5,2070,49.5,1
+MU,  Physical Risk,Chronic,Drought ,RCP8.5,2080,49.5,1
+MU,  Physical Risk,Chronic,Drought ,RCP8.5,2090,40.5,1
 MU,  Physical Risk,Acute,Employee impacts ,RCP8.5,2010,1.50521,1
 MU,  Physical Risk,Acute,Employee impacts ,RCP8.5,2020,2.11317,1
 MU,  Physical Risk,Acute,Employee impacts ,RCP8.5,2030,6.88388,1
@@ -152,15 +152,15 @@ GOOGL,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2060,84.0134,10
 GOOGL,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2070,85.8463,10
 GOOGL,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2080,88.3852,10
 GOOGL,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2090,91.9322,10
-GOOGL,  Physical Risk,Chronic,Drought ,RCP8.5,2010,76.5,10
-GOOGL,  Physical Risk,Chronic,Drought ,RCP8.5,2020,67.5,10
-GOOGL,  Physical Risk,Chronic,Drought ,RCP8.5,2030,135,10
-GOOGL,  Physical Risk,Chronic,Drought ,RCP8.5,2040,180,10
-GOOGL,  Physical Risk,Chronic,Drought ,RCP8.5,2050,216,10
-GOOGL,  Physical Risk,Chronic,Drought ,RCP8.5,2060,193.5,10
-GOOGL,  Physical Risk,Chronic,Drought ,RCP8.5,2070,274.5,10
-GOOGL,  Physical Risk,Chronic,Drought ,RCP8.5,2080,256.5,10
-GOOGL,  Physical Risk,Chronic,Drought ,RCP8.5,2090,198,10
+GOOGL,  Physical Risk,Chronic,Drought ,RCP8.5,2010,18,10
+GOOGL,  Physical Risk,Chronic,Drought ,RCP8.5,2020,9,10
+GOOGL,  Physical Risk,Chronic,Drought ,RCP8.5,2030,36,10
+GOOGL,  Physical Risk,Chronic,Drought ,RCP8.5,2040,58.5,10
+GOOGL,  Physical Risk,Chronic,Drought ,RCP8.5,2050,72,10
+GOOGL,  Physical Risk,Chronic,Drought ,RCP8.5,2060,67.5,10
+GOOGL,  Physical Risk,Chronic,Drought ,RCP8.5,2070,94.5,10
+GOOGL,  Physical Risk,Chronic,Drought ,RCP8.5,2080,85.5,10
+GOOGL,  Physical Risk,Chronic,Drought ,RCP8.5,2090,72,10
 GOOGL,  Physical Risk,Acute,Employee impacts ,RCP8.5,2010,1.07398,10
 GOOGL,  Physical Risk,Acute,Employee impacts ,RCP8.5,2020,1.23102,10
 GOOGL,  Physical Risk,Acute,Employee impacts ,RCP8.5,2030,3.42016,10
@@ -287,15 +287,15 @@ VISA,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2060,24.1078,11
 VISA,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2070,67.8376,11
 VISA,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2080,80,11
 VISA,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2090,80,11
-VISA,  Physical Risk,Chronic,Drought ,RCP8.5,2010,4.5,11
-VISA,  Physical Risk,Chronic,Drought ,RCP8.5,2020,9,11
-VISA,  Physical Risk,Chronic,Drought ,RCP8.5,2030,27,11
-VISA,  Physical Risk,Chronic,Drought ,RCP8.5,2040,31.5,11
-VISA,  Physical Risk,Chronic,Drought ,RCP8.5,2050,54,11
-VISA,  Physical Risk,Chronic,Drought ,RCP8.5,2060,72,11
-VISA,  Physical Risk,Chronic,Drought ,RCP8.5,2070,85.5,11
-VISA,  Physical Risk,Chronic,Drought ,RCP8.5,2080,72,11
-VISA,  Physical Risk,Chronic,Drought ,RCP8.5,2090,72,11
+VISA,  Physical Risk,Chronic,Drought ,RCP8.5,2010,0,11
+VISA,  Physical Risk,Chronic,Drought ,RCP8.5,2020,0,11
+VISA,  Physical Risk,Chronic,Drought ,RCP8.5,2030,4.5,11
+VISA,  Physical Risk,Chronic,Drought ,RCP8.5,2040,9,11
+VISA,  Physical Risk,Chronic,Drought ,RCP8.5,2050,18,11
+VISA,  Physical Risk,Chronic,Drought ,RCP8.5,2060,27,11
+VISA,  Physical Risk,Chronic,Drought ,RCP8.5,2070,31.5,11
+VISA,  Physical Risk,Chronic,Drought ,RCP8.5,2080,22.5,11
+VISA,  Physical Risk,Chronic,Drought ,RCP8.5,2090,22.5,11
 VISA,  Physical Risk,Acute,Employee impacts ,RCP8.5,2010,0.636066,11
 VISA,  Physical Risk,Acute,Employee impacts ,RCP8.5,2020,1.19912,11
 VISA,  Physical Risk,Acute,Employee impacts ,RCP8.5,2030,3.00265,11
@@ -422,15 +422,15 @@ MSFT,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2060,168.673,12
 MSFT,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2070,179.953,12
 MSFT,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2080,199.978,12
 MSFT,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2090,234.073,12
-MSFT,  Physical Risk,Chronic,Drought ,RCP8.5,2010,22.5,12
-MSFT,  Physical Risk,Chronic,Drought ,RCP8.5,2020,54,12
-MSFT,  Physical Risk,Chronic,Drought ,RCP8.5,2030,72,12
-MSFT,  Physical Risk,Chronic,Drought ,RCP8.5,2040,58.5,12
-MSFT,  Physical Risk,Chronic,Drought ,RCP8.5,2050,103.5,12
-MSFT,  Physical Risk,Chronic,Drought ,RCP8.5,2060,40.5,12
-MSFT,  Physical Risk,Chronic,Drought ,RCP8.5,2070,162,12
-MSFT,  Physical Risk,Chronic,Drought ,RCP8.5,2080,180,12
-MSFT,  Physical Risk,Chronic,Drought ,RCP8.5,2090,130.5,12
+MSFT,  Physical Risk,Chronic,Drought ,RCP8.5,2010,4.5,12
+MSFT,  Physical Risk,Chronic,Drought ,RCP8.5,2020,9,12
+MSFT,  Physical Risk,Chronic,Drought ,RCP8.5,2030,18,12
+MSFT,  Physical Risk,Chronic,Drought ,RCP8.5,2040,13.5,12
+MSFT,  Physical Risk,Chronic,Drought ,RCP8.5,2050,31.5,12
+MSFT,  Physical Risk,Chronic,Drought ,RCP8.5,2060,9,12
+MSFT,  Physical Risk,Chronic,Drought ,RCP8.5,2070,49.5,12
+MSFT,  Physical Risk,Chronic,Drought ,RCP8.5,2080,58.5,12
+MSFT,  Physical Risk,Chronic,Drought ,RCP8.5,2090,31.5,12
 MSFT,  Physical Risk,Acute,Employee impacts ,RCP8.5,2010,1.09888,12
 MSFT,  Physical Risk,Acute,Employee impacts ,RCP8.5,2020,2.17216,12
 MSFT,  Physical Risk,Acute,Employee impacts ,RCP8.5,2030,3.96667,12
@@ -557,15 +557,15 @@ APPL,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2060,0,13
 APPL,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2070,0,13
 APPL,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2080,0,13
 APPL,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2090,0,13
-APPL,  Physical Risk,Chronic,Drought ,RCP8.5,2010,85.5,13
-APPL,  Physical Risk,Chronic,Drought ,RCP8.5,2020,58.5,13
-APPL,  Physical Risk,Chronic,Drought ,RCP8.5,2030,67.5,13
-APPL,  Physical Risk,Chronic,Drought ,RCP8.5,2040,90,13
-APPL,  Physical Risk,Chronic,Drought ,RCP8.5,2050,148.5,13
-APPL,  Physical Risk,Chronic,Drought ,RCP8.5,2060,166.5,13
-APPL,  Physical Risk,Chronic,Drought ,RCP8.5,2070,252,13
-APPL,  Physical Risk,Chronic,Drought ,RCP8.5,2080,144,13
-APPL,  Physical Risk,Chronic,Drought ,RCP8.5,2090,202.5,13
+APPL,  Physical Risk,Chronic,Drought ,RCP8.5,2010,22.5,13
+APPL,  Physical Risk,Chronic,Drought ,RCP8.5,2020,9,13
+APPL,  Physical Risk,Chronic,Drought ,RCP8.5,2030,18,13
+APPL,  Physical Risk,Chronic,Drought ,RCP8.5,2040,22.5,13
+APPL,  Physical Risk,Chronic,Drought ,RCP8.5,2050,49.5,13
+APPL,  Physical Risk,Chronic,Drought ,RCP8.5,2060,49.5,13
+APPL,  Physical Risk,Chronic,Drought ,RCP8.5,2070,90,13
+APPL,  Physical Risk,Chronic,Drought ,RCP8.5,2080,45,13
+APPL,  Physical Risk,Chronic,Drought ,RCP8.5,2090,72,13
 APPL,  Physical Risk,Acute,Employee impacts ,RCP8.5,2010,0.122154,13
 APPL,  Physical Risk,Acute,Employee impacts ,RCP8.5,2020,0.2004,13
 APPL,  Physical Risk,Acute,Employee impacts ,RCP8.5,2030,1.39516,13
@@ -692,15 +692,15 @@ VOW,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2060,1.97344,14
 VOW,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2070,2.83432,14
 VOW,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2080,4.02928,14
 VOW,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2090,5.70544,14
-VOW,  Physical Risk,Chronic,Drought ,RCP8.5,2010,90,14
-VOW,  Physical Risk,Chronic,Drought ,RCP8.5,2020,94.5,14
-VOW,  Physical Risk,Chronic,Drought ,RCP8.5,2030,418.5,14
-VOW,  Physical Risk,Chronic,Drought ,RCP8.5,2040,337.5,14
-VOW,  Physical Risk,Chronic,Drought ,RCP8.5,2050,508.5,14
-VOW,  Physical Risk,Chronic,Drought ,RCP8.5,2060,693,14
-VOW,  Physical Risk,Chronic,Drought ,RCP8.5,2070,697.5,14
-VOW,  Physical Risk,Chronic,Drought ,RCP8.5,2080,742.5,14
-VOW,  Physical Risk,Chronic,Drought ,RCP8.5,2090,603,14
+VOW,  Physical Risk,Chronic,Drought ,RCP8.5,2010,18,14
+VOW,  Physical Risk,Chronic,Drought ,RCP8.5,2020,22.5,14
+VOW,  Physical Risk,Chronic,Drought ,RCP8.5,2030,148.5,14
+VOW,  Physical Risk,Chronic,Drought ,RCP8.5,2040,117,14
+VOW,  Physical Risk,Chronic,Drought ,RCP8.5,2050,193.5,14
+VOW,  Physical Risk,Chronic,Drought ,RCP8.5,2060,283.5,14
+VOW,  Physical Risk,Chronic,Drought ,RCP8.5,2070,274.5,14
+VOW,  Physical Risk,Chronic,Drought ,RCP8.5,2080,292.5,14
+VOW,  Physical Risk,Chronic,Drought ,RCP8.5,2090,234,14
 VOW,  Physical Risk,Acute,Employee impacts ,RCP8.5,2010,0.041442,14
 VOW,  Physical Risk,Acute,Employee impacts ,RCP8.5,2020,0.372216,14
 VOW,  Physical Risk,Acute,Employee impacts ,RCP8.5,2030,1.24058,14
@@ -827,15 +827,15 @@ BAC,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2060,0,15
 BAC,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2070,0,15
 BAC,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2080,0,15
 BAC,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2090,0,15
-BAC,  Physical Risk,Chronic,Drought ,RCP8.5,2010,18,15
-BAC,  Physical Risk,Chronic,Drought ,RCP8.5,2020,9,15
-BAC,  Physical Risk,Chronic,Drought ,RCP8.5,2030,27,15
-BAC,  Physical Risk,Chronic,Drought ,RCP8.5,2040,4.5,15
-BAC,  Physical Risk,Chronic,Drought ,RCP8.5,2050,27,15
-BAC,  Physical Risk,Chronic,Drought ,RCP8.5,2060,9,15
-BAC,  Physical Risk,Chronic,Drought ,RCP8.5,2070,40.5,15
-BAC,  Physical Risk,Chronic,Drought ,RCP8.5,2080,45,15
-BAC,  Physical Risk,Chronic,Drought ,RCP8.5,2090,54,15
+BAC,  Physical Risk,Chronic,Drought ,RCP8.5,2010,4.5,15
+BAC,  Physical Risk,Chronic,Drought ,RCP8.5,2020,0,15
+BAC,  Physical Risk,Chronic,Drought ,RCP8.5,2030,9,15
+BAC,  Physical Risk,Chronic,Drought ,RCP8.5,2040,0,15
+BAC,  Physical Risk,Chronic,Drought ,RCP8.5,2050,9,15
+BAC,  Physical Risk,Chronic,Drought ,RCP8.5,2060,0,15
+BAC,  Physical Risk,Chronic,Drought ,RCP8.5,2070,9,15
+BAC,  Physical Risk,Chronic,Drought ,RCP8.5,2080,9,15
+BAC,  Physical Risk,Chronic,Drought ,RCP8.5,2090,13.5,15
 BAC,  Physical Risk,Acute,Employee impacts ,RCP8.5,2010,0.086748,15
 BAC,  Physical Risk,Acute,Employee impacts ,RCP8.5,2020,0.017652,15
 BAC,  Physical Risk,Acute,Employee impacts ,RCP8.5,2030,0.284712,15
@@ -962,15 +962,15 @@ SAF,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2060,187.466,16
 SAF,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2070,354.211,16
 SAF,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2080,416.583,16
 SAF,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2090,429.101,16
-SAF,  Physical Risk,Chronic,Drought ,RCP8.5,2010,850.5,16
-SAF,  Physical Risk,Chronic,Drought ,RCP8.5,2020,981,16
-SAF,  Physical Risk,Chronic,Drought ,RCP8.5,2030,1057.5,16
-SAF,  Physical Risk,Chronic,Drought ,RCP8.5,2040,1588.5,16
-SAF,  Physical Risk,Chronic,Drought ,RCP8.5,2050,1795.5,16
-SAF,  Physical Risk,Chronic,Drought ,RCP8.5,2060,1854,16
-SAF,  Physical Risk,Chronic,Drought ,RCP8.5,2070,1984.5,16
-SAF,  Physical Risk,Chronic,Drought ,RCP8.5,2080,1962,16
-SAF,  Physical Risk,Chronic,Drought ,RCP8.5,2090,1768.5,16
+SAF,  Physical Risk,Chronic,Drought ,RCP8.5,2010,283.5,16
+SAF,  Physical Risk,Chronic,Drought ,RCP8.5,2020,360,16
+SAF,  Physical Risk,Chronic,Drought ,RCP8.5,2030,360,16
+SAF,  Physical Risk,Chronic,Drought ,RCP8.5,2040,639,16
+SAF,  Physical Risk,Chronic,Drought ,RCP8.5,2050,729,16
+SAF,  Physical Risk,Chronic,Drought ,RCP8.5,2060,756,16
+SAF,  Physical Risk,Chronic,Drought ,RCP8.5,2070,801,16
+SAF,  Physical Risk,Chronic,Drought ,RCP8.5,2080,792,16
+SAF,  Physical Risk,Chronic,Drought ,RCP8.5,2090,702,16
 SAF,  Physical Risk,Acute,Employee impacts ,RCP8.5,2010,2.243,16
 SAF,  Physical Risk,Acute,Employee impacts ,RCP8.5,2020,4.57501,16
 SAF,  Physical Risk,Acute,Employee impacts ,RCP8.5,2030,10.3877,16
@@ -1232,15 +1232,15 @@ HPQ,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2060,264.108,3
 HPQ,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2070,307.838,3
 HPQ,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2080,320,3
 HPQ,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2090,320,3
-HPQ,  Physical Risk,Chronic,Drought ,RCP8.5,2010,189,3
-HPQ,  Physical Risk,Chronic,Drought ,RCP8.5,2020,211.5,3
-HPQ,  Physical Risk,Chronic,Drought ,RCP8.5,2030,279,3
-HPQ,  Physical Risk,Chronic,Drought ,RCP8.5,2040,288,3
-HPQ,  Physical Risk,Chronic,Drought ,RCP8.5,2050,396,3
-HPQ,  Physical Risk,Chronic,Drought ,RCP8.5,2060,508.5,3
-HPQ,  Physical Risk,Chronic,Drought ,RCP8.5,2070,639,3
-HPQ,  Physical Risk,Chronic,Drought ,RCP8.5,2080,531,3
-HPQ,  Physical Risk,Chronic,Drought ,RCP8.5,2090,616.5,3
+HPQ,  Physical Risk,Chronic,Drought ,RCP8.5,2010,36,3
+HPQ,  Physical Risk,Chronic,Drought ,RCP8.5,2020,31.5,3
+HPQ,  Physical Risk,Chronic,Drought ,RCP8.5,2030,67.5,3
+HPQ,  Physical Risk,Chronic,Drought ,RCP8.5,2040,76.5,3
+HPQ,  Physical Risk,Chronic,Drought ,RCP8.5,2050,121.5,3
+HPQ,  Physical Risk,Chronic,Drought ,RCP8.5,2060,153,3
+HPQ,  Physical Risk,Chronic,Drought ,RCP8.5,2070,220.5,3
+HPQ,  Physical Risk,Chronic,Drought ,RCP8.5,2080,171,3
+HPQ,  Physical Risk,Chronic,Drought ,RCP8.5,2090,211.5,3
 HPQ,  Physical Risk,Acute,Employee impacts ,RCP8.5,2010,1.81415,3
 HPQ,  Physical Risk,Acute,Employee impacts ,RCP8.5,2020,4.02916,3
 HPQ,  Physical Risk,Acute,Employee impacts ,RCP8.5,2030,11.7384,3
@@ -1367,15 +1367,15 @@ AMP,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2060,177.831,4
 AMP,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2070,201.344,4
 AMP,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2080,240,4
 AMP,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2090,240,4
-AMP,  Physical Risk,Chronic,Drought ,RCP8.5,2010,9,4
-AMP,  Physical Risk,Chronic,Drought ,RCP8.5,2020,117,4
-AMP,  Physical Risk,Chronic,Drought ,RCP8.5,2030,157.5,4
-AMP,  Physical Risk,Chronic,Drought ,RCP8.5,2040,153,4
-AMP,  Physical Risk,Chronic,Drought ,RCP8.5,2050,157.5,4
-AMP,  Physical Risk,Chronic,Drought ,RCP8.5,2060,207,4
-AMP,  Physical Risk,Chronic,Drought ,RCP8.5,2070,261,4
-AMP,  Physical Risk,Chronic,Drought ,RCP8.5,2080,378,4
-AMP,  Physical Risk,Chronic,Drought ,RCP8.5,2090,297,4
+AMP,  Physical Risk,Chronic,Drought ,RCP8.5,2010,0,4
+AMP,  Physical Risk,Chronic,Drought ,RCP8.5,2020,40.5,4
+AMP,  Physical Risk,Chronic,Drought ,RCP8.5,2030,58.5,4
+AMP,  Physical Risk,Chronic,Drought ,RCP8.5,2040,49.5,4
+AMP,  Physical Risk,Chronic,Drought ,RCP8.5,2050,63,4
+AMP,  Physical Risk,Chronic,Drought ,RCP8.5,2060,76.5,4
+AMP,  Physical Risk,Chronic,Drought ,RCP8.5,2070,85.5,4
+AMP,  Physical Risk,Chronic,Drought ,RCP8.5,2080,139.5,4
+AMP,  Physical Risk,Chronic,Drought ,RCP8.5,2090,108,4
 AMP,  Physical Risk,Acute,Employee impacts ,RCP8.5,2010,0,4
 AMP,  Physical Risk,Acute,Employee impacts ,RCP8.5,2020,0.071388,4
 AMP,  Physical Risk,Acute,Employee impacts ,RCP8.5,2030,0.392454,4
@@ -1637,15 +1637,15 @@ AIRBUS_SE,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2060,297.85,6
 AIRBUS_SE,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2070,322.807,6
 AIRBUS_SE,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2080,323.893,6
 AIRBUS_SE,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2090,325.359,6
-AIRBUS_SE,  Physical Risk,Chronic,Drought ,RCP8.5,2010,283.5,6
-AIRBUS_SE,  Physical Risk,Chronic,Drought ,RCP8.5,2020,387,6
-AIRBUS_SE,  Physical Risk,Chronic,Drought ,RCP8.5,2030,459,6
-AIRBUS_SE,  Physical Risk,Chronic,Drought ,RCP8.5,2040,580.5,6
-AIRBUS_SE,  Physical Risk,Chronic,Drought ,RCP8.5,2050,711,6
-AIRBUS_SE,  Physical Risk,Chronic,Drought ,RCP8.5,2060,841.5,6
-AIRBUS_SE,  Physical Risk,Chronic,Drought ,RCP8.5,2070,985.5,6
-AIRBUS_SE,  Physical Risk,Chronic,Drought ,RCP8.5,2080,936,6
-AIRBUS_SE,  Physical Risk,Chronic,Drought ,RCP8.5,2090,864,6
+AIRBUS_SE,  Physical Risk,Chronic,Drought ,RCP8.5,2010,76.5,6
+AIRBUS_SE,  Physical Risk,Chronic,Drought ,RCP8.5,2020,126,6
+AIRBUS_SE,  Physical Risk,Chronic,Drought ,RCP8.5,2030,148.5,6
+AIRBUS_SE,  Physical Risk,Chronic,Drought ,RCP8.5,2040,211.5,6
+AIRBUS_SE,  Physical Risk,Chronic,Drought ,RCP8.5,2050,270,6
+AIRBUS_SE,  Physical Risk,Chronic,Drought ,RCP8.5,2060,333,6
+AIRBUS_SE,  Physical Risk,Chronic,Drought ,RCP8.5,2070,382.5,6
+AIRBUS_SE,  Physical Risk,Chronic,Drought ,RCP8.5,2080,360,6
+AIRBUS_SE,  Physical Risk,Chronic,Drought ,RCP8.5,2090,324,6
 AIRBUS_SE,  Physical Risk,Acute,Employee impacts ,RCP8.5,2010,1.17517,6
 AIRBUS_SE,  Physical Risk,Acute,Employee impacts ,RCP8.5,2020,3.6533,6
 AIRBUS_SE,  Physical Risk,Acute,Employee impacts ,RCP8.5,2030,6.96511,6
