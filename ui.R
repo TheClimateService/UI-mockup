@@ -251,20 +251,21 @@ ui <- dashboardPage(title="The Climate Service",
       tabItem(tabName = "analyze",
         h2("2) Analyze your corporate risk"),
         fluidRow(
-                column(3,
+                column(4,
                   uiOutput("selectInput_location")
                 ),
-                column(3,
+                column(4,
                   sliderInput("sliderInputYear","Decade", min = 2010, max = 2090, value = 2020, sep = "", animate = TRUE, step=10)
                 ),
-                column(3,
+                column(4,
                   uiOutput("selectInput_scenario")
-                ),
-                column(3,
-                  selectInput("riskfactor_subset","Select Risk Factors", 
-                   c("All", "Chronic physical + Carbon price"), 
-                   selected = "All")
                 )
+                # James moved this to the System Control tab just so it could get the default value without breaking all the graphs
+                # column(3,
+                #   selectInput("riskfactor_subset","Select Risk Factors", 
+                #    c("All", "Chronic physical + Carbon price"), 
+                #    selected = "All")
+                # )
               ),#fluidRow
         br(),
         tabsetPanel(
@@ -481,29 +482,31 @@ ui <- dashboardPage(title="The Climate Service",
       tabItem(tabName = "portAnalyze",
         h2("2) Analyze the climate risks in your portfolio"),
         fluidRow(
-          column(3,
+          column(4,
                  #selectInput("siPortfolioCompany","Company",c("All companies","Apple","Coca-Cola","Happy Family","HP","Intel","Micron"),selectize = TRUE)
                  #selectInput("siPortfolioCompany","Portfolio",c("All companies","Chip Manufacturers"),selectize = TRUE)
                   uiOutput("selectInput_locationPort")
           ),
-          column(3,
+          column(4,
                  #sliderInput("siPortfolioYear","Decade", min = 2020, max = 2050, value = 2020, sep = "", animate = TRUE, step=1)
                   sliderInput("sliderInputYearPort","Decade", min = 2010, max = 2090, value = 2020, sep = "", animate = TRUE, step=10)
           ),
-          column(3,
+          column(4,
                  #selectInput("siPortfolioScenario","Scenario",c("Business as usual","Moderate action","2 degrees","1.5 degrees"))
-                  uiOutput("selectInput_scenarioPort")
-          ),
-                column(3,
-                  selectInput("riskfactor_subset_portfolio","Select Risk Factors", 
-                   c("All", "Chronic physical + Carbon price"), 
-                   selected = "All")
-                ),
-                column(3,
-                  selectInput("riskmetric_portfolio","Select Risk Metric", 
-                   c("Total value", "Percent normalized value"), 
-                   selected = "All")
-                )
+                  uiOutput("selectInput_scenarioPort"),
+                 radioButtons("riskmetric_portfolio","Impact",c("Absolute","Relative"),inline = TRUE)
+          )
+                # column(3,
+                #   selectInput("riskfactor_subset_portfolio","Select Risk Factors", 
+                #    c("All", "Chronic physical + Carbon price"), 
+                #    selected = "All")
+                # ),
+                # column(3,
+                #   selectInput("riskmetric_portfolio","Select Risk Metric",
+                #    # c("Total value", "Percent normalized value"),
+                #    c("Absolute", "Relative"),
+                #     selected = "All")
+                # )
         ),#fluidRow
         br(),
         tabsetPanel(
@@ -523,6 +526,11 @@ ui <- dashboardPage(title="The Climate Service",
               DT::dataTableOutput("corpFinImpactsPort")
           )
         )#tabsetPanel
+        # fluidRow(
+        #   column(4,
+        #          radioButtons("riskmetric_portfolio","Compare:",c("Absolute","Relative"),inline = TRUE)      
+        #   )
+        # ) #fluidRow
       ),#tabItem portAnalyze  
 
 
@@ -1367,8 +1375,21 @@ ui <- dashboardPage(title="The Climate Service",
         fluidRow(
          actionButton("button_remove_report_graphics","RESET REPORT CONTENTS - REMOVE ALL REPORT GRAPHICS FOR CURRENT USER", icon = icon("cog"), 
 		style = "color: white; background-color: red")
-        ) #fluidRow
+        ), #fluidRow
+	br(),
 
+      	fluidRow(
+      	  selectInput("riskfactor_subset","SELECT CORPORATE RISK FACTORS",
+      	              c("All", "Chronic physical + Carbon price"),
+      	              selected = "All")
+      	), #fluidRow
+	br(),
+
+      	fluidRow(
+      	  selectInput("riskfactor_subset_portfolio","SELECT PORTFOLIO RISK FACTORS",
+      	              c("All", "Chronic physical + Carbon price"),
+      	              selected = "All")
+      	) #fluidRow
       ), #tabItem
 
 # --------------------------------------

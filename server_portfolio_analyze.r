@@ -63,7 +63,7 @@
 
     values <- corpTable2$ValueAtRisk
 
-    if(input$riskmetric_portfolio=="Total value") {
+    if(input$riskmetric_portfolio=="Absolute") {
          #ct2a = select(corpTable2, RiskFactorName, ValueAtRisk)
          #ct2a = as.data.table(ct2a)
          #ct2a = ct2a[,lapply(.SD,sum),by="RiskFactorName"]
@@ -76,7 +76,7 @@
     # Normalized values below are calculated from ./data/scoring_engine/nonphysical/TCSDB_structure.locations.csv.damages.allDFs.withvalues.with.nonphysical.byparentcorp.csv.  The values in this file are, for each parentCorp, total VaR summed across all locations for a given hazard and for a given period.  
     # Percent normalized value:  For the physical hazards, the total VaR values are divided by the corresponding total value for all locations for each hazard.  For non-physical hazards that are linked to physical hazards via the proportions given in the RiskFactor tab of TCSDB_structure_locations, the same division is performed.  For carbonprice, the same division cannot be applied since the result is just the carbon price per ton for the specified year.
 
-    if(input$riskmetric_portfolio=="Percent normalized value") {
+    if(input$riskmetric_portfolio=="Relative") {
 
 	# The following produces ct2b and ct2b_nocarbon
 	inputTable <- corpTable2_full
@@ -87,7 +87,7 @@
         ct2c = ct2c[,lapply(.SD,sum),by="RiskFactorName"]
     	values2plot <- 100 * ct2c$NormalizedValue
     	rfnames <- ct2c$RiskFactorName
-    	xaxisname <- "Normalized Impact (percent)"
+    	xaxisname <- "Relative Impact (percent)"
 
     }  # endif on percent normalized value
 
@@ -128,14 +128,14 @@
 
     values <- corpTable2$ValueAtRisk
 
-    if(input$riskmetric_portfolio=="Total value") {
+    if(input$riskmetric_portfolio=="Absolute") {
 	values2plot <- values
 	table2use <- corpTable2
         rfnames=corpTable2$RiskFactorName
         axisname <- "Impact ($M)"
     } # endif
 
-    if(input$riskmetric_portfolio=="Percent normalized value") {
+    if(input$riskmetric_portfolio=="Relative") {
 
 	# The following produces ct2b and ct2b_nocarbon
 	inputTable <- corpTable2
@@ -144,7 +144,7 @@
     	values2plot <- 100 * ct2b_nocarbon$NormalizedValue
 	table2use <- ct2b_nocarbon
     	rfnames <- ct2b_nocarbon$RiskFactorName
-    	axisname <- "Normalized Impact (percent)"
+    	axisname <- "Relative Impact (percent)"
 
     }  # endif on percent normalized value
 
@@ -178,14 +178,14 @@
 
     values <- corpTable2$ValueAtRisk
 
-    if(input$riskmetric_portfolio=="Total value") {
+    if(input$riskmetric_portfolio=="Absolute") {
 	values2plot <- values
 	table2use <- corpTable2
         rfnames=corpTable2$RiskFactorName
         axisname <- "Impact ($M)"
     } # endif
 
-    if(input$riskmetric_portfolio=="Percent normalized value") {
+    if(input$riskmetric_portfolio=="Relative") {
 
 	# The following produces ct2b and ct2b_nocarbon
 	inputTable <- corpTable2
@@ -194,7 +194,7 @@
     	values2plot <- 100 * ct2b_nocarbon$NormalizedValue
 	table2use <- ct2b_nocarbon
     	rfnames <- ct2b_nocarbon$RiskFactorName
-    	axisname <- "Normalized Impact (percent)"
+    	axisname <- "Relative Impact (percent)"
 
     }  # endif on percent normalized value
 
@@ -202,7 +202,7 @@
     nriskyears = length(corpTable2 %>% group_by(RiskYear) %>% summarise(svar=sum(ValueAtRisk)) %>% select(RiskYear) %>% pull())
     time_series = as.data.frame( matrix(0, nrow = nriskyears, ncol = 10, dimnames = list(c(1:nriskyears), c("RiskYear", "s1", "s2", "s3", "s4", "s5", "s6", "s7", "s8", "s9"))) )
 
-    if(input$riskmetric_portfolio=="Total value") {
+    if(input$riskmetric_portfolio=="Absolute") {
 
     time_series$RiskYear <- table2use %>% group_by(RiskYear) %>% summarise(svar=sum(ValueAtRisk)) %>% select(RiskYear) %>% pull()
     time_series$s1 <- table2use %>% filter(TCFDSubCatName=='Policy and Legal') %>% group_by(RiskYear) %>% summarise(s1=sum(ValueAtRisk)) %>% select(s1) %>% pull()
@@ -218,7 +218,7 @@
     } # endif
 
 
-    if(input$riskmetric_portfolio=="Percent normalized value") {
+    if(input$riskmetric_portfolio=="Relative") {
 
     time_series$RiskYear <- table2use %>% group_by(RiskYear) %>% summarise(svar=sum(NormalizedValue)) %>% select(RiskYear) %>% pull()
     # Note use of 100* below to convert from decimal to percent.
@@ -306,14 +306,14 @@
 
     values <- corpTable2$ValueAtRisk
 
-    if(input$riskmetric_portfolio=="Total value") {
+    if(input$riskmetric_portfolio=="Absolute") {
 	values2plot <- values
 	table2use <- corpTable2
         rfnames=corpTable2$RiskFactorName
         axisname <- "Impact ($M)"
     } # endif
 
-    if(input$riskmetric_portfolio=="Percent normalized value") {
+    if(input$riskmetric_portfolio=="Relative") {
 
 	# The following produces ct2b and ct2b_nocarbon
 	inputTable <- corpTable2
@@ -322,7 +322,7 @@
     	values2plot <- 100 * ct2b_nocarbon$NormalizedValue
 	table2use <- ct2b_nocarbon
     	rfnames <- ct2b_nocarbon$RiskFactorName
-    	axisname <- "Normalized Impact (percent)"
+    	axisname <- "Relative Impact (percent)"
 
     }  # endif on percent normalized value
 
@@ -364,14 +364,14 @@
 
     values <- corpTable2$ValueAtRisk
 
-    if(input$riskmetric_portfolio=="Total value") {
+    if(input$riskmetric_portfolio=="Absolute") {
 	values2plot <- values
 	table2use <- corpTable2 %>% select(Location:ValueAtRisk)
         rfnames=corpTable2$RiskFactorName
         axisname <- "Impact ($M)"
     } # endif
 
-    if(input$riskmetric_portfolio=="Percent normalized value") {
+    if(input$riskmetric_portfolio=="Relative") {
 
 	# The following produces ct2b and ct2b_nocarbon
 	inputTable <- corpTable2
@@ -381,7 +381,7 @@
 	table2use <- ct2b_nocarbon %>% select(Location:ValueAtRisk, CompanyAssetsThisRisk, NormalizedValue)
 	table2use$NormalizedValue <- round(100*table2use$NormalizedValue,2)
     	rfnames <- ct2b_nocarbon$RiskFactorName
-    	axisname <- "Normalized Impact (percent)"
+    	axisname <- "Relative Impact (percent)"
 
     }  # endif on percent normalized value
 
