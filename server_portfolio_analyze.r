@@ -28,7 +28,7 @@
 # ----------------------------
   #barByRiskFactor
 # ----------------------------
-  output$barByRiskFactorPort <- renderPlotly({
+  output$barByRiskFactorPort <- renderGvis({
 
     corpTable2 <- readr::read_csv("./data/scoring_engine/nonphysical/TCSDB_structure.locations.csv.damages.allDFs.withvalues.with.nonphysical.byparentcorp.csv")
     #if(input$riskfactor_subset_portfolio=="Chronic physical + Carbon price") corpTable2 <- filter(corpTable2, RiskFactorName=="Temperature extremes" | RiskFactorName=="Drought" | RiskFactorName=="Coastal flooding" | RiskFactorName=="Carbon pricing")
@@ -68,9 +68,9 @@
          #ct2a = as.data.table(ct2a)
          #ct2a = ct2a[,lapply(.SD,sum),by="RiskFactorName"]
 	 #values2plot <- ct2a$ValueAtRisk
-	 values2plot <- values
-         rfnames=corpTable2$RiskFactorName;
-         xaxisname <- "Impact ($M)"
+          values2plot <- values
+          rfnames=corpTable2$RiskFactorName;
+          xaxisname <- "Impact (Million US Dollars)"
     } # endif
 
     # Normalized values below are calculated from ./data/scoring_engine/nonphysical/TCSDB_structure.locations.csv.damages.allDFs.withvalues.with.nonphysical.byparentcorp.csv.  The values in this file are, for each parentCorp, total VaR summed across all locations for a given hazard and for a given period.  
@@ -91,9 +91,27 @@
 
     }  # endif on percent normalized value
 
-    plot_ly(x=values2plot, y=rfnames, type = 'bar', orientation = 'h') %>% layout(margin = list(l=180, b=100)) %>%
-    #plot_ly(x=corpTable2$ValueAtRisk, y=rfnames, type = 'bar', orientation = 'h') %>% layout(margin = list(l=180, b=100)) %>%
-      layout(xaxis = list(title = xaxisname))
+    df2use = data.frame(values2plot, rfnames) 
+    df2use <- df2use %>% group_by(rfnames) %>% summarise(Risk=sum(values2plot)) %>% arrange(desc(Risk)) 
+    # 
+    # table2use <- table2use %>% group_by(RiskFactorName) %>% summarise(Risk=sum(ValueAtRisk)) %>% arrange(desc(Risk)) %>% head(n=5)
+    # table2usedf=data.frame(table2use)
+    # table2usedf[2] <- round(table2usedf[2],digits=0)
+    
+    gvisBarChart(df2use, options = list(
+      hAxis=paste("{title:'",xaxisname,"'}"),
+      vAxis="{title:'Risk Factor'}",
+      legend="none",
+      height=500)
+    )
+      
+    # plot_ly(x=df2use$Risk, y=df2use$rfnames, type = 'bar', orientation = 'h') %>% layout(margin = list(l=180, b=100)) %>%
+    #   #plot_ly(x=corpTable2$ValueAtRisk, y=rfnames, type = 'bar', orientation = 'h') %>% layout(margin = list(l=180, b=100)) %>%
+    #   layout(xaxis = list(title = xaxisname))
+    
+    # plot_ly(x=values2plot, y=rfnames, type = 'bar', orientation = 'h') %>% layout(margin = list(l=180, b=100)) %>%
+    # #plot_ly(x=corpTable2$ValueAtRisk, y=rfnames, type = 'bar', orientation = 'h') %>% layout(margin = list(l=180, b=100)) %>%
+    #   layout(xaxis = list(title = xaxisname))
   }) 
   
 # ----------------------------

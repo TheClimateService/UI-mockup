@@ -38,6 +38,7 @@ library(writexl)
 library(data.table)
 # library(shinycssloaders)  # enables withSpinner
 library(webshot)
+library(googleVis)
 
 # --------------------------------------
 # Data
@@ -511,7 +512,8 @@ ui <- dashboardPage(title="The Climate Service",
         br(),
         tabsetPanel(
           tabPanel(title = 'By Risk Factor',
-              plotlyOutput("barByRiskFactorPort")
+              htmlOutput("barByRiskFactorPort")
+              # plotlyOutput("barByRiskFactorPort")
           ),
           tabPanel(title = 'By Company/Equity',
               plotlyOutput("barByLocationPort")          
