@@ -173,25 +173,22 @@
  
     #Create header rows to define the portfolio for the TreeMap
     tickersOfMembers <-c(portfolio_members[4])
-    names(tickersOfMembers) <- "RiskFactorName" #need to change the name of the vector so it can be merged with the core data frame
-    headerrows = data.frame(unidvar=tickersOfMembers,Location=rep(input$inputLocationsPort,nrow(portfolio_members)),ValueAtRisk=rep(0,nrow(portfolio_members)))
-    colnames(headerrows)[1] <- "unidvar"
-    print(headerrows)
-    
+    # names(tickersOfMembers) <- "RiskFactorName" #need to change the name of the vector so it can be merged with the core data frame
+    headerrows = data.frame(unidvar=tickersOfMembers, RiskFactorName=tickersOfMembers, Location=rep(input$inputLocationsPort,nrow(portfolio_members)), ValueAtRisk=rep(0,nrow(portfolio_members)))
+    colnames(headerrows)[1] <- "RiskFactorName"
+    colnames(headerrows)[2] <- "unidvar"
+
     #Add a top global row with the portfolio name
-    headerrows <- add_row(headerrows, unidvar=input$inputLocationsPort, Location=c(NA), ValueAtRisk=c(0), .before = 1)
+    headerrows <- add_row(headerrows, unidvar=input$inputLocationsPort, RiskFactorName=input$inputLocationsPort, Location=c(NA), ValueAtRisk=c(0), .before = 1)
 
     #Bind the header rows into the core data frame
     # df2use <- data.frame(corpTable2) %>% group_by(RiskFactorName) %>% summarize(sVaR=sum(ValueAtRisk))
     df2use <- bind_rows(headerrows,df2use)
     
-    print(df2use)
-    
     #Output the TreeMap HTML
     gvisTreeMap(df2use, idvar = "unidvar" , parentvar = "Location", sizevar = "ValueAtRisk", colorvar = "ValueAtRisk", options = list(
-      showScale=TRUE, maxColor = '#dd4444', minColor = '#4444dd', maxPostDepth = 2)
-    )
-  }) #the v and f in idvar are for value (unid) and formatted (display)   paste("{v:'",df2use$unidvar,"', f:'",df2use$RiskFactorName,"'}")
+      showScale=TRUE, maxColor = '#dd4444', minColor = '#4444dd', maxPostDepth = 2))
+  }) #there's a way to use v and f for value (unid) and formatted (display), like this: paste("{v:'",df2use$unidvar,"', f:'",df2use$RiskFactorName,"'}")
   
   
 # ----------------------------

@@ -516,7 +516,8 @@ ui <- dashboardPage(title="The Climate Service",
               # plotlyOutput("barByRiskFactorPort")
           ),
           tabPanel(title = 'By Ticker',
-              htmlOutput("treemapByTicker")          
+              htmlOutput("treemapByTicker"),
+              "Right click to go up a level"
           ),
           tabPanel(title = 'By Company/Equity',
               plotlyOutput("barByLocationPort")          
