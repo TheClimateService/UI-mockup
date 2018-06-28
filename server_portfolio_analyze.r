@@ -114,6 +114,74 @@
     #   layout(xaxis = list(title = xaxisname))
   }) 
   
+  # ----------------------------
+  # treemapByTicker
+  # ----------------------------
+  output$treemapByTicker <- renderGvis({
+    corpTable2 <- readr::read_csv("./data/scoring_engine/nonphysical/TCSDB_structure.locations.csv.damages.allDFs.withvalues.with.nonphysical.byparentcorp.csv")
+    if(input$riskfactor_subset_portfolio=="Chronic physical + Carbon price") corpTable2 <- filter(corpTable2, TCFDSubCatName=="Chronic" | RiskFactorName=="Carbon pricing")
+    parentCorp = dbsheet4
+    portfolioSheet <- dbsheet15
+    ncols <- length(names(portfolioSheet))
+    portfolios <- names(portfolioSheet)[5:ncols]
+    
+    if (input$inputLocationsPort != 'Entire portfolio' & (input$inputLocationsPort %in% portfolios)=="FALSE") {
+      #corpTable2 <- corpTable2[which(corpTable2$ParentCorpID == USER$ParentCorpID & corpTable2$Location == input$inputLocationsPort & corpTable2$RiskYear == input$sliderInputYearPort),]
+      corpTable2 <- corpTable2[which(corpTable2$Location == input$inputLocationsPort & corpTable2$RiskYear == input$sliderInputYearPort),]
+    }
+    
+    if (input$inputLocationsPort == 'Entire portfolio') {
+      #corpTable2 <- corpTable2[which(corpTable2$ParentCorpID == USER$ParentCorpID & corpTable2$RiskYear == input$sliderInputYearPort),]
+      corpTable2 <- corpTable2[which(corpTable2$RiskYear == input$sliderInputYearPort),]
+    }
+    
+    if (input$inputLocationsPort != 'Entire portfolio' & (input$inputLocationsPort %in% portfolios)=="TRUE") {
+      portfolio <- input$inputLocationsPort
+      portfolio_members <- portfolioSheet %>% filter(portfolioSheet[[portfolio]]==1)
+      corpTable2 <- subset(corpTable2, Location %in% portfolio_members$TickerSymbol)
+      corpTable2 <- corpTable2[which(corpTable2$RiskYear == input$sliderInputYearPort),]
+    }
+    
+    values <- corpTable2$ValueAtRisk
+    
+    if(input$riskmetric_portfolio=="Absolute") {
+      values2plot <- values
+      table2use <- corpTable2 %>% select(Location:ValueAtRisk)
+      rfnames=corpTable2$RiskFactorName
+      axisname <- "Impact ($M)"
+    } # endif
+    
+    if(input$riskmetric_portfolio=="Relative") {
+      
+      # The following produces ct2b and ct2b_nocarbon
+      inputTable <- corpTable2
+      source("./server_portfolio_analyze_percent_normalized_value.r", local=TRUE)
+      
+      values2plot <- 100 * ct2b_nocarbon$NormalizedValue
+      table2use <- ct2b_nocarbon %>% select(Location:ValueAtRisk, CompanyAssetsThisRisk, NormalizedValue)
+      table2use$NormalizedValue <- round(100*table2use$NormalizedValue,2)
+      rfnames <- ct2b_nocarbon$RiskFactorName
+      axisname <- "Relative Impact (percent)"
+      
+    }  # endif on percent normalized value
+  
+    #create header rows to define the portfolio for the TreeMap
+        tickersOfMembers <-c(portfolio_members[4])
+        names(tickersOfMembers) <- "RiskFactorName" #need to change the name of the vector so it can be merged with the core data frame
+        headerrows = data.frame(RiskFactorName=tickersOfMembers,Location=rep(input$inputLocationsPort,nrow(portfolio_members)),ValueAtRisk=rep(0,nrow(portfolio_members)))
+
+    #add a top global row with the portfolio name
+    headerrows <- add_row(headerrows,RiskFactorName=input$inputLocationsPort,Location=c(NA),ValueAtRisk=c(0), .before = 1)
+
+    #bind the header rows into the core data frame
+    # df2use <- data.frame(corpTable2) %>% group_by(RiskFactorName) %>% summarize(sVaR=sum(ValueAtRisk))
+    df2use <- bind_rows(headerrows,corpTable2)
+    df2use <- df2use %>% mutate(unidvar = paste(df2use$Location,df2use$RiskFactorName,sep = "_")) #needed because TreeMap needs a unique ID (unid)
+      
+    gvisTreeMap(df2use, idvar = paste("{v:'",df2use$unidvar,"', f:'",df2use$RiskFactorName,"'}"), parentvar = "Location", sizevar = "ValueAtRisk", options = list(showScale=TRUE))
+  }) #the v and f in idvar are for value (unid) and formatted (display)
+  
+  
 # ----------------------------
   #barByLocation
 # ----------------------------

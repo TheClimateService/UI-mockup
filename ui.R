@@ -515,6 +515,9 @@ ui <- dashboardPage(title="The Climate Service",
               htmlOutput("barByRiskFactorPort")
               # plotlyOutput("barByRiskFactorPort")
           ),
+          tabPanel(title = 'By Ticker',
+              htmlOutput("treemapByTicker")          
+          ),
           tabPanel(title = 'By Company/Equity',
               plotlyOutput("barByLocationPort")          
           ),
