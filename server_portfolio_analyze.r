@@ -164,22 +164,34 @@
       axisname <- "Relative Impact (percent)"
       
     }  # endif on percent normalized value
-  
-    #create header rows to define the portfolio for the TreeMap
-        tickersOfMembers <-c(portfolio_members[4])
-        names(tickersOfMembers) <- "RiskFactorName" #need to change the name of the vector so it can be merged with the core data frame
-        headerrows = data.frame(RiskFactorName=tickersOfMembers,Location=rep(input$inputLocationsPort,nrow(portfolio_members)),ValueAtRisk=rep(0,nrow(portfolio_members)))
 
-    #add a top global row with the portfolio name
-    headerrows <- add_row(headerrows,RiskFactorName=input$inputLocationsPort,Location=c(NA),ValueAtRisk=c(0), .before = 1)
+    #This next section wrangles the data into TreeMap format, in which every row is a node with a unique ID and a parent
 
-    #bind the header rows into the core data frame
+    #Append parent to each risk factor node. Needed because TreeMap needs a unique ID (unid)
+    table2use <- table2use %>% mutate(unidvar = paste(table2use$RiskFactorName,table2use$Location,sep = "_")) 
+    df2use = data.frame(table2use)
+ 
+    #Create header rows to define the portfolio for the TreeMap
+    tickersOfMembers <-c(portfolio_members[4])
+    names(tickersOfMembers) <- "RiskFactorName" #need to change the name of the vector so it can be merged with the core data frame
+    headerrows = data.frame(unidvar=tickersOfMembers,Location=rep(input$inputLocationsPort,nrow(portfolio_members)),ValueAtRisk=rep(0,nrow(portfolio_members)))
+    colnames(headerrows)[1] <- "unidvar"
+    print(headerrows)
+    
+    #Add a top global row with the portfolio name
+    headerrows <- add_row(headerrows, unidvar=input$inputLocationsPort, Location=c(NA), ValueAtRisk=c(0), .before = 1)
+
+    #Bind the header rows into the core data frame
     # df2use <- data.frame(corpTable2) %>% group_by(RiskFactorName) %>% summarize(sVaR=sum(ValueAtRisk))
-    df2use <- bind_rows(headerrows,corpTable2)
-    df2use <- df2use %>% mutate(unidvar = paste(df2use$Location,df2use$RiskFactorName,sep = "_")) #needed because TreeMap needs a unique ID (unid)
-      
-    gvisTreeMap(df2use, idvar = paste("{v:'",df2use$unidvar,"', f:'",df2use$RiskFactorName,"'}"), parentvar = "Location", sizevar = "ValueAtRisk", options = list(showScale=TRUE))
-  }) #the v and f in idvar are for value (unid) and formatted (display)
+    df2use <- bind_rows(headerrows,df2use)
+    
+    print(df2use)
+    
+    #Output the TreeMap HTML
+    gvisTreeMap(df2use, idvar = "unidvar" , parentvar = "Location", sizevar = "ValueAtRisk", colorvar = "ValueAtRisk", options = list(
+      showScale=TRUE, maxColor = '#dd4444', minColor = '#4444dd', maxPostDepth = 2)
+    )
+  }) #the v and f in idvar are for value (unid) and formatted (display)   paste("{v:'",df2use$unidvar,"', f:'",df2use$RiskFactorName,"'}")
   
   
 # ----------------------------
