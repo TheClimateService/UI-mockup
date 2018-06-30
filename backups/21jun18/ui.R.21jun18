@@ -1,0 +1,1401 @@
+## app.R ##
+# References:  	https://rstudio.github.io/shinydashboard/
+#		http://rmarkdown.rstudio.com/flexdashboard/
+#		https://shiny.rstudio.com/articles/dynamic-ui.html
+
+# Icons:	http://fontawesome.io/icons/
+#		http://getbootstrap.com/components/#glyphicons
+
+# Notes:
+#
+#
+
+library(shinydashboard)
+library(flexdashboard)
+library(leaflet)
+library(MASS)
+library(survival)
+library(RColorBrewer)
+display.brewer.all()
+library(tidyverse)
+library(RSQLite)
+library(quantmod)
+library(hazus)
+library(reshape2)
+library(ggplot2)
+library(Lmoments)
+library(MatrixModels)
+library(RcppEigen)
+library(SparseM)
+library(car)
+library(distillery)
+library(evd)
+library(extRemes)
+library(shinyjs)
+library(plotly)
+library(readxl)
+library(writexl)
+library(data.table)
+# library(shinycssloaders)  # enables withSpinner
+library(webshot)
+
+# --------------------------------------
+# Data
+# --------------------------------------
+
+source("./data/TCSDB/load_tcsdb.r")
+#source("./data/scoring_engine/load_tcsdb_4scoringengine.r")
+
+# US SLR projections and historical extreme water levels.  Variables created are "proj" and "ewl".
+source("./data/sealevel_us/load_sealevel_data_us.r")
+source("./data/sealevel_us/function_annual_probability_withslr.r")
+
+# World SLR projections and historical extreme water levels.  Variables created are "world_slr" and "world_ewl".
+source("./data/sealevel_world/load_sealevel_data_world.r")
+
+# Drought data.  Variable created is "d".
+source("./data/drought/load_drought_data.r")
+
+source("./data/financial/load_financial_data.r")
+
+# Load hazus flood-depth damage functions and list of hazus building flood damage functions.
+fl_dept <- extract_hazus_functions()
+hazus_building_flood_damage_function_names = read.table("./data/hazus/hazus_flood_depth_damage.csv.bldg.list", header=TRUE)
+
+# --------------------------------------
+# --------------------------------------
+ui <- dashboardPage(title="The Climate Service",
+	skin="black",
+  #includeScript("www/message-handler.js"),
+
+  dashboardHeader(
+  	title = img(src="logo-TCS-small.png", alt = "TCS", height = 50, align = "left")
+  ),
+
+# --------------------------------------
+  ## Sidebar content
+# --------------------------------------
+  dashboardSidebar(
+	width=280,
+	useShinyjs(),
+	sidebarMenu(id = "sidebar",
+
+      menuItem("Log In", tabName = "login", icon = icon("lock")),
+
+      menuItem("Corporate Risk Analyzer", tabName = "corporate", icon = icon("building-o"),
+          menuSubItem("1) Setup",tabName = "config"),
+          menuSubItem("2) Analyze",tabName = "analyze"),
+          menuSubItem("3) Report",tabName = "report"),
+          menuSubItem("Methodology", tabName = "methodology", icon = icon("cog"))),
+
+      menuItem("Portfolio Analyzer", tabName = "portfolios", icon = icon("briefcase"),
+          menuSubItem("1) Setup",tabName = "portConfig"),
+          menuSubItem("2) Analyze",tabName = "portAnalyze"),
+          menuSubItem("3) Report",tabName = "portReport")
+      ),
+
+      menuItem("Technical Details", tabName = "overview", icon = icon("podcast"),
+      	  menuSubItem("LOCALIZED CLIMATE PROBABILITIES", tabName = "localclimate", icon = icon("cubes")),
+      	  menuSubItem("SECTOR IMPACT FUNCTIONS", tabName = "impactfunctions", icon = icon("cloud-download", lib = "glyphicon")),
+      	  menuSubItem("PROBABLISTIC IMPACT ESTIMATE", tabName = "impactestimate", icon = icon("cog", lib = "glyphicon")),
+      	  menuSubItem("FINANCIAL EFFECTS", tabName = "financialeffects", icon = icon("usd", lib = "glyphicon")),
+      	  menuSubItem("SUSTAINABLE INFRASTRUCTURE", tabName = "sustainable_infrastructure", icon = icon("tree-conifer", lib = "glyphicon")),
+      	  menuSubItem("ADAPTATION BENEFIT/COST PLANNING", tabName = "adaptationplanning", icon = icon("tree-deciduous", lib = "glyphicon")),
+      	  menuSubItem("OVERALL CLIMATE SCORE", tabName = "climatescore", icon = icon("certificate", lib = "glyphicon"))),
+      	  # menuSubItem("DATABASE", tabName = "database", icon = icon("database")),
+      	  # menuSubItem("Links", tabName = "links", icon = icon("external-link"))),
+
+        menuItem("System Control", tabName = "system_control", icon = icon("cog", lib = "glyphicon")),
+
+        menuItem("FAQ's", tabName = "faqs", icon = icon("question"))
+
+    	) #sidebarMenu
+  ), #dashboardSidebar
+
+
+# --------------------------------------
+  ## Body content
+# --------------------------------------
+  dashboardBody(
+    tabItems(
+
+# --------------------------------------
+      # Login tab content
+# --------------------------------------
+      tabItem(tabName = "login",
+              fluidRow(
+                tabBox(
+                  tabPanel(title = "Log In",
+                    textInput("Username","User Name",value=""),
+                    passwordInput("Password","Password",value=""),
+                    textOutput("login_response"),
+                    disabled(actionButton("btnLogin","Log in"))
+                    ) #tabPanel
+                  ) #tabBox
+              )#fluidRow
+        ), #tabItem
+
+# SETTINGS tab content
+#       tabItem(tabName = "settings",
+#               h2("1) Configure your locations"),
+#               fluidRow(
+#                 tabBox(
+#                   tabPanel(title = "Basics",
+#                        selectizeInput(
+#                          "selected_nasdaq","Search Companies",
+#                          choices = names,  # [from source("./data/financial/load_financial_data.r") ]
+#                          options = list(placeholder='Type company name', onInitialize = I('function() { this.setValue(""); }'))
+#                        ),#selectizeInput                    
+#                        selectInput("cbGroupBizType","Industry Sector",
+#                       c("Beverage","Agriculture","Packaged Foods/Meats","Paper & forest","Manufacturing","Metals & mining", "Chemicals", "Real Estate Management/Development","Transportation","Oil & gas","Electric Utilities"),
+#                       selected = c("Manufacturing")
+#                     )
+#                   ),
+#                   tabPanel(title = "Location 1",
+#                     textInput("location1","Corporate Headquarters",value = "8000 S Federal Way, Boise, ID 83716"),
+#                     htmlOutput("map_micron_boise"),
+#                     hr(),
+#                     checkboxGroupInput("cbBusinessFunctions","Business functions performed at this location",
+#                                 c("Clean Room Manufacturing","Shipping","Inventory Management","R&D","HR","Legal","Marketing/Sales","Corporate Governance"),
+#                                 selected = c("Clean Room Manufacturing","R&D")
+#                     ),
+#                     hr(),
+#                     actionButton("addLocation","Add a location")
+#                   ),
+#                   tabPanel(title = "Users",
+#                     valueBox(1, "TBD", icon = icon("user"), color = "teal"),
+#                     valueBox(1, "TBD", icon = icon("user"), color = "teal"),
+#                     valueBox(1, "TBD", icon = icon("user"), color = "teal"),
+#                     actionButton("addUser","Add a user")
+#                   ),
+# 		              tabPanel(title = "Location 2",
+#                     textInput("location2","Singapore Facilities",value = "4 facilities in Singapore"),
+#                     htmlOutput("map_micron_singapore"),
+#                     hr(),
+#                     checkboxGroupInput("cbBusinessFunctions","Business functions performed at this location",
+#                                 c("Clean Room Manufacturing","Shipping","Inventory Management","R&D","HR","Legal","Marketing/Sales","Corporate Governance"),
+#                                 selected = c("Clean Room Manufacturing","R&D")
+#                     ),
+#                     hr(),
+#                     actionButton("addLocation","Add a location")
+#                   ),
+#                   tabPanel(title = "Users",
+#                     valueBox(1, "TBD", icon = icon("user"), color = "teal"),
+#                     valueBox(1, "TBD", icon = icon("user"), color = "teal"),
+#                     valueBox(1, "TBD", icon = icon("user"), color = "teal"),
+#                     actionButton("addUser","Add a user")
+#                   )
+#                 )#tabBox
+#               )#fluidRow
+#             ),#tabItem
+
+# --------------------------------------
+#               CORP CONFIG 
+# --------------------------------------
+    tabItem(tabName = "config",
+        h2("1) Configure your locations"),
+        fluidRow(
+         box(width=4, title = "Select a location to configure", uiOutput("rbLocations")),
+         box(width=8,
+             conditionalPanel(condition = "input.rbLocations == 'All locations'",
+                leafletOutput("facility_location_map"),
+
+                #selectInput("cbGroupBizType","Industry Sector",
+                #  c("Beverage","Agriculture","Packaged Foods/Meats","Paper & forest","Manufacturing","Metals & mining", "Chemicals", "Real Estate Management/Development","Transportation","Oil & gas","Electric Utilities"),
+                #  selected = c("Manufacturing")  )
+		uiOutput("businessTypes")
+             ),
+
+             conditionalPanel(condition = "input.rbLocations != 'All locations'",
+                leafletOutput("individual_location_map"),
+
+                #textInput("txtNumEmployees",label = "Number of employees", width = "100px", value = "250"),
+                #textInput("txtAssetValue", label = "Value of assets at this location ($M)", width = "100px", value = "100"), 
+		column(4,
+		uiOutput("assetValue_tx90p") ),
+		column(4,
+		uiOutput("assetValue_pdsisc") ),
+		column(4,
+		uiOutput("assetValue_coastalflood") ),
+		br(),
+
+		uiOutput("ghgEmissions"),
+		uiOutput("numEmployees"),
+
+		br(),
+
+                #checkboxGroupInput("cbBusinessFunctions","Business functions performed at this location",
+                #         c("Clean Room Manufacturing","Shipping","Inventory Management","R&D","HR","Legal","Marketing/Sales","Corporate Governance"),
+                #         selected = c("Clean Room Manufacturing","R&D")
+                #), #checkboxGroup
+		uiOutput("businessFunctions")
+
+              )#conditionalPanel
+         ) #box
+        ), #fluidRow
+
+	# Put these buttons in individual fluidRow to avoid problems with long lists of radioButtons that cannot be activated when lying below these actionButtons.
+        fluidRow(
+         box(width=4,
+         actionButton("btnConfig","Analyze"),
+         actionButton("button_save_data_corp","SAVE DATA"),
+	 checkboxInput("checkbox_plots4report_maps", label = "Capture each viewed map for report", value = FALSE)
+         ) #box
+        ) #fluidRow
+
+    ),#tabItem
+
+# --------------------------------------
+#                 CORP ANALYZE
+# --------------------------------------
+      tabItem(tabName = "analyze",
+        h2("2) Analyze your corporate risk"),
+        fluidRow(
+                column(3,
+                  uiOutput("selectInput_location")
+                ),
+                column(3,
+                  sliderInput("sliderInputYear","Decade", min = 2010, max = 2090, value = 2020, sep = "", animate = TRUE, step=10)
+                ),
+                column(3,
+                  uiOutput("selectInput_scenario")
+                ),
+                column(3,
+                  selectInput("riskfactor_subset","Select Risk Factors", 
+                   c("All", "Chronic physical + Carbon price"), 
+                   selected = "All")
+                )
+              ),#fluidRow
+        br(),
+        tabsetPanel(
+          tabPanel(title = 'By Risk Factor',
+	      #actionButton("button_show", "Show"),
+              plotlyOutput("barByRiskFactor")
+          ),
+          tabPanel(title = 'By Location',
+              plotlyOutput("barByLocation")          
+          ),
+          tabPanel(title = 'By Time Period',
+              plotlyOutput("areaByTime")
+          ),
+          tabPanel(title = 'By TCFD Category',
+              plotlyOutput("stackedCorpFinImpactsPlot")
+          ),
+          tabPanel(title = 'All Data',
+              DT::dataTableOutput("corpFinImpacts")
+          )
+        ), #tabsetPanel
+
+        fluidRow(
+	 column(3,
+	  checkboxInput("checkbox_plots4report", label = "Capture each viewed plot for report", value = FALSE)
+         )
+	) # end fluidrow
+
+        ),#tabItem analyze
+              
+# --------------------------------------
+#               CORP REPORT 
+# --------------------------------------
+
+        tabItem(tabName = "report",
+                h2("3) Report your climate-related financial risk"),
+                   tabsetPanel(
+                      tabPanel(title = "Governance", box(title = "Describe your governance of climate-related risks",
+                               textAreaInput("TCFDGova","Board Oversight", value="Describe the board's oversight of climate-related risks and opportunities."),
+                               textAreaInput("TCFDGovb","Management's Role", value="Describe management's role in assessing and managing climate-related risks and opportunities.")
+                      )),
+                      tabPanel(title = "Strategy", box(title = "Describe your strategy for identifying risks and impacts",
+                               textAreaInput("TCFD-Strat-a","Climate Risks and Opportunities", value = "Describe the climate-related risks and opportunities the organization has identified over the short, medium, and long term."),
+                               checkboxGroupInput("chkbxRisks","Risks & Opportunities", c("Policy & Legal Risk","Technology Risk","Market Risk","Reputation Risk","Acute Physical Risk","Chronic Physical Risk","Resource Efficiency","Energy Source","Products/Services","Markets","Resilience"),selected = c("Energy Source","Acute Physical Risk","Chronic Physical Risk")),
+                               textAreaInput("TCFD-Strat-b","Impact of Risks", value = "Describe the impact of climate-related risks and opportunities on the organization's businesses, strategy, and financial planning."),
+                               textAreaInput("TCFD-Strat-c","Scenarios", value = "Describe the resilience of the organization’s strategy, taking into consideration different climate-related scenarios, including a 2°C or lower scenario.")
+                      )),
+                      tabPanel(title = "Risk Management", box(title = "Describe your climate-related risk management",
+                               textAreaInput("TCFD-Gov-a","Processes for Identifying Risks", value="Describe the processes for identifying & assessing climate-related risks and opportunities."),
+                               textAreaInput("TCFD-Gov-b","Processes for Managing", value="Describe the processes managing climate-related risks."),
+                               textAreaInput("TCFD-Gov-c","Process Integration", value="Describe how processes for identifying, assessing, and managing climate-related risks are intgrated into the organization's overall management.")
+                      )),
+                      tabPanel(title = "Metrics and Targets", box(title = "Describe your metrics and targets",
+                               textAreaInput("TCFD-MT-a","Metrics", value="Disclose the metrics used by the organization to assess climate-related risks and opportunities in line with its strategy and risk management process."),
+                               textAreaInput("TCFD-MT-b","GHG Emissions", value="Disclose Scope 1, Scope 2, and, if appropriate, Scope 3 greenhouse gas (GHG) emissions, and the related risks."),
+                               textAreaInput("TCFD-MT-c","Targets", value="Describe the targets used by the organization to manage climate-related risks and opportunities and performance against targets.")
+                               )),
+                      tabPanel(title = "Report",
+                               box(title = "Download report",
+                                  "Download a draft report to a Microsoft Word file for your continued editing. The report will have all of the charts and graphs you created during analysis, and all of your TCFD reporting work.",
+                                  br(),
+                                  hr(),
+                                  downloadButton("report", "Generate report")
+                               )
+                      )
+                   )#tabSetPanel
+        ), #tabItem report
+        
+# --------------------------------------
+#              CORP METHODOLOGY
+# --------------------------------------
+
+      tabItem(tabName = "methodology",
+        h2("Understand the details of your climate risk with the Cx Methodology"),
+
+        tabsetPanel(
+
+        tabPanel(title = 'OVERALL',
+
+        fluidRow(
+                column(4, uiOutput("selectInput_location_overall") ),
+                column(4,selectInput("selectscenario_overall","Select Scenario",c("RCP8.5", "RCP4.5"), selected = c("RCP8.5")) )
+        ), #fluidrow select location and scenario
+
+        fluidRow(
+                #column(4,uiOutput("selectCausalVariable")),
+                #column(4,uiOutput("selectDamageFunction")),
+                #column(4,uiOutput("selectPeriod"))
+          column(4,selectInput("selectCausalVariable","Causal Variable (Hazard)",
+		c("Temperature",
+		"Drought Severity",
+		"Coastal Flooding" 
+		),
+		selected = c("Temperature"))),
+          column(4,selectInput("selectDamageFunction","Damage Function",c("Cooling","Corn Yield","Building Damage"),selected = c("Cooling"))),
+          column(4,selectInput("selectPeriod","Time Period",choices = c("1981-2000","2011-2030", "2041-2060", "2071-2090", "1980","1990","2000","2010","2020","2030","2040","2050","2060","2070","2080","2090","2100"), selected="1981-2000"))
+        ), #fluidrow select inputs
+
+        fluidRow(
+          box(width=4,title="Hazard","Probability of a damage-producing event",plotOutput("plot_selectHazard",height = 300)),
+          box(width=4,title="Vulnerability","Mechanism and severity of damage for a given event",
+		plotOutput("plot_selectDamageFunction", height = 300)),
+          box(width=4,title="Risk","Loss curve:  probability of financial damage, with expected value", plotOutput("plot_losscurve2",height=300))
+        ),  #fluidrow graphs
+
+        fluidRow(
+	 column(3,
+	  checkboxInput("checkbox_showRLvRP", label = "Show coastal-flood data as RL versus RP", value = FALSE)
+         )
+        ),  #fluidrow
+
+        fluidRow(
+	  box(width=4,verbatimTextOutput("tracebackHazard")),
+	  box(width=4,verbatimTextOutput("tracebackVuln")),
+          box(width=4,title="Risk","Loss curve  of VaR","Probability of financial damage, with expected value", plotOutput("losscurve",height=300))
+        )  #fluidrow
+
+        ), # end tabPanel
+
+        tabPanel(title = 'DRILLDOWN',
+
+        fluidRow(
+                column(4, uiOutput("selectInput_location_drilldown") ),
+                column(4,selectInput("selectscenario_drilldown","Select Scenario",c("RCP8.5", "RCP4.5"), selected = c("RCP8.5")) )
+        ), #fluidrow select location and scenario
+
+        fluidRow(
+          column(4,selectInput("selectCausalVariable_drilldown","Causal Variable (Hazard)",
+		c("Temperature (daily maximum 90th percentile)",
+		"Drought Severity (90th percentile)", 
+		"Coastal Flooding (return period 100yr level)",
+		"Carbon Price"
+		)
+		)),
+          column(4,selectInput("selectDamageFunction_drilldown","Damage Function",c("Selected Location and Hazard") )),
+          column(4,selectInput("selectPeriod_drilldown","Time Period",choices = c("All Periods")))
+        ), #fluidrow select inputs
+
+        fluidRow(
+          box(width=4,title="Hazard","Probability of a damage-producing event",plotlyOutput("plot_selectHazard_drilldown",height = 300)),
+          box(width=4,title="Vulnerability","Mechanism and severity of damage for a given event",
+		plotlyOutput("plot_selectDamageFunction_drilldown", height = 300)),
+          box(width=4,title="Risk","Expected VaR for selected location and hazard",
+		plotlyOutput("plot_expectedDamage", height = 300))
+        ), #fluidrow plots
+
+        fluidRow(
+	 column(3,
+	  checkboxInput("checkbox_plots4report_drilldown", label = "Capture each viewed plot for report", value = FALSE) )
+	), # end fluidrow
+
+        fluidRow(
+	  box(width=4,verbatimTextOutput("tracebackHazard_drilldown")),
+	  box(width=4,verbatimTextOutput("tracebackVuln_drilldown"))
+        ) #fluidrow traceback text
+
+        ), # end tabPanel drilldown
+
+        tabPanel(title = 'SCREENING DAMAGE FUNCTIONS',
+	  h4("Damage Functions Available for Screening Analysis (see note below)"),
+	  # dbsheet12 contains the TCSDB damage functions and created by load_tcsdb.r above.
+
+	fluidRow(
+	  column(4, selectInput("TCSDB_damage_function_id_1","Select Damage Function A", dbsheet12$id, selected="tx90p-1") ),
+	  column(4, selectInput("TCSDB_damage_function_id_2","Select Damage Function B", dbsheet12$id, selected="coastalflood-1") ),
+	  column(4, selectInput("TCSDB_damage_function_id_family","Select Damage Function Family", c("tx90p", "pdsisc", "coastalflood") ) )
+	), #fluidrow
+
+	fluidRow(
+	  column(4, imageOutput("impactplot_screeningDFs_1", height = 360, width=360) ),
+	  column(4, imageOutput("impactplot_screeningDFs_2", height = 360, width=360) ),
+	  column(4, imageOutput("impactplot_screeningDFs_family", height = 360, width=360) )
+	), #fluidrow
+
+	h5(" "),
+
+	fluidRow(
+	  column(4, selectInput("TCSDB_damage_function_id_3","Select Damage Function C", dbsheet12$id, selected="pdsisc-1") ),
+	  column(4, selectInput("TCSDB_damage_function_id_4","Select Damage Function D", dbsheet12$id, selected="carbonprice-1") )
+	), #fluidrow
+
+	fluidRow(
+	  column(4, imageOutput("impactplot_screeningDFs_3", height = 360, width=360) ),
+	  column(4, imageOutput("impactplot_screeningDFs_4", height = 360, width=360) )
+	), #fluidrow
+
+	  h5("Note:  climate hazards currently applied in screening analysis are tmax90p, pdsi90p, and annual probability of 100-year coastal flooding.  Damage functions for these and other hazards are viewable on this page.")
+
+        ) # end tabPanel screeningDFs
+
+       ) #tabsetPanel
+
+      ),#tabItem methodology
+
+# --------------------------------------
+#              PORTFOLIO - SETUP
+# --------------------------------------
+      tabItem(tabName = "portConfig",
+        h2("1) Set up your porfolio"),
+        fluidRow(
+          box(width=4, title = "Select a company to add", 
+              selectInput("selected_nasdaq","Search Companies", width=400,
+                          names,  # [from source("./data/financial/load_financial_data.r") ]
+                          selected = "Apple Inc. - Common Stock"),
+              actionButton("addStock","Add a Listed Equity")),
+          box(width=8,
+              "listing"
+          )#box
+        )#fluidRow
+      ),#tabItem
+
+# --------------------------------------
+#              PORTFOLIO - ANALYZE
+# --------------------------------------
+      tabItem(tabName = "portAnalyze",
+        h2("2) Analyze the climate risks in your portfolio"),
+        fluidRow(
+          column(3,
+                 #selectInput("siPortfolioCompany","Company",c("All companies","Apple","Coca-Cola","Happy Family","HP","Intel","Micron"),selectize = TRUE)
+                 #selectInput("siPortfolioCompany","Portfolio",c("All companies","Chip Manufacturers"),selectize = TRUE)
+                  uiOutput("selectInput_locationPort")
+          ),
+          column(3,
+                 #sliderInput("siPortfolioYear","Decade", min = 2020, max = 2050, value = 2020, sep = "", animate = TRUE, step=1)
+                  sliderInput("sliderInputYearPort","Decade", min = 2010, max = 2090, value = 2020, sep = "", animate = TRUE, step=10)
+          ),
+          column(3,
+                 #selectInput("siPortfolioScenario","Scenario",c("Business as usual","Moderate action","2 degrees","1.5 degrees"))
+                  uiOutput("selectInput_scenarioPort")
+          ),
+                column(3,
+                  selectInput("riskfactor_subset_portfolio","Select Risk Factors", 
+                   c("All", "Chronic physical + Carbon price"), 
+                   selected = "All")
+                ),
+                column(3,
+                  selectInput("riskmetric_portfolio","Select Risk Metric", 
+                   c("Total value", "Percent normalized value"), 
+                   selected = "All")
+                )
+        ),#fluidRow
+        br(),
+        tabsetPanel(
+          tabPanel(title = 'By Risk Factor',
+              plotlyOutput("barByRiskFactorPort")
+          ),
+          tabPanel(title = 'By Company/Equity',
+              plotlyOutput("barByLocationPort")          
+          ),
+          tabPanel(title = 'By Time Period',
+              plotlyOutput("areaByTimePort")
+          ),
+          tabPanel(title = 'By TCFD Category',
+              plotlyOutput("stackedCorpFinImpactsPlotPort")
+          ),
+          tabPanel(title = 'All Data',
+              DT::dataTableOutput("corpFinImpactsPort")
+          )
+        )#tabsetPanel
+      ),#tabItem portAnalyze  
+
+
+# --------------------------------------
+#              PORTFOLIO - REPORT
+# --------------------------------------
+      tabItem(tabName = "portReport",
+        h2("3) Report your climate-related financial risk"),
+        box(title = "Download report",
+           "Download a draft report to a Microsoft Word file for your continued editing. The report will have all of the charts and graphs you created during analysis, and all of your TCFD reporting work.",
+           br(),
+           hr(),
+           downloadButton("portReport", "Generate report")
+        )
+      ), #tabItem report
+
+# --------------------------------------
+#              PORTFOLIOS - OLD
+# --------------------------------------
+      tabItem(tabName = "portfolios",
+        h2("Investment Portfolio Analyzer"),
+        fluidRow(
+          tabBox(width=500,
+            tabPanel(
+              title = "Set up"#,
+              # actionButton("addStock","Add a Listed Equity")
+            ),
+          tabPanel(title="Analyze",
+          	fluidRow(
+        # 	  	column(6,
+        #    		selectInput("selected_nasdaq","Search Companies", width=400,
+        #	     		names,  # [from source("./data/financial/load_financial_data.r") ]
+        #	     		selected = "Apple Inc. - Common Stock"
+        #         )#selectInput
+        # 		  ),#column
+          		column(3, offset=1,
+          			tags$head(tags$script(src = "message-handler.js")),
+          			actionButton("add2portfolio", "ADD TO PORTFOLIO")
+          		) #column
+          	), #fluidrow
+
+          fluidRow(
+  	  	    column(12, offset=0,
+            		box(title="Symbol, Name, and Exchange", background = "aqua", solidHeader = TRUE, textOutput("stockselected"))
+          	), #fluidrow
+            fluidRow(
+    	  	    column(6, offset=2,h2("Cx SCORE"),gaugeOutput("stock_overall_score_gauge")),
+    		      column(2, offset=0, checkboxInput("showmore_overall_score", "SHOW MORE") )
+        		) #fluidRow
+        	), #fluidrow
+	  
+	 	conditionalPanel(condition = "input.showmore_overall_score == true",
+        	fluidRow(
+	  #	column(4, offset=1,
+          #		box(title="Financials", background = "aqua", solidHeader = TRUE, textOutput("stock_financial_parameters"))
+	#	      ),
+	  	column(3,h2("Financials")
+                       # , textOutput("stock_financial_parameters")
+                      ),
+	  	column(2,h4("Revenue Risk"),gaugeOutput("stock_financial_gauge1")),
+	  	column(2,h4("Expense Risk"),gaugeOutput("stock_financial_gauge2")),
+	  	column(2,h4("Equity/Share VaR"),gaugeOutput("stock_financial_gauge3")),
+		column(2, offset=0, checkboxInput("showmore_financial", "SHOW MORE"))
+        	), #fluidrow
+
+        	fluidRow(
+	 	conditionalPanel(condition = "input.showmore_financial == true",verbatimTextOutput("stock_financial_factors")) 
+        	), #fluidrow
+
+        	fluidRow(
+	  	#column(4, offset=1,
+          	#	box(title="Transition Risk", background = "aqua", solidHeader = TRUE, textOutput("stock_transition_parameters"))
+		#      ),
+	  	column(3,h2("Transition Risk")
+			#,textOutput("stock_transition_parameters")
+		),
+	  	column(2,h4("Legal & Policy"),gaugeOutput("stock_transition_gauge1")),
+	  	column(2,h4("Technology"),gaugeOutput("stock_transition_gauge2")),
+	  	column(2,h4("Reputation"),gaugeOutput("stock_transition_gauge3")),
+		column(2, offset=0, checkboxInput("showmore_transition", "SHOW MORE"))
+        	), #fluidrow
+
+        	fluidRow(
+	 	conditionalPanel(condition = "input.showmore_transition == true",verbatimTextOutput("stock_transition_factors")) 
+        	), #fluidrow
+
+        	fluidRow(
+	  	#column(4, offset=1,
+          	#box(title="Physical Risk", background = "aqua", solidHeader = TRUE, textOutput("stock_physical_parameters"))
+		#      ),
+	  	column(3,h2("Physical Risk")
+			#,textOutput("stock_physical_parameters")
+		),
+	  	column(2,h4("Temperature"),gaugeOutput("stock_physical_gauge_temperature")),
+	  	column(2,h4("Sea Level Rise"),gaugeOutput("stock_physical_gauge_slr")),
+	  	column(2,h4("Drought"),gaugeOutput("stock_physical_gauge_drought")),
+		column(2, offset=0, checkboxInput("showmore_physical", "SHOW MORE"))
+        	), #fluidrow
+
+        	fluidRow(
+	 	conditionalPanel(condition = "input.showmore_physical == true",verbatimTextOutput("stock_physical_factors")) 
+        	), #fluidrow
+
+        	fluidRow(
+	  	#column(4, offset=1,
+          	#box(title="Opportunities", background = "aqua", solidHeader = TRUE, textOutput("stock_opportunity_parameters"))
+		#      ),
+	  	column(3,h2("Opportunities")
+			#,textOutput("stock_opportunity_parameters")
+		),
+	  	column(2,h4("Resource Efficiency"),gaugeOutput("stock_opportunity_gauge1")),
+	  	column(2,h4("Energy Mix"),gaugeOutput("stock_opportunity_gauge2")),
+	  	column(2,h4("New Products"),gaugeOutput("stock_opportunity_gauge3")),
+		column(2, offset=0, checkboxInput("showmore_opportunity", "SHOW MORE"))
+        	), #fluidrow
+
+        	fluidRow(
+	 	conditionalPanel(condition = "input.showmore_opportunity == true",verbatimTextOutput("stock_opportunity_factors")) 
+        	) #fluidrow
+
+		) #conditionalPanel
+
+		) #tabPanel
+              )
+              )
+      ), #tabItem
+
+ 
+# --------------------------------------
+# LINKS
+# --------------------------------------
+      tabItem(tabName = "links", 
+	#uiOutput("googlelink"),
+	h2( uiOutput("ndgain_countries") ),
+	h2( uiOutput("actuaries_climate_index") ),
+	h2( uiOutput("worldbank_development_indicators") )
+      ), #tabItem
+
+# --------------------------------------
+# LOCAL CLIMATE
+# --------------------------------------
+      tabItem(tabName = "localclimate",
+        h2("Localized probability distributions from historical and projected daily data"),
+        
+	tabBox(width=12,
+
+        tabPanel(title = "TEMPERATURE (Regions)",
+	icon = icon("thermometer-three-quarters"),
+
+        fluidRow(
+	  column(4,
+          selectInput("temperatureProjectionLocation","Select Region for Temperature Projections",
+		c("Phoenix, AZ", "Queens, NY", "Western Equatoria, South Sudan"),
+		selected="Phoenix, AZ"
+                    )
+		)
+        ), #fluidrow
+
+        fluidRow(
+	# More information on cascading style sheets at: http://shiny.rstudio.com/articles/css.html.
+	#includeCSS("./www/darkly.css"),
+          box(plotOutput("temp_climplot1", height = 200)),
+          box(plotOutput("temp_climplot2", height = 200)),
+          box(plotOutput("temp_climplot3", height = 200)),
+          box(plotOutput("temp_climplot4", height = 200)),
+          box(title="Ensemble Distributions Evolve Through Time", background = "red", solidHeader = TRUE, plotOutput("temp_climplot5", height = 300)),
+          box(
+            title = "Climate Data Controls",
+            sliderInput("bins", "Number of bins:", 10, 100, 50, step=10, animate=TRUE)
+          )
+        ) #fluidrow
+	),  #tabPanel
+
+        tabPanel(title = "TEMPERATURE (Facilities)",
+	icon = icon("thermometer-three-quarters"),
+
+        fluidRow(
+	  column(4,
+            # [from source("./data/financial/load_financial_data.r") ]
+          selectInput("temperature_facility","Search Company Facilities (locID, corpID, location)", width=400, facility_locations$LocationID_ParentCorpID_LocationName)
+	  ), # column
+
+	  column(4, offset=2,
+            # [from source("./data/financial/load_financial_data.r") ]
+          selectInput("temperature_facility2","Search Company Facilities (locID, corpID, location)", width=400, facility_locations$LocationID_ParentCorpID_LocationName)
+	  ) # column
+        ), #fluidrow
+
+        fluidRow(
+	  column(2,
+ 	  selectInput("temperature_facility_scenario", "Select Scenario", c("Historical","RCP8.5","RCP4.5"), width=300) 
+	  ), # column
+
+	  column(2,
+ 	  selectInput("temperature_facility_period", "Select Period", c("1980s","1990s","2020s","2030s","2040s","2050s","2060s","2070s","2080s","2090s"), width=300) 
+	  ), # column
+
+	  column(2,
+ 	  selectInput("temperature_facility_season", "Select Season", c("Entire Year", "DJF", "MAM", "JJA", "SON"), width=300) 
+	  ), # column
+
+	  column(2,
+ 	  selectInput("temperature_facility_scenario2", "Select Scenario", c("Historical","RCP8.5","RCP4.5"), width=300) 
+	  ), # column
+
+	  column(2,
+ 	  selectInput("temperature_facility_period2", "Select Period", c("1980s","1990s","2020s","2030s","2040s","2050s","2060s","2070s","2080s","2090s"), width=300) 
+	  ), # column
+
+	  column(2,
+ 	  selectInput("temperature_facility_season2", "Select Season", c("Entire Year", "DJF", "MAM", "JJA", "SON"), width=300) 
+	  ) # column
+
+        ), #fluidrow
+
+        fluidRow(
+          box(plotOutput("temp_facilities1", height = 200)),
+          box(plotOutput("temp_facilities2", height = 200))
+        ), #fluidrow
+
+        fluidRow(
+	  column(2,
+	  # XXX input below should come from a header file created when the derived-variable generator is run.  Read the header once at the beginning of ui.R.  ./functions/setup_climate_derived_variable_histogram.r will also need to be modified to select the correct derived variable depending on this input field.
+ 	  #selectInput("temperature_facility_derived_variable", "Select Derived Variable", c("Maximum","Minimum","Days Above 25C","Days Above 30C","Days Above 35C"), width=300) 
+ 	  selectInput("temperature_facility_derived_variable", "Select Derived Variable", c("Maximum","Minimum","Days Above 25C","Days Above 30C","Days Above 35C","Average-Jan","Average-Feb","Average-Mar","Average-Apr","Average-May","Average-Jun","Average-Jul","Average-Aug","Average-Sep","Average-Oct","Average-Nov","Average-Dec"), width=300) 
+	  ), # column
+
+	  column(2, offset=4,
+ 	  selectInput("temperature_facility_derived_variable2", "Select Derived Variable", c("Maximum","Minimum","Days Above 25C","Days Above 30C","Days Above 35C","Average-Jan","Average-Feb","Average-Mar","Average-Apr","Average-May","Average-Jun","Average-Jul","Average-Aug","Average-Sep","Average-Oct","Average-Nov","Average-Dec"), width=300) 
+	  ) # column
+
+        ), #fluidrow
+
+        fluidRow(
+          box(plotOutput("temp_facilities3", height = 200)),
+          box(plotOutput("temp_facilities4", height = 200)),
+          box(title="Ensemble Distributions Evolve Through Time", background = "red", solidHeader = TRUE, plotOutput("temp_facilities5", height = 300)),
+          box(
+            title = "Climate Data Controls",
+            sliderInput("bins_temp_facilities", "Number of bins:", 10, 100, 50, step=10, animate=TRUE)
+          )
+        ) #fluidrow
+
+	),  #tabPanel
+
+        tabPanel(title = "PRECIPITATION (Facilities)",
+	icon = icon("thermometer-three-quarters"),
+
+        fluidRow(
+	  column(4,
+            # [from source("./data/financial/load_financial_data.r") ]
+          selectInput("precip_facility","Search Company Facilities (locID, corpID, location)", width=400,
+                      facility_locations$LocationID_ParentCorpID_LocationName)
+	  ), # column
+
+	  column(4, offset=2,
+            # [from source("./data/financial/load_financial_data.r") ]
+          selectInput("precip_facility2","Search Company Facilities (locID, corpID, location)", width=400,
+                      facility_locations$LocationID_ParentCorpID_LocationName)
+	  ) # column
+        ), #fluidrow
+
+        fluidRow(
+	  column(2,
+ 	  selectInput("precip_facility_scenario", "Select Scenario", c("Historical","RCP8.5","RCP4.5"), width=300) 
+	  ), # column
+
+	  column(2,
+ 	  selectInput("precip_facility_period", "Select Period", c("1980s","1990s","2020s","2030s","2040s","2050s","2060s","2070s","2080s","2090s"), width=300) 
+	  ), # column
+
+	  column(2,
+ 	  selectInput("precip_facility_season", "Select Season", c("Entire Year", "DJF", "MAM", "JJA", "SON"), width=300) 
+	  ), # column
+
+	  column(2,
+ 	  selectInput("precip_facility_scenario2", "Select Scenario", c("Historical","RCP8.5","RCP4.5"), width=300) 
+	  ), # column
+
+	  column(2,
+ 	  selectInput("precip_facility_period2", "Select Period", c("1980s","1990s","2020s","2030s","2040s","2050s","2060s","2070s","2080s","2090s"), width=300) 
+	  ), # column
+
+	  column(2,
+ 	  selectInput("precip_facility_season2", "Select Season", c("Entire Year", "DJF", "MAM", "JJA", "SON"), width=300) 
+	  ) # column
+
+        ), #fluidrow
+
+        fluidRow(
+          box(plotOutput("precip_facilities1", height = 200)),
+          box(plotOutput("precip_facilities2", height = 200))
+        ), #fluidrow
+
+        fluidRow(
+	  column(2,
+ 	  selectInput("precip_facility_derived_variable", "Select Derived Variable", c("Maximum","Minimum","Days Above 5mm","Days Above 10mm","Days Above 15mm","Days Below 0.1mm","Total-Year","Total-Jan","Total-Feb","Total-Mar","Total-Apr","Total-May","Total-Jun","Total-Jul","Total-Aug","Total-Sep","Total-Oct","Total-Nov","Total-Dec"), width=300) 
+	  ), # column
+
+	  column(2, offset=4,
+ 	  selectInput("precip_facility_derived_variable2", "Select Derived Variable", c("Maximum","Minimum","Days Above 5mm","Days Above 10mm","Days Above 15mm","Days Below 0.1mm","Total-Year","Total-Jan","Total-Feb","Total-Mar","Total-Apr","Total-May","Total-Jun","Total-Jul","Total-Aug","Total-Sep","Total-Oct","Total-Nov","Total-Dec"), width=300) 
+	  ) # column
+
+        ), #fluidrow
+
+        fluidRow(
+          box(plotOutput("precip_facilities3", height = 200)),
+          box(plotOutput("precip_facilities4", height = 200)),
+          box(title="Ensemble Distributions Evolve Through Time", background = "red", solidHeader = TRUE, plotOutput("precip_facilities5", height = 300)),
+          box(
+            title = "Climate Data Controls",
+            sliderInput("bins_precip_facilities", "Number of bins:", 50, 400, 200, step=50, animate=TRUE)
+          )
+        ) #fluidrow
+
+	),  #tabPanel
+
+        tabPanel(title = "SEA LEVEL (NoAm)",
+	icon = icon("bath"),
+
+        fluidRow(
+	  column(3,
+          selectInput("sealevelProjectionLocation","Select Location for Sea Level Projections",
+	     noaa_slr_locations,  # [from source("./data/sealevel_us/load_sealevel_data_us.r") ]
+             selected = "This is a dummy value that gets the list to load the first data value since there are multiple rows for each location covering the different GMSL scenarios"
+                    )
+		),
+	  
+	  column(3,
+          selectInput("extremewaterLocation","Select Location for Extreme Water Levels",
+             # list(`East Coast` = c("NY", "NJ", "CT"),
+             #      `West Coast` = c("WA", "OR", "CA"),
+             #      `Midwest` = c("MN", "WI", "IA"))
+             # c("Boise","Singapore","Malaysia","Scotland"),
+	     noaa_extremes_locations, # [ from source("./data/sealevel_us/load_sealevel_data_us.r") ]
+             selected = "KingsPoint/WilletsPoint"
+                    )
+		)
+        ), #fluidrow
+
+        fluidRow(
+	  column(3,
+          selectInput("slrScenario","Select SLR Scenario (GMSL 2100)",
+	     c("0.3 meter","0.5 meter","1.0 meter","1.5 meters","2.0 meters", "2.5 meters"),
+             selected = "0.5 meter"
+                    )
+		),
+	  
+	  column(3,
+          selectInput("slrYear","Select Year of Concern",
+	     c("2020","2030","2040","2050","2060","2070","2080","2090","2100"),
+             selected = "2020"
+                    )
+		),
+	  
+	  column(3,
+          selectInput("returnLevel","Select Return Level of Concern (m)",seq(0.2,10.0,by=0.1),selected = "1")
+	  #textInput("returnLevel","Input Return Level of Concern (m)",value="1.0")
+		)
+
+        ), #fluidrow
+
+        fluidRow(
+          box(title="Annual Probability of Exceeding Selected Level - Historical and Selected Scenario/Period",width=6, verbatimTextOutput("returnlevel_probability"))
+        ), #fluidrow
+
+        fluidRow(
+          #box(title="Probability of Exceeding Selected Level - Historical and Selected Period", background = "red", solidHeader = TRUE, textOutput("returnlevel_probability")),
+          box(title="Annual Probability of Exceeding Selected Level - All Scenarios and Periods", background = "red", solidHeader = TRUE, plotOutput("sealevel_ewl_probabilities", height=300))
+        ), #fluidrow
+
+        fluidRow(
+          box(title="Local Sea-level Rise Projections at Selected Location", background = "red", solidHeader = TRUE, plotOutput("sealevel_projections_plot1", height = 300)),
+          box(title="Historical Extreme Water Levels at Selected Location", background = "red", solidHeader = TRUE, plotOutput("sealevel_extremes_plot1", height = 300))
+        ) #fluidrow
+
+	),  #tabPanel
+
+        tabPanel(title = "SEA LEVEL (World)",
+	icon = icon("bath"),
+
+        fluidRow(
+	  column(3,
+          selectInput("sealevelProjectionLocation2","Select Location for Sea Level Projections",
+	     world_slr_locations,  # [from source("./data/sealevel_world/load_sealevel_data_world.r") ]
+             selected = "This is a dummy value that gets the list to load the first data value since there are multiple rows for each location covering the different GMSL scenarios"
+                    )
+		),
+	  
+	  column(3,
+          selectInput("extremewaterLocation2","Select Location for Extreme Water Levels",
+             # list(`East Coast` = c("NY", "NJ", "CT"),
+             #      `West Coast` = c("WA", "OR", "CA"),
+             #      `Midwest` = c("MN", "WI", "IA"))
+             # c("Boise","Singapore","Malaysia","Scotland"),
+	     world_extremes_locations, # [ from source("./data/sealevel_world/load_sealevel_data_world.r") ]
+                    )
+		),
+
+	  column(3,
+          selectInput("extremewaterLocation2_with_slr_station","Select Location for EWL with SLR",
+	     world_extremes_locations_with_slr_stations, # [ from source("./data/sealevel_world/load_sealevel_data_world.r") ]
+                    )
+		),
+
+	  column(3,
+          selectInput("world_slr_scenario","Select Scenario", c("RCP8.5", "RCP4.5", "RCP2.6") )
+		)
+        ), #fluidrow
+
+        fluidRow(
+          box(width=3, title="Local Sea-level Rise Projections at Selected Location", background = "red", solidHeader = TRUE, plotOutput("sealevel_projections_plot2", height = 300, width=250)),
+          box(width=3, title="Historical Extreme Water Levels at Selected Location", background = "red", solidHeader = TRUE, plotOutput("sealevel_extremes_plot2", height = 300, width=250)),
+          box(width=6, title="Future Extreme Water Levels at Selected Location", background = "red", solidHeader = TRUE, plotOutput("sealevel_extremes_plot3", height = 300, width=400))
+        ) #fluidrow
+
+        ),  # end tabPanel(title = "SEA LEVEL (World)",
+
+        tabPanel(title = "DROUGHT",
+	icon = icon("sun-o"),
+        fluidRow(
+	  h3("Annual Probability of Exceeding the Historical (1950-99) 90th-percentile Value of the Palmer Drought Severity Index"),
+
+         column(6,
+          selectInput("drought_facility","Search Company Facilities", width=400,
+                      facility_locations$LocationID_ParentCorpID_LocationName),  # [from source("./data/financial/load_financial_data.r") ]
+	  checkboxInput("use_facility_for_drought", "USE THIS FACILITY FOR DROUGHT IMPACTS")
+          ),
+         column(6,
+	  textInput("droughtlon","Specify Other Longitude (E+/W-)",value="19.9"),
+          textInput("droughtlat","Specify Other Latitude (N+/S-)",value="-16.3")
+          )
+         ), #fluidrow
+
+        fluidRow(
+	  box(title="Annual Probabilty at Selected Facility", background = "blue", solidHeader = TRUE, plotOutput("drought_frequencies_facility", height=300)),
+	  box(title="Annual Probability at Selected Location", background = "blue", solidHeader = TRUE, plotOutput("drought_frequencies_lonlat", height=300))
+          ) #fluidrow
+	)  #tabPanel
+
+	)  #tabBox
+      ), #tabItem
+
+      tabItem(tabName = "impactfunctions",
+        h2("Sector-specific impact functions quantify impacts on infrastructure, workforce, revenue..."),
+        tabBox(width=12,
+ 
+	tabPanel(title = "FITTED", 
+		 icon = icon("line-chart"), 
+                 #helpText("Fitted functions linked to climate variables"),
+
+	fluidRow(
+	  column(6,
+	  h4("Energy Expenditures Vs. Global Temperature"),
+          imageOutput("energy_expenditure_temperature", height = 500, width=500)
+	  ),
+
+	  column(6,
+	  h4("Electricity Load Vs. Daily Average Temperature"),
+          imageOutput("impactplot_elecload", height = 500, width=500)
+	  )
+	), #fluidrow
+
+	fluidRow(
+	  column(6,
+	  h4("Labor Productivity Vs. Global Temperature"),
+          imageOutput("labor_productivity_temperature", height = 500, width=500)
+	  ),
+
+	  column(6,
+	  h4("GDP Reduction Vs. Global Temperature"),
+          imageOutput("gdp_reduction_temperature", height = 500, width=500)
+	  ),
+
+	  column(6,
+	  h4("Mortality Vs. Global Temperature"),
+          imageOutput("mortality_temperature", height = 500, width=500)
+	  ),
+
+	  column(6,
+	  h4("Building Damage Vs. Flood Depth"),
+          #selectInput("hazus_damage_function_id","Damage Function Number",c(1:657)),
+          selectInput("hazus_damage_function_id","Select Damage Function", hazus_building_flood_damage_function_names),
+          imageOutput("impactplot_building_flood", height = 500, width=500)
+          #verbatimTextOutput("impactplot_building_flood")
+	  )
+	), #fluidrow
+
+	fluidRow(
+	  column(6, offset=0,
+	  h4("Crop Yields Vs. Global Temperature"),
+          imageOutput("crop_yields_temperature", height = 500, width=500)
+	  ),
+
+	  column(6, offset=0,
+	  h4("Corn Yield Vs. Drought Return Period"),
+          imageOutput("impactplot_corn_drought_return_period", height = 500, width=500)
+	  ),
+
+	  column(6, offset=0,
+	  h4("Agricultural Income in Brazil Vs. Rainfall"),
+          imageOutput("impactplot_agriculture_brazil", height = 500, width=500)
+	  )
+	), #fluidrow
+
+	fluidRow(
+	  column(6, offset=0,
+	  h4("Crime Vs. Global Temperature"),
+          imageOutput("crime_temperature", height = 500, width=500)
+	  )
+	), #fluidrow
+
+	fluidRow(
+	  column(3, offset=0,
+	  h4("Maize Yield in U.S. Vs. Temperature"),
+          imageOutput("impactplot_maize_us", height = 500, width=300)
+	  )
+	) #fluidrow
+
+	), #tabPanel
+
+        tabPanel(title = "FUNCTION LIBRARY 1",
+		 icon = icon("book"), 
+	fluidRow(
+	  #h2("=== IMPACT FUNCTION LIBRARY ==="),
+	  column(12,
+	  h4("Power Consump., GDP, Income, Productivity, etc."),
+          imageOutput("impactplot8", height = 500)
+	  )
+	)
+	), #tabPanel
+
+        tabPanel(title = "FUNCTION LIBRARY 2",
+		 icon = icon("book"), 
+	fluidRow(
+	  column(12, offset=0,
+	  h4("Mortality, Damage, etc."),
+          imageOutput("impactplot7", height = 500)
+	  )
+	)
+	), #tabPanel
+
+        tabPanel(title = "FUNCTION LIBRARY 3",
+		 icon = icon("book"), 
+	fluidRow(
+	  column(3, 
+	  h4("Crops - Temperature"),
+          imageOutput("impactplot4", height = 300)
+	  ),
+
+	  column(3, offset=1,
+	  h4("Crops - Precipitation"),
+          imageOutput("impactplot5", height = 300)
+	  ),
+
+	  column(3, offset=1,
+	  h4("Crops - Derived Variables"),
+          imageOutput("impactplot6", height = 300)
+	  )
+	), #fluidRow
+
+	fluidRow(
+	  column(5, 
+	  h4("Corn Yield - Drought (US midwest)"),
+          imageOutput("impactplot_crops_wang", height = 300)
+	  ),
+
+	  column(4, offset=1,
+	  h4("Corn and Soy - Drought, Soil Moisture (US midwest)"),
+          imageOutput("impactplot_crops_mishra", height = 300)
+	  )
+	), #fluidRow
+
+	fluidRow(
+	  column(5,
+	  h4("Wheat - Evapotranspiration (Canada)"),
+          imageOutput("impactplot_crops_mhakbela", height = 300)
+	  )
+	) #fluidRow
+	), #tabPanel
+
+        tabPanel(title = "FUNCTION LIBRARY 4",
+		 icon = icon("book"), 
+	fluidRow(
+	  column(3, 
+	  h4("Power Generation - Air/Water Temperature"),
+          imageOutput("impactplot9", height = 500)
+	  ),
+
+	  column(3, offset=3,
+	  h4("Water Requirements for Power - Water Temperature"),
+          imageOutput("impactplot10", height = 500)
+	  )
+
+	)
+      ), #tabPanel
+
+        tabPanel(title = "FUNCTION BUILDER",
+		 icon = icon("wrench"), 
+	fluidRow(
+          box(title="Impact Function - Tailored", background = "red", solidHeader = TRUE, plotOutput("impactplot3", height = 200)),
+          box(
+            title = "Weight of Sigmoidal and Quadratic Contributions",
+            sliderInput("impactfunctionweight", "Sigmoid weight (quadratic weight is the remainder):", 0, 1, 0.5, step=0.1, animate=TRUE)
+          )
+	),
+        
+	fluidRow(
+          box(title="Sigmoidal Contribution", background = "blue", solidHeader = TRUE, plotOutput("impactplot1", height = 200)),
+          box(title="Quadratic Contribution", background = "blue", solidHeader = TRUE, plotOutput("impactplot2", height = 200)),
+          box(
+            title = "Impact Function Controls - Sigmoidal",
+            sliderInput("sigmoidlimit", "Sigmoid limit:", -100, 100, -75, step=10, animate=TRUE),
+            sliderInput("sigmoidsteepness", "Sigmoid steepness:", 0.1, 10, 2, step=0.5, animate=TRUE),
+            sliderInput("sigmoidmidpoint", "Sigmoid midpoint:", 270, 320, 295, step=1, animate=TRUE)
+          ),
+          box(
+            title = "Impact Function Controls - Quadratic",
+            sliderInput("quadraticlimit", "Quadratic limit:", 10, 100, 50, step=10, animate=TRUE),
+            sliderInput("quadraticshape", "Quadratic shape:", -20, 20, -4, step=2, animate=TRUE),
+            sliderInput("quadraticmidpoint", "Quadratic midpoint:", 270, 320, 295, step=1, animate=TRUE)
+          )
+        )
+	) #tabPanel
+
+      ) #tabBox
+      ),
+
+      tabItem(tabName = "impactestimate",
+        h2("Combine climate probabilities and impact functions to estimate probability-weighted net impact"),
+        fluidRow(
+                    selectInput("impact_selected","IMPACT FUNCTION SOURCE",
+                               c("Custom-built","Electricity Load (US; temperature)","Building Damage (flood depth)", "Corn Yield (US, drought)", "Agricultural Income (Brazil)", "Maize Yield (US)"),
+                               selected = c("Custom-built")
+                    ),
+          box(title="Impact Function (controlled from impact-function tab)", background = "blue", solidHeader = TRUE, plotOutput("impactestimateplot3", height = 300)),
+
+          box(title="Probabilistic Impact Estimate", background = "red", solidHeader = TRUE, plotOutput("impactestimateplot2", height = 300))
+
+#          box(
+#            title = "Impact Estimate Controls",
+#            sliderInput("sigmoidlimit2", "Sigmoid limit:", -100, 100, -75, step=10, animate=TRUE),
+#            sliderInput("sigmoidsteepness2", "Sigmoid steepness:", 0.1, 10, 2, step=0.5, animate=TRUE),
+#            sliderInput("sigmoidmidpoint2", "Sigmoid midpoint:", 270, 320, 295, step=1, animate=TRUE)
+#          )
+	), #fluidRow
+
+        fluidRow(
+          box(title="Probability of Exceeding Thresholds (based on localized climate projections", background = "yellow", solidHeader = TRUE, plotOutput("impactestimateplot1", height = 300)),
+          box(
+            title = "Threshold Controls",
+            sliderInput("threshold", "Threshold:", 270, 320, 295, step=2, animate=TRUE)
+          )
+        )
+      ),
+
+      tabItem(tabName = "financialeffects",
+        h2("Calculate effects of net impact on beta and NPV"),
+        fluidRow(
+          box(title="Beta Multiplier By Period: 1/(1-D), where D is probabilistic impact", background = "blue", solidHeader = TRUE, plotOutput("financialplot1", height = 300)),
+          box(title="NPV Impact on Project", background = "green", solidHeader = TRUE, plotOutput("financialplot2", height = 300)),
+          #box(
+          #  title = "Multiplier Controls (sigmoid impact function)",
+          #  sliderInput("sigmoidlimit3", "Sigmoid limit:", -100, 100, -75, step=10, animate=TRUE),
+          #  sliderInput("sigmoidsteepness3", "Sigmoid steepness:", 0.1, 10, 2, step=0.5, animate=TRUE),
+          #  sliderInput("sigmoidmidpoint3", "Sigmoid midpoint:", 270, 320, 295, step=1, animate=TRUE)
+          #),
+          box(
+            title = "Capital Cost and Discount Rate",
+	    width=4,
+            sliderInput("capitalcost", "Total Capital Investment:", 0, 50, 20, step=5, animate=TRUE),
+            sliderInput("discount", "Discount Rate:", 0.01, 0.05, 0.03, step=0.005)
+          ),
+          box(
+            title = "Cash Flows for Periods 1-4",
+	    width=4,
+	     #numericInput("cashflow", "Cash Flow:", 10, min = 1, max = 100),
+            sliderInput("cashflow1", "Period 1 Cash Flow:", -10, 100, 1),
+            sliderInput("cashflow2", "Period 2 Cash Flow:", -10, 100, 5),
+            sliderInput("cashflow3", "Period 3 Cash Flow:", -10, 100, 10),
+            sliderInput("cashflow4", "Period 4 Cash Flow:", -10, 100, 20)
+          ),
+          box(
+            title = "Cash Flows for Periods 5-7",
+	    width=4,
+            sliderInput("cashflow5", "Period 5 Cash Flow:", -10, 100, 30),
+            sliderInput("cashflow6", "Period 6 Cash Flow:", -10, 100, 30),
+            sliderInput("cashflow7", "Period 7 Cash Flow:", -10, 100, 30)
+          )
+        )
+      ),
+
+      tabItem(tabName = "sustainable_infrastructure",
+        #h2("Climate risk assessment and adaptation planning throughout the transaction cycle"),
+        h2("Align financial flows with country pathways to low-carbon and climate-resilient development"),
+        fluidRow(
+          box(
+            title = "Economic Sector",
+  	    selectInput("econsector", "Choose economic sector:", list("Power","Agriculture","Water") ),
+	    width=3,
+    	    textOutput("econsector")
+          ),
+          box(
+            title = "ESG Assessment",
+  	    selectInput("esgassessment", "Choose ESG assessment:", list("Low","Moderate","High") ),
+	    width=3,
+    	    textOutput("esgassessment")
+          )
+        )
+      ),
+
+      tabItem(tabName = "adaptationplanning",
+        h2("Calculate adaptation benefit/cost ratio"),
+        fluidRow(
+	  box(title="Impact Function (controlled from Sector Impact tab)", background = "blue", solidHeader = TRUE, plotOutput("adaptationplot1", height=300)),
+	  box(title="Asset Value Through Time", background = "red", solidHeader = TRUE, plotOutput("adaptationplot2", height=300))
+        ),
+        fluidRow(
+          box(
+            title = "Asset Values ($M)",
+            sliderInput("assetvalue1", "Value of Asset 1:", 0, 100, 1, animate=TRUE),
+            sliderInput("assetvalue2", "Value of Asset 2:", 0, 100, 5, animate=TRUE),
+            sliderInput("assetvalue3", "Value of Asset 3:", 0, 100, 10, animate=TRUE),
+	    width=3
+          ),
+          box(
+            title = "Relative Asset Sensitivities to Impact Function (no adaptation)",
+            sliderInput("assetsensitivity1", "Impact Sensitivity of Asset 1:", 0, 5, 1, step=0.25, animate=TRUE),
+            sliderInput("assetsensitivity2", "Impact Sensitivity of Asset 2:", 0, 5, 1, step=0.25, animate=TRUE),
+            sliderInput("assetsensitivity3", "Impact Sensitivity of Asset 3:", 0, 5, 1, step=0.25, animate=TRUE),
+	    width=3
+          ),
+          box(
+            #title = "Adaptation Plan 1",
+    	    title = textOutput("adaptationbenefit1"),
+            sliderInput("assetsensitivity1_plan1", "Plan 1 Impact Sensitivity of Asset 1:", 0, 5, 0.5, step=0.25, animate=TRUE),
+            sliderInput("assetsensitivity2_plan1", "Plan 1 Impact Sensitivity of Asset 2:", 0, 5, 0.5, step=0.25, animate=TRUE),
+            sliderInput("assetsensitivity3_plan1", "Plan 1 Impact Sensitivity of Asset 3:", 0, 5, 0.5, step=0.25, animate=TRUE),
+            sliderInput("discount2", "Discount Rate:", 0.01, 0.05, 0.03, step=0.005),
+            sliderInput("cost2implement_plan1", "Plan 1 Implementation Cost ($M):", 0, 20, 5, step=1, animate=TRUE),
+            sliderInput("cost2maintain_relative2base_plan1", "Plan 1 Discounted Maintenance & Repair Costs Relative to No-adaptation Case ($M):", -20, 20, 2, step=1, animate=TRUE),
+	    width=3
+          ),
+          box(
+            #title = "Adaptation plan 2",
+    	    title = textOutput("adaptationbenefit2"),
+            sliderInput("assetsensitivity1_plan2", "Plan 2 Impact Sensitivity of Asset 1:", 0, 5, 0.25, step=0.25, animate=TRUE),
+            sliderInput("assetsensitivity2_plan2", "Plan 2 Impact Sensitivity of Asset 2:", 0, 5, 0.25, step=0.25, animate=TRUE),
+            sliderInput("assetsensitivity3_plan2", "Plan 2 Impact Sensitivity of Asset 3:", 0, 5, 0.25, step=0.25, animate=TRUE),
+            sliderInput("discount3", "Discount Rate:", 0.01, 0.05, 0.03, step=0.005),
+            sliderInput("cost2implement_plan2", "Plan 2 Implementation Cost ($M):", 0, 20, 5, step=1, animate=TRUE),
+            sliderInput("cost2maintain_relative2base_plan2", "Plan 2 Discounted Maintenance & Repair Costs Relative to No-adaptation Case ($M):", -20, 20, 5, step=1, animate=TRUE),
+	    width=3
+          )
+        )
+      ),
+
+      tabItem(tabName = "climatescore",
+        h2("Derive climate score from impacts, financial effects, and adaptation actions"),
+
+              fluidRow(
+                box(
+	            title = h2("Climate Scores"), status = "danger", solidHeader=TRUE,
+		    h2(verbatimTextOutput("climatescores")),
+  		    # h3("- Higher is better"), br(), h3("- Historical = 100")
+  		    h3("Higher is better; historical = 100")
+		   )
+              ),
+
+        fluidRow(
+          box(title="Climate Score By Period (Higher is better; historical=100)", background = "green", solidHeader = TRUE, plotOutput("scoreplot1", height = 300)),
+          box(title="Impact Function (controlled from impact-function tab)", background = "blue", solidHeader = TRUE, plotOutput("scoreplot2", height = 300)),
+
+          #box(
+          #  title = "Impact Function Controls (sigmoid impact function)",
+          #  sliderInput("sigmoidlimit4", "Sigmoid limit:", -100, 100, -75, step=10, animate=TRUE),
+          #  sliderInput("sigmoidsteepness4", "Sigmoid steepness:", 0.1, 10, 2, step=0.5, animate=TRUE),
+          #  sliderInput("sigmoidmidpoint4", "Sigmoid midpoint:", 270, 320, 295, step=1, animate=TRUE)
+          #),
+
+          box(
+            title = "Adaptation Credits",
+  	    selectInput("adaptationplan", "Choose an adaptation plan:", list("None","Minimal","Moderate","Maximal") ),
+    		textOutput("adaptationplan")
+          )
+        )
+      ),
+
+      tabItem(tabName = "database",
+        h2("Databases link detailed calculations with user interface"),
+        fluidRow(
+          box(
+    	    title = textOutput("database1_name"),
+	    width=3
+          ),
+
+          box(
+    	    title = textOutput("database2_name"),
+	    width=3
+          ),
+
+          box(
+    	    title = textOutput("database2_table12_contents"),
+	    width=6
+          ),
+
+          textInput("addquestion","Add Question",value="enter question"),
+          textInput("write_new_table","Write New Table",value="No"),
+	  textOutput("database2_write")
+
+        ) #end fluidRow
+      ), #end database tabItem
+
+# --------------------------------------
+# SYSTEM CONTROL
+# --------------------------------------
+      tabItem(tabName = "system_control",
+        h2("System Management Actions - TCS STAFF ONLY"),
+	br(),
+
+        fluidRow(
+         actionButton("button_test_data_refresh","TEST DATA REFRESH", icon = icon("cog"), 
+		style = "color: white; background-color: blue")
+        ), #fluidRow
+	br(),
+
+        fluidRow(
+         actionButton("button_runSE","RUN SCORING WITHOUT USER DATA", icon = icon("cog"),
+		style = "color: white; background-color: green")
+	 # XXX Need to add ui_elment below that withSpinner references.  Also enable library(shinycssloaders) above.
+         #withSpinner(
+		 #) # end withSpinner
+        ), #fluidRow
+	br(),
+
+        fluidRow(
+         actionButton("button_runSE_with_userdata","RUN SCORING INCLUDING USER DATA", icon = icon("cog"), 
+		style = "color: white; background-color: orange")
+        ), #fluidRow
+	br(),
+
+        fluidRow(
+         actionButton("button_remove_report_graphics","RESET REPORT CONTENTS - REMOVE ALL REPORT GRAPHICS FOR CURRENT USER", icon = icon("cog"), 
+		style = "color: white; background-color: red")
+        ) #fluidRow
+
+      ), #tabItem
+
+# --------------------------------------
+#                 FAQ's
+# --------------------------------------
+      tabItem(tabName = "faqs",
+              h2("Frequently Asked Questions"),
+              fluidRow(
+                box(
+                  includeMarkdown("faqs.rmd")                
+                )
+              )#fluidRow
+      )#tabItem
+
+    ),# end tabItems
+
+# --------------------------------------
+#                 FOOTER
+# --------------------------------------
+  hr(),
+  tags$footer("Copyright 2017-18 The Climate Service, Inc. | 828.713.7392", align = "left", style = "
+                position:absolute;
+                bottom:0;
+                width:100%;
+                height:50px;   /* Height of the footer */
+                padding: 10px;
+                z-index: 1000;")
+  ) #end dashboardBody
+) #end ui
+
