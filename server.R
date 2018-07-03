@@ -494,6 +494,7 @@ server <- function(input, output, session) {
 
 	if(input$selectCausalVariable_drilldown=="Drought Severity (90th percentile)") {
 	  nd = read.table("./data/scoring_engine/drought/TCSDB_structure.locations.csv.pdsisc", header=FALSE)
+	  #nd = read.table("./data/scoring_engine/drought/TCSDB_structure.locations.csv.pdsisc.nexgddp", header=FALSE)
 	  # The following sets up the graph based on location selected in TechnicalDetails/LocalClimate/Drought.
 	  # values = nd %>% filter(nd$V1==input$drought_facility) %>% select(V8:V17)
 	  # The following sets up the graph based on location selected in Corporate/Analyze.
@@ -633,7 +634,51 @@ server <- function(input, output, session) {
 
     #}, deleteFile=FALSE) # end output$plot_selectHazard_drilldown as renderImage
   }) # end output$plot_selectHazard_drilldown as renderPlot or renderPlotly
-  
+ 
+  output$plot_selectHazard_drilldown_testing <- renderPlotly({
+
+	# The following sets up the graph based on location selected in Corporate/Analyze.
+        locID <- corpLocations %>% filter(ParentCorpID==USER$ParentCorpID & LocationName==input$inputLocations_drilldown) %>% select(LocationID)
+	key <- paste(locID,USER$ParentCorpID,input$inputLocations_drilldown)
+	key <- gsub(" ","_",key)
+
+	  nd = read.table("./data/scoring_engine/drought/TCSDB_structure.locations.csv.pdsisc.nexgddp", header=FALSE)
+	  # The NEX-GDDP data is organized into values for 10 periods.  Two historical decades and 8 future decades.  After 7 location-related fields, there are three sets of 10 values for pdsi, scpdsi, and the zindex.
+	  values_pdsi = nd %>% filter(nd$V1==key) %>% select(V8:V17)
+	  values_scpdsi = nd %>% filter(nd$V1==key) %>% select(V18:V27)
+	  values_zindex = nd %>% filter(nd$V1==key) %>% select(V28:V37)
+	  tvalues_pdsi = 100*as.numeric( t(values_pdsi) )
+	  tvalues_scpdsi = 100*as.numeric( t(values_scpdsi) )
+	  tvalues_zindex = 100*as.numeric( t(values_zindex) )
+	  firstfield = values_pdsi$V8
+	  periods = c("1980s","1990s","2020s","2030s","2040s","2050s","2060s","2070s","2080s","2090s")
+	  ylabel = "Ann. Prob. of 90th-pctile Level (%)"
+    	  yrange <- c(0,200)
+	  legend_nodata="No data available at this location."
+
+       # Set up data for plotting by ggplot or plot_ly.
+       df2 <- data.frame(grp=factor(periods), valp=tvalues_pdsi, vals=tvalues_scpdsi, valz=tvalues_zindex, row.names=NULL)
+
+    # Enforce the order of the categories as given in periods, otherwise they are plotted alphabetically.
+    xform <- list(title="Period", categoryorder="array", categoryarray=periods)
+    yform <- list(title=ylabel, range=yrange)
+    marform <- list(l = 50, r = 50, b = 80, t = 40, pad = 4)
+    if(firstfield=="No_data" | firstfield=="Inf") { message=legend_nodata } else { message="" }
+    # Reference for annotations:  https://plot.ly/r/reference/#layout-annotations
+    #ply <- plot_ly(df2, x=~grp, y=~valp, type='scatter', mode='lines', fill='tonexty', color=I("green"), name='pdsi' ) %>% 
+    ply <- plot_ly(df2, x=~grp, y=~valp, type='scatter', mode='lines', color=I("blue"), name='pdsi' ) %>% 
+	   add_trace(y = ~vals, name='sc_pdsi', mode='lines', color=I("green")) %>%
+	   add_trace(y = ~valz, name='z index', mode='lines', color=I("red")) %>%
+           layout(xaxis = xform, yaxis = yform, margin=marform, title=paste("Hazard:",ylabel), 
+		titlefont=list(family = "sans serif", size = 14, color = 'black'),
+		  annotations=list(text=message, showarrow=FALSE, xref="paper" , yref="paper", x=0.5, y=0.5) )
+
+    ply
+
+  }) # end output$plot_selectHazard_drilldown_testing as renderPlot or renderPlotly
+
+
+ 
   output$plot_selectDamageFunction <- renderPlot({
 
    if(input$selectDamageFunction=="Building Damage") {

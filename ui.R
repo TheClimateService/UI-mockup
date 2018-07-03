@@ -418,6 +418,10 @@ ui <- dashboardPage(title="The Climate Service",
 	), # end fluidrow
 
         fluidRow(
+          box(width=4,title="SC_PDSI, PDSI, and Z-index from NEX-GDDP ensemble", plotlyOutput("plot_selectHazard_drilldown_testing",height = 300))
+        ), #fluidrow plots
+
+        fluidRow(
 	  box(width=4,verbatimTextOutput("tracebackHazard_drilldown")),
 	  box(width=4,verbatimTextOutput("tracebackVuln_drilldown"))
         ) #fluidrow traceback text
