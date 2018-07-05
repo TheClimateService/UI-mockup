@@ -413,12 +413,13 @@ ui <- dashboardPage(title="The Climate Service",
         ), #fluidrow plots
 
         fluidRow(
-	 column(3,
-	  checkboxInput("checkbox_plots4report_drilldown", label = "Capture each viewed plot for report", value = FALSE) )
+	 column(3, checkboxInput("checkbox_plots4report_drilldown", label = "Capture each viewed plot for report", value = FALSE) )
+	 #column(3, checkboxInput("checkbox_showtestplots", label = "Show test plots", value = FALSE) )
 	), # end fluidrow
 
         fluidRow(
-          box(width=4,title="SC_PDSI, PDSI, and Z-index from NEX-GDDP ensemble", plotlyOutput("plot_selectHazard_drilldown_testing",height = 300))
+          box(width=4,title="Probabilities based on SC_PDSI, PDSI, and Z-index from NEX-GDDP ensemble (RCP8.5)", plotlyOutput("plot_selectHazard_drilldown_testing",height = 300)),
+          box(width=4,title="Probabilities based on SC_PDSI, PDSI, and Z-index from NEX-GDDP ensemble (RCP8.5 minus 0.25C/decade)", plotlyOutput("plot_selectHazard_drilldown_testing2",height = 300))
         ), #fluidrow plots
 
         fluidRow(
