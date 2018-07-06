@@ -59,8 +59,18 @@ userdata_latest_new=$2
 
 # Drop the dates.
 # XXX Note that the end column of the cut below (7) will change if there are more fields added to the saved user data.
-cut -d ";" -f 1-7 $userdata_latest_saved > temp1
-cut -d ";" -f 1-7 $userdata_latest_new > temp2
+#cut -d ";" -f 1-7 $userdata_latest_saved > temp1
+#cut -d ";" -f 1-7 $userdata_latest_new > temp2
+# Pass the number of fields to the cut command constructed in awk, dropping the date in the last field.
+awk -v file=$userdata_latest_saved '{FS=";"; if(NR==2) print "cut -d DDD;DDD -f 1-"(NF-1), file" > temp1" }' $userdata_latest_saved > temp1000
+sed 's/DDD/"/g' temp1000 > temp1001
+chmod a+x temp1001
+./temp1001
+awk -v file=$userdata_latest_new '{FS=";"; if(NR==2) print "cut -d DDD;DDD -f 1-"(NF-1), file" > temp2" }' $userdata_latest_saved > temp1000b
+sed 's/DDD/"/g' temp1000b > temp1001b
+chmod a+x temp1001b
+./temp1001b
+
 
 # Sort using key that will enable data from user_data.csv.latest.csv.sav to take precedence.
 awk '{FS=";"; print $1"_"$2"_B",$0}' temp1 > temp1b
@@ -76,4 +86,4 @@ awk -v date="$(date | sed 's/ /_/g')" '{if(NR==1) print $0";Date"; else print $0
 
 # Save results and clean up.
 mv temp6 $userdata_latest_saved.merged
-#rm temp* 
+rm temp* 

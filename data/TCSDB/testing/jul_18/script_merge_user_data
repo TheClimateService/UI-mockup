@@ -1,0 +1,88 @@
+
+# SCRIPT TO MERGE OLD USER DATA WITH NEW INITIATOR OF USER DATA.
+# TT - February 2018
+
+# Execution:  ./script_merge_user_data <saved version of user_data.csv.latest.csv> <newly initiatied version of user_data.csv.latest.csv>
+# Example:    ./script_merge_user_data user_data.csv.latest.csv.sav user_data.csv.latest.csv
+
+# Notes:   -----------------------------------------------------------
+# load_tcsdb.r now creates an initiator file, user_data_initiator.csv, containing entries for each facility and parent corp.
+# This will be used by script_apply_userdata4SE to create a new user_data.csv.latest.csv file.  
+# When user_data_initiator.csv is copied to user_data.csv (the historical record of all user data saves), this effectively removes all memory of past user actions.
+# To preserve this memory, this script merges a saved user_data.csv.latest.csv file with one made from a newly-initiated user_data.csv.  
+# This merged file is then copied to user_data.csv.latest.csv to give the system knowledge of both the updated TCSDB data and previously-entered user data.
+
+# Steps before/after execution:
+
+#    1.  Start system with new TCSDB_structure.xlsx to create new initiator file, user_data_initiator.csv
+
+#    2.  In ./data/TCSDB, copy current user_data.csv.latest.csv to user_data.csv.latest.csv.sav
+#	cp user_data.csv.latest.csv user_data.csv.latest.csv.sav
+
+#    3.  In ./data/TCSDB, copy new initiator to user_data.csv and new initiator.header file to user_data.csv.header  (Note that this must also be done when new fields are added to the user-data input panel.)
+#	cp user_data_initiator.csv user_data.csv
+#	cp user_data_initiator.csv.header user_data.csv.header
+
+#    (OLD) Run the following from the app directory to update user_data.csv.latest.csv and locationvalues4SE_with_userdata_mods (this is now done from the system control page via button_runSE_with_userdata):
+#       ./data/TCSDB/script_apply_userdata4SE ./data/TCSDB/user_data.csv ./data/scoring_engine/nonphysical/locationvalues4SE.csv 
+
+#    (XXX FUTURE WORK) It should be possible to get things aligned without actually running the SE.  First locationvalues4SE.csv needs to be created without user data by /scoring_engine/load_tcsdb_4scoringengine.r, and then /TCSDB/locationvalues4SE_with_userdata_mods needs to be created by /TCSDB/script_apply_userdata4SE.
+
+#    4.  If locations have been added/changed, run SE WITHOUT userdata since ./data/scoring_engine/nonphysical/locationvalues4SE.csv will still have the old number of locations if script_runall has not been run.  
+
+#    5.  In the app, save user data in order to update ./data/TCSDB/locationvalues4SE_with_userdata_mods and user_data.csv.latest.csv (via script_apply_userdata4SE).  One cannot run with userdata first since locationvalues4SE.csv will be overwritten by script_runSE_from_app_with_userdata when it copies locationvalues4SE_with_userdata_mods to /nonphysical/locationvalues4SE.csv prior to running the SE.
+
+#    6.  Run SE with userdata to create new user_data.csv.latest.csv file
+
+#    7.  Run this script (from ./data/TCSDB) to merge user_data.csv.latest.csv.sav and user_data.csv.latest.csv
+#	./script_merge_user_data user_data.csv.latest.csv.sav user_data.csv.latest.csv
+
+#    8.  Copy merged file to user_data.csv.latest.csv
+#	cp user_data.csv.latest.csv.sav.merged user_data.csv.latest.csv
+
+#    9.  Check the format of the user_data.csv.latest.csv file.  On the AWS ubuntu instance, the header is not in the right location and some of the "All locations" entries lack a real date.  XXX - This probably due to how the "date" function works under ubuntu.  For the present, copy the mac version of user_data.csv.latest.csv to the ubuntu instance.
+
+#    10.  Restart the system.
+
+# --------------------------------------------------------------------
+
+# Format of the user_data.csv.latest.csv file:
+#"USER.ParentCorpID";"input.rbLocations";"input.cbGroupBizType";"input.txtNumEmployees";"input.txtAssetValue";"cbBusinessFunctions";"Date"
+#4;Stanley_Plaza;-;250;;Clean Room Manufacturing, R&D;Wed_Feb_21_17:03:32_EST_2018
+#4;Pacific_Fair;-;999;100;Clean Room Manufacturing, R&D;Wed_Feb_21_17:07:43_EST_2018
+#4;Indooroopilly_Shopping_Centre;-;999;;Clean Room Manufacturing, R&D;Wed_Feb_21_17:01:57_EST_2018
+#4;All locations;Real Estate;-;-;-;Wed_Feb_21_15:45:52_EST_2018
+
+# Get input.
+userdata_latest_saved=$1
+userdata_latest_new=$2
+
+# Drop the dates.
+# XXX Note that the end column of the cut below (7) will change if there are more fields added to the saved user data.
+#cut -d ";" -f 1-7 $userdata_latest_saved > temp1
+#cut -d ";" -f 1-7 $userdata_latest_new > temp2
+awk -v file=$userdata_latest_saved '{FS=";"; if(NR==2) print "cut -d DDD;DDD -f 1-"(NF-1), file" > temp1" }' $userdata_latest_saved > temp1000
+sed 's/DDD/"/g' temp1000 > temp1001
+chmod a+x temp1001
+./temp1001
+awk -v file=$userdata_latest_new '{FS=";"; if(NR==2) print "cut -d DDD;DDD -f 1-"(NF-1), file" > temp2" }' $userdata_latest_saved > temp1000b
+sed 's/DDD/"/g' temp1000b > temp1001b
+chmod a+x temp1001b
+./temp1001b
+
+
+# Sort using key that will enable data from user_data.csv.latest.csv.sav to take precedence.
+awk '{FS=";"; print $1"_"$2"_B",$0}' temp1 > temp1b
+awk '{FS=";"; print $1"_"$2"_A",$0}' temp2 > temp2b
+cat temp1b temp2b | sed 's/All locations/All_locations/' | sort -k 1 > temp3
+echo LASTLINE >> temp3
+awk '{thisone=substr($1,1,length($1)-1);  \
+      if(NR>1 && thisone!=lastone) print laststring; lastone=thisone; laststring=$0}' temp3 > temp4
+
+# Drop sorting key and add current date.
+cut -d " " -f 2-999 temp4 > temp5
+awk -v date="$(date | sed 's/ /_/g')" '{if(NR==1) print $0";Date"; else print $0";"date}' temp5 > temp6
+
+# Save results and clean up.
+mv temp6 $userdata_latest_saved.merged
+#rm temp* 
