@@ -1889,6 +1889,141 @@ EGRX,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2060,7.69252,21
 EGRX,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2070,11.1079,21
 EGRX,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2080,13.1496,21
 EGRX,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2090,16.8352,21
+AWK,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2010,20.1966,22
+AWK,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2020,127.764,22
+AWK,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2030,162.836,22
+AWK,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2040,163.598,22
+AWK,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2050,234.422,22
+AWK,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2060,234.422,22
+AWK,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2070,336.626,22
+AWK,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2080,471.393,22
+AWK,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2090,563.619,22
+AWK,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2010,10.7902,22
+AWK,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2020,87.967,22
+AWK,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2030,168.993,22
+AWK,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2040,416.093,22
+AWK,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2050,948.628,22
+AWK,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2060,1084.06,22
+AWK,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2070,1132.62,22
+AWK,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2080,1200,22
+AWK,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2090,1200,22
+AWK,  Physical Risk,Chronic,Drought ,RCP8.5,2010,126,22
+AWK,  Physical Risk,Chronic,Drought ,RCP8.5,2020,0,22
+AWK,  Physical Risk,Chronic,Drought ,RCP8.5,2030,216,22
+AWK,  Physical Risk,Chronic,Drought ,RCP8.5,2040,99,22
+AWK,  Physical Risk,Chronic,Drought ,RCP8.5,2050,117,22
+AWK,  Physical Risk,Chronic,Drought ,RCP8.5,2060,67.5,22
+AWK,  Physical Risk,Chronic,Drought ,RCP8.5,2070,459,22
+AWK,  Physical Risk,Chronic,Drought ,RCP8.5,2080,702,22
+AWK,  Physical Risk,Chronic,Drought ,RCP8.5,2090,243,22
+AWK,  Physical Risk,Acute,Employee impacts ,RCP8.5,2010,1.74631,22
+AWK,  Physical Risk,Acute,Employee impacts ,RCP8.5,2020,1.62585,22
+AWK,  Physical Risk,Acute,Employee impacts ,RCP8.5,2030,10.1056,22
+AWK,  Physical Risk,Acute,Employee impacts ,RCP8.5,2040,18.4192,22
+AWK,  Physical Risk,Acute,Employee impacts ,RCP8.5,2050,24.7176,22
+AWK,  Physical Risk,Acute,Employee impacts ,RCP8.5,2060,38.7633,22
+AWK,  Physical Risk,Acute,Employee impacts ,RCP8.5,2070,64.9448,22
+AWK,  Physical Risk,Acute,Employee impacts ,RCP8.5,2080,92.004,22
+AWK,  Physical Risk,Acute,Employee impacts ,RCP8.5,2090,105.965,22
+AWK,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2010,4.65683,22
+AWK,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2020,4.3356,22
+AWK,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2030,26.9483,22
+AWK,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2040,49.1178,22
+AWK,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2050,65.9136,22
+AWK,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2060,103.369,22
+AWK,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2070,173.186,22
+AWK,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2080,245.344,22
+AWK,  Opportunity,Resource Efficiency,Energy Efficiency ,RCP8.5,2090,282.574,22
+AWK,  Opportunity,Resilience,Energy resilience ,RCP8.5,2010,4.36578,22
+AWK,  Opportunity,Resilience,Energy resilience ,RCP8.5,2020,4.06463,22
+AWK,  Opportunity,Resilience,Energy resilience ,RCP8.5,2030,25.264,22
+AWK,  Opportunity,Resilience,Energy resilience ,RCP8.5,2040,46.0479,22
+AWK,  Opportunity,Resilience,Energy resilience ,RCP8.5,2050,61.7939,22
+AWK,  Opportunity,Resilience,Energy resilience ,RCP8.5,2060,96.9082,22
+AWK,  Opportunity,Resilience,Energy resilience ,RCP8.5,2070,162.362,22
+AWK,  Opportunity,Resilience,Energy resilience ,RCP8.5,2080,230.01,22
+AWK,  Opportunity,Resilience,Energy resilience ,RCP8.5,2090,264.913,22
+AWK,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2010,2.32842,22
+AWK,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2020,2.1678,22
+AWK,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2030,13.4742,22
+AWK,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2040,24.5589,22
+AWK,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2050,32.9568,22
+AWK,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2060,51.6844,22
+AWK,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2070,86.5931,22
+AWK,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2080,122.672,22
+AWK,  Transition Risk,Policy and Legal,Litigation risk ,RCP8.5,2090,141.287,22
+AWK,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2010,3.49262,22
+AWK,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2020,3.2517,22
+AWK,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2030,20.2112,22
+AWK,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2040,36.8383,22
+AWK,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2050,49.4352,22
+AWK,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2060,77.5266,22
+AWK,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2070,129.89,22
+AWK,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2080,184.008,22
+AWK,  Opportunity,Resource Efficiency,Materials Efficiency ,RCP8.5,2090,211.93,22
+AWK,  Transition Risk,Reputation,Materials cost ,RCP8.5,2010,2.91052,22
+AWK,  Transition Risk,Reputation,Materials cost ,RCP8.5,2020,2.70975,22
+AWK,  Transition Risk,Reputation,Materials cost ,RCP8.5,2030,16.8427,22
+AWK,  Transition Risk,Reputation,Materials cost ,RCP8.5,2040,30.6986,22
+AWK,  Transition Risk,Reputation,Materials cost ,RCP8.5,2050,41.196,22
+AWK,  Transition Risk,Reputation,Materials cost ,RCP8.5,2060,64.6055,22
+AWK,  Transition Risk,Reputation,Materials cost ,RCP8.5,2070,108.241,22
+AWK,  Transition Risk,Reputation,Materials cost ,RCP8.5,2080,153.34,22
+AWK,  Transition Risk,Reputation,Materials cost ,RCP8.5,2090,176.609,22
+AWK,  Transition Risk,Technology,New technology ,RCP8.5,2010,2.03736,22
+AWK,  Transition Risk,Technology,New technology ,RCP8.5,2020,1.89682,22
+AWK,  Transition Risk,Technology,New technology ,RCP8.5,2030,11.7899,22
+AWK,  Transition Risk,Technology,New technology ,RCP8.5,2040,21.489,22
+AWK,  Transition Risk,Technology,New technology ,RCP8.5,2050,28.8372,22
+AWK,  Transition Risk,Technology,New technology ,RCP8.5,2060,45.2238,22
+AWK,  Transition Risk,Technology,New technology ,RCP8.5,2070,75.7691,22
+AWK,  Transition Risk,Technology,New technology ,RCP8.5,2080,107.338,22
+AWK,  Transition Risk,Technology,New technology ,RCP8.5,2090,123.626,22
+AWK,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2010,0.873156,22
+AWK,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2020,0.812925,22
+AWK,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2030,5.05281,22
+AWK,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2040,9.20958,22
+AWK,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2050,12.3588,22
+AWK,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2060,19.3816,22
+AWK,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2070,32.4724,22
+AWK,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2080,46.002,22
+AWK,  Opportunity,Energy Source,Renewable price stability ,RCP8.5,2090,52.9826,22
+AWK,  Transition Risk,Market,Reputation damage ,RCP8.5,2010,1.45526,22
+AWK,  Transition Risk,Market,Reputation damage ,RCP8.5,2020,1.35487,22
+AWK,  Transition Risk,Market,Reputation damage ,RCP8.5,2030,8.42135,22
+AWK,  Transition Risk,Market,Reputation damage ,RCP8.5,2040,15.3493,22
+AWK,  Transition Risk,Market,Reputation damage ,RCP8.5,2050,20.598,22
+AWK,  Transition Risk,Market,Reputation damage ,RCP8.5,2060,32.3027,22
+AWK,  Transition Risk,Market,Reputation damage ,RCP8.5,2070,54.1208,22
+AWK,  Transition Risk,Market,Reputation damage ,RCP8.5,2080,76.67,22
+AWK,  Transition Risk,Market,Reputation damage ,RCP8.5,2090,88.3043,22
+AWK,  Physical Risk,Acute,Storm damage ,RCP8.5,2010,20.3736,22
+AWK,  Physical Risk,Acute,Storm damage ,RCP8.5,2020,18.9682,22
+AWK,  Physical Risk,Acute,Storm damage ,RCP8.5,2030,117.899,22
+AWK,  Physical Risk,Acute,Storm damage ,RCP8.5,2040,214.89,22
+AWK,  Physical Risk,Acute,Storm damage ,RCP8.5,2050,288.372,22
+AWK,  Physical Risk,Acute,Storm damage ,RCP8.5,2060,452.238,22
+AWK,  Physical Risk,Acute,Storm damage ,RCP8.5,2070,757.69,22
+AWK,  Physical Risk,Acute,Storm damage ,RCP8.5,2080,1073.38,22
+AWK,  Physical Risk,Acute,Storm damage ,RCP8.5,2090,1236.26,22
+AWK,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2010,29.1052,22
+AWK,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2020,27.0975,22
+AWK,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2030,168.427,22
+AWK,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2040,306.986,22
+AWK,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2050,411.96,22
+AWK,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2060,646.055,22
+AWK,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2070,1082.41,22
+AWK,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2080,1533.4,22
+AWK,  Physical Risk,Chronic,Temperature extremes ,RCP8.5,2090,1766.09,22
+AWK,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2010,5.23894,22
+AWK,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2020,4.87755,22
+AWK,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2030,30.3168,22
+AWK,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2040,55.2575,22
+AWK,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2050,74.1528,22
+AWK,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2060,116.29,22
+AWK,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2070,194.835,22
+AWK,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2080,276.012,22
+AWK,  Opportunity,Resource Efficiency,Water Efficiency ,RCP8.5,2090,317.896,22
 HPQ,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2010,6.4038,3
 HPQ,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2020,40.5106,3
 HPQ,  Transition Risk,Policy and Legal,Carbon pricing ,RCP8.5,2030,51.6308,3
