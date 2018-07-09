@@ -2178,14 +2178,14 @@ AMP,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2070,201.344,4
 AMP,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2080,240,4
 AMP,  Physical Risk,Chronic,Coastal flooding ,RCP8.5,2090,240,4
 AMP,  Physical Risk,Chronic,Drought ,RCP8.5,2010,0,4
-AMP,  Physical Risk,Chronic,Drought ,RCP8.5,2020,40.5,4
-AMP,  Physical Risk,Chronic,Drought ,RCP8.5,2030,58.5,4
-AMP,  Physical Risk,Chronic,Drought ,RCP8.5,2040,49.5,4
-AMP,  Physical Risk,Chronic,Drought ,RCP8.5,2050,63,4
-AMP,  Physical Risk,Chronic,Drought ,RCP8.5,2060,76.5,4
-AMP,  Physical Risk,Chronic,Drought ,RCP8.5,2070,85.5,4
-AMP,  Physical Risk,Chronic,Drought ,RCP8.5,2080,139.5,4
-AMP,  Physical Risk,Chronic,Drought ,RCP8.5,2090,108,4
+AMP,  Physical Risk,Chronic,Drought ,RCP8.5,2020,0,4
+AMP,  Physical Risk,Chronic,Drought ,RCP8.5,2030,9,4
+AMP,  Physical Risk,Chronic,Drought ,RCP8.5,2040,9,4
+AMP,  Physical Risk,Chronic,Drought ,RCP8.5,2050,18,4
+AMP,  Physical Risk,Chronic,Drought ,RCP8.5,2060,18,4
+AMP,  Physical Risk,Chronic,Drought ,RCP8.5,2070,9,4
+AMP,  Physical Risk,Chronic,Drought ,RCP8.5,2080,18,4
+AMP,  Physical Risk,Chronic,Drought ,RCP8.5,2090,18,4
 AMP,  Physical Risk,Acute,Employee impacts ,RCP8.5,2010,0,4
 AMP,  Physical Risk,Acute,Employee impacts ,RCP8.5,2020,0.071388,4
 AMP,  Physical Risk,Acute,Employee impacts ,RCP8.5,2030,0.392454,4
