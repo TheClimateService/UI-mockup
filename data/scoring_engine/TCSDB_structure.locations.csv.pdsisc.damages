@@ -577,3 +577,13 @@ LocationID_ParentCorpID_LocationName lon lat location df_tx90p df_pdsisc df_coas
 576_22_Galloway_NJ_Facility -74.473851 39.495854 Galloway_NJ_Facility tx90p-1 pdsisc-3 coastalflood-1 carbonprice-1 - - -	pdsisc-3  0 0 0 0 0 0 0 -10 0
 577_22_Voorhees_NJ_CorpHQ -74.973572 39.844806 Voorhees_NJ_CorpHQ tx90p-1 pdsisc-3 coastalflood-1 carbonprice-1 - - -	pdsisc-3  0 0 0 0 0 0 0 -10 0
 578_22_Washington_NJ_Well -74.958177 40.754461 Washington_NJ_Well tx90p-1 pdsisc-3 coastalflood-1 carbonprice-1 - - -	pdsisc-3  0 0 0 -5 0 0 0 0 0
+579_23_Pasadena_Ca -118.07816 34.150604 TetraTech_Corporate_Hqs tx90p-1 pdsisc-3 coastalflood-1 carbonprice-1 - - -	pdsisc-3  0 0 0 0 0 0 0 0 -5
+580_23_Adelaide_Austrailia 138.579038 -34.941184 TetraTech_Office tx90p-1 pdsisc-3 coastalflood-1 carbonprice-1 - - -	pdsisc-3  0 0 0 0 0 -10 0 -15 -10
+581_23_Arlington_Va -77.049347 38.862421 TetraTech_Office tx90p-1 pdsisc-3 coastalflood-1 carbonprice-1 - - -	pdsisc-3  0 0 0 0 0 0 0 -10 0
+582_23_Calgary_Canada -114.011847 50.978992 TetraTech_Office tx90p-1 pdsisc-3 coastalflood-1 carbonprice-1 - - -	pdsisc-3  0 0 0 -10 -10 0 -25 -20 -5
+583_23_London_UK -0.124669 51.523522 TetraTech_Office tx90p-1 pdsisc-3 coastalflood-1 carbonprice-1 - - -	pdsisc-3  0 0 0 -10 -10 -20 -20 -15 -5
+584_23_New_York_NY -73.992461 40.749899 TetraTech_Office tx90p-1 pdsisc-3 coastalflood-1 carbonprice-1 - - -	pdsisc-3  0 0 0 -5 0 0 0 0 0
+585_23_Perth_Australia 115.948188 -31.994052 TetraTech_Office tx90p-1 pdsisc-3 coastalflood-1 carbonprice-1 - - -	pdsisc-3  0 -15 -25 -25 -30 -30 -25 -30 -30
+586_23_Seattle_Wa -122.337484 47.612611 TetraTech_Office tx90p-1 pdsisc-3 coastalflood-1 carbonprice-1 - - -	pdsisc-3  0 0 0 0 -5 -15 -15 0 0
+587_23_Sydney_Australia 151.179142 -33.797494 TetraTech_Office tx90p-1 pdsisc-3 coastalflood-1 carbonprice-1 - - -	pdsisc-3  0 0 0 0 0 0 0 -5 0
+588_23_Vancouver_Canada -123.117638 49.285092 TetraTech_Office tx90p-1 pdsisc-3 coastalflood-1 carbonprice-1 - - -	pdsisc-3  0 0 -10 -5 0 -20 -10 0 0

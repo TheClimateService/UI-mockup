@@ -577,3 +577,13 @@ LocationID_ParentCorpID_LocationName lon lat location df_tx90p df_pdsisc df_coas
 576_22_Galloway_NJ_Facility -74.473851 39.495854 Galloway_NJ_Facility tx90p-1 pdsisc-3 coastalflood-1 carbonprice-1 - - -	tx90p-1  -1.6928 -1.9916 -4.3477 -6.6311 -11.4805 -17.9649 -22.6845 -26.9381 -33.418
 577_22_Voorhees_NJ_CorpHQ -74.973572 39.844806 Voorhees_NJ_CorpHQ tx90p-1 pdsisc-3 coastalflood-1 carbonprice-1 - - -	tx90p-1  -1.1859 -0.048 -0.3775 -2.2101 -5.7847 -8.2188 -13.374 -14.2079 -19.4243
 578_22_Washington_NJ_Well -74.958177 40.754461 Washington_NJ_Well tx90p-1 pdsisc-3 coastalflood-1 carbonprice-1 - - -	tx90p-1  -0.8025 0 -0.5007 -2.087 -4.9909 -7.3021 -11.7296 -11.7169 -16.4395
+579_23_Pasadena_Ca -118.07816 34.150604 TetraTech_Corporate_Hqs tx90p-1 pdsisc-3 coastalflood-1 carbonprice-1 - - -	tx90p-1  0 0 -2.799 -2.5654 -2.9544 -4.2229 -7.5389 -18.8132 -25.2891
+580_23_Adelaide_Austrailia 138.579038 -34.941184 TetraTech_Office tx90p-1 pdsisc-3 coastalflood-1 carbonprice-1 - - -	tx90p-1  0 0 0 0 0 -1.675 -3.1432 -3.4274 -6.4562
+581_23_Arlington_Va -77.049347 38.862421 TetraTech_Office tx90p-1 pdsisc-3 coastalflood-1 carbonprice-1 - - -	tx90p-1  -1.7061 -0.4731 -0.242 -2.4558 -5.62 -8.1097 -15.5372 -16.4546 -18.902
+582_23_Calgary_Canada -114.011847 50.978992 TetraTech_Office tx90p-1 pdsisc-3 coastalflood-1 carbonprice-1 - - -	tx90p-1  0 0 0 0 0 -0.9509 -3.5127 -5.6039 -8.0199
+583_23_London_UK -0.124669 51.523522 TetraTech_Office tx90p-1 pdsisc-3 coastalflood-1 carbonprice-1 - - -	tx90p-1  0 -1.0327 -1.4177 -2.7146 -7.7439 -9.8877 -21.0114 -24.5594 -24.2987
+584_23_New_York_NY -73.992461 40.749899 TetraTech_Office tx90p-1 pdsisc-3 coastalflood-1 carbonprice-1 - - -	tx90p-1  -0.4467 0 -0.2405 -1.9093 -5.4425 -7.3024 -11.183 -12.6206 -16.8505
+585_23_Perth_Australia 115.948188 -31.994052 TetraTech_Office tx90p-1 pdsisc-3 coastalflood-1 carbonprice-1 - - -	tx90p-1  0 0 0 -1.0198 -3.199 -6.9301 -7.1673 -14.4556 -19.5351
+586_23_Seattle_Wa -122.337484 47.612611 TetraTech_Office tx90p-1 pdsisc-3 coastalflood-1 carbonprice-1 - - -	tx90p-1  0 0 0 0 0 0 -0.6924 -4.2213 -6.2236
+587_23_Sydney_Australia 151.179142 -33.797494 TetraTech_Office tx90p-1 pdsisc-3 coastalflood-1 carbonprice-1 - - -	tx90p-1  0 0 -1.2682 -4.8526 -5.8804 -14.6187 -18.6836 -27.135 -36.3465
+588_23_Vancouver_Canada -123.117638 49.285092 TetraTech_Office tx90p-1 pdsisc-3 coastalflood-1 carbonprice-1 - - -	tx90p-1  0 0 -3.57 -5.9737 -0.8732 -9.1485 -14.197 -25.299 -25.8027
