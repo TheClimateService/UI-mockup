@@ -92,7 +92,8 @@ ui <- dashboardPage(title="The Climate Service",
       menuItem("Portfolio Analyzer", tabName = "portfolios", icon = icon("briefcase"),
           menuSubItem("1) Setup",tabName = "portConfig"),
           menuSubItem("2) Analyze",tabName = "portAnalyze"),
-          menuSubItem("3) Report",tabName = "portReport")
+          menuSubItem("3) Sectors",tabName = "sectorAnalyze"),
+          menuSubItem("4) Report",tabName = "portReport")
       ),
 
       menuItem("Technical Details", tabName = "overview", icon = icon("podcast"),
@@ -250,7 +251,13 @@ ui <- dashboardPage(title="The Climate Service",
 #                 CORP ANALYZE
 # --------------------------------------
       tabItem(tabName = "analyze",
-        h2("2) Analyze your corporate risk"),
+        h2("2) Analyze your corporate risk"), 
+
+	# Added to assist in navigational awareness when using jump capability.
+	fluidRow(
+		column(width=4,verbatimTextOutput("thiscorp_name_ticker"))
+	),
+
         fluidRow(
                 column(4,
                   uiOutput("selectInput_location")
@@ -269,12 +276,17 @@ ui <- dashboardPage(title="The Climate Service",
                 # )
               ),#fluidRow
         br(),
-        tabsetPanel(
+
+	# Modified for jump capability
+        #tabsetPanel(
+        tabsetPanel(id="inTabset_corp_analysis",
           tabPanel(title = 'By Risk Factor',
 	      #actionButton("button_show", "Show"),
               plotlyOutput("barByRiskFactor")
           ),
-          tabPanel(title = 'By Location',
+	  # Modified for jump capability
+          #tabPanel(title = 'By Location',
+          tabPanel(title = 'By Location', value="corp_analysis_byloc",
               plotlyOutput("barByLocation")          
           ),
           tabPanel(title = 'By Time Period',
@@ -292,7 +304,12 @@ ui <- dashboardPage(title="The Climate Service",
 	 column(3,
 	  checkboxInput("checkbox_plots4report", label = "Capture each viewed plot for report", value = FALSE)
          )
-	) # end fluidrow
+	), # end fluidrow
+
+	# Added for jump-to-drilldown capability.
+	# see https://github.com/rstudio/shiny/issues/772
+	# ref https://stackoverflow.com/questions/43552906/how-to-switch-between-navbar-tabs-with-a-button-r-shiny
+	actionButton('jumpToCompanyDrilldown', 'Go to drilldown', style = "color: white; background-color: blue")
 
         ),#tabItem analyze
               
@@ -341,7 +358,10 @@ ui <- dashboardPage(title="The Climate Service",
       tabItem(tabName = "methodology",
         h2("Understand the details of your climate risk with the Cx Methodology"),
 
-        tabsetPanel(
+
+	# Modified for jump-to-drilldown capability
+        #tabsetPanel(
+        tabsetPanel(id="inTabset_corp_meth",
 
         tabPanel(title = 'OVERALL',
 
@@ -385,7 +405,9 @@ ui <- dashboardPage(title="The Climate Service",
 
         ), # end tabPanel
 
-        tabPanel(title = 'DRILLDOWN',
+	# Modified for jump-to-drilldown capability
+        #tabPanel(title = 'DRILLDOWN',
+        tabPanel(title = 'DRILLDOWN', value="corp_meth_drilldown",
 
         fluidRow(
                 column(4, uiOutput("selectInput_location_drilldown") ),
@@ -419,7 +441,7 @@ ui <- dashboardPage(title="The Climate Service",
 
         fluidRow(
           box(width=4,title="Probabilities based on SC_PDSI, PDSI, and Z-index from NEX-GDDP ensemble (RCP8.5)", plotlyOutput("plot_selectHazard_drilldown_testing",height = 300)),
-          box(width=4,title="Probabilities based on SC_PDSI, PDSI, and Z-index from NEX-GDDP ensemble (RCP8.5 minus 0.25C/decade)", plotlyOutput("plot_selectHazard_drilldown_testing2",height = 300))
+          box(width=4,title="Probabilities based on SC_PDSI, PDSI, and Z-index from NEX-GDDP ensemble (RCP4.5)", plotlyOutput("plot_selectHazard_drilldown_testing2",height = 300))
         ), #fluidrow plots
 
         fluidRow(
@@ -469,7 +491,7 @@ ui <- dashboardPage(title="The Climate Service",
 #              PORTFOLIO - SETUP
 # --------------------------------------
       tabItem(tabName = "portConfig",
-        h2("1) Set up your porfolio"),
+        h2("1) Set up your portfolio"),
         fluidRow(
           box(width=4, title = "Select a company to add", 
               selectInput("selected_nasdaq","Search Companies", width=400,
@@ -536,13 +558,68 @@ ui <- dashboardPage(title="The Climate Service",
           tabPanel(title = 'All Data',
               DT::dataTableOutput("corpFinImpactsPort")
           )
-        )#tabsetPanel
+        ), #tabsetPanel
+
+	# Added for jump capability.
+	# see https://github.com/rstudio/shiny/issues/772
+	# ref https://stackoverflow.com/questions/43552906/how-to-switch-between-navbar-tabs-with-a-button-r-shiny
+	uiOutput("rb_portfolio_corp"),
+	actionButton('jumpToCompany', 'Go to member detail', style = "color: white; background-color: blue")
+
         # fluidRow(
         #   column(4,
         #          radioButtons("riskmetric_portfolio","Compare:",c("Absolute","Relative"),inline = TRUE)      
         #   )
         # ) #fluidRow
+
       ),#tabItem portAnalyze  
+
+
+# --------------------------------------
+#              PORTFOLIO - SECTORS
+# --------------------------------------
+      tabItem(tabName = "sectorAnalyze",
+        h2("3) Analyze climate risks by sector"),
+        fluidRow(
+          column(4,
+                  uiOutput("selectInput_locationSector")
+          ),
+          column(4,
+                  sliderInput("sliderInputYearSector","Decade", min = 2010, max = 2090, value = 2020, sep = "", animate = TRUE, step=10)
+          ),
+          column(4,
+                  uiOutput("selectInput_scenarioSector"),
+                 radioButtons("riskmetric_sector","Impact",c("Absolute","Relative"),inline = TRUE)
+          )
+                # column(3,
+                #   selectInput("riskfactor_subset_portfolio","Select Risk Factors", 
+                #    c("All", "Chronic physical + Carbon price"), 
+                #    selected = "All")
+                # )
+        ),#fluidRow
+        br(),
+        tabsetPanel(
+          tabPanel(title = 'By Risk Factor',
+              htmlOutput("barByRiskFactorSector")
+          ),
+          tabPanel(title = 'By Sector (tree map)',
+              htmlOutput("treemapBySector"),
+              "Right click to go up a level"
+          ),
+          tabPanel(title = 'By Sector (bar graph)',
+              plotlyOutput("barByLocationSector")          
+          ),
+          tabPanel(title = 'By Time Period',
+              plotlyOutput("areaByTimeSector")
+          ),
+          tabPanel(title = 'By TCFD Category',
+              plotlyOutput("stackedCorpFinImpactsPlotSector")
+          ),
+          tabPanel(title = 'All Data',
+              DT::dataTableOutput("corpFinImpactsSector")
+          )
+        )#tabsetPanel
+      ),#tabItem sectorAnalyze  
 
 
 # --------------------------------------
