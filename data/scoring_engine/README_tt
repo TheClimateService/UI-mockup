@@ -55,3 +55,43 @@ c.  Score the locations:
  Example:    ./script_assemble_damages_v1 facility_locations_v2.csv
 
 
+5.  Adding a new risk factor to the SE:
+
+a.  Set up the directory for the risk factor containing the scoring script that produces damages, the damage-function file, the locations file, and the derived-variable file for this risk factor.  For example, for wildfire risk using the zindex90p derived variable:
+
+	script_score_locations_zindex_v1
+	df.csv.cln
+	TCSDB_structure.locations.csv
+	TCSDB_structure.locations.csv.zindex
+
+This produces the TCSDB_structure.locations.csv.zindex.damages file.
+
+b.  Add a block to script_runall_physical that generates makes the new risk factor a part of the SE run.  For example, for wildfire:
+
+	cd ../wildfire/
+	cp ../$facfile ./
+	cp ../$damfile ./
+	./script_score_locations_zindex_v1 $damfile $facfile $facfile.zindex
+	mv $facfile.zindex.damages ../
+
+c.  Once the new risk-factor damages are present in the SE directory, they are assembled with the other damages by script_assemble_damages_v1 to create the TCSDB_structure.locations.csv.damages.allDFs and TCSDB_structure.locations.csv.damages.allDFs.facilities.only.4r files.  
+
+d.  Scoring is completed by ./nonphysical/script_runall_nonphysical.  This calls script_locationvalues_v1 that combines the damages (usually in percent loss) to the df-specific values of each location, producint TCSDB_structure.locations.csv.damages.allDFs.withvalues.  script_location_values_v1 also calls script_build_nonphysical_v1, which operates on files produced by load_tcsdb_nonphysical.r:
+
+	riskfactors.csv - contains the risk factors defined in TCSDB_structure.xlsx
+	subcat.csv - contains the TCFD subcategories (acute, chronic, policy/legal, etc.)
+	cat.csv - contains the TCFD categories (transition, physical, opportunity) 
+	corp.csv - contains the parent corporations
+
+The first of these must be modified in the RiskFactor tab of TCSDB_structure.xlsx when a new risk is added.
+
+e.  New damage functions must be added to the DamageFunction tab of TCSDB_structure.xlsx.
+
+f.  ./TCSDB/load_tcsdb.r must be modeified to include the new risk.  For example, the following lines are added for the new zindex-based wild fire risk:
+
+	val_zindex = dbsheet11 %>% select(df_zindex)
+	init$input.txtAssetValue_zindex <- unlist(val_zindex)
+	init2$input.txtAssetValue_zindex <- "-"
+
+
+

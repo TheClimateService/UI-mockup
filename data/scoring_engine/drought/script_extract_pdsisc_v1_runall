@@ -22,7 +22,7 @@ chmod a+x temp1.scr
 
 # Assemble output.
 awk '{if(NR>1) print $1,$2,$3}' $locfile > temp2
-paste temp2 temp.outall > $locfile.pdsisc
+paste temp2 temp.outall > $locfile.pdsisc.dai
 #rm temp*
 
 

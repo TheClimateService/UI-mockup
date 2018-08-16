@@ -15,6 +15,7 @@
 # Steps before/after execution:
 
 #    1.  Start system with new TCSDB_structure.xlsx to create new initiator file, user_data_initiator.csv
+#	On ubuntu, this means restarting the shiny server and accessing the app via the ec2 URL.
 
 #    2.  In ./data/TCSDB, copy current user_data.csv.latest.csv to user_data.csv.latest.csv.sav
 #	cp user_data.csv.latest.csv user_data.csv.latest.csv.sav
@@ -35,14 +36,16 @@
 #    6.  Run SE with userdata to create new user_data.csv.latest.csv file
 
 #    7.  Run this script (from ./data/TCSDB) to merge user_data.csv.latest.csv.sav and user_data.csv.latest.csv
+#        N.B. - If a new DF has been added, first copy the user_data.csv.latest.csv (having all DF values) to the user_data.csv.latest.csv.sav file since the old version of this .sav file will not have values for the new DF.
+
 #	./script_merge_user_data user_data.csv.latest.csv.sav user_data.csv.latest.csv
 
 #    8.  Copy merged file to user_data.csv.latest.csv
 #	cp user_data.csv.latest.csv.sav.merged user_data.csv.latest.csv
 
-#    9.  Check the format of the user_data.csv.latest.csv file.  On the AWS ubuntu instance, the header is not in the right location and some of the "All locations" entries lack a real date.  XXX - This probably due to how the "date" function works under ubuntu.  For the present, copy the mac version of user_data.csv.latest.csv to the ubuntu instance.
+#    9.  Check the format of the user_data.csv.latest.csv file.  On the AWS ubuntu instance, the header is not in the right location and some (just the first?) of the "All locations" entries lack a real date.  XXX - This probably due to how the "date" function works under ubuntu.  For the present, copy the mac version of user_data.csv.latest.csv to the ubuntu instance, or edit the ubuntu version to put the header line first.
 
-#    10.  Restart the system.
+#    10.  Restart the system.  On the ubuntu server, use sudo systemctl restart shiny-server.
 
 # --------------------------------------------------------------------
 
@@ -66,7 +69,7 @@ awk -v file=$userdata_latest_saved '{FS=";"; if(NR==2) print "cut -d DDD;DDD -f 
 sed 's/DDD/"/g' temp1000 > temp1001
 chmod a+x temp1001
 ./temp1001
-awk -v file=$userdata_latest_new '{FS=";"; if(NR==2) print "cut -d DDD;DDD -f 1-"(NF-1), file" > temp2" }' $userdata_latest_saved > temp1000b
+awk -v file=$userdata_latest_new '{FS=";"; if(NR==2) print "cut -d DDD;DDD -f 1-"(NF-1), file" > temp2" }' $userdata_latest_new > temp1000b
 sed 's/DDD/"/g' temp1000b > temp1001b
 chmod a+x temp1001b
 ./temp1001b
@@ -86,4 +89,4 @@ awk -v date="$(date | sed 's/ /_/g')" '{if(NR==1) print $0";Date"; else print $0
 
 # Save results and clean up.
 mv temp6 $userdata_latest_saved.merged
-rm temp* 
+#rm temp* 

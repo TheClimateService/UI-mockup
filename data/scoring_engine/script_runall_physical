@@ -46,6 +46,12 @@ cp ../$damfile ./
 ./script_score_locations_carbonprice_v1 $damfile $facfile $facfile.carbonprice 
 mv $facfile.carbonprice.damages ../
 
+cd ../wildfire/
+cp ../$facfile ./
+cp ../$damfile ./
+./script_score_locations_zindex_v1 $damfile $facfile $facfile.zindex 
+mv $facfile.zindex.damages ../
+
 cd ../
 ./script_assemble_damages_v1 $facfile
 

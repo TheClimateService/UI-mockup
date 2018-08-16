@@ -1,0 +1,1 @@
+cut -d DDD;DDD -f 1-10 user_data.csv.latest.csv.sav > temp1

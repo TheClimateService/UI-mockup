@@ -1,0 +1,7 @@
+LocationID_ParentCorpID_LocationName lon lat location df_tx90p df_pdsisc df_coastalflood df_carbonprice df_zindex df_tbd3 notes
+1_1_Boise -116.149136 43.529396 Boise_Idaho tx90p-1 pdsisc-3 coastalflood-1 carbonprice-1 zindex-3 - -
+639_27_Jiangying_China 120.3602 31.91031 Kurita_Water_Industries_Jiangying_Co tx90p-1 pdsisc-3 coastalflood-1 carbonprice-1 zindex-3 - -
+1115_34_Dar_Es_Salaam_TZA 39.086772 -6.610529 Seureca tx90p-1 pdsisc-3 coastalflood-1 carbonprice-1 zindex-3 - -
+1116_34_Libreville_GAB 9.467141 0.416488 Seureca tx90p-1 pdsisc-3 coastalflood-1 carbonprice-1 zindex-3 - -
+1116_34_Libreville_GAB_XXX 9.467141 0.436488 Seureca tx90p-1 pdsisc-3 coastalflood-1 carbonprice-1 zindex-3 - -
+1118_34_Lusaka_ZMB 28.298441 -15.413268 Seureca tx90p-1 pdsisc-3 coastalflood-1 carbonprice-1 zindex-3 - -

@@ -18,8 +18,9 @@ cole = "input$txtAssetValue_tx90p"
 colf = "input$txtAssetValue_pdsisc"
 colg = "input$txtAssetValue_coastalflood"
 colh = "input$txtghgEmissions"
-coli = "cbBusinessFunctions"
-colj = "Date"
+coli = "input$txtAssetValue_zindex"
+colj = "cbBusinessFunctions"
+colk = "Date"
 
 if(input$rbLocations=="All locations") {
 	a = as.character(USER$ParentCorpID)
@@ -32,6 +33,7 @@ if(input$rbLocations=="All locations") {
 	g = "-"
 	h = "-"
 	i = "-"
+	j = "-"
 }
 
 if(input$rbLocations!="All locations") {
@@ -45,19 +47,20 @@ if(input$rbLocations!="All locations") {
 	f = as.character(input$assetValue_pdsisc)
 	g = as.character(input$assetValue_coastalflood)
 	h = as.character(input$ghgEmissions)
+	i = as.character(input$assetValue_zindex)
 	# Note that the business functions are returned as multiple rows and must be collapsed to a single string.  
 	# Also note that the separator is "," and the business functions should not contain semicolons.
-	i = toString( as.character(input$cbBusinessFunctions) )
+	j = toString( as.character(input$cbBusinessFunctions) )
 }
 
-USER_ENTRY = paste(a,";",b,";",c,";",d,";",e,";",f,";",g,";",h,";",i,";",date)
+USER_ENTRY = paste(a,";",b,";",c,";",d,";",e,";",f,";",g,";",h,";",i,";",j,";",date)
 userData = data.frame(USER_ENTRY)
 
 # Write date_seconds, user data, and date to table using append and then to xlsx.
 write.table(userData, csv, col.names=FALSE, row.names=date_seconds, sep=";", quote=FALSE, append=TRUE)
 #write.table(userData, "./data/TCSDB/junk", col.names=FALSE, row.names=date_seconds, quote=FALSE, append=TRUE)
 #system("sort -r --field-separator=';' ./data/TCSDB/user_data.csv > ./data/TCSDB/junk",  intern = TRUE)
-userData2 = read.table(csv, header=FALSE, sep=";", col.names=c("Date_seconds",cola,colb,colc,cold,cole,colf,colg,colh,coli,colj))
+userData2 = read.table(csv, header=FALSE, sep=";", col.names=c("Date_seconds",cola,colb,colc,cold,cole,colf,colg,colh,coli,colj,colk))
 write.table(userData2[1,], csvheader)
 #write.table(colnames(userData2), csvheader)
 write_xlsx(userData2, db, col_names=TRUE)

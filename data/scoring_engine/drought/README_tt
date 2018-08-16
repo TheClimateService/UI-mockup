@@ -1,0 +1,8 @@
+
+1.  Dai-based pdsisc values are created for the current set of locations by script_extract_pdsisc_v1 and script_extract_pdsisc_v1_runall.  The output file is TCSDB_structure.locations.csv.pdsisc.dai.
+
+2.  script_merge_data_v1 creates a set of pdsisc values for all current locations by substituting the nex-gddp values for locations for which they have been developed.  The output file is TCSDB_structure.locations.csv.pdsisc.dai.nexgddp.rcp85.merged.
+
+3.  A soft link for TCSDB_structure.locations.csv.pdsisc now points to either the dai-based values or the merged values.  This will be used by the scoring engine in calculating pdsisc damages.
+
+

@@ -6,7 +6,7 @@ db="./data/TCSDB/TCSDB_structure.xlsx"
 #db="./data/TCSDB/TCSDB_structure_v3.xlsx"
 
 # Read each sheet.  
-# Current sheet names:  CorpRiskTable, ValueAtRisk, Location, ParentCorp, TCDFCategory, TCFDSubCat, RiskFactor, Scenarios, CorpRiskTable_withSEoutputs, users, LocationValues, DamageFunctions, BusinessTypes, BusinessFunctions, Portfolios, NOTES.
+# Current sheet names:  CorpRiskTable, ValueAtRisk, Location, ParentCorp, TCDFCategory, TCFDSubCat, RiskFactor, Scenarios, CorpRiskTable_withSEoutputs, users, LocationValues, DamageFunctions, BusinessTypes, BusinessFunctions, Portfolios, Sectors, NOTES.
 dbsheet1 = read_excel(db,1)
 dbsheet2 = read_excel(db,2)
 dbsheet3 = read_excel(db,3)
@@ -22,6 +22,7 @@ dbsheet12 = read_excel(db,12)
 dbsheet13 = read_excel(db,13)
 dbsheet14 = read_excel(db,14)
 dbsheet15 = read_excel(db,15)
+dbsheet_sectors = read_excel(db,16)
 
 # Create file of lon/lat locations for CMIP data extraction.
 loc_lonlat= dbsheet3 %>% select(lon, lat, ParentCorpID, LocationID, LocationName)
@@ -53,11 +54,10 @@ val_pdsisc = dbsheet11 %>% select(df_pdsisc)
 init$input.txtAssetValue_pdsisc <- unlist(val_pdsisc)
 val_coastalflood = dbsheet11 %>% select(df_coastalflood)
 init$input.txtAssetValue_coastalflood <- unlist(val_coastalflood)
-
-#init$input.txtghgEmissions <- "0.1"
-# The following sets the user-data initiator values to what is in the LocationValues sheet in TCSDB_structure.xlsx.
 ghg = dbsheet11 %>% select(df_carbonprice)
 init$input.txtghgEmissions <- unlist(ghg)
+val_zindex = dbsheet11 %>% select(df_zindex)
+init$input.txtAssetValue_zindex <- unlist(val_zindex)
 
 init$cbBusinessFunctions <- "Clean Room Manufacturing, R&D"
 init$Date <- as.character(date)
@@ -74,6 +74,7 @@ init2$input.txtAssetValue_tx90p <- "-"
 init2$input.txtAssetValue_pdsisc <- "-"
 init2$input.txtAssetValue_coastalflood <- "-"
 init2$input.txtghgEmissions <- "-"
+init2$input.txtAssetValue_zindex <- "-"
 init2$cbBusinessFunctions <- "-"
 init2$Date <- date
 init2$Date_seconds <- date_seconds

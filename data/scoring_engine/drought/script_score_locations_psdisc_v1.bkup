@@ -17,9 +17,11 @@ locfile=$2
 locvalues=$3
 
 # Get damage-function values specific to each location.
-# Note that the damage-function csv file is assumed to be comma-separated and the field corresponding to the pdsisc df in the locfile is field 6.
+# Note that the damage-function csv file is assumed to be comma-separated and the field corresponding to the pdsisc df in the locfile is found in the NR==1 portion of the awk statement below.
 #awk -v dfid=$dfid '{FS=","; if($1==dfid) print $1,$(NF-1),$NF}' $locfile > temp1
-awk '{if(NR>1) print $6}' $locfile > temp1
+#awk '{if(NR>1) print $6}' $locfile > temp1
+awk '{if(NR==1) {for(i=1; i<=NF; i++) {split($i,array,"_"); if(array[2]=="pdsisc") column=i} };  \
+      if(NR>1) print $column}' $locfile > temp1
 awk -v dfsource=$dfsource '{print "awk SSS{FS=DDD,DDD; if($1==DDD"$1"DDD) print $1,$(NF-1),substr($NF,1,length($NF)-1)}SSS "dfsource" >> temp10"}' temp1 > temp2
 sed 's/DDD/"/g' temp2 > temp2b
 sed "s/SSS/'/g" temp2b > temp2c
@@ -29,7 +31,8 @@ paste temp10 $locvalues > temp11
 
 # Apply the damage functions.
 # Note that the historical value of pdsisc annual probability is in a specific column that depends on the format of the facilities.pdsisc file, including the number of historical periods defined (currently 1).  Additionally, 3 fields from the df file are prepended in the paste above, so the input to this step has the form:
-# pdsisc-1 0;0.2;0.4;0.6;0.8;1;5;10 100;100;90;70;50;30;20;10	Micron_Boise -116.149136 43.529396	25 41	-116.25 43.75 0.1 0.2 0.3 0.7 0.6 0.8 0.9 0.8 0.7
+# OLD: pdsisc-1 0;0.2;0.4;0.6;0.8;1;5;10 100;100;90;70;50;30;20;10	Micron_Boise -116.149136 43.529396	25 41	-116.25 43.75 0.1 0.2 0.3 0.7 0.6 0.8 0.9 0.8 0.7
+# CURRENT: pdsisc-2 0;0.1;0.2;0.4;0.6;0.8;1;5;10 100;100;90;70;50;30;10;0; 1_1_Boise -116.149136 43.529396 25 41   -116.25 43.75 0.1 0.6 0.2 0.3 0.7 0.6 0.8 0.9 0.8 0.7
 awk '{xhist=$11; startxrcp=12; yrcpall=""; xrcpindall="";  \
       for(i=startxrcp; i<=NF; i++) {xrcp[i]=$i; xrcpindex[i]=999; yrcp[i]=999};  \
       split($2,xarray,";"); xlen=length(xarray);  \
@@ -38,7 +41,10 @@ awk '{xhist=$11; startxrcp=12; yrcpall=""; xrcpindall="";  \
       yhist= yarray[xindex] + (xhist-xarray[xindex])*(yarray[xindex+1] - yarray[xindex]) / (xarray[xindex+1] - xarray[xindex]);  \
       for(i=startxrcp; i<=NF; i++) {  \
         for(j=2; j<=xlen; j++) if(xrcp[i]>=xarray[j-1] && xrcp[i]<xarray[j]) xrcpindex[i]=j-1;  \
-        yrcp[i]=yarray[xrcpindex[i]] + (xrcp[i]-xarray[xrcpindex[i]])*(yarray[xrcpindex[i]+1] - yarray[xrcpindex[i]]) / (xarray[xrcpindex[i]+1] - xarray[xrcpindex[i]]);  \
+	deltay = yarray[xrcpindex[i]+1] - yarray[xrcpindex[i]];  \
+        deltax = xarray[xrcpindex[i]+1] - xarray[xrcpindex[i]];  \
+        if(deltax>0) yrcp[i]=yarray[xrcpindex[i]] + (xrcp[i]-xarray[xrcpindex[i]])*(deltay / deltax);  \
+                else {if(xrcpindex[i]!=999) yrcp[i]=yarray[xrcpindex[i]]; else yrcp[i]=yarray[ylen] };  \
         yrcpall=yrcpall" "yrcp[i]; xrcpindall=xrcpindall" "xrcpindex[i]  };  \
       print $0,yhist,yrcpall}' temp11 > temp12
 

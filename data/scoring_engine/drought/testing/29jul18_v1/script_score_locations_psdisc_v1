@@ -1,0 +1,75 @@
+
+# SCRIPT TO SCORE EACH LOCATION BASED ON PDSISC VALUES FROM HISTORICAL AND RCP DATA.
+# TT - December 2017
+
+# Execution:  ./script_score_locations_psdisc_v1 <damage-function file> <facility location file> <input file of location-specific psdisc data>
+# Example:    ./script_score_locations_psdisc_v1 damage_pdsisc.csv facility_locations.csv.testNA facility_locations.csv.testNA.psdisc
+
+# Input data format for the facility_locations.csv.testNA.pdsisc file.  This shows the facility name, lon, lat, the ids and values of the data grid cell matched to the facility location, one historical value and eight 10-year rcp values.
+# The periods are:  droughtPeriods = c("1950-99","2016-25","2026-35","2036-45","2046-55","2056-65","2066-75","2076-85","2086-95")
+# The values for each period are annual probabilities of having a pdsisc less than or equal to the 10th-percentile value of the pdsisc in the historical period.  See script_pdsisc_v1 for details on this calculation.
+# Micron_Boise -116.149136 43.529396	25 41	-116.25 43.75 0.1 0.2 0.3 0.7 0.6 0.8 0.9 0.8 0.7
+# Micron_Manassas -77.503845 38.750829	40 39	-78.75 38.75 0.1 0 0.4 0.3 0.2 0.2 0.3 0.5 0.3
+
+# Get input:
+dfsource=$1
+locfile=$2
+locvalues=$3
+
+# Get damage-function values specific to each location.
+# Note that the damage-function csv file is assumed to be comma-separated and the field corresponding to the pdsisc df in the locfile is found in the NR==1 portion of the awk statement below.
+#awk -v dfid=$dfid '{FS=","; if($1==dfid) print $1,$(NF-1),$NF}' $locfile > temp1
+#awk '{if(NR>1) print $6}' $locfile > temp1
+awk '{if(NR==1) {for(i=1; i<=NF; i++) {split($i,array,"_"); if(array[2]=="pdsisc") column=i} };  \
+      if(NR>1) print $column}' $locfile > temp1
+awk -v dfsource=$dfsource '{print "awk SSS{FS=DDD,DDD; if($1==DDD"$1"DDD) print $1,$(NF-1),substr($NF,1,length($NF)-1)}SSS "dfsource" >> temp10"}' temp1 > temp2
+sed 's/DDD/"/g' temp2 > temp2b
+sed "s/SSS/'/g" temp2b > temp2c
+chmod a+x temp2c
+./temp2c
+paste temp10 $locvalues > temp11
+
+# Apply the damage functions.
+# Note that the historical value of pdsisc annual probability is in a specific column that depends on the format of the facilities.pdsisc file, including the number of historical periods defined (currently 1).  Additionally, 3 fields from the df file are prepended in the paste above, so the input to this step has the form:
+# OLD: pdsisc-1 0;0.2;0.4;0.6;0.8;1;5;10 100;100;90;70;50;30;20;10	Micron_Boise -116.149136 43.529396	25 41	-116.25 43.75 0.1 0.2 0.3 0.7 0.6 0.8 0.9 0.8 0.7
+# USING DAI SCPDSI: pdsisc-2 0;0.1;0.2;0.4;0.6;0.8;1;5;10 100;100;90;70;50;30;10;0; 1_1_Boise -116.149136 43.529396 25 41   -116.25 43.75 0.1 0.6 0.2 0.3 0.7 0.6 0.8 0.9 0.8 0.7
+# CURRENT USING NEX-GDDP PDSI/SCPDSI/ZINDEX:  pdsisc-3 0;0.1;0.2;0.4;0.6;0.8;1;2;5 100;100;100;100;90;80;70;50;3      1_1_Boise       - - - - - -  0.0958333333333334 0.105833333333333 0.192916666666667 0.18125 0.229583333333333 0.20625 0.23875 0.268333333333333 0.244166666666667 0.2275  0.0921296296296296 0.11 0.251666666666667 0.235833333333333 0.300833333333333 0.2425 0.335 0.385 0.3475 0.33375  0.0944444444444444 0.1075 0.131666666666667 0.145833333333333 0.153333333333333 0.154166666666667 0.170416666666667 0.18 0.176666666666667 0.180416666666667
+
+# THE ABOVE HAS 3 SETS OF 10 90TH-PERCENTILE FREQUENCIES FOR PDSI, SCPDSI, AND ZINDEX FOR 10 PERIODS.  USE THE 2ND SET FOR SCPDSI.
+# Note that the field ranges in the cuts below are not quite what one would expect.  However, they do result in the correct format for input to the next step.  The output in temp11c has the form:
+# pdsisc-3 0;0.1;0.2;0.4;0.6;0.8;1;2;5 100;100;100;100;90;80;70;50;3      167_10_Berkeley_County_SC       - - - - - -      0.0944444444444444 0.107916666666667 0.107916666666667 0.13 0.1575 0.154583333333333 0.160416666666667 0.155 0.154166666666667 0.144583333333333
+cut -d " " -f 1-8 temp11 > temp11a
+cut -d " " -f 21-31 temp11 > temp11b
+paste temp11a temp11b > temp11c
+
+awk '{xhist=$11; startxrcp=12; yrcpall=""; xrcpindall="";  \
+      for(i=startxrcp; i<=NF; i++) {xrcp[i]=$i; xrcpindex[i]=999; yrcp[i]=999};  \
+      split($2,xarray,";"); xlen=length(xarray);  \
+      split($3,yarray,";"); ylen=length(yarray);  \
+      for(i=2; i<=xlen; i++) if(xhist>=xarray[i-1] && xhist<xarray[i]) xindex=i-1;  \
+      yhist= yarray[xindex] + (xhist-xarray[xindex])*(yarray[xindex+1] - yarray[xindex]) / (xarray[xindex+1] - xarray[xindex]);  \
+      for(i=startxrcp; i<=NF; i++) {  \
+        for(j=2; j<=xlen; j++) if(xrcp[i]>=xarray[j-1] && xrcp[i]<xarray[j]) xrcpindex[i]=j-1;  \
+	deltay = yarray[xrcpindex[i]+1] - yarray[xrcpindex[i]];  \
+        deltax = xarray[xrcpindex[i]+1] - xarray[xrcpindex[i]];  \
+        if(deltax>0) yrcp[i]=yarray[xrcpindex[i]] + (xrcp[i]-xarray[xrcpindex[i]])*(deltay / deltax);  \
+                else {if(xrcpindex[i]!=999) yrcp[i]=yarray[xrcpindex[i]]; else yrcp[i]=yarray[ylen] };  \
+        yrcpall=yrcpall" "yrcp[i]; xrcpindall=xrcpindall" "xrcpindex[i]  };  \
+      print $0,yhist,yrcpall}' temp11 > temp12
+
+# Convert the damages through time to be relative to the last historical period.
+# More damage in a future period than in the last historical period will be given as a negative number.
+awk '{nfutperiods=9; yhist=$(NF-nfutperiods);  \
+      #for(i=1; i<=nfutperiods; i++) {score[i]=$(NF-i+1)-yhist; scoreall=scoreall" "score[i]};  \
+      for(i=1; i<=nfutperiods; i++) {score[i]=$(NF-nfutperiods+i)-yhist; scoreall=scoreall" "score[i]};  \
+      print $1,scoreall; scoreall=""}' temp12 > temp13
+   # (used when including trace information for debugging) print $4,$5,$6,$7,$8,$9,$10,scoreall; scoreall=""}' temp12 > temp13
+
+echo "df_used dperiod1 dperiod2 dperiod3 dperiod4 dperiod5 dperiod6 dperiod7 dperiod8 dperiod9" > temp13.hdr
+cat temp13.hdr temp13 > temp14
+
+# Save results and clean up.
+#mv temp13 $locvalues.damages
+paste $locfile temp14 > $locvalues.damages
+#rm temp*
+

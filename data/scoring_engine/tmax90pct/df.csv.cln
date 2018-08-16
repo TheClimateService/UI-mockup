@@ -9,6 +9,11 @@ pdsisc-2,test,high system response to psdisc,annual probability of pdsisc below 
 pdsisc-3,test,low system response to psdisc,annual probability of pdsisc below historical 10th percentile,fraction,productivity,percent,9,0;0.1;0.2;0.4;0.6;0.8;1;2;5,100;100;100;100;90;80;70;50;30
 pdsisc-4,test,very low system response to psdisc,annual probability of pdsisc below historical 10th percentile,fraction,productivity,percent,9,0;0.1;0.2;0.4;0.6;0.8;1;2;5,100;100;100;100;100;100;90;80;70
 pdsisc-5,test,very high system response to psdisc,annual probability of pdsisc below historical 10th percentile,fraction,productivity,percent,9,0;0.1;0.2;0.4;0.6;0.8;1;2;5,100;70;50;30;10;0;0;0;0
+zindex-1,test,average system response to zindex,annual probability of zindex below historical 10th percentile,fraction,productivity,percent,9,0;0.1;0.2;0.4;0.6;0.8;1;2;5,100;100;100;90;70;50;30;10;0
+zindex-2,test,high system response to zindex,annual probability of zindex below historical 10th percentile,fraction,productivity,percent,9,0;0.1;0.2;0.4;0.6;0.8;1;2;5,100;100;90;70;50;30;10;0;0
+zindex-3,test,low system response to zindex,annual probability of zindex below historical 10th percentile,fraction,productivity,percent,9,0;0.1;0.2;0.4;0.6;0.8;1;2;5,100;100;100;100;90;80;70;50;30
+zindex-4,test,very low system response to zindex,annual probability of zindex below historical 10th percentile,fraction,productivity,percent,9,0;0.1;0.2;0.4;0.6;0.8;1;2;5,100;100;100;100;100;100;90;80;70
+zindex-5,test,very high system response to zindex,annual probability of zindex below historical 10th percentile,fraction,productivity,percent,9,0;0.1;0.2;0.4;0.6;0.8;1;2;5,100;70;50;30;10;0;0;0;0
 coastalflood-1,test,average system response to coastal flood,annual probability of historical 100-year flood,fraction,productivity,percent,12,0;0.01;0.1;0.2;0.3;0.4;0.5;0.6;0.7;0.8;0.9;2.0,100;100;90;70;50;30;10;0;0;0;0;0
 coastalflood-2,test,high system response to coastal flood,annual probability of historical 100-year flood,fraction,productivity,percent,12,0;0.01;0.1;0.2;0.3;0.4;0.5;0.6;0.7;0.8;0.9;2.0,100;100;70;50;30;10;0;0;0;0;0;0
 coastalflood-3,test,low system response to coastal flood,annual probability of historical 100-year flood,fraction,productivity,percent,12,0;0.01;0.1;0.2;0.3;0.4;0.5;0.6;0.7;0.8;0.9;2.0,100;100;100;90;70;50;30;10;0;0;0;0

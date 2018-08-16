@@ -55,9 +55,15 @@ awk -v locvalues=$locvalues '{FS=";";  \
       # $5 in temp3c is the single facility value originally used in the user-data panel. $6 is the ghgEmissions input from that panel.
       # BEFORE ghgEmissions from user panel:  if(NR==2 && $1!="LASTLINE") print "awk SSSquote{FS=DDDquote;DDDquote; if($2=="$1" && substr($3,2,length($3)-2)==DDDquote"$2"DDDquote) print $1;;;$2;;;$3;;;DDDquote"$5";"$5";"$5";DDDquote$7;;;$8;;;$9; else print $0}SSSquote "locvalues" > temp99."NR;  \
       # BEFORE ghgEmissions from user panel:  if(NR>2 && $1!="LASTLINE") print "awk SSSquote{FS=DDDquote;DDDquote; if($2=="$1" && substr($3,2,length($3)-2)==DDDquote"$2"DDDquote) print $1;;;$2;;;$3;;;DDDquote"$5";"$5";"$5";DDDquote$7;;;$8;;;$9; else print $0}SSSquote temp99."(NR-1)" > temp99."NR;  \
-      # After inclusion of df_pdsisc and df_coastalflood, there are 3 facility values in fields 5-7, and ghgEmissions in field 8.
-      if(NR==2 && $1!="LASTLINE") print "awk SSSquote{FS=DDDquote;DDDquote; if($2=="$1" && substr($3,2,length($3)-2)==DDDquote"$2"DDDquote) print $1;;;$2;;;$3;;;DDDquote"$5";"$6";"$7";"$8";DDDquote$9;;;$10; else print $0}SSSquote "locvalues" > temp99."NR;  \
-      if(NR>2 && $1!="LASTLINE") print "awk SSSquote{FS=DDDquote;DDDquote; if($2=="$1" && substr($3,2,length($3)-2)==DDDquote"$2"DDDquote) print $1;;;$2;;;$3;;;DDDquote"$5";"$6";"$7";"$8";DDDquote$9;;;$10; else print $0}SSSquote temp99."(NR-1)" > temp99."NR;  \
+
+      # After inclusion of df_pdsisc and df_coastalflood, there are 3 facility values in fields 5-7, and ghgEmissions in field 8.  There are 10 total fields.
+      #if(NR==2 && $1!="LASTLINE") print "awk SSSquote{FS=DDDquote;DDDquote; if($2=="$1" && substr($3,2,length($3)-2)==DDDquote"$2"DDDquote) print $1;;;$2;;;$3;;;DDDquote"$5";"$6";"$7";"$8";DDDquote$9;;;$10; else print $0}SSSquote "locvalues" > temp99."NR;  \
+      #if(NR>2 && $1!="LASTLINE") print "awk SSSquote{FS=DDDquote;DDDquote; if($2=="$1" && substr($3,2,length($3)-2)==DDDquote"$2"DDDquote) print $1;;;$2;;;$3;;;DDDquote"$5";"$6";"$7";"$8";DDDquote$9;;;$10; else print $0}SSSquote temp99."(NR-1)" > temp99."NR;  \
+
+      # After addition of df_zindex, there are 3 facility values in fields 5-7, ghgEmissions in field 8, and the zindex facility value in field 9.  There are 11 total fields
+      if(NR==2 && $1!="LASTLINE") print "awk SSSquote{FS=DDDquote;DDDquote; if($2=="$1" && substr($3,2,length($3)-2)==DDDquote"$2"DDDquote) print $1;;;$2;;;$3;;;DDDquote"$5";"$6";"$7";"$8";"$9";DDDquote$10;;;$11; else print $0}SSSquote "locvalues" > temp99."NR;  \
+      if(NR>2 && $1!="LASTLINE") print "awk SSSquote{FS=DDDquote;DDDquote; if($2=="$1" && substr($3,2,length($3)-2)==DDDquote"$2"DDDquote) print $1;;;$2;;;$3;;;DDDquote"$5";"$6";"$7";"$8";"$9";DDDquote$10;;;$11; else print $0}SSSquote temp99."(NR-1)" > temp99."NR;  \
+
       if($1=="LASTLINE") print "mv temp99."(NR-1)" temp100"  \
      }' temp3c > temp4
 sed "s/SSSquote/'/g" temp4 > temp5
