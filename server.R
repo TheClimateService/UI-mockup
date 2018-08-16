@@ -183,7 +183,41 @@ server <- function(input, output, session) {
 # ----------------------------
 #         CORP ANALYZE
 # ----------------------------  
-   
+ 
+  # Added to assist in navigational awareness when using jump capability. 
+  output$thiscorp_name_ticker <- renderText({
+	name <- USER$ParentCorpName
+	pcdata <- dbsheet4 %>% filter(dbsheet4$ParentCorpName==name)
+	ticker <- pcdata$TickerSymbol
+	exchange <- pcdata$Exchange
+	p1=paste(name, " ", ticker, " ", exchange)
+        p1
+    }) # end renderText
+
+  # Added for jump-to-drilldown capability. 
+  observeEvent(input$jumpToCompanyDrilldown, {
+     #portfolio <- input$inputLocationsPort
+     #portfolioSheet <- dbsheet15
+     #portfolio_members <- portfolioSheet %>% filter(portfolioSheet[[portfolio]]==1)
+     #selected_portmember <- portfolio_members %>% filter(portfolio_members$TickerSymbol==input$rbportmembers)
+     #USER$ParentCorpID <- selected_portmember$ParentCorpID
+     #USER$ParentCorpName <- selected_portmember$ParentCorpName
+
+     # The following don't work because they are reactive inputs.
+     #input$selectInput_location_drilldown <- input$selectInput_location
+     #input$selectscenario_drilldown <- input$selectInput_scenario
+     #input$inputLocations_drilldown <- input$selectInput_location
+
+     # The following cause no errors, but they don't change the location name passed to the drilldown plots, which use input$selectInput_location for the location name.  It should be possible to change the drilldown plotting code to use a variable like loc2use <- input$inputLocations_drilldown.  Then, when loc2use is updated below, the panel update should work.
+     # XXX NEXT:  set loc2use as above at lines 525/6 defining locID and key for the hazard plot.
+     loc2use <- input$selectInput_location
+     scen2use <- input$selectInput_scenario
+     updateTabsetPanel(session, "inTabset_corp_meth", selected = "corp_meth_drilldown")
+     #updateTabItems(session, 'sidebar', 'config')
+     #updateTabItems(session, 'sidebar', 'analyze')
+     updateTabItems(session, 'sidebar', 'methodology')
+    }) 
+
   # TCSDB in excel format is read in ui.R via:  source("./data/TCSDB/load_tcsdb.r")
   # The version of this table with scoring-engine outputs for RCP8.5 and 9 decades is sheet 9.
   # When using the decadal form, set the sliderInputYear to the decadal version in ui.R.
@@ -498,9 +532,11 @@ server <- function(input, output, session) {
 	  # The following sets up the graph based on location selected in TechnicalDetails/LocalClimate/Drought.
 	  # values = nd %>% filter(nd$V1==input$drought_facility) %>% select(V8:V17)
 	  # The following sets up the graph based on location selected in Corporate/Analyze.
-	  # The SE is run on drought data with one historical period (1950-99) and 9 future periods.  See script_runall_physical.
-	  values = nd %>% filter(nd$V1==key) %>% select(V8:V17)
-	  firstfield = values$V8
+	  # The SE is run on drought data with one historical period (1950-99) and 9 future periods.  See script_runall_physical.  Using the nex-gddp data, there are three sets of values for pdsi, scpdsi, and zindex in the table read into nd.  For scpdsi, use the second set in colums V18:V27.
+	  #values = nd %>% filter(nd$V1==key) %>% select(V8:V17)
+	  #firstfield = values$V8
+	  values = nd %>% filter(nd$V1==key) %>% select(V18:V27)
+	  firstfield = values$V18
 	  periods = c("1950-99","2006-15","2016-25","2026-35","2036-45","2046-55","2056-65","2066-75","2076-85","2086-95")
 	  tvalues = 100*as.numeric( t(values) )
 	  ylabel = "Ann. Prob. of 90th-pctile Drought (%)"
@@ -684,7 +720,8 @@ server <- function(input, output, session) {
 	key <- paste(locID,USER$ParentCorpID,input$inputLocations_drilldown)
 	key <- gsub(" ","_",key)
 
-	  nd = read.table("./data/scoring_engine/drought/TCSDB_structure.locations.csv.pdsisc.nexgddp.rcp85_minus2degC", header=FALSE)
+	  #nd = read.table("./data/scoring_engine/drought/TCSDB_structure.locations.csv.pdsisc.nexgddp.rcp85_minus2degC", header=FALSE)
+	  nd = read.table("./data/scoring_engine/drought/TCSDB_structure.locations.csv.pdsisc.nexgddp.rcp45", header=FALSE)
 	  # The NEX-GDDP data is organized into values for 10 periods.  Two historical decades and 8 future decades.  After 7 location-related fields, there are three sets of 10 values for pdsi, scpdsi, and the zindex.
 	  values_pdsi = nd %>% filter(nd$V1==key) %>% select(V8:V17)
 	  values_scpdsi = nd %>% filter(nd$V1==key) %>% select(V18:V27)
@@ -1328,6 +1365,36 @@ server <- function(input, output, session) {
 # ----------------------------  
 
   source("./server_portfolio_analyze.r", local=TRUE)
+ 
+  # Added for jump capability.
+   output$rb_portfolio_corp <- renderUI({
+     portfolio <- input$inputLocationsPort
+     portfolioSheet <- dbsheet15
+     portfolio_members <- portfolioSheet %>% filter(portfolioSheet[[portfolio]]==1)
+     tickers <- sort(portfolio_members$TickerSymbol)
+     radioButtons('rbportmembers',label='Select portfolio member', tickers, inline=TRUE)
+   })
+
+  # Ref:  https://stackoverflow.com/questions/43552906/how-to-switch-between-navbar-tabs-with-a-button-r-shiny
+  observeEvent(input$jumpToCompany, {
+     portfolio <- input$inputLocationsPort
+     portfolioSheet <- dbsheet15
+     portfolio_members <- portfolioSheet %>% filter(portfolioSheet[[portfolio]]==1)
+     selected_portmember <- portfolio_members %>% filter(portfolio_members$TickerSymbol==input$rbportmembers)
+     USER$ParentCorpID <- selected_portmember$ParentCorpID
+     USER$ParentCorpName <- selected_portmember$ParentCorpName
+     updateTabsetPanel(session, "inTabset_corp_analysis", selected = "corp_analysis_byloc")
+     #updateTabItems(session, 'sidebar', 'config')
+     updateTabItems(session, 'sidebar', 'analyze')
+    }) 
+
+
+# ----------------------------
+#         PORTFOLIO - SECTORS
+# ----------------------------  
+
+  source("./server_sector_analyze_dataprep.r", local=TRUE)
+  source("./server_sector_analyze.r", local=TRUE)
    
 
   # ----------------------------
